@@ -243,7 +243,7 @@
           symbol: lines[i],
           power: lines[i + 3],
           reward: lines[i + 7],
-          blockTime: lines[i + 9] === "00:00:00" ? "10:01" : (lines[i + 9]).substring(3, 8)
+          blockTime: '10:01'//lines[i + 9] === "00:00:00" ? "10:01" : (lines[i + 9]).substring(3, 8)
         });
         i += 11;
       }
