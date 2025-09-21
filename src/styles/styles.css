@@ -7,6 +7,7 @@
   --accent: #03e1e4;
   --coin: #ffdc00;
   --success: #4caf50;
+  --blue: #2159f3;
 }
 
 /* * {
@@ -397,6 +398,7 @@ header {
   text-decoration: none;
   font-weight: 700;
   transition: color 0.3s ease;
+  text-align: center;
 }
 
 .navbar-links a:hover {
@@ -413,6 +415,23 @@ header {
 
 .navbar-lang-movil {
   display: none !important;
+}
+
+.comming-soon{
+  cursor: default !important;
+  opacity: .6;
+}
+
+.comming-soon:hover {
+  color: var(--text-primary) !important;
+}
+
+.comming-soon-text {
+  font-size: .5rem;
+  opacity: .6;
+  margin-top: .1rem;
+  user-select: none;
+  height: 0;
 }
 
 /*

@@ -39,6 +39,15 @@ export default function Header() {
           >
             {t?.nav?.rollertap}
           </Link>
+          <Link
+            to="#"
+            className="comming-soon"
+            tabIndex={-1}
+            aria-disabled="true"
+          >
+            {t?.nav?.rooms}
+            <div className="comming-soon-text">{t?.nav?.comming_soon}</div>
+          </Link>
         </nav>
         <div className="navbar-lang-container">
           <button className="navbar-lang" id="toggleLang" onClick={toggleLang}>

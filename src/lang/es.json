@@ -22,7 +22,9 @@
   },
   "nav" : {
     "profit" : "GANANCIAS",
-    "rollertap" : "ROLLERTAP"
+    "rollertap" : "ROLLERTAP",
+    "rooms" : "ROOMS",
+    "comming_soon": "Próximamente"
   },
   "rollertap": {
     "coinsPerHour": "Monedas por hora",
@@ -30,7 +32,8 @@
     "nextLevel": "Siguiente nivel",
     "cost": "Costo",
     "roiInHours": "ROI en horas",
-    "lastLevelMessage": "Estás en el último nivel",
+    "lastLevelMessage": "Estás en el último nivel conocido",
+    "lastLevelAport": "Si tienes información de los siguientes niveles, por favor avísame en <a target='__blank' href='https://t.me/Ar1el_23'>Telegram</a> o en <b>Discord: ar1el_23</b>",
     "help": "Configura el nivel de tus hamsters tal y como lo tienes en el bot de Telegram 🦆",
     "createAccount": "Puedes crear tu cuenta de Rollertap ",
     "here": "Aquí",
