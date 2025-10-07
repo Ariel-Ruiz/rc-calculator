@@ -1,6 +1,6 @@
-.rollertap-container {
+/* .rollertap-container {
   margin: 1rem 2rem;
-}
+} */
 .help {
   background: var(--secondary);
   color: var(--text-primary);
@@ -8,7 +8,7 @@
   border-radius: 8px;
   font-size: .85rem;
   margin-bottom: .5rem;
-  margin-top: .8rem;;
+  /* margin-top: .8rem;; */
 }
 .help a {
   color: var(--accent);

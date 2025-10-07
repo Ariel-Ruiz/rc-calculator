@@ -39,7 +39,74 @@ export default function Home() {
   const [myPower, setMyPower] = useState<number>(() => Number(localStorage.getItem('power') || 1000))
   const [parsedLines, setParsedLines] = useState<ParsedLine[]>(() => {
     const saved = localStorage.getItem('networkLines')
-    return saved ? JSON.parse(saved) : []
+    return saved ? JSON.parse(saved) : [
+      {
+        "symbol": "RLT",
+        "power": "0 Zh/s",
+        "reward": "0 RLT",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "RST",
+        "power": "0 Zh/s",
+        "reward": "0 RST",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "BTC",
+        "power": "0 Zh/s",
+        "reward": "0 BTC",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "LTC",
+        "power": "0 Zh/s",
+        "reward": "0 LTC",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "BNB",
+        "power": "0 Zh/s",
+        "reward": "0 BNB",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "POL",
+        "power": "0 Zh/s",
+        "reward": "0 POL",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "XRP",
+        "power": "0 Zh/s",
+        "reward": "0 XRP",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "DOGE",
+        "power": "0 Zh/s",
+        "reward": "0 DOGE",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "ETH",
+        "power": "0 Zh/s",
+        "reward": "0 ETH",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "TRX",
+        "power": "0 Zh/s",
+        "reward": "0 TRX",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "SOL",
+        "power": "0 Zh/s",
+        "reward": "0 SOL",
+        "blockTime": "10:01"
+      }
+    ]
   })
   const [useUSD, setUseUSD] = useState<boolean>(() => localStorage.getItem('useUSD') === '1')
 
@@ -139,7 +206,7 @@ export default function Home() {
     <div className="container">
       <div className="input-section">
         <div id="warning" style={{ color: '#e85217' }}>{t.warning || 'Asegúrese...'}</div>
-        <img src={exampleImg} width="70%" alt="example" />
+        <img src={exampleImg} width="100%" alt="example" />
         <h5 id="networkLabel">{t.networkLabel || 'Red de tu liga'}</h5>
         <textarea
           id="networkInput"
@@ -204,10 +271,10 @@ export default function Home() {
                       onChange={(e) => updateBlockTime(idx, e.target.value)}
                     />
                   </td>
-                  <td className="block">{r.calc.perBlock.toFixed(useUSD ? 2 : 8)} {r.calc.suffix}</td>
-                  <td className="day">{r.calc.perDay.toFixed(useUSD ? 2 : 5)} {r.calc.suffix}</td>
+                  <td className="block">{r.calc.perBlock.toFixed(useUSD ? 2 : 6)} {r.calc.suffix}</td>
+                  <td className="day">{r.calc.perDay.toFixed(useUSD ? 2 : 4)} {r.calc.suffix}</td>
                   <td className="week">{r.calc.perWeek.toFixed(useUSD ? 2 : 4)} {r.calc.suffix}</td>
-                  <td className="month">{r.calc.perMonth.toFixed(useUSD ? 2 : 4)} {r.calc.suffix}</td>
+                  <td className="month">{r.calc.perMonth.toFixed(useUSD ? 2 : 3)} {r.calc.suffix}</td>
                 </tr>
               ))}
             </tbody>

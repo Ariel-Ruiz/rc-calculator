@@ -40,6 +40,13 @@ export default function Header() {
             {t?.nav?.rollertap}
           </Link>
           <Link
+            to="/current-progression"
+            onClick={toggleMenu}
+            className={location.pathname === '/current-progression' ? 'active' : ''}
+          >
+            {t?.nav?.progression}
+          </Link>
+          <Link
             to="#"
             className="comming-soon"
             tabIndex={-1}

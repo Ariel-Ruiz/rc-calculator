@@ -7,6 +7,7 @@
   --accent: #03e1e4;
   --coin: #ffdc00;
   --success: #4caf50;
+  --danger: #af4c4c;
   --blue: #2159f3;
 }
 
@@ -25,6 +26,16 @@ body {
   background: var(--primary);
   color: var(--text-primary);
   transition: all 0.3s ease;
+}
+main {
+  padding: 1.5rem 12%;
+  /* background-image: url('https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/assets/BTC6ma27FRv8cM4nMQi0C.png'); */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem 5%;
+  }
 }
 
 header {
@@ -69,7 +80,7 @@ h5 {
 }
 
 .container {
-  padding: 2rem;
+  /* padding: 2rem; */
   display: flex;
   gap: 2rem;
   align-items: start;
@@ -169,11 +180,11 @@ tr:hover {
 }
 
 .input-section {
-  width: 35%;
+  width: 28%;
 }
 
 .results-section {
-  width: 65%;
+  width: 72%;
 }
 
 .table-wrapper {
@@ -508,6 +519,7 @@ header {
     Estilos para la animación de deslizamiento en móviles
   */
   .navbar-links {
+    gap: .5rem;
     flex-direction: column;
     width: 100%;
     text-align: center;
@@ -543,4 +555,26 @@ header {
     padding-top: 0;
     padding-bottom: .5rem;
   }
+
+  .table-wrapper {
+    padding-bottom: 0px;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+/* Barra que se mueve (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-primary);
+  border-radius: 10px;
 }

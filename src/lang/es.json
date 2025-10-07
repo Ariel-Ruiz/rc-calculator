@@ -24,7 +24,8 @@
     "profit" : "GANANCIAS",
     "rollertap" : "ROLLERTAP",
     "rooms" : "ROOMS",
-    "comming_soon": "Próximamente"
+    "comming_soon": "Próximamente",
+    "progression": "EVENTO DE PROGRESIÓN"
   },
   "rollertap": {
     "coinsPerHour": "Monedas por hora",
@@ -38,5 +39,26 @@
     "createAccount": "Puedes crear tu cuenta de Rollertap ",
     "here": "Aquí",
     "extraIncome": "Ingreso Extra"
+  },
+  "pe" : {
+    "progression_event": "Evento de Progresión",
+    "multiplier": "Multiplicador",
+    "game_level": "Sube de nivel en juegos",
+    "spend_rlt": "Gasta 1 RLT",
+    "marketplace": "Gasta 1 RLT en Marketplace",
+    "crafting_offers": "Gasta 1 RLT en Crafting offer",
+    "season": "Gasta 1 RLT en Pase de temporada",
+    "recomended_multiplier": "MULTIPLICADOR RECOMENDADO",
+    "editable_field": "CAMPO EDITABLE",
+    "discount": "DESCUENTO",
+    "rlt_to_buy": "RLT POR COMPRAR",
+    "rlt_with_discount": "RLT CON DESCUENTO",
+    "boxes": "CAJAS",
+    "boxes_to_open": "CAJAS POR ABRIR",
+    "market": "MARKET",
+    "points": "PUNTOS",
+    "reward": "RECOMPENSA",
+    "per": "Por",
+    "ends_on": "Termina el"
   }
 }
