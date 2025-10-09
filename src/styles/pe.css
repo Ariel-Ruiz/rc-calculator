@@ -203,6 +203,10 @@
   background: var(--secondary);
 }
 
+.ended {
+  background: rgb(185, 42, 42);
+}
+
 @media (max-width: 768px) {
   .progression-container {
     display: inline-block;

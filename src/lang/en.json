@@ -59,6 +59,7 @@
     "points": "POINTS",
     "reward": "REWARD",
     "per": "Per",
-    "ends_on": "Ends on"
+    "ends_on": "Ends on",
+    "the_event_ended": "The event ended"
   }
 }
