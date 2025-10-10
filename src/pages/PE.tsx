@@ -160,12 +160,12 @@ export default function PE() {
         <div className='progression-info'>
           <div className='event-title'>{PeData.event.event.title.en}</div>
           <div className='event-subtitle'>{t.pe?.progression_event}</div>
-          {/* <div className='deadline'>
+          <div className='deadline'>
             {t.pe?.ends_on} {moment(PeData.event.event.end_date).format('DD/MM/YYYY')} 15:00 UTC
-          </div> */}
-          <div className='deadline ended'>
-            {t.pe?.the_event_ended}
           </div>
+          {/* <div className='deadline ended'>
+            {t.pe?.the_event_ended}
+          </div> */}
           <table className="tasks">
             <tbody>
               <tr className='task-info'>

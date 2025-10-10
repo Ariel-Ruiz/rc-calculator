@@ -2,7 +2,7 @@
   "multiplier": 0.1,
   "tasks": [
     {
-      "id": "68e505bb7c166a71ea4730ce",
+      "id": "68e7c43e7c166a71ea47319b",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "68e505bb7c166a71ea4730cf",
+      "id": "68e7c43e7c166a71ea47319c",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -44,7 +44,7 @@
       "sort": 2
     },
     {
-      "id": "68e505bb7c166a71ea4730d0",
+      "id": "68e7c43e7c166a71ea47319d",
       "xp_type": "number",
       "xp_reward": 150,
       "amount": 6667,
@@ -67,131 +67,88 @@
   ],
   "event": {
     "event": {
-      "_id": "68e505b9603dd81077e68449",
-      "max_xp": 75281000,
+      "_id": "68e7c43e9f36c49e72e0cf05",
+      "max_xp": 35117000,
       "max_multiplier": 10000,
-      "max_level": 42,
+      "max_level": 10,
       "tag": {
         "text": "",
         "color": "",
         "text_color": ""
       },
       "progression_event_type": "default",
-      "end_date": "2025-10-09T15:00:00.000Z",
-      "last_updated": 1759839675700,
+      "end_date": "2025-10-13T15:00:00.000Z",
+      "last_updated": 1760019518390,
       "description": {
-        "en": "[07–09] Cyber Renaissance",
-        "cn": "[07–09] Cyber Renaissance"
+        "en": "[10–13] Slayer of Demons",
+        "cn": "[10–13] Slayer of Demons"
       },
       "title": {
-        "en": "Cyber Renaissance",
-        "cn": "Cyber Renaissance"
+        "en": "Slayer of Demons",
+        "cn": "Slayer of Demons"
       }
     },
     "rewards": [
       {
-        "id": "68e505bb7c166a71ea4730d2",
-        "item_id": null,
-        "amount": 1000000,
-        "currency": "",
-        "ttl_time": 1209600000,
-        "required_level": 1,
-        "type": "power",
-        "title": {
-          "en": "Power",
-          "cn": "Power"
-        },
-        "description": {
-          "en": "Power Reward Description",
-          "cn": "Power Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "68e505bb7c166a71ea4730d4",
-        "item_id": "63e140e4547cfab9a21d7d2b",
+        "id": "68e7c43e7c166a71ea47319f",
+        "item_id": "68b6db73f58321ae064c2051",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 2,
-        "type": "rack",
+        "required_level": 1,
+        "type": "miner",
         "title": {
-          "en": "Rack Title",
-          "cn": "Rack Title"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Rack Reward Description",
-          "cn": "Rack Reward Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
+          "_id": "68b6db73f58321ae064c2051",
+          "power": 250000,
+          "width": 2,
           "name": {
-            "en": "Jet-Black Rack 6",
-            "cn": "Jet-Black Rack 6"
+            "en": "GravelRig",
+            "cn": "GravelRig",
+            "es": "GravelRig",
+            "pt": "GravelRig"
           },
           "description": {
-            "en": "Jet-Black Rack is created for true connoisseurs of stylish furniture. Place your miners here and enjoy the result!",
-            "cn": "Jet-Black Rack is created for true connoisseurs of stylish furniture. Place your miners here and enjoy the result!"
+            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
           },
-          "_id": "63e140e4547cfab9a21d7d2b",
-          "capacity": 6,
-          "is_can_be_sold_on_mp": true,
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "gravelrig",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 100,
           "is_in_set": false
         }
       },
       {
-        "id": "68e505bb7c166a71ea4730d6",
-        "item_id": "68306581e2da6536108ec0b8",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 3,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "3h Booster",
-            "cn": "3h Booster",
-            "es": "3h Booster",
-            "pt": "3h Booster"
-          },
-          "description": {
-            "en": "Booster will increase your basic power from minigames for 3 hours.",
-            "cn": "Booster will increase your basic power from minigames for 3 hours.",
-            "es": "Booster will increase your basic power from minigames for 3 hours.",
-            "pt": "Booster will increase your basic power from minigames for 3 hours."
-          },
-          "media": {
-            "preview_url": "static/img/market/utility_items/68306581e2da6536108ec0b8.gif?v=1748874570574"
-          },
-          "_id": "68306581e2da6536108ec0b8",
-          "type": "game_booster"
-        }
-      },
-      {
-        "id": "68e505bb7c166a71ea4730d8",
+        "id": "68e7c43e7c166a71ea4731a1",
         "item_id": null,
-        "amount": 300000,
+        "amount": 350000,
         "currency": "RLT",
         "ttl_time": 0,
-        "required_level": 4,
+        "required_level": 2,
         "type": "money",
         "title": {
           "en": "Money Title",
@@ -207,8 +164,92 @@
         }
       },
       {
-        "id": "68e505bb7c166a71ea4730da",
-        "item_id": "68b6dbf2f58321ae064c22d6",
+        "id": "68e7c43e7c166a71ea4731a3",
+        "item_id": "64d62a7d6d7008148575df7b",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 3,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Neon Rack 8",
+            "cn": "Neon Rack 8"
+          },
+          "description": {
+            "en": "Embrace the vibrant energy of neon lights with this futuristic flair of the Neon Rack.",
+            "cn": "Embrace the vibrant energy of neon lights with this futuristic flair of the Neon Rack."
+          },
+          "_id": "64d62a7d6d7008148575df7b",
+          "capacity": 8,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "68e7c43e7c166a71ea4731a5",
+        "item_id": "6399c3431c483a58f70e99da",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 4,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6399c3431c483a58f70e99da",
+          "power": 4528020,
+          "width": 2,
+          "name": {
+            "en": "Disco-Roll",
+            "cn": "Disco-Roll"
+          },
+          "description": {
+            "en": "Saturday night fever now available 24/7! Place it on the top shelf of your rack and PARTY!",
+            "cn": "Saturday night fever now available 24/7! Place it on the top shelf of your rack and PARTY!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 5,
+          "type": "merge",
+          "filename": "disco_roll",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 390,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "68e7c43e7c166a71ea4731a7",
+        "item_id": "65e1b30b47cd57f3797ccf20",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -227,20 +268,72 @@
           "max": 0
         },
         "item": {
-          "_id": "68b6dbf2f58321ae064c22d6",
-          "power": 400000,
+          "_id": "65e1b30b47cd57f3797ccf20",
+          "power": 5512500,
           "width": 2,
           "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
+            "en": "FemPride",
+            "cn": "FemPride",
+            "es": "FemPride",
+            "pt": "FemPride"
           },
           "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
+            "en": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
+            "cn": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
+            "es": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
+            "pt": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\""
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "fempride",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 940,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "68e7c43e7c166a71ea4731a9",
+        "item_id": "68e7ac859f36c49e72e0037e",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 6,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "68e7ac859f36c49e72e0037e",
+          "power": 17000000,
+          "width": 2,
+          "name": {
+            "en": "Hanabi Festival",
+            "cn": "Hanabi Festival",
+            "es": "Hanabi Festival",
+            "pt": "Hanabi Festival"
+          },
+          "description": {
+            "en": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "cn": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "es": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "pt": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block."
           },
           "created_by_title": {
             "link": "",
@@ -248,60 +341,20 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "shalerig",
+          "filename": "hanabi_festival",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 150,
+          "bonus": 900,
           "is_in_set": false
         }
       },
       {
-        "id": "68e505bc7c166a71ea4730dc",
-        "item_id": "6834276c6b8c472444c3725c",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 6,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "12h Booster",
-            "cn": "12h Booster",
-            "es": "12h Booster",
-            "pt": "12h Booster"
-          },
-          "description": {
-            "en": "Booster will increase your basic power from minigames for 12 hours.",
-            "cn": "Booster will increase your basic power from minigames for 12 hours.",
-            "es": "Booster will increase your basic power from minigames for 12 hours.",
-            "pt": "Booster will increase your basic power from minigames for 12 hours."
-          },
-          "media": {
-            "preview_url": "static/img/market/utility_items/6834276c6b8c472444c3725c.gif?v=1748874570576"
-          },
-          "_id": "6834276c6b8c472444c3725c",
-          "type": "game_booster"
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730de",
-        "item_id": "668e75fb7643815232e5619c",
+        "id": "68e7c43e7c166a71ea4731ab",
+        "item_id": "68e7ac859f36c49e72e0037e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -320,20 +373,20 @@
           "max": 0
         },
         "item": {
-          "_id": "668e75fb7643815232e5619c",
-          "power": 185000,
+          "_id": "68e7ac859f36c49e72e0037e",
+          "power": 17000000,
           "width": 2,
           "name": {
-            "en": "TeraBara",
-            "cn": "TeraBara",
-            "es": "TeraBara",
-            "pt": "TeraBara"
+            "en": "Hanabi Festival",
+            "cn": "Hanabi Festival",
+            "es": "Hanabi Festival",
+            "pt": "Hanabi Festival"
           },
           "description": {
-            "en": "With the power of a TeraBara, you're mining at terabytes per tub splash! This adorable giant guinea pig of a machine mines cryptocurrency faster than a capybara can paddle.",
-            "cn": "With the power of a TeraBara, you're mining at terabytes per tub splash! This adorable giant guinea pig of a machine mines cryptocurrency faster than a capybara can paddle.",
-            "es": "With the power of a TeraBara, you're mining at terabytes per tub splash! This adorable giant guinea pig of a machine mines cryptocurrency faster than a capybara can paddle.",
-            "pt": "With the power of a TeraBara, you're mining at terabytes per tub splash! This adorable giant guinea pig of a machine mines cryptocurrency faster than a capybara can paddle."
+            "en": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "cn": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "es": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "pt": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block."
           },
           "created_by_title": {
             "link": "",
@@ -341,41 +394,72 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "terabara",
+          "filename": "hanabi_festival",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 500,
+          "bonus": 900,
           "is_in_set": false
         }
       },
       {
-        "id": "68e505bc7c166a71ea4730e0",
-        "item_id": null,
-        "amount": 1000000,
-        "currency": "RLT",
+        "id": "68e7c43e7c166a71ea4731ad",
+        "item_id": "65e1b30b47cd57f3797ccf20",
+        "amount": 1,
+        "currency": "",
         "ttl_time": 0,
         "required_level": 8,
-        "type": "money",
+        "type": "miner",
         "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "65e1b30b47cd57f3797ccf20",
+          "power": 5512500,
+          "width": 2,
+          "name": {
+            "en": "FemPride",
+            "cn": "FemPride",
+            "es": "FemPride",
+            "pt": "FemPride"
+          },
+          "description": {
+            "en": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
+            "cn": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
+            "es": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
+            "pt": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\""
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "fempride",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 940,
+          "is_in_set": false
         }
       },
       {
-        "id": "68e505bc7c166a71ea4730e2",
-        "item_id": "65f9b03e27020d370d72196e",
+        "id": "68e7c43e7c166a71ea4731af",
+        "item_id": "68e7ac859f36c49e72e00381",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -394,84 +478,44 @@
           "max": 0
         },
         "item": {
-          "_id": "65f9b03e27020d370d72196e",
-          "power": 770000,
+          "_id": "68e7ac859f36c49e72e00381",
+          "power": 44630000,
           "width": 2,
           "name": {
-            "en": "Cryptogypt Mirage",
-            "cn": "Cryptogypt Mirage",
-            "es": "Cryptogypt Mirage",
-            "pt": "Cryptogypt Mirage"
+            "en": "Hanabi Festival",
+            "cn": "Hanabi Festival",
+            "es": "Hanabi Festival",
+            "pt": "Hanabi Festival"
           },
           "description": {
-            "en": "Is this a mirage or a chance to fulfill a crypto mission? Time to seek for the greatest mining treasure. But beware the hamster Mumia!",
-            "cn": "Is this a mirage or a chance to fulfill a crypto mission? Time to seek for the greatest mining treasure. But beware the hamster Mumia!",
-            "es": "Is this a mirage or a chance to fulfill a crypto mission? Time to seek for the greatest mining treasure. But beware the hamster Mumia!",
-            "pt": "Is this a mirage or a chance to fulfill a crypto mission? Time to seek for the greatest mining treasure. But beware the hamster Mumia!"
+            "en": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "cn": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "es": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "pt": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "cryptogypt_mirage",
+          "level": 1,
+          "type": "merge",
+          "filename": "hanabi_festival",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 320,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1400,
           "is_in_set": false
         }
       },
       {
-        "id": "68e505bc7c166a71ea4730e4",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 3,
+        "id": "68e7c43e7c166a71ea4731b1",
+        "item_id": "68e7ac859f36c49e72e00387",
+        "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 10,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Speed Up Item",
-            "cn": "Speed Up Item",
-            "es": "Speed Up Item",
-            "pt": "Speed Up Item"
-          },
-          "description": {
-            "en": "Ticket for speed up expedition",
-            "cn": "Ticket for speed up expedition",
-            "es": "Ticket for speed up expedition",
-            "pt": "Ticket for speed up expedition"
-          },
-          "media": {
-            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
-          },
-          "_id": "67d1c54536daea2ef871b292",
-          "type": "expedition_speed_up"
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730e6",
-        "item_id": "68b6dbf2f58321ae064c22d9",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 11,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -486,419 +530,20 @@
           "max": 0
         },
         "item": {
-          "_id": "68b6dbf2f58321ae064c22d9",
-          "power": 1000000,
+          "_id": "68e7ac859f36c49e72e00387",
+          "power": 117160000,
           "width": 2,
           "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
+            "en": "Hanabi Festival",
+            "cn": "Hanabi Festival",
+            "es": "Hanabi Festival",
+            "pt": "Hanabi Festival"
           },
           "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "shalerig",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730e8",
-        "item_id": "65bcf66343dcad8f6d1173b9",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 12,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "65bcf66343dcad8f6d1173b9",
-          "power": 1202400,
-          "width": 2,
-          "name": {
-            "en": "GoldenTime",
-            "cn": "GoldenTime",
-            "es": "GoldenTime",
-            "pt": "GoldenTime"
-          },
-          "description": {
-            "en": "Harness the Golden Dragon Miner, a mythical machine mining crypto as fiercely as a dragon's flame, turning every second into a golden opportunity for wealth. By akhlus.",
-            "cn": "Harness the Golden Dragon Miner, a mythical machine mining crypto as fiercely as a dragon's flame, turning every second into a golden opportunity for wealth. By akhlus.",
-            "es": "Harness the Golden Dragon Miner, a mythical machine mining crypto as fiercely as a dragon's flame, turning every second into a golden opportunity for wealth. By akhlus.",
-            "pt": "Harness the Golden Dragon Miner, a mythical machine mining crypto as fiercely as a dragon's flame, turning every second into a golden opportunity for wealth. By akhlus."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "goldentime",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 500,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730ea",
-        "item_id": "66337fe212e054c26801ea35",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 13,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "66337fe212e054c26801ea35",
-          "power": 2100000,
-          "width": 2,
-          "name": {
-            "en": "LightBeat",
-            "cn": "LightBeat",
-            "es": "LightBeat",
-            "pt": "LightBeat"
-          },
-          "description": {
-            "en": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "cn": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "es": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "pt": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "lightbeat",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 556,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730ec",
-        "item_id": "683427626b8c472444c3725b",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 14,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "24h Booster",
-            "cn": "24h Booster",
-            "es": "24h Booster",
-            "pt": "24h Booster"
-          },
-          "description": {
-            "en": "Booster will increase your basic power from minigames for 24 hours.",
-            "cn": "Booster will increase your basic power from minigames for 24 hours.",
-            "es": "Booster will increase your basic power from minigames for 24 hours.",
-            "pt": "Booster will increase your basic power from minigames for 24 hours."
-          },
-          "media": {
-            "preview_url": "static/img/market/utility_items/683427626b8c472444c3725b.gif?v=1748874570577"
-          },
-          "_id": "683427626b8c472444c3725b",
-          "type": "game_booster"
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730ee",
-        "item_id": null,
-        "amount": 10000000,
-        "currency": "",
-        "ttl_time": 1209600000,
-        "required_level": 15,
-        "type": "power",
-        "title": {
-          "en": "Power",
-          "cn": "Power"
-        },
-        "description": {
-          "en": "Power Reward Description",
-          "cn": "Power Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730f0",
-        "item_id": "66bdf389d479b2d3ce357309",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 16,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "66bdf389d479b2d3ce357309",
-          "power": 3000000,
-          "width": 2,
-          "name": {
-            "en": "Flux Capacitor Gate",
-            "cn": "Flux Capacitor Gate",
-            "es": "Flux Capacitor Gate",
-            "pt": "Flux Capacitor Gate"
-          },
-          "description": {
-            "en": "With power that remains stable over eons and a bonus percentage that skyrockets through time spikes, this miner allows you to mine Bitcoin in the past, sell it in the future, and spend money in the present, achieving astronomical gains over time!",
-            "cn": "With power that remains stable over eons and a bonus percentage that skyrockets through time spikes, this miner allows you to mine Bitcoin in the past, sell it in the future, and spend money in the present, achieving astronomical gains over time!",
-            "es": "With power that remains stable over eons and a bonus percentage that skyrockets through time spikes, this miner allows you to mine Bitcoin in the past, sell it in the future, and spend money in the present, achieving astronomical gains over time!",
-            "pt": "With power that remains stable over eons and a bonus percentage that skyrockets through time spikes, this miner allows you to mine Bitcoin in the past, sell it in the future, and spend money in the present, achieving astronomical gains over time!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "flux_capacitor_gate",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 420,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730f2",
-        "item_id": "64d6299b6d7008148575df79",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 17,
-        "type": "rack",
-        "title": {
-          "en": "Rack Title",
-          "cn": "Rack Title"
-        },
-        "description": {
-          "en": "Rack Reward Description",
-          "cn": "Rack Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Silver Rack 8",
-            "cn": "Silver Rack 8"
-          },
-          "description": {
-            "en": "When you asked the seller about the material of this rack, he jokingly responded with 'Silver.' It seems he had quite an unusual sense of humor, but this sturdy and spacious 'Silver' Rack for miners proves that there's more to it than meets the eye.",
-            "cn": "When you asked the seller about the material of this rack, he jokingly responded with 'Silver.' It seems he had quite an unusual sense of humor, but this sturdy and spacious 'Silver' Rack for miners proves that there's more to it than meets the eye."
-          },
-          "_id": "64d6299b6d7008148575df79",
-          "capacity": 8,
-          "is_can_be_sold_on_mp": true,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730f4",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 5,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 18,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Speed Up Item",
-            "cn": "Speed Up Item",
-            "es": "Speed Up Item",
-            "pt": "Speed Up Item"
-          },
-          "description": {
-            "en": "Ticket for speed up expedition",
-            "cn": "Ticket for speed up expedition",
-            "es": "Ticket for speed up expedition",
-            "pt": "Ticket for speed up expedition"
-          },
-          "media": {
-            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
-          },
-          "_id": "67d1c54536daea2ef871b292",
-          "type": "expedition_speed_up"
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730f6",
-        "item_id": "66c5e4a9b82bcb276633c4c9",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 19,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "66c5e4a9b82bcb276633c4c9",
-          "power": 4250000,
-          "width": 2,
-          "name": {
-            "en": "Delulu Shell",
-            "cn": "Delulu Shell",
-            "es": "Delulu Shell",
-            "pt": "Delulu Shell"
-          },
-          "description": {
-            "en": "Fantasies of wealth transform into reality in this dream-powered portal, where illusions are mined into tangible fortunes. This device not only mines coins; it unearths the phantom riches of your wildest trading dreams, seasoned with a dash of wishful thinking.",
-            "cn": "Fantasies of wealth transform into reality in this dream-powered portal, where illusions are mined into tangible fortunes. This device not only mines coins; it unearths the phantom riches of your wildest trading dreams, seasoned with a dash of wishful thinking.",
-            "es": "Fantasies of wealth transform into reality in this dream-powered portal, where illusions are mined into tangible fortunes. This device not only mines coins; it unearths the phantom riches of your wildest trading dreams, seasoned with a dash of wishful thinking.",
-            "pt": "Fantasies of wealth transform into reality in this dream-powered portal, where illusions are mined into tangible fortunes. This device not only mines coins; it unearths the phantom riches of your wildest trading dreams, seasoned with a dash of wishful thinking."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "delulu_shell",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730f8",
-        "item_id": "6555fea08cc5eb05355bc409",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 20,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6555fea08cc5eb05355bc409",
-          "power": 4478985,
-          "width": 2,
-          "name": {
-            "en": "CodeWhiz",
-            "cn": "CodeWhiz",
-            "es": "CodeWhiz",
-            "pt": "CodeWhiz"
-          },
-          "description": {
-            "en": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
-            "cn": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
-            "es": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
-            "pt": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell"
+            "en": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "cn": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "es": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
+            "pt": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block."
           },
           "created_by_title": {
             "link": "",
@@ -906,1708 +551,13 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "codewhiz",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 327,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730fa",
-        "item_id": "67dabb107a0196af4a7b78a5",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 21,
-        "type": "loot_box",
-        "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
-        },
-        "description": {
-          "en": "Loot Box Reward Description",
-          "cn": "Loot Box Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "67dabb107a0196af4a7b78a5",
-          "title": {
-            "en": "Miner's Nebula",
-            "cn": "Miner's Nebula"
-          },
-          "sold": 0,
-          "items": [
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "DarknessCore",
-                  "cn": "DarknessCore",
-                  "es": "DarknessCore",
-                  "pt": "DarknessCore"
-                },
-                "power": 39380000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 1,
-              "item_info": {
-                "name": {
-                  "en": "DarknessCore",
-                  "cn": "DarknessCore",
-                  "es": "DarknessCore",
-                  "pt": "DarknessCore"
-                },
-                "power": 15000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 2,
-              "item_info": {
-                "name": {
-                  "en": "Aurora Citadel",
-                  "cn": "Aurora Citadel",
-                  "es": "Aurora Citadel",
-                  "pt": "Aurora Citadel"
-                },
-                "power": 9750000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 3,
-              "item_info": {
-                "name": {
-                  "en": "Polar Express",
-                  "cn": "Polar Express",
-                  "es": "Polar Express",
-                  "pt": "Polar Express"
-                },
-                "power": 1860495
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 4,
-              "item_info": {
-                "name": {
-                  "en": "Singularity",
-                  "cn": "Singularity",
-                  "es": "Singularity",
-                  "pt": "Singularity"
-                },
-                "power": 1000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 5,
-              "item_info": {
-                "name": {
-                  "en": "N.O.V.A",
-                  "cn": "N.O.V.A",
-                  "es": "N.O.V.A",
-                  "pt": "N.O.V.A"
-                },
-                "power": 1120000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 6,
-              "item_info": {
-                "name": {
-                  "en": "Guess-the-Card",
-                  "cn": "Guess-the-Card",
-                  "es": "Guess-the-Card",
-                  "pt": "Guess-the-Card"
-                },
-                "power": 1080000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 7,
-              "item_info": {
-                "name": {
-                  "en": "Box of Wonders",
-                  "cn": "Box of Wonders",
-                  "es": "Box of Wonders",
-                  "pt": "Box of Wonders"
-                },
-                "power": 950145
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 8,
-              "item_info": {
-                "name": {
-                  "en": "Gravity",
-                  "cn": "Gravity",
-                  "es": "Gravity",
-                  "pt": "Gravity"
-                },
-                "power": 500000
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 9,
-              "item_info": {
-                "name": {
-                  "en": "青火龙 (Azure Dragon)",
-                  "cn": "青火龙 (Azure Dragon)",
-                  "es": "青火龙 (Azure Dragon)",
-                  "pt": "青火龙 (Azure Dragon)"
-                },
-                "power": 525000
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 10,
-              "item_info": {
-                "name": {
-                  "en": "BitAce",
-                  "cn": "BitAce",
-                  "es": "BitAce",
-                  "pt": "BitAce"
-                },
-                "power": 748965
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 11,
-              "item_info": {
-                "name": {
-                  "en": "Underdark Delver",
-                  "cn": "Underdark Delver",
-                  "es": "Underdark Delver",
-                  "pt": "Underdark Delver"
-                },
-                "power": 647500
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 12,
-              "item_info": {
-                "name": {
-                  "en": "Blaze-Boosted",
-                  "cn": "Blaze-Boosted",
-                  "es": "Blaze-Boosted",
-                  "pt": "Blaze-Boosted"
-                },
-                "power": 560700
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 13,
-              "item_info": {
-                "name": {
-                  "en": "RedStar-X",
-                  "cn": "RedStar-X",
-                  "es": "RedStar-X",
-                  "pt": "RedStar-X"
-                },
-                "power": 405000
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 14,
-              "item_info": {
-                "name": {
-                  "en": "Paradox",
-                  "cn": "Paradox",
-                  "es": "Paradox",
-                  "pt": "Paradox"
-                },
-                "power": 350000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 15,
-              "item_info": {
-                "name": {
-                  "en": "Bergedge",
-                  "cn": "Bergedge",
-                  "es": "Bergedge",
-                  "pt": "Bergedge"
-                },
-                "power": 450975
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 16,
-              "item_info": {
-                "name": {
-                  "en": "Shadewood Sorcerer",
-                  "cn": "Shadewood Sorcerer",
-                  "es": "Shadewood Sorcerer",
-                  "pt": "Shadewood Sorcerer"
-                },
-                "power": 396750
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 17,
-              "item_info": {
-                "name": {
-                  "en": "GigaBara",
-                  "cn": "GigaBara",
-                  "es": "GigaBara",
-                  "pt": "GigaBara"
-                },
-                "power": 60000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 18,
-              "item_info": {
-                "name": {
-                  "en": "Almost-Zero",
-                  "cn": "Almost-Zero",
-                  "es": "Almost-Zero",
-                  "pt": "Almost-Zero"
-                },
-                "power": 286650
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 19,
-              "item_info": {
-                "name": {
-                  "en": "BitAce",
-                  "cn": "BitAce",
-                  "es": "BitAce",
-                  "pt": "BitAce"
-                },
-                "power": 285285
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 20,
-              "item_info": {
-                "name": {
-                  "en": "CameraMiner",
-                  "cn": "CameraMiner",
-                  "es": "CameraMiner",
-                  "pt": "CameraMiner"
-                },
-                "power": 210000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 21,
-              "item_info": {
-                "name": {
-                  "en": "Photon",
-                  "cn": "Photon",
-                  "es": "Photon",
-                  "pt": "Photon"
-                },
-                "power": 125000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 22,
-              "item_info": {
-                "name": {
-                  "en": "Vaporwave Voyager",
-                  "cn": "Vaporwave Voyager",
-                  "es": "Vaporwave Voyager",
-                  "pt": "Vaporwave Voyager"
-                },
-                "power": 320000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 23,
-              "item_info": {
-                "name": {
-                  "en": "Waterdeep Miner",
-                  "cn": "Waterdeep Miner",
-                  "es": "Waterdeep Miner",
-                  "pt": "Waterdeep Miner"
-                },
-                "power": 204000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 24,
-              "item_info": {
-                "name": {
-                  "en": "MiningBlimp",
-                  "cn": "MiningBlimp",
-                  "es": "MiningBlimp",
-                  "pt": "MiningBlimp"
-                },
-                "power": 175000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 25,
-              "item_info": {
-                "name": {
-                  "en": "BeetCoiner",
-                  "cn": "BeetCoiner",
-                  "es": "BeetCoiner",
-                  "pt": "BeetCoiner"
-                },
-                "power": 104000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 26,
-              "item_info": {
-                "name": {
-                  "en": "Ancient Icecraft",
-                  "cn": "Ancient Icecraft",
-                  "es": "Ancient Icecraft",
-                  "pt": "Ancient Icecraft"
-                },
-                "power": 43365
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 27,
-              "item_info": {
-                "name": {
-                  "en": "Real Sugar",
-                  "cn": "Real Sugar",
-                  "es": "Real Sugar",
-                  "pt": "Real Sugar"
-                },
-                "power": 26500
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 28,
-              "item_info": {
-                "name": {
-                  "en": "Bergedge",
-                  "cn": "Bergedge",
-                  "es": "Bergedge",
-                  "pt": "Bergedge"
-                },
-                "power": 3600
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 29,
-              "item_info": {
-                "name": {
-                  "en": "RollerArc S1",
-                  "cn": "RollerArc S1",
-                  "es": "RollerArc S1",
-                  "pt": "RollerArc S1"
-                },
-                "power": 150
-              },
-              "base_color_hex": "ffffff"
-            }
-          ]
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730fc",
-        "item_id": "65310ad1a072ea9506f9639f",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 22,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "65310ad1a072ea9506f9639f",
-          "power": 855750,
-          "width": 2,
-          "name": {
-            "en": "OmniNexus",
-            "cn": "OmniNexus",
-            "es": "OmniNexus",
-            "pt": "OmniNexus"
-          },
-          "description": {
-            "en": "Unleash the power of tomorrow with the OmniNexus: Its advanced algorithms and seamless integration make it the ultimate choice for miners seeking unparalleled efficiency and performance. By PetterCh",
-            "cn": "Unleash the power of tomorrow with the OmniNexus: Its advanced algorithms and seamless integration make it the ultimate choice for miners seeking unparalleled efficiency and performance. By PetterCh",
-            "es": "Unleash the power of tomorrow with the OmniNexus: Its advanced algorithms and seamless integration make it the ultimate choice for miners seeking unparalleled efficiency and performance. By PetterCh",
-            "pt": "Unleash the power of tomorrow with the OmniNexus: Its advanced algorithms and seamless integration make it the ultimate choice for miners seeking unparalleled efficiency and performance. By PetterCh"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "omninexus",
+          "filename": "hanabi_festival",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 720,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea4730fe",
-        "item_id": "65310ad1a072ea9506f9639f",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 23,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "65310ad1a072ea9506f9639f",
-          "power": 855750,
-          "width": 2,
-          "name": {
-            "en": "OmniNexus",
-            "cn": "OmniNexus",
-            "es": "OmniNexus",
-            "pt": "OmniNexus"
-          },
-          "description": {
-            "en": "Unleash the power of tomorrow with the OmniNexus: Its advanced algorithms and seamless integration make it the ultimate choice for miners seeking unparalleled efficiency and performance. By PetterCh",
-            "cn": "Unleash the power of tomorrow with the OmniNexus: Its advanced algorithms and seamless integration make it the ultimate choice for miners seeking unparalleled efficiency and performance. By PetterCh",
-            "es": "Unleash the power of tomorrow with the OmniNexus: Its advanced algorithms and seamless integration make it the ultimate choice for miners seeking unparalleled efficiency and performance. By PetterCh",
-            "pt": "Unleash the power of tomorrow with the OmniNexus: Its advanced algorithms and seamless integration make it the ultimate choice for miners seeking unparalleled efficiency and performance. By PetterCh"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "omninexus",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 720,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473100",
-        "item_id": "65a92f1b9b2efe7a29c68bec",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 24,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "65a92f1b9b2efe7a29c68bec",
-          "power": 8957865,
-          "width": 2,
-          "name": {
-            "en": "MammETH",
-            "cn": "MammETH",
-            "es": "MammETH",
-            "pt": "MammETH"
-          },
-          "description": {
-            "en": "Unlike the real mammal, this one is surely alive and ready to conquer the deepest mines with its tusks! This one sailed a frozen sea to reach your room, so keep it warm and healthy! By Andando",
-            "cn": "Unlike the real mammal, this one is surely alive and ready to conquer the deepest mines with its tusks! This one sailed a frozen sea to reach your room, so keep it warm and healthy! By Andando",
-            "es": "Unlike the real mammal, this one is surely alive and ready to conquer the deepest mines with its tusks! This one sailed a frozen sea to reach your room, so keep it warm and healthy! By Andando",
-            "pt": "Unlike the real mammal, this one is surely alive and ready to conquer the deepest mines with its tusks! This one sailed a frozen sea to reach your room, so keep it warm and healthy! By Andando"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 2,
-          "type": "merge",
-          "filename": "mammeth",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 744,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473102",
-        "item_id": null,
-        "amount": 1000000000,
-        "currency": "RST",
-        "ttl_time": 0,
-        "required_level": 25,
-        "type": "money",
-        "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
-        },
-        "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473104",
-        "item_id": "65bba192a19c394aa309623f",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 26,
-        "type": "rack",
-        "title": {
-          "en": "Rack Title",
-          "cn": "Rack Title"
-        },
-        "description": {
-          "en": "Rack Reward Description",
-          "cn": "Rack Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Green Silk 8",
-            "cn": "Green Silk 8"
-          },
-          "description": {
-            "en": "The only thing better than red silk is the Green one. Some people also believe that green attracts money, so make your choice!",
-            "cn": "The only thing better than red silk is the Green one. Some people also believe that green attracts money, so make your choice!"
-          },
-          "_id": "65bba192a19c394aa309623f",
-          "capacity": 8,
-          "is_can_be_sold_on_mp": true,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473106",
-        "item_id": "6564c18d7686cfe256e81c37",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 27,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6564c18d7686cfe256e81c37",
-          "power": 12209400,
-          "width": 2,
-          "name": {
-            "en": "CryptoPunk",
-            "cn": "CryptoPunk",
-            "es": "CryptoPunk",
-            "pt": "CryptoPunk"
-          },
-          "description": {
-            "en": "Welcome to the world of RollerCoin, where we're all Crypto Punks on a quest for digital dominance! Strap in, fellow miners, it's time to mine, roll, and show this virtual realm who's boss! By Serrano Collins",
-            "cn": "Welcome to the world of RollerCoin, where we're all Crypto Punks on a quest for digital dominance! Strap in, fellow miners, it's time to mine, roll, and show this virtual realm who's boss! By Serrano Collins",
-            "es": "Welcome to the world of RollerCoin, where we're all Crypto Punks on a quest for digital dominance! Strap in, fellow miners, it's time to mine, roll, and show this virtual realm who's boss! By Serrano Collins",
-            "pt": "Welcome to the world of RollerCoin, where we're all Crypto Punks on a quest for digital dominance! Strap in, fellow miners, it's time to mine, roll, and show this virtual realm who's boss! By Serrano Collins"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "cryptopunk",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 468,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473108",
-        "item_id": "655340c16b3aad78aebc3676",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 28,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "655340c16b3aad78aebc3676",
-          "power": 14470365,
-          "width": 2,
-          "name": {
-            "en": "CyberOracle",
-            "cn": "CyberOracle",
-            "es": "CyberOracle",
-            "pt": "CyberOracle"
-          },
-          "description": {
-            "en": "Visionary AI, delving into blockchain depths to predict trends, earning it the moniker “Seer of the Crypto Cosmos”. By akhlus",
-            "cn": "Visionary AI, delving into blockchain depths to predict trends, earning it the moniker “Seer of the Crypto Cosmos”. By akhlus",
-            "es": "Visionary AI, delving into blockchain depths to predict trends, earning it the moniker “Seer of the Crypto Cosmos”. By akhlus",
-            "pt": "Visionary AI, delving into blockchain depths to predict trends, earning it the moniker “Seer of the Crypto Cosmos”. By akhlus"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "cyberoracle",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 374,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea47310a",
-        "item_id": "68a784a2241211b065aaa96d",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 29,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68a784a2241211b065aaa96d",
-          "power": 2600000,
-          "width": 2,
-          "name": {
-            "en": "HamsterPass",
-            "cn": "HamsterPass",
-            "es": "HamsterPass",
-            "pt": "HamsterPass"
-          },
-          "description": {
-            "en": "The summit is steep, but the rewards are sky-high. At the Grand Summit event, this miner climbs block by block with hamster-sized determination and alpine ambition — proving that even the smallest paws can conquer the biggest peaks of crypto.",
-            "cn": "The summit is steep, but the rewards are sky-high. At the Grand Summit event, this miner climbs block by block with hamster-sized determination and alpine ambition — proving that even the smallest paws can conquer the biggest peaks of crypto.",
-            "es": "The summit is steep, but the rewards are sky-high. At the Grand Summit event, this miner climbs block by block with hamster-sized determination and alpine ambition — proving that even the smallest paws can conquer the biggest peaks of crypto.",
-            "pt": "The summit is steep, but the rewards are sky-high. At the Grand Summit event, this miner climbs block by block with hamster-sized determination and alpine ambition — proving that even the smallest paws can conquer the biggest peaks of crypto."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "hamsterpass",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
           "is_can_be_sold_on_mp": false,
-          "bonus": 700,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea47310c",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 10,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 30,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Speed Up Item",
-            "cn": "Speed Up Item",
-            "es": "Speed Up Item",
-            "pt": "Speed Up Item"
-          },
-          "description": {
-            "en": "Ticket for speed up expedition",
-            "cn": "Ticket for speed up expedition",
-            "es": "Ticket for speed up expedition",
-            "pt": "Ticket for speed up expedition"
-          },
-          "media": {
-            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
-          },
-          "_id": "67d1c54536daea2ef871b292",
-          "type": "expedition_speed_up"
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea47310e",
-        "item_id": "68a784a2241211b065aaa96d",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 31,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68a784a2241211b065aaa96d",
-          "power": 2600000,
-          "width": 2,
-          "name": {
-            "en": "HamsterPass",
-            "cn": "HamsterPass",
-            "es": "HamsterPass",
-            "pt": "HamsterPass"
-          },
-          "description": {
-            "en": "The summit is steep, but the rewards are sky-high. At the Grand Summit event, this miner climbs block by block with hamster-sized determination and alpine ambition — proving that even the smallest paws can conquer the biggest peaks of crypto.",
-            "cn": "The summit is steep, but the rewards are sky-high. At the Grand Summit event, this miner climbs block by block with hamster-sized determination and alpine ambition — proving that even the smallest paws can conquer the biggest peaks of crypto.",
-            "es": "The summit is steep, but the rewards are sky-high. At the Grand Summit event, this miner climbs block by block with hamster-sized determination and alpine ambition — proving that even the smallest paws can conquer the biggest peaks of crypto.",
-            "pt": "The summit is steep, but the rewards are sky-high. At the Grand Summit event, this miner climbs block by block with hamster-sized determination and alpine ambition — proving that even the smallest paws can conquer the biggest peaks of crypto."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "hamsterpass",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 700,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473110",
-        "item_id": "6752f0a50b2ea70a05bc1c5b",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 32,
-        "type": "rack",
-        "title": {
-          "en": "Rack Title",
-          "cn": "Rack Title"
-        },
-        "description": {
-          "en": "Rack Reward Description",
-          "cn": "Rack Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Stellar Rack 8",
-            "cn": "Stellar Rack 8"
-          },
-          "description": {
-            "en": "Light up your mining space! Adorned with cosmic cheer and holiday vibes.",
-            "cn": "Light up your mining space! Adorned with cosmic cheer and holiday vibes."
-          },
-          "_id": "6752f0a50b2ea70a05bc1c5b",
-          "capacity": 8,
-          "is_can_be_sold_on_mp": true,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473112",
-        "item_id": "673db881bf1870da60853864",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 33,
-        "type": "loot_box",
-        "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
-        },
-        "description": {
-          "en": "Loot Box Reward Description",
-          "cn": "Loot Box Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "673db881bf1870da60853864",
-          "title": {
-            "en": "Large Treasure Box",
-            "cn": "Large Treasure Box"
-          },
-          "sold": 0,
-          "items": [
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Crypto Cheops",
-                  "cn": "Crypto Cheops",
-                  "es": "Crypto Cheops",
-                  "pt": "Crypto Cheops"
-                },
-                "power": 177261420
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Underdark Delver",
-                  "cn": "Underdark Delver",
-                  "es": "Underdark Delver",
-                  "pt": "Underdark Delver"
-                },
-                "power": 30745155
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "A.M.P.F.Y",
-                  "cn": "A.M.P.F.Y",
-                  "es": "A.M.P.F.Y",
-                  "pt": "A.M.P.F.Y"
-                },
-                "power": 9999000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Shamaniac",
-                  "cn": "Shamaniac",
-                  "es": "Shamaniac",
-                  "pt": "Shamaniac"
-                },
-                "power": 5652045
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Underdark Delver",
-                  "cn": "Underdark Delver",
-                  "es": "Underdark Delver",
-                  "pt": "Underdark Delver"
-                },
-                "power": 4461870
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Arcadester",
-                  "cn": "Arcadester",
-                  "es": "Arcadester",
-                  "pt": "Arcadester"
-                },
-                "power": 2820000
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Philosopher's",
-                  "cn": "Philosopher's",
-                  "es": "Philosopher's",
-                  "pt": "Philosopher's"
-                },
-                "power": 1947750
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Guts",
-                  "cn": "Guts",
-                  "es": "Guts",
-                  "pt": "Guts"
-                },
-                "power": 1899345
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "The Ascended",
-                  "cn": "The Ascended",
-                  "es": "The Ascended",
-                  "pt": "The Ascended"
-                },
-                "power": 1708875
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Awaken",
-                  "cn": "Awaken",
-                  "es": "Awaken",
-                  "pt": "Awaken"
-                },
-                "power": 1343685
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Ping Pong",
-                  "cn": "Ping Pong",
-                  "es": "Ping Pong",
-                  "pt": "Ping Pong"
-                },
-                "power": 1323000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "es": "",
-                  "pt": "",
-                  "en": "Liberty Digger",
-                  "cn": "Liberty Digger"
-                },
-                "power": 1178310
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Booo!",
-                  "cn": "Booo!",
-                  "es": "Booo!",
-                  "pt": "Booo!"
-                },
-                "power": 1150000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Batty",
-                  "cn": "Batty",
-                  "es": "Batty",
-                  "pt": "Batty"
-                },
-                "power": 1000000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Pepe John's",
-                  "cn": "Pepe John's",
-                  "es": "Pepe John's",
-                  "pt": "Pepe John's"
-                },
-                "power": 1000000
-              },
-              "base_color_hex": "ffffff"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "CyberSun",
-                  "cn": "CyberSun",
-                  "es": "CyberSun",
-                  "pt": "CyberSun"
-                },
-                "power": 760000
-              },
-              "base_color_hex": "ffffff"
-            }
-          ]
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473114",
-        "item_id": null,
-        "amount": 200,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 34,
-        "type": "season_pass_xp",
-        "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
-        },
-        "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473116",
-        "item_id": "68a3791853f26e9a07b16f28",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 35,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68a3791853f26e9a07b16f28",
-          "power": 14500000,
-          "width": 2,
-          "name": {
-            "en": "Seed Key",
-            "cn": "Seed Key",
-            "es": "Seed Key",
-            "pt": "Seed Key"
-          },
-          "description": {
-            "en": "Forged in silence and worn by time, this ancient key unlocks more than memory — it opens vaults long forgotten by the chain. Each block it touches echoes with buried value, revealing crypto riches sealed away in the depths of the past.",
-            "cn": "Forged in silence and worn by time, this ancient key unlocks more than memory — it opens vaults long forgotten by the chain. Each block it touches echoes with buried value, revealing crypto riches sealed away in the depths of the past.",
-            "es": "Forged in silence and worn by time, this ancient key unlocks more than memory — it opens vaults long forgotten by the chain. Each block it touches echoes with buried value, revealing crypto riches sealed away in the depths of the past.",
-            "pt": "Forged in silence and worn by time, this ancient key unlocks more than memory — it opens vaults long forgotten by the chain. Each block it touches echoes with buried value, revealing crypto riches sealed away in the depths of the past."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "seed_key",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1100,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473118",
-        "item_id": "68c85ac8bedeb9a12eeef3fc",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 36,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68c85ac8bedeb9a12eeef3fc",
-          "power": 16000000,
-          "width": 1,
-          "name": {
-            "en": "Crypto-Fall",
-            "cn": "Crypto-Fall",
-            "es": "Crypto-Fall",
-            "pt": "Crypto-Fall"
-          },
-          "description": {
-            "en": "As the leaves fall, the profits rise — this miner embraces change like a crisp breeze through code. Calm, efficient, and quietly powerful, it turns seasonal shifts into steady streams of crypto growth.",
-            "cn": "As the leaves fall, the profits rise — this miner embraces change like a crisp breeze through code. Calm, efficient, and quietly powerful, it turns seasonal shifts into steady streams of crypto growth.",
-            "es": "As the leaves fall, the profits rise — this miner embraces change like a crisp breeze through code. Calm, efficient, and quietly powerful, it turns seasonal shifts into steady streams of crypto growth.",
-            "pt": "As the leaves fall, the profits rise — this miner embraces change like a crisp breeze through code. Calm, efficient, and quietly powerful, it turns seasonal shifts into steady streams of crypto growth."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "crypto_fall",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 800,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea47311a",
-        "item_id": "68c85ac8bedeb9a12eeef3fc",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 37,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68c85ac8bedeb9a12eeef3fc",
-          "power": 16000000,
-          "width": 1,
-          "name": {
-            "en": "Crypto-Fall",
-            "cn": "Crypto-Fall",
-            "es": "Crypto-Fall",
-            "pt": "Crypto-Fall"
-          },
-          "description": {
-            "en": "As the leaves fall, the profits rise — this miner embraces change like a crisp breeze through code. Calm, efficient, and quietly powerful, it turns seasonal shifts into steady streams of crypto growth.",
-            "cn": "As the leaves fall, the profits rise — this miner embraces change like a crisp breeze through code. Calm, efficient, and quietly powerful, it turns seasonal shifts into steady streams of crypto growth.",
-            "es": "As the leaves fall, the profits rise — this miner embraces change like a crisp breeze through code. Calm, efficient, and quietly powerful, it turns seasonal shifts into steady streams of crypto growth.",
-            "pt": "As the leaves fall, the profits rise — this miner embraces change like a crisp breeze through code. Calm, efficient, and quietly powerful, it turns seasonal shifts into steady streams of crypto growth."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "crypto_fall",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 800,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea47311c",
-        "item_id": "68d67f0abedeb9a12e00cd5a",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 38,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68d67f0abedeb9a12e00cd5a",
-          "power": 13000000,
-          "width": 2,
-          "name": {
-            "en": "Pocket Wormhole",
-            "cn": "Pocket Wormhole",
-            "es": "Pocket Wormhole",
-            "pt": "Pocket Wormhole"
-          },
-          "description": {
-            "en": "A glitch in space, a jackpot in your pocket — this miner bends reality one block at a time. Tunneling through the Multiverse, it pulls crypto from parallel chains straight into your timeline, no questions asked.",
-            "cn": "A glitch in space, a jackpot in your pocket — this miner bends reality one block at a time. Tunneling through the Multiverse, it pulls crypto from parallel chains straight into your timeline, no questions asked.",
-            "es": "A glitch in space, a jackpot in your pocket — this miner bends reality one block at a time. Tunneling through the Multiverse, it pulls crypto from parallel chains straight into your timeline, no questions asked.",
-            "pt": "A glitch in space, a jackpot in your pocket — this miner bends reality one block at a time. Tunneling through the Multiverse, it pulls crypto from parallel chains straight into your timeline, no questions asked."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "pocket_wormhole",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea47311e",
-        "item_id": "68d67f0abedeb9a12e00cd5a",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 39,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68d67f0abedeb9a12e00cd5a",
-          "power": 13000000,
-          "width": 2,
-          "name": {
-            "en": "Pocket Wormhole",
-            "cn": "Pocket Wormhole",
-            "es": "Pocket Wormhole",
-            "pt": "Pocket Wormhole"
-          },
-          "description": {
-            "en": "A glitch in space, a jackpot in your pocket — this miner bends reality one block at a time. Tunneling through the Multiverse, it pulls crypto from parallel chains straight into your timeline, no questions asked.",
-            "cn": "A glitch in space, a jackpot in your pocket — this miner bends reality one block at a time. Tunneling through the Multiverse, it pulls crypto from parallel chains straight into your timeline, no questions asked.",
-            "es": "A glitch in space, a jackpot in your pocket — this miner bends reality one block at a time. Tunneling through the Multiverse, it pulls crypto from parallel chains straight into your timeline, no questions asked.",
-            "pt": "A glitch in space, a jackpot in your pocket — this miner bends reality one block at a time. Tunneling through the Multiverse, it pulls crypto from parallel chains straight into your timeline, no questions asked."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "pocket_wormhole",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473120",
-        "item_id": "68e4f821603dd81077e64c4f",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 40,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68e4f821603dd81077e64c4f",
-          "power": 36000000,
-          "width": 2,
-          "name": {
-            "en": "AIrum",
-            "cn": "AIrum",
-            "es": "AIrum",
-            "pt": "AIrum"
-          },
-          "description": {
-            "en": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "cn": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "es": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "pt": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "airum",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1500,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473122",
-        "item_id": "68e4f821603dd81077e64c4f",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 41,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68e4f821603dd81077e64c4f",
-          "power": 36000000,
-          "width": 2,
-          "name": {
-            "en": "AIrum",
-            "cn": "AIrum",
-            "es": "AIrum",
-            "pt": "AIrum"
-          },
-          "description": {
-            "en": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "cn": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "es": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "pt": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "airum",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1500,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e505bc7c166a71ea473124",
-        "item_id": "68e4f821603dd81077e64c52",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 42,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68e4f821603dd81077e64c52",
-          "power": 120000000,
-          "width": 2,
-          "name": {
-            "en": "AIrum",
-            "cn": "AIrum",
-            "es": "AIrum",
-            "pt": "AIrum"
-          },
-          "description": {
-            "en": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "cn": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "es": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up.",
-            "pt": "Born from code and rebellion, this miner flows like liquid thought through the circuitry of a new era. A spark of the cyber-renaissance, it extracts crypto with the cold precision of AI and the soul of a system waking up."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "airum",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 3200,
+          "bonus": 2200,
           "is_in_set": false
         }
       }
@@ -2615,213 +565,53 @@
     "levels_config": [
       {
         "level": 1,
-        "level_xp": 3000,
-        "required_xp": 3000
+        "level_xp": 2000,
+        "required_xp": 2000
       },
       {
         "level": 2,
-        "level_xp": 11000,
-        "required_xp": 14000
+        "level_xp": 15000,
+        "required_xp": 17000
       },
       {
         "level": 3,
-        "level_xp": 24000,
-        "required_xp": 38000
+        "level_xp": 100000,
+        "required_xp": 117000
       },
       {
         "level": 4,
-        "level_xp": 41000,
-        "required_xp": 79000
+        "level_xp": 500000,
+        "required_xp": 617000
       },
       {
         "level": 5,
-        "level_xp": 62000,
-        "required_xp": 141000
+        "level_xp": 1000000,
+        "required_xp": 1617000
       },
       {
         "level": 6,
-        "level_xp": 87000,
-        "required_xp": 228000
+        "level_xp": 1500000,
+        "required_xp": 3117000
       },
       {
         "level": 7,
-        "level_xp": 117000,
-        "required_xp": 345000
+        "level_xp": 750000,
+        "required_xp": 3867000
       },
       {
         "level": 8,
-        "level_xp": 150000,
-        "required_xp": 495000
+        "level_xp": 1250000,
+        "required_xp": 5117000
       },
       {
         "level": 9,
-        "level_xp": 188000,
-        "required_xp": 683000
+        "level_xp": 10000000,
+        "required_xp": 15117000
       },
       {
         "level": 10,
-        "level_xp": 231000,
-        "required_xp": 914000
-      },
-      {
-        "level": 11,
-        "level_xp": 277000,
-        "required_xp": 1191000
-      },
-      {
-        "level": 12,
-        "level_xp": 290000,
-        "required_xp": 1481000
-      },
-      {
-        "level": 13,
-        "level_xp": 440000,
-        "required_xp": 1921000
-      },
-      {
-        "level": 14,
-        "level_xp": 530000,
-        "required_xp": 2451000
-      },
-      {
-        "level": 15,
-        "level_xp": 600000,
-        "required_xp": 3051000
-      },
-      {
-        "level": 16,
-        "level_xp": 660000,
-        "required_xp": 3711000
-      },
-      {
-        "level": 17,
-        "level_xp": 710000,
-        "required_xp": 4421000
-      },
-      {
-        "level": 18,
-        "level_xp": 760000,
-        "required_xp": 5181000
-      },
-      {
-        "level": 19,
-        "level_xp": 810000,
-        "required_xp": 5991000
-      },
-      {
-        "level": 20,
-        "level_xp": 850000,
-        "required_xp": 6841000
-      },
-      {
-        "level": 21,
-        "level_xp": 900000,
-        "required_xp": 7741000
-      },
-      {
-        "level": 22,
-        "level_xp": 950000,
-        "required_xp": 8691000
-      },
-      {
-        "level": 23,
-        "level_xp": 990000,
-        "required_xp": 9681000
-      },
-      {
-        "level": 24,
-        "level_xp": 1040000,
-        "required_xp": 10721000
-      },
-      {
-        "level": 25,
-        "level_xp": 1080000,
-        "required_xp": 11801000
-      },
-      {
-        "level": 26,
-        "level_xp": 1130000,
-        "required_xp": 12931000
-      },
-      {
-        "level": 27,
-        "level_xp": 1170000,
-        "required_xp": 14101000
-      },
-      {
-        "level": 28,
-        "level_xp": 1220000,
-        "required_xp": 15321000
-      },
-      {
-        "level": 29,
-        "level_xp": 1260000,
-        "required_xp": 16581000
-      },
-      {
-        "level": 30,
-        "level_xp": 1310000,
-        "required_xp": 17891000
-      },
-      {
-        "level": 31,
-        "level_xp": 1350000,
-        "required_xp": 19241000
-      },
-      {
-        "level": 32,
-        "level_xp": 1400000,
-        "required_xp": 20641000
-      },
-      {
-        "level": 33,
-        "level_xp": 1440000,
-        "required_xp": 22081000
-      },
-      {
-        "level": 34,
-        "level_xp": 1400000,
-        "required_xp": 23481000
-      },
-      {
-        "level": 35,
-        "level_xp": 1800000,
-        "required_xp": 25281000
-      },
-      {
-        "level": 36,
-        "level_xp": 1900000,
-        "required_xp": 27181000
-      },
-      {
-        "level": 37,
-        "level_xp": 2000000,
-        "required_xp": 29181000
-      },
-      {
-        "level": 38,
-        "level_xp": 2000000,
-        "required_xp": 31181000
-      },
-      {
-        "level": 39,
-        "level_xp": 2100000,
-        "required_xp": 33281000
-      },
-      {
-        "level": 40,
-        "level_xp": 12000000,
-        "required_xp": 45281000
-      },
-      {
-        "level": 41,
-        "level_xp": 6000000,
-        "required_xp": 51281000
-      },
-      {
-        "level": 42,
-        "level_xp": 24000000,
-        "required_xp": 75281000
+        "level_xp": 20000000,
+        "required_xp": 35117000
       }
     ]
   }
