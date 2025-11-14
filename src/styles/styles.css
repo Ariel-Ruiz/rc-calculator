@@ -26,10 +26,11 @@ body {
   background: var(--primary);
   color: var(--text-primary);
   transition: all 0.3s ease;
+  background-image: url('https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/assets/unnamed.jpg');
+  background-size: 400px;
 }
 main {
   padding: 1.5rem 12%;
-  /* background-image: url('https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/assets/BTC6ma27FRv8cM4nMQi0C.png'); */
 }
 
 @media (max-width: 768px) {

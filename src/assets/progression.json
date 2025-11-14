@@ -2,7 +2,7 @@
   "multiplier": 0.1,
   "tasks": [
     {
-      "id": "68e7c43e7c166a71ea47319b",
+      "id": "690b76497c166a71ea47336d",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "68e7c43e7c166a71ea47319c",
+      "id": "690b76497c166a71ea47336e",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -44,10 +44,10 @@
       "sort": 2
     },
     {
-      "id": "68e7c43e7c166a71ea47319d",
+      "id": "690b76497c166a71ea47336f",
       "xp_type": "number",
-      "xp_reward": 150,
-      "amount": 6667,
+      "xp_reward": 148,
+      "amount": 6757,
       "tag": {
         "color": "",
         "text": "",
@@ -67,88 +67,35 @@
   ],
   "event": {
     "event": {
-      "_id": "68e7c43e9f36c49e72e0cf05",
-      "max_xp": 35117000,
+      "_id": "690b7649b5000902413cd7a6",
+      "max_xp": 65209000,
       "max_multiplier": 10000,
-      "max_level": 10,
+      "max_level": 20,
       "tag": {
         "text": "",
         "color": "",
         "text_color": ""
       },
       "progression_event_type": "default",
-      "end_date": "2025-10-13T15:00:00.000Z",
-      "last_updated": 1760019518390,
+      "end_date": "2025-11-17T15:00:00.000Z",
+      "last_updated": 1762358857790,
       "description": {
-        "en": "[10–13] Slayer of Demons",
-        "cn": "[10–13] Slayer of Demons"
+        "en": "[14–17] Fight Club",
+        "cn": "[14–17] Fight Club"
       },
       "title": {
-        "en": "Slayer of Demons",
-        "cn": "Slayer of Demons"
+        "en": "Fight Club",
+        "cn": "Fight Club"
       }
     },
     "rewards": [
       {
-        "id": "68e7c43e7c166a71ea47319f",
-        "item_id": "68b6db73f58321ae064c2051",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 1,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68b6db73f58321ae064c2051",
-          "power": 250000,
-          "width": 2,
-          "name": {
-            "en": "GravelRig",
-            "cn": "GravelRig",
-            "es": "GravelRig",
-            "pt": "GravelRig"
-          },
-          "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "gravelrig",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 100,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "68e7c43e7c166a71ea4731a1",
+        "id": "690b76497c166a71ea473371",
         "item_id": null,
-        "amount": 350000,
+        "amount": 250000,
         "currency": "RLT",
         "ttl_time": 0,
-        "required_level": 2,
+        "required_level": 1,
         "type": "money",
         "title": {
           "en": "Money Title",
@@ -164,43 +111,50 @@
         }
       },
       {
-        "id": "68e7c43e7c166a71ea4731a3",
-        "item_id": "64d62a7d6d7008148575df7b",
-        "amount": 1,
+        "id": "690b76497c166a71ea473373",
+        "item_id": null,
+        "amount": 50,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 3,
-        "type": "rack",
+        "required_level": 2,
+        "type": "season_pass_xp",
         "title": {
-          "en": "Rack Title",
-          "cn": "Rack Title"
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
         },
         "description": {
-          "en": "Rack Reward Description",
-          "cn": "Rack Reward Description"
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Neon Rack 8",
-            "cn": "Neon Rack 8"
-          },
-          "description": {
-            "en": "Embrace the vibrant energy of neon lights with this futuristic flair of the Neon Rack.",
-            "cn": "Embrace the vibrant energy of neon lights with this futuristic flair of the Neon Rack."
-          },
-          "_id": "64d62a7d6d7008148575df7b",
-          "capacity": 8,
-          "is_can_be_sold_on_mp": true,
-          "is_in_set": false
         }
       },
       {
-        "id": "68e7c43e7c166a71ea4731a5",
-        "item_id": "6399c3431c483a58f70e99da",
+        "id": "690b76497c166a71ea473375",
+        "item_id": null,
+        "amount": 1000000,
+        "currency": "",
+        "ttl_time": 1209600000,
+        "required_level": 3,
+        "type": "power",
+        "title": {
+          "en": "Power",
+          "cn": "Power"
+        },
+        "description": {
+          "en": "Power Reward Description",
+          "cn": "Power Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "690b76497c166a71ea473377",
+        "item_id": "68b6dbf2f58321ae064c22d6",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -219,37 +173,41 @@
           "max": 0
         },
         "item": {
-          "_id": "6399c3431c483a58f70e99da",
-          "power": 4528020,
+          "_id": "68b6dbf2f58321ae064c22d6",
+          "power": 400000,
           "width": 2,
           "name": {
-            "en": "Disco-Roll",
-            "cn": "Disco-Roll"
+            "en": "ShaleRig",
+            "cn": "ShaleRig",
+            "es": "ShaleRig",
+            "pt": "ShaleRig"
           },
           "description": {
-            "en": "Saturday night fever now available 24/7! Place it on the top shelf of your rack and PARTY!",
-            "cn": "Saturday night fever now available 24/7! Place it on the top shelf of your rack and PARTY!"
+            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 5,
-          "type": "merge",
-          "filename": "disco_roll",
+          "level": 0,
+          "type": "basic",
+          "filename": "shalerig",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 390,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 150,
           "is_in_set": false
         }
       },
       {
-        "id": "68e7c43e7c166a71ea4731a7",
-        "item_id": "65e1b30b47cd57f3797ccf20",
+        "id": "690b76497c166a71ea473379",
+        "item_id": "68b6dbf2f58321ae064c22d6",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -268,40 +226,41 @@
           "max": 0
         },
         "item": {
-          "_id": "65e1b30b47cd57f3797ccf20",
-          "power": 5512500,
+          "_id": "68b6dbf2f58321ae064c22d6",
+          "power": 400000,
           "width": 2,
           "name": {
-            "en": "FemPride",
-            "cn": "FemPride",
-            "es": "FemPride",
-            "pt": "FemPride"
+            "en": "ShaleRig",
+            "cn": "ShaleRig",
+            "es": "ShaleRig",
+            "pt": "ShaleRig"
           },
           "description": {
-            "en": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
-            "cn": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
-            "es": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
-            "pt": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\""
+            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
-          "type": "merge",
-          "filename": "fempride",
+          "level": 0,
+          "type": "basic",
+          "filename": "shalerig",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 940,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 150,
           "is_in_set": false
         }
       },
       {
-        "id": "68e7c43e7c166a71ea4731a9",
-        "item_id": "68e7ac859f36c49e72e0037e",
+        "id": "690b76497c166a71ea47337b",
+        "item_id": "68b6dbf2f58321ae064c22d9",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -320,41 +279,40 @@
           "max": 0
         },
         "item": {
-          "_id": "68e7ac859f36c49e72e0037e",
-          "power": 17000000,
+          "_id": "68b6dbf2f58321ae064c22d9",
+          "power": 1000000,
           "width": 2,
           "name": {
-            "en": "Hanabi Festival",
-            "cn": "Hanabi Festival",
-            "es": "Hanabi Festival",
-            "pt": "Hanabi Festival"
+            "en": "ShaleRig",
+            "cn": "ShaleRig",
+            "es": "ShaleRig",
+            "pt": "ShaleRig"
           },
           "description": {
-            "en": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "cn": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "es": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "pt": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block."
+            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "hanabi_festival",
+          "level": 1,
+          "type": "merge",
+          "filename": "shalerig",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 900,
+          "bonus": 500,
           "is_in_set": false
         }
       },
       {
-        "id": "68e7c43e7c166a71ea4731ab",
-        "item_id": "68e7ac859f36c49e72e0037e",
+        "id": "690b764a7c166a71ea47337d",
+        "item_id": "68b6dbf2f58321ae064c22df",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -373,41 +331,40 @@
           "max": 0
         },
         "item": {
-          "_id": "68e7ac859f36c49e72e0037e",
-          "power": 17000000,
+          "_id": "68b6dbf2f58321ae064c22df",
+          "power": 2500000,
           "width": 2,
           "name": {
-            "en": "Hanabi Festival",
-            "cn": "Hanabi Festival",
-            "es": "Hanabi Festival",
-            "pt": "Hanabi Festival"
+            "en": "ShaleRig",
+            "cn": "ShaleRig",
+            "es": "ShaleRig",
+            "pt": "ShaleRig"
           },
           "description": {
-            "en": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "cn": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "es": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "pt": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block."
+            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "hanabi_festival",
+          "level": 2,
+          "type": "merge",
+          "filename": "shalerig",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 900,
+          "bonus": 650,
           "is_in_set": false
         }
       },
       {
-        "id": "68e7c43e7c166a71ea4731ad",
-        "item_id": "65e1b30b47cd57f3797ccf20",
+        "id": "690b764a7c166a71ea47337f",
+        "item_id": "690a2ca6b50009024139e83d",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -426,44 +383,101 @@
           "max": 0
         },
         "item": {
-          "_id": "65e1b30b47cd57f3797ccf20",
-          "power": 5512500,
-          "width": 2,
+          "_id": "690a2ca6b50009024139e83d",
+          "power": 10000000,
+          "width": 1,
           "name": {
-            "en": "FemPride",
-            "cn": "FemPride",
-            "es": "FemPride",
-            "pt": "FemPride"
+            "en": "Hamcom Cup",
+            "cn": "Hamcom Cup",
+            "es": "Hamcom Cup",
+            "pt": "Hamcom Cup"
           },
           "description": {
-            "en": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
-            "cn": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
-            "es": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\"",
-            "pt": "Say hello to the \"Feminine Pride Miner,\" the digital queen turning the crypto world into a catwalk. She mines with more grace than a politician dodges questions, blending sleek efficiency with a flair that whispers, \"I shatter glass ceilings and collect bitcoins, all in heels.\""
+            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
-          "type": "merge",
-          "filename": "fempride",
+          "level": 0,
+          "type": "basic",
+          "filename": "hamcom_cup",
           "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
+            "frame_width": 58,
+            "frame_height": 40,
+            "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 940,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
           "is_in_set": false
         }
       },
       {
-        "id": "68e7c43e7c166a71ea4731af",
-        "item_id": "68e7ac859f36c49e72e00381",
+        "id": "690b764a7c166a71ea473381",
+        "item_id": null,
+        "amount": 500000000,
+        "currency": "RST",
+        "ttl_time": 0,
+        "required_level": 9,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea473383",
+        "item_id": "668d22fc5a25375fc803333c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 9,
+        "required_level": 10,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Plant Rack 8",
+            "cn": "Plant Rack 8"
+          },
+          "description": {
+            "en": "An advanced mining rack that supports 8 miners, featuring eco-friendly materials and design principles to promote sustainable mining practices.",
+            "cn": "An advanced mining rack that supports 8 miners, featuring eco-friendly materials and design principles to promote sustainable mining practices."
+          },
+          "_id": "668d22fc5a25375fc803333c",
+          "capacity": 8,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea473385",
+        "item_id": "631f7a3d8238ed283a234490",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 11,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -478,20 +492,385 @@
           "max": 0
         },
         "item": {
-          "_id": "68e7ac859f36c49e72e00381",
-          "power": 44630000,
+          "_id": "631f7a3d8238ed283a234490",
+          "power": 4748520,
           "width": 2,
           "name": {
-            "en": "Hanabi Festival",
-            "cn": "Hanabi Festival",
-            "es": "Hanabi Festival",
-            "pt": "Hanabi Festival"
+            "en": "The Minertaur",
+            "cn": "The Minertaur"
           },
           "description": {
-            "en": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "cn": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "es": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "pt": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block."
+            "en": "A bunch of coins behind every corner — new version of The Maze! This miner is one of the ten selected winners of the Miners Art Contest: Ancient Myths. Created by ",
+            "cn": "A bunch of coins behind every corner — new version of The Maze! This miner is one of the ten selected winners of the Miners Art Contest: Ancient Myths. Created by "
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "the_minertaur",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 122,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea473387",
+        "item_id": "65d7b6b7d68c8ab1d87e79f3",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 12,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "65d7b6b7d68c8ab1d87e79f3",
+          "power": 9164610,
+          "width": 2,
+          "name": {
+            "en": "Royal Necklace",
+            "cn": "Royal Necklace",
+            "es": "Royal Necklace",
+            "pt": "Royal Necklace"
+          },
+          "description": {
+            "en": "The Royal Necklace once belonged to a very noble family and was passed down through 14 generations. When asked how the necklace ended up with Hamdiana, he only responds with an intriguing silence.",
+            "cn": "The Royal Necklace once belonged to a very noble family and was passed down through 14 generations. When asked how the necklace ended up with Hamdiana, he only responds with an intriguing silence.",
+            "es": "The Royal Necklace once belonged to a very noble family and was passed down through 14 generations. When asked how the necklace ended up with Hamdiana, he only responds with an intriguing silence.",
+            "pt": "The Royal Necklace once belonged to a very noble family and was passed down through 14 generations. When asked how the necklace ended up with Hamdiana, he only responds with an intriguing silence."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "royal_necklace",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 436,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea473389",
+        "item_id": "66d05b88e89c8517a8ec488b",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 13,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "66d05b88e89c8517a8ec488b",
+          "power": 5000000,
+          "width": 2,
+          "name": {
+            "en": "Ritualis",
+            "cn": "Ritualis",
+            "es": "Ritualis",
+            "pt": "Ritualis"
+          },
+          "description": {
+            "en": "Step into the fiery ritual of the \"Ritualis\" miner, where the art of cryptocurrency mining meets the spectacle of Burning Ham. This device burns through algorithms like effigies in the desert, channeling the energy of the festival into a digital blaze that turns data into wealth with every ignited block.",
+            "cn": "Step into the fiery ritual of the \"Ritualis\" miner, where the art of cryptocurrency mining meets the spectacle of Burning Ham. This device burns through algorithms like effigies in the desert, channeling the energy of the festival into a digital blaze that turns data into wealth with every ignited block.",
+            "es": "Step into the fiery ritual of the \"Ritualis\" miner, where the art of cryptocurrency mining meets the spectacle of Burning Ham. This device burns through algorithms like effigies in the desert, channeling the energy of the festival into a digital blaze that turns data into wealth with every ignited block.",
+            "pt": "Step into the fiery ritual of the \"Ritualis\" miner, where the art of cryptocurrency mining meets the spectacle of Burning Ham. This device burns through algorithms like effigies in the desert, channeling the energy of the festival into a digital blaze that turns data into wealth with every ignited block."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "ritualis",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 900,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea47338b",
+        "item_id": "6892166d73641cbc58e441f6",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 14,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6892166d73641cbc58e441f6",
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "description": {
+            "en": "It's better to mine and remain polite, as you wouldn't want to be banned from the community, would you? By Doumpa",
+            "cn": "It's better to mine and remain polite, as you wouldn't want to be banned from the community, would you? By Luken",
+            "es": "It's better to mine and remain polite, as you wouldn't want to be banned from the community, would you? By Luken",
+            "pt": "It's better to mine and remain polite, as you wouldn't want to be banned from the community, would you? By Luken"
+          },
+          "filename": "banhammer_master",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "level": 4,
+          "name": {
+            "en": "Banhammer Master",
+            "cn": "Banhammer Master",
+            "es": "Banhammer Master",
+            "pt": "Banhammer Master"
+          },
+          "power": 6500000,
+          "type": "merge",
+          "width": 2,
+          "bonus": 1200,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea47338d",
+        "item_id": "68efed009f36c49e72eb1816",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 15,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "68efed009f36c49e72eb1816",
+          "power": 19000000,
+          "width": 2,
+          "name": {
+            "en": "Hamksy",
+            "cn": "Hamksy",
+            "es": "Hamksy",
+            "pt": "Hamksy"
+          },
+          "description": {
+            "en": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
+            "cn": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
+            "es": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
+            "pt": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "hamksy",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1300,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea47338f",
+        "item_id": "690a2ca6b50009024139e83d",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 16,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "690a2ca6b50009024139e83d",
+          "power": 10000000,
+          "width": 1,
+          "name": {
+            "en": "Hamcom Cup",
+            "cn": "Hamcom Cup",
+            "es": "Hamcom Cup",
+            "pt": "Hamcom Cup"
+          },
+          "description": {
+            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "hamcom_cup",
+          "frames_data": {
+            "frame_width": 58,
+            "frame_height": 40,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea473391",
+        "item_id": "68efed009f36c49e72eb1816",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 17,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "68efed009f36c49e72eb1816",
+          "power": 19000000,
+          "width": 2,
+          "name": {
+            "en": "Hamksy",
+            "cn": "Hamksy",
+            "es": "Hamksy",
+            "pt": "Hamksy"
+          },
+          "description": {
+            "en": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
+            "cn": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
+            "es": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
+            "pt": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "hamksy",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1300,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea473393",
+        "item_id": "690a2ca6b50009024139e840",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 18,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "690a2ca6b50009024139e840",
+          "power": 26250000,
+          "width": 1,
+          "name": {
+            "en": "Hamcom Cup",
+            "cn": "Hamcom Cup",
+            "es": "Hamcom Cup",
+            "pt": "Hamcom Cup"
+          },
+          "description": {
+            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
           },
           "created_by_title": {
             "link": "",
@@ -499,23 +878,23 @@
           },
           "level": 1,
           "type": "merge",
-          "filename": "hanabi_festival",
+          "filename": "hamcom_cup",
           "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
+            "frame_width": 58,
+            "frame_height": 40
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 1400,
+          "bonus": 2400,
           "is_in_set": false
         }
       },
       {
-        "id": "68e7c43e7c166a71ea4731b1",
-        "item_id": "68e7ac859f36c49e72e00387",
+        "id": "690b764a7c166a71ea473395",
+        "item_id": "690a2ca6b50009024139e846",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 10,
+        "required_level": 19,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -530,20 +909,20 @@
           "max": 0
         },
         "item": {
-          "_id": "68e7ac859f36c49e72e00387",
-          "power": 117160000,
-          "width": 2,
+          "_id": "690a2ca6b50009024139e846",
+          "power": 68910000,
+          "width": 1,
           "name": {
-            "en": "Hanabi Festival",
-            "cn": "Hanabi Festival",
-            "es": "Hanabi Festival",
-            "pt": "Hanabi Festival"
+            "en": "Hamcom Cup",
+            "cn": "Hamcom Cup",
+            "es": "Hamcom Cup",
+            "pt": "Hamcom Cup"
           },
           "description": {
-            "en": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "cn": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "es": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block.",
-            "pt": "Sparks fly, demons run — this K-pop-fueled hunter lights up the blockchain like a firework show, striking fast and shining brighter with every block."
+            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
           },
           "created_by_title": {
             "link": "",
@@ -551,13 +930,65 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "hanabi_festival",
+          "filename": "hamcom_cup",
           "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
+            "frame_width": 58,
+            "frame_height": 40
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 2200,
+          "bonus": 3300,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "690b764a7c166a71ea473397",
+        "item_id": "690a2ca6b50009024139e84c",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 20,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "690a2ca6b50009024139e84c",
+          "power": 180900000,
+          "width": 1,
+          "name": {
+            "en": "Hamcom Cup",
+            "cn": "Hamcom Cup",
+            "es": "Hamcom Cup",
+            "pt": "Hamcom Cup"
+          },
+          "description": {
+            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
+            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "hamcom_cup",
+          "frames_data": {
+            "frame_width": 58,
+            "frame_height": 40
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 4400,
           "is_in_set": false
         }
       }
@@ -570,48 +1001,98 @@
       },
       {
         "level": 2,
-        "level_xp": 15000,
-        "required_xp": 17000
+        "level_xp": 5000,
+        "required_xp": 7000
       },
       {
         "level": 3,
-        "level_xp": 100000,
-        "required_xp": 117000
+        "level_xp": 15000,
+        "required_xp": 22000
       },
       {
         "level": 4,
-        "level_xp": 500000,
-        "required_xp": 617000
+        "level_xp": 41000,
+        "required_xp": 63000
       },
       {
         "level": 5,
-        "level_xp": 1000000,
-        "required_xp": 1617000
+        "level_xp": 16000,
+        "required_xp": 79000
       },
       {
         "level": 6,
-        "level_xp": 1500000,
-        "required_xp": 3117000
+        "level_xp": 250000,
+        "required_xp": 329000
       },
       {
         "level": 7,
-        "level_xp": 750000,
-        "required_xp": 3867000
+        "level_xp": 240000,
+        "required_xp": 569000
       },
       {
         "level": 8,
-        "level_xp": 1250000,
-        "required_xp": 5117000
+        "level_xp": 750000,
+        "required_xp": 1319000
       },
       {
         "level": 9,
-        "level_xp": 10000000,
-        "required_xp": 15117000
+        "level_xp": 200000,
+        "required_xp": 1519000
       },
       {
         "level": 10,
-        "level_xp": 20000000,
-        "required_xp": 35117000
+        "level_xp": 350000,
+        "required_xp": 1869000
+      },
+      {
+        "level": 11,
+        "level_xp": 380000,
+        "required_xp": 2249000
+      },
+      {
+        "level": 12,
+        "level_xp": 710000,
+        "required_xp": 2959000
+      },
+      {
+        "level": 13,
+        "level_xp": 1250000,
+        "required_xp": 4209000
+      },
+      {
+        "level": 14,
+        "level_xp": 1000000,
+        "required_xp": 5209000
+      },
+      {
+        "level": 15,
+        "level_xp": 3000000,
+        "required_xp": 8209000
+      },
+      {
+        "level": 16,
+        "level_xp": 8000000,
+        "required_xp": 16209000
+      },
+      {
+        "level": 17,
+        "level_xp": 4000000,
+        "required_xp": 20209000
+      },
+      {
+        "level": 18,
+        "level_xp": 12000000,
+        "required_xp": 32209000
+      },
+      {
+        "level": 19,
+        "level_xp": 15000000,
+        "required_xp": 47209000
+      },
+      {
+        "level": 20,
+        "level_xp": 18000000,
+        "required_xp": 65209000
       }
     ]
   }

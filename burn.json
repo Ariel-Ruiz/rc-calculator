@@ -1,0 +1,2529 @@
+[
+  {
+    "puntos": 4098600,
+    "nivel": 6,
+    "nombre": "Danse Macabre",
+    "poder": "320.000 Ph/s",
+    "bonus": "65%"
+  },
+  {
+    "puntos": 641200,
+    "nivel": 2,
+    "nombre": "Deja Vu",
+    "poder": "50.000 Ph/s",
+    "bonus": "30%"
+  },
+  {
+    "puntos": 2562400,
+    "nivel": 6,
+    "nombre": "Not Wanted",
+    "poder": "200.000 Ph/s",
+    "bonus": "60%"
+  },
+  {
+    "puntos": 1922600,
+    "nivel": 6,
+    "nombre": "Litecoin Dynamo",
+    "poder": "150.000 Ph/s",
+    "bonus": "65%"
+  },
+  {
+    "puntos": 1922600,
+    "nivel": 6,
+    "nombre": "Liquidity Locker",
+    "poder": "150.000 Ph/s",
+    "bonus": "65%"
+  },
+  {
+    "puntos": 1921080,
+    "nivel": 5,
+    "nombre": "Abyss Stone",
+    "poder": "150.000 Ph/s",
+    "bonus": "27%"
+  },
+  {
+    "puntos": 1666400,
+    "nivel": 6,
+    "nombre": "Steel Titan",
+    "poder": "130.000 Ph/s",
+    "bonus": "60%"
+  },
+  {
+    "puntos": 1665600,
+    "nivel": 6,
+    "nombre": "Crustacean Cache",
+    "poder": "130.000 Ph/s",
+    "bonus": "40%"
+  },
+  {
+    "puntos": 1538000,
+    "nivel": 6,
+    "nombre": "Totem Mask",
+    "poder": "120.000 Ph/s",
+    "bonus": "50%"
+  },
+  {
+    "puntos": 1390800,
+    "nivel": 4,
+    "nombre": "Totally Black",
+    "poder": "108.600 Ph/s",
+    "bonus": "18%"
+  },
+  {
+    "puntos": 1024800,
+    "nivel": 6,
+    "nombre": "Cub",
+    "poder": "80.000 Ph/s",
+    "bonus": "20%"
+  },
+  {
+    "puntos": 974680,
+    "nivel": 4,
+    "nombre": "BlasterBell",
+    "poder": "76.100 Ph/s",
+    "bonus": "15%"
+  },
+  {
+    "puntos": 960800,
+    "nivel": 5,
+    "nombre": "Lite Light",
+    "poder": "75.000 Ph/s",
+    "bonus": "20%"
+  },
+  {
+    "puntos": 884800,
+    "nivel": 6,
+    "nombre": "On Air",
+    "poder": "69.000 Ph/s",
+    "bonus": "40%"
+  },
+  {
+    "puntos": 883048,
+    "nivel": 3,
+    "nombre": "Cake Crash",
+    "poder": "68.910 Ph/s",
+    "bonus": "25%"
+  },
+  {
+    "puntos": 773864,
+    "nivel": 2,
+    "nombre": "Bye Bye Bye",
+    "poder": "60.380 Ph/s",
+    "bonus": "25%"
+  },
+  {
+    "puntos": 768320,
+    "nivel": 1,
+    "nombre": "Radiant Core",
+    "poder": "60.000 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 706224,
+    "nivel": 3,
+    "nombre": "Maslina",
+    "poder": "55.130 Ph/s",
+    "bonus": "14%"
+  },
+  {
+    "puntos": 697040,
+    "nivel": 4,
+    "nombre": "Rollin' Rosy",
+    "poder": "54.400 Ph/s",
+    "bonus": "18%"
+  },
+  {
+    "puntos": 697040,
+    "nivel": 4,
+    "nombre": "Libre-Mine",
+    "poder": "54.400 Ph/s",
+    "bonus": "18%"
+  },
+  {
+    "puntos": 641400,
+    "nivel": 5,
+    "nombre": "Etherial Shard Siren",
+    "poder": "50.000 Ph/s",
+    "bonus": "35%"
+  },
+  {
+    "puntos": 640400,
+    "nivel": 1,
+    "nombre": "Clocked & Loaded",
+    "poder": "50.000 Ph/s",
+    "bonus": "10%"
+  },
+  {
+    "puntos": 617960,
+    "nivel": 3,
+    "nombre": "Da Ba Dee",
+    "poder": "48.250 Ph/s",
+    "bonus": "9%"
+  },
+  {
+    "puntos": 600108,
+    "nivel": 3,
+    "nombre": "SR-2",
+    "poder": "46.860 Ph/s",
+    "bonus": "7.5%"
+  },
+  {
+    "puntos": 580560,
+    "nivel": 4,
+    "nombre": "Throve of Yggdrasil",
+    "poder": "45.300 Ph/s",
+    "bonus": "18%"
+  },
+  {
+    "puntos": 538240,
+    "nivel": 3,
+    "nombre": "Incubator",
+    "poder": "42.000 Ph/s",
+    "bonus": "16%"
+  },
+  {
+    "puntos": 529760,
+    "nivel": 3,
+    "nombre": "Totally Black",
+    "poder": "41.350 Ph/s",
+    "bonus": "12%"
+  },
+  {
+    "puntos": 512720,
+    "nivel": 4,
+    "nombre": "Crown Ballot",
+    "poder": "40.000 Ph/s",
+    "bonus": "18%"
+  },
+  {
+    "puntos": 512560,
+    "nivel": 5,
+    "nombre": "Skullspur",
+    "poder": "40.000 Ph/s",
+    "bonus": "14%"
+  },
+  {
+    "puntos": 499128,
+    "nivel": 3,
+    "nombre": "Santa's Vault",
+    "poder": "38.960 Ph/s",
+    "bonus": "11%"
+  },
+  {
+    "puntos": 488240,
+    "nivel": 4,
+    "nombre": "Mining Queen",
+    "poder": "38.100 Ph/s",
+    "bonus": "14%"
+  },
+  {
+    "puntos": 441896,
+    "nivel": 3,
+    "nombre": "Helm of the Chosen",
+    "poder": "34.470 Ph/s",
+    "bonus": "17%"
+  },
+  {
+    "puntos": 441896,
+    "nivel": 3,
+    "nombre": "Uncle's Perra",
+    "poder": "34.470 Ph/s",
+    "bonus": "17%"
+  },
+  {
+    "puntos": 441536,
+    "nivel": 3,
+    "nombre": "Trickster's Horn",
+    "poder": "34.470 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 423055,
+    "nivel": 6,
+    "nombre": "Ferdinand's Horse",
+    "poder": "33.030 Ph/s",
+    "bonus": "6.7%"
+  },
+  {
+    "puntos": 422800,
+    "nivel": 4,
+    "nombre": "Galactic Guardian",
+    "poder": "33.000 Ph/s",
+    "bonus": "10%"
+  },
+  {
+    "puntos": 418960,
+    "nivel": 4,
+    "nombre": "Bio-Plasma",
+    "poder": "32.700 Ph/s",
+    "bonus": "10%"
+  },
+  {
+    "puntos": 418840,
+    "nivel": 4,
+    "nombre": "GiftSmasher",
+    "poder": "32.700 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 410000,
+    "nivel": 1,
+    "nombre": "Rolly Trolley Gold",
+    "poder": "32.000 Ph/s",
+    "bonus": "10%"
+  },
+  {
+    "puntos": 388616,
+    "nivel": 3,
+    "nombre": "Starry Hash",
+    "poder": "30.320 Ph/s",
+    "bonus": "13%"
+  },
+  {
+    "puntos": 384560,
+    "nivel": 5,
+    "nombre": "Cub",
+    "poder": "30.000 Ph/s",
+    "bonus": "14%"
+  },
+  {
+    "puntos": 384280,
+    "nivel": 2,
+    "nombre": "SunChill Console",
+    "poder": "30.000 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 358960,
+    "nivel": 3,
+    "nombre": "Valkyrie's Echo",
+    "poder": "28.000 Ph/s",
+    "bonus": "14%"
+  },
+  {
+    "puntos": 352320,
+    "nivel": 3,
+    "nombre": "Sarcophagist Express",
+    "poder": "27.500 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 346080,
+    "nivel": 1,
+    "nombre": "Eternal Viper",
+    "poder": "27.000 Ph/s",
+    "bonus": "12%"
+  },
+  {
+    "puntos": 320320,
+    "nivel": 3,
+    "nombre": "Clicker Core",
+    "poder": "25.000 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 320320,
+    "nivel": 3,
+    "nombre": "Party Unpacking",
+    "poder": "25.000 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 320240,
+    "nivel": 2,
+    "nombre": "COPA Sticker Pack",
+    "poder": "25.000 Ph/s",
+    "bonus": "6%"
+  },
+  {
+    "puntos": 294920,
+    "nivel": 1,
+    "nombre": "Bye Bye Bye",
+    "poder": "23.000 Ph/s",
+    "bonus": "13%"
+  },
+  {
+    "puntos": 291040,
+    "nivel": 4,
+    "nombre": "Chrono Express",
+    "poder": "22.700 Ph/s",
+    "bonus": "12%"
+  },
+  {
+    "puntos": 269120,
+    "nivel": 3,
+    "nombre": "Flower Power Invasion",
+    "poder": "21.000 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 269080,
+    "nivel": 2,
+    "nombre": "Maslina",
+    "poder": "21.000 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 269080,
+    "nivel": 2,
+    "nombre": "Maslina",
+    "poder": "21.000 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 265360,
+    "nivel": 4,
+    "nombre": "Vortex Vaporizer",
+    "poder": "20.700 Ph/s",
+    "bonus": "10%"
+  },
+  {
+    "puntos": 256560,
+    "nivel": 5,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "20.000 Ph/s",
+    "bonus": "14%"
+  },
+  {
+    "puntos": 252192,
+    "nivel": 2,
+    "nombre": "Nordic Hoard",
+    "poder": "19.690 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 251160,
+    "nivel": 4,
+    "nombre": "Camouflage",
+    "poder": "19.600 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 235704,
+    "nivel": 2,
+    "nombre": "Eagle Bearer",
+    "poder": "18.380 Ph/s",
+    "bonus": "11%"
+  },
+  {
+    "puntos": 235584,
+    "nivel": 2,
+    "nombre": "Lantern Serpent",
+    "poder": "18.380 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 235504,
+    "nivel": 2,
+    "nombre": "Hamnapping",
+    "poder": "18.380 Ph/s",
+    "bonus": "6%"
+  },
+  {
+    "puntos": 221400,
+    "nivel": 3,
+    "nombre": "Uncle's Dungeon",
+    "poder": "17.250 Ph/s",
+    "bonus": "15%"
+  },
+  {
+    "puntos": 221160,
+    "nivel": 3,
+    "nombre": "Ninot",
+    "poder": "17.250 Ph/s",
+    "bonus": "9%"
+  },
+  {
+    "puntos": 218696,
+    "nivel": 2,
+    "nombre": "Light Side",
+    "poder": "17.070 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 208764,
+    "nivel": 2,
+    "nombre": "Lantern Drift",
+    "poder": "16.280 Ph/s",
+    "bonus": "9.5%"
+  },
+  {
+    "puntos": 205040,
+    "nivel": 1,
+    "nombre": "Silver Wing",
+    "poder": "16.000 Ph/s",
+    "bonus": "6%"
+  },
+  {
+    "puntos": 203248,
+    "nivel": 3,
+    "nombre": "Inferno Core",
+    "poder": "15.860 Ph/s",
+    "bonus": "6%"
+  },
+  {
+    "puntos": 200336,
+    "nivel": 3,
+    "nombre": "Roller AltToken",
+    "poder": "15.628 Ph/s",
+    "bonus": "7.44%"
+  },
+  {
+    "puntos": 192320,
+    "nivel": 4,
+    "nombre": "Skullspur",
+    "poder": "15.000 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 192160,
+    "nivel": 1,
+    "nombre": "Chillax Lounger",
+    "poder": "15.000 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 182080,
+    "nivel": 1,
+    "nombre": "Eden Apple",
+    "poder": "14.200 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 181704,
+    "nivel": 2,
+    "nombre": "Tree Invader",
+    "poder": "14.180 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 176792,
+    "nivel": 3,
+    "nombre": "Voting Power",
+    "poder": "13.790 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 168464,
+    "nivel": 2,
+    "nombre": "Helm of the Chosen",
+    "poder": "13.130 Ph/s",
+    "bonus": "10%"
+  },
+  {
+    "puntos": 168184,
+    "nivel": 2,
+    "nombre": "Trickster's Horn",
+    "poder": "13.130 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 166640,
+    "nivel": 1,
+    "nombre": "Pumpkin's Revenge",
+    "poder": "13.000 Ph/s",
+    "bonus": "6%"
+  },
+  {
+    "puntos": 166560,
+    "nivel": 2,
+    "nombre": "Pillar Pillagers",
+    "poder": "13.000 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 160250,
+    "nivel": 1,
+    "nombre": "ShopSpace",
+    "poder": "10.000 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 157000,
+    "nivel": 1,
+    "nombre": "Crypto Cheops",
+    "poder": "9.800 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 156520,
+    "nivel": 2,
+    "nombre": "Frostfort",
+    "poder": "9.770 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 154160,
+    "nivel": 5,
+    "nombre": "Golden Goal",
+    "poder": "12.000 Ph/s",
+    "bonus": "14%"
+  },
+  {
+    "puntos": 153760,
+    "nivel": 1,
+    "nombre": "Frozen Shot Glass",
+    "poder": "12.000 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 151696,
+    "nivel": 2,
+    "nombre": "Sagittarius",
+    "poder": "11.820 Ph/s",
+    "bonus": "10%"
+  },
+  {
+    "puntos": 148777,
+    "nivel": 4,
+    "nombre": "LuxuryLife",
+    "poder": "11.576 Ph/s",
+    "bonus": "15.02%"
+  },
+  {
+    "puntos": 147290,
+    "nivel": 2,
+    "nombre": "FusionMine",
+    "poder": "9.190 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 147290,
+    "nivel": 2,
+    "nombre": "Crypto Claus",
+    "poder": "9.190 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 144200,
+    "nivel": 2,
+    "nombre": "Clicker Core",
+    "poder": "9.000 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 144150,
+    "nivel": 1,
+    "nombre": "Golden Spur Hoard",
+    "poder": "9.000 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 144100,
+    "nivel": 1,
+    "nombre": "COPA Sticker Pack",
+    "poder": "9.000 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 143592,
+    "nivel": 1,
+    "nombre": "MC-2025",
+    "poder": "11.203 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 143098,
+    "nivel": 2,
+    "nombre": "Delulu Shell",
+    "poder": "11.160 Ph/s",
+    "bonus": "6.24%"
+  },
+  {
+    "puntos": 141640,
+    "nivel": 2,
+    "nombre": "RollerPunk",
+    "poder": "11.050 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 141384,
+    "nivel": 2,
+    "nombre": "BlasterBell",
+    "poder": "11.030 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 140920,
+    "nivel": 1,
+    "nombre": "SunChill Console",
+    "poder": "11.000 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 139800,
+    "nivel": 4,
+    "nombre": "UFO-Ho-Ho",
+    "poder": "10.900 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 138540,
+    "nivel": 3,
+    "nombre": "Chrono Express",
+    "poder": "8.640 Ph/s",
+    "bonus": "6%"
+  },
+  {
+    "puntos": 134520,
+    "nivel": 2,
+    "nombre": "Stellar Gem",
+    "poder": "10.500 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 134520,
+    "nivel": 2,
+    "nombre": "Sarcophagist Express",
+    "poder": "10.500 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 133826,
+    "nivel": 5,
+    "nombre": "SunnyBarn",
+    "poder": "10.446 Ph/s",
+    "bonus": "2.84%"
+  },
+  {
+    "puntos": 132950,
+    "nivel": 4,
+    "nombre": "X-Globe",
+    "poder": "8.300 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 132660,
+    "nivel": 3,
+    "nombre": "Libra",
+    "poder": "10.350 Ph/s",
+    "bonus": "4.5%"
+  },
+  {
+    "puntos": 129780,
+    "nivel": 4,
+    "nombre": "Photon Phaser",
+    "poder": "8.100 Ph/s",
+    "bonus": "3.6%"
+  },
+  {
+    "puntos": 129493,
+    "nivel": 1,
+    "nombre": "Signal Unknown",
+    "poder": "10.101 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 128350,
+    "nivel": 2,
+    "nombre": "Crescent Diadem",
+    "poder": "8.000 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 128150,
+    "nivel": 2,
+    "nombre": "Flower Power Invasion",
+    "poder": "8.000 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 128100,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Celestial Eye",
+    "poder": "8.000 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 126430,
+    "nivel": 2,
+    "nombre": "Virgo",
+    "poder": "7.880 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 126330,
+    "nivel": 2,
+    "nombre": "Web4Map",
+    "poder": "7.880 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 123611,
+    "nivel": 5,
+    "nombre": "The Golden Ticket",
+    "poder": "7.717 Ph/s",
+    "bonus": "2.67%"
+  },
+  {
+    "puntos": 121648,
+    "nivel": 3,
+    "nombre": "Hual TG 29",
+    "poder": "7.580 Ph/s",
+    "bonus": "7.44%"
+  },
+  {
+    "puntos": 120100,
+    "nivel": 1,
+    "nombre": "Nordic Hoard",
+    "poder": "7.500 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 117150,
+    "nivel": 4,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "7.300 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 115770,
+    "nivel": 2,
+    "nombre": "Gemini",
+    "poder": "7.220 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 112250,
+    "nivel": 1,
+    "nombre": "BearHole",
+    "poder": "7.000 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 112050,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Acid Runner",
+    "poder": "7.000 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 111241,
+    "nivel": 4,
+    "nombre": "Laurel Wreath",
+    "poder": "6.946 Ph/s",
+    "bonus": "2.18%"
+  },
+  {
+    "puntos": 111000,
+    "nivel": 2,
+    "nombre": "BreathTaking",
+    "poder": "6.930 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 110785,
+    "nivel": 3,
+    "nombre": "Aquarius",
+    "poder": "6.910 Ph/s",
+    "bonus": "4.5%"
+  },
+  {
+    "puntos": 109808,
+    "nivel": 3,
+    "nombre": "Lantan Technomancer",
+    "poder": "6.849 Ph/s",
+    "bonus": "4.36%"
+  },
+  {
+    "puntos": 105570,
+    "nivel": 2,
+    "nombre": "Uncle's Dungeon",
+    "poder": "6.570 Ph/s",
+    "bonus": "9%"
+  },
+  {
+    "puntos": 105320,
+    "nivel": 2,
+    "nombre": "Ninot",
+    "poder": "6.570 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 104350,
+    "nivel": 1,
+    "nombre": "Full Loot House",
+    "poder": "6.500 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 104175,
+    "nivel": 1,
+    "nombre": "Bass'n'Mine",
+    "poder": "6.500 Ph/s",
+    "bonus": "3.5%"
+  },
+  {
+    "puntos": 104100,
+    "nivel": 1,
+    "nombre": "Light Side",
+    "poder": "6.500 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 99930,
+    "nivel": 3,
+    "nombre": "Totem Mask",
+    "poder": "6.230 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 99475,
+    "nivel": 1,
+    "nombre": "Lantern Drift",
+    "poder": "6.200 Ph/s",
+    "bonus": "5.5%"
+  },
+  {
+    "puntos": 96890,
+    "nivel": 2,
+    "nombre": "Fall-In-Food",
+    "poder": "6.040 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 96765,
+    "nivel": 2,
+    "nombre": "Glacial Shard",
+    "poder": "6.040 Ph/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 96765,
+    "nivel": 2,
+    "nombre": "Inferno Core",
+    "poder": "6.040 Ph/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 96200,
+    "nivel": 1,
+    "nombre": "Incubator",
+    "poder": "6.000 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 96050,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Miner Bros Pro",
+    "poder": "6.000 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 94000,
+    "nivel": 1,
+    "nombre": "SunsetForge",
+    "poder": "5.850 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 93800,
+    "nivel": 1,
+    "nombre": "Ancient Vases",
+    "poder": "5.850 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 92219,
+    "nivel": 4,
+    "nombre": "Cake VII",
+    "poder": "4.600 Ph/s",
+    "bonus": "3.5%"
+  },
+  {
+    "puntos": 92188,
+    "nivel": 2,
+    "nombre": "Relax Relic",
+    "poder": "4.600 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 92025,
+    "nivel": 2,
+    "nombre": "Green Wagon",
+    "poder": "4.594 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 91263,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Miner Bros Advanced",
+    "poder": "4.560 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 90555,
+    "nivel": 2,
+    "nombre": "Full Moon Dragon",
+    "poder": "4.520 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 90313,
+    "nivel": 1,
+    "nombre": "Sagittarius",
+    "poder": "4.500 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 89925,
+    "nivel": 3,
+    "nombre": "Aries",
+    "poder": "4.490 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 88250,
+    "nivel": 1,
+    "nombre": "Void Herald",
+    "poder": "4.400 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 88150,
+    "nivel": 4,
+    "nombre": "Frosty",
+    "poder": "5.500 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 85188,
+    "nivel": 1,
+    "nombre": "Delulu Shell",
+    "poder": "4.250 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 85094,
+    "nivel": 1,
+    "nombre": "Mystery Forge",
+    "poder": "4.250 Ph/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 84157,
+    "nivel": 1,
+    "nombre": "CryptoKnight",
+    "poder": "4.200 Ph/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 83656,
+    "nivel": 3,
+    "nombre": "Pacifier",
+    "poder": "4.167 Ph/s",
+    "bonus": "4.91%"
+  },
+  {
+    "puntos": 83400,
+    "nivel": 1,
+    "nombre": "Zombiner",
+    "poder": "5.200 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 81970,
+    "nivel": 3,
+    "nombre": "Philosopher's",
+    "poder": "5.113 Ph/s",
+    "bonus": "3.27%"
+  },
+  {
+    "puntos": 81814,
+    "nivel": 5,
+    "nombre": "RadExFiltration 90",
+    "poder": "5.105 Ph/s",
+    "bonus": "2.6%"
+  },
+  {
+    "puntos": 81525,
+    "nivel": 2,
+    "nombre": "Cup Of Glory",
+    "poder": "4.069 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 81053,
+    "nivel": 1,
+    "nombre": "BurnThemAll",
+    "poder": "4.040 Ph/s",
+    "bonus": "4.04%"
+  },
+  {
+    "puntos": 80250,
+    "nivel": 1,
+    "nombre": "Helm of the Chosen",
+    "poder": "5.000 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 80188,
+    "nivel": 1,
+    "nombre": "Valkyrie's Echo",
+    "poder": "4.000 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 80160,
+    "nivel": 1,
+    "nombre": "DeepStar",
+    "poder": "5.000 Ph/s",
+    "bonus": "3.2%"
+  },
+  {
+    "puntos": 80125,
+    "nivel": 1,
+    "nombre": "Riding Free Relic",
+    "poder": "5.000 Ph/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 80100,
+    "nivel": 1,
+    "nombre": "Pillar Pillagers",
+    "poder": "5.000 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 80063,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Ignite Runner",
+    "poder": "4.000 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 80050,
+    "nivel": 1,
+    "nombre": "Trickster's Horn",
+    "poder": "5.000 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 79363,
+    "nivel": 2,
+    "nombre": "Winter Herald",
+    "poder": "3.940 Ph/s",
+    "bonus": "9%"
+  },
+  {
+    "puntos": 79192,
+    "nivel": 3,
+    "nombre": "Minerzilla",
+    "poder": "3.944 Ph/s",
+    "bonus": "4.91%"
+  },
+  {
+    "puntos": 78925,
+    "nivel": 3,
+    "nombre": "Migrant Fleet",
+    "poder": "3.940 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 71342,
+    "nivel": 5,
+    "nombre": "Gingerbread",
+    "poder": "3.561 Ph/s",
+    "bonus": "1.82%"
+  },
+  {
+    "puntos": 70125,
+    "nivel": 1,
+    "nombre": "FusionMine",
+    "poder": "3.500 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 69970,
+    "nivel": 1,
+    "nombre": "Mr.President",
+    "poder": "3.486 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 69580,
+    "nivel": 3,
+    "nombre": "Ping Pong",
+    "poder": "3.473 Ph/s",
+    "bonus": "1.96%"
+  },
+  {
+    "puntos": 67402,
+    "nivel": 4,
+    "nombre": "Kawsay Saphi",
+    "poder": "3.365 Ph/s",
+    "bonus": "1.74%"
+  },
+  {
+    "puntos": 66188,
+    "nivel": 1,
+    "nombre": "Freestyler",
+    "poder": "3.300 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 65957,
+    "nivel": 2,
+    "nombre": "Leo",
+    "poder": "3.290 Ph/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 64063,
+    "nivel": 1,
+    "nombre": "RC-8",
+    "poder": "3.200 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 63460,
+    "nivel": 4,
+    "nombre": "ChemDose 55",
+    "poder": "3.166 Ph/s",
+    "bonus": "2.35%"
+  },
+  {
+    "puntos": 63379,
+    "nivel": 3,
+    "nombre": "YuletideTrek",
+    "poder": "3.163 Ph/s",
+    "bonus": "1.96%"
+  },
+  {
+    "puntos": 63150,
+    "nivel": 2,
+    "nombre": "Stonks",
+    "poder": "3.150 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 62725,
+    "nivel": 3,
+    "nombre": "Capricorn",
+    "poder": "3.130 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 61653,
+    "nivel": 2,
+    "nombre": "Neon Surge",
+    "poder": "3.071 Ph/s",
+    "bonus": "3.64%"
+  },
+  {
+    "puntos": 60988,
+    "nivel": 3,
+    "nombre": "Sweet Noel",
+    "poder": "3.032 Ph/s",
+    "bonus": "5.6%"
+  },
+  {
+    "puntos": 60349,
+    "nivel": 3,
+    "nombre": "Coliseum",
+    "poder": "3.011 Ph/s",
+    "bonus": "1.96%"
+  },
+  {
+    "puntos": 60313,
+    "nivel": 1,
+    "nombre": "El Detonador",
+    "poder": "3.000 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 60263,
+    "nivel": 1,
+    "nombre": "Flux Capacitor Gate",
+    "poder": "3.000 Ph/s",
+    "bonus": "4.2%"
+  },
+  {
+    "puntos": 60188,
+    "nivel": 1,
+    "nombre": "Virgo",
+    "poder": "3.000 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 60150,
+    "nivel": 2,
+    "nombre": "Vortex Vaporizer",
+    "poder": "3.000 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 59612,
+    "nivel": 3,
+    "nombre": "Calaveras",
+    "poder": "2.967 Ph/s",
+    "bonus": "4.48%"
+  },
+  {
+    "puntos": 59188,
+    "nivel": 1,
+    "nombre": "AmericanSpirit",
+    "poder": "2.950 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 58063,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Codename Gold",
+    "poder": "2.900 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 58032,
+    "nivel": 2,
+    "nombre": "Hual TG 29",
+    "poder": "2.888 Ph/s",
+    "bonus": "4.5%"
+  },
+  {
+    "puntos": 56850,
+    "nivel": 2,
+    "nombre": "Da-Vinci's Elizabeth",
+    "poder": "2.835 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 55125,
+    "nivel": 1,
+    "nombre": "Gemini",
+    "poder": "2.750 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 54188,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "WishGlobe",
+    "poder": "2.700 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 54120,
+    "nivel": 6,
+    "nombre": "Hasher's Egg",
+    "poder": "2.694 Ph/s",
+    "bonus": "3.9%"
+  },
+  {
+    "puntos": 50780,
+    "nivel": 4,
+    "nombre": "Corn Popper",
+    "poder": "2.532 Ph/s",
+    "bonus": "2.08%"
+  },
+  {
+    "puntos": 50438,
+    "nivel": 4,
+    "nombre": "Banhammer Master",
+    "poder": "2.500 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 50313,
+    "nivel": 1,
+    "nombre": "Polar Lumina",
+    "poder": "2.500 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 50188,
+    "nivel": 1,
+    "nombre": "Boot Loot",
+    "poder": "2.500 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 46650,
+    "nivel": 1,
+    "nombre": "Black Pendant",
+    "poder": "2.320 Ph/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 45485,
+    "nivel": 1,
+    "nombre": "Roller AltToken",
+    "poder": "2.268 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 44950,
+    "nivel": 2,
+    "nombre": "Solar Shooter",
+    "poder": "2.240 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 44314,
+    "nivel": 3,
+    "nombre": "Vaporwave Voyager",
+    "poder": "2.205 Ph/s",
+    "bonus": "3.41%"
+  },
+  {
+    "puntos": 44125,
+    "nivel": 1,
+    "nombre": "Patriot Blaster",
+    "poder": "2.200 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 43498,
+    "nivel": 3,
+    "nombre": "M-Rex",
+    "poder": "2.165 Ph/s",
+    "bonus": "3.29%"
+  },
+  {
+    "puntos": 43213,
+    "nivel": 2,
+    "nombre": "Shamaniac",
+    "poder": "2.153 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 43200,
+    "nivel": 2,
+    "nombre": "S-SRC",
+    "poder": "2.152 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 42348,
+    "nivel": 1,
+    "nombre": "LightBeat",
+    "poder": "2.100 Ph/s",
+    "bonus": "5.56%"
+  },
+  {
+    "puntos": 42125,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "ToyGlobe",
+    "poder": "2.100 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 40641,
+    "nivel": 1,
+    "nombre": "Totally Unboxed",
+    "poder": "2.025 Ph/s",
+    "bonus": "2.25%"
+  },
+  {
+    "puntos": 40630,
+    "nivel": 1,
+    "nombre": "New Year's Node",
+    "poder": "2.024 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 40125,
+    "nivel": 1,
+    "nombre": "Mighty Hamjolnir",
+    "poder": "2.000 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 40078,
+    "nivel": 5,
+    "nombre": "Smaller Paradise Pier",
+    "poder": "1.995 Ph/s",
+    "bonus": "2.84%"
+  },
+  {
+    "puntos": 40063,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Aegis of Gold",
+    "poder": "2.000 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 39263,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Miner Bros Classic",
+    "poder": "1.960 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 37950,
+    "nivel": 2,
+    "nombre": "CryptoEnergy Capacitor",
+    "poder": "1.890 Ph/s",
+    "bonus": "2.4%"
+  },
+  {
+    "puntos": 36546,
+    "nivel": 5,
+    "nombre": "Bitfoot",
+    "poder": "1.818 Ph/s",
+    "bonus": "2.84%"
+  },
+  {
+    "puntos": 36390,
+    "nivel": 2,
+    "nombre": "Furry Rocker",
+    "poder": "1.811 Ph/s",
+    "bonus": "2.64%"
+  },
+  {
+    "puntos": 36063,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Codename Green",
+    "poder": "1.800 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 35823,
+    "nivel": 5,
+    "nombre": "Bloody Mary",
+    "poder": "1.782 Ph/s",
+    "bonus": "2.84%"
+  },
+  {
+    "puntos": 35188,
+    "nivel": 3,
+    "nombre": "Golden Goal",
+    "poder": "1.750 Ph/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 35094,
+    "nivel": 1,
+    "nombre": "Survive Relic",
+    "poder": "1.750 Ph/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 34925,
+    "nivel": 3,
+    "nombre": "Cake VII",
+    "poder": "1.740 Ph/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 34393,
+    "nivel": 1,
+    "nombre": "RubyGiftCraft",
+    "poder": "1.704 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 33966,
+    "nivel": 2,
+    "nombre": "LuxuryLife",
+    "poder": "1.680 Ph/s",
+    "bonus": "5.85%"
+  },
+  {
+    "puntos": 33052,
+    "nivel": 4,
+    "nombre": "Hypnofrogo",
+    "poder": "1.646 Ph/s",
+    "bonus": "2.08%"
+  },
+  {
+    "puntos": 31563,
+    "nivel": 1,
+    "nombre": "Solar Mid",
+    "poder": "1.500 Ph/s",
+    "bonus": "25%"
+  },
+  {
+    "puntos": 30438,
+    "nivel": 1,
+    "nombre": "Winter Herald",
+    "poder": "1.500 Ph/s",
+    "bonus": "7%"
+  },
+  {
+    "puntos": 30062,
+    "nivel": 4,
+    "nombre": "Ferris Wheel Master",
+    "poder": "1.493 Ph/s",
+    "bonus": "3.3%"
+  },
+  {
+    "puntos": 29032,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Codename Red",
+    "poder": "1.450 Ph/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 28063,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "BowGlobe",
+    "poder": "1.400 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 27243,
+    "nivel": 4,
+    "nombre": "Dasher's Sled",
+    "poder": "1.357 Ph/s",
+    "bonus": "1.74%"
+  },
+  {
+    "puntos": 27063,
+    "nivel": 1,
+    "nombre": "Hamyo JJ-P101",
+    "poder": "1.350 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 25063,
+    "nivel": 1,
+    "nombre": "Chrono Express",
+    "poder": "1.250 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 25063,
+    "nivel": 1,
+    "nombre": "Chrono Express",
+    "poder": "1.250 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 24219,
+    "nivel": 1,
+    "nombre": "Beachside Billionaire",
+    "poder": "1.200 Ph/s",
+    "bonus": "3.5%"
+  },
+  {
+    "puntos": 24179,
+    "nivel": 3,
+    "nombre": "MiningBlimp",
+    "poder": "1.206 Ph/s",
+    "bonus": "0.96%"
+  },
+  {
+    "puntos": 24063,
+    "nivel": 1,
+    "nombre": "Hamguard",
+    "poder": "1.200 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 24032,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "Codename Blue",
+    "poder": "1.200 Ph/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 23962,
+    "nivel": 2,
+    "nombre": "Tamborim",
+    "poder": "1.187 Ph/s",
+    "bonus": "3.7%"
+  },
+  {
+    "puntos": 23722,
+    "nivel": 2,
+    "nombre": "Steamwheedle",
+    "poder": "945.000 Th/s",
+    "bonus": "3.68%"
+  },
+  {
+    "puntos": 23648,
+    "nivel": 4,
+    "nombre": "Gamma Geiger 17",
+    "poder": "1.176 Ph/s",
+    "bonus": "2.08%"
+  },
+  {
+    "puntos": 23557,
+    "nivel": 1,
+    "nombre": "Neon Surge",
+    "poder": "1.170 Ph/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 23319,
+    "nivel": 2,
+    "nombre": "Sweet Noel",
+    "poder": "1.155 Ph/s",
+    "bonus": "3.5%"
+  },
+  {
+    "puntos": 22680,
+    "nivel": 1,
+    "nombre": "Crypto-NeKo",
+    "poder": "902.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 22063,
+    "nivel": 1,
+    "nombre": "Hual TG 29",
+    "poder": "1.100 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 21492,
+    "nivel": 3,
+    "nombre": "Anti–Phaze",
+    "poder": "861.420 Th/s",
+    "bonus": "1.65%"
+  },
+  {
+    "puntos": 21214,
+    "nivel": 1,
+    "nombre": "Home Run Hasher",
+    "poder": "846.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 21146,
+    "nivel": 2,
+    "nombre": "Crypto-Koi",
+    "poder": "845.250 Th/s",
+    "bonus": "2.37%"
+  },
+  {
+    "puntos": 20500,
+    "nivel": 2,
+    "nombre": "TeraBara",
+    "poder": "1.000 Ph/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 20313,
+    "nivel": 1,
+    "nombre": "Singularity",
+    "poder": "1.000 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 20313,
+    "nivel": 3,
+    "nombre": "Stapllier",
+    "poder": "1.000 Ph/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 20094,
+    "nivel": 1,
+    "nombre": "Thunder Nexus",
+    "poder": "1.000 Ph/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 20094,
+    "nivel": 1,
+    "nombre": "Thunder Nexus",
+    "poder": "1.000 Ph/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 20063,
+    "nivel": 1,
+    "nombre": "Retired Sheriff",
+    "poder": "1.000 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 20063,
+    "nivel": 1,
+    "nombre": "Retired Sheriff",
+    "poder": "1.000 Ph/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 19918,
+    "nivel": 1,
+    "nombre": "Silver Panic",
+    "poder": "800.000 Th/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 19836,
+    "nivel": 1,
+    "nombre": "Cryptococonut",
+    "poder": "792.000 Th/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 19751,
+    "nivel": 5,
+    "nombre": "Ancient Icecraft",
+    "poder": "785.295 Th/s",
+    "bonus": "3.55%"
+  },
+  {
+    "puntos": 19685,
+    "nivel": 2,
+    "nombre": "SatLuxe",
+    "poder": "787.500 Th/s",
+    "bonus": "2%"
+  },
+  {
+    "puntos": 19511,
+    "nivel": 1,
+    "nombre": "Crypt-o-Walker",
+    "poder": "775.000 Th/s",
+    "bonus": "3.75%"
+  },
+  {
+    "puntos": 19211,
+    "nivel": 3,
+    "nombre": "Crypto-Cola",
+    "poder": "764.925 Th/s",
+    "bonus": "3.1%"
+  },
+  {
+    "puntos": 18600,
+    "nivel": 1,
+    "nombre": "Skull Rancher",
+    "poder": "750.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 18600,
+    "nivel": 1,
+    "nombre": "Skull Rancher",
+    "poder": "750.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 17770,
+    "nivel": 1,
+    "nombre": "AmericanDream",
+    "poder": "704.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 17302,
+    "nivel": 1,
+    "nombre": "CozyFables",
+    "poder": "682.000 Th/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 16833,
+    "nivel": 1,
+    "nombre": "GTAminator",
+    "poder": "660.000 Th/s",
+    "bonus": "6%"
+  },
+  {
+    "puntos": 16198,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "BellGlobe",
+    "poder": "650.000 Th/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 16117,
+    "nivel": 1,
+    "nombre": "Underdark Delver",
+    "poder": "647.500 Th/s",
+    "bonus": "0.75%"
+  },
+  {
+    "puntos": 16117,
+    "nivel": 1,
+    "nombre": "Underdark Delver",
+    "poder": "647.500 Th/s",
+    "bonus": "0.75%"
+  },
+  {
+    "puntos": 16117,
+    "nivel": 1,
+    "nombre": "Underdark Delver",
+    "poder": "647.500 Th/s",
+    "bonus": "0.75%"
+  },
+  {
+    "puntos": 16117,
+    "nivel": 1,
+    "nombre": "Underdark Delver",
+    "poder": "647.500 Th/s",
+    "bonus": "0.75%"
+  },
+  {
+    "puntos": 16117,
+    "nivel": 1,
+    "nombre": "Underdark Delver",
+    "poder": "647.500 Th/s",
+    "bonus": "0.75%"
+  },
+  {
+    "puntos": 16117,
+    "nivel": 1,
+    "nombre": "Underdark Delver",
+    "poder": "647.500 Th/s",
+    "bonus": "0.75%"
+  },
+  {
+    "puntos": 15783,
+    "nivel": 1,
+    "nombre": "Spartan BOSS",
+    "poder": "620.000 Th/s",
+    "bonus": "5.25%"
+  },
+  {
+    "puntos": 15549,
+    "nivel": 1,
+    "nombre": "Satan Sprinting",
+    "poder": "616.000 Th/s",
+    "bonus": "3.5%"
+  },
+  {
+    "puntos": 15411,
+    "nivel": 1,
+    "nombre": "Power Patriot",
+    "poder": "612.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 14618,
+    "nivel": 1,
+    "nombre": "Galea B.C.",
+    "poder": "588.000 Th/s",
+    "bonus": "0.45%"
+  },
+  {
+    "puntos": 13873,
+    "nivel": 1,
+    "nombre": "Speedster-9000",
+    "poder": "550.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 13563,
+    "nivel": 1,
+    "nombre": "Solar Micro",
+    "poder": "500.000 Th/s",
+    "bonus": "15%"
+  },
+  {
+    "puntos": 13454,
+    "nivel": 2,
+    "nombre": "Good Old Miner",
+    "poder": "530.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 12788,
+    "nivel": 2,
+    "nombre": "GigaBara",
+    "poder": "500.000 Th/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 12710,
+    "nivel": 1,
+    "nombre": "Gravity",
+    "poder": "500.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 12633,
+    "nivel": 1,
+    "nombre": "RollerFuture",
+    "poder": "500.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 12435,
+    "nivel": 1,
+    "nombre": "Cryptomorph",
+    "poder": "500.000 Th/s",
+    "bonus": "0.45%"
+  },
+  {
+    "puntos": 12435,
+    "nivel": 1,
+    "nombre": "Cryptomorph",
+    "poder": "500.000 Th/s",
+    "bonus": "0.45%"
+  },
+  {
+    "puntos": 12400,
+    "nivel": 1,
+    "nombre": "ExaBara",
+    "poder": "475.000 Th/s",
+    "bonus": "8%"
+  },
+  {
+    "puntos": 11548,
+    "nivel": 1,
+    "nombre": "The Nemesis",
+    "poder": "450.000 Th/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 10873,
+    "nivel": 1,
+    "nombre": "Coliseum",
+    "poder": "437.000 Th/s",
+    "bonus": "0.45%"
+  },
+  {
+    "puntos": 10873,
+    "nivel": 1,
+    "nombre": "Coliseum",
+    "poder": "437.000 Th/s",
+    "bonus": "0.45%"
+  },
+  {
+    "puntos": 10873,
+    "nivel": 1,
+    "nombre": "Coliseum",
+    "poder": "437.000 Th/s",
+    "bonus": "0.45%"
+  },
+  {
+    "puntos": 10873,
+    "nivel": 1,
+    "nombre": "Coliseum",
+    "poder": "437.000 Th/s",
+    "bonus": "0.45%"
+  },
+  {
+    "puntos": 10404,
+    "nivel": 1,
+    "nombre": "Declarator 407+",
+    "poder": "407.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 10308,
+    "nivel": 1,
+    "nombre": "The Christmas Eve",
+    "poder": "400.000 Th/s",
+    "bonus": "5%"
+  },
+  {
+    "puntos": 10295,
+    "nivel": 2,
+    "nombre": "Clover Lover",
+    "poder": "406.875 Th/s",
+    "bonus": "2.63%"
+  },
+  {
+    "puntos": 10153,
+    "nivel": 1,
+    "nombre": "Perfection",
+    "poder": "400.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 10153,
+    "nivel": 1,
+    "nombre": "Perfection",
+    "poder": "400.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 10037,
+    "nivel": 1,
+    "nombre": "ShaleRig",
+    "poder": "400.000 Th/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 10037,
+    "nivel": 1,
+    "nombre": "ShaleRig",
+    "poder": "400.000 Th/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 9998,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "GoldenMelon",
+    "poder": "400.000 Th/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 9840,
+    "nivel": 1,
+    "nombre": "Shadewood Sorcerer",
+    "poder": "396.750 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 9711,
+    "nivel": 1,
+    "nombre": "Vice City Drive",
+    "poder": "390.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 9711,
+    "nivel": 1,
+    "nombre": "Vice City Drive",
+    "poder": "390.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 9711,
+    "nivel": 1,
+    "nombre": "Vice City Drive",
+    "poder": "390.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 9200,
+    "nivel": 1,
+    "nombre": "Steamwheedle",
+    "poder": "360.000 Th/s",
+    "bonus": "3.5%"
+  },
+  {
+    "puntos": 8913,
+    "nivel": 1,
+    "nombre": "Paradox",
+    "poder": "350.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 8739,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "GoldenTomato",
+    "poder": "350.000 Th/s",
+    "bonus": "0.75%"
+  },
+  {
+    "puntos": 8550,
+    "nivel": 1,
+    "nombre": "OmniNexus",
+    "poder": "326.000 Th/s",
+    "bonus": "6%"
+  },
+  {
+    "puntos": 8260,
+    "nivel": 2,
+    "nombre": "Photon",
+    "poder": "328.125 Th/s",
+    "bonus": "1.58%"
+  },
+  {
+    "puntos": 7727,
+    "nivel": 1,
+    "nombre": "Frostbite",
+    "poder": "310.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7727,
+    "nivel": 1,
+    "nombre": "Frostbite",
+    "poder": "310.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7727,
+    "nivel": 1,
+    "nombre": "Frostbite",
+    "poder": "310.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "GoldenEchinopsis",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": 1,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": 1,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": 1,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": 1,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": 1,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": 1,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": 1,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7479,
+    "nivel": 1,
+    "nombre": "Xtreme Ripple Power",
+    "poder": "300.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 7440,
+    "nivel": 1,
+    "nombre": "Frosty",
+    "poder": "300.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 7420,
+    "nivel": 2,
+    "nombre": "Crypto-Cola",
+    "poder": "291.375 Th/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 7006,
+    "nivel": 1,
+    "nombre": "First Class",
+    "poder": "270.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 7006,
+    "nivel": 1,
+    "nombre": "Polar Express",
+    "poder": "270.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 6510,
+    "nivel": 1,
+    "nombre": "Candysweet",
+    "poder": "250.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 6510,
+    "nivel": 1,
+    "nombre": "Santa's Flyer",
+    "poder": "250.000 Th/s",
+    "bonus": "4%"
+  },
+  {
+    "puntos": 6278,
+    "nivel": 1,
+    "nombre": "GravelRig",
+    "poder": "250.000 Th/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 6278,
+    "nivel": 1,
+    "nombre": "GravelRig",
+    "poder": "250.000 Th/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 6220,
+    "nivel": "ERROR_NIVEL",
+    "nombre": "GoldenCarrot",
+    "poder": "250.000 Th/s",
+    "bonus": "0.25%"
+  },
+  {
+    "puntos": 6200,
+    "nivel": 1,
+    "nombre": "Dusty Drifter",
+    "poder": "250.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 5813,
+    "nivel": 1,
+    "nombre": "The Icarus",
+    "poder": "225.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 5441,
+    "nivel": 1,
+    "nombre": "Starground",
+    "poder": "210.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 5193,
+    "nivel": 1,
+    "nombre": "青火龙 (Azure Dragon)",
+    "poder": "200.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 5193,
+    "nivel": 1,
+    "nombre": "黃帝 (Yellow Emperor)",
+    "poder": "200.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 5129,
+    "nivel": 1,
+    "nombre": "DOGER 420",
+    "poder": "199.000 Th/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 5005,
+    "nivel": 2,
+    "nombre": "Dasher's Sled",
+    "poder": "196.875 Th/s",
+    "bonus": "1.58%"
+  },
+  {
+    "puntos": 4038,
+    "nivel": 1,
+    "nombre": "Clover Lover",
+    "poder": "155.000 Th/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 3217,
+    "nivel": 1,
+    "nombre": "Photon",
+    "poder": "125.000 Th/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 3217,
+    "nivel": 1,
+    "nombre": "Anti–Phaze",
+    "poder": "125.000 Th/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 3015,
+    "nivel": 1,
+    "nombre": "ClayRig",
+    "poder": "120.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 3015,
+    "nivel": 1,
+    "nombre": "ClayRig",
+    "poder": "120.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 3015,
+    "nivel": 1,
+    "nombre": "ClayRig",
+    "poder": "120.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 3015,
+    "nivel": 1,
+    "nombre": "ClayRig",
+    "poder": "120.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 2674,
+    "nivel": 2,
+    "nombre": "Stapllier",
+    "poder": "100.000 Th/s",
+    "bonus": "2.5%"
+  },
+  {
+    "puntos": 2604,
+    "nivel": 1,
+    "nombre": "Silverline B",
+    "poder": "105.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2604,
+    "nivel": 1,
+    "nombre": "Silverline B",
+    "poder": "105.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2604,
+    "nivel": 1,
+    "nombre": "Silverline B",
+    "poder": "105.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2580,
+    "nivel": 1,
+    "nombre": "BeetCoiner",
+    "poder": "104.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2580,
+    "nivel": 1,
+    "nombre": "BeetCoiner",
+    "poder": "104.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2580,
+    "nivel": 1,
+    "nombre": "BeetCoiner",
+    "poder": "104.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2580,
+    "nivel": 1,
+    "nombre": "BeetCoiner",
+    "poder": "104.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2580,
+    "nivel": 1,
+    "nombre": "BeetCoiner",
+    "poder": "104.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2580,
+    "nivel": 1,
+    "nombre": "BeetCoiner",
+    "poder": "104.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2580,
+    "nivel": 1,
+    "nombre": "BeetCoiner",
+    "poder": "104.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 2580,
+    "nivel": 1,
+    "nombre": "BeetCoiner",
+    "poder": "104.000 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 1977,
+    "nivel": 1,
+    "nombre": "Dasher's Sled",
+    "poder": "75.000 Th/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 1977,
+    "nivel": 1,
+    "nombre": "Gingerbread",
+    "poder": "75.000 Th/s",
+    "bonus": "1.5%"
+  },
+  {
+    "puntos": 1721,
+    "nivel": 1,
+    "nombre": "GigaBara",
+    "poder": "60.000 Th/s",
+    "bonus": "3%"
+  },
+  {
+    "puntos": 1318,
+    "nivel": 1,
+    "nombre": "King of Beasts",
+    "poder": "50.000 Th/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 1318,
+    "nivel": 1,
+    "nombre": "King of Beasts",
+    "poder": "50.000 Th/s",
+    "bonus": "1%"
+  },
+  {
+    "puntos": 1279,
+    "nivel": 1,
+    "nombre": "The Glimpse",
+    "poder": "50.000 Th/s",
+    "bonus": "0.5%"
+  },
+  {
+    "puntos": 1256,
+    "nivel": 1,
+    "nombre": "BasaltRig",
+    "poder": "50.000 Th/s",
+    "bonus": "0.2%"
+  },
+  {
+    "puntos": 1256,
+    "nivel": 1,
+    "nombre": "BasaltRig",
+    "poder": "50.000 Th/s",
+    "bonus": "0.2%"
+  },
+  {
+    "puntos": 1032,
+    "nivel": 1,
+    "nombre": "Almost-Zero",
+    "poder": "41.600 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 1032,
+    "nivel": 1,
+    "nombre": "Almost-Zero",
+    "poder": "41.600 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 1032,
+    "nivel": 1,
+    "nombre": "Almost-Zero",
+    "poder": "41.600 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 1032,
+    "nivel": 1,
+    "nombre": "Almost-Zero",
+    "poder": "41.600 Th/s",
+    "bonus": "0%"
+  },
+  {
+    "puntos": 1032,
+    "nivel": 1,
+    "nombre": "Almost-Zero",
+    "poder": "41.600 Th/s",
+    "bonus": "0%"
+  }
+]

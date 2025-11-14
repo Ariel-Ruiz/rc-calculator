@@ -48,9 +48,9 @@ export default function PE() {
     }
 
     // seteamos el multiplicador recomenaddo
-    let multiplier = recomended[0]
-    let buy = (multiplier - 1) / PeData.multiplier
-    let buyFinal = parseFloat((buy - (buy * (calcConfig.discount / 100))).toFixed(2))
+    let multiplier = recomended[0] | 1
+    let buy = (multiplier - 1) / PeData.multiplier | 0
+    let buyFinal = parseFloat((buy - (buy * (calcConfig.discount / 100))).toFixed(2)) | 0
     // calcConfig.multiplier = multiplier
     // calcConfig.buy = buy
     // calcConfig.buyFinal = buyFinal

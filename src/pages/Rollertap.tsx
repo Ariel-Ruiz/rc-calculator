@@ -23,6 +23,8 @@ import bigBossHamster from '../assets/rollertap/16.png';
 import uncleBlessing from '../assets/rollertap/19.gif';
 import officeHamster from '../assets/rollertap/22.png';
 import fifiHamster from '../assets/rollertap/23.png';
+import knightHamster from '../assets/rollertap/hamster_knight.png';
+import cosmoHamster from '../assets/rollertap/cosmo_hamster.png';
 
 export default function Rollertap() {
   const { t } = useI18n()
@@ -6022,6 +6024,239 @@ export default function Rollertap() {
         }
       ]
     },
+    {
+      "id": 24,
+      "name": "Knight Hamster",
+      "image": knightHamster,
+      "currentLevel": 0,
+      "coinsPerHour": 0,
+      "levels": [
+        {
+          "level": 1,
+          "coinsPerHour": 75000,
+          "price": 1200000
+        },
+        {
+          "level": 2,
+          "coinsPerHour": 52401,
+          "price": 1500000
+        },
+        {
+          "level": 3,
+          "coinsPerHour": 52402,
+          "price": 1875000
+        },
+        {
+          "level": 4,
+          "coinsPerHour": 52402,
+          "price": 2344000
+        },
+        {
+          "level": 5,
+          "coinsPerHour": 52403,
+          "price": 2930000
+        },
+        {
+          "level": 6,
+          "coinsPerHour": 52403,
+          "price": 3662000
+        },
+        {
+          "level": 7,
+          "coinsPerHour": 52404,
+          "price": 4578000
+        },
+        {
+          "level": 8,
+          "coinsPerHour": 52405,
+          "price": 5722000
+        },
+        {
+          "level": 9,
+          "coinsPerHour": 52407,
+          "price": 7153000
+        },
+        {
+          "level": 10,
+          "coinsPerHour": 52408,
+          "price": 8941000
+        },
+        {
+          "level": 11,
+          "coinsPerHour": 52411,
+          "price": 11176000
+        },
+        {
+          "level": 12,
+          "coinsPerHour": 52413,
+          "price": 13970000
+        },
+        {
+          "level": 13,
+          "coinsPerHour": 52417,
+          "price": 17462000
+        },
+        {
+          "level": 14,
+          "coinsPerHour": 52421,
+          "price": 21828000
+        },
+        {
+          "level": 15,
+          "coinsPerHour": 52427,
+          "price": 27285000
+        },
+        {
+          "level": 16,
+          "coinsPerHour": 52434,
+          "price": 34106000
+        },
+        {
+          "level": 17,
+          "coinsPerHour": 52444,
+          "price": 42633000
+        },
+        {
+          "level": 18,
+          "coinsPerHour": 52455,
+          "price": 53291000
+        },
+        {
+          "level": 19,
+          "coinsPerHour": 52470,
+          "price": 66613000
+        },
+        {
+          "level": 20,
+          "coinsPerHour": 52488,
+          "price": 83267000
+        },
+        {
+          "level": 21,
+          "coinsPerHour": 52512,
+          "price": 104083000
+        },
+        {
+          "level": 22,
+          "coinsPerHour": 52542,
+          "price": 130104000
+        },
+        {
+          "level": 23,
+          "coinsPerHour": 52579,
+          "price": 162630000
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Cosmo Hamster",
+      "image": cosmoHamster,
+      "currentLevel": 0,
+      "coinsPerHour": 0,
+      "levels": [
+        {
+          "level": 1,
+          "coinsPerHour": 360100,
+          "price": 1801000,
+        },
+        {
+          "level": 2,
+          "coinsPerHour": 360101,
+          "price": 4321000,
+        },
+        {
+          "level": 3,
+          "coinsPerHour": 360102,
+          "price": 7778000
+        },
+        {
+          "level": 4,
+          "coinsPerHour": 360102,
+          "price": 12445000
+        },
+        {
+          "level": 5,
+          "coinsPerHour": 360103,
+          "price": 18668000
+        },
+        {
+          "level": 6,
+          "coinsPerHour": 360103,
+          "price": 26881000
+        },
+        {
+          "level": 7,
+          "coinsPerHour": 360104,
+          "price": 37634000
+        },
+        {
+          "level": 8,
+          "coinsPerHour": 360105,
+          "price": 51612000
+        },
+        {
+          "level": 9,
+          "coinsPerHour": 360107,
+          "price": 69677000
+        },
+        {
+          "level": 10,
+          "coinsPerHour": 360108,
+          "price": 92903000
+        },
+        {
+          "level": 11,
+          "coinsPerHour": 360111,
+          "price": 122632000
+        },
+        {
+          "level": 12,
+          "coinsPerHour": 360113,
+          "price": 160537000
+        },
+        {
+          "level": 13,
+          "coinsPerHour": 360117,
+          "price": 208698000
+        },
+        {
+          "level": 14,
+          "coinsPerHour": 360121,
+          "price": 269703000
+        },
+        {
+          "level": 15,
+          "coinsPerHour": 360127,
+          "price": 346762000
+        },
+        {
+          "level": 16,
+          "coinsPerHour": 360134,
+          "price": 443858000
+        },
+        {
+          "level": 17,
+          "coinsPerHour": 360143,
+          "price": 566000000
+        },
+        {
+          "level": 18,
+          "coinsPerHour": 360155,
+          "price": 719000000
+        },
+        {
+          "level": 19,
+          "coinsPerHour": 360170,
+          "price": 911000000
+        },
+        {
+          "level": 20,
+          "coinsPerHour": 360188,
+          "price": 1151000000
+        }
+      ]
+    },
     
   ]);
   const [unclesBlessing, setUnclesBlessing] = useState({
@@ -6407,8 +6642,12 @@ export default function Rollertap() {
   }
 
   const getNextLevelColor = (row: any) => {
-    let color = getRoiColor(row.levels[row.currentLevel].roiHours);
+    let color = getRoiColor(getRoi(row.levels[row.currentLevel]));
     return color
+  }
+
+  const getRoi = (level: any) => {
+    return parseFloat((level.price / level.coinsPerHour).toFixed(4));
   }
 
   // Interpolación entre dos colores
@@ -6578,7 +6817,7 @@ export default function Rollertap() {
               <div className="level-title">{t?.rollertap?.nextLevel}</div>
               <div className="coin">+🪙{handleCoins(row.levels[row.currentLevel].coinsPerHour)}</div>
               <div className="cost">{t?.rollertap?.cost}: 🪙{handleCoins(row.levels[row.currentLevel].price)}</div>
-              <div className="roi">{t?.rollertap?.roiInHours}: {handleHours(row.levels[row.currentLevel].roiHours)}</div>
+                <div className="roi">{t?.rollertap?.roiInHours}: {handleHours(getRoi(row.levels[row.currentLevel]))}</div>
             </div>
           )}
         </div>
