@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useI18n } from '../contexts/I18nProvider'
-import { fetchAllPrices, fetchPrice } from '../lib/prices'
+import { fetchAllPrices, fetchPrice, loadPricesFromStorage } from '../lib/prices'
 import { convertirAHs, tiempoASegundos } from '../lib/calculations'
+import moment from 'moment'
 
 import rltIcon from '../assets/symbols/rlt.svg'
 import rstIcon from '../assets/symbols/rst.svg'
+import hmtIcon from '../assets/symbols/hmt.svg'
 import btcIcon from '../assets/symbols/btc.svg'
 import ethIcon from '../assets/symbols/eth.svg'
 import ltcIcon from '../assets/symbols/ltc.svg'
@@ -14,6 +16,7 @@ import xrpIcon from '../assets/symbols/xrp.svg'
 import trxIcon from '../assets/symbols/trx.svg'
 import solIcon from '../assets/symbols/sol.svg'
 import polIcon from '../assets/symbols/matic.svg'
+import algoIcon from '../assets/symbols/algo.svg'
 import exampleImg from '../assets/example.png'
 
 type ParsedLine = { symbol: string; power: string; reward: string; blockTime: string }
@@ -21,6 +24,7 @@ type ParsedLine = { symbol: string; power: string; reward: string; blockTime: st
 const symbolIcons: Record<string, string> = {
   RLT: rltIcon,
   RST: rstIcon,
+  HMT: hmtIcon,
   BTC: btcIcon,
   ETH: ethIcon,
   LTC: ltcIcon,
@@ -29,7 +33,8 @@ const symbolIcons: Record<string, string> = {
   XRP: xrpIcon,
   TRX: trxIcon,
   SOL: solIcon,
-  POL: polIcon
+  POL: polIcon,
+  ALGO: algoIcon,
 }
 
 export default function Home() {
@@ -50,6 +55,12 @@ export default function Home() {
         "symbol": "RST",
         "power": "0 Zh/s",
         "reward": "0 RST",
+        "blockTime": "10:01"
+      },
+      {
+        "symbol": "HMT",
+        "power": "0 Zh/s",
+        "reward": "0 HMT",
         "blockTime": "10:01"
       },
       {
@@ -105,20 +116,32 @@ export default function Home() {
         "power": "0 Zh/s",
         "reward": "0 SOL",
         "blockTime": "10:01"
+      },
+      {
+        "symbol": "ALGO",
+        "power": "0 Zh/s",
+        "reward": "0 ALGO",
+        "blockTime": "10:01"
       }
     ]
   })
   const [useUSD, setUseUSD] = useState<boolean>(() => localStorage.getItem('useUSD') === '1')
 
+  const [lastPricesLoaded] = useState(localStorage.getItem('lastPricesLoaded') || '')
   const [pricesLoaded, setPricesLoaded] = useState(false)
 
   useEffect(() => {
     async function loadPrices() {
-      await fetchAllPrices()
+      if (!lastPricesLoaded || moment(lastPricesLoaded).isBefore(moment().subtract(1, 'hours'))) {
+        await fetchAllPrices()
+        localStorage.setItem('lastPricesLoaded', moment().format('YYYY-MM-DD HH:mm:ss'))
+      } else {
+        loadPricesFromStorage()
+      }
       setPricesLoaded(true)
     }
     loadPrices()
-  }, [])
+  }, [pricesLoaded])
 
   useEffect(() => {
     localStorage.setItem('networkLines', JSON.stringify(parsedLines))
@@ -179,7 +202,7 @@ export default function Home() {
     let myRewardMonth = myRewardDay * 30
 
     let suffix = rewardSymbol
-    if (useUSD) {
+    if (useUSD && data.symbol != 'HMT') {
       const price = fetchPrice(rewardSymbol)
       myRewardBlock *= price
       myRewardDay *= price
