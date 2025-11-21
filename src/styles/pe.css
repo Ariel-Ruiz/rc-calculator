@@ -200,11 +200,47 @@
   justify-self: center;
   text-align: center;
   color: var(--text-primary-active);
-  background: var(--secondary);
+  background: var(--success);
 }
 
 .ended {
   background: rgb(185, 42, 42);
+}
+
+.rentability-score {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--text-primary);
+}
+
+.score {
+  font-size: 4em;
+  color: var(--success);
+  margin-right: .1em;
+}
+
+.rentability-score-text {
+  font-size: 1.1em;
+  color: var(--text-primary-active);
+  margin-left: .2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+.text-success {
+  color: var(--success);
+}
+.text-warning {
+  color: var(--coin);
+}
+.text-danger {
+  color: var(--danger);
 }
 
 @media (max-width: 768px) {

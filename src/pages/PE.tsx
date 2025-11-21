@@ -18,10 +18,12 @@ export default function PE() {
     boxes: 1.45
   });
 
+  const [rentabilityScore, setRentabilityScore] = useState(0);
+  const [recomendedMultiplier, setRecomendedMultiplier] = useState([]);
 
 
   let boxesPrices = [1.45, 3.45, 8.95, 22.95]
-  let discounts = [0,10,15,20,25,30,35,40,45]
+  let discounts = [0,10,15,20,25,30,35,40,45,50]
   let maxMultiplier = PeData.event.event.max_multiplier / 100
   let mult = []
   for (let i = 1; i <= maxMultiplier; i++) {
@@ -35,21 +37,61 @@ export default function PE() {
   }
 
   function isRecomended(multiplier: number) {
-    let boxesToOpen = Math.ceil(PeData.event.event.max_xp / ((taskPoints.boxes * boxesPrices[0]) * multiplier))
-    return boxesToOpen > 600 && boxesToOpen < 900
+    return recomendedMultiplier.includes(multiplier)
+  }
+  
+  function getScoreColorClass() {
+    if (rentabilityScore == 10) return 'text-accent'
+    if (rentabilityScore >= 7) return 'text-success'
+    if (rentabilityScore >= 4) return 'text-warning'
+    return 'text-danger'
   }
 
   function calcRecomend() {
-    for (let m of multipliers) {
-      let boxesToOpen = Math.ceil(PeData.event.event.max_xp / ((taskPoints.boxes * boxesPrices[0]) * m))
-      if (boxesToOpen > 600 && boxesToOpen < 900) {
-        recomended.push(m)
+    let phXRLT = 1.2 // precio por rlt pensando que tambien se gastara usd (+1 = 2.2)
+    let feeXBox = 0.15 // lo que se espera perder en RLT por cada caja abierta
+    let rewardsXRLT = 0
+    for (let reward of PeData.event.rewards) {
+      switch (reward.type) {
+        case 'money': 
+          switch (reward.currency) {
+            case 'RLT': rewardsXRLT += reward.amount / 1e6; break;
+            case 'RST': rewardsXRLT += reward.amount / 1e8; break;
+          }
+          continue;
+        case 'power': rewardsXRLT += (reward.amount / 1e6) * phXRLT; continue;
+        case 'miner': rewardsXRLT += (reward.item.power / 1e6) * phXRLT; continue;
       }
     }
 
-    // seteamos el multiplicador recomenaddo
-    let multiplier = recomended[0] | 1
-    let buy = (multiplier - 1) / PeData.multiplier | 0
+    let maxBoxesToOpen = Math.ceil(rewardsXRLT / feeXBox)
+
+    // buscamos los dos multiplicadores más cercanos: uno que deje boxesToOpen por debajo (o igual)
+    // y otro por encima (o igual) de maxBoxesToOpen
+    let closestAbove: { m: number | null; diff: number } = { m: null, diff: Infinity };
+    let closestBelow: { m: number | null; diff: number } = { m: null, diff: Infinity };
+
+    for (let m of multipliers) {
+      let boxesToOpen = Math.ceil(
+      PeData.event.event.max_xp / ((taskPoints.boxes * boxesPrices[0]) * m)
+      );
+      let diff = boxesToOpen - maxBoxesToOpen;
+
+      if (diff >= 0 && diff < closestAbove.diff) {
+      closestAbove = { m, diff };
+      }
+
+      if (diff <= 0 && Math.abs(diff) < closestBelow.diff) {
+        closestBelow = { m, diff: Math.abs(diff) };
+      }
+    }
+
+    if (closestAbove.m !== null && closestAbove.m !== closestBelow.m) recomended.push(closestAbove.m);
+    if (closestBelow.m !== null) recomended.push(closestBelow.m);
+
+    // seteamos el multiplicador recomendado
+    let multiplier = recomended[0] || 1
+    let buy = ((multiplier - 1) / PeData.multiplier) | 0
     let buyFinal = parseFloat((buy - (buy * (calcConfig.discount / 100))).toFixed(2)) | 0
     // calcConfig.multiplier = multiplier
     // calcConfig.buy = buy
@@ -60,6 +102,29 @@ export default function PE() {
       buyFinal,
       multiplier
     }));
+
+    setRecomendedMultiplier(recomended)
+
+
+    // calculamos la puntuacion de rentabilidad`
+    let usdXRLT = buyFinal / rewardsXRLT
+    if (usdXRLT < 0.25) setRentabilityScore(10)
+    else if (usdXRLT >= 0.25 && usdXRLT < 0.3) setRentabilityScore(9)
+    else if (usdXRLT >= 0.3 && usdXRLT < 0.4) setRentabilityScore(8)
+    else if (usdXRLT >= 0.4 && usdXRLT < 0.5) setRentabilityScore(7)
+    else if (usdXRLT >= 0.5 && usdXRLT < 0.6) setRentabilityScore(6)
+    else if (usdXRLT >= 0.6 && usdXRLT < 0.7) setRentabilityScore(5)
+    else if (usdXRLT >= 0.7 && usdXRLT < 0.8) setRentabilityScore(4)
+    else if (usdXRLT >= 0.8 && usdXRLT < 0.9) setRentabilityScore(3)
+    else if (usdXRLT >= 0.9 && usdXRLT < 1) setRentabilityScore(2)
+    else if (usdXRLT >= 1 && usdXRLT < 1.1) setRentabilityScore(1)
+    else setRentabilityScore(0)
+
+    // console.log('usdXRLT', usdXRLT)
+    // console.log('rewardsXRLT', rewardsXRLT)
+    // console.log('maxBoxesToOpen', maxBoxesToOpen)
+    // console.log('recomended', recomended)
+    // console.log('buyFinal', buyFinal)
   }
 
   useEffect(() => {
@@ -160,12 +225,17 @@ export default function PE() {
         <div className='progression-info'>
           <div className='event-title'>{PeData.event.event.title.en}</div>
           <div className='event-subtitle'>{t.pe?.progression_event}</div>
-          {/* <div className='deadline'>
-            {t.pe?.ends_on} {moment(PeData.event.event.end_date).format('DD/MM/YYYY')} 15:00 UTC
-          </div> */}
-          <div className='deadline ended'>
-            {t.pe?.the_event_ended}
+          <div className="rentability-score">
+            <div className={'score ' + getScoreColorClass()}>{rentabilityScore}</div>
+            <div className="">/10</div>
           </div>
+          <div className="rentability-score-text">{t.pe?.rentability_punctuation}</div>
+          <div className='deadline'>
+            {t.pe?.ends_on} {moment(PeData.event.event.end_date).format('DD/MM/YYYY')} 15:00 UTC
+          </div>
+          {/* <div className='deadline ended'>
+            {t.pe?.the_event_ended}
+          </div> */}
           <table className="tasks">
             <tbody>
               <tr className='task-info'>

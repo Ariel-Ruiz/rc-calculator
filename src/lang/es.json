@@ -60,6 +60,7 @@
     "reward": "RECOMPENSA",
     "per": "Por",
     "ends_on": "Termina el",
-    "the_event_ended": "El evento terminó"
+    "the_event_ended": "El evento terminó",
+    "rentability_punctuation": "Puntuación de Rentabilidad"
   }
 }

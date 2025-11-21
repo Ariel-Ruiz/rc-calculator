@@ -60,6 +60,7 @@
     "reward": "REWARD",
     "per": "Per",
     "ends_on": "Ends on",
-    "the_event_ended": "The event ended"
+    "the_event_ended": "The event ended",
+    "rentability_punctuation": "Rentability Punctuation"
   }
 }

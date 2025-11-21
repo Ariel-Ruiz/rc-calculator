@@ -2,7 +2,7 @@
   "multiplier": 0.1,
   "tasks": [
     {
-      "id": "690b76497c166a71ea47336d",
+      "id": "691f61cb7c166a71ea473471",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,28 @@
       "sort": 0
     },
     {
-      "id": "690b76497c166a71ea47336e",
+      "id": "691f61cb7c166a71ea473472",
+      "xp_type": "number",
+      "xp_reward": 150,
+      "amount": 6667,
+      "tag": {
+        "color": "",
+        "text": "",
+        "text_color": ""
+      },
+      "type": "marketplace",
+      "title": {
+        "en": "Spend 1 RLT in Marketplace",
+        "cn": "Spend 1 RLT in Marketplace"
+      },
+      "description": {
+        "en": "Marketplace",
+        "cn": "Marketplace"
+      },
+      "sort": 3
+    },
+    {
+      "id": "691f61cb7c166a71ea473473",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -42,57 +63,36 @@
         "cn": ""
       },
       "sort": 2
-    },
-    {
-      "id": "690b76497c166a71ea47336f",
-      "xp_type": "number",
-      "xp_reward": 148,
-      "amount": 6757,
-      "tag": {
-        "color": "",
-        "text": "",
-        "text_color": ""
-      },
-      "type": "marketplace",
-      "title": {
-        "en": "Spend 1 RLT in Marketplace",
-        "cn": "Spend 1 RLT in Marketplace"
-      },
-      "description": {
-        "en": "Marketplace",
-        "cn": "Marketplace"
-      },
-      "sort": 3
     }
   ],
   "event": {
     "event": {
-      "_id": "690b7649b5000902413cd7a6",
-      "max_xp": 65209000,
+      "_id": "691f61cbb7f047a6984d1821",
+      "max_xp": 38572000,
       "max_multiplier": 10000,
-      "max_level": 20,
+      "max_level": 13,
       "tag": {
         "text": "",
         "color": "",
         "text_color": ""
       },
       "progression_event_type": "default",
-      "end_date": "2025-11-17T15:00:00.000Z",
-      "last_updated": 1762358857790,
+      "end_date": "2025-11-24T15:00:00.000Z",
+      "last_updated": 1763664331677,
       "description": {
-        "en": "[14–17] Fight Club",
-        "cn": "[14–17] Fight Club"
+        "en": "[21–24] Path of The One",
+        "cn": "[21–24] Path of The One"
       },
       "title": {
-        "en": "Fight Club",
-        "cn": "Fight Club"
+        "en": "Path of The One",
+        "cn": "Path of The One"
       }
     },
     "rewards": [
       {
-        "id": "690b76497c166a71ea473371",
+        "id": "691f61cb7c166a71ea473475",
         "item_id": null,
-        "amount": 250000,
+        "amount": 150000,
         "currency": "RLT",
         "ttl_time": 0,
         "required_level": 1,
@@ -111,12 +111,73 @@
         }
       },
       {
-        "id": "690b76497c166a71ea473373",
-        "item_id": null,
-        "amount": 50,
+        "id": "691f61cb7c166a71ea473477",
+        "item_id": "68306581e2da6536108ec0b8",
+        "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 2,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "3h Booster",
+            "cn": "3h Booster",
+            "es": "3h Booster",
+            "pt": "3h Booster"
+          },
+          "description": {
+            "en": "Booster will increase your basic power from minigames for 3 hours.",
+            "cn": "Booster will increase your basic power from minigames for 3 hours.",
+            "es": "Booster will increase your basic power from minigames for 3 hours.",
+            "pt": "Booster will increase your basic power from minigames for 3 hours."
+          },
+          "media": {
+            "preview_url": "static/img/market/utility_items/68306581e2da6536108ec0b8.gif?v=1748874570574"
+          },
+          "_id": "68306581e2da6536108ec0b8",
+          "type": "game_booster"
+        }
+      },
+      {
+        "id": "691f61cb7c166a71ea473479",
+        "item_id": null,
+        "amount": 100000000,
+        "currency": "RST",
+        "ttl_time": 0,
+        "required_level": 3,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "691f61cb7c166a71ea47347b",
+        "item_id": null,
+        "amount": 100,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 4,
         "type": "season_pass_xp",
         "title": {
           "en": "Season Pass XP",
@@ -132,82 +193,8 @@
         }
       },
       {
-        "id": "690b76497c166a71ea473375",
-        "item_id": null,
-        "amount": 1000000,
-        "currency": "",
-        "ttl_time": 1209600000,
-        "required_level": 3,
-        "type": "power",
-        "title": {
-          "en": "Power",
-          "cn": "Power"
-        },
-        "description": {
-          "en": "Power Reward Description",
-          "cn": "Power Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "690b76497c166a71ea473377",
-        "item_id": "68b6dbf2f58321ae064c22d6",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 4,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68b6dbf2f58321ae064c22d6",
-          "power": 400000,
-          "width": 2,
-          "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
-          },
-          "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "shalerig",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 150,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b76497c166a71ea473379",
-        "item_id": "68b6dbf2f58321ae064c22d6",
+        "id": "691f61cb7c166a71ea47347d",
+        "item_id": "691f6247b7f047a6984d18c3",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -226,20 +213,20 @@
           "max": 0
         },
         "item": {
-          "_id": "68b6dbf2f58321ae064c22d6",
-          "power": 400000,
+          "_id": "691f6247b7f047a6984d18c3",
+          "power": 3500000,
           "width": 2,
           "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
+            "en": "Protocol Green",
+            "cn": "Protocol Green",
+            "es": "Protocol Green",
+            "pt": "Protocol Green"
           },
           "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
+            "en": "Decode Protocol for discount on new BLACK FR1D4Y Hamster",
+            "cn": "Decode Protocol for discount on new BLACK FR1D4Y Hamster",
+            "es": "Decode Protocol for discount on new BLACK FR1D4Y Hamster",
+            "pt": "Decode Protocol for discount on new BLACK FR1D4Y Hamster"
           },
           "created_by_title": {
             "link": "",
@@ -247,7 +234,7 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "shalerig",
+          "filename": "protocol_green",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
@@ -259,8 +246,8 @@
         }
       },
       {
-        "id": "690b76497c166a71ea47337b",
-        "item_id": "68b6dbf2f58321ae064c22d9",
+        "id": "691f61cb7c166a71ea47347f",
+        "item_id": "631f7b328238ed283a234fe3",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -279,40 +266,40 @@
           "max": 0
         },
         "item": {
-          "_id": "68b6dbf2f58321ae064c22d9",
-          "power": 1000000,
+          "_id": "631f7b328238ed283a234fe3",
+          "power": 2756250,
           "width": 2,
           "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
+            "en": "Illusionist's Box",
+            "cn": "Illusionist's Box",
+            "es": "Illusionist's Box",
+            "pt": "Illusionist's Box"
           },
           "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
+            "en": "One can use it to saw someone in half, to produce some rabbits… or to mine crypto, yeah, it does that too. Magic Carnival Series Miner.",
+            "cn": "One can use it to saw someone in half, to produce some rabbits… or to mine crypto, yeah, it does that too. Magic Carnival Series Miner.",
+            "es": "One can use it to saw someone in half, to produce some rabbits… or to mine crypto, yeah, it does that too. Magic Carnival Series Miner.",
+            "pt": "One can use it to saw someone in half, to produce some rabbits… or to mine crypto, yeah, it does that too. Magic Carnival Series Miner."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
+          "level": 2,
           "type": "merge",
-          "filename": "shalerig",
+          "filename": "illusionists_box",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 414,
           "is_in_set": false
         }
       },
       {
-        "id": "690b764a7c166a71ea47337d",
-        "item_id": "68b6dbf2f58321ae064c22df",
+        "id": "691f61cb7c166a71ea473481",
+        "item_id": "648b09b82100926248ba35ba",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -331,40 +318,40 @@
           "max": 0
         },
         "item": {
-          "_id": "68b6dbf2f58321ae064c22df",
-          "power": 2500000,
+          "_id": "648b09b82100926248ba35ba",
+          "power": 6467055,
           "width": 2,
           "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
+            "en": "Doomsday Dragster",
+            "cn": "Doomsday Dragster",
+            "es": "Doomsday Dragster",
+            "pt": "Doomsday Dragster"
           },
           "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
+            "en": "Dominate the wasteland with this behemoth of a machine and secure your part of the mining pool: Introducing the Doomsday Dragster, the ultimate Roller Coin miner for those who are ready to survive the end of the world with top-of-the-line speed and power. Created byAsmita",
+            "cn": "Dominate the wasteland with this behemoth of a machine and secure your part of the mining pool: Introducing the Doomsday Dragster, the ultimate Roller Coin miner for those who are ready to survive the end of the world with top-of-the-line speed and power. Created byAsmita",
+            "es": "Dominate the wasteland with this behemoth of a machine and secure your part of the mining pool: Introducing the Doomsday Dragster, the ultimate Roller Coin miner for those who are ready to survive the end of the world with top-of-the-line speed and power. Created byAsmita",
+            "pt": "Dominate the wasteland with this behemoth of a machine and secure your part of the mining pool: Introducing the Doomsday Dragster, the ultimate Roller Coin miner for those who are ready to survive the end of the world with top-of-the-line speed and power. Created byAsmita"
           },
           "created_by_title": {
             "link": "",
-            "text": ""
+            "text": "Asmita"
           },
-          "level": 2,
+          "level": 3,
           "type": "merge",
-          "filename": "shalerig",
+          "filename": "doomsday_dragster",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 650,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 480,
           "is_in_set": false
         }
       },
       {
-        "id": "690b764a7c166a71ea47337f",
-        "item_id": "690a2ca6b50009024139e83d",
+        "id": "691f61cb7c166a71ea473483",
+        "item_id": "6527f314a072ea9506f894ba",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -383,20 +370,125 @@
           "max": 0
         },
         "item": {
-          "_id": "690a2ca6b50009024139e83d",
-          "power": 10000000,
-          "width": 1,
+          "_id": "6527f314a072ea9506f894ba",
+          "power": 12108285,
+          "width": 2,
           "name": {
-            "en": "Hamcom Cup",
-            "cn": "Hamcom Cup",
-            "es": "Hamcom Cup",
-            "pt": "Hamcom Cup"
+            "en": "Mining Control",
+            "cn": "Mining Control",
+            "es": "Mining Control",
+            "pt": "Mining Control"
           },
           "description": {
-            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
+            "en": "It is impossible to control everything, but, at least you are totally in control of your mining process. By Oswaldo Domingo",
+            "cn": "It is impossible to control everything, but, at least you are totally in control of your mining process. By Oswaldo Domingo",
+            "es": "It is impossible to control everything, but, at least you are totally in control of your mining process. By Oswaldo Domingo",
+            "pt": "It is impossible to control everything, but, at least you are totally in control of your mining process. By Oswaldo Domingo"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "mining_control",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 109,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "691f61cb7c166a71ea473485",
+        "item_id": "668fe6dc7643815232eb88a6",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 9,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "668fe6dc7643815232eb88a6",
+          "power": 7958685,
+          "width": 2,
+          "name": {
+            "en": "StoneGuardian",
+            "cn": "StoneGuardian",
+            "es": "StoneGuardian",
+            "pt": "StoneGuardian"
+          },
+          "description": {
+            "en": "This ancient miner, carved from solid stone, guards your farm with unwavering loyalty. Its sturdy construction ensures a steady mining output, protecting your assets and boosting your crypto yield.",
+            "cn": "This ancient miner, carved from solid stone, guards your farm with unwavering loyalty. Its sturdy construction ensures a steady mining output, protecting your assets and boosting your crypto yield.",
+            "es": "This ancient miner, carved from solid stone, guards your farm with unwavering loyalty. Its sturdy construction ensures a steady mining output, protecting your assets and boosting your crypto yield.",
+            "pt": "This ancient miner, carved from solid stone, guards your farm with unwavering loyalty. Its sturdy construction ensures a steady mining output, protecting your assets and boosting your crypto yield."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "stoneguardian",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 710,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "691f61cb7c166a71ea473487",
+        "item_id": "691f5f7eb7f047a6984d0ea5",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 10,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "691f5f7eb7f047a6984d0ea5",
+          "power": 16350000,
+          "width": 2,
+          "name": {
+            "en": "Team Green",
+            "cn": "Team Green",
+            "es": "Team Green",
+            "pt": "Team Green2"
+          },
+          "description": {
+            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
           },
           "created_by_title": {
             "link": "",
@@ -404,10 +496,10 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "hamcom_cup",
+          "filename": "team_green",
           "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
+            "frame_width": 116,
+            "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
@@ -416,64 +508,8 @@
         }
       },
       {
-        "id": "690b764a7c166a71ea473381",
-        "item_id": null,
-        "amount": 500000000,
-        "currency": "RST",
-        "ttl_time": 0,
-        "required_level": 9,
-        "type": "money",
-        "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
-        },
-        "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea473383",
-        "item_id": "668d22fc5a25375fc803333c",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 10,
-        "type": "rack",
-        "title": {
-          "en": "Rack Title",
-          "cn": "Rack Title"
-        },
-        "description": {
-          "en": "Rack Reward Description",
-          "cn": "Rack Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Plant Rack 8",
-            "cn": "Plant Rack 8"
-          },
-          "description": {
-            "en": "An advanced mining rack that supports 8 miners, featuring eco-friendly materials and design principles to promote sustainable mining practices.",
-            "cn": "An advanced mining rack that supports 8 miners, featuring eco-friendly materials and design principles to promote sustainable mining practices."
-          },
-          "_id": "668d22fc5a25375fc803333c",
-          "capacity": 8,
-          "is_can_be_sold_on_mp": true,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea473385",
-        "item_id": "631f7a3d8238ed283a234490",
+        "id": "691f61cb7c166a71ea473489",
+        "item_id": "691f5f7eb7f047a6984d0ea5",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -492,37 +528,41 @@
           "max": 0
         },
         "item": {
-          "_id": "631f7a3d8238ed283a234490",
-          "power": 4748520,
+          "_id": "691f5f7eb7f047a6984d0ea5",
+          "power": 16350000,
           "width": 2,
           "name": {
-            "en": "The Minertaur",
-            "cn": "The Minertaur"
+            "en": "Team Green",
+            "cn": "Team Green",
+            "es": "Team Green",
+            "pt": "Team Green2"
           },
           "description": {
-            "en": "A bunch of coins behind every corner — new version of The Maze! This miner is one of the ten selected winners of the Miners Art Contest: Ancient Myths. Created by ",
-            "cn": "A bunch of coins behind every corner — new version of The Maze! This miner is one of the ten selected winners of the Miners Art Contest: Ancient Myths. Created by "
+            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 4,
-          "type": "merge",
-          "filename": "the_minertaur",
+          "level": 0,
+          "type": "basic",
+          "filename": "team_green",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 122,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
           "is_in_set": false
         }
       },
       {
-        "id": "690b764a7c166a71ea473387",
-        "item_id": "65d7b6b7d68c8ab1d87e79f3",
+        "id": "691f61cb7c166a71ea47348b",
+        "item_id": "691f5f7eb7f047a6984d0ea8",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -541,40 +581,40 @@
           "max": 0
         },
         "item": {
-          "_id": "65d7b6b7d68c8ab1d87e79f3",
-          "power": 9164610,
+          "_id": "691f5f7eb7f047a6984d0ea8",
+          "power": 42920000,
           "width": 2,
           "name": {
-            "en": "Royal Necklace",
-            "cn": "Royal Necklace",
-            "es": "Royal Necklace",
-            "pt": "Royal Necklace"
+            "en": "Team Green",
+            "cn": "Team Green",
+            "es": "Team Green",
+            "pt": "Team Green2"
           },
           "description": {
-            "en": "The Royal Necklace once belonged to a very noble family and was passed down through 14 generations. When asked how the necklace ended up with Hamdiana, he only responds with an intriguing silence.",
-            "cn": "The Royal Necklace once belonged to a very noble family and was passed down through 14 generations. When asked how the necklace ended up with Hamdiana, he only responds with an intriguing silence.",
-            "es": "The Royal Necklace once belonged to a very noble family and was passed down through 14 generations. When asked how the necklace ended up with Hamdiana, he only responds with an intriguing silence.",
-            "pt": "The Royal Necklace once belonged to a very noble family and was passed down through 14 generations. When asked how the necklace ended up with Hamdiana, he only responds with an intriguing silence."
+            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
+          "level": 1,
           "type": "merge",
-          "filename": "royal_necklace",
+          "filename": "team_green",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 436,
+          "bonus": 2400,
           "is_in_set": false
         }
       },
       {
-        "id": "690b764a7c166a71ea473389",
-        "item_id": "66d05b88e89c8517a8ec488b",
+        "id": "691f61cb7c166a71ea47348d",
+        "item_id": "691f5f7eb7f047a6984d0eae",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -593,336 +633,20 @@
           "max": 0
         },
         "item": {
-          "_id": "66d05b88e89c8517a8ec488b",
-          "power": 5000000,
+          "_id": "691f5f7eb7f047a6984d0eae",
+          "power": 112670000,
           "width": 2,
           "name": {
-            "en": "Ritualis",
-            "cn": "Ritualis",
-            "es": "Ritualis",
-            "pt": "Ritualis"
+            "en": "Team Green",
+            "cn": "Team Green",
+            "es": "Team Green",
+            "pt": "Team Green2"
           },
           "description": {
-            "en": "Step into the fiery ritual of the \"Ritualis\" miner, where the art of cryptocurrency mining meets the spectacle of Burning Ham. This device burns through algorithms like effigies in the desert, channeling the energy of the festival into a digital blaze that turns data into wealth with every ignited block.",
-            "cn": "Step into the fiery ritual of the \"Ritualis\" miner, where the art of cryptocurrency mining meets the spectacle of Burning Ham. This device burns through algorithms like effigies in the desert, channeling the energy of the festival into a digital blaze that turns data into wealth with every ignited block.",
-            "es": "Step into the fiery ritual of the \"Ritualis\" miner, where the art of cryptocurrency mining meets the spectacle of Burning Ham. This device burns through algorithms like effigies in the desert, channeling the energy of the festival into a digital blaze that turns data into wealth with every ignited block.",
-            "pt": "Step into the fiery ritual of the \"Ritualis\" miner, where the art of cryptocurrency mining meets the spectacle of Burning Ham. This device burns through algorithms like effigies in the desert, channeling the energy of the festival into a digital blaze that turns data into wealth with every ignited block."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 4,
-          "type": "merge",
-          "filename": "ritualis",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 900,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea47338b",
-        "item_id": "6892166d73641cbc58e441f6",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 14,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6892166d73641cbc58e441f6",
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "description": {
-            "en": "It's better to mine and remain polite, as you wouldn't want to be banned from the community, would you? By Doumpa",
-            "cn": "It's better to mine and remain polite, as you wouldn't want to be banned from the community, would you? By Luken",
-            "es": "It's better to mine and remain polite, as you wouldn't want to be banned from the community, would you? By Luken",
-            "pt": "It's better to mine and remain polite, as you wouldn't want to be banned from the community, would you? By Luken"
-          },
-          "filename": "banhammer_master",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "level": 4,
-          "name": {
-            "en": "Banhammer Master",
-            "cn": "Banhammer Master",
-            "es": "Banhammer Master",
-            "pt": "Banhammer Master"
-          },
-          "power": 6500000,
-          "type": "merge",
-          "width": 2,
-          "bonus": 1200,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea47338d",
-        "item_id": "68efed009f36c49e72eb1816",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 15,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68efed009f36c49e72eb1816",
-          "power": 19000000,
-          "width": 2,
-          "name": {
-            "en": "Hamksy",
-            "cn": "Hamksy",
-            "es": "Hamksy",
-            "pt": "Hamksy"
-          },
-          "description": {
-            "en": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
-            "cn": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
-            "es": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
-            "pt": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "hamksy",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea47338f",
-        "item_id": "690a2ca6b50009024139e83d",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 16,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "690a2ca6b50009024139e83d",
-          "power": 10000000,
-          "width": 1,
-          "name": {
-            "en": "Hamcom Cup",
-            "cn": "Hamcom Cup",
-            "es": "Hamcom Cup",
-            "pt": "Hamcom Cup"
-          },
-          "description": {
-            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "hamcom_cup",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1000,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea473391",
-        "item_id": "68efed009f36c49e72eb1816",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 17,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68efed009f36c49e72eb1816",
-          "power": 19000000,
-          "width": 2,
-          "name": {
-            "en": "Hamksy",
-            "cn": "Hamksy",
-            "es": "Hamksy",
-            "pt": "Hamksy"
-          },
-          "description": {
-            "en": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
-            "cn": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
-            "es": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion.",
-            "pt": "Fast, loud, and zero chill — this miner grinds through blocks like it’s tagging the chain with every trick. Dripping in attitude and street flair, it turns crypto into a canvas for pure rebellion."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "hamksy",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea473393",
-        "item_id": "690a2ca6b50009024139e840",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 18,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "690a2ca6b50009024139e840",
-          "power": 26250000,
-          "width": 1,
-          "name": {
-            "en": "Hamcom Cup",
-            "cn": "Hamcom Cup",
-            "es": "Hamcom Cup",
-            "pt": "Hamcom Cup"
-          },
-          "description": {
-            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "hamcom_cup",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 2400,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea473395",
-        "item_id": "690a2ca6b50009024139e846",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 19,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "690a2ca6b50009024139e846",
-          "power": 68910000,
-          "width": 1,
-          "name": {
-            "en": "Hamcom Cup",
-            "cn": "Hamcom Cup",
-            "es": "Hamcom Cup",
-            "pt": "Hamcom Cup"
-          },
-          "description": {
-            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
+            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
           },
           "created_by_title": {
             "link": "",
@@ -930,65 +654,13 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "hamcom_cup",
+          "filename": "team_green",
           "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40
+            "frame_width": 116,
+            "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
           "bonus": 3300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "690b764a7c166a71ea473397",
-        "item_id": "690a2ca6b50009024139e84c",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 20,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "690a2ca6b50009024139e84c",
-          "power": 180900000,
-          "width": 1,
-          "name": {
-            "en": "Hamcom Cup",
-            "cn": "Hamcom Cup",
-            "es": "Hamcom Cup",
-            "pt": "Hamcom Cup"
-          },
-          "description": {
-            "en": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "cn": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "es": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!",
-            "pt": "Punches fly, blocks fall, and only one will mine their way to victory. Fight!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "hamcom_cup",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 4400,
           "is_in_set": false
         }
       }
@@ -1001,98 +673,63 @@
       },
       {
         "level": 2,
-        "level_xp": 5000,
-        "required_xp": 7000
+        "level_xp": 10000,
+        "required_xp": 12000
       },
       {
         "level": 3,
-        "level_xp": 15000,
-        "required_xp": 22000
+        "level_xp": 30000,
+        "required_xp": 42000
       },
       {
         "level": 4,
-        "level_xp": 41000,
-        "required_xp": 63000
+        "level_xp": 120000,
+        "required_xp": 162000
       },
       {
         "level": 5,
-        "level_xp": 16000,
-        "required_xp": 79000
+        "level_xp": 360000,
+        "required_xp": 522000
       },
       {
         "level": 6,
-        "level_xp": 250000,
-        "required_xp": 329000
+        "level_xp": 570000,
+        "required_xp": 1092000
       },
       {
         "level": 7,
-        "level_xp": 240000,
-        "required_xp": 569000
+        "level_xp": 700000,
+        "required_xp": 1792000
       },
       {
         "level": 8,
-        "level_xp": 750000,
-        "required_xp": 1319000
+        "level_xp": 830000,
+        "required_xp": 2622000
       },
       {
         "level": 9,
-        "level_xp": 200000,
-        "required_xp": 1519000
+        "level_xp": 950000,
+        "required_xp": 3572000
       },
       {
         "level": 10,
-        "level_xp": 350000,
-        "required_xp": 1869000
+        "level_xp": 10000000,
+        "required_xp": 13572000
       },
       {
         "level": 11,
-        "level_xp": 380000,
-        "required_xp": 2249000
+        "level_xp": 5000000,
+        "required_xp": 18572000
       },
       {
         "level": 12,
-        "level_xp": 710000,
-        "required_xp": 2959000
+        "level_xp": 10000000,
+        "required_xp": 28572000
       },
       {
         "level": 13,
-        "level_xp": 1250000,
-        "required_xp": 4209000
-      },
-      {
-        "level": 14,
-        "level_xp": 1000000,
-        "required_xp": 5209000
-      },
-      {
-        "level": 15,
-        "level_xp": 3000000,
-        "required_xp": 8209000
-      },
-      {
-        "level": 16,
-        "level_xp": 8000000,
-        "required_xp": 16209000
-      },
-      {
-        "level": 17,
-        "level_xp": 4000000,
-        "required_xp": 20209000
-      },
-      {
-        "level": 18,
-        "level_xp": 12000000,
-        "required_xp": 32209000
-      },
-      {
-        "level": 19,
-        "level_xp": 15000000,
-        "required_xp": 47209000
-      },
-      {
-        "level": 20,
-        "level_xp": 18000000,
-        "required_xp": 65209000
+        "level_xp": 10000000,
+        "required_xp": 38572000
       }
     ]
   }
