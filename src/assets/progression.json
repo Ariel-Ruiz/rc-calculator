@@ -2,7 +2,7 @@
   "multiplier": 0.1,
   "tasks": [
     {
-      "id": "691f61cb7c166a71ea473471",
+      "id": "692dacc47c166a71ea47358c",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "691f61cb7c166a71ea473472",
+      "id": "692dacc47c166a71ea47358d",
       "xp_type": "number",
       "xp_reward": 150,
       "amount": 6667,
@@ -44,7 +44,7 @@
       "sort": 3
     },
     {
-      "id": "691f61cb7c166a71ea473473",
+      "id": "692dacc47c166a71ea47358e",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -67,30 +67,30 @@
   ],
   "event": {
     "event": {
-      "_id": "691f61cbb7f047a6984d1821",
-      "max_xp": 38572000,
+      "_id": "692dacc41eb679c1eacec463",
+      "max_xp": 20630800,
       "max_multiplier": 10000,
-      "max_level": 13,
+      "max_level": 20,
       "tag": {
         "text": "",
         "color": "",
         "text_color": ""
       },
       "progression_event_type": "default",
-      "end_date": "2025-11-24T15:00:00.000Z",
-      "last_updated": 1763664331677,
+      "end_date": "2025-12-02T15:00:00.000Z",
+      "last_updated": 1764601028790,
       "description": {
-        "en": "[21–24] Path of The One",
-        "cn": "[21–24] Path of The One"
+        "en": "Cyber Progression",
+        "cn": "Cyber Progression"
       },
       "title": {
-        "en": "Path of The One",
-        "cn": "Path of The One"
+        "en": "Cyber Progression",
+        "cn": "Cyber Progression"
       }
     },
     "rewards": [
       {
-        "id": "691f61cb7c166a71ea473475",
+        "id": "692dacc57c166a71ea473590",
         "item_id": null,
         "amount": 150000,
         "currency": "RLT",
@@ -111,7 +111,7 @@
         }
       },
       {
-        "id": "691f61cb7c166a71ea473477",
+        "id": "692dacc57c166a71ea473592",
         "item_id": "68306581e2da6536108ec0b8",
         "amount": 1,
         "currency": "",
@@ -151,7 +151,7 @@
         }
       },
       {
-        "id": "691f61cb7c166a71ea473479",
+        "id": "692dacc57c166a71ea473594",
         "item_id": null,
         "amount": 100000000,
         "currency": "RST",
@@ -172,9 +172,9 @@
         }
       },
       {
-        "id": "691f61cb7c166a71ea47347b",
+        "id": "692dacc57c166a71ea473596",
         "item_id": null,
-        "amount": 100,
+        "amount": 50,
         "currency": "",
         "ttl_time": 0,
         "required_level": 4,
@@ -193,8 +193,8 @@
         }
       },
       {
-        "id": "691f61cb7c166a71ea47347d",
-        "item_id": "691f6247b7f047a6984d18c3",
+        "id": "692dacc57c166a71ea473598",
+        "item_id": "68b6db73f58321ae064c2054",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -213,41 +213,40 @@
           "max": 0
         },
         "item": {
-          "_id": "691f6247b7f047a6984d18c3",
-          "power": 3500000,
+          "_id": "68b6db73f58321ae064c2054",
+          "power": 625000,
           "width": 2,
           "name": {
-            "en": "Protocol Green",
-            "cn": "Protocol Green",
-            "es": "Protocol Green",
-            "pt": "Protocol Green"
+            "en": "GravelRig",
+            "cn": "GravelRig",
+            "es": "GravelRig",
+            "pt": "GravelRig"
           },
           "description": {
-            "en": "Decode Protocol for discount on new BLACK FR1D4Y Hamster",
-            "cn": "Decode Protocol for discount on new BLACK FR1D4Y Hamster",
-            "es": "Decode Protocol for discount on new BLACK FR1D4Y Hamster",
-            "pt": "Decode Protocol for discount on new BLACK FR1D4Y Hamster"
+            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "protocol_green",
+          "level": 1,
+          "type": "merge",
+          "filename": "gravelrig",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 150,
+          "bonus": 250,
           "is_in_set": false
         }
       },
       {
-        "id": "691f61cb7c166a71ea47347f",
-        "item_id": "631f7b328238ed283a234fe3",
+        "id": "692dacc57c166a71ea47359a",
+        "item_id": "6555fea08cc5eb05355bc401",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -266,40 +265,41 @@
           "max": 0
         },
         "item": {
-          "_id": "631f7b328238ed283a234fe3",
-          "power": 2756250,
+          "_id": "6555fea08cc5eb05355bc401",
+          "power": 1706250,
           "width": 2,
           "name": {
-            "en": "Illusionist's Box",
-            "cn": "Illusionist's Box",
-            "es": "Illusionist's Box",
-            "pt": "Illusionist's Box"
+            "en": "CodeWhiz",
+            "cn": "CodeWhiz",
+            "es": "CodeWhiz",
+            "pt": "CodeWhiz"
           },
           "description": {
-            "en": "One can use it to saw someone in half, to produce some rabbits… or to mine crypto, yeah, it does that too. Magic Carnival Series Miner.",
-            "cn": "One can use it to saw someone in half, to produce some rabbits… or to mine crypto, yeah, it does that too. Magic Carnival Series Miner.",
-            "es": "One can use it to saw someone in half, to produce some rabbits… or to mine crypto, yeah, it does that too. Magic Carnival Series Miner.",
-            "pt": "One can use it to saw someone in half, to produce some rabbits… or to mine crypto, yeah, it does that too. Magic Carnival Series Miner."
+            "en": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "cn": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "es": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "pt": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
+          "level": 1,
           "type": "merge",
-          "filename": "illusionists_box",
+          "filename": "codewhiz",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 414,
+          "bonus": 180,
           "is_in_set": false
         }
       },
       {
-        "id": "691f61cb7c166a71ea473481",
-        "item_id": "648b09b82100926248ba35ba",
+        "id": "692dacc57c166a71ea47359c",
+        "item_id": "6555fea08cc5eb05355bc401",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -318,40 +318,41 @@
           "max": 0
         },
         "item": {
-          "_id": "648b09b82100926248ba35ba",
-          "power": 6467055,
+          "_id": "6555fea08cc5eb05355bc401",
+          "power": 1706250,
           "width": 2,
           "name": {
-            "en": "Doomsday Dragster",
-            "cn": "Doomsday Dragster",
-            "es": "Doomsday Dragster",
-            "pt": "Doomsday Dragster"
+            "en": "CodeWhiz",
+            "cn": "CodeWhiz",
+            "es": "CodeWhiz",
+            "pt": "CodeWhiz"
           },
           "description": {
-            "en": "Dominate the wasteland with this behemoth of a machine and secure your part of the mining pool: Introducing the Doomsday Dragster, the ultimate Roller Coin miner for those who are ready to survive the end of the world with top-of-the-line speed and power. Created byAsmita",
-            "cn": "Dominate the wasteland with this behemoth of a machine and secure your part of the mining pool: Introducing the Doomsday Dragster, the ultimate Roller Coin miner for those who are ready to survive the end of the world with top-of-the-line speed and power. Created byAsmita",
-            "es": "Dominate the wasteland with this behemoth of a machine and secure your part of the mining pool: Introducing the Doomsday Dragster, the ultimate Roller Coin miner for those who are ready to survive the end of the world with top-of-the-line speed and power. Created byAsmita",
-            "pt": "Dominate the wasteland with this behemoth of a machine and secure your part of the mining pool: Introducing the Doomsday Dragster, the ultimate Roller Coin miner for those who are ready to survive the end of the world with top-of-the-line speed and power. Created byAsmita"
+            "en": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "cn": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "es": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "pt": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell"
           },
           "created_by_title": {
             "link": "",
-            "text": "Asmita"
+            "text": ""
           },
-          "level": 3,
+          "level": 1,
           "type": "merge",
-          "filename": "doomsday_dragster",
+          "filename": "codewhiz",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 480,
+          "bonus": 180,
           "is_in_set": false
         }
       },
       {
-        "id": "691f61cb7c166a71ea473483",
-        "item_id": "6527f314a072ea9506f894ba",
+        "id": "692dacc57c166a71ea47359e",
+        "item_id": "6555fea08cc5eb05355bc409",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -370,40 +371,41 @@
           "max": 0
         },
         "item": {
-          "_id": "6527f314a072ea9506f894ba",
-          "power": 12108285,
+          "_id": "6555fea08cc5eb05355bc409",
+          "power": 4478985,
           "width": 2,
           "name": {
-            "en": "Mining Control",
-            "cn": "Mining Control",
-            "es": "Mining Control",
-            "pt": "Mining Control"
+            "en": "CodeWhiz",
+            "cn": "CodeWhiz",
+            "es": "CodeWhiz",
+            "pt": "CodeWhiz"
           },
           "description": {
-            "en": "It is impossible to control everything, but, at least you are totally in control of your mining process. By Oswaldo Domingo",
-            "cn": "It is impossible to control everything, but, at least you are totally in control of your mining process. By Oswaldo Domingo",
-            "es": "It is impossible to control everything, but, at least you are totally in control of your mining process. By Oswaldo Domingo",
-            "pt": "It is impossible to control everything, but, at least you are totally in control of your mining process. By Oswaldo Domingo"
+            "en": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "cn": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "es": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "pt": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 4,
+          "level": 2,
           "type": "merge",
-          "filename": "mining_control",
+          "filename": "codewhiz",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 109,
+          "bonus": 327,
           "is_in_set": false
         }
       },
       {
-        "id": "691f61cb7c166a71ea473485",
-        "item_id": "668fe6dc7643815232eb88a6",
+        "id": "692dacc57c166a71ea4735a0",
+        "item_id": "68b6dbf2f58321ae064c22e5",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -422,20 +424,20 @@
           "max": 0
         },
         "item": {
-          "_id": "668fe6dc7643815232eb88a6",
-          "power": 7958685,
+          "_id": "68b6dbf2f58321ae064c22e5",
+          "power": 6300000,
           "width": 2,
           "name": {
-            "en": "StoneGuardian",
-            "cn": "StoneGuardian",
-            "es": "StoneGuardian",
-            "pt": "StoneGuardian"
+            "en": "ShaleRig",
+            "cn": "ShaleRig",
+            "es": "ShaleRig",
+            "pt": "ShaleRig"
           },
           "description": {
-            "en": "This ancient miner, carved from solid stone, guards your farm with unwavering loyalty. Its sturdy construction ensures a steady mining output, protecting your assets and boosting your crypto yield.",
-            "cn": "This ancient miner, carved from solid stone, guards your farm with unwavering loyalty. Its sturdy construction ensures a steady mining output, protecting your assets and boosting your crypto yield.",
-            "es": "This ancient miner, carved from solid stone, guards your farm with unwavering loyalty. Its sturdy construction ensures a steady mining output, protecting your assets and boosting your crypto yield.",
-            "pt": "This ancient miner, carved from solid stone, guards your farm with unwavering loyalty. Its sturdy construction ensures a steady mining output, protecting your assets and boosting your crypto yield."
+            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
           },
           "created_by_title": {
             "link": "",
@@ -443,20 +445,19 @@
           },
           "level": 3,
           "type": "merge",
-          "filename": "stoneguardian",
+          "filename": "shalerig",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 710,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
           "is_in_set": false
         }
       },
       {
-        "id": "691f61cb7c166a71ea473487",
-        "item_id": "691f5f7eb7f047a6984d0ea5",
+        "id": "692dacc57c166a71ea4735a2",
+        "item_id": "692da6ec1eb679c1eacea4b4",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -475,20 +476,20 @@
           "max": 0
         },
         "item": {
-          "_id": "691f5f7eb7f047a6984d0ea5",
-          "power": 16350000,
+          "_id": "692da6ec1eb679c1eacea4b4",
+          "power": 4500000,
           "width": 2,
           "name": {
-            "en": "Team Green",
-            "cn": "Team Green",
-            "es": "Team Green",
-            "pt": "Team Green2"
+            "en": "ProtoMiner",
+            "cn": "ProtoMiner",
+            "es": "ProtoMiner",
+            "pt": "ProtoMiner"
           },
           "description": {
-            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
+            "en": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "cn": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "es": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "pt": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one."
           },
           "created_by_title": {
             "link": "",
@@ -496,77 +497,106 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "team_green",
+          "filename": "protominer",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1000,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 400,
           "is_in_set": false
         }
       },
       {
-        "id": "691f61cb7c166a71ea473489",
-        "item_id": "691f5f7eb7f047a6984d0ea5",
-        "amount": 1,
-        "currency": "",
+        "id": "692dacc57c166a71ea4735a4",
+        "item_id": null,
+        "amount": 350000000,
+        "currency": "RST",
         "ttl_time": 0,
         "required_level": 11,
-        "type": "miner",
+        "type": "money",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Money Title",
+          "cn": "Money Title"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "691f5f7eb7f047a6984d0ea5",
-          "power": 16350000,
-          "width": 2,
-          "name": {
-            "en": "Team Green",
-            "cn": "Team Green",
-            "es": "Team Green",
-            "pt": "Team Green2"
-          },
-          "description": {
-            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "team_green",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1000,
-          "is_in_set": false
         }
       },
       {
-        "id": "691f61cb7c166a71ea47348b",
-        "item_id": "691f5f7eb7f047a6984d0ea8",
-        "amount": 1,
+        "id": "692dacc57c166a71ea4735a6",
+        "item_id": null,
+        "amount": 150,
         "currency": "",
         "ttl_time": 0,
         "required_level": 12,
+        "type": "season_pass_xp",
+        "title": {
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
+        },
+        "description": {
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "692dacc57c166a71ea4735a8",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 5,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 13,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Speed Up Item",
+            "cn": "Speed Up Item",
+            "es": "Speed Up Item",
+            "pt": "Speed Up Item"
+          },
+          "description": {
+            "en": "Ticket for speed up expedition",
+            "cn": "Ticket for speed up expedition",
+            "es": "Ticket for speed up expedition",
+            "pt": "Ticket for speed up expedition"
+          },
+          "media": {
+            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
+          },
+          "_id": "67d1c54536daea2ef871b292",
+          "type": "expedition_speed_up"
+        }
+      },
+      {
+        "id": "692dacc57c166a71ea4735aa",
+        "item_id": "6555fea08cc5eb05355bc411",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 14,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -581,20 +611,179 @@
           "max": 0
         },
         "item": {
-          "_id": "691f5f7eb7f047a6984d0ea8",
-          "power": 42920000,
+          "_id": "6555fea08cc5eb05355bc411",
+          "power": 11757375,
           "width": 2,
           "name": {
-            "en": "Team Green",
-            "cn": "Team Green",
-            "es": "Team Green",
-            "pt": "Team Green2"
+            "en": "CodeWhiz",
+            "cn": "CodeWhiz",
+            "es": "CodeWhiz",
+            "pt": "CodeWhiz"
           },
           "description": {
-            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
+            "en": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "cn": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "es": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell",
+            "pt": "CodeWhiz orchestrates a symphony of efficiency with lightning-fast computations and ingenious problem-solving abilities in the pursuit of digital wealth. By Ravell"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "codewhiz",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 533,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "692dacc57c166a71ea4735ac",
+        "item_id": "67863a60a8d2adace24a6edb",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 15,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "67863a60a8d2adace24a6edb",
+          "power": 12350000,
+          "width": 2,
+          "name": {
+            "en": "Patentoid",
+            "cn": "Patentoid",
+            "es": "Patentoid",
+            "pt": "Patentoid"
+          },
+          "description": {
+            "en": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "cn": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "es": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "pt": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "patentoid",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 50,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "692dacc57c166a71ea4735ae",
+        "item_id": "67863a60a8d2adace24a6edb",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 16,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "67863a60a8d2adace24a6edb",
+          "power": 12350000,
+          "width": 2,
+          "name": {
+            "en": "Patentoid",
+            "cn": "Patentoid",
+            "es": "Patentoid",
+            "pt": "Patentoid"
+          },
+          "description": {
+            "en": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "cn": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "es": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "pt": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "patentoid",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 50,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "692dacc57c166a71ea4735b0",
+        "item_id": "67863a60a8d2adace24a6ede",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 17,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "67863a60a8d2adace24a6ede",
+          "power": 32420000,
+          "width": 2,
+          "name": {
+            "en": "Patentoid",
+            "cn": "Patentoid",
+            "es": "Patentoid",
+            "pt": "Patentoid"
+          },
+          "description": {
+            "en": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "cn": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "es": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance.",
+            "pt": "A masterpiece of innovation and engineering, this miner redefines the blockchain frontier. Built with groundbreaking precision, it stands as a testament to progress, turning visionary design into unparalleled crypto performance."
           },
           "created_by_title": {
             "link": "",
@@ -602,23 +791,23 @@
           },
           "level": 1,
           "type": "merge",
-          "filename": "team_green",
+          "filename": "patentoid",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 2400,
+          "bonus": 175,
           "is_in_set": false
         }
       },
       {
-        "id": "691f61cb7c166a71ea47348d",
-        "item_id": "691f5f7eb7f047a6984d0eae",
+        "id": "692dacc57c166a71ea4735b2",
+        "item_id": "692da6ec1eb679c1eacea4b7",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 13,
+        "required_level": 18,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -633,20 +822,72 @@
           "max": 0
         },
         "item": {
-          "_id": "691f5f7eb7f047a6984d0eae",
-          "power": 112670000,
+          "_id": "692da6ec1eb679c1eacea4b7",
+          "power": 10000000,
           "width": 2,
           "name": {
-            "en": "Team Green",
-            "cn": "Team Green",
-            "es": "Team Green",
-            "pt": "Team Green2"
+            "en": "ProtoMiner",
+            "cn": "ProtoMiner",
+            "es": "ProtoMiner",
+            "pt": "ProtoMiner"
           },
           "description": {
-            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
-            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
+            "en": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "cn": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "es": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "pt": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "protominer",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 800,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "692dacc57c166a71ea4735b4",
+        "item_id": "692da6ec1eb679c1eacea4bd",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 19,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "692da6ec1eb679c1eacea4bd",
+          "power": 35000000,
+          "width": 2,
+          "name": {
+            "en": "ProtoMiner",
+            "cn": "ProtoMiner",
+            "es": "ProtoMiner",
+            "pt": "ProtoMiner"
+          },
+          "description": {
+            "en": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "cn": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "es": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "pt": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one."
           },
           "created_by_title": {
             "link": "",
@@ -654,13 +895,65 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "team_green",
+          "filename": "protominer",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 3300,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 1500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "692dacc57c166a71ea4735b6",
+        "item_id": "692da6ec1eb679c1eacea4c3",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 20,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "692da6ec1eb679c1eacea4c3",
+          "power": 100000000,
+          "width": 2,
+          "name": {
+            "en": "ProtoMiner",
+            "cn": "ProtoMiner",
+            "es": "ProtoMiner",
+            "pt": "ProtoMiner"
+          },
+          "description": {
+            "en": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "cn": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "es": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one.",
+            "pt": "An old-school prototype that never quit — rugged, rare, and running strong. It may be vintage, but it still cracks blocks like it’s day one."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "protominer",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 3500,
           "is_in_set": false
         }
       }
@@ -668,68 +961,103 @@
     "levels_config": [
       {
         "level": 1,
-        "level_xp": 2000,
-        "required_xp": 2000
+        "level_xp": 1000,
+        "required_xp": 1000
       },
       {
         "level": 2,
-        "level_xp": 10000,
-        "required_xp": 12000
+        "level_xp": 2400,
+        "required_xp": 3400
       },
       {
         "level": 3,
-        "level_xp": 30000,
-        "required_xp": 42000
+        "level_xp": 5400,
+        "required_xp": 8800
       },
       {
         "level": 4,
-        "level_xp": 120000,
-        "required_xp": 162000
+        "level_xp": 9000,
+        "required_xp": 17800
       },
       {
         "level": 5,
-        "level_xp": 360000,
-        "required_xp": 522000
+        "level_xp": 14000,
+        "required_xp": 31800
       },
       {
         "level": 6,
-        "level_xp": 570000,
-        "required_xp": 1092000
+        "level_xp": 19000,
+        "required_xp": 50800
       },
       {
         "level": 7,
-        "level_xp": 700000,
-        "required_xp": 1792000
+        "level_xp": 26000,
+        "required_xp": 76800
       },
       {
         "level": 8,
-        "level_xp": 830000,
-        "required_xp": 2622000
+        "level_xp": 33000,
+        "required_xp": 109800
       },
       {
         "level": 9,
-        "level_xp": 950000,
-        "required_xp": 3572000
+        "level_xp": 41000,
+        "required_xp": 150800
       },
       {
         "level": 10,
-        "level_xp": 10000000,
-        "required_xp": 13572000
+        "level_xp": 500000,
+        "required_xp": 650800
       },
       {
         "level": 11,
-        "level_xp": 5000000,
-        "required_xp": 18572000
+        "level_xp": 280000,
+        "required_xp": 930800
       },
       {
         "level": 12,
-        "level_xp": 10000000,
-        "required_xp": 28572000
+        "level_xp": 340000,
+        "required_xp": 1270800
       },
       {
         "level": 13,
+        "level_xp": 390000,
+        "required_xp": 1660800
+      },
+      {
+        "level": 14,
+        "level_xp": 440000,
+        "required_xp": 2100800
+      },
+      {
+        "level": 15,
+        "level_xp": 470000,
+        "required_xp": 2570800
+      },
+      {
+        "level": 16,
+        "level_xp": 510000,
+        "required_xp": 3080800
+      },
+      {
+        "level": 17,
+        "level_xp": 550000,
+        "required_xp": 3630800
+      },
+      {
+        "level": 18,
+        "level_xp": 2000000,
+        "required_xp": 5630800
+      },
+      {
+        "level": 19,
+        "level_xp": 5000000,
+        "required_xp": 10630800
+      },
+      {
+        "level": 20,
         "level_xp": 10000000,
-        "required_xp": 38572000
+        "required_xp": 20630800
       }
     ]
   }
