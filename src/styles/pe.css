@@ -1,0 +1,300 @@
+.progression-container {
+  display: flex;
+}
+
+.progression-info {
+  width: 30%;
+}
+
+.progression-details {
+  width: 70%;
+  padding-left: 2em;
+}
+
+.event-title {
+  font-size: 2.8em;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.event-subtitle {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--coin);
+}
+
+.tasks {
+  margin-top: .5em;
+}
+
+/* .task-info {
+  width: 150%;
+} */
+
+.task-name,
+.task-description {
+  background: var(--secondary);
+  border: 6px solid var(--primary);
+  font-weight: 700;
+  padding: .7em;
+  font-size: 1.1em;
+}
+
+.task-name {
+  color: var(--text-primary-active);
+  width: 60%;
+}
+
+.task-description {
+  color: var(--coin);
+  width: 40%;
+}
+
+.progression-details>.calculator,
+.progression-details>.rewards {
+  background: var(--secondary);
+  border-radius: .3em;
+}
+
+.calc-input-area {
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+.calc-input-area td,
+.calc-input-area th {
+  border-radius: .3em;
+  border: 4px solid var(--secondary);
+  font-size: .9em;
+}
+
+.calc-input-area th {
+  color: var(--text-primary);
+  background: var(--primary);
+  font-weight: 800;
+}
+
+.calc-input,
+.calc-input * {
+  border: none;
+  border-radius: 0;
+  background: var(--primary);
+  /* width: 100%; */
+  outline: none;
+  color: var(--accent);
+  font-size: 1em;
+  padding: .4em;
+  font-weight: 800;
+}
+
+.calc-input {
+  margin: 0;
+}
+
+#multiplier {
+  width: 65px;
+}
+#discount {
+  width: 80px;
+}
+
+#buy {
+  color: var(--coin);
+}
+
+#buyFinal {
+  color: var(--text-primary);
+}
+
+.rewards {
+  max-height: 65vh;
+  /* altura visible */
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 0px 0px 5px 5px;
+}
+
+/* importante que la tabla ocupe 100% del ancho */
+.rewards-table {
+  border-collapse: collapse;
+  overflow: auto;
+}
+
+/* .rewards-table th,
+.rewards-table td {
+  padding: 8px 12px;
+} */
+
+/* aquí está la clave */
+.rewards-table thead th {
+  position: sticky !important;
+  top: 0;
+  z-index: 5;
+}
+
+.reward-name {
+  font-weight: 600;
+}
+
+.reward-subname {
+  color: var(--coin);
+  font-size: .8em;
+}
+
+.reward-image {
+  height: 30px;
+}
+
+.reward-image-cell {
+  width: 45px;
+  height: 30px;
+  background-position: center center, center center;
+  background-size: contain;
+  background-repeat: no-repeat, no-repeat;
+  align-content: start;
+  text-align: start;
+}
+
+.level-image {
+  width: 10px;
+}
+
+.reward-multiplier {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.reward-boxes, .reward-marketplace {
+  font-weight: 600;
+}
+
+.recomended {
+  color: var(--success)
+}
+
+.calc-info {
+  display: flex;
+  justify-content: space-around;
+}
+.calc-info > label{
+  width: 48%;
+  font-size: .8em;
+  padding: 4px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: .3em;
+}
+
+.multiplier-info {
+  color: var(--success);
+  background: #0a5812;
+}
+
+.edit-info {
+  color: var(--coin);
+  background: #626311;
+}
+
+.deadline {
+  padding: .2em;
+  margin-top: 1.5em;
+  border-radius: .2em;
+  font-weight: 600;
+  width: 95%;
+  justify-self: center;
+  text-align: center;
+  color: var(--text-primary-active);
+  background: var(--success);
+}
+
+.ended {
+  background: rgb(185, 42, 42);
+}
+
+.rentability-score {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--text-primary);
+}
+
+.score {
+  font-size: 4em;
+  color: var(--success);
+  margin-right: .1em;
+}
+
+.rentability-score-text {
+  font-size: 1.1em;
+  color: var(--text-primary-active);
+  margin-left: .2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+.text-success {
+  color: var(--success);
+}
+.text-warning {
+  color: var(--coin);
+}
+.text-danger {
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .progression-container {
+    display: inline-block;
+  }
+
+  .progression-info {
+    width: 100%;
+  }
+
+  .progression-details {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 1.5em;
+  }
+
+  .event-title, .event-subtitle {
+    text-align: center;
+  }
+
+  .calc-info > label {
+    align-content: center;
+    width: 46%;
+  }
+
+  .calc-input-area > table {
+    width: 500px;
+    overflow: auto;
+  }
+
+  .calc-table {
+    width: 88vw;
+    overflow-x: scroll;
+  }
+
+  .calc-table > table {
+    width: 500px;
+  }
+
+  .calc-table > table th {
+    font-size: .9em;
+  }
+
+  .rewards {
+    width: 88vw;
+    padding-bottom: 0px;
+  }
+
+  .rewards-table {
+    width: 500px;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "rc-calculator",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://ariel-ruiz.github.io/rc-calculator/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.6.0",
+    "firebase": "^12.3.0"
+  },
+  "devDependencies": {
+    "vite": "^4.5.5",
+    "vite-plugin-vue2": "^2.0.3",
+    "gh-pages": "^5.0.0"
+  }
+}
