@@ -25,7 +25,8 @@
     "rollertap" : "ROLLERTAP",
     "rooms" : "ROOMS",
     "comming_soon": "Próximamente",
-    "progression": "EVENTO DE PROGRESIÓN"
+    "progression": "EVENTO DE PROGRESIÓN",
+    "burning": "EVENTO DE QUEMA"
   },
   "rollertap": {
     "coinsPerHour": "Monedas por hora",
@@ -62,5 +63,13 @@
     "ends_on": "Termina el",
     "the_event_ended": "El evento terminó",
     "rentability_punctuation": "Puntuación de Rentabilidad"
+  },
+  "burning": {
+    "title": "Calculadora de Quema",
+    "subtitle": "💡Pega los datos para calcular sus puntos, los datos son autocalculados por lo que pueden variar ligeramente. <br><br> <b>Puedes copiar los datos desde:</b> <br> <a class='source-link' href='https://rollercoin.com/marketplace' target='_blank'>● Marketplace</a> <br> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Marketplace Sell</a> <br> <a class='source-link' href='https://rollercoin.com/storage/inventory/miners' target='_blank'>● Inventory</a> <br> <a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a>",
+    "placeholder": "pega los datos aquí...",
+    "calculate": "CALCULAR",
+    "clear": "LIMPIAR",
+    "empty": "Pega los datos de los mineros del marketplace y haz clic en Calcular"
   }
 }

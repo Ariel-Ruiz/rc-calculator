@@ -25,7 +25,8 @@
     "rollertap" : "ROLLERTAP",
     "rooms": "ROOMS",
     "comming_soon": "Comming Soon",
-    "progression": "PROGRESSION EVENT"
+    "progression": "PROGRESSION EVENT",
+    "burning": "BURNING EVENT"
   },
   "rollertap": {
     "coinsPerHour": "Coins per hour",
@@ -62,5 +63,13 @@
     "ends_on": "Ends on",
     "the_event_ended": "The event ended",
     "rentability_punctuation": "Profitability Score"
+  },
+  "burning": {
+    "title": "Burn Calculator",
+    "subtitle": "💡Paste the data to calculate your points. The data is calculated automatically, so it may vary slightly. <br><br> <b>You can copy the data from:</b> <br> <a class='source-link' href='https://rollercoin.com/marketplace' target='_blank'>● Marketplace</a> <br> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Marketplace Sell</a> <br> <a class='source-link' href='https://rollercoin.com/storage/inventory/miners' target='_blank'>● Inventory</a> <br> <a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a>",
+    "placeholder": "paste data here...",
+    "calculate": "CALCULATE",
+    "clear": "CLEAR",
+    "empty": "Paste miners data from marketplace and click Calculate"
   }
 }

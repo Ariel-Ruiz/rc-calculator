@@ -33,6 +33,13 @@
         >
           {{ t.nav && t.nav.progression }}
         </router-link>
+        <router-link
+          to="/burning-event"
+          @click.native="toggleMenu"
+          :class="{ active: $route.path === '/burning-event' }"
+        >
+          {{ t.nav && t.nav.burning }}
+        </router-link>
         <a
           href="#"
           class="comming-soon"

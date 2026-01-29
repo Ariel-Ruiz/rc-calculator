@@ -198,7 +198,7 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.25
+      let phXRLT = 0.47
       let feeXBox = 0.15
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
@@ -314,6 +314,7 @@ export default {
         case 'power': filename = 'others/reward_power.png'; break
         case 'utility_item': filename = `others/${reward.item_id}.gif`; break
         case 'loot_box': filename = `box/${reward.item_id}.png`; break
+        case 'mutation_component': filename = `mutation_component/${reward.item_id}.png`; break
         case 'rack': filename = `rack/${reward.item_id}.png`; break
         case 'miner': filename = `miner/${reward.item.filename}.gif`; break
       }
@@ -334,6 +335,7 @@ export default {
         case 'season_pass_xp': return this.getRewardValue(reward) + ' XP'
         case 'power': return this.getRewardValue(reward)
         case 'utility_item': return (reward.amount > 1 ? reward.amount : '') + ' ' + reward.item.name.en
+        case 'mutation_component': return (reward.amount > 1 ? reward.amount : '') + ' ' + reward.item.name.en
         case 'loot_box': return reward.item.title.en
         case 'rack':
         case 'miner': return reward.item.name.en

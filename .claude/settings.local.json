@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node parse_miners.js:*)",
+      "Bash(node merge_miners.js:*)",
+      "Bash(node merge_miners2.js:*)",
+      "Bash(node:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

@@ -18,7 +18,7 @@ export async function fetchAllPrices() {
       }
     }
     priceCache['RLT'] = 1
-    priceCache['RST'] = 0.01
+    priceCache['RST'] = 0.007
     priceCache['HMT'] = 1
 
     // guardamos en localStorage
