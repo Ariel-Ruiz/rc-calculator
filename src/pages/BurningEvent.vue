@@ -58,6 +58,19 @@
 
     <!-- Results Section -->
     <div class="burning-results">
+      <!-- Selected Points Counter -->
+      <div v-if="results.length > 0" class="selected-points-bar">
+        <div class="selected-points-left">
+          <span class="selected-label">{{ t.burning?.selectedPoints }}</span>
+          <img src="../assets/symbols/ecoin.svg" alt="ecoin" class="ecoin-icon" />
+          <span class="selected-value">{{ formatNumber(selectedPoints) }}</span>
+        </div>
+        <div class="selected-miners-right">
+          <span class="selected-label">{{ t.burning?.selectedMiners }}</span>
+          <span class="selected-count">{{ selectedMinersCount }}</span>
+        </div>
+      </div>
+
       <div v-if="results.length > 0" class="results-controls">
         <!-- Source Filters -->
         <div class="source-filters">
@@ -70,31 +83,58 @@
             {{ source }}
           </button>
         </div>
-        <!-- Sort Dropdown -->
-        <div class="sort-dropdown">
-          <button class="sort-button" @click="sortMenuOpen = !sortMenuOpen">
-            {{ currentSortLabel }}
-            <span :class="['sort-arrow', { open: sortMenuOpen }]">&#9660;</span>
+        <div class="controls-right">
+          <!-- Filters Button -->
+          <button class="filter-toggle-btn" @click="filtersOpen = !filtersOpen">
+            {{ t.burning?.filters || 'FILTERS' }}
+            <span :class="['sort-arrow', { open: filtersOpen }]">&#9660;</span>
           </button>
-          <div v-if="sortMenuOpen" class="sort-menu">
-            <div
-              v-for="option in sortOptions"
-              :key="option.value"
-              :class="['sort-option', { active: sortBy === option.value }]"
-              @click="selectSort(option.value)"
-            >
-              {{ option.label }}
+          <!-- Sort Dropdown -->
+          <div class="sort-dropdown">
+            <button class="sort-button" @click="sortMenuOpen = !sortMenuOpen">
+              {{ currentSortLabel }}
+              <span :class="['sort-arrow', { open: sortMenuOpen }]">&#9660;</span>
+            </button>
+            <div v-if="sortMenuOpen" class="sort-menu">
+              <div
+                v-for="option in sortOptions"
+                :key="option.value"
+                :class="['sort-option', { active: sortBy === option.value }]"
+                @click="selectSort(option.value)"
+              >
+                {{ option.label }}
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Filters Collapse -->
+      <div v-if="results.length > 0 && filtersOpen" class="filters-collapse">
+        <div class="filter-input-group">
+          <label>{{ t.burning?.minPoints }}</label>
+          <input type="number" v-model.number="filterMinPoints" min="0" />
+        </div>
+        <div class="filter-input-group">
+          <label>{{ t.burning?.minPtsRlt }}</label>
+          <input type="number" v-model.number="filterMinPtsRlt" min="0" />
+        </div>
+        <div class="filter-input-group">
+          <label>{{ t.burning?.maxPrice }}</label>
+          <input type="number" v-model.number="filterMaxPrice" min="0" step="0.01" />
+        </div>
+        <button class="btn-apply-filters" @click="applyFilters">
+          {{ t.burning?.apply }}
+        </button>
+      </div>
       <div v-if="filteredResults.length > 0" class="results-grid">
         <div
-          v-for="(item, index) in filteredResults"
-          :key="index"
-          class="result-card"
+          v-for="item in filteredResults"
+          :key="item.uid"
+          :class="['result-card', { selected: isSelected(item) }]"
+          @click="toggleSelect(item)"
         >
-          <button class="card-delete" @click="removeItem(item)">&times;</button>
+          <button class="card-delete" @click.stop="removeItem(item)">&times;</button>
           <div :class="['card-source', 'source-' + (item.source || 'marketplace').toLowerCase()]">{{ item.source || 'MARKETPLACE' }}</div>
           <div class="card-header">
             <img src="../assets/symbols/ecoin.svg" alt="ecoin" class="ecoin-icon" />
@@ -143,6 +183,16 @@
               <span class="ppr">{{ formatNumber(item.pointsPerRlt) }} PtsxRLT</span>
             </div>
           </div>
+          <!-- Quantity indicator for INVENTORY/SELL/MARKETPLACE -->
+          <div v-if="item.quantity > 1 && (item.source === 'SELL' || item.source === 'INVENTORY' || item.source === 'MARKETPLACE')" class="card-quantity">
+            x{{ item.quantity }}
+          </div>
+          <!-- Selection quantity control (for SELL/INVENTORY/MARKETPLACE) -->
+          <div v-if="isSelected(item) && (item.source === 'SELL' || item.source === 'INVENTORY' || item.source === 'MARKETPLACE')" class="quantity-control" @click.stop>
+            <button class="qty-btn qty-minus" @click="decrementQty(item)">−</button>
+            <span class="qty-value">{{ selectedUids[item.uid] }}</span>
+            <button class="qty-btn qty-plus" @click="incrementQty(item)" :disabled="selectedUids[item.uid] >= item.quantity">+</button>
+          </div>
         </div>
       </div>
 
@@ -174,8 +224,18 @@ export default {
       storagePath: 'https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/',
       inputText: '',
       results: [],
+      selectedUids: {},
       sortBy: 'ppr-desc',
       sortMenuOpen: false,
+      filtersOpen: false,
+      filterMinPoints: null,
+      filterMinPtsRlt: null,
+      filterMaxPrice: null,
+      activeFilters: {
+        minPoints: null,
+        minPtsRlt: null,
+        maxPrice: null
+      },
       previewImage: null,
       hiddenSources: [],
       miners: minersData,
@@ -224,8 +284,39 @@ export default {
     filteredResults() {
       return this.sortedResults.filter(item => {
         const source = item.source || 'MARKETPLACE'
-        return !this.hiddenSources.includes(source)
+        if (this.hiddenSources.includes(source)) return false
+
+        // Apply numeric filters
+        if (this.activeFilters.minPoints !== null && item.points < this.activeFilters.minPoints) return false
+        if (this.activeFilters.minPtsRlt !== null && (item.pointsPerRlt === null || item.pointsPerRlt < this.activeFilters.minPtsRlt)) return false
+        if (this.activeFilters.maxPrice !== null && (item.price === null || item.price > this.activeFilters.maxPrice)) return false
+
+        return true
       })
+    },
+    selectedPoints() {
+      let total = 0
+      for (const uid in this.selectedUids) {
+        const qty = this.selectedUids[uid]
+        if (qty) {
+          const uidNum = parseInt(uid)
+          const item = this.results.find(r => r.uid === uidNum)
+          if (item) {
+            total += item.points * qty
+          }
+        }
+      }
+      return total
+    },
+    selectedMinersCount() {
+      let count = 0
+      for (const uid in this.selectedUids) {
+        const qty = this.selectedUids[uid]
+        if (qty) {
+          count += qty
+        }
+      }
+      return count
     }
   },
   mounted() {
@@ -278,18 +369,23 @@ export default {
     parseInput(text) {
       const miners = []
       const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0)
+      let uidCounter = Date.now()
 
-      // Helper to find existing miner with same stats
+      // Helper to find existing miner with same stats and source
       const findExisting = (miner) => {
         return miners.find(m =>
           m.name === miner.name &&
           m.power === miner.power &&
-          m.bonus === miner.bonus
+          m.bonus === miner.bonus &&
+          m.source === miner.source
         )
       }
 
-      // Helper to add miner if not duplicate, or update isSet if needed
+      // Helper to add miner if not duplicate, or update if needed
       const addMiner = (miner) => {
+        // Assign unique ID to each miner
+        miner.uid = uidCounter++
+
         const existing = findExisting(miner)
         if (existing) {
           // If new miner has isSet=true and existing doesn't, update it
@@ -299,6 +395,10 @@ export default {
           // If new miner has minerId and existing doesn't, update it
           if (miner.minerId && !existing.minerId) {
             existing.minerId = miner.minerId
+          }
+          // Sum quantities for INVENTORY and SELL
+          if ((miner.source === 'INVENTORY' || miner.source === 'SELL') && miner.quantity) {
+            existing.quantity = (existing.quantity || 1) + miner.quantity
           }
         } else {
           miners.push(miner)
@@ -454,6 +554,7 @@ export default {
           }
 
           // Look for Power, Bonus, Quantity
+          let foundQuantityLabel = false
           for (let j = startIndex + 2; j < Math.min(startIndex + 15, lines.length); j++) {
             const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
             if (powerMatch) power = `${powerMatch[1]} ${powerMatch[2]}`
@@ -461,8 +562,14 @@ export default {
             const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
             if (bonusMatch) bonus = bonusMatch[1]
 
-            if (lines[j - 1] === 'Quantity:' && lines[j].match(/^\d+$/)) {
+            // Detect "Quantity:" label (case insensitive, with or without colon)
+            if (lines[j].match(/^Quantity:?$/i)) {
+              foundQuantityLabel = true
+            }
+            // If we found the label, next number is the quantity
+            if (foundQuantityLabel && lines[j].match(/^\d+$/)) {
               quantity = parseInt(lines[j])
+              foundQuantityLabel = false
             }
 
             if (lines[j] === 'Miner details') break
@@ -520,6 +627,7 @@ export default {
           }
 
           // Parse power, bonus, quantity from following lines
+          let foundQuantityLabelMobile = false
           for (let j = i + 2; j < Math.min(i + 15, lines.length); j++) {
             const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
             if (powerMatch) power = `${powerMatch[1]} ${powerMatch[2]}`
@@ -527,8 +635,14 @@ export default {
             const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
             if (bonusMatch) bonus = bonusMatch[1]
 
-            if (lines[j - 1] === 'Quantity' && lines[j].match(/^\d+$/)) {
+            // Detect "Quantity" label (case insensitive, with or without colon)
+            if (lines[j].match(/^Quantity:?$/i)) {
+              foundQuantityLabelMobile = true
+            }
+            // If we found the label, next number is the quantity
+            if (foundQuantityLabelMobile && lines[j].match(/^\d+$/)) {
               quantity = parseInt(lines[j])
+              foundQuantityLabelMobile = false
             }
 
             if (lines[j] === 'iconSell Miner') break
@@ -592,6 +706,7 @@ export default {
             }
           }
 
+          let foundQuantityLabelDesktop = false
           for (let j = nameIndex + 1; j < Math.min(i + 15, lines.length); j++) {
             const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
             if (powerMatch) power = `${powerMatch[1]} ${powerMatch[2]}`
@@ -599,8 +714,14 @@ export default {
             const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
             if (bonusMatch) bonus = bonusMatch[1]
 
-            if (lines[j - 1] === 'Quantity' && lines[j].match(/^\d+$/)) {
+            // Detect "Quantity" label (case insensitive, with or without colon)
+            if (lines[j].match(/^Quantity:?$/i)) {
+              foundQuantityLabelDesktop = true
+            }
+            // If we found the label, next number is the quantity
+            if (foundQuantityLabelDesktop && lines[j].match(/^\d+$/)) {
               quantity = parseInt(lines[j])
+              foundQuantityLabelDesktop = false
             }
 
             if (lines[j] === 'iconSell Miner') break
@@ -655,15 +776,15 @@ export default {
             // Check if previous line was productset badge
             const isSet = i > 0 && lines[i - 1] === 'productset badge'
 
-            let quantity = 1
             let price = 0
+            let quantity = 1
 
-            for (let j = i + 2; j < Math.min(i + 6, lines.length); j++) {
-              const qtyMatch = lines[j].match(/Quantity:\s*(\d+)/i)
-              if (qtyMatch) quantity = parseInt(qtyMatch[1])
-
-              const priceMatch = lines[j].match(/^(?:From:\s*)?([\d.,\s]+)\s*RLT$/i)
+            for (let j = i + 2; j < Math.min(i + 8, lines.length); j++) {
+              const priceMatch = lines[j].match(/^(?:From:?\s*)?([\d.,\s]+)\s*RLT$/i)
               if (priceMatch) price = parseFloat(priceMatch[1].replace(/\s/g, '').replace(',', '.'))
+
+              const quantityMatch = lines[j].match(/^Quantity:?\s*(\d+)$/i)
+              if (quantityMatch) quantity = parseInt(quantityMatch[1])
             }
 
             const points = this.calcularPuntos(power, bonus)
@@ -700,41 +821,75 @@ export default {
       const newMiners = this.parseInput(this.inputText)
 
       if (newMiners.length > 0) {
-        // Filter out duplicates against existing results
-        const uniqueMiners = newMiners.filter(newMiner => {
-          return !this.results.some(existing =>
-            existing.name === newMiner.name &&
-            existing.power === newMiner.power &&
-            existing.bonus === newMiner.bonus
+        newMiners.forEach(newMiner => {
+          const existing = this.results.find(r =>
+            r.name === newMiner.name &&
+            r.power === newMiner.power &&
+            r.bonus === newMiner.bonus &&
+            r.source === newMiner.source
           )
+          if (existing) {
+            // Sum quantities for INVENTORY, SELL and MARKETPLACE
+            if (newMiner.source === 'INVENTORY' || newMiner.source === 'SELL' || newMiner.source === 'MARKETPLACE') {
+              existing.quantity = (existing.quantity || 1) + (newMiner.quantity || 1)
+            }
+            // For COLLECTION, quantity stays at 1 (no duplicates summed)
+          } else {
+            this.results.push(newMiner)
+          }
         })
-
-        if (uniqueMiners.length > 0) {
-          this.results = [...this.results, ...uniqueMiners]
-          this.saveToStorage()
-        }
+        this.saveToStorage()
         this.inputText = ''
       }
     },
 
     clearAll() {
       this.results = []
+      this.selectedUids = {}
       this.inputText = ''
       localStorage.removeItem('burning_results')
     },
 
     removeItem(item) {
-      const index = this.results.findIndex(r =>
-        r.name === item.name &&
-        r.power === item.power &&
-        r.bonus === item.bonus &&
-        r.source === item.source
-      )
+      const index = this.results.findIndex(r => r.uid === item.uid)
       if (index !== -1) {
         this.results.splice(index, 1)
+        // Also remove from selected if it was selected
+        if (this.selectedUids[item.uid]) {
+          this.$delete(this.selectedUids, item.uid)
+        }
         this.saveToStorage()
       }
     },
+
+    isSelected(item) {
+      return !!this.selectedUids[item.uid]
+    },
+
+    toggleSelect(item) {
+      if (this.selectedUids[item.uid]) {
+        this.$delete(this.selectedUids, item.uid)
+      } else {
+        this.$set(this.selectedUids, item.uid, 1)
+      }
+    },
+
+    incrementQty(item) {
+      const current = this.selectedUids[item.uid] || 0
+      if (current < item.quantity) {
+        this.$set(this.selectedUids, item.uid, current + 1)
+      }
+    },
+
+    decrementQty(item) {
+      const current = this.selectedUids[item.uid] || 0
+      if (current > 1) {
+        this.$set(this.selectedUids, item.uid, current - 1)
+      } else {
+        this.$delete(this.selectedUids, item.uid)
+      }
+    },
+
 
     toggleSource(source) {
       const index = this.hiddenSources.indexOf(source)
@@ -764,7 +919,15 @@ export default {
       const saved = localStorage.getItem('burning_results')
       if (saved) {
         try {
-          this.results = JSON.parse(saved)
+          const parsed = JSON.parse(saved)
+          // Ensure all miners have a uid
+          let uidCounter = Date.now()
+          this.results = parsed.map(miner => {
+            if (!miner.uid) {
+              miner.uid = uidCounter++
+            }
+            return miner
+          })
         } catch (e) {
           this.results = []
         }
@@ -788,6 +951,12 @@ export default {
       if (this.sortMenuOpen && !event.target.closest('.sort-dropdown')) {
         this.sortMenuOpen = false
       }
+    },
+
+    applyFilters() {
+      this.activeFilters.minPoints = this.filterMinPoints || null
+      this.activeFilters.minPtsRlt = this.filterMinPtsRlt || null
+      this.activeFilters.maxPrice = this.filterMaxPrice || null
     },
 
     getRarityLevel(name) {

@@ -1,8 +1,8 @@
 {
-  "multiplier": 0.2,
+  "multiplier": 0.1,
   "tasks": [
     {
-      "id": "6978c8d9b94e4ce33de84ad0",
+      "id": "697cb0a4b94e4ce33de84baa",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "6978c8d9b94e4ce33de84ad1",
+      "id": "697cb0a4b94e4ce33de84bab",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -44,7 +44,7 @@
       "sort": 2
     },
     {
-      "id": "6978c8d9b94e4ce33de84ad2",
+      "id": "697cb0a4b94e4ce33de84bac",
       "xp_type": "number",
       "xp_reward": 150,
       "amount": 6667,
@@ -63,34 +63,57 @@
         "cn": "Marketplace"
       },
       "sort": 3
+    },
+    {
+      "id": "697cb0a4b94e4ce33de84bad",
+      "xp_type": "number",
+      "xp_reward": 1499,
+      "amount": 667,
+      "tag": {
+        "color": "",
+        "text": "",
+        "text_color": ""
+      },
+      "type": "season",
+      "title": {
+        "en": "Spend 1 RLT in Event pass",
+        "cn": "Spend 1 RLT in Event pass"
+      },
+      "description": {
+        "en": "Event pass",
+        "cn": "Event pass"
+      },
+      "sort": 4
     }
   ],
   "event": {
     "event": {
-      "_id": "6978c8d8a2774cefbbc8cc4f",
-      "max_xp": 117970000,
+      "_id": "697cb0a3a2774cefbbcda9f5",
+      "max_xp": 60000000,
       "max_multiplier": 10000,
       "max_level": 40,
       "tag": {
-        "text": "50"
+        "text": "",
+        "color": "",
+        "text_color": ""
       },
       "progression_event_type": "default",
-      "end_date": "2026-01-30T15:00:00.000Z",
-      "last_updated": 1769523417013,
+      "end_date": "2026-02-01T15:00:00.000Z",
+      "last_updated": 1769779364288,
       "description": {
-        "en": "Vault 33",
-        "cn": "Vault 33"
+        "en": "Thunder of the First Age",
+        "cn": "Thunder of the First Age"
       },
       "title": {
-        "en": "Vault 33",
-        "cn": "Vault 33"
+        "en": "Thunder of the First Age",
+        "cn": "Thunder of the First Age"
       }
     },
     "rewards": [
       {
-        "id": "6978c8d9b94e4ce33de84ad4",
+        "id": "697cb0a4b94e4ce33de84baf",
         "item_id": null,
-        "amount": 150000,
+        "amount": 50000,
         "currency": "RLT",
         "ttl_time": 0,
         "required_level": 1,
@@ -109,8 +132,8 @@
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84ad6",
-        "item_id": "68b6dbf2f58321ae064c22d6",
+        "id": "697cb0a4b94e4ce33de84bb1",
+        "item_id": "5a0b08a9d1d9ee5894f36f2f",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -129,132 +152,83 @@
           "max": 0
         },
         "item": {
-          "_id": "68b6dbf2f58321ae064c22d6",
-          "power": 400000,
-          "width": 2,
-          "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
-          },
+          "_id": "5a0b08a9d1d9ee5894f36f2f",
+          "power": 4000,
+          "width": 1,
           "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
+            "en": "Don’t get confused with the model name. This S5+ will leave his younger brother S7 far behind in mining power, but it will cost you.",
+            "cn": "不要让与型号名称混淆你，这款S5 +比S7在挖矿能力上远远落后。",
+            "es": "Don’t get confused with the model name. This S5+ will leave his younger brother S7 far behind in mining power, but it will cost you.",
+            "pt": "Don’t get confused with the model name. This S5+ will leave his younger brother S7 far behind in mining power, but it will cost you."
           },
-          "created_by_title": {
-            "link": "",
-            "text": ""
+          "name": {
+            "en": "RollerMiner S5+",
+            "cn": "RollerMiner S5+",
+            "es": "RollerMiner S5+",
+            "pt": "RollerMiner S5+"
           },
           "level": 0,
           "type": "basic",
-          "filename": "shalerig",
+          "filename": "rollerminer_s5plus",
           "frames_data": {
-            "frame_width": 116,
+            "frame_width": 66,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 150,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6978c8d9b94e4ce33de84ad8",
-        "item_id": "68b6dbf2f58321ae064c22d9",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 3,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68b6dbf2f58321ae064c22d9",
-          "power": 1000000,
-          "width": 2,
-          "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
-          },
-          "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
-          },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "shalerig",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
+          "bonus": 50,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84ada",
-        "item_id": "6319f81fa8ce530569eee9dd",
-        "amount": 10,
-        "currency": "",
+        "id": "697cb0a4b94e4ce33de84bb3",
+        "item_id": null,
+        "amount": 10000000,
+        "currency": "RST",
         "ttl_time": 0,
-        "required_level": 4,
-        "type": "mutation_component",
+        "required_level": 3,
+        "type": "money",
         "title": {
-          "en": "Component Title",
-          "cn": "Component Title"
+          "en": "Money Title",
+          "cn": "Money Title"
         },
         "description": {
-          "en": "Component Reward Description",
-          "cn": "Component Reward Description"
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "6319f81fa8ce530569eee9dd",
-          "name": {
-            "en": "Uncommon Wire",
-            "cn": "Uncommon Wire"
-          },
-          "mutation_components_rarity_groups_id": "6319f60da8ce530569e56207",
-          "rarity_group": {
-            "_id": "6319f60da8ce530569e56207",
-            "title": {
-              "en": "Uncommon",
-              "cn": "Uncommon"
-            },
-            "base_color_hex": "2bd600",
-            "sort": 1
-          },
-          "rarity_color_hex": "2bd600"
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84adc",
-        "item_id": "680f606a672b78a8fb9017b7",
+        "id": "697cb0a4b94e4ce33de84bb5",
+        "item_id": null,
+        "amount": 100,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 4,
+        "type": "season_pass_xp",
+        "title": {
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
+        },
+        "description": {
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "697cb0a4b94e4ce33de84bb7",
+        "item_id": "5a0b08afd1d9ee5894f36f31",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -273,93 +247,62 @@
           "max": 0
         },
         "item": {
-          "_id": "680f606a672b78a8fb9017b7",
-          "power": 2000000,
+          "_id": "5a0b08afd1d9ee5894f36f31",
+          "power": 6500,
           "width": 1,
-          "name": {
-            "en": "Mighty Hamjolnir",
-            "cn": "Mighty Hamjolnir",
-            "es": "Mighty Hamjolnir",
-            "pt": "Mighty Hamjolnir"
-          },
           "description": {
-            "en": "Mighty Hamjolnir  is a treasure reserved only for the worthy. To claim it is to prove your strength, for only those with true valor can unlock its power and reap the rewards of divine might.",
-            "cn": "Mighty Hamjolnir  is a treasure reserved only for the worthy. To claim it is to prove your strength, for only those with true valor can unlock its power and reap the rewards of divine might.",
-            "es": "Mighty Hamjolnir  is a treasure reserved only for the worthy. To claim it is to prove your strength, for only those with true valor can unlock its power and reap the rewards of divine might.",
-            "pt": "Mighty Hamjolnir  is a treasure reserved only for the worthy. To claim it is to prove your strength, for only those with true valor can unlock its power and reap the rewards of divine might."
+            "en": "Being the direct competitor of the R4, this miner provides you with 0.2Th/s greater speed for only 2.5 RLT more. If you have money, you might want to spend it on this nice little machine.",
+            "cn": "Being the direct competitor of the R4, this miner provides you with 0.2Th/s greater speed for only 2.5 RLT more. If you have money, you might want to spend it on this nice little machine.",
+            "es": "Being the direct competitor of the R4, this miner provides you with 0.2Th/s greater speed for only 2.5 RLT more. If you have money, you might want to spend it on this nice little machine.",
+            "pt": "Being the direct competitor of the R4, this miner provides you with 0.2Th/s greater speed for only 2.5 RLT more. If you have money, you might want to spend it on this nice little machine."
           },
+          "name": {
+            "en": "Rolleron Miner 761",
+            "cn": "Rolleron Miner 761",
+            "es": "Rolleron Miner 761",
+            "pt": "Rolleron Miner 761"
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "rolleron_miner_761",
+          "frames_data": {
+            "frame_width": 66,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "mighty_hamjolnir",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 200,
+          "bonus": 50,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84ade",
-        "item_id": "68b6db73f58321ae064c205a",
-        "amount": 1,
-        "currency": "",
+        "id": "697cb0a4b94e4ce33de84bb9",
+        "item_id": null,
+        "amount": 100000,
+        "currency": "RLT",
         "ttl_time": 0,
         "required_level": 6,
-        "type": "miner",
+        "type": "money",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Money Title",
+          "cn": "Money Title"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "68b6db73f58321ae064c205a",
-          "power": 1570000,
-          "width": 2,
-          "name": {
-            "en": "GravelRig",
-            "cn": "GravelRig",
-            "es": "GravelRig",
-            "pt": "GravelRig"
-          },
-          "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 2,
-          "type": "merge",
-          "filename": "gravelrig",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 380,
-          "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84ae0",
-        "item_id": "680f606a672b78a8fb9017b7",
+        "id": "697cb0a4b94e4ce33de84bbb",
+        "item_id": "646ddbed260e7d19c91846ba",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -378,20 +321,16 @@
           "max": 0
         },
         "item": {
-          "_id": "680f606a672b78a8fb9017b7",
-          "power": 2000000,
-          "width": 1,
+          "_id": "646ddbed260e7d19c91846ba",
+          "power": 6450,
+          "width": 2,
           "name": {
-            "en": "Mighty Hamjolnir",
-            "cn": "Mighty Hamjolnir",
-            "es": "Mighty Hamjolnir",
-            "pt": "Mighty Hamjolnir"
+            "en": "Mergedge Mk. IV",
+            "cn": "Mergedge Mk. IV"
           },
           "description": {
-            "en": "Mighty Hamjolnir  is a treasure reserved only for the worthy. To claim it is to prove your strength, for only those with true valor can unlock its power and reap the rewards of divine might.",
-            "cn": "Mighty Hamjolnir  is a treasure reserved only for the worthy. To claim it is to prove your strength, for only those with true valor can unlock its power and reap the rewards of divine might.",
-            "es": "Mighty Hamjolnir  is a treasure reserved only for the worthy. To claim it is to prove your strength, for only those with true valor can unlock its power and reap the rewards of divine might.",
-            "pt": "Mighty Hamjolnir  is a treasure reserved only for the worthy. To claim it is to prove your strength, for only those with true valor can unlock its power and reap the rewards of divine might."
+            "en": "The Mergedge developers are raising the stakes! Are you a hardcore miner? Then this one is just for you!",
+            "cn": "The Mergedge developers are raising the stakes! Are you a hardcore miner? Then this one is just for you!"
           },
           "created_by_title": {
             "link": "",
@@ -399,77 +338,85 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "mighty_hamjolnir",
+          "filename": "mergedge_mk_iv",
           "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
+            "frame_width": 116,
+            "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 200,
+          "bonus": 0,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84ae2",
-        "item_id": "68723d88411d00ff27a839c3",
-        "amount": 1,
+        "id": "697cb0a4b94e4ce33de84bbd",
+        "item_id": null,
+        "amount": 100,
         "currency": "",
         "ttl_time": 0,
         "required_level": 8,
-        "type": "miner",
+        "type": "season_pass_xp",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "68723d88411d00ff27a839c3",
-          "power": 2500000,
-          "width": 1,
-          "name": {
-            "en": "Boot Loot",
-            "cn": "Boot Loot",
-            "es": "Boot Loot",
-            "pt": "Boot Loot"
-          },
-          "description": {
-            "en": "Every step crushes doubt and kicks gold into your pockets. Walk like a legend, mine like a god.",
-            "cn": "Every step crushes doubt and kicks gold into your pockets. Walk like a legend, mine like a god.",
-            "es": "Every step crushes doubt and kicks gold into your pockets. Walk like a legend, mine like a god.",
-            "pt": "Every step crushes doubt and kicks gold into your pockets. Walk like a legend, mine like a god."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "boot_loot",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 300,
-          "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84ae4",
-        "item_id": "68b6db73f58321ae064c205a",
+        "id": "697cb0a4b94e4ce33de84bbf",
+        "item_id": "68306581e2da6536108ec0b8",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 9,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "3h Booster",
+            "cn": "3h Booster",
+            "es": "3h Booster",
+            "pt": "3h Booster"
+          },
+          "description": {
+            "en": "Booster will increase your basic power from minigames for 3 hours.",
+            "cn": "Booster will increase your basic power from minigames for 3 hours.",
+            "es": "Booster will increase your basic power from minigames for 3 hours.",
+            "pt": "Booster will increase your basic power from minigames for 3 hours."
+          },
+          "media": {
+            "preview_url": "static/img/market/utility_items/68306581e2da6536108ec0b8.gif?v=1748874570574"
+          },
+          "_id": "68306581e2da6536108ec0b8",
+          "type": "game_booster"
+        }
+      },
+      {
+        "id": "697cb0a4b94e4ce33de84bc1",
+        "item_id": "62553d7b42a0cd1b7dd45438",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 10,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -484,44 +431,41 @@
           "max": 0
         },
         "item": {
-          "_id": "68b6db73f58321ae064c205a",
-          "power": 1570000,
-          "width": 2,
+          "_id": "62553d7b42a0cd1b7dd45438",
           "name": {
-            "en": "GravelRig",
-            "cn": "GravelRig",
-            "es": "GravelRig",
-            "pt": "GravelRig"
+            "en": "The Minertaur",
+            "cn": "The Minertaur"
           },
           "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
+            "en": "A bunch of coins behind every corner — new version of The Maze! This miner is one of the ten selected winners of the Miners Art Contest: Ancient Myths. Created by Keimax",
+            "cn": "A bunch of coins behind every corner — new version of The Maze! This miner is one of the ten selected winners of the Miners Art Contest: Ancient Myths. Created by Keimax"
           },
           "created_by_title": {
-            "link": "",
-            "text": ""
+            "link": "/p/k6kh1tmd",
+            "text": "Keimax"
           },
-          "level": 2,
-          "type": "merge",
-          "filename": "gravelrig",
+          "power": 100000,
+          "width": 2,
+          "level": 0,
+          "type": "basic",
+          "filename": "the_minertaur",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 380,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 100,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84ae6",
+        "id": "697cb0a4b94e4ce33de84bc3",
         "item_id": null,
-        "amount": 10000000,
+        "amount": 2500000,
         "currency": "",
-        "ttl_time": 1209600000,
-        "required_level": 10,
+        "ttl_time": 604800000,
+        "required_level": 11,
         "type": "power",
         "title": {
           "en": "Power",
@@ -537,60 +481,8 @@
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84ae8",
-        "item_id": "669936db1d38eb89cd9b8d03",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 11,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "669936db1d38eb89cd9b8d03",
-          "power": 1680000,
-          "width": 2,
-          "name": {
-            "en": "LuxuryLife",
-            "cn": "LuxuryLife",
-            "es": "LuxuryLife",
-            "pt": "LuxuryLife"
-          },
-          "description": {
-            "en": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "cn": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "es": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "pt": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "luxurylife",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 585,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6978c8d9b94e4ce33de84aea",
-        "item_id": "680f61d0672b78a8fb902b1d",
+        "id": "697cb0a4b94e4ce33de84bc5",
+        "item_id": "61b9cce478d63d64cd626fe3",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -609,45 +501,66 @@
           "max": 0
         },
         "item": {
-          "_id": "680f61d0672b78a8fb902b1d",
-          "power": 5000000,
-          "width": 1,
+          "_id": "61b9cce478d63d64cd626fe3",
           "name": {
-            "en": "Helm of the Chosen",
-            "cn": "Helm of the Chosen",
-            "es": "Helm of the Chosen",
-            "pt": "Helm of the Chosen"
+            "en": "Jellier",
+            "cn": "Jellier",
+            "es": "Jellier",
+            "pt": "Jellier"
           },
           "description": {
-            "en": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "cn": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "es": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "pt": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure."
+            "en": "It’s slimy and shaky. Try to hold!",
+            "cn": "It’s slimy and shaky. Try to hold!",
+            "es": "It’s slimy and shaky. Try to hold!",
+            "pt": "It’s slimy and shaky. Try to hold!"
           },
+          "level": 0,
+          "type": "basic",
+          "power": 20000,
+          "width": 1,
+          "filename": "jellier",
+          "frames_data": {
+            "frame_width": 58,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "helm_of_the_chosen",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
+          "bonus": 50,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84aec",
-        "item_id": "669936db1d38eb89cd9b8d03",
-        "amount": 1,
+        "id": "697cb0a4b94e4ce33de84bc7",
+        "item_id": null,
+        "amount": 200,
         "currency": "",
         "ttl_time": 0,
         "required_level": 13,
+        "type": "season_pass_xp",
+        "title": {
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
+        },
+        "description": {
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "697cb0a4b94e4ce33de84bc9",
+        "item_id": "65cb5598dc319c3e46642606",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 14,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -662,137 +575,200 @@
           "max": 0
         },
         "item": {
-          "_id": "669936db1d38eb89cd9b8d03",
-          "power": 1680000,
+          "_id": "65cb5598dc319c3e46642606",
+          "power": 248000,
           "width": 2,
           "name": {
-            "en": "LuxuryLife",
-            "cn": "LuxuryLife",
-            "es": "LuxuryLife",
-            "pt": "LuxuryLife"
+            "en": "The Ascended",
+            "cn": "The Ascended",
+            "es": "The Ascended",
+            "pt": "The Ascended"
           },
           "description": {
-            "en": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "cn": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "es": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "pt": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow."
+            "en": "Egyptian culture, so familiar, but yet still mysterious. The Sphinx as the symbol of wisdom, and the Ankh, as the symbol of eternity - this is all you need to mine coins! By Andri",
+            "cn": "Egyptian culture, so familiar, but yet still mysterious. The Sphinx as the symbol of wisdom, and the Ankh, as the symbol of eternity - this is all you need to mine coins! By Andri",
+            "es": "Egyptian culture, so familiar, but yet still mysterious. The Sphinx as the symbol of wisdom, and the Ankh, as the symbol of eternity - this is all you need to mine coins! By Andri",
+            "pt": "Egyptian culture, so familiar, but yet still mysterious. The Sphinx as the symbol of wisdom, and the Ankh, as the symbol of eternity - this is all you need to mine coins! By Andri"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "luxurylife",
+          "level": 0,
+          "type": "basic",
+          "filename": "the_ascended",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 585,
+          "bonus": 0,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84aee",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 2,
+        "id": "697cb0a4b94e4ce33de84bcb",
+        "item_id": null,
+        "amount": 10000000,
         "currency": "",
-        "ttl_time": 0,
-        "required_level": 14,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Speed Up Item",
-            "cn": "Speed Up Item",
-            "es": "Speed Up Item",
-            "pt": "Speed Up Item"
-          },
-          "description": {
-            "en": "Ticket for speed up expedition",
-            "cn": "Ticket for speed up expedition",
-            "es": "Ticket for speed up expedition",
-            "pt": "Ticket for speed up expedition"
-          },
-          "media": {
-            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
-          },
-          "_id": "67d1c54536daea2ef871b292",
-          "type": "expedition_speed_up"
-        }
-      },
-      {
-        "id": "6978c8d9b94e4ce33de84af0",
-        "item_id": "680f61d0672b78a8fb902b1d",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
+        "ttl_time": 604800000,
         "required_level": 15,
-        "type": "miner",
+        "type": "power",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Power",
+          "cn": "Power"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Power Reward Description",
+          "cn": "Power Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "680f61d0672b78a8fb902b1d",
-          "power": 5000000,
-          "width": 1,
-          "name": {
-            "en": "Helm of the Chosen",
-            "cn": "Helm of the Chosen",
-            "es": "Helm of the Chosen",
-            "pt": "Helm of the Chosen"
-          },
-          "description": {
-            "en": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "cn": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "es": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "pt": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "helm_of_the_chosen",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
-          "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84af2",
-        "item_id": "6978c760a2774cefbbc8c6e9",
+        "id": "697cb0a4b94e4ce33de84bcd",
+        "item_id": "6398ffabcc914df92b07b935",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 16,
+        "type": "loot_box",
+        "title": {
+          "en": "Loot Box",
+          "cn": "Loot Box"
+        },
+        "description": {
+          "en": "Loot Box Reward Description",
+          "cn": "Loot Box Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6398ffabcc914df92b07b935",
+          "title": {
+            "en": "Common Wires Case",
+            "cn": "Common Wires Case"
+          },
+          "sold": 0,
+          "items": [
+            {
+              "type": "mutation_component",
+              "amount": 600,
+              "sort": 1,
+              "item_info": {
+                "name": {
+                  "en": "Common Wire",
+                  "cn": "Common Wire"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 300,
+              "sort": 2,
+              "item_info": {
+                "name": {
+                  "en": "Common Wire",
+                  "cn": "Common Wire"
+                }
+              },
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 225,
+              "sort": 3,
+              "item_info": {
+                "name": {
+                  "en": "Common Wire",
+                  "cn": "Common Wire"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 175,
+              "sort": 4,
+              "item_info": {
+                "name": {
+                  "en": "Common Wire",
+                  "cn": "Common Wire"
+                }
+              },
+              "base_color_hex": "ffffff"
+            }
+          ]
+        }
+      },
+      {
+        "id": "697cb0a4b94e4ce33de84bcf",
+        "item_id": "63e140e4547cfab9a21d7d2b",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 17,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Jet-Black Rack 6",
+            "cn": "Jet-Black Rack 6"
+          },
+          "description": {
+            "en": "Jet-Black Rack is created for true connoisseurs of stylish furniture. Place your miners here and enjoy the result!",
+            "cn": "Jet-Black Rack is created for true connoisseurs of stylish furniture. Place your miners here and enjoy the result!"
+          },
+          "_id": "63e140e4547cfab9a21d7d2b",
+          "capacity": 6,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "697cb0a4b94e4ce33de84bd1",
+        "item_id": null,
+        "amount": 200,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 18,
+        "type": "season_pass_xp",
+        "title": {
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
+        },
+        "description": {
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "697cb0a4b94e4ce33de84bd3",
+        "item_id": "65ba335f43dcad8f6d110317",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 19,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -807,20 +783,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6978c760a2774cefbbc8c6e9",
-          "power": 25000000,
+          "_id": "65ba335f43dcad8f6d110317",
+          "power": 437000,
           "width": 2,
           "name": {
-            "en": "Pip-33",
-            "cn": "Pip-33",
-            "es": "Pip-33",
-            "pt": "Pip-33"
+            "en": "Coliseum",
+            "cn": "Coliseum",
+            "es": "Coliseum",
+            "pt": "Coliseum"
           },
           "description": {
-            "en": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "cn": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "es": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "pt": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash."
+            "en": "Think of a place built of stone and full of people, no roof. And now make it blast with applause!",
+            "cn": "Think of a place built of stone and full of people, no roof. And now make it blast with applause!",
+            "es": "Think of a place built of stone and full of people, no roof. And now make it blast with applause!",
+            "pt": "Think of a place built of stone and full of people, no roof. And now make it blast with applause!"
           },
           "created_by_title": {
             "link": "",
@@ -828,164 +804,19 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "pip_33",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1000,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6978c8d9b94e4ce33de84af4",
-        "item_id": "674dbce2cbe1e47b27042b6b",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 17,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "674dbce2cbe1e47b27042b6b",
-          "power": 11050000,
-          "width": 2,
-          "name": {
-            "en": "RollerPunk",
-            "cn": "RollerPunk",
-            "es": "RollerPunk",
-            "pt": "RollerPunk"
-          },
-          "description": {
-            "en": "A futuristic force tearing through the blockchain, this miner fuses the grit of cyberpunk with the thrill of Cyber Monday deals. Fast, efficient, and unapologetically bold, it transforms every block into a high-tech steal of crypto rewards.",
-            "cn": "A futuristic force tearing through the blockchain, this miner fuses the grit of cyberpunk with the thrill of Cyber Monday deals. Fast, efficient, and unapologetically bold, it transforms every block into a high-tech steal of crypto rewards.",
-            "es": "A futuristic force tearing through the blockchain, this miner fuses the grit of cyberpunk with the thrill of Cyber Monday deals. Fast, efficient, and unapologetically bold, it transforms every block into a high-tech steal of crypto rewards.",
-            "pt": "A futuristic force tearing through the blockchain, this miner fuses the grit of cyberpunk with the thrill of Cyber Monday deals. Fast, efficient, and unapologetically bold, it transforms every block into a high-tech steal of crypto rewards."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "rollerpunk",
+          "filename": "coliseum",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 500,
+          "bonus": 45,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84af6",
-        "item_id": "6925904957ee1678e5544273",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 18,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6925904957ee1678e5544273",
-          "power": 3000000,
-          "width": 2,
-          "name": {
-            "en": "BlackWall AI",
-            "cn": "BlackWall AI",
-            "es": "BlackWall AI",
-            "pt": "BlackWall AI"
-          },
-          "description": {
-            "en": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "cn": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "es": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "pt": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "blackwall_ai",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 800,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6978c8d9b94e4ce33de84af8",
-        "item_id": "6319f7baa8ce530569ed16b9",
-        "amount": 100,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 19,
-        "type": "mutation_component",
-        "title": {
-          "en": "Component Title",
-          "cn": "Component Title"
-        },
-        "description": {
-          "en": "Component Reward Description",
-          "cn": "Component Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6319f7baa8ce530569ed16b9",
-          "name": {
-            "en": "Uncommon Fan",
-            "cn": "Uncommon Fan"
-          },
-          "mutation_components_rarity_groups_id": "6319f60da8ce530569e56207",
-          "rarity_group": {
-            "_id": "6319f60da8ce530569e56207",
-            "title": {
-              "en": "Uncommon",
-              "cn": "Uncommon"
-            },
-            "base_color_hex": "2bd600",
-            "sort": 1
-          },
-          "rarity_color_hex": "2bd600"
-        }
-      },
-      {
-        "id": "6978c8d9b94e4ce33de84afa",
-        "item_id": "6978c760a2774cefbbc8c6e9",
+        "id": "697cb0a4b94e4ce33de84bd5",
+        "item_id": "68c3e858e804ea5083724c5e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1004,20 +835,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6978c760a2774cefbbc8c6e9",
-          "power": 25000000,
+          "_id": "68c3e858e804ea5083724c5e",
+          "power": 1000000,
           "width": 2,
           "name": {
-            "en": "Pip-33",
-            "cn": "Pip-33",
-            "es": "Pip-33",
-            "pt": "Pip-33"
+            "en": "Sun, Skin & Sin",
+            "cn": "Sun, Skin & Sin",
+            "es": "Sun, Skin & Sin",
+            "pt": "Sun, Skin & Sin"
           },
           "description": {
-            "en": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "cn": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "es": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "pt": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash."
+            "en": "I saved you a sunny spot. Come closer… I don't bite. Much.",
+            "cn": "I saved you a sunny spot. Come closer… I don't bite. Much.",
+            "es": "I saved you a sunny spot. Come closer… I don't bite. Much.",
+            "pt": "I saved you a sunny spot. Come closer… I don't bite. Much."
           },
           "created_by_title": {
             "link": "",
@@ -1025,41 +856,73 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "pip_33",
+          "filename": "sun_skin_&_sin",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 1000,
+          "bonus": 100,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84afc",
-        "item_id": null,
-        "amount": 400,
+        "id": "697cb0a4b94e4ce33de84bd7",
+        "item_id": "6836bac2e2ea0a4c827088ec",
+        "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 21,
-        "type": "season_pass_xp",
+        "type": "miner",
         "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "6836bac2e2ea0a4c827088ec",
+          "power": 4000000,
+          "width": 2,
+          "name": {
+            "en": "Twilight Garnet",
+            "cn": "Twilight Garnet",
+            "es": "Twilight Garnet",
+            "pt": "Twilight Garnet"
+          },
+          "description": {
+            "en": "Deep crimson hues catch every spark of light, turning shadows into steady streams of hashing energy.",
+            "cn": "Deep crimson hues catch every spark of light, turning shadows into steady streams of hashing energy.",
+            "es": "Deep crimson hues catch every spark of light, turning shadows into steady streams of hashing energy.",
+            "pt": "Deep crimson hues catch every spark of light, turning shadows into steady streams of hashing energy."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "twilight_garnet",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 350,
+          "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84afe",
-        "item_id": "68cd7996bedeb9a12ef65be9",
+        "id": "697cb0a4b94e4ce33de84bd9",
+        "item_id": "68c3e858e804ea5083724c5e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1078,20 +941,20 @@
           "max": 0
         },
         "item": {
-          "_id": "68cd7996bedeb9a12ef65be9",
-          "power": 7500000,
+          "_id": "68c3e858e804ea5083724c5e",
+          "power": 1000000,
           "width": 2,
           "name": {
-            "en": "MineAmp",
-            "cn": "MineAmp",
-            "es": "MineAmp",
-            "pt": "MineAmp"
+            "en": "Sun, Skin & Sin",
+            "cn": "Sun, Skin & Sin",
+            "es": "Sun, Skin & Sin",
+            "pt": "Sun, Skin & Sin"
           },
           "description": {
-            "en": "Warning: playing this too loud might break the blockchain.",
-            "cn": "Warning: playing this too loud might break the blockchain.",
-            "es": "Warning: playing this too loud might break the blockchain.",
-            "pt": "Warning: playing this too loud might break the blockchain."
+            "en": "I saved you a sunny spot. Come closer… I don't bite. Much.",
+            "cn": "I saved you a sunny spot. Come closer… I don't bite. Much.",
+            "es": "I saved you a sunny spot. Come closer… I don't bite. Much.",
+            "pt": "I saved you a sunny spot. Come closer… I don't bite. Much."
           },
           "created_by_title": {
             "link": "",
@@ -1099,21 +962,21 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "mineamp",
+          "filename": "sun_skin_&_sin",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 700,
+          "bonus": 100,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b00",
+        "id": "697cb0a4b94e4ce33de84bdb",
         "item_id": "67d1c54536daea2ef871b292",
-        "amount": 8,
+        "amount": 2,
         "currency": "",
         "ttl_time": 0,
         "required_level": 23,
@@ -1151,12 +1014,33 @@
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b02",
-        "item_id": "6978c760a2774cefbbc8c6ec",
-        "amount": 1,
+        "id": "697cb0a4b94e4ce33de84bdd",
+        "item_id": null,
+        "amount": 200,
         "currency": "",
         "ttl_time": 0,
         "required_level": 24,
+        "type": "season_pass_xp",
+        "title": {
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
+        },
+        "description": {
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "697cb0a4b94e4ce33de84bdf",
+        "item_id": "697c9447a2774cefbbcd0676",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 25,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1171,132 +1055,62 @@
           "max": 0
         },
         "item": {
-          "_id": "6978c760a2774cefbbc8c6ec",
-          "power": 65630000,
+          "_id": "697c9447a2774cefbbcd0676",
+          "power": 23000000,
           "width": 2,
           "name": {
-            "en": "Pip-33",
-            "cn": "Pip-33",
-            "es": "Pip-33",
-            "pt": "Pip-33"
+            "en": "Zeus",
+            "cn": "Zeus",
+            "es": "Zeus",
+            "pt": "Zeus"
           },
           "description": {
-            "en": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "cn": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "es": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "pt": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash."
+            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "pip_33",
+          "level": 0,
+          "type": "basic",
+          "filename": "zeus",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 2500,
+          "bonus": 1500,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b04",
-        "item_id": "6319f969a8ce530569f4b3e8",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 25,
-        "type": "mutation_component",
-        "title": {
-          "en": "Component Title",
-          "cn": "Component Title"
-        },
-        "description": {
-          "en": "Component Reward Description",
-          "cn": "Component Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6319f969a8ce530569f4b3e8",
-          "name": {
-            "en": "Epic Wire",
-            "cn": "Epic Wire"
-          },
-          "mutation_components_rarity_groups_id": "6319f66da8ce530569e71cc9",
-          "rarity_group": {
-            "_id": "6319f66da8ce530569e71cc9",
-            "title": {
-              "en": "Epic",
-              "cn": "Epic"
-            },
-            "base_color_hex": "ff2fd1",
-            "sort": 3
-          },
-          "rarity_color_hex": "ff2fd1"
-        }
-      },
-      {
-        "id": "6978c8d9b94e4ce33de84b06",
-        "item_id": "669936db1d38eb89cd9b8d09",
-        "amount": 1,
+        "id": "697cb0a4b94e4ce33de84be1",
+        "item_id": null,
+        "amount": 200,
         "currency": "",
         "ttl_time": 0,
         "required_level": 26,
-        "type": "miner",
+        "type": "season_pass_xp",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "669936db1d38eb89cd9b8d09",
-          "power": 4410000,
-          "width": 2,
-          "name": {
-            "en": "LuxuryLife",
-            "cn": "LuxuryLife",
-            "es": "LuxuryLife",
-            "pt": "LuxuryLife"
-          },
-          "description": {
-            "en": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "cn": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "es": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow.",
-            "pt": "This luxurious sofa not only elevates your living space but also mines cryptocurrency while you lounge. Designed for those who claim to know everything about life and making money (without ever leaving their armchair), the Luxurylife is the perfect blend of comfort and cash flow."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 2,
-          "type": "merge",
-          "filename": "luxurylife",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 967,
-          "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b08",
-        "item_id": "6925904957ee1678e5544273",
+        "id": "697cb0a4b94e4ce33de84be3",
+        "item_id": "67051ad372cf73b1d5d2aa14",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1315,20 +1129,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6925904957ee1678e5544273",
-          "power": 3000000,
+          "_id": "67051ad372cf73b1d5d2aa14",
+          "power": 7000000,
           "width": 2,
           "name": {
-            "en": "BlackWall AI",
-            "cn": "BlackWall AI",
-            "es": "BlackWall AI",
-            "pt": "BlackWall AI"
+            "en": "BearHole",
+            "cn": "BearHole",
+            "es": "BearHole",
+            "pt": "BearHole"
           },
           "description": {
-            "en": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "cn": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "es": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "pt": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent."
+            "en": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
+            "cn": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
+            "es": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
+            "pt": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered."
           },
           "created_by_title": {
             "link": "",
@@ -1336,72 +1150,60 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "blackwall_ai",
+          "filename": "bearhole",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 800,
+          "bonus": 500,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b0a",
-        "item_id": "680f61d0672b78a8fb902b20",
-        "amount": 1,
+        "id": "697cb0a4b94e4ce33de84be5",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 4,
         "currency": "",
         "ttl_time": 0,
         "required_level": 28,
-        "type": "miner",
+        "type": "utility_item",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Utility Item",
+          "cn": "Utility Item"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "680f61d0672b78a8fb902b20",
-          "power": 13130000,
-          "width": 1,
           "name": {
-            "en": "Helm of the Chosen",
-            "cn": "Helm of the Chosen",
-            "es": "Helm of the Chosen",
-            "pt": "Helm of the Chosen"
+            "en": "Speed Up Item",
+            "cn": "Speed Up Item",
+            "es": "Speed Up Item",
+            "pt": "Speed Up Item"
           },
           "description": {
-            "en": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "cn": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "es": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure.",
-            "pt": "Not everyone is fit to wear it. The Helm of the Chosen calls out to those who rise above, offering not just protection, but the strength to conquer. Only the bold will ever earn its place, and with it, power beyond measure."
+            "en": "Ticket for speed up expedition",
+            "cn": "Ticket for speed up expedition",
+            "es": "Ticket for speed up expedition",
+            "pt": "Ticket for speed up expedition"
           },
-          "created_by_title": {
-            "link": "",
-            "text": ""
+          "media": {
+            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "helm_of_the_chosen",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1000,
-          "is_in_set": false
+          "_id": "67d1c54536daea2ef871b292",
+          "type": "expedition_speed_up"
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b0c",
-        "item_id": "67ebd9ce6cbc1562cd888df7",
+        "id": "697cb0a4b94e4ce33de84be7",
+        "item_id": "697c9447a2774cefbbcd0676",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1420,40 +1222,41 @@
           "max": 0
         },
         "item": {
-          "_id": "67ebd9ce6cbc1562cd888df7",
-          "power": 2500000,
+          "_id": "697c9447a2774cefbbcd0676",
+          "power": 23000000,
           "width": 2,
           "name": {
-            "en": "Stapllier",
-            "cn": "Stapllier",
-            "es": "Stapllier",
-            "pt": "Stapllier"
+            "en": "Zeus",
+            "cn": "Zeus",
+            "es": "Zeus",
+            "pt": "Zeus"
           },
           "description": {
-            "en": "The strength of ten RollerAdminGauntlet was needed to create THIS.",
-            "cn": "The strength of ten RollerAdminGauntlet was needed to create THIS.",
-            "es": "The strength of ten RollerAdminGauntlet was needed to create THIS.",
-            "pt": "The strength of ten RollerAdminGauntlet was needed to create THIS."
+            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 3,
-          "type": "merge",
-          "filename": "stapllier",
+          "level": 0,
+          "type": "basic",
+          "filename": "zeus",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 1000,
+          "bonus": 1500,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b0e",
-        "item_id": "6772786a4e5d26a44bf64441",
+        "id": "697cb0a4b94e4ce33de84be9",
+        "item_id": "67051ad372cf73b1d5d2aa14",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1472,92 +1275,62 @@
           "max": 0
         },
         "item": {
-          "_id": "6772786a4e5d26a44bf64441",
-          "power": 5320000,
+          "_id": "67051ad372cf73b1d5d2aa14",
+          "power": 7000000,
           "width": 2,
           "name": {
-            "en": "Totally Unboxed",
-            "cn": "Totally Unboxed",
-            "es": "Totally Unboxed",
-            "pt": "Totally Unboxed"
+            "en": "BearHole",
+            "cn": "BearHole",
+            "es": "BearHole",
+            "pt": "BearHole"
           },
           "description": {
-            "en": "The aftermath of the party, a chaotic energy harnessed into productivity. Torn wrapping and empty glasses behind, this miner powers through blocks, channeling the remnants of festive mayhem into renewed crypto momentum for the New Year ahead.",
-            "cn": "The aftermath of the party, a chaotic energy harnessed into productivity. Torn wrapping and empty glasses behind, this miner powers through blocks, channeling the remnants of festive mayhem into renewed crypto momentum for the New Year ahead.",
-            "es": "The aftermath of the party, a chaotic energy harnessed into productivity. Torn wrapping and empty glasses behind, this miner powers through blocks, channeling the remnants of festive mayhem into renewed crypto momentum for the New Year ahead.",
-            "pt": "The aftermath of the party, a chaotic energy harnessed into productivity. Torn wrapping and empty glasses behind, this miner powers through blocks, channeling the remnants of festive mayhem into renewed crypto momentum for the New Year ahead."
+            "en": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
+            "cn": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
+            "es": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
+            "pt": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "totally_unboxed",
+          "level": 0,
+          "type": "basic",
+          "filename": "bearhole",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 550,
+          "bonus": 500,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b10",
-        "item_id": "6772786a4e5d26a44bf64441",
-        "amount": 1,
-        "currency": "",
+        "id": "697cb0a4b94e4ce33de84beb",
+        "item_id": null,
+        "amount": 350000000,
+        "currency": "RST",
         "ttl_time": 0,
         "required_level": 31,
-        "type": "miner",
+        "type": "money",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Money Title",
+          "cn": "Money Title"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "6772786a4e5d26a44bf64441",
-          "power": 5320000,
-          "width": 2,
-          "name": {
-            "en": "Totally Unboxed",
-            "cn": "Totally Unboxed",
-            "es": "Totally Unboxed",
-            "pt": "Totally Unboxed"
-          },
-          "description": {
-            "en": "The aftermath of the party, a chaotic energy harnessed into productivity. Torn wrapping and empty glasses behind, this miner powers through blocks, channeling the remnants of festive mayhem into renewed crypto momentum for the New Year ahead.",
-            "cn": "The aftermath of the party, a chaotic energy harnessed into productivity. Torn wrapping and empty glasses behind, this miner powers through blocks, channeling the remnants of festive mayhem into renewed crypto momentum for the New Year ahead.",
-            "es": "The aftermath of the party, a chaotic energy harnessed into productivity. Torn wrapping and empty glasses behind, this miner powers through blocks, channeling the remnants of festive mayhem into renewed crypto momentum for the New Year ahead.",
-            "pt": "The aftermath of the party, a chaotic energy harnessed into productivity. Torn wrapping and empty glasses behind, this miner powers through blocks, channeling the remnants of festive mayhem into renewed crypto momentum for the New Year ahead."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "totally_unboxed",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 550,
-          "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b12",
-        "item_id": "6978c760a2774cefbbc8c6f2",
+        "id": "697cb0a4b94e4ce33de84bed",
+        "item_id": "67ab373a011f9732d8775d71",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1576,20 +1349,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6978c760a2774cefbbc8c6f2",
-          "power": 172280000,
+          "_id": "67ab373a011f9732d8775d71",
+          "power": 75810000,
           "width": 2,
           "name": {
-            "en": "Pip-33",
-            "cn": "Pip-33",
-            "es": "Pip-33",
-            "pt": "Pip-33"
+            "en": "Atilla's Core",
+            "cn": "Atilla`s Core",
+            "es": "Atilla`s Core",
+            "pt": "Atilla`s Core"
           },
           "description": {
-            "en": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "cn": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "es": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "pt": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash."
+            "en": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
+            "cn": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
+            "es": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
+            "pt": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity."
           },
           "created_by_title": {
             "link": "",
@@ -1597,59 +1370,72 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "pip_33",
+          "filename": "atillas_core",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 4500,
+          "bonus": 1375,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b14",
-        "item_id": "6196269b67433d2dc52e0130",
+        "id": "697cb0a4b94e4ce33de84bef",
+        "item_id": "67a3e83d79efd774f15e2878",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 33,
-        "type": "mutation_component",
+        "type": "miner",
         "title": {
-          "en": "Component Title",
-          "cn": "Component Title"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Component Reward Description",
-          "cn": "Component Reward Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "6196269b67433d2dc52e0130",
+          "_id": "67a3e83d79efd774f15e2878",
+          "power": 19200000,
+          "width": 2,
           "name": {
-            "en": "Legendary Fan",
-            "cn": "Legendary Fan"
+            "en": "Abyssal Lord",
+            "cn": "Abyssal Lord",
+            "es": "Abyssal Lord",
+            "pt": "Abyssal Lord"
           },
-          "mutation_components_rarity_groups_id": "619627c167433d2dc5362ac7",
-          "rarity_group": {
-            "_id": "619627c167433d2dc5362ac7",
-            "title": {
-              "en": "Legendary",
-              "cn": "Legendary"
-            },
-            "base_color_hex": "ffdc00",
-            "sort": 4
+          "description": {
+            "en": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
+            "cn": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
+            "es": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
+            "pt": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!"
           },
-          "rarity_color_hex": "ffdc00"
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "abyssal_lord",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 700,
+          "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b16",
-        "item_id": "68f75f599f36c49e72f29182",
+        "id": "697cb0a4b94e4ce33de84bf1",
+        "item_id": "67a3e83d79efd774f15e2878",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1668,92 +1454,62 @@
           "max": 0
         },
         "item": {
-          "_id": "68f75f599f36c49e72f29182",
-          "power": 7930000,
+          "_id": "67a3e83d79efd774f15e2878",
+          "power": 19200000,
           "width": 2,
           "name": {
-            "en": "Grin Lantern",
-            "cn": "Grin Lantern",
-            "es": "Grin Lantern",
-            "pt": "Grin Lantern"
+            "en": "Abyssal Lord",
+            "cn": "Abyssal Lord",
+            "es": "Abyssal Lord",
+            "pt": "Abyssal Lord"
           },
           "description": {
-            "en": "Sick green grin in a thorned shrine. It breathes rot and hoards the spoils.",
-            "cn": "Sick green grin in a thorned shrine. It breathes rot and hoards the spoils.",
-            "es": "Sick green grin in a thorned shrine. It breathes rot and hoards the spoils.",
-            "pt": "Sick green grin in a thorned shrine. It breathes rot and hoards the spoils."
+            "en": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
+            "cn": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
+            "es": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
+            "pt": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
-          "type": "merge",
-          "filename": "grin_lantern",
+          "level": 0,
+          "type": "basic",
+          "filename": "abyssal_lord",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 800,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 700,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b18",
-        "item_id": "670d64400dbe61e6fa0d157b",
-        "amount": 1,
-        "currency": "",
+        "id": "697cb0a4b94e4ce33de84bf3",
+        "item_id": null,
+        "amount": 500000000,
+        "currency": "RST",
         "ttl_time": 0,
         "required_level": 35,
-        "type": "miner",
+        "type": "money",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Money Title",
+          "cn": "Money Title"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "670d64400dbe61e6fa0d157b",
-          "power": 7880000,
-          "width": 2,
-          "name": {
-            "en": "Web4Map",
-            "cn": "Web4Map",
-            "es": "Web4Map",
-            "pt": "Web4Map"
-          },
-          "description": {
-            "en": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
-            "cn": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
-            "es": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
-            "pt": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "web4map",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
-          "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b1a",
-        "item_id": "688a106f1560d1f293d57a72",
+        "id": "697cb0a4b94e4ce33de84bf5",
+        "item_id": "697c9447a2774cefbbcd0679",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1772,41 +1528,41 @@
           "max": 0
         },
         "item": {
-          "_id": "688a106f1560d1f293d57a72",
-          "power": 12000000,
-          "width": 1,
+          "_id": "697c9447a2774cefbbcd0679",
+          "power": 80000000,
+          "width": 2,
           "name": {
-            "en": "Ethaura",
-            "cn": "Ethaura",
-            "es": "Ethaura",
-            "pt": "Ethaura"
+            "en": "Zeus",
+            "cn": "Zeus",
+            "es": "Zeus",
+            "pt": "Zeus"
           },
           "description": {
-            "en": "Born from the pulse of the Ethereum festival, this miner radiates with the pure essence of the chain. Light, fluid, and untouchable—Ethaura flows through blocks like a living spirit of profit, leaving nothing but clarity and crypto in its wake.",
-            "cn": "Born from the pulse of the Ethereum festival, this miner radiates with the pure essence of the chain. Light, fluid, and untouchable—Ethaura flows through blocks like a living spirit of profit, leaving nothing but clarity and crypto in its wake.",
-            "es": "Born from the pulse of the Ethereum festival, this miner radiates with the pure essence of the chain. Light, fluid, and untouchable—Ethaura flows through blocks like a living spirit of profit, leaving nothing but clarity and crypto in its wake.",
-            "pt": "Born from the pulse of the Ethereum festival, this miner radiates with the pure essence of the chain. Light, fluid, and untouchable—Ethaura flows through blocks like a living spirit of profit, leaving nothing but clarity and crypto in its wake."
+            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "ethaura",
+          "level": 1,
+          "type": "merge",
+          "filename": "zeus",
           "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
+            "frame_width": 116,
+            "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 600,
+          "bonus": 2500,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b1c",
-        "item_id": "6925904957ee1678e5544276",
+        "id": "697cb0a4b94e4ce33de84bf7",
+        "item_id": "680f7246672b78a8fb910a82",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1825,40 +1581,40 @@
           "max": 0
         },
         "item": {
-          "_id": "6925904957ee1678e5544276",
-          "power": 8000000,
+          "_id": "680f7246672b78a8fb910a82",
+          "power": 49800000,
           "width": 2,
           "name": {
-            "en": "BlackWall AI",
-            "cn": "BlackWall AI",
-            "es": "BlackWall AI",
-            "pt": "BlackWall AI"
+            "en": "Amber Drakkar",
+            "cn": "Amber Drakkar",
+            "es": "Amber Drakkar",
+            "pt": "Amber Drakkar"
           },
           "description": {
-            "en": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "cn": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "es": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
-            "pt": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent."
+            "en": "Rising above the sea with unstoppable force, the Amber Drakkar cuts through the waves like a blade of pure light. Its journey is one of glory, its wake a trail of treasures beyond imagination, waiting for those who dare to command its power",
+            "cn": "Rising above the sea with unstoppable force, the Amber Drakkar cuts through the waves like a blade of pure light. Its journey is one of glory, its wake a trail of treasures beyond imagination, waiting for those who dare to command its power",
+            "es": "Rising above the sea with unstoppable force, the Amber Drakkar cuts through the waves like a blade of pure light. Its journey is one of glory, its wake a trail of treasures beyond imagination, waiting for those who dare to command its power",
+            "pt": "Rising above the sea with unstoppable force, the Amber Drakkar cuts through the waves like a blade of pure light. Its journey is one of glory, its wake a trail of treasures beyond imagination, waiting for those who dare to command its power"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
+          "level": 3,
           "type": "merge",
-          "filename": "blackwall_ai",
+          "filename": "amber_drakkar",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1200,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 900,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b1e",
-        "item_id": "685178ec212de5a5a737d555",
+        "id": "697cb0a4b94e4ce33de84bf9",
+        "item_id": "697c9447a2774cefbbcd067f",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1877,20 +1633,20 @@
           "max": 0
         },
         "item": {
-          "_id": "685178ec212de5a5a737d555",
-          "power": 21000000,
+          "_id": "697c9447a2774cefbbcd067f",
+          "power": 270000000,
           "width": 2,
           "name": {
-            "en": "Abyss Stone",
-            "cn": "Abyss Stone",
-            "es": "Abyss Stone",
-            "pt": "Abyss Stone"
+            "en": "Zeus",
+            "cn": "Zeus",
+            "es": "Zeus",
+            "pt": "Zeus"
           },
           "description": {
-            "en": "An encrypted core stabilized by cold fusion circuits. Precision mining at maximum uptime. Zero noise. Zero compromise.",
-            "cn": "An encrypted core stabilized by cold fusion circuits. Precision mining at maximum uptime. Zero noise. Zero compromise.",
-            "es": "An encrypted core stabilized by cold fusion circuits. Precision mining at maximum uptime. Zero noise. Zero compromise.",
-            "pt": "An encrypted core stabilized by cold fusion circuits. Precision mining at maximum uptime. Zero noise. Zero compromise."
+            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
           },
           "created_by_title": {
             "link": "",
@@ -1898,19 +1654,20 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "abyss_stone",
+          "filename": "zeus",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 900,
+          "bonus": 4500,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b20",
-        "item_id": "6749bd931745a1e9ed4edf90",
+        "id": "697cb0a4b94e4ce33de84bfb",
+        "item_id": "6810c89e672b78a8fb96f1d6",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1929,40 +1686,40 @@
           "max": 0
         },
         "item": {
-          "_id": "6749bd931745a1e9ed4edf90",
-          "power": 41350000,
+          "_id": "6810c89e672b78a8fb96f1d6",
+          "power": 76100000,
           "width": 2,
           "name": {
-            "en": "Totally Black",
-            "cn": "Totally Black",
-            "es": "Totally Black",
-            "pt": "Totally Black"
+            "en": "Bananarchy",
+            "cn": "Bananarchy",
+            "es": "Bananarchy",
+            "pt": "Bananarchy"
           },
           "description": {
-            "en": "Total. Totally Black",
-            "cn": "Total. Totally Black",
-            "es": "Total. Totally Black",
-            "pt": "Total. Totally Black"
+            "en": "Embrace the chaos with this unconventional masterpiece. A banana stuck to the wall, just like your wealth: unexpected, bold, and ready to make a statement!",
+            "cn": "Embrace the chaos with this unconventional masterpiece. A banana stuck to the wall, just like your wealth: unexpected, bold, and ready to make a statement!",
+            "es": "Embrace the chaos with this unconventional masterpiece. A banana stuck to the wall, just like your wealth: unexpected, bold, and ready to make a statement!",
+            "pt": "Embrace the chaos with this unconventional masterpiece. A banana stuck to the wall, just like your wealth: unexpected, bold, and ready to make a statement!"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
+          "level": 3,
           "type": "merge",
-          "filename": "totally_black",
+          "filename": "bananarchy",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1200,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 1600,
           "is_in_set": false
         }
       },
       {
-        "id": "6978c8d9b94e4ce33de84b22",
-        "item_id": "6978c760a2774cefbbc8c6f8",
+        "id": "697cb0a4b94e4ce33de84bfd",
+        "item_id": "697c9447a2774cefbbcd0685",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1981,20 +1738,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6978c760a2774cefbbc8c6f8",
-          "power": 452300000,
+          "_id": "697c9447a2774cefbbcd0685",
+          "power": 780000000,
           "width": 2,
           "name": {
-            "en": "Pip-33",
-            "cn": "Pip-33",
-            "es": "Pip-33",
-            "pt": "Pip-33"
+            "en": "Zeus",
+            "cn": "Zeus",
+            "es": "Zeus",
+            "pt": "Zeus"
           },
           "description": {
-            "en": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "cn": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "es": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash.",
-            "pt": "Straight out of Vault 33, this rugged relic mines like it survived the apocalypse — because it did. Powered by old tech and pure grit, PIP-33 digs up crypto in a wasteland where only the toughest still hash."
+            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
           },
           "created_by_title": {
             "link": "",
@@ -2002,14 +1759,14 @@
           },
           "level": 3,
           "type": "merge",
-          "filename": "pip_33",
+          "filename": "zeus",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 5500,
+          "bonus": 6500,
           "is_in_set": false
         }
       }
@@ -2017,203 +1774,203 @@
     "levels_config": [
       {
         "level": 1,
-        "level_xp": 4000,
-        "required_xp": 4000
+        "level_xp": 500,
+        "required_xp": 500
       },
       {
         "level": 2,
-        "level_xp": 12000,
-        "required_xp": 16000
+        "level_xp": 1000,
+        "required_xp": 1500
       },
       {
         "level": 3,
-        "level_xp": 18000,
-        "required_xp": 34000
+        "level_xp": 500,
+        "required_xp": 2000
       },
       {
         "level": 4,
-        "level_xp": 50000,
-        "required_xp": 84000
+        "level_xp": 3500,
+        "required_xp": 5500
       },
       {
         "level": 5,
-        "level_xp": 20000,
-        "required_xp": 104000
+        "level_xp": 1500,
+        "required_xp": 7000
       },
       {
         "level": 6,
-        "level_xp": 36000,
-        "required_xp": 140000
+        "level_xp": 4000,
+        "required_xp": 11000
       },
       {
         "level": 7,
-        "level_xp": 42000,
-        "required_xp": 182000
+        "level_xp": 1500,
+        "required_xp": 12500
       },
       {
         "level": 8,
-        "level_xp": 108000,
-        "required_xp": 290000
+        "level_xp": 12500,
+        "required_xp": 25000
       },
       {
         "level": 9,
-        "level_xp": 32000,
-        "required_xp": 322000
+        "level_xp": 5000,
+        "required_xp": 30000
       },
       {
         "level": 10,
-        "level_xp": 60000,
-        "required_xp": 382000
+        "level_xp": 10000,
+        "required_xp": 40000
       },
       {
         "level": 11,
-        "level_xp": 66000,
-        "required_xp": 448000
+        "level_xp": 2500,
+        "required_xp": 42500
       },
       {
         "level": 12,
-        "level_xp": 168000,
-        "required_xp": 616000
+        "level_xp": 5000,
+        "required_xp": 47500
       },
       {
         "level": 13,
-        "level_xp": 44000,
-        "required_xp": 660000
+        "level_xp": 35000,
+        "required_xp": 82500
       },
       {
         "level": 14,
-        "level_xp": 82000,
-        "required_xp": 742000
+        "level_xp": 20000,
+        "required_xp": 102500
       },
       {
         "level": 15,
-        "level_xp": 88000,
-        "required_xp": 830000
+        "level_xp": 15000,
+        "required_xp": 117500
       },
       {
         "level": 16,
-        "level_xp": 2960000,
-        "required_xp": 3790000
+        "level_xp": 60000,
+        "required_xp": 177500
       },
       {
         "level": 17,
-        "level_xp": 1500000,
-        "required_xp": 5290000
+        "level_xp": 17500,
+        "required_xp": 195000
       },
       {
         "level": 18,
-        "level_xp": 800000,
-        "required_xp": 6090000
+        "level_xp": 55000,
+        "required_xp": 250000
       },
       {
         "level": 19,
-        "level_xp": 780000,
-        "required_xp": 6870000
+        "level_xp": 100000,
+        "required_xp": 350000
       },
       {
         "level": 20,
-        "level_xp": 1420000,
-        "required_xp": 8290000
+        "level_xp": 250000,
+        "required_xp": 600000
       },
       {
         "level": 21,
-        "level_xp": 520000,
-        "required_xp": 8810000
+        "level_xp": 750000,
+        "required_xp": 1350000
       },
       {
         "level": 22,
-        "level_xp": 920000,
-        "required_xp": 9730000
+        "level_xp": 250000,
+        "required_xp": 1600000
       },
       {
         "level": 23,
-        "level_xp": 500000,
-        "required_xp": 10230000
+        "level_xp": 100000,
+        "required_xp": 1700000
       },
       {
         "level": 24,
-        "level_xp": 10000000,
-        "required_xp": 20230000
+        "level_xp": 400000,
+        "required_xp": 2100000
       },
       {
         "level": 25,
-        "level_xp": 600000,
-        "required_xp": 20830000
+        "level_xp": 2250000,
+        "required_xp": 4350000
       },
       {
         "level": 26,
-        "level_xp": 1080000,
-        "required_xp": 21910000
+        "level_xp": 200000,
+        "required_xp": 4550000
       },
       {
         "level": 27,
-        "level_xp": 1120000,
-        "required_xp": 23030000
+        "level_xp": 350000,
+        "required_xp": 4900000
       },
       {
         "level": 28,
-        "level_xp": 8000000,
-        "required_xp": 31030000
+        "level_xp": 200000,
+        "required_xp": 5100000
       },
       {
         "level": 29,
-        "level_xp": 700000,
-        "required_xp": 31730000
+        "level_xp": 2750000,
+        "required_xp": 7850000
       },
       {
         "level": 30,
-        "level_xp": 1260000,
-        "required_xp": 32990000
+        "level_xp": 450000,
+        "required_xp": 8300000
       },
       {
         "level": 31,
-        "level_xp": 1300000,
-        "required_xp": 34290000
+        "level_xp": 150000,
+        "required_xp": 8450000
       },
       {
         "level": 32,
-        "level_xp": 20000000,
-        "required_xp": 54290000
+        "level_xp": 550000,
+        "required_xp": 9000000
       },
       {
         "level": 33,
-        "level_xp": 800000,
-        "required_xp": 55090000
+        "level_xp": 2000000,
+        "required_xp": 11000000
       },
       {
         "level": 34,
-        "level_xp": 1420000,
-        "required_xp": 56510000
+        "level_xp": 2500000,
+        "required_xp": 13500000
       },
       {
         "level": 35,
-        "level_xp": 1460000,
-        "required_xp": 57970000
+        "level_xp": 500000,
+        "required_xp": 14000000
       },
       {
         "level": 36,
-        "level_xp": 2000000,
-        "required_xp": 59970000
+        "level_xp": 5000000,
+        "required_xp": 19000000
       },
       {
         "level": 37,
-        "level_xp": 4000000,
-        "required_xp": 63970000
+        "level_xp": 2000000,
+        "required_xp": 21000000
       },
       {
         "level": 38,
-        "level_xp": 4000000,
-        "required_xp": 67970000
+        "level_xp": 15000000,
+        "required_xp": 36000000
       },
       {
         "level": 39,
-        "level_xp": 10000000,
-        "required_xp": 77970000
+        "level_xp": 4000000,
+        "required_xp": 40000000
       },
       {
         "level": 40,
-        "level_xp": 40000000,
-        "required_xp": 117970000
+        "level_xp": 20000000,
+        "required_xp": 60000000
       }
     ]
   }

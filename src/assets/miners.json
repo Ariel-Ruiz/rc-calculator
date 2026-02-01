@@ -16234,5 +16234,41 @@
     "can_be_merged": false,
     "cells": 2,
     "filename": "ignition_node.gif"
+  },
+  {
+    "id": "697c71d1a2774cefbbcc7dee",
+    "name": "Tivat",
+    "bonus": 1.5,
+    "power": "1.500 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": false,
+    "cells": 2,
+    "filename": "tivat.gif"
+  },
+  {
+    "id": "697c7b7ea2774cefbbccaefa",
+    "name": "Abstract Coil",
+    "bonus": 9,
+    "power": "3.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": false,
+    "cells": 2,
+    "filename": "abstract_coil.gif"
+  },
+  {
+    "id": "697c9447a2774cefbbcd0676",
+    "name": "Zeus",
+    "bonus": 15,
+    "power": "23.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true,
+    "can_be_merged": false,
+    "cells": 2,
+    "filename": "zeus.gif"
   }
 ]

@@ -66,10 +66,17 @@
   },
   "burning": {
     "title": "Burn Calculator",
-    "subtitle": "💡Paste the data to calculate your points. The data is calculated automatically, so it may vary slightly. <br><br> <b>You can copy the data from:</b> <br> <a class='source-link' href='https://rollercoin.com/marketplace' target='_blank'>● Marketplace</a> <br> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Marketplace Sell</a> <br> <a class='source-link' href='https://rollercoin.com/storage/inventory/miners' target='_blank'>● Inventory</a> <br> <a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a>",
+    "subtitle": "💡Paste the data to calculate your points. The data is calculated automatically, so it may vary slightly. <br><br> <b>You can copy the data from:</b> <br> <a class='source-link' href='https://rollercoin.com/marketplace' target='_blank'>● Marketplace</a> <br> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Marketplace Sell</a> <br> <a class='source-link' href='https://rollercoin.com/storage/inventory/miners' target='_blank'>● Inventory</a> <br> <a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a> <br><br> 💡 Click on cards to select/deselect miners and sum their points.",
     "placeholder": "paste data here...",
     "calculate": "CALCULATE",
     "clear": "CLEAR",
-    "empty": "Paste miners data from marketplace and click Calculate"
+    "empty": "Paste miners data from marketplace and click Calculate",
+    "selectedPoints": "Points in selected miners:",
+    "selectedMiners": "Selected miners:",
+    "filters": "FILTERS",
+    "minPoints": "Min Points",
+    "minPtsRlt": "Min PtsxRLT",
+    "maxPrice": "Max Price",
+    "apply": "APPLY"
   }
 }

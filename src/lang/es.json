@@ -66,10 +66,17 @@
   },
   "burning": {
     "title": "Calculadora de Quema",
-    "subtitle": "💡Pega los datos para calcular sus puntos, los datos son autocalculados por lo que pueden variar ligeramente. <br><br> <b>Puedes copiar los datos desde:</b> <br> <a class='source-link' href='https://rollercoin.com/marketplace' target='_blank'>● Marketplace</a> <br> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Marketplace Sell</a> <br> <a class='source-link' href='https://rollercoin.com/storage/inventory/miners' target='_blank'>● Inventory</a> <br> <a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a>",
+    "subtitle": "💡Pega los datos para calcular sus puntos, los datos son autocalculados por lo que pueden variar ligeramente. <br><br> <b>Puedes copiar los datos desde:</b> <br> <a class='source-link' href='https://rollercoin.com/marketplace' target='_blank'>● Marketplace</a> <br> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Marketplace Sell</a> <br> <a class='source-link' href='https://rollercoin.com/storage/inventory/miners' target='_blank'>● Inventory</a> <br> <a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a> <br><br> 💡 Haz clic en las tarjetas para seleccionar/deseleccionar mineros y sumar sus puntos.",
     "placeholder": "pega los datos aquí...",
     "calculate": "CALCULAR",
     "clear": "LIMPIAR",
-    "empty": "Pega los datos de los mineros del marketplace y haz clic en Calcular"
+    "empty": "Pega los datos de los mineros del marketplace y haz clic en Calcular",
+    "selectedPoints": "Puntos en mineros seleccionados:",
+    "selectedMiners": "Mineros seleccionados:",
+    "filters": "FILTROS",
+    "minPoints": "Puntos Min",
+    "minPtsRlt": "PtsxRLT Min",
+    "maxPrice": "Precio Máx",
+    "apply": "APLICAR"
   }
 }
