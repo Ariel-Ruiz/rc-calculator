@@ -1,8 +1,8 @@
 {
-  "multiplier": 0.1,
+  "multiplier": 0.2,
   "tasks": [
     {
-      "id": "697cb0a4b94e4ce33de84baa",
+      "id": "6981dacbb94e4ce33de84c67",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "697cb0a4b94e4ce33de84bab",
+      "id": "6981dacbb94e4ce33de84c68",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -44,7 +44,7 @@
       "sort": 2
     },
     {
-      "id": "697cb0a4b94e4ce33de84bac",
+      "id": "6981dacbb94e4ce33de84c69",
       "xp_type": "number",
       "xp_reward": 150,
       "amount": 6667,
@@ -65,10 +65,10 @@
       "sort": 3
     },
     {
-      "id": "697cb0a4b94e4ce33de84bad",
+      "id": "6981dacbb94e4ce33de84c6a",
       "xp_type": "number",
-      "xp_reward": 1499,
-      "amount": 667,
+      "xp_reward": 2000,
+      "amount": 500,
       "tag": {
         "color": "",
         "text": "",
@@ -88,30 +88,28 @@
   ],
   "event": {
     "event": {
-      "_id": "697cb0a3a2774cefbbcda9f5",
-      "max_xp": 60000000,
+      "_id": "6981dacaa2774cefbbd3487f",
+      "max_xp": 68571000,
       "max_multiplier": 10000,
       "max_level": 40,
       "tag": {
-        "text": "",
-        "color": "",
-        "text_color": ""
+        "text": "50"
       },
       "progression_event_type": "default",
-      "end_date": "2026-02-01T15:00:00.000Z",
-      "last_updated": 1769779364288,
+      "end_date": "2026-02-06T15:00:00.000Z",
+      "last_updated": 1770117835218,
       "description": {
-        "en": "Thunder of the First Age",
-        "cn": "Thunder of the First Age"
+        "en": "Uncle <3 Anime",
+        "cn": "Uncle <3 Anime"
       },
       "title": {
-        "en": "Thunder of the First Age",
-        "cn": "Thunder of the First Age"
+        "en": "Uncle <3 Anime",
+        "cn": "Uncle <3 Anime"
       }
     },
     "rewards": [
       {
-        "id": "697cb0a4b94e4ce33de84baf",
+        "id": "6981dacbb94e4ce33de84c6c",
         "item_id": null,
         "amount": 50000,
         "currency": "RLT",
@@ -132,8 +130,8 @@
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bb1",
-        "item_id": "5a0b08a9d1d9ee5894f36f2f",
+        "id": "6981dacbb94e4ce33de84c6e",
+        "item_id": "646ddba0260e7d19c91846b9",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -152,42 +150,38 @@
           "max": 0
         },
         "item": {
-          "_id": "5a0b08a9d1d9ee5894f36f2f",
-          "power": 4000,
+          "_id": "646ddba0260e7d19c91846b9",
+          "power": 4860,
           "width": 1,
-          "description": {
-            "en": "Don’t get confused with the model name. This S5+ will leave his younger brother S7 far behind in mining power, but it will cost you.",
-            "cn": "不要让与型号名称混淆你，这款S5 +比S7在挖矿能力上远远落后。",
-            "es": "Don’t get confused with the model name. This S5+ will leave his younger brother S7 far behind in mining power, but it will cost you.",
-            "pt": "Don’t get confused with the model name. This S5+ will leave his younger brother S7 far behind in mining power, but it will cost you."
-          },
           "name": {
-            "en": "RollerMiner S5+",
-            "cn": "RollerMiner S5+",
-            "es": "RollerMiner S5+",
-            "pt": "RollerMiner S5+"
+            "en": "Mergedge Mk. I",
+            "cn": "Mergedge Mk. I"
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "rollerminer_s5plus",
-          "frames_data": {
-            "frame_width": 66,
-            "frame_height": 50,
-            "frames_count": 4
+          "description": {
+            "en": "The second generation of the Mergedge miner series is here, offering a smaller yet more powerful tool that every miner must have. Evolve your mining capabilities to the max with this advanced innovation.",
+            "cn": "The second generation of the Mergedge miner series is here, offering a smaller yet more powerful tool that every miner must have. Evolve your mining capabilities to the max with this advanced innovation."
           },
-          "is_can_be_sold_on_mp": false,
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "bonus": 50,
+          "level": 0,
+          "type": "basic",
+          "filename": "mergedge_mk_i",
+          "frames_data": {
+            "frame_width": 58,
+            "frame_height": 40,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 0,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bb3",
+        "id": "6981dacbb94e4ce33de84c70",
         "item_id": null,
-        "amount": 10000000,
+        "amount": 15000000,
         "currency": "RST",
         "ttl_time": 0,
         "required_level": 3,
@@ -206,20 +200,20 @@
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bb5",
+        "id": "6981dacbb94e4ce33de84c72",
         "item_id": null,
-        "amount": 100,
+        "amount": 1000000,
         "currency": "",
-        "ttl_time": 0,
+        "ttl_time": 604800000,
         "required_level": 4,
-        "type": "season_pass_xp",
+        "type": "power",
         "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
+          "en": "Power",
+          "cn": "Power"
         },
         "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
+          "en": "Power Reward Description",
+          "cn": "Power Reward Description"
         },
         "range_count": {
           "min": 1,
@@ -227,8 +221,8 @@
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bb7",
-        "item_id": "5a0b08afd1d9ee5894f36f31",
+        "id": "6981dacbb94e4ce33de84c74",
+        "item_id": "5e2ee460041b386e78b97c28",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -247,136 +241,37 @@
           "max": 0
         },
         "item": {
-          "_id": "5a0b08afd1d9ee5894f36f31",
-          "power": 6500,
+          "_id": "5e2ee460041b386e78b97c28",
+          "power": 8000,
           "width": 1,
           "description": {
-            "en": "Being the direct competitor of the R4, this miner provides you with 0.2Th/s greater speed for only 2.5 RLT more. If you have money, you might want to spend it on this nice little machine.",
-            "cn": "Being the direct competitor of the R4, this miner provides you with 0.2Th/s greater speed for only 2.5 RLT more. If you have money, you might want to spend it on this nice little machine.",
-            "es": "Being the direct competitor of the R4, this miner provides you with 0.2Th/s greater speed for only 2.5 RLT more. If you have money, you might want to spend it on this nice little machine.",
-            "pt": "Being the direct competitor of the R4, this miner provides you with 0.2Th/s greater speed for only 2.5 RLT more. If you have money, you might want to spend it on this nice little machine."
+            "en": "Opening the limited Golden Abyss line of miners, the Scarabey is legally the most beautiful miner on the market. Don't be tricked by its cuteness, this golden bug is strong.",
+            "cn": "开设了黃金ABYSS有限的矿工产品线，从外观上来说他是颜值最高的矿机不要被它的外表所欺骗。"
           },
           "name": {
-            "en": "Rolleron Miner 761",
-            "cn": "Rolleron Miner 761",
-            "es": "Rolleron Miner 761",
-            "pt": "Rolleron Miner 761"
+            "en": "Scarabey",
+            "cn": "Scarabey"
           },
           "level": 0,
           "type": "basic",
-          "filename": "rolleron_miner_761",
+          "filename": "scarabey",
           "frames_data": {
-            "frame_width": 66,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "bonus": 50,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bb9",
-        "item_id": null,
-        "amount": 100000,
-        "currency": "RLT",
-        "ttl_time": 0,
-        "required_level": 6,
-        "type": "money",
-        "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
-        },
-        "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bbb",
-        "item_id": "646ddbed260e7d19c91846ba",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 7,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "646ddbed260e7d19c91846ba",
-          "power": 6450,
-          "width": 2,
-          "name": {
-            "en": "Mergedge Mk. IV",
-            "cn": "Mergedge Mk. IV"
-          },
-          "description": {
-            "en": "The Mergedge developers are raising the stakes! Are you a hardcore miner? Then this one is just for you!",
-            "cn": "The Mergedge developers are raising the stakes! Are you a hardcore miner? Then this one is just for you!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "mergedge_mk_iv",
-          "frames_data": {
-            "frame_width": 116,
+            "frame_width": 58,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 0,
+          "bonus": 100,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bbd",
-        "item_id": null,
-        "amount": 100,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 8,
-        "type": "season_pass_xp",
-        "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
-        },
-        "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bbf",
+        "id": "6981dacbb94e4ce33de84c76",
         "item_id": "68306581e2da6536108ec0b8",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 9,
+        "required_level": 6,
         "type": "utility_item",
         "title": {
           "en": "Utility Item",
@@ -411,8 +306,121 @@
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bc1",
-        "item_id": "62553d7b42a0cd1b7dd45438",
+        "id": "6981dacbb94e4ce33de84c78",
+        "item_id": "61b3604967433d2dc58893b0",
+        "amount": 250,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 7,
+        "type": "mutation_component",
+        "title": {
+          "en": "Component Title",
+          "cn": "Component Title"
+        },
+        "description": {
+          "en": "Component Reward Description",
+          "cn": "Component Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "61b3604967433d2dc58893b0",
+          "name": {
+            "en": "Common Wire",
+            "cn": "Common Wire"
+          },
+          "mutation_components_rarity_groups_id": "619627a267433d2dc5355efb",
+          "rarity_group": {
+            "_id": "619627a267433d2dc5355efb",
+            "title": {
+              "en": "Common",
+              "cn": "Common"
+            },
+            "base_color_hex": "dddddd",
+            "sort": 0
+          },
+          "rarity_color_hex": "dddddd"
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84c7a",
+        "item_id": "62a71fed9b5a37db46b4cea0",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 8,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "62a71fed9b5a37db46b4cea0",
+          "name": {
+            "en": "BlobPat",
+            "cn": "BlobPat",
+            "es": "BlobPat",
+            "pt": "BlobPat"
+          },
+          "description": {
+            "en": "A nice slimy pet for your collection! This miner is one of the ten selected winners of the Miners Art Contest: Underwater Adventures. Created by Luukk",
+            "cn": "A nice slimy pet for your collection! This miner is one of the ten selected winners of the Miners Art Contest: Underwater Adventures. Created by Luukk",
+            "es": "A nice slimy pet for your collection! This miner is one of the ten selected winners of the Miners Art Contest: Underwater Adventures. Created by Luukk",
+            "pt": "A nice slimy pet for your collection! This miner is one of the ten selected winners of the Miners Art Contest: Underwater Adventures. Created by Luukk"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "power": 30000,
+          "width": 2,
+          "level": 0,
+          "type": "basic",
+          "filename": "blobpat",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 25,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84c7c",
+        "item_id": null,
+        "amount": 100000,
+        "currency": "RLT",
+        "ttl_time": 0,
+        "required_level": 9,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84c7e",
+        "item_id": "62962355530f48a8e7a7062a",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -431,27 +439,23 @@
           "max": 0
         },
         "item": {
-          "_id": "62553d7b42a0cd1b7dd45438",
+          "_id": "62962355530f48a8e7a7062a",
           "name": {
-            "en": "The Minertaur",
-            "cn": "The Minertaur"
+            "en": "Pearl-Coin",
+            "cn": "Pearl-Coin"
           },
           "description": {
-            "en": "A bunch of coins behind every corner — new version of The Maze! This miner is one of the ten selected winners of the Miners Art Contest: Ancient Myths. Created by Keimax",
-            "cn": "A bunch of coins behind every corner — new version of The Maze! This miner is one of the ten selected winners of the Miners Art Contest: Ancient Myths. Created by Keimax"
-          },
-          "created_by_title": {
-            "link": "/p/k6kh1tmd",
-            "text": "Keimax"
+            "en": "All pearls are shiny, beautiful and help you get some attention from the ladies, but only this one is a real treasure. Beach Party Series Miner.",
+            "cn": "All pearls are shiny, beautiful and help you get some attention from the ladies, but only this one is a real treasure. Beach Party Series Miner."
           },
           "power": 100000,
-          "width": 2,
+          "width": 1,
           "level": 0,
           "type": "basic",
-          "filename": "the_minertaur",
+          "filename": "pearl_coin",
           "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
+            "frame_width": 58,
+            "frame_height": 40,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
@@ -460,20 +464,20 @@
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bc3",
+        "id": "6981dacbb94e4ce33de84c80",
         "item_id": null,
-        "amount": 2500000,
-        "currency": "",
-        "ttl_time": 604800000,
+        "amount": 30000000,
+        "currency": "RST",
+        "ttl_time": 0,
         "required_level": 11,
-        "type": "power",
+        "type": "money",
         "title": {
-          "en": "Power",
-          "cn": "Power"
+          "en": "Money Title",
+          "cn": "Money Title"
         },
         "description": {
-          "en": "Power Reward Description",
-          "cn": "Power Reward Description"
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
         },
         "range_count": {
           "min": 1,
@@ -481,159 +485,12 @@
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bc5",
-        "item_id": "61b9cce478d63d64cd626fe3",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 12,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "61b9cce478d63d64cd626fe3",
-          "name": {
-            "en": "Jellier",
-            "cn": "Jellier",
-            "es": "Jellier",
-            "pt": "Jellier"
-          },
-          "description": {
-            "en": "It’s slimy and shaky. Try to hold!",
-            "cn": "It’s slimy and shaky. Try to hold!",
-            "es": "It’s slimy and shaky. Try to hold!",
-            "pt": "It’s slimy and shaky. Try to hold!"
-          },
-          "level": 0,
-          "type": "basic",
-          "power": 20000,
-          "width": 1,
-          "filename": "jellier",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "bonus": 50,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bc7",
-        "item_id": null,
-        "amount": 200,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 13,
-        "type": "season_pass_xp",
-        "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
-        },
-        "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bc9",
-        "item_id": "65cb5598dc319c3e46642606",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 14,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "65cb5598dc319c3e46642606",
-          "power": 248000,
-          "width": 2,
-          "name": {
-            "en": "The Ascended",
-            "cn": "The Ascended",
-            "es": "The Ascended",
-            "pt": "The Ascended"
-          },
-          "description": {
-            "en": "Egyptian culture, so familiar, but yet still mysterious. The Sphinx as the symbol of wisdom, and the Ankh, as the symbol of eternity - this is all you need to mine coins! By Andri",
-            "cn": "Egyptian culture, so familiar, but yet still mysterious. The Sphinx as the symbol of wisdom, and the Ankh, as the symbol of eternity - this is all you need to mine coins! By Andri",
-            "es": "Egyptian culture, so familiar, but yet still mysterious. The Sphinx as the symbol of wisdom, and the Ankh, as the symbol of eternity - this is all you need to mine coins! By Andri",
-            "pt": "Egyptian culture, so familiar, but yet still mysterious. The Sphinx as the symbol of wisdom, and the Ankh, as the symbol of eternity - this is all you need to mine coins! By Andri"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "the_ascended",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 0,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bcb",
-        "item_id": null,
-        "amount": 10000000,
-        "currency": "",
-        "ttl_time": 604800000,
-        "required_level": 15,
-        "type": "power",
-        "title": {
-          "en": "Power",
-          "cn": "Power"
-        },
-        "description": {
-          "en": "Power Reward Description",
-          "cn": "Power Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bcd",
+        "id": "6981dacbb94e4ce33de84c82",
         "item_id": "6398ffabcc914df92b07b935",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 16,
+        "required_level": 12,
         "type": "loot_box",
         "title": {
           "en": "Loot Box",
@@ -707,12 +564,153 @@
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bcf",
-        "item_id": "63e140e4547cfab9a21d7d2b",
+        "id": "6981dacbb94e4ce33de84c84",
+        "item_id": "65326e53a072ea9506f9a1a7",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 17,
+        "required_level": 13,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "65326e53a072ea9506f9a1a7",
+          "power": 125000,
+          "width": 2,
+          "name": {
+            "en": "HauntedHouse",
+            "cn": "HauntedHouse",
+            "es": "HauntedHouse",
+            "pt": "HauntedHouse"
+          },
+          "description": {
+            "en": "This is a house, come on in! This is a house that keeps riches within. This is the house nobody lives. Mine to the skies, let it be your sin, yeah, yeah… By Captain Matthew",
+            "cn": "This is a house, come on in! This is a house that keeps riches within. This is the house nobody lives. Mine to the skies, let it be your sin, yeah, yeah… By Captain Matthew",
+            "es": "This is a house, come on in! This is a house that keeps riches within. This is the house nobody lives. Mine to the skies, let it be your sin, yeah, yeah… By Captain Matthew",
+            "pt": "This is a house, come on in! This is a house that keeps riches within. This is the house nobody lives. Mine to the skies, let it be your sin, yeah, yeah… By Captain Matthew"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "hauntedhouse",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 0,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84c86",
+        "item_id": "6834276c6b8c472444c3725c",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 14,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "12h Booster",
+            "cn": "12h Booster",
+            "es": "12h Booster",
+            "pt": "12h Booster"
+          },
+          "description": {
+            "en": "Booster will increase your basic power from minigames for 12 hours.",
+            "cn": "Booster will increase your basic power from minigames for 12 hours.",
+            "es": "Booster will increase your basic power from minigames for 12 hours.",
+            "pt": "Booster will increase your basic power from minigames for 12 hours."
+          },
+          "media": {
+            "preview_url": "static/img/market/utility_items/6834276c6b8c472444c3725c.gif?v=1748874570576"
+          },
+          "_id": "6834276c6b8c472444c3725c",
+          "type": "game_booster"
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84c88",
+        "item_id": "631b561aa775e04d9a28548c",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 15,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "631b561aa775e04d9a28548c",
+          "power": 63000,
+          "width": 2,
+          "name": {
+            "en": "Cerberus",
+            "cn": "Cerberus"
+          },
+          "description": {
+            "en": "You can not worry about your mining room with this one. This miner is one of the ten selected winners of the Miners Art Contest: Magic Beasts.\nCreated by Ravell",
+            "cn": "You can not worry about your mining room with this one. This miner is one of the ten selected winners of the Miners Art Contest: Magic Beasts.\nCreated by Ravell"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "cerberus",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 0,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84c8a",
+        "item_id": "65bba192a19c394aa309623b",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 16,
         "type": "rack",
         "title": {
           "en": "Rack Title",
@@ -728,47 +726,26 @@
         },
         "item": {
           "name": {
-            "en": "Jet-Black Rack 6",
-            "cn": "Jet-Black Rack 6"
+            "en": "Red Silk 8",
+            "cn": "Red Silk 8"
           },
           "description": {
-            "en": "Jet-Black Rack is created for true connoisseurs of stylish furniture. Place your miners here and enjoy the result!",
-            "cn": "Jet-Black Rack is created for true connoisseurs of stylish furniture. Place your miners here and enjoy the result!"
+            "en": "Only the wealthiest can afford a silk cover on their racks. But the 5% bonus is above all the cons!",
+            "cn": "Only the wealthiest can afford a silk cover on their racks. But the 5% bonus is above all the cons!"
           },
-          "_id": "63e140e4547cfab9a21d7d2b",
-          "capacity": 6,
+          "_id": "65bba192a19c394aa309623b",
+          "capacity": 8,
           "is_can_be_sold_on_mp": true,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bd1",
-        "item_id": null,
-        "amount": 200,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 18,
-        "type": "season_pass_xp",
-        "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
-        },
-        "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bd3",
-        "item_id": "65ba335f43dcad8f6d110317",
+        "id": "6981dacbb94e4ce33de84c8c",
+        "item_id": "6981d5b8a2774cefbbd3357e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 19,
+        "required_level": 17,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -783,20 +760,20 @@
           "max": 0
         },
         "item": {
-          "_id": "65ba335f43dcad8f6d110317",
-          "power": 437000,
+          "_id": "6981d5b8a2774cefbbd3357e",
+          "power": 5000000,
           "width": 2,
           "name": {
-            "en": "Coliseum",
-            "cn": "Coliseum",
-            "es": "Coliseum",
-            "pt": "Coliseum"
+            "en": "Uncle Hunters",
+            "cn": "Uncle Hunters",
+            "es": "Uncle Hunters",
+            "pt": "Uncle Hunters"
           },
           "description": {
-            "en": "Think of a place built of stone and full of people, no roof. And now make it blast with applause!",
-            "cn": "Think of a place built of stone and full of people, no roof. And now make it blast with applause!",
-            "es": "Think of a place built of stone and full of people, no roof. And now make it blast with applause!",
-            "pt": "Think of a place built of stone and full of people, no roof. And now make it blast with applause!"
+            "en": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "cn": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "es": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "pt": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged."
           },
           "created_by_title": {
             "link": "",
@@ -804,19 +781,94 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "coliseum",
+          "filename": "uncle_hunters",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 45,
+          "bonus": 700,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bd5",
-        "item_id": "68c3e858e804ea5083724c5e",
+        "id": "6981dacbb94e4ce33de84c8e",
+        "item_id": "681ba4a5fbb67c190ed806b3",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 18,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "681ba4a5fbb67c190ed806b3",
+          "power": 5000000,
+          "width": 2,
+          "name": {
+            "en": "Tea Time",
+            "cn": "Tea Time",
+            "es": "Tea Time",
+            "pt": "Tea Time"
+          },
+          "description": {
+            "en": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "cn": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "es": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "pt": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "tea_time",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84c90",
+        "item_id": null,
+        "amount": 150000000,
+        "currency": "RST",
+        "ttl_time": 0,
+        "required_level": 19,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84c92",
+        "item_id": "6981d5b8a2774cefbbd33581",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -835,94 +887,312 @@
           "max": 0
         },
         "item": {
-          "_id": "68c3e858e804ea5083724c5e",
-          "power": 1000000,
+          "_id": "6981d5b8a2774cefbbd33581",
+          "power": 13130000,
           "width": 2,
           "name": {
-            "en": "Sun, Skin & Sin",
-            "cn": "Sun, Skin & Sin",
-            "es": "Sun, Skin & Sin",
-            "pt": "Sun, Skin & Sin"
+            "en": "Uncle Hunters",
+            "cn": "Uncle Hunters",
+            "es": "Uncle Hunters",
+            "pt": "Uncle Hunters"
           },
           "description": {
-            "en": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "cn": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "es": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "pt": "I saved you a sunny spot. Come closer… I don't bite. Much."
+            "en": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "cn": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "es": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "pt": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "sun_skin_&_sin",
+          "level": 1,
+          "type": "merge",
+          "filename": "uncle_hunters",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 100,
+          "bonus": 1200,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bd7",
-        "item_id": "6836bac2e2ea0a4c827088ec",
+        "id": "6981dacbb94e4ce33de84c94",
+        "item_id": "673db881bf1870da60853864",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 21,
-        "type": "miner",
+        "type": "loot_box",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Loot Box",
+          "cn": "Loot Box"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Loot Box Reward Description",
+          "cn": "Loot Box Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "6836bac2e2ea0a4c827088ec",
-          "power": 4000000,
-          "width": 2,
-          "name": {
-            "en": "Twilight Garnet",
-            "cn": "Twilight Garnet",
-            "es": "Twilight Garnet",
-            "pt": "Twilight Garnet"
+          "_id": "673db881bf1870da60853864",
+          "title": {
+            "en": "Large Treasure Box",
+            "cn": "Large Treasure Box"
           },
-          "description": {
-            "en": "Deep crimson hues catch every spark of light, turning shadows into steady streams of hashing energy.",
-            "cn": "Deep crimson hues catch every spark of light, turning shadows into steady streams of hashing energy.",
-            "es": "Deep crimson hues catch every spark of light, turning shadows into steady streams of hashing energy.",
-            "pt": "Deep crimson hues catch every spark of light, turning shadows into steady streams of hashing energy."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "twilight_garnet",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 350,
-          "is_in_set": false
+          "sold": 0,
+          "items": [
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Crypto Cheops",
+                  "cn": "Crypto Cheops",
+                  "es": "Crypto Cheops",
+                  "pt": "Crypto Cheops"
+                },
+                "power": 177261420
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Underdark Delver",
+                  "cn": "Underdark Delver",
+                  "es": "Underdark Delver",
+                  "pt": "Underdark Delver"
+                },
+                "power": 30745155
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "A.M.P.F.Y",
+                  "cn": "A.M.P.F.Y",
+                  "es": "A.M.P.F.Y",
+                  "pt": "A.M.P.F.Y"
+                },
+                "power": 9999000
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Shamaniac",
+                  "cn": "Shamaniac",
+                  "es": "Shamaniac",
+                  "pt": "Shamaniac"
+                },
+                "power": 5652045
+              },
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Underdark Delver",
+                  "cn": "Underdark Delver",
+                  "es": "Underdark Delver",
+                  "pt": "Underdark Delver"
+                },
+                "power": 4461870
+              },
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Arcadester",
+                  "cn": "Arcadester",
+                  "es": "Arcadester",
+                  "pt": "Arcadester"
+                },
+                "power": 2820000
+              },
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Philosopher's",
+                  "cn": "Philosopher's",
+                  "es": "Philosopher's",
+                  "pt": "Philosopher's"
+                },
+                "power": 1947750
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Guts",
+                  "cn": "Guts",
+                  "es": "Guts",
+                  "pt": "Guts"
+                },
+                "power": 1899345
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "The Ascended",
+                  "cn": "The Ascended",
+                  "es": "The Ascended",
+                  "pt": "The Ascended"
+                },
+                "power": 1708875
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Awaken",
+                  "cn": "Awaken",
+                  "es": "Awaken",
+                  "pt": "Awaken"
+                },
+                "power": 1343685
+              },
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Ping Pong",
+                  "cn": "Ping Pong",
+                  "es": "Ping Pong",
+                  "pt": "Ping Pong"
+                },
+                "power": 1323000
+              },
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "es": "",
+                  "pt": "",
+                  "en": "Liberty Digger",
+                  "cn": "Liberty Digger"
+                },
+                "power": 1178310
+              },
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Booo!",
+                  "cn": "Booo!",
+                  "es": "Booo!",
+                  "pt": "Booo!"
+                },
+                "power": 1150000
+              },
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Batty",
+                  "cn": "Batty",
+                  "es": "Batty",
+                  "pt": "Batty"
+                },
+                "power": 1000000
+              },
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Pepe John's",
+                  "cn": "Pepe John's",
+                  "es": "Pepe John's",
+                  "pt": "Pepe John's"
+                },
+                "power": 1000000
+              },
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "CyberSun",
+                  "cn": "CyberSun",
+                  "es": "CyberSun",
+                  "pt": "CyberSun"
+                },
+                "power": 760000
+              },
+              "base_color_hex": "ffffff"
+            }
+          ]
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bd9",
-        "item_id": "68c3e858e804ea5083724c5e",
+        "id": "6981dacbb94e4ce33de84c96",
+        "item_id": "6981d5b8a2774cefbbd3357e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -941,20 +1211,20 @@
           "max": 0
         },
         "item": {
-          "_id": "68c3e858e804ea5083724c5e",
-          "power": 1000000,
+          "_id": "6981d5b8a2774cefbbd3357e",
+          "power": 5000000,
           "width": 2,
           "name": {
-            "en": "Sun, Skin & Sin",
-            "cn": "Sun, Skin & Sin",
-            "es": "Sun, Skin & Sin",
-            "pt": "Sun, Skin & Sin"
+            "en": "Uncle Hunters",
+            "cn": "Uncle Hunters",
+            "es": "Uncle Hunters",
+            "pt": "Uncle Hunters"
           },
           "description": {
-            "en": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "cn": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "es": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "pt": "I saved you a sunny spot. Come closer… I don't bite. Much."
+            "en": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "cn": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "es": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "pt": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged."
           },
           "created_by_title": {
             "link": "",
@@ -962,21 +1232,21 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "sun_skin_&_sin",
+          "filename": "uncle_hunters",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 100,
+          "bonus": 700,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bdb",
+        "id": "6981dacbb94e4ce33de84c98",
         "item_id": "67d1c54536daea2ef871b292",
-        "amount": 2,
+        "amount": 5,
         "currency": "",
         "ttl_time": 0,
         "required_level": 23,
@@ -1014,29 +1284,61 @@
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bdd",
-        "item_id": null,
-        "amount": 200,
+        "id": "6981dacbb94e4ce33de84c9a",
+        "item_id": "6981d5b8a2774cefbbd33587",
+        "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 24,
-        "type": "season_pass_xp",
+        "type": "miner",
         "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "6981d5b8a2774cefbbd33587",
+          "power": 34470000,
+          "width": 2,
+          "name": {
+            "en": "Uncle Hunters",
+            "cn": "Uncle Hunters",
+            "es": "Uncle Hunters",
+            "pt": "Uncle Hunters"
+          },
+          "description": {
+            "en": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "cn": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "es": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "pt": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "uncle_hunters",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1800,
+          "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bdf",
-        "item_id": "697c9447a2774cefbbcd0676",
+        "id": "6981dacbb94e4ce33de84c9c",
+        "item_id": "681ba4a5fbb67c190ed806b3",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1055,20 +1357,20 @@
           "max": 0
         },
         "item": {
-          "_id": "697c9447a2774cefbbcd0676",
-          "power": 23000000,
+          "_id": "681ba4a5fbb67c190ed806b3",
+          "power": 5000000,
           "width": 2,
           "name": {
-            "en": "Zeus",
-            "cn": "Zeus",
-            "es": "Zeus",
-            "pt": "Zeus"
+            "en": "Tea Time",
+            "cn": "Tea Time",
+            "es": "Tea Time",
+            "pt": "Tea Time"
           },
           "description": {
-            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
+            "en": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "cn": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "es": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "pt": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian."
           },
           "created_by_title": {
             "link": "",
@@ -1076,41 +1378,72 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "zeus",
+          "filename": "tea_time",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1500,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 500,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84be1",
-        "item_id": null,
-        "amount": 200,
+        "id": "6981dacbb94e4ce33de84c9e",
+        "item_id": "64c7bb33529ebabe1a456126",
+        "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 26,
-        "type": "season_pass_xp",
+        "type": "miner",
         "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "64c7bb33529ebabe1a456126",
+          "power": 9994215,
+          "width": 2,
+          "name": {
+            "en": "Sunset City M-23",
+            "cn": "Sunset City M-23",
+            "es": "Sunset City M-23",
+            "pt": "Sunset City M-23"
+          },
+          "description": {
+            "en": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "cn": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "es": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "pt": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "sunset_city_m_23",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 613,
+          "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84be3",
-        "item_id": "67051ad372cf73b1d5d2aa14",
+        "id": "6981dacbb94e4ce33de84ca0",
+        "item_id": "64c7bb33529ebabe1a456126",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1129,85 +1462,44 @@
           "max": 0
         },
         "item": {
-          "_id": "67051ad372cf73b1d5d2aa14",
-          "power": 7000000,
+          "_id": "64c7bb33529ebabe1a456126",
+          "power": 9994215,
           "width": 2,
           "name": {
-            "en": "BearHole",
-            "cn": "BearHole",
-            "es": "BearHole",
-            "pt": "BearHole"
+            "en": "Sunset City M-23",
+            "cn": "Sunset City M-23",
+            "es": "Sunset City M-23",
+            "pt": "Sunset City M-23"
           },
           "description": {
-            "en": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
-            "cn": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
-            "es": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
-            "pt": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered."
+            "en": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "cn": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "es": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "pt": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "bearhole",
+          "level": 3,
+          "type": "merge",
+          "filename": "sunset_city_m_23",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 613,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84be5",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 4,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 28,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Speed Up Item",
-            "cn": "Speed Up Item",
-            "es": "Speed Up Item",
-            "pt": "Speed Up Item"
-          },
-          "description": {
-            "en": "Ticket for speed up expedition",
-            "cn": "Ticket for speed up expedition",
-            "es": "Ticket for speed up expedition",
-            "pt": "Ticket for speed up expedition"
-          },
-          "media": {
-            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
-          },
-          "_id": "67d1c54536daea2ef871b292",
-          "type": "expedition_speed_up"
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84be7",
-        "item_id": "697c9447a2774cefbbcd0676",
+        "id": "6981dacbb94e4ce33de84ca2",
+        "item_id": "67c133ddb5e8c2c0f194d8da",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 29,
+        "required_level": 28,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1222,20 +1514,20 @@
           "max": 0
         },
         "item": {
-          "_id": "697c9447a2774cefbbcd0676",
-          "power": 23000000,
+          "_id": "67c133ddb5e8c2c0f194d8da",
+          "power": 14000000,
           "width": 2,
           "name": {
-            "en": "Zeus",
-            "cn": "Zeus",
-            "es": "Zeus",
-            "pt": "Zeus"
+            "en": "Steel HODLer",
+            "cn": "Steel HODLer",
+            "es": "Steel HODLer",
+            "pt": "Steel HODLer"
           },
           "description": {
-            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
+            "en": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "cn": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "es": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "pt": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power."
           },
           "created_by_title": {
             "link": "",
@@ -1243,20 +1535,59 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "zeus",
+          "filename": "steel_hodler",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1500,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 550,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84be9",
-        "item_id": "67051ad372cf73b1d5d2aa14",
+        "id": "6981dacbb94e4ce33de84ca4",
+        "item_id": "6319f918a8ce530569f33dd5",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 29,
+        "type": "mutation_component",
+        "title": {
+          "en": "Component Title",
+          "cn": "Component Title"
+        },
+        "description": {
+          "en": "Component Reward Description",
+          "cn": "Component Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6319f918a8ce530569f33dd5",
+          "name": {
+            "en": "Epic Fan",
+            "cn": "Epic Fan"
+          },
+          "mutation_components_rarity_groups_id": "6319f66da8ce530569e71cc9",
+          "rarity_group": {
+            "_id": "6319f66da8ce530569e71cc9",
+            "title": {
+              "en": "Epic",
+              "cn": "Epic"
+            },
+            "base_color_hex": "ff2fd1",
+            "sort": 3
+          },
+          "rarity_color_hex": "ff2fd1"
+        }
+      },
+      {
+        "id": "6981dacbb94e4ce33de84ca6",
+        "item_id": "65326ea4a072ea9506f9a26a",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1275,62 +1606,92 @@
           "max": 0
         },
         "item": {
-          "_id": "67051ad372cf73b1d5d2aa14",
-          "power": 7000000,
+          "_id": "65326ea4a072ea9506f9a26a",
+          "power": 15736560,
           "width": 2,
           "name": {
-            "en": "BearHole",
-            "cn": "BearHole",
-            "es": "BearHole",
-            "pt": "BearHole"
+            "en": "Devil's Carnival",
+            "cn": "Devil's Carnival",
+            "es": "Devil's Carnival",
+            "pt": "Devil's Carnival"
           },
           "description": {
-            "en": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
-            "cn": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
-            "es": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered.",
-            "pt": "Venture deep into the bear market with BearHole, a miner that thrives where others hesitate. It digs through the toughest blocks, turning the cold, quiet downturns of the crypto winter into hidden treasures waiting to be uncovered."
+            "en": "Alleluia! Can you see the horns and the red eyes behind those clown mask? By AsepSyf",
+            "cn": "Alleluia! Can you see the horns and the red eyes behind those clown mask? By AsepSyf",
+            "es": "Alleluia! Can you see the horns and the red eyes behind those clown mask? By AsepSyf",
+            "pt": "Alleluia! Can you see the horns and the red eyes behind those clown mask? By AsepSyf"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "bearhole",
+          "level": 3,
+          "type": "merge",
+          "filename": "devils_carnival",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 710,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84beb",
-        "item_id": null,
-        "amount": 350000000,
-        "currency": "RST",
+        "id": "6981dacbb94e4ce33de84ca8",
+        "item_id": "65326ea4a072ea9506f9a26a",
+        "amount": 1,
+        "currency": "",
         "ttl_time": 0,
         "required_level": 31,
-        "type": "money",
+        "type": "miner",
         "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "65326ea4a072ea9506f9a26a",
+          "power": 15736560,
+          "width": 2,
+          "name": {
+            "en": "Devil's Carnival",
+            "cn": "Devil's Carnival",
+            "es": "Devil's Carnival",
+            "pt": "Devil's Carnival"
+          },
+          "description": {
+            "en": "Alleluia! Can you see the horns and the red eyes behind those clown mask? By AsepSyf",
+            "cn": "Alleluia! Can you see the horns and the red eyes behind those clown mask? By AsepSyf",
+            "es": "Alleluia! Can you see the horns and the red eyes behind those clown mask? By AsepSyf",
+            "pt": "Alleluia! Can you see the horns and the red eyes behind those clown mask? By AsepSyf"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "devils_carnival",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 710,
+          "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bed",
-        "item_id": "67ab373a011f9732d8775d71",
+        "id": "6981dacbb94e4ce33de84caa",
+        "item_id": "6981d5b8a2774cefbbd3358d",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1349,93 +1710,62 @@
           "max": 0
         },
         "item": {
-          "_id": "67ab373a011f9732d8775d71",
-          "power": 75810000,
+          "_id": "6981d5b8a2774cefbbd3358d",
+          "power": 90500000,
           "width": 2,
           "name": {
-            "en": "Atilla's Core",
-            "cn": "Atilla`s Core",
-            "es": "Atilla`s Core",
-            "pt": "Atilla`s Core"
+            "en": "Uncle Hunters",
+            "cn": "Uncle Hunters",
+            "es": "Uncle Hunters",
+            "pt": "Uncle Hunters"
           },
           "description": {
-            "en": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "cn": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "es": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "pt": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity."
+            "en": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "cn": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "es": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "pt": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
+          "level": 3,
           "type": "merge",
-          "filename": "atillas_core",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1375,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "697cb0a4b94e4ce33de84bef",
-        "item_id": "67a3e83d79efd774f15e2878",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 33,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "67a3e83d79efd774f15e2878",
-          "power": 19200000,
-          "width": 2,
-          "name": {
-            "en": "Abyssal Lord",
-            "cn": "Abyssal Lord",
-            "es": "Abyssal Lord",
-            "pt": "Abyssal Lord"
-          },
-          "description": {
-            "en": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
-            "cn": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
-            "es": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
-            "pt": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "abyssal_lord",
+          "filename": "uncle_hunters",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 700,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 3000,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bf1",
-        "item_id": "67a3e83d79efd774f15e2878",
+        "id": "6981dacbb94e4ce33de84cac",
+        "item_id": null,
+        "amount": 500000000,
+        "currency": "RST",
+        "ttl_time": 0,
+        "required_level": 33,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6981daccb94e4ce33de84cae",
+        "item_id": "681ba4a5fbb67c190ed806b6",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1454,62 +1784,92 @@
           "max": 0
         },
         "item": {
-          "_id": "67a3e83d79efd774f15e2878",
-          "power": 19200000,
+          "_id": "681ba4a5fbb67c190ed806b6",
+          "power": 13130000,
           "width": 2,
           "name": {
-            "en": "Abyssal Lord",
-            "cn": "Abyssal Lord",
-            "es": "Abyssal Lord",
-            "pt": "Abyssal Lord"
+            "en": "Tea Time",
+            "cn": "Tea Time",
+            "es": "Tea Time",
+            "pt": "Tea Time"
           },
           "description": {
-            "en": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
-            "cn": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
-            "es": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!",
-            "pt": "The supreme ruler of the abyss, bringing game-changing power to your mining empire. The tides obey his command!"
+            "en": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "cn": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "es": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "pt": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "abyssal_lord",
+          "level": 1,
+          "type": "merge",
+          "filename": "tea_time",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 700,
+          "bonus": 1100,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bf3",
-        "item_id": null,
-        "amount": 500000000,
-        "currency": "RST",
+        "id": "6981daccb94e4ce33de84cb0",
+        "item_id": "681ba4a5fbb67c190ed806b6",
+        "amount": 1,
+        "currency": "",
         "ttl_time": 0,
         "required_level": 35,
-        "type": "money",
+        "type": "miner",
         "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "681ba4a5fbb67c190ed806b6",
+          "power": 13130000,
+          "width": 2,
+          "name": {
+            "en": "Tea Time",
+            "cn": "Tea Time",
+            "es": "Tea Time",
+            "pt": "Tea Time"
+          },
+          "description": {
+            "en": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "cn": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "es": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian.",
+            "pt": "Polite on the surface, brutal underneath — this miner blends calm calculation with merciless efficiency. One moment it’s steeping in silence, the next it’s tearing through blocks like a proper blockchain barbarian."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "tea_time",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 1100,
+          "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bf5",
-        "item_id": "697c9447a2774cefbbcd0679",
+        "id": "6981daccb94e4ce33de84cb2",
+        "item_id": "67c133ddb5e8c2c0f194d8da",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1528,41 +1888,41 @@
           "max": 0
         },
         "item": {
-          "_id": "697c9447a2774cefbbcd0679",
-          "power": 80000000,
+          "_id": "67c133ddb5e8c2c0f194d8da",
+          "power": 14000000,
           "width": 2,
           "name": {
-            "en": "Zeus",
-            "cn": "Zeus",
-            "es": "Zeus",
-            "pt": "Zeus"
+            "en": "Steel HODLer",
+            "cn": "Steel HODLer",
+            "es": "Steel HODLer",
+            "pt": "Steel HODLer"
           },
           "description": {
-            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
+            "en": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "cn": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "es": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "pt": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "zeus",
+          "level": 0,
+          "type": "basic",
+          "filename": "steel_hodler",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 2500,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 550,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bf7",
-        "item_id": "680f7246672b78a8fb910a82",
+        "id": "6981daccb94e4ce33de84cb4",
+        "item_id": "67c133ddb5e8c2c0f194d8dd",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1581,40 +1941,40 @@
           "max": 0
         },
         "item": {
-          "_id": "680f7246672b78a8fb910a82",
-          "power": 49800000,
+          "_id": "67c133ddb5e8c2c0f194d8dd",
+          "power": 36750000,
           "width": 2,
           "name": {
-            "en": "Amber Drakkar",
-            "cn": "Amber Drakkar",
-            "es": "Amber Drakkar",
-            "pt": "Amber Drakkar"
+            "en": "Steel HODLer",
+            "cn": "Steel HODLer",
+            "es": "Steel HODLer",
+            "pt": "Steel HODLer"
           },
           "description": {
-            "en": "Rising above the sea with unstoppable force, the Amber Drakkar cuts through the waves like a blade of pure light. Its journey is one of glory, its wake a trail of treasures beyond imagination, waiting for those who dare to command its power",
-            "cn": "Rising above the sea with unstoppable force, the Amber Drakkar cuts through the waves like a blade of pure light. Its journey is one of glory, its wake a trail of treasures beyond imagination, waiting for those who dare to command its power",
-            "es": "Rising above the sea with unstoppable force, the Amber Drakkar cuts through the waves like a blade of pure light. Its journey is one of glory, its wake a trail of treasures beyond imagination, waiting for those who dare to command its power",
-            "pt": "Rising above the sea with unstoppable force, the Amber Drakkar cuts through the waves like a blade of pure light. Its journey is one of glory, its wake a trail of treasures beyond imagination, waiting for those who dare to command its power"
+            "en": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "cn": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "es": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "pt": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 3,
+          "level": 1,
           "type": "merge",
-          "filename": "amber_drakkar",
+          "filename": "steel_hodler",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 900,
+          "bonus": 1100,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bf9",
-        "item_id": "697c9447a2774cefbbcd067f",
+        "id": "6981daccb94e4ce33de84cb6",
+        "item_id": "64c7bb33529ebabe1a45612e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1633,41 +1993,40 @@
           "max": 0
         },
         "item": {
-          "_id": "697c9447a2774cefbbcd067f",
-          "power": 270000000,
+          "_id": "64c7bb33529ebabe1a45612e",
+          "power": 26234880,
           "width": 2,
           "name": {
-            "en": "Zeus",
-            "cn": "Zeus",
-            "es": "Zeus",
-            "pt": "Zeus"
+            "en": "Sunset City M-23",
+            "cn": "Sunset City M-23",
+            "es": "Sunset City M-23",
+            "pt": "Sunset City M-23"
           },
           "description": {
-            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
+            "en": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "cn": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "es": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf",
+            "pt": "Witness the breathtaking beauty of Miami's skyline as it gets painted in warm hues of orange and pink with Sunset City M-23. Embrace the city lights and feel the rhythm of the metropolis while mining with this spectacular miner. By AsepSyf"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
+          "level": 4,
           "type": "merge",
-          "filename": "zeus",
+          "filename": "sunset_city_m_23",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 4500,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 767,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bfb",
-        "item_id": "6810c89e672b78a8fb96f1d6",
+        "id": "6981daccb94e4ce33de84cb8",
+        "item_id": "67c133ddb5e8c2c0f194d8e3",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1686,40 +2045,40 @@
           "max": 0
         },
         "item": {
-          "_id": "6810c89e672b78a8fb96f1d6",
-          "power": 76100000,
+          "_id": "67c133ddb5e8c2c0f194d8e3",
+          "power": 96470000,
           "width": 2,
           "name": {
-            "en": "Bananarchy",
-            "cn": "Bananarchy",
-            "es": "Bananarchy",
-            "pt": "Bananarchy"
+            "en": "Steel HODLer",
+            "cn": "Steel HODLer",
+            "es": "Steel HODLer",
+            "pt": "Steel HODLer"
           },
           "description": {
-            "en": "Embrace the chaos with this unconventional masterpiece. A banana stuck to the wall, just like your wealth: unexpected, bold, and ready to make a statement!",
-            "cn": "Embrace the chaos with this unconventional masterpiece. A banana stuck to the wall, just like your wealth: unexpected, bold, and ready to make a statement!",
-            "es": "Embrace the chaos with this unconventional masterpiece. A banana stuck to the wall, just like your wealth: unexpected, bold, and ready to make a statement!",
-            "pt": "Embrace the chaos with this unconventional masterpiece. A banana stuck to the wall, just like your wealth: unexpected, bold, and ready to make a statement!"
+            "en": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "cn": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "es": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power.",
+            "pt": "Forged in steel and designed for ultimate performance, this creation embodies strength and precision. It’s a true masterpiece of engineering power."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 3,
+          "level": 2,
           "type": "merge",
-          "filename": "bananarchy",
+          "filename": "steel_hodler",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 1600,
+          "bonus": 1700,
           "is_in_set": false
         }
       },
       {
-        "id": "697cb0a4b94e4ce33de84bfd",
-        "item_id": "697c9447a2774cefbbcd0685",
+        "id": "6981daccb94e4ce33de84cba",
+        "item_id": "6981d5b8a2774cefbbd33593",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1738,35 +2097,35 @@
           "max": 0
         },
         "item": {
-          "_id": "697c9447a2774cefbbcd0685",
-          "power": 780000000,
+          "_id": "6981d5b8a2774cefbbd33593",
+          "power": 238000000,
           "width": 2,
           "name": {
-            "en": "Zeus",
-            "cn": "Zeus",
-            "es": "Zeus",
-            "pt": "Zeus"
+            "en": "Uncle Hunters",
+            "cn": "Uncle Hunters",
+            "es": "Uncle Hunters",
+            "pt": "Uncle Hunters"
           },
           "description": {
-            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
-            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
+            "en": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "cn": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "es": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged.",
+            "pt": "Old-school jackets, cursed blades, and mysterious uncles with unfinished business — this squad hunts demons and bad wallets. Stylish, deadly, and just a bit unhinged."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 3,
+          "level": 4,
           "type": "merge",
-          "filename": "zeus",
+          "filename": "uncle_hunters",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 6500,
+          "bonus": 4400,
           "is_in_set": false
         }
       }
@@ -1774,203 +2133,203 @@
     "levels_config": [
       {
         "level": 1,
-        "level_xp": 500,
-        "required_xp": 500
+        "level_xp": 1000,
+        "required_xp": 1000
       },
       {
         "level": 2,
         "level_xp": 1000,
-        "required_xp": 1500
-      },
-      {
-        "level": 3,
-        "level_xp": 500,
         "required_xp": 2000
       },
       {
-        "level": 4,
-        "level_xp": 3500,
-        "required_xp": 5500
-      },
-      {
-        "level": 5,
-        "level_xp": 1500,
+        "level": 3,
+        "level_xp": 5000,
         "required_xp": 7000
       },
       {
-        "level": 6,
+        "level": 4,
         "level_xp": 4000,
         "required_xp": 11000
       },
       {
+        "level": 5,
+        "level_xp": 2000,
+        "required_xp": 13000
+      },
+      {
+        "level": 6,
+        "level_xp": 5000,
+        "required_xp": 18000
+      },
+      {
         "level": 7,
-        "level_xp": 1500,
-        "required_xp": 12500
+        "level_xp": 3000,
+        "required_xp": 21000
       },
       {
         "level": 8,
-        "level_xp": 12500,
-        "required_xp": 25000
+        "level_xp": 7000,
+        "required_xp": 28000
       },
       {
         "level": 9,
-        "level_xp": 5000,
+        "level_xp": 2000,
         "required_xp": 30000
       },
       {
         "level": 10,
-        "level_xp": 10000,
-        "required_xp": 40000
+        "level_xp": 25000,
+        "required_xp": 55000
       },
       {
         "level": 11,
-        "level_xp": 2500,
-        "required_xp": 42500
+        "level_xp": 5000,
+        "required_xp": 60000
       },
       {
         "level": 12,
-        "level_xp": 5000,
-        "required_xp": 47500
+        "level_xp": 11000,
+        "required_xp": 71000
       },
       {
         "level": 13,
-        "level_xp": 35000,
-        "required_xp": 82500
+        "level_xp": 30000,
+        "required_xp": 101000
       },
       {
         "level": 14,
-        "level_xp": 20000,
-        "required_xp": 102500
+        "level_xp": 45000,
+        "required_xp": 146000
       },
       {
         "level": 15,
         "level_xp": 15000,
-        "required_xp": 117500
+        "required_xp": 161000
       },
       {
         "level": 16,
-        "level_xp": 60000,
-        "required_xp": 177500
+        "level_xp": 50000,
+        "required_xp": 211000
       },
       {
         "level": 17,
-        "level_xp": 17500,
-        "required_xp": 195000
+        "level_xp": 750000,
+        "required_xp": 961000
       },
       {
         "level": 18,
-        "level_xp": 55000,
-        "required_xp": 250000
+        "level_xp": 400000,
+        "required_xp": 1361000
       },
       {
         "level": 19,
-        "level_xp": 100000,
-        "required_xp": 350000
+        "level_xp": 40000,
+        "required_xp": 1401000
       },
       {
         "level": 20,
-        "level_xp": 250000,
-        "required_xp": 600000
+        "level_xp": 1420000,
+        "required_xp": 2821000
       },
       {
         "level": 21,
-        "level_xp": 750000,
-        "required_xp": 1350000
+        "level_xp": 150000,
+        "required_xp": 2971000
       },
       {
         "level": 22,
-        "level_xp": 250000,
-        "required_xp": 1600000
+        "level_xp": 530000,
+        "required_xp": 3501000
       },
       {
         "level": 23,
-        "level_xp": 100000,
-        "required_xp": 1700000
+        "level_xp": 250000,
+        "required_xp": 3751000
       },
       {
         "level": 24,
-        "level_xp": 400000,
-        "required_xp": 2100000
+        "level_xp": 3000000,
+        "required_xp": 6751000
       },
       {
         "level": 25,
-        "level_xp": 2250000,
-        "required_xp": 4350000
+        "level_xp": 350000,
+        "required_xp": 7101000
       },
       {
         "level": 26,
-        "level_xp": 200000,
-        "required_xp": 4550000
+        "level_xp": 630000,
+        "required_xp": 7731000
       },
       {
         "level": 27,
-        "level_xp": 350000,
-        "required_xp": 4900000
+        "level_xp": 650000,
+        "required_xp": 8381000
       },
       {
         "level": 28,
-        "level_xp": 200000,
-        "required_xp": 5100000
+        "level_xp": 1170000,
+        "required_xp": 9551000
       },
       {
         "level": 29,
-        "level_xp": 2750000,
-        "required_xp": 7850000
+        "level_xp": 410000,
+        "required_xp": 9961000
       },
       {
         "level": 30,
-        "level_xp": 450000,
-        "required_xp": 8300000
+        "level_xp": 730000,
+        "required_xp": 10691000
       },
       {
         "level": 31,
-        "level_xp": 150000,
-        "required_xp": 8450000
+        "level_xp": 750000,
+        "required_xp": 11441000
       },
       {
         "level": 32,
-        "level_xp": 550000,
-        "required_xp": 9000000
+        "level_xp": 10000000,
+        "required_xp": 21441000
       },
       {
         "level": 33,
-        "level_xp": 2000000,
-        "required_xp": 11000000
+        "level_xp": 460000,
+        "required_xp": 21901000
       },
       {
         "level": 34,
-        "level_xp": 2500000,
-        "required_xp": 13500000
+        "level_xp": 820000,
+        "required_xp": 22721000
       },
       {
         "level": 35,
-        "level_xp": 500000,
-        "required_xp": 14000000
+        "level_xp": 850000,
+        "required_xp": 23571000
       },
       {
         "level": 36,
-        "level_xp": 5000000,
-        "required_xp": 19000000
+        "level_xp": 1000000,
+        "required_xp": 24571000
       },
       {
         "level": 37,
         "level_xp": 2000000,
-        "required_xp": 21000000
+        "required_xp": 26571000
       },
       {
         "level": 38,
-        "level_xp": 15000000,
-        "required_xp": 36000000
+        "level_xp": 2000000,
+        "required_xp": 28571000
       },
       {
         "level": 39,
-        "level_xp": 4000000,
-        "required_xp": 40000000
+        "level_xp": 10000000,
+        "required_xp": 38571000
       },
       {
         "level": 40,
-        "level_xp": 20000000,
-        "required_xp": 60000000
+        "level_xp": 30000000,
+        "required_xp": 68571000
       }
     ]
   }
