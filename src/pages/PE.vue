@@ -144,7 +144,7 @@ export default {
   inject: ['i18n'],
   data() {
     const boxesPrices = [1.45, 3.45, 8.95, 22.95]
-    const discounts = [0, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+    const discounts = [0, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
     const maxMultiplier = PeData.event.event.max_multiplier / 100
     const mult = []
     for (let i = 1; i <= maxMultiplier; i++) {
@@ -198,7 +198,7 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.45
+      let phXRLT = 0.65
       let feeXBox = 0.15
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
