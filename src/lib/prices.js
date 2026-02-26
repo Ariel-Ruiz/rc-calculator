@@ -20,6 +20,7 @@ export async function fetchAllPrices() {
     priceCache['RLT'] = 1
     priceCache['RST'] = 0.007
     priceCache['HMT'] = 1
+    priceCache['USDT'] = 1
 
     // guardamos en localStorage
     localStorage.setItem('priceCache', JSON.stringify(priceCache))

@@ -1,5 +1,14 @@
 <template>
   <div class="burning-container">
+    <!-- Maintenance Overlay -->
+    <div v-if="maintenance" class="maintenance-overlay">
+      <div class="maintenance-content">
+        <div class="maintenance-icon">&#9888;</div>
+        <h1 class="maintenance-title">{{ t.burning?.maintenanceTitle }}</h1>
+        <p class="maintenance-subtitle">{{ t.burning?.maintenanceSubtitle }}</p>
+      </div>
+    </div>
+
     <!-- Input Section -->
     <div class="burning-input">
       <h1 class="event-title">{{ t.burning?.title }}</h1>
@@ -221,6 +230,7 @@ export default {
   inject: ['i18n'],
   data() {
     return {
+      maintenance: false,
       storagePath: 'https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/',
       inputText: '',
       results: [],
@@ -261,8 +271,15 @@ export default {
       const option = this.sortOptions.find(o => o.value === this.sortBy)
       return option ? option.label : 'Sort'
     },
+    computedResults() {
+      return this.results.map(item => {
+        const points = this.calcularPuntos(item.power, item.bonus)
+        const pointsPerRlt = item.price > 0 ? Math.round(points / item.price) : item.pointsPerRlt
+        return { ...item, points, pointsPerRlt }
+      })
+    },
     sortedResults() {
-      const sorted = [...this.results]
+      const sorted = [...this.computedResults]
       switch (this.sortBy) {
         case 'points-asc':
           return sorted.sort((a, b) => a.points - b.points)
@@ -300,7 +317,7 @@ export default {
         const qty = this.selectedUids[uid]
         if (qty) {
           const uidNum = parseInt(uid)
-          const item = this.results.find(r => r.uid === uidNum)
+          const item = this.computedResults.find(r => r.uid === uidNum)
           if (item) {
             total += item.points * qty
           }
@@ -349,16 +366,16 @@ export default {
       let pointsXBonus = 1
 
       if (poderEnPhs > 10) {
-        pointsXPh = 12800
+        pointsXPh = 11200
         pointsXBonus = 40
       } else if (poderEnPhs >= 5) {
-        pointsXPh = 16000
+        pointsXPh = 14000
         pointsXBonus = 50
       } else if (poderEnPhs >= 1) {
-        pointsXPh = 20000
+        pointsXPh = 17500
         pointsXBonus = 62.5
       } else {
-        pointsXPh = 24800
+        pointsXPh = 21700
         pointsXBonus = 77.5
       }
 

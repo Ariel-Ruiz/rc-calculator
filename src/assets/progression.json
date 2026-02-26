@@ -1,8 +1,8 @@
 {
-  "multiplier": 0.1,
+  "multiplier": 0.2,
   "tasks": [
     {
-      "id": "698b3804b94e4ce33de84d6b",
+      "id": "699daf54b94e4ce33de84f21",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "698b3804b94e4ce33de84d6c",
+      "id": "699daf54b94e4ce33de84f22",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -44,10 +44,10 @@
       "sort": 2
     },
     {
-      "id": "698b3804b94e4ce33de84d6d",
+      "id": "699daf54b94e4ce33de84f23",
       "xp_type": "number",
-      "xp_reward": 150,
-      "amount": 6667,
+      "xp_reward": 250,
+      "amount": 4000,
       "tag": {
         "color": "",
         "text": "",
@@ -65,58 +65,77 @@
       "sort": 3
     },
     {
-      "id": "698b3804b94e4ce33de84d6e",
+      "id": "699daf54b94e4ce33de84f24",
       "xp_type": "number",
-      "xp_reward": 2000,
-      "amount": 500,
+      "xp_reward": 10000,
+      "amount": 100,
       "tag": {
         "color": "",
         "text": "",
         "text_color": ""
       },
-      "type": "season",
+      "type": "crafting_offers",
       "title": {
-        "en": "Spend 1 RLT in Event pass",
-        "cn": "Spend 1 RLT in Event pass"
+        "en": "Spend 1 RLT for Crafting offer",
+        "cn": "Spend 1 RLT for Crafting offer"
       },
       "description": {
-        "en": "Event pass",
-        "cn": "Event pass"
+        "en": "Crafting offer",
+        "cn": "Crafting offer"
       },
-      "sort": 4
+      "sort": 5
     }
   ],
   "event": {
     "event": {
-      "_id": "698b380377721a2aeef06b21",
-      "max_xp": 71000000,
+      "_id": "699daf53dc08e86393f51b94",
+      "max_xp": 64650000,
       "max_multiplier": 10000,
-      "max_level": 42,
+      "max_level": 50,
       "tag": {
-        "text": "",
-        "color": "",
-        "text_color": ""
+        "text": "50"
       },
       "progression_event_type": "default",
-      "end_date": "2026-02-13T15:00:00.000Z",
-      "last_updated": 1770731524464,
+      "end_date": "2026-02-27T15:00:00.000Z",
+      "last_updated": 1771941716534,
       "description": {
-        "en": "Build-A-Date",
-        "cn": "Build-A-Date"
+        "en": "The Great Stampede",
+        "cn": "The Great Stampede"
       },
       "title": {
-        "en": "Build-A-Date",
-        "cn": "Build-A-Date"
+        "en": "The Great Stampede",
+        "cn": "The Great Stampede"
       }
     },
     "rewards": [
       {
-        "id": "698b3804b94e4ce33de84d70",
+        "id": "699daf54b94e4ce33de84f26",
+        "item_id": null,
+        "amount": 1000000,
+        "currency": "",
+        "ttl_time": 604800000,
+        "required_level": 1,
+        "type": "power",
+        "title": {
+          "en": "Power",
+          "cn": "Power"
+        },
+        "description": {
+          "en": "Power Reward Description",
+          "cn": "Power Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "699daf54b94e4ce33de84f28",
         "item_id": null,
         "amount": 50000000,
         "currency": "RST",
         "ttl_time": 0,
-        "required_level": 1,
+        "required_level": 2,
         "type": "money",
         "title": {
           "en": "Money Title",
@@ -132,91 +151,33 @@
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d72",
-        "item_id": "6398ff12cc914df92b03d66c",
-        "amount": 1,
+        "id": "699daf54b94e4ce33de84f2a",
+        "item_id": null,
+        "amount": 10,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 2,
-        "type": "loot_box",
+        "required_level": 3,
+        "type": "season_pass_xp",
         "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
         },
         "description": {
-          "en": "Loot Box Reward Description",
-          "cn": "Loot Box Reward Description"
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "6398ff12cc914df92b03d66c",
-          "title": {
-            "en": "Common Hashboards Case",
-            "cn": "Common Hashboards Case"
-          },
-          "sold": 0,
-          "items": [
-            {
-              "type": "mutation_component",
-              "amount": 600,
-              "sort": 1,
-              "item_info": {
-                "name": {
-                  "en": "Common Hashboard",
-                  "cn": "Common Hashboard"
-                }
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 300,
-              "sort": 2,
-              "item_info": {
-                "name": {
-                  "en": "Common Hashboard",
-                  "cn": "Common Hashboard"
-                }
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 225,
-              "sort": 3,
-              "item_info": {
-                "name": {
-                  "en": "Common Hashboard",
-                  "cn": "Common Hashboard"
-                }
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 175,
-              "sort": 4,
-              "item_info": {
-                "name": {
-                  "en": "Common Hashboard",
-                  "cn": "Common Hashboard"
-                }
-              },
-              "base_color_hex": "ffffff"
-            }
-          ]
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d74",
+        "id": "699daf54b94e4ce33de84f2c",
         "item_id": "68306581e2da6536108ec0b8",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 3,
+        "required_level": 4,
         "type": "utility_item",
         "title": {
           "en": "Utility Item",
@@ -251,131 +212,169 @@
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d76",
-        "item_id": "63e61b1f457dbbcf9501b67b",
+        "id": "699daf54b94e4ce33de84f2e",
+        "item_id": "6571aa39ca8bfef34adcd9e9",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 4,
-        "type": "miner",
+        "required_level": 5,
+        "type": "rack",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Rack Title",
+          "cn": "Rack Title"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "63e61b1f457dbbcf9501b67b",
-          "power": 462000,
-          "width": 2,
           "name": {
-            "en": "Heartbeat",
-            "cn": "Heartbeat"
+            "en": "Wonder Rack 6",
+            "cn": "Wonder Rack 6"
           },
           "description": {
-            "en": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!",
-            "cn": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!"
+            "en": "Ho-ho-ho and here's a festive New Year's Wonder Rack, which is perfect for your miners and holiday gifts!",
+            "cn": "Ho-ho-ho and here's a festive New Year's Wonder Rack, which is perfect for your miners and holiday gifts!"
           },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "heartbeat",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
+          "_id": "6571aa39ca8bfef34adcd9e9",
+          "capacity": 6,
           "is_can_be_sold_on_mp": true,
-          "bonus": 61,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d78",
-        "item_id": null,
-        "amount": 1000000,
-        "currency": "",
-        "ttl_time": 604800000,
-        "required_level": 5,
-        "type": "power",
-        "title": {
-          "en": "Power",
-          "cn": "Power"
-        },
-        "description": {
-          "en": "Power Reward Description",
-          "cn": "Power Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "698b3804b94e4ce33de84d7a",
-        "item_id": "63e61b1f457dbbcf9501b67b",
-        "amount": 1,
+        "id": "699daf54b94e4ce33de84f30",
+        "item_id": "6454bcdf75f06df66d28af04",
+        "amount": 20,
         "currency": "",
         "ttl_time": 0,
         "required_level": 6,
-        "type": "miner",
+        "type": "battery",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Battery",
+          "cn": "Battery"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Battery Reward Description",
+          "cn": "Battery Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "63e61b1f457dbbcf9501b67b",
-          "power": 462000,
-          "width": 2,
-          "name": {
-            "en": "Heartbeat",
-            "cn": "Heartbeat"
-          },
           "description": {
-            "en": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!",
-            "cn": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!"
+            "en": "Batteries used to replenish electricity and save efficiency of the miners in your room.",
+            "cn": "Batteries used to replenish electricity and save efficiency of the miners in your room."
           },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "heartbeat",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 61,
-          "is_in_set": false
+          "_id": "6454bcdf75f06df66d28af04",
+          "level": 1
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d7c",
-        "item_id": "6398ffabcc914df92b07b935",
+        "id": "699daf54b94e4ce33de84f32",
+        "item_id": "6834276c6b8c472444c3725c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 7,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "12h Booster",
+            "cn": "12h Booster",
+            "es": "12h Booster",
+            "pt": "12h Booster"
+          },
+          "description": {
+            "en": "Booster will increase your basic power from minigames for 12 hours.",
+            "cn": "Booster will increase your basic power from minigames for 12 hours.",
+            "es": "Booster will increase your basic power from minigames for 12 hours.",
+            "pt": "Booster will increase your basic power from minigames for 12 hours."
+          },
+          "media": {
+            "preview_url": "static/img/market/utility_items/6834276c6b8c472444c3725c.gif?v=1748874570576"
+          },
+          "_id": "6834276c6b8c472444c3725c",
+          "type": "game_booster"
+        }
+      },
+      {
+        "id": "699daf54b94e4ce33de84f34",
+        "item_id": "670d64400dbe61e6fa0d1578",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 8,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "670d64400dbe61e6fa0d1578",
+          "power": 2999999,
+          "width": 2,
+          "name": {
+            "en": "Web4Map",
+            "cn": "Web4Map",
+            "es": "Web4Map",
+            "pt": "Web4Map"
+          },
+          "description": {
+            "en": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
+            "cn": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
+            "es": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
+            "pt": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "web4map",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 290,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf54b94e4ce33de84f36",
+        "item_id": "6398ffabcc914df92b07b935",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 9,
         "type": "loot_box",
         "title": {
           "en": "Loot Box",
@@ -449,96 +448,8 @@
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d7e",
-        "item_id": "63e61b20457dbbcf9501b689",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 8,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "63e61b20457dbbcf9501b689",
-          "power": 1212750,
-          "width": 2,
-          "name": {
-            "en": "Heartbeat",
-            "cn": "Heartbeat"
-          },
-          "description": {
-            "en": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!",
-            "cn": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 2,
-          "type": "merge",
-          "filename": "heartbeat",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 183,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "698b3804b94e4ce33de84d80",
-        "item_id": "61b3606767433d2dc58913a9",
-        "amount": 200,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 9,
-        "type": "mutation_component",
-        "title": {
-          "en": "Component Title",
-          "cn": "Component Title"
-        },
-        "description": {
-          "en": "Component Reward Description",
-          "cn": "Component Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "61b3606767433d2dc58913a9",
-          "name": {
-            "en": "Common Hashboard",
-            "cn": "Common Hashboard"
-          },
-          "mutation_components_rarity_groups_id": "619627a267433d2dc5355efb",
-          "rarity_group": {
-            "_id": "619627a267433d2dc5355efb",
-            "title": {
-              "en": "Common",
-              "cn": "Common"
-            },
-            "base_color_hex": "dddddd",
-            "sort": 0
-          },
-          "rarity_color_hex": "dddddd"
-        }
-      },
-      {
-        "id": "698b3804b94e4ce33de84d82",
-        "item_id": "68c3e858e804ea5083724c5e",
+        "id": "699daf54b94e4ce33de84f38",
+        "item_id": "670d64400dbe61e6fa0d1578",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -557,20 +468,20 @@
           "max": 0
         },
         "item": {
-          "_id": "68c3e858e804ea5083724c5e",
-          "power": 1000000,
+          "_id": "670d64400dbe61e6fa0d1578",
+          "power": 2999999,
           "width": 2,
           "name": {
-            "en": "Sun, Skin & Sin",
-            "cn": "Sun, Skin & Sin",
-            "es": "Sun, Skin & Sin",
-            "pt": "Sun, Skin & Sin"
+            "en": "Web4Map",
+            "cn": "Web4Map",
+            "es": "Web4Map",
+            "pt": "Web4Map"
           },
           "description": {
-            "en": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "cn": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "es": "I saved you a sunny spot. Come closer… I don't bite. Much.",
-            "pt": "I saved you a sunny spot. Come closer… I don't bite. Much."
+            "en": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
+            "cn": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
+            "es": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight.",
+            "pt": "Chart your course through the evolving web with Web4Map, a miner designed to navigate the intricate landscapes of Web 4.0. It maps out the future of blockchain, guiding you to hidden crypto opportunities with precision and foresight."
           },
           "created_by_title": {
             "link": "",
@@ -578,111 +489,61 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "sun_skin_&_sin",
+          "filename": "web4map",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 100,
+          "bonus": 290,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d84",
-        "item_id": "6398ff6dcc914df92b06255c",
-        "amount": 1,
+        "id": "699daf54b94e4ce33de84f3a",
+        "item_id": "6454bcdf75f06df66d28af04",
+        "amount": 10,
         "currency": "",
         "ttl_time": 0,
         "required_level": 11,
-        "type": "loot_box",
+        "type": "battery",
         "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
+          "en": "Battery",
+          "cn": "Battery"
         },
         "description": {
-          "en": "Loot Box Reward Description",
-          "cn": "Loot Box Reward Description"
+          "en": "Battery Reward Description",
+          "cn": "Battery Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "6398ff6dcc914df92b06255c",
-          "title": {
-            "en": "Common Fans Case",
-            "cn": "Common Fans Case"
+          "description": {
+            "en": "Batteries used to replenish electricity and save efficiency of the miners in your room.",
+            "cn": "Batteries used to replenish electricity and save efficiency of the miners in your room."
           },
-          "sold": 0,
-          "items": [
-            {
-              "type": "mutation_component",
-              "amount": 600,
-              "sort": 1,
-              "item_info": {
-                "name": {
-                  "en": "Common Fan",
-                  "cn": "Common Fan"
-                }
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 300,
-              "sort": 2,
-              "item_info": {
-                "name": {
-                  "en": "Common Fan",
-                  "cn": "Common Fan"
-                }
-              },
-              "base_color_hex": "ff33dd"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 225,
-              "sort": 3,
-              "item_info": {
-                "name": {
-                  "en": "Common Fan",
-                  "cn": "Common Fan"
-                }
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 175,
-              "sort": 4,
-              "item_info": {
-                "name": {
-                  "en": "Common Fan",
-                  "cn": "Common Fan"
-                }
-              },
-              "base_color_hex": "ffffff"
-            }
-          ]
+          "_id": "6454bcdf75f06df66d28af04",
+          "level": 1
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d86",
+        "id": "699daf54b94e4ce33de84f3c",
         "item_id": null,
-        "amount": 25,
+        "amount": 10000000,
         "currency": "",
-        "ttl_time": 0,
+        "ttl_time": 604800000,
         "required_level": 12,
-        "type": "season_pass_xp",
+        "type": "power",
         "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
+          "en": "Power",
+          "cn": "Power"
         },
         "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
+          "en": "Power Reward Description",
+          "cn": "Power Reward Description"
         },
         "range_count": {
           "min": 1,
@@ -690,64 +551,12 @@
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d88",
-        "item_id": "65be3aa443dcad8f6d11bb21",
-        "amount": 1,
+        "id": "699daf54b94e4ce33de84f3e",
+        "item_id": "6319f7baa8ce530569ed16b9",
+        "amount": 50,
         "currency": "",
         "ttl_time": 0,
         "required_level": 13,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "65be3aa443dcad8f6d11bb21",
-          "power": 1715000,
-          "width": 2,
-          "name": {
-            "en": "Lovey-Dovey",
-            "cn": "Lovey-Dovey",
-            "es": "Lovey-Dovey",
-            "pt": "Lovey-Dovey"
-          },
-          "description": {
-            "en": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "cn": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "es": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "pt": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too)."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "lovey_dovey",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 100,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "698b3804b94e4ce33de84d8a",
-        "item_id": "61b3604967433d2dc58893b0",
-        "amount": 1000,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 14,
         "type": "mutation_component",
         "title": {
           "en": "Component Title",
@@ -762,79 +571,88 @@
           "max": 0
         },
         "item": {
-          "_id": "61b3604967433d2dc58893b0",
+          "_id": "6319f7baa8ce530569ed16b9",
           "name": {
-            "en": "Common Wire",
-            "cn": "Common Wire"
+            "en": "Uncommon Fan",
+            "cn": "Uncommon Fan"
           },
-          "mutation_components_rarity_groups_id": "619627a267433d2dc5355efb",
+          "mutation_components_rarity_groups_id": "6319f60da8ce530569e56207",
           "rarity_group": {
-            "_id": "619627a267433d2dc5355efb",
+            "_id": "6319f60da8ce530569e56207",
             "title": {
-              "en": "Common",
-              "cn": "Common"
+              "en": "Uncommon",
+              "cn": "Uncommon"
             },
-            "base_color_hex": "dddddd",
-            "sort": 0
+            "base_color_hex": "2bd600",
+            "sort": 1
           },
-          "rarity_color_hex": "dddddd"
+          "rarity_color_hex": "2bd600"
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d8c",
-        "item_id": "65be3aa443dcad8f6d11bb21",
-        "amount": 1,
+        "id": "699daf54b94e4ce33de84f40",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 2,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 15,
-        "type": "miner",
+        "required_level": 14,
+        "type": "utility_item",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Utility Item",
+          "cn": "Utility Item"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "65be3aa443dcad8f6d11bb21",
-          "power": 1715000,
-          "width": 2,
           "name": {
-            "en": "Lovey-Dovey",
-            "cn": "Lovey-Dovey",
-            "es": "Lovey-Dovey",
-            "pt": "Lovey-Dovey"
+            "en": "Speed Up Item",
+            "cn": "Speed Up Item",
+            "es": "Speed Up Item",
+            "pt": "Speed Up Item"
           },
           "description": {
-            "en": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "cn": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "es": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "pt": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too)."
+            "en": "Ticket for speed up expedition",
+            "cn": "Ticket for speed up expedition",
+            "es": "Ticket for speed up expedition",
+            "pt": "Ticket for speed up expedition"
           },
-          "created_by_title": {
-            "link": "",
-            "text": ""
+          "media": {
+            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "lovey_dovey",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 100,
-          "is_in_set": false
+          "_id": "67d1c54536daea2ef871b292",
+          "type": "expedition_speed_up"
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d8e",
-        "item_id": "65be3aa443dcad8f6d11bb24",
+        "id": "699daf54b94e4ce33de84f42",
+        "item_id": null,
+        "amount": 25000000,
+        "currency": "",
+        "ttl_time": 604800000,
+        "required_level": 15,
+        "type": "power",
+        "title": {
+          "en": "Power",
+          "cn": "Power"
+        },
+        "description": {
+          "en": "Power Reward Description",
+          "cn": "Power Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "699daf54b94e4ce33de84f44",
+        "item_id": "67b8dc6aa0c26b377001e05e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -853,65 +671,45 @@
           "max": 0
         },
         "item": {
-          "_id": "65be3aa443dcad8f6d11bb24",
-          "power": 4501875,
-          "width": 2,
+          "_id": "67b8dc6aa0c26b377001e05e",
+          "power": 1000,
+          "width": 1,
           "name": {
-            "en": "Lovey-Dovey",
-            "cn": "Lovey-Dovey",
-            "es": "Lovey-Dovey",
-            "pt": "Lovey-Dovey"
+            "en": "Blueprint",
+            "cn": "Blueprint",
+            "es": "Blueprint",
+            "pt": "Blueprint"
           },
           "description": {
-            "en": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "cn": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "es": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "pt": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too)."
+            "en": "What can I do with just a blueprint?",
+            "cn": "What can I do with just a blueprint?",
+            "es": "What can I do with just a blueprint?",
+            "pt": "What can I do with just a blueprint?"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "lovey_dovey",
+          "level": 0,
+          "type": "basic",
+          "filename": "blueprint",
           "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
+            "frame_width": 58,
+            "frame_height": 40,
+            "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 240,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 0,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d90",
-        "item_id": null,
-        "amount": 50,
+        "id": "699daf54b94e4ce33de84f46",
+        "item_id": "683427626b8c472444c3725b",
+        "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 17,
-        "type": "season_pass_xp",
-        "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
-        },
-        "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "698b3804b94e4ce33de84d92",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 2,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 18,
         "type": "utility_item",
         "title": {
           "en": "Utility Item",
@@ -927,76 +725,205 @@
         },
         "item": {
           "name": {
-            "en": "Speed Up Item",
-            "cn": "Speed Up Item",
-            "es": "Speed Up Item",
-            "pt": "Speed Up Item"
+            "en": "24h Booster",
+            "cn": "24h Booster",
+            "es": "24h Booster",
+            "pt": "24h Booster"
           },
           "description": {
-            "en": "Ticket for speed up expedition",
-            "cn": "Ticket for speed up expedition",
-            "es": "Ticket for speed up expedition",
-            "pt": "Ticket for speed up expedition"
+            "en": "Booster will increase your basic power from minigames for 24 hours.",
+            "cn": "Booster will increase your basic power from minigames for 24 hours.",
+            "es": "Booster will increase your basic power from minigames for 24 hours.",
+            "pt": "Booster will increase your basic power from minigames for 24 hours."
           },
           "media": {
-            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
+            "preview_url": "static/img/market/utility_items/683427626b8c472444c3725b.gif?v=1748874570577"
           },
-          "_id": "67d1c54536daea2ef871b292",
-          "type": "expedition_speed_up"
+          "_id": "683427626b8c472444c3725b",
+          "type": "game_booster"
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d94",
-        "item_id": "63e61b21457dbbcf9501b697",
+        "id": "699daf54b94e4ce33de84f48",
+        "item_id": "63985e82cc914df92b1b5bcf",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 19,
-        "type": "miner",
+        "required_level": 18,
+        "type": "rack",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Rack Title",
+          "cn": "Rack Title"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "63e61b21457dbbcf9501b697",
-          "power": 3183495,
-          "width": 2,
           "name": {
-            "en": "Heartbeat",
-            "cn": "Heartbeat"
+            "en": "Hasher Rack 8",
+            "cn": "Hasher Rack 8"
           },
           "description": {
-            "en": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!",
-            "cn": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!"
+            "en": "Hasher Rack may look fragile, but it will hold your miners with ease, try it! Pure aesthetics.",
+            "cn": "Hasher Rack may look fragile, but it will hold your miners with ease, try it! Pure aesthetics."
           },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "heartbeat",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
+          "_id": "63985e82cc914df92b1b5bcf",
+          "capacity": 8,
           "is_can_be_sold_on_mp": true,
-          "bonus": 229,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d96",
-        "item_id": "67addb53fabdc202c4b3b218",
+        "id": "699daf54b94e4ce33de84f4a",
+        "item_id": "6944236f6ee229b98863aa18",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 19,
+        "type": "loot_box",
+        "title": {
+          "en": "Loot Box",
+          "cn": "Loot Box"
+        },
+        "description": {
+          "en": "Loot Box Reward Description",
+          "cn": "Loot Box Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6944236f6ee229b98863aa18",
+          "title": {
+            "en": "Freon Case Small",
+            "cn": "Freon Case Small"
+          },
+          "sold": 0,
+          "items": [
+            {
+              "type": "FREON",
+              "amount": 15000000000,
+              "sort": 0,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 7500000000,
+              "sort": 1,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 5000000000,
+              "sort": 2,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 2500000000,
+              "sort": 3,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 1500000000,
+              "sort": 4,
+              "item_info": null,
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "FREON",
+              "amount": 1250000000,
+              "sort": 5,
+              "item_info": null,
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "FREON",
+              "amount": 1000000000,
+              "sort": 6,
+              "item_info": null,
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "FREON",
+              "amount": 900000000,
+              "sort": 7,
+              "item_info": null,
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "FREON",
+              "amount": 750000000,
+              "sort": 8,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 700000000,
+              "sort": 9,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 650000000,
+              "sort": 10,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 600000000,
+              "sort": 11,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 500000000,
+              "sort": 12,
+              "item_info": null,
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "FREON",
+              "amount": 450000000,
+              "sort": 13,
+              "item_info": null,
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "FREON",
+              "amount": 400000000,
+              "sort": 14,
+              "item_info": null,
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "FREON",
+              "amount": 350000000,
+              "sort": 15,
+              "item_info": null,
+              "base_color_hex": "ffffff"
+            }
+          ]
+        }
+      },
+      {
+        "id": "699daf54b94e4ce33de84f4c",
+        "item_id": "699dab80dc08e86393f50f97",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1015,20 +942,20 @@
           "max": 0
         },
         "item": {
-          "_id": "67addb53fabdc202c4b3b218",
-          "power": 4000000,
+          "_id": "699dab80dc08e86393f50f97",
+          "power": 1500000,
           "width": 2,
           "name": {
-            "en": "Sweet Lies",
-            "cn": "Sweet Lies",
-            "es": "Sweet Lies",
-            "pt": "Sweet Lies"
+            "en": "FireStar",
+            "cn": "FireStar",
+            "es": "FireStar",
+            "pt": "FireStar"
           },
           "description": {
-            "en": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "cn": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "es": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "pt": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked."
+            "en": "Fast, First, Furious.",
+            "cn": "Fast, First, Furious.",
+            "es": "Fast, First, Furious.",
+            "pt": "Fast, First, Furious."
           },
           "created_by_title": {
             "link": "",
@@ -1036,20 +963,20 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "sweet_lies",
+          "filename": "firestar",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 450,
+          "bonus": 500,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3804b94e4ce33de84d98",
-        "item_id": "65be3aa443dcad8f6d11bb2c",
+        "id": "699daf54b94e4ce33de84f4e",
+        "item_id": "670517a172cf73b1d5d28f7e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1068,65 +995,45 @@
           "max": 0
         },
         "item": {
-          "_id": "65be3aa443dcad8f6d11bb2c",
-          "power": 11817435,
+          "_id": "670517a172cf73b1d5d28f7e",
+          "power": 5000000,
           "width": 2,
           "name": {
-            "en": "Lovey-Dovey",
-            "cn": "Lovey-Dovey",
-            "es": "Lovey-Dovey",
-            "pt": "Lovey-Dovey"
+            "en": "NeBULLa",
+            "cn": "NeBULLa",
+            "es": "NeBULLa",
+            "pt": "NeBULLa"
           },
           "description": {
-            "en": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "cn": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "es": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "pt": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too)."
+            "en": "Soar through the bullish skies with NeBULLa, a miner that charges ahead like a cosmic bull in the vast expanse of the blockchain. It harnesses the power of market surges, turning every block into a supernova of crypto profits in a galaxy of endless opportunity.",
+            "cn": "Soar through the bullish skies with NeBULLa, a miner that charges ahead like a cosmic bull in the vast expanse of the blockchain. It harnesses the power of market surges, turning every block into a supernova of crypto profits in a galaxy of endless opportunity.",
+            "es": "Soar through the bullish skies with NeBULLa, a miner that charges ahead like a cosmic bull in the vast expanse of the blockchain. It harnesses the power of market surges, turning every block into a supernova of crypto profits in a galaxy of endless opportunity.",
+            "pt": "Soar through the bullish skies with NeBULLa, a miner that charges ahead like a cosmic bull in the vast expanse of the blockchain. It harnesses the power of market surges, turning every block into a supernova of crypto profits in a galaxy of endless opportunity."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
-          "type": "merge",
-          "filename": "lovey_dovey",
+          "level": 0,
+          "type": "basic",
+          "filename": "nebulla",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 436,
+          "bonus": 400,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84d9a",
-        "item_id": null,
-        "amount": 200000000,
-        "currency": "RST",
-        "ttl_time": 0,
-        "required_level": 22,
-        "type": "money",
-        "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
-        },
-        "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "698b3805b94e4ce33de84d9c",
-        "item_id": "61b35fea67433d2dc586f7fe",
-        "amount": 2000,
+        "id": "699daf54b94e4ce33de84f50",
+        "item_id": "6319f81fa8ce530569eee9dd",
+        "amount": 180,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 23,
+        "required_level": 22,
         "type": "mutation_component",
         "title": {
           "en": "Component Title",
@@ -1141,133 +1048,31 @@
           "max": 0
         },
         "item": {
-          "_id": "61b35fea67433d2dc586f7fe",
+          "_id": "6319f81fa8ce530569eee9dd",
           "name": {
-            "en": "Common Fan",
-            "cn": "Common Fan"
+            "en": "Uncommon Wire",
+            "cn": "Uncommon Wire"
           },
-          "mutation_components_rarity_groups_id": "619627a267433d2dc5355efb",
+          "mutation_components_rarity_groups_id": "6319f60da8ce530569e56207",
           "rarity_group": {
-            "_id": "619627a267433d2dc5355efb",
+            "_id": "6319f60da8ce530569e56207",
             "title": {
-              "en": "Common",
-              "cn": "Common"
+              "en": "Uncommon",
+              "cn": "Uncommon"
             },
-            "base_color_hex": "dddddd",
-            "sort": 0
+            "base_color_hex": "2bd600",
+            "sort": 1
           },
-          "rarity_color_hex": "dddddd"
+          "rarity_color_hex": "2bd600"
         }
       },
       {
-        "id": "698b3805b94e4ce33de84d9e",
-        "item_id": "63e61b22457dbbcf9501b6a5",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 24,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "63e61b22457dbbcf9501b6a5",
-          "power": 8356740,
-          "width": 2,
-          "name": {
-            "en": "Heartbeat",
-            "cn": "Heartbeat"
-          },
-          "description": {
-            "en": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!",
-            "cn": "Feel the pulse of mining! Don’t you adore it? A cute factory of processing Love to Money!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 4,
-          "type": "merge",
-          "filename": "heartbeat",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 287,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "698b3805b94e4ce33de84da0",
-        "item_id": "67a4ccb179efd774f1608fc1",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 25,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "67a4ccb179efd774f1608fc1",
-          "power": 9500000,
-          "width": 2,
-          "name": {
-            "en": "Full of Love",
-            "cn": "Full of Love",
-            "es": "Full of Love",
-            "pt": "Full of Love"
-          },
-          "description": {
-            "en": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "cn": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "es": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "pt": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "full_of_love",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 850,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "698b3805b94e4ce33de84da2",
+        "id": "699daf54b94e4ce33de84f52",
         "item_id": "67d1c54536daea2ef871b292",
         "amount": 4,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 26,
+        "required_level": 23,
         "type": "utility_item",
         "title": {
           "en": "Utility Item",
@@ -1302,50 +1107,249 @@
         }
       },
       {
-        "id": "698b3805b94e4ce33de84da4",
-        "item_id": null,
-        "amount": 250,
+        "id": "699daf55b94e4ce33de84f54",
+        "item_id": "670517a172cf73b1d5d28f7e",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 24,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "670517a172cf73b1d5d28f7e",
+          "power": 5000000,
+          "width": 2,
+          "name": {
+            "en": "NeBULLa",
+            "cn": "NeBULLa",
+            "es": "NeBULLa",
+            "pt": "NeBULLa"
+          },
+          "description": {
+            "en": "Soar through the bullish skies with NeBULLa, a miner that charges ahead like a cosmic bull in the vast expanse of the blockchain. It harnesses the power of market surges, turning every block into a supernova of crypto profits in a galaxy of endless opportunity.",
+            "cn": "Soar through the bullish skies with NeBULLa, a miner that charges ahead like a cosmic bull in the vast expanse of the blockchain. It harnesses the power of market surges, turning every block into a supernova of crypto profits in a galaxy of endless opportunity.",
+            "es": "Soar through the bullish skies with NeBULLa, a miner that charges ahead like a cosmic bull in the vast expanse of the blockchain. It harnesses the power of market surges, turning every block into a supernova of crypto profits in a galaxy of endless opportunity.",
+            "pt": "Soar through the bullish skies with NeBULLa, a miner that charges ahead like a cosmic bull in the vast expanse of the blockchain. It harnesses the power of market surges, turning every block into a supernova of crypto profits in a galaxy of endless opportunity."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "nebulla",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 400,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f56",
+        "item_id": "67ab373a011f9732d8775d68",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 25,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "67ab373a011f9732d8775d68",
+          "power": 11000000,
+          "width": 2,
+          "name": {
+            "en": "Atilla's Core",
+            "cn": "Atilla`s Core",
+            "es": "Atilla`s Core",
+            "pt": "Atilla`s Core"
+          },
+          "description": {
+            "en": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
+            "cn": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
+            "es": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
+            "pt": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "atillas_core",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 350,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f58",
+        "item_id": "6454bcdf75f06df66d28af04",
+        "amount": 50,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 26,
+        "type": "battery",
+        "title": {
+          "en": "Battery",
+          "cn": "Battery"
+        },
+        "description": {
+          "en": "Battery Reward Description",
+          "cn": "Battery Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "description": {
+            "en": "Batteries used to replenish electricity and save efficiency of the miners in your room.",
+            "cn": "Batteries used to replenish electricity and save efficiency of the miners in your room."
+          },
+          "_id": "6454bcdf75f06df66d28af04",
+          "level": 1
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f5a",
+        "item_id": "67b8dc6aa0c26b377001e05e",
+        "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 27,
-        "type": "season_pass_xp",
+        "type": "miner",
         "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "67b8dc6aa0c26b377001e05e",
+          "power": 1000,
+          "width": 1,
+          "name": {
+            "en": "Blueprint",
+            "cn": "Blueprint",
+            "es": "Blueprint",
+            "pt": "Blueprint"
+          },
+          "description": {
+            "en": "What can I do with just a blueprint?",
+            "cn": "What can I do with just a blueprint?",
+            "es": "What can I do with just a blueprint?",
+            "pt": "What can I do with just a blueprint?"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "blueprint",
+          "frames_data": {
+            "frame_width": 58,
+            "frame_height": 40,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 0,
+          "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84da6",
-        "item_id": null,
-        "amount": 200000000,
-        "currency": "RST",
+        "id": "699daf55b94e4ce33de84f5c",
+        "item_id": "699dab80dc08e86393f50f97",
+        "amount": 1,
+        "currency": "",
         "ttl_time": 0,
         "required_level": 28,
-        "type": "money",
+        "type": "miner",
         "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "699dab80dc08e86393f50f97",
+          "power": 1500000,
+          "width": 2,
+          "name": {
+            "en": "FireStar",
+            "cn": "FireStar",
+            "es": "FireStar",
+            "pt": "FireStar"
+          },
+          "description": {
+            "en": "Fast, First, Furious.",
+            "cn": "Fast, First, Furious.",
+            "es": "Fast, First, Furious.",
+            "pt": "Fast, First, Furious."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "firestar",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 500,
+          "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84da8",
-        "item_id": "67a4ccb179efd774f1608fc1",
+        "id": "699daf55b94e4ce33de84f5e",
+        "item_id": "67ab373a011f9732d8775d68",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1364,14 +1368,14 @@
           "max": 0
         },
         "item": {
-          "_id": "67a4ccb179efd774f1608fc1",
-          "power": 9500000,
+          "_id": "67ab373a011f9732d8775d68",
+          "power": 11000000,
           "width": 2,
           "name": {
-            "en": "Full of Love",
-            "cn": "Full of Love",
-            "es": "Full of Love",
-            "pt": "Full of Love"
+            "en": "Atilla's Core",
+            "cn": "Atilla`s Core",
+            "es": "Atilla`s Core",
+            "pt": "Atilla`s Core"
           },
           "description": {
             "en": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
@@ -1385,20 +1389,20 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "full_of_love",
+          "filename": "atillas_core",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 850,
+          "bonus": 350,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84daa",
-        "item_id": "68d6693abedeb9a12e00b382",
+        "id": "699daf55b94e4ce33de84f60",
+        "item_id": "67b8dc6aa0c26b377001e05e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1417,20 +1421,20 @@
           "max": 0
         },
         "item": {
-          "_id": "68d6693abedeb9a12e00b382",
-          "power": 600000,
-          "width": 2,
+          "_id": "67b8dc6aa0c26b377001e05e",
+          "power": 1000,
+          "width": 1,
           "name": {
-            "en": "Best Friend",
-            "cn": "Best Friend",
-            "es": "Best Friend",
-            "pt": "Best Friend"
+            "en": "Blueprint",
+            "cn": "Blueprint",
+            "es": "Blueprint",
+            "pt": "Blueprint"
           },
           "description": {
-            "en": "That's what she said.",
-            "cn": "That's what she said.",
-            "es": "That's what she said.",
-            "pt": "That's what she said."
+            "en": "What can I do with just a blueprint?",
+            "cn": "What can I do with just a blueprint?",
+            "es": "What can I do with just a blueprint?",
+            "pt": "What can I do with just a blueprint?"
           },
           "created_by_title": {
             "link": "",
@@ -1438,59 +1442,163 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "best_friend",
+          "filename": "blueprint",
           "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
+            "frame_width": 58,
+            "frame_height": 40,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 300,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 0,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84dac",
-        "item_id": "61b3606767433d2dc58913a9",
-        "amount": 6000,
+        "id": "699daf55b94e4ce33de84f62",
+        "item_id": "6944236f6ee229b98863aa19",
+        "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 31,
-        "type": "mutation_component",
+        "type": "loot_box",
         "title": {
-          "en": "Component Title",
-          "cn": "Component Title"
+          "en": "Loot Box",
+          "cn": "Loot Box"
         },
         "description": {
-          "en": "Component Reward Description",
-          "cn": "Component Reward Description"
+          "en": "Loot Box Reward Description",
+          "cn": "Loot Box Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "61b3606767433d2dc58913a9",
-          "name": {
-            "en": "Common Hashboard",
-            "cn": "Common Hashboard"
+          "_id": "6944236f6ee229b98863aa19",
+          "title": {
+            "en": "Freon Case Medium",
+            "cn": "Freon Case Medium"
           },
-          "mutation_components_rarity_groups_id": "619627a267433d2dc5355efb",
-          "rarity_group": {
-            "_id": "619627a267433d2dc5355efb",
-            "title": {
-              "en": "Common",
-              "cn": "Common"
+          "sold": 0,
+          "items": [
+            {
+              "type": "FREON",
+              "amount": 100000000000,
+              "sort": 0,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
             },
-            "base_color_hex": "dddddd",
-            "sort": 0
-          },
-          "rarity_color_hex": "dddddd"
+            {
+              "type": "FREON",
+              "amount": 50000000000,
+              "sort": 1,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 25000000000,
+              "sort": 2,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 15000000000,
+              "sort": 3,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 10000000000,
+              "sort": 4,
+              "item_info": null,
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "FREON",
+              "amount": 7500000000,
+              "sort": 5,
+              "item_info": null,
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "FREON",
+              "amount": 5000000000,
+              "sort": 6,
+              "item_info": null,
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "FREON",
+              "amount": 3500000000,
+              "sort": 7,
+              "item_info": null,
+              "base_color_hex": "ff33dd"
+            },
+            {
+              "type": "FREON",
+              "amount": 2750000000,
+              "sort": 8,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 2500000000,
+              "sort": 9,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 2250000000,
+              "sort": 10,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 2000000000,
+              "sort": 11,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 1900000000,
+              "sort": 12,
+              "item_info": null,
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "FREON",
+              "amount": 1800000000,
+              "sort": 13,
+              "item_info": null,
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "FREON",
+              "amount": 1750000000,
+              "sort": 14,
+              "item_info": null,
+              "base_color_hex": "ffffff"
+            },
+            {
+              "type": "FREON",
+              "amount": 1700000000,
+              "sort": 15,
+              "item_info": null,
+              "base_color_hex": "ffffff"
+            }
+          ]
         }
       },
       {
-        "id": "698b3805b94e4ce33de84dae",
-        "item_id": "67addb53fabdc202c4b3b218",
+        "id": "699daf55b94e4ce33de84f64",
+        "item_id": "699dab80dc08e86393f50f9b",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1509,41 +1617,41 @@
           "max": 0
         },
         "item": {
-          "_id": "67addb53fabdc202c4b3b218",
-          "power": 4000000,
+          "_id": "699dab80dc08e86393f50f9b",
+          "power": 5000000,
           "width": 2,
           "name": {
-            "en": "Sweet Lies",
-            "cn": "Sweet Lies",
-            "es": "Sweet Lies",
-            "pt": "Sweet Lies"
+            "en": "FireStar",
+            "cn": "FireStar",
+            "es": "FireStar",
+            "pt": "FireStar"
           },
           "description": {
-            "en": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "cn": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "es": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "pt": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked."
+            "en": "Fast, First, Furious.",
+            "cn": "Fast, First, Furious.",
+            "es": "Fast, First, Furious.",
+            "pt": "Fast, First, Furious."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "sweet_lies",
+          "level": 1,
+          "type": "merge",
+          "filename": "firestar",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 450,
+          "bonus": 1000,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84db0",
-        "item_id": "67addb53fabdc202c4b3b21b",
+        "id": "699daf55b94e4ce33de84f66",
+        "item_id": "69983554dc08e86393f04e99",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1562,40 +1670,41 @@
           "max": 0
         },
         "item": {
-          "_id": "67addb53fabdc202c4b3b21b",
-          "power": 10500000,
-          "width": 2,
+          "_id": "69983554dc08e86393f04e99",
+          "power": 6000000,
+          "width": 1,
           "name": {
-            "en": "Sweet Lies",
-            "cn": "Sweet Lies",
-            "es": "Sweet Lies",
-            "pt": "Sweet Lies"
+            "en": "Red Envelope",
+            "cn": "Red Envelope",
+            "es": "Red Envelope",
+            "pt": "Red Envelope"
           },
           "description": {
-            "en": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "cn": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "es": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "pt": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked."
+            "en": "Collect Red Envelopes to get a discount on Lucky Red Hamster.",
+            "cn": "Collect Red Envelopes to get a discount on Lucky Red Hamster.",
+            "es": "Collect Red Envelopes to get a discount on Lucky Red Hamster.",
+            "pt": "Collect Red Envelopes to get a discount on Lucky Red Hamster."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "sweet_lies",
+          "level": 0,
+          "type": "basic",
+          "filename": "red_envelope",
           "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
+            "frame_width": 58,
+            "frame_height": 40,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 1000,
+          "bonus": 300,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84db2",
-        "item_id": "68d6693abedeb9a12e00b385",
+        "id": "699daf55b94e4ce33de84f68",
+        "item_id": "697c9447a2774cefbbcd0676",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1614,72 +1723,20 @@
           "max": 0
         },
         "item": {
-          "_id": "68d6693abedeb9a12e00b385",
-          "power": 15750000,
+          "_id": "697c9447a2774cefbbcd0676",
+          "power": 23000000,
           "width": 2,
           "name": {
-            "en": "Best Friend",
-            "cn": "Best Friend",
-            "es": "Best Friend",
-            "pt": "Best Friend"
+            "en": "Zeus",
+            "cn": "Zeus",
+            "es": "Zeus",
+            "pt": "Zeus"
           },
           "description": {
-            "en": "That's what she said.",
-            "cn": "That's what she said.",
-            "es": "That's what she said.",
-            "pt": "That's what she said."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "best_friend",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 700,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "698b3805b94e4ce33de84db4",
-        "item_id": "68d6693abedeb9a12e00b382",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 35,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68d6693abedeb9a12e00b382",
-          "power": 600000,
-          "width": 2,
-          "name": {
-            "en": "Best Friend",
-            "cn": "Best Friend",
-            "es": "Best Friend",
-            "pt": "Best Friend"
-          },
-          "description": {
-            "en": "That's what she said.",
-            "cn": "That's what she said.",
-            "es": "That's what she said.",
-            "pt": "That's what she said."
+            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
           },
           "created_by_title": {
             "link": "",
@@ -1687,20 +1744,55 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "best_friend",
+          "filename": "zeus",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 300,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 1500,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84db6",
-        "item_id": "698b16981a5d82de5b6f1ecf",
+        "id": "699daf55b94e4ce33de84f6a",
+        "item_id": "65bba192a19c394aa309623f",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 35,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Green Silk 8",
+            "cn": "Green Silk 8"
+          },
+          "description": {
+            "en": "The only thing better than red silk is the Green one. Some people also believe that green attracts money, so make your choice!",
+            "cn": "The only thing better than red silk is the Green one. Some people also believe that green attracts money, so make your choice!"
+          },
+          "_id": "65bba192a19c394aa309623f",
+          "capacity": 8,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f6c",
+        "item_id": "67b8dc6aa0c26b377001e05e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1719,20 +1811,20 @@
           "max": 0
         },
         "item": {
-          "_id": "698b16981a5d82de5b6f1ecf",
-          "power": 14000000,
-          "width": 2,
+          "_id": "67b8dc6aa0c26b377001e05e",
+          "power": 1000,
+          "width": 1,
           "name": {
-            "en": "Ray of love",
-            "cn": "Ray of love",
-            "es": "Ray of love",
-            "pt": "Ray of love"
+            "en": "Blueprint",
+            "cn": "Blueprint",
+            "es": "Blueprint",
+            "pt": "Blueprint"
           },
           "description": {
-            "en": "A warm pulse cuts through the chain, spreading harmony and hidden fortune. Love, amplified into pure crypto energy.",
-            "cn": "A warm pulse cuts through the chain, spreading harmony and hidden fortune. Love, amplified into pure crypto energy.",
-            "es": "A warm pulse cuts through the chain, spreading harmony and hidden fortune. Love, amplified into pure crypto energy.",
-            "pt": "A warm pulse cuts through the chain, spreading harmony and hidden fortune. Love, amplified into pure crypto energy."
+            "en": "What can I do with just a blueprint?",
+            "cn": "What can I do with just a blueprint?",
+            "es": "What can I do with just a blueprint?",
+            "pt": "What can I do with just a blueprint?"
           },
           "created_by_title": {
             "link": "",
@@ -1740,20 +1832,20 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "ray_of_love",
+          "filename": "blueprint",
           "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
+            "frame_width": 58,
+            "frame_height": 40,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1400,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 0,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84db8",
-        "item_id": "69497f6a003def9b186444be",
+        "id": "699daf55b94e4ce33de84f6e",
+        "item_id": "697c9447a2774cefbbcd0676",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1772,20 +1864,20 @@
           "max": 0
         },
         "item": {
-          "_id": "69497f6a003def9b186444be",
-          "power": 12500000,
+          "_id": "697c9447a2774cefbbcd0676",
+          "power": 23000000,
           "width": 2,
           "name": {
-            "en": "Uncle's gift",
-            "cn": "Uncle's gift",
-            "es": "Uncle's gift",
-            "pt": "Uncle's gift"
+            "en": "Zeus",
+            "cn": "Zeus",
+            "es": "Zeus",
+            "pt": "Zeus"
           },
           "description": {
-            "en": "You didn’t ask for it, but it found you anyway. Wrapped in dust and mystery, this enchanted relic mines with strange, generous power.",
-            "cn": "You didn’t ask for it, but it found you anyway. Wrapped in dust and mystery, this enchanted relic mines with strange, generous power.",
-            "es": "You didn’t ask for it, but it found you anyway. Wrapped in dust and mystery, this enchanted relic mines with strange, generous power.",
-            "pt": "You didn’t ask for it, but it found you anyway. Wrapped in dust and mystery, this enchanted relic mines with strange, generous power."
+            "en": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "cn": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "es": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens.",
+            "pt": "Lord of lightning, ruler of the chain — this miner strikes with divine force. Every block falls like thunder, every reward a bolt from the cryptic heavens."
           },
           "created_by_title": {
             "link": "",
@@ -1793,20 +1885,20 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "uncles_gift",
+          "filename": "zeus",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 600,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 1500,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84dba",
-        "item_id": "698b16981a5d82de5b6f1ecf",
+        "id": "699daf55b94e4ce33de84f70",
+        "item_id": "699dab80dc08e86393f50fa2",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1825,41 +1917,41 @@
           "max": 0
         },
         "item": {
-          "_id": "698b16981a5d82de5b6f1ecf",
-          "power": 14000000,
+          "_id": "699dab80dc08e86393f50fa2",
+          "power": 15000000,
           "width": 2,
           "name": {
-            "en": "Ray of love",
-            "cn": "Ray of love",
-            "es": "Ray of love",
-            "pt": "Ray of love"
+            "en": "FireStar",
+            "cn": "FireStar",
+            "es": "FireStar",
+            "pt": "FireStar"
           },
           "description": {
-            "en": "A warm pulse cuts through the chain, spreading harmony and hidden fortune. Love, amplified into pure crypto energy.",
-            "cn": "A warm pulse cuts through the chain, spreading harmony and hidden fortune. Love, amplified into pure crypto energy.",
-            "es": "A warm pulse cuts through the chain, spreading harmony and hidden fortune. Love, amplified into pure crypto energy.",
-            "pt": "A warm pulse cuts through the chain, spreading harmony and hidden fortune. Love, amplified into pure crypto energy."
+            "en": "Fast, First, Furious.",
+            "cn": "Fast, First, Furious.",
+            "es": "Fast, First, Furious.",
+            "pt": "Fast, First, Furious."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "ray_of_love",
+          "level": 2,
+          "type": "merge",
+          "filename": "firestar",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 1400,
+          "bonus": 1500,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84dbc",
-        "item_id": "67a4ccb179efd774f1608fc4",
+        "id": "699daf55b94e4ce33de84f72",
+        "item_id": "68839c6e1560d1f293c78e5c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1878,40 +1970,41 @@
           "max": 0
         },
         "item": {
-          "_id": "67a4ccb179efd774f1608fc4",
-          "power": 23000000,
+          "_id": "68839c6e1560d1f293c78e5c",
+          "power": 28000000,
           "width": 2,
           "name": {
-            "en": "Full of Love",
-            "cn": "Full of Love",
-            "es": "Full of Love",
-            "pt": "Full of Love"
+            "en": "Grand Crypto Canyon",
+            "cn": "Grand Crypto Canyon",
+            "es": "Grand Crypto Canyon",
+            "pt": "Grand Crypto Canyon"
           },
           "description": {
-            "en": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "cn": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "es": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "pt": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity."
+            "en": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "cn": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "es": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "pt": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "full_of_love",
+          "level": 0,
+          "type": "basic",
+          "filename": "grand_crypto_canyon",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 1300,
+          "bonus": 1100,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84dbe",
-        "item_id": "67a4ccb179efd774f1608fca",
+        "id": "699daf55b94e4ce33de84f74",
+        "item_id": "68839c6e1560d1f293c78e5c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1930,40 +2023,41 @@
           "max": 0
         },
         "item": {
-          "_id": "67a4ccb179efd774f1608fca",
-          "power": 50000000,
+          "_id": "68839c6e1560d1f293c78e5c",
+          "power": 28000000,
           "width": 2,
           "name": {
-            "en": "Full of Love",
-            "cn": "Full of Love",
-            "es": "Full of Love",
-            "pt": "Full of Love"
+            "en": "Grand Crypto Canyon",
+            "cn": "Grand Crypto Canyon",
+            "es": "Grand Crypto Canyon",
+            "pt": "Grand Crypto Canyon"
           },
           "description": {
-            "en": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "cn": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "es": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity.",
-            "pt": "Overflowing with warmth and fortune, this miner spreads crypto riches like heartfelt gifts. Each block unlocked is a token of affection, turning the blockchain into a never-ending love story of wealth and prosperity."
+            "en": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "cn": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "es": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "pt": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
-          "type": "merge",
-          "filename": "full_of_love",
+          "level": 0,
+          "type": "basic",
+          "filename": "grand_crypto_canyon",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 3000,
+          "bonus": 1100,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84dc0",
-        "item_id": "65be3aa443dcad8f6d11bb3c",
+        "id": "699daf55b94e4ce33de84f76",
+        "item_id": "699dab80dc08e86393f50fa9",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1982,44 +2076,80 @@
           "max": 0
         },
         "item": {
-          "_id": "65be3aa443dcad8f6d11bb3c",
-          "power": 81429600,
+          "_id": "699dab80dc08e86393f50fa9",
+          "power": 60000000,
           "width": 2,
           "name": {
-            "en": "Lovey-Dovey",
-            "cn": "Lovey-Dovey",
-            "es": "Lovey-Dovey",
-            "pt": "Lovey-Dovey"
+            "en": "FireStar",
+            "cn": "FireStar",
+            "es": "FireStar",
+            "pt": "FireStar"
           },
           "description": {
-            "en": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "cn": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "es": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too).",
-            "pt": "With Lovey-Dovey, your room will be filled not only with the joy of income but also with the warmth of love (and, of course, the warmth from the miner work too)."
+            "en": "Fast, First, Furious.",
+            "cn": "Fast, First, Furious.",
+            "es": "Fast, First, Furious.",
+            "pt": "Fast, First, Furious."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 4,
+          "level": 3,
           "type": "merge",
-          "filename": "lovey_dovey",
+          "filename": "firestar",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 1095,
+          "bonus": 3000,
           "is_in_set": false
         }
       },
       {
-        "id": "698b3805b94e4ce33de84dc2",
-        "item_id": "67addb53fabdc202c4b3b22d",
+        "id": "699daf55b94e4ce33de84f78",
+        "item_id": "6752f0a50b2ea70a05bc1c5b",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 42,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Stellar Rack 8",
+            "cn": "Stellar Rack 8"
+          },
+          "description": {
+            "en": "Light up your mining space! Adorned with cosmic cheer and holiday vibes.",
+            "cn": "Light up your mining space! Adorned with cosmic cheer and holiday vibes."
+          },
+          "_id": "6752f0a50b2ea70a05bc1c5b",
+          "capacity": 8,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f7a",
+        "item_id": "68ff7870ac102af307afc6b4",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 43,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -2034,20 +2164,386 @@
           "max": 0
         },
         "item": {
-          "_id": "67addb53fabdc202c4b3b22d",
-          "power": 191000000,
+          "_id": "68ff7870ac102af307afc6b4",
+          "power": 26000000,
           "width": 2,
           "name": {
-            "en": "Sweet Lies",
-            "cn": "Sweet Lies",
-            "es": "Sweet Lies",
-            "pt": "Sweet Lies"
+            "en": "Fire Idol",
+            "cn": "Fire Idol",
+            "es": "Fire Idol",
+            "pt": "Fire Idol"
           },
           "description": {
-            "en": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "cn": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "es": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked.",
-            "pt": "Looks like a dream, tastes like a scheme. A sugary masterpiece hiding just enough power to keep you hooked."
+            "en": "Cursed and ablaze, this blazing pumpkin relic fuels the chain with forbidden flame. Each block it touches burns brighter — and the legend only grows.",
+            "cn": "Cursed and ablaze, this blazing pumpkin relic fuels the chain with forbidden flame. Each block it touches burns brighter — and the legend only grows.",
+            "es": "Cursed and ablaze, this blazing pumpkin relic fuels the chain with forbidden flame. Each block it touches burns brighter — and the legend only grows.",
+            "pt": "Cursed and ablaze, this blazing pumpkin relic fuels the chain with forbidden flame. Each block it touches burns brighter — and the legend only grows."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "fire_idol",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1700,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f7c",
+        "item_id": "68ff7870ac102af307afc6b4",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 44,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "68ff7870ac102af307afc6b4",
+          "power": 26000000,
+          "width": 2,
+          "name": {
+            "en": "Fire Idol",
+            "cn": "Fire Idol",
+            "es": "Fire Idol",
+            "pt": "Fire Idol"
+          },
+          "description": {
+            "en": "Cursed and ablaze, this blazing pumpkin relic fuels the chain with forbidden flame. Each block it touches burns brighter — and the legend only grows.",
+            "cn": "Cursed and ablaze, this blazing pumpkin relic fuels the chain with forbidden flame. Each block it touches burns brighter — and the legend only grows.",
+            "es": "Cursed and ablaze, this blazing pumpkin relic fuels the chain with forbidden flame. Each block it touches burns brighter — and the legend only grows.",
+            "pt": "Cursed and ablaze, this blazing pumpkin relic fuels the chain with forbidden flame. Each block it touches burns brighter — and the legend only grows."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "fire_idol",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1700,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f7e",
+        "item_id": "68542b66411d00ff275c37ca",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 45,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "68542b66411d00ff275c37ca",
+          "power": 137900000,
+          "width": 2,
+          "name": {
+            "en": "Ra-Ham",
+            "cn": "Ra-Ham",
+            "es": "Ra-Ham",
+            "pt": "Ra-Ham"
+          },
+          "description": {
+            "en": "Blessed by the sun god himself, this regal rodent channels pharaonic power into the blockchain. With each sunrise, it harvests crypto like sacred treasure, ruling over blocks with the radiant might of an ancient dynasty.",
+            "cn": "Blessed by the sun god himself, this regal rodent channels pharaonic power into the blockchain. With each sunrise, it harvests crypto like sacred treasure, ruling over blocks with the radiant might of an ancient dynasty.",
+            "es": "Blessed by the sun god himself, this regal rodent channels pharaonic power into the blockchain. With each sunrise, it harvests crypto like sacred treasure, ruling over blocks with the radiant might of an ancient dynasty.",
+            "pt": "Blessed by the sun god himself, this regal rodent channels pharaonic power into the blockchain. With each sunrise, it harvests crypto like sacred treasure, ruling over blocks with the radiant might of an ancient dynasty."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "ra_ham",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2400,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f80",
+        "item_id": "68542b66411d00ff275c37ca",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 46,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "68542b66411d00ff275c37ca",
+          "power": 137900000,
+          "width": 2,
+          "name": {
+            "en": "Ra-Ham",
+            "cn": "Ra-Ham",
+            "es": "Ra-Ham",
+            "pt": "Ra-Ham"
+          },
+          "description": {
+            "en": "Blessed by the sun god himself, this regal rodent channels pharaonic power into the blockchain. With each sunrise, it harvests crypto like sacred treasure, ruling over blocks with the radiant might of an ancient dynasty.",
+            "cn": "Blessed by the sun god himself, this regal rodent channels pharaonic power into the blockchain. With each sunrise, it harvests crypto like sacred treasure, ruling over blocks with the radiant might of an ancient dynasty.",
+            "es": "Blessed by the sun god himself, this regal rodent channels pharaonic power into the blockchain. With each sunrise, it harvests crypto like sacred treasure, ruling over blocks with the radiant might of an ancient dynasty.",
+            "pt": "Blessed by the sun god himself, this regal rodent channels pharaonic power into the blockchain. With each sunrise, it harvests crypto like sacred treasure, ruling over blocks with the radiant might of an ancient dynasty."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "ra_ham",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2400,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f82",
+        "item_id": "68839c6e1560d1f293c78e5f",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 47,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "68839c6e1560d1f293c78e5f",
+          "power": 100000000,
+          "width": 2,
+          "name": {
+            "en": "Grand Crypto Canyon",
+            "cn": "Grand Crypto Canyon",
+            "es": "Grand Crypto Canyon",
+            "pt": "Grand Crypto Canyon"
+          },
+          "description": {
+            "en": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "cn": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "es": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "pt": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "grand_crypto_canyon",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2200,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f84",
+        "item_id": "68839c6e1560d1f293c78e65",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 48,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "68839c6e1560d1f293c78e65",
+          "power": 262500000,
+          "width": 2,
+          "name": {
+            "en": "Grand Crypto Canyon",
+            "cn": "Grand Crypto Canyon",
+            "es": "Grand Crypto Canyon",
+            "pt": "Grand Crypto Canyon"
+          },
+          "description": {
+            "en": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "cn": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "es": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep.",
+            "pt": "Carved by time and coded in ambition, this miner rides through the blockchain like a lone outlaw in the digital Wild West. Every block is a gold nugget waiting to be claimed—so saddle up, partner, the canyon’s rich and the rewards run deep."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "grand_crypto_canyon",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 3300,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f86",
+        "item_id": "687e35a3265f9bf2be1a8089",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 49,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "687e35a3265f9bf2be1a8089",
+          "power": 379900000,
+          "width": 2,
+          "name": {
+            "en": "Wild Crypto West",
+            "cn": "Wild Crypto West",
+            "es": "Wild Crypto West",
+            "pt": "Wild Crypto West"
+          },
+          "description": {
+            "en": "Blazing past the competition on the wild web frontier, this miner clocks in with unmatched speed. No brakes, no doubts—just pure acceleration through every block, chasing profit like it’s the last lap of the metaverse.",
+            "cn": "Blazing past the competition on the wild web frontier, this miner clocks in with unmatched speed. No brakes, no doubts—just pure acceleration through every block, chasing profit like it’s the last lap of the metaverse.",
+            "es": "Blazing past the competition on the wild web frontier, this miner clocks in with unmatched speed. No brakes, no doubts—just pure acceleration through every block, chasing profit like it’s the last lap of the metaverse.",
+            "pt": "Blazing past the competition on the wild web frontier, this miner clocks in with unmatched speed. No brakes, no doubts—just pure acceleration through every block, chasing profit like it’s the last lap of the metaverse."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "wild_crypto_west",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 3500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "699daf55b94e4ce33de84f88",
+        "item_id": "699dab80dc08e86393f50fb0",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 50,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "699dab80dc08e86393f50fb0",
+          "power": 180000000,
+          "width": 2,
+          "name": {
+            "en": "FireStar",
+            "cn": "FireStar",
+            "es": "FireStar",
+            "pt": "FireStar"
+          },
+          "description": {
+            "en": "Fast, First, Furious.",
+            "cn": "Fast, First, Furious.",
+            "es": "Fast, First, Furious.",
+            "pt": "Fast, First, Furious."
           },
           "created_by_title": {
             "link": "",
@@ -2055,13 +2551,14 @@
           },
           "level": 4,
           "type": "merge",
-          "filename": "sweet_lies",
+          "filename": "firestar",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 3250,
+          "bonus": 6000,
           "is_in_set": false
         }
       }
@@ -2189,93 +2686,133 @@
       },
       {
         "level": 25,
-        "level_xp": 2250000,
-        "required_xp": 4350000
+        "level_xp": 1250000,
+        "required_xp": 3350000
       },
       {
         "level": 26,
         "level_xp": 200000,
-        "required_xp": 4550000
+        "required_xp": 3550000
       },
       {
         "level": 27,
         "level_xp": 350000,
-        "required_xp": 4900000
+        "required_xp": 3900000
       },
       {
         "level": 28,
         "level_xp": 200000,
-        "required_xp": 5100000
+        "required_xp": 4100000
       },
       {
         "level": 29,
-        "level_xp": 2750000,
-        "required_xp": 7850000
+        "level_xp": 1750000,
+        "required_xp": 5850000
       },
       {
         "level": 30,
         "level_xp": 450000,
-        "required_xp": 8300000
+        "required_xp": 6300000
       },
       {
         "level": 31,
         "level_xp": 150000,
-        "required_xp": 8450000
+        "required_xp": 6450000
       },
       {
         "level": 32,
         "level_xp": 550000,
-        "required_xp": 9000000
+        "required_xp": 7000000
       },
       {
         "level": 33,
         "level_xp": 2000000,
-        "required_xp": 11000000
+        "required_xp": 9000000
       },
       {
         "level": 34,
         "level_xp": 2500000,
-        "required_xp": 13500000
+        "required_xp": 11500000
       },
       {
         "level": 35,
         "level_xp": 500000,
-        "required_xp": 14000000
+        "required_xp": 12000000
       },
       {
         "level": 36,
-        "level_xp": 5000000,
-        "required_xp": 19000000
+        "level_xp": 400000,
+        "required_xp": 12400000
       },
       {
         "level": 37,
-        "level_xp": 2000000,
-        "required_xp": 21000000
+        "level_xp": 2250000,
+        "required_xp": 14650000
       },
       {
         "level": 38,
-        "level_xp": 6000000,
-        "required_xp": 27000000
+        "level_xp": 1200000,
+        "required_xp": 15850000
       },
       {
         "level": 39,
-        "level_xp": 4000000,
-        "required_xp": 31000000
+        "level_xp": 1350000,
+        "required_xp": 17200000
       },
       {
         "level": 40,
-        "level_xp": 10000000,
-        "required_xp": 41000000
+        "level_xp": 1200000,
+        "required_xp": 18400000
       },
       {
         "level": 41,
-        "level_xp": 10000000,
-        "required_xp": 51000000
+        "level_xp": 3750000,
+        "required_xp": 22150000
       },
       {
         "level": 42,
-        "level_xp": 20000000,
-        "required_xp": 71000000
+        "level_xp": 800000,
+        "required_xp": 22950000
+      },
+      {
+        "level": 43,
+        "level_xp": 1150000,
+        "required_xp": 24100000
+      },
+      {
+        "level": 44,
+        "level_xp": 1550000,
+        "required_xp": 25650000
+      },
+      {
+        "level": 45,
+        "level_xp": 4000000,
+        "required_xp": 29650000
+      },
+      {
+        "level": 46,
+        "level_xp": 4500000,
+        "required_xp": 34150000
+      },
+      {
+        "level": 47,
+        "level_xp": 1500000,
+        "required_xp": 35650000
+      },
+      {
+        "level": 48,
+        "level_xp": 6000000,
+        "required_xp": 41650000
+      },
+      {
+        "level": 49,
+        "level_xp": 8000000,
+        "required_xp": 49650000
+      },
+      {
+        "level": 50,
+        "level_xp": 15000000,
+        "required_xp": 64650000
       }
     ]
   }

@@ -119,7 +119,7 @@
               </td>
               <td class='reward-image-cell' :style="{ backgroundImage: `url(${getRewardImage(reward)})` }">
                 <img
-                  v-if="reward.item?.level > 0"
+                  v-if="reward.item?.level > 0 && reward.type == 'miner'"
                   :src="stPath + `others/level_${reward.item.level + 1}.png`"
                   class='level-image'
                 />
@@ -198,7 +198,7 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.65
+      let phXRLT = 0.5
       let feeXBox = 0.15
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
@@ -209,7 +209,7 @@ export default {
               case 'RST': rewardsXRLT += reward.amount / 1e8; break
             }
             continue
-          case 'power': rewardsXRLT += (reward.amount / 1e6) * phXRLT; continue
+          // case 'power': rewardsXRLT += (reward.amount / 1e6) * phXRLT; continue
           case 'miner': rewardsXRLT += (reward.item.power / 1e6) * phXRLT; continue
         }
       }
@@ -314,6 +314,7 @@ export default {
         case 'power': filename = 'others/reward_power.png'; break
         case 'utility_item': filename = `others/${reward.item_id}.gif`; break
         case 'loot_box': filename = `box/${reward.item_id}.png`; break
+        case 'battery': filename = `others/${reward.item_id}.png`; break
         case 'mutation_component': filename = `mutation_component/${reward.item_id}.png`; break
         case 'rack': filename = `rack/${reward.item_id}.png`; break
         case 'miner': filename = `miner/${reward.item.filename}.gif`; break
@@ -337,6 +338,7 @@ export default {
         case 'utility_item': return (reward.amount > 1 ? reward.amount : '') + ' ' + reward.item.name.en
         case 'mutation_component': return (reward.amount > 1 ? reward.amount : '') + ' ' + reward.item.name.en
         case 'loot_box': return reward.item.title.en
+        case 'battery': return reward.title.en
         case 'rack':
         case 'miner': return reward.item.name.en
       }

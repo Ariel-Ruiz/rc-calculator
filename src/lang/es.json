@@ -77,6 +77,8 @@
     "minPoints": "Puntos Min",
     "minPtsRlt": "PtsxRLT Min",
     "maxPrice": "Precio Máx",
-    "apply": "APLICAR"
+    "apply": "APLICAR",
+    "maintenanceTitle": "En Mantenimiento",
+    "maintenanceSubtitle": "Estará disponible en unos minutos..."
   }
 }

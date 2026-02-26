@@ -94,6 +94,7 @@ import trxIcon from '../assets/symbols/trx.svg'
 import solIcon from '../assets/symbols/sol.svg'
 import polIcon from '../assets/symbols/matic.svg'
 import algoIcon from '../assets/symbols/algo.svg'
+import usdtIcon from '../assets/symbols/usdt.svg'
 import exampleImg from '../assets/example.png'
 
 const symbolIcons = {
@@ -110,6 +111,7 @@ const symbolIcons = {
   SOL: solIcon,
   POL: polIcon,
   ALGO: algoIcon,
+  USDT: usdtIcon
 }
 
 export default {
@@ -130,7 +132,8 @@ export default {
       { symbol: "ETH", power: "0 Zh/s", reward: "0 ETH", blockTime: "10:01" },
       { symbol: "TRX", power: "0 Zh/s", reward: "0 TRX", blockTime: "10:01" },
       { symbol: "SOL", power: "0 Zh/s", reward: "0 SOL", blockTime: "10:01" },
-      { symbol: "ALGO", power: "0 Zh/s", reward: "0 ALGO", blockTime: "10:01" }
+      { symbol: "ALGO", power: "0 Zh/s", reward: "0 ALGO", blockTime: "10:01" },
+      { symbol: "USDT", power: "0 Zh/s", reward: "0 USDT", blockTime: "10:01" }
     ]
 
     return {

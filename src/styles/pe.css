@@ -244,7 +244,7 @@
   color: var(--coin);
 }
 .text-danger {
-  color: var(--danger);
+  color: #c54a4a;
 }
 
 @media (max-width: 768px) {
