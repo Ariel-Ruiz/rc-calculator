@@ -1,9 +1,10 @@
 :root {
   --primary: #181928;
+  --secondary: #2f3045;
+  --tertiary: #514e72;
   --text-primary: #c3b0d0;
   --text-primary-active: #ffffff;
   --text-secondary: #2f3045;
-  --secondary: #2f3045;
   --accent: #03e1e4;
   --coin: #ffdc00;
   --success: #4caf50;

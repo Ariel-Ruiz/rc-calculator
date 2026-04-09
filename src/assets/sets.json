@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Radio Set",
+    "levels": [
+      {
+        "level": 1,
+        "required": 2,
+        "bonus_type": "bonus",
+        "bonus_value": 40
+      },
+      {
+        "level": 2,
+        "required": 3,
+        "bonus_type": "bonus",
+        "bonus_value": 60
+      },
+      {
+        "level": 3,
+        "required": 4,
+        "bonus_type": "bonus",
+        "bonus_value": 90
+      }
+    ]
+  },
+  {
+    "name": "Royal Set",
+    "levels": [
+      {
+        "level": 1,
+        "required": 2,
+        "bonus_type": "bonus",
+        "bonus_value": 25
+      },
+      {
+        "level": 2,
+        "required": 4,
+        "bonus_type": "bonus",
+        "bonus_value": 45
+      }
+    ]
+  },
+  {
+    "name": "Asgardian Set",
+    "levels": [
+      {
+        "level": 1,
+        "required": 2,
+        "bonus_type": "bonus",
+        "bonus_value": 8
+      },
+      {
+        "level": 2,
+        "required": 4,
+        "bonus_type": "bonus",
+        "bonus_value": 24
+      }
+    ]
+  },
+  {
+    "name": "Runners Set",
+    "levels": [
+      {
+        "level": 1,
+        "required": 2,
+        "bonus_type": "bonus",
+        "bonus_value": 10
+      },
+      {
+        "level": 2,
+        "required": 4,
+        "bonus_type": "bonus",
+        "bonus_value": 20
+      }
+    ]
+  },
+  {
+    "name": "Globes Set",
+    "levels": [
+      {
+        "level": 1,
+        "required": 2,
+        "bonus_type": "power",
+        "bonus_value": 10000000
+      },
+      {
+        "level": 2,
+        "required": 4,
+        "bonus_type": "power",
+        "bonus_value": 25000000
+      }
+    ]
+  },
+  {
+    "name": "Super Bros Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 7500000 },
+      { "level": 2, "required": 3, "bonus_type": "power", "bonus_value": 15000000 }
+    ]
+  },
+  {
+    "name": "Alien Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 5 },
+      { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 10 }
+    ]
+  },
+  {
+    "name": "Power-Up Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 5000000 },
+      { "level": 2, "required": 3, "bonus_type": "power", "bonus_value": 10000000 }
+    ]
+  },
+  {
+    "name": "Golden Farm Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 2 },
+      { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 7 }
+    ]
+  },
+  {
+    "name": "Silver Farm Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 2000000 },
+      { "level": 2, "required": 4, "bonus_type": "power", "bonus_value": 3000000 }
+    ]
+  },
+  {
+    "name": "Bronze Farm Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 1500000 },
+      { "level": 2, "required": 4, "bonus_type": "power", "bonus_value": 2500000 }
+    ]
+  },
+  {
+    "name": "Designer Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 15 },
+      { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 40 },
+      { "level": 3, "required": 6, "bonus_type": "bonus", "bonus_value": 75 },
+      { "level": 4, "required": 8, "bonus_type": "bonus", "bonus_value": 120 }
+    ]
+  },
+  {
+    "name": "IMPERIAL Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 5 },
+      { "level": 2, "required": 3, "bonus_type": "bonus", "bonus_value": 10 }
+    ]
+  },
+  {
+    "name": "Beer Pack Set",
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 5000000 },
+      { "level": 2, "required": 3, "bonus_type": "power", "bonus_value": 8000000 }
+    ]
+  }
+]

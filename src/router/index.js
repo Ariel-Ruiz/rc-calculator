@@ -4,6 +4,7 @@ import Home from '../pages/Home.vue'
 import Rollertap from '../pages/Rollertap.vue'
 import PE from '../pages/PE.vue'
 import BurningEvent from '../pages/BurningEvent.vue'
+import Rooms from '../pages/Rooms.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/burning-event',
     name: 'BurningEvent',
     component: BurningEvent
+  },
+  {
+    path: '/rooms',
+    name: 'Rooms',
+    component: Rooms
   }
 ]
 

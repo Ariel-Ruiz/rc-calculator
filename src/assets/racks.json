@@ -1,0 +1,578 @@
+[
+  {
+    "id": "5a4e4aca032ecc8ffe42ed81",
+    "name": "Regular Rack 8",
+    "size": 8,
+    "bonus": 0,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "65bba192a19c394aa309623f",
+    "name": "Green Silk 8",
+    "size": 8,
+    "bonus": 9,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "662a2ed024d9775f45fd6ea2",
+    "name": "Train Rack 8",
+    "size": 8,
+    "bonus": 8,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "64d6299b6d7008148575df79",
+    "name": "Silver Rack 8",
+    "size": 8,
+    "bonus": 7,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "64490fc1547cfab9a2759638",
+    "name": "Biohazard Rack 8",
+    "size": 8,
+    "bonus": 5,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "64490f83547cfab9a273c894",
+    "name": "Fury Rack 8",
+    "size": 8,
+    "bonus": 3,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "63985e43cc914df92b1a450e",
+    "name": "Jet-Black Rack 8",
+    "size": 8,
+    "bonus": 2,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "69490713568b0838531375a8",
+    "name": "Radio Rack 8",
+    "size": 8,
+    "bonus": 10,
+    "is_set": true,
+    "set": "Radio Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "690a70aae6988d19928d7101",
+    "name": "Royal Rack 8",
+    "size": 8,
+    "bonus": 10,
+    "is_set": true,
+    "set": "Royal Set",
+    "can_be_sold": true
+  },
+  {
+    "id": "6825aaa7e2da6536108ec08e",
+    "name": "Asgardian Rack 8",
+    "size": 8,
+    "bonus": 10,
+    "is_set": true,
+    "set": "Asgardian Set",
+    "can_be_sold": true
+  },
+  {
+    "id": "67c574e988262b01d3b36b8f",
+    "name": "Runners Rack 8",
+    "size": 8,
+    "bonus": 0,
+    "is_set": true,
+    "set": "Runners Set",
+    "can_be_sold": true
+  },
+  {
+    "id": "6752f0a50b2ea70a05bc1c5c",
+    "name": "Globes Rack 8",
+    "size": 8,
+    "bonus": 10,
+    "is_set": true,
+    "set": "Globes Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "673481872593c7f3e68fcc9a",
+    "name": "Retro Arcade Rack 6",
+    "size": 6,
+    "bonus": 0,
+    "is_set": true,
+    "set": "Super Bros Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "66fa99522d94b5111cd82dd6",
+    "name": "Alien Rack 8",
+    "size": 8,
+    "bonus": 0,
+    "is_set": true,
+    "set": "Alien Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "66d575abd864b944e0a13b78",
+    "name": "Power-Up Rack 6",
+    "size": 6,
+    "bonus": 0,
+    "is_set": true,
+    "set": "Power-Up Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "668d213a5a25375fc8033339",
+    "name": "GoldenOrganic Rack 8",
+    "size": 8,
+    "bonus": 0,
+    "is_set": true,
+    "set": "Golden Farm Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "668d20dd5a25375fc8033338",
+    "name": "SilverOrganic Rack 8",
+    "size": 8,
+    "bonus": 0,
+    "is_set": true,
+    "set": "Silver Farm Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "668d1fb75a25375fc8033336",
+    "name": "BronzeOrganic Rack 8",
+    "size": 8,
+    "bonus": 0,
+    "is_set": true,
+    "set": "Bronze Farm Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "684957c04df6651d4d5db391",
+    "name": "Showcase Rack 8",
+    "size": 8,
+    "bonus": 10,
+    "is_set": true,
+    "set": "Designer Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "66e96311559df49edab6ebcb",
+    "name": "DOMINION Rack 6",
+    "size": 6,
+    "bonus": 10,
+    "is_set": true,
+    "set": "IMPERIAL Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "66ead2f925874d2ef6d0db6a",
+    "name": "Beer Rack 6",
+    "size": 6,
+    "bonus": 0,
+    "is_set": true,
+    "set": "Beer Pack Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "66fa99512d94b5111cd82dd5",
+    "name": "Composite Rack 8",
+    "size": 8,
+    "bonus": 12,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false
+  },
+  {
+    "id": "66fa99502d94b5111cd82dd4",
+    "name": "Composite Rack 6",
+    "size": 6,
+    "bonus": 18,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false
+  },
+  {
+    "id": "69777907ce7eeebdbd02fedf",
+    "name": "Arch Rack 6",
+    "size": 6,
+    "bonus": 38,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "68dbc757c05c26894e019db1",
+    "name": "Server Rack 6",
+    "size": 6,
+    "bonus": 35,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6938408e4dba654aa4065fd9",
+    "name": "Library Rack 6",
+    "size": 6,
+    "bonus": 35,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "687953d5850c0148212ddf81",
+    "name": "Saloon Rack 6",
+    "size": 6,
+    "bonus": 30,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "68109bc36cce9be19c451f58",
+    "name": "Carved North Rack 6",
+    "size": 6,
+    "bonus": 30,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "69777907ce7eeebdbd02fee0",
+    "name": "Arch Rack 8",
+    "size": 8,
+    "bonus": 22,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "67ae5d6532b2ba8a144d0f09",
+    "name": "Stargazer Rack 6",
+    "size": 6,
+    "bonus": 22,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6752f0a40b2ea70a05bc1c5a",
+    "name": "Stellar Rack 6",
+    "size": 6,
+    "bonus": 20,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "68dbc757c05c26894e019db2",
+    "name": "Server Rack 8",
+    "size": 8,
+    "bonus": 20,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "68109bc6af17e9c540319ed1",
+    "name": "Carved North Rack 8",
+    "size": 8,
+    "bonus": 20,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6938408e4dba654aa4065fda",
+    "name": "Library Rack 8",
+    "size": 8,
+    "bonus": 20,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "687953dc850c0148212ddf82",
+    "name": "Saloon Rack 8",
+    "size": 8,
+    "bonus": 20,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "67ae5d6532b2ba8a144d0f0a",
+    "name": "Stargazer Rack 8",
+    "size": 8,
+    "bonus": 17,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "668d22a95a25375fc803333b",
+    "name": "Plant Rack 6",
+    "size": 6,
+    "bonus": 16,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "65bba192a19c394aa3096241",
+    "name": "Green Silk 6",
+    "size": 6,
+    "bonus": 15,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6752f0a50b2ea70a05bc1c5b",
+    "name": "Stellar Rack 8",
+    "size": 8,
+    "bonus": 15,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "662a2ed024d9775f45fd6ea4",
+    "name": "Train Rack 6",
+    "size": 6,
+    "bonus": 14,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6571ab76ca8bfef34adcd9eb",
+    "name": "Festive Rack 6",
+    "size": 6,
+    "bonus": 14,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "64d629ee6d7008148575df7a",
+    "name": "Neon Rack 6",
+    "size": 6,
+    "bonus": 12,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "662a2ed024d9775f45fd6ea0",
+    "name": "Rail Rack 6",
+    "size": 6,
+    "bonus": 12,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "64d629216d7008148575df78",
+    "name": "Silver Rack 6",
+    "size": 6,
+    "bonus": 11,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "668d22fc5a25375fc803333c",
+    "name": "Plant Rack 8",
+    "size": 8,
+    "bonus": 10,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "645a47a0eccd3c43207474cc",
+    "name": "Biohazard Rack 6",
+    "size": 6,
+    "bonus": 10,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "65bba192a19c394aa309623d",
+    "name": "Red Silk 6",
+    "size": 6,
+    "bonus": 8,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "645a47a0eccd3c43207474ca",
+    "name": "Golden Rack 6",
+    "size": 6,
+    "bonus": 8,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6436c9a4547cfab9a2b08fe8",
+    "name": "Hasher Rack 6",
+    "size": 6,
+    "bonus": 7,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6538e2d9ca0c3f24592a22c4",
+    "name": "WebTech 6",
+    "size": 6,
+    "bonus": 7,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6571ab76ca8bfef34adcd9ea",
+    "name": "Festive Rack 8",
+    "size": 8,
+    "bonus": 7,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6538e1ffca0c3f24592559a0",
+    "name": "WebTech 8",
+    "size": 8,
+    "bonus": 6,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "662a2ed024d9775f45fd6e9e",
+    "name": "Rail Rack 8",
+    "size": 8,
+    "bonus": 6,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "645a47a0eccd3c43207474cb",
+    "name": "Golden Rack 8",
+    "size": 8,
+    "bonus": 6,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "64d62a7d6d7008148575df7b",
+    "name": "Neon Rack 8",
+    "size": 8,
+    "bonus": 6,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "64d6284e6d7008148575df77",
+    "name": "Swedish Miracle Rack 8",
+    "size": 8,
+    "bonus": 6,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "63985e82cc914df92b1b5bcf",
+    "name": "Hasher Rack 8",
+    "size": 8,
+    "bonus": 5,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "65bba192a19c394aa309623b",
+    "name": "Red Silk 8",
+    "size": 8,
+    "bonus": 5,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "64d627ad6d7008148575df76",
+    "name": "Swedish Miracle Rack 6",
+    "size": 6,
+    "bonus": 5,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "645a47a0eccd3c43207474cd",
+    "name": "Fury Rack 6",
+    "size": 6,
+    "bonus": 4,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "63e140e4547cfab9a21d7d2b",
+    "name": "Jet-Black Rack 6",
+    "size": 6,
+    "bonus": 3,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6571aa39ca8bfef34adcd9e9",
+    "name": "Wonder Rack 6",
+    "size": 6,
+    "bonus": 2,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "63867205f4875ce94e93453b",
+    "name": "Wonder Rack 8",
+    "size": 8,
+    "bonus": 0.5,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "5a4e05a1032ecc87ad30021f",
+    "name": "Regular Rack 6",
+    "size": 6,
+    "bonus": 0,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  }
+]

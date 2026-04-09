@@ -280,6 +280,7 @@ export default {
     },
     sortedResults() {
       const sorted = [...this.computedResults]
+      // return sorted.sort((a, b) => b.points - a.points)
       switch (this.sortBy) {
         case 'points-asc':
           return sorted.sort((a, b) => a.points - b.points)
@@ -365,18 +366,30 @@ export default {
       let pointsXPh = 1
       let pointsXBonus = 1
 
-      if (poderEnPhs > 10) {
+      if (poderEnPhs >= 20) {
         pointsXPh = 11200
         pointsXBonus = 40
-      } else if (poderEnPhs >= 5) {
+      } else if (poderEnPhs >= 7) {
+        pointsXPh = 21000
+        pointsXBonus = 75
+      }  else if (poderEnPhs >= 5) {
         pointsXPh = 14000
         pointsXBonus = 50
-      } else if (poderEnPhs >= 1) {
+      } else if (poderEnPhs >= 2) {
         pointsXPh = 17500
         pointsXBonus = 62.5
+      } else if (poderEnPhs > 1.2) {
+        pointsXPh = 26250
+        pointsXBonus = 94
+      } else if (poderEnPhs >= 1) {
+        pointsXPh = 17500
+        pointsXBonus = 63
+      } else if (poderEnPhs > 0.5) {
+        pointsXPh = 32600
+        pointsXBonus = 63
       } else {
         pointsXPh = 21700
-        pointsXBonus = 77.5
+        pointsXBonus = 78
       }
 
       let puntos = poderEnPhs * pointsXPh + (pointsXBonus * valorBonus)

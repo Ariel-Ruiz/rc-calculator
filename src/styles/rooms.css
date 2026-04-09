@@ -1,0 +1,1896 @@
+/* ========== ROOMS PAGE LAYOUT ========== */
+.rooms-page {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+/* ========== LEFT PANEL - IMPORT ========== */
+.rooms-import {
+  width: 250px;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+.rooms-import .event-title {
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 0.5rem 0;
+}
+
+.rooms-import-example {
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid var(--secondary);
+  cursor: pointer;
+  transition: border-color 0.2s;
+  margin-bottom: 0.6rem;
+}
+
+.rooms-import-example:hover {
+  border-color: var(--accent);
+}
+
+.rooms-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.5rem;
+  background: var(--secondary);
+  color: var(--text-primary);
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.85em;
+  resize: vertical;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.rooms-textarea::placeholder {
+  color: var(--text-primary);
+  opacity: 0.5;
+}
+
+.rooms-import-buttons {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.rooms-import-buttons button {
+  margin: 0;
+  padding: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.rooms-btn-full {
+  width: 100%;
+}
+
+.rooms-btn-add {
+  background: var(--accent);
+  color: var(--text-secondary);
+}
+
+.rooms-btn-clear-rooms {
+  background: var(--tertiary);
+  color: var(--text-primary-active);
+  border: none;
+  flex: 1;
+}
+
+.rooms-btn-clear {
+  background: var(--danger);
+  color: white;
+  border: none;
+}
+
+/* Active Sets */
+.rooms-active-sets {
+  margin-top: 0.8rem;
+  background: var(--secondary);
+  border-radius: 6px;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.rooms-active-sets-title {
+  font-size: 0.7em;
+  font-weight: 800;
+  color: var(--text-primary-active);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.rooms-set-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.4rem;
+  background: var(--primary);
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+  border-left: 3px solid var(--accent);
+}
+
+.rooms-set-item:last-child {
+  margin-bottom: 0;
+}
+
+.rooms-set-badge {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.rooms-set-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.rooms-set-name {
+  font-size: 0.6em;
+  font-weight: 700;
+  color: var(--text-primary-active);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rooms-set-bonuses {
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+}
+
+.rooms-set-bonus-tag {
+  font-size: 0.5em;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.rooms-set-bonus-tag.bonus {
+  background: rgba(3, 225, 228, 0.15);
+  color: var(--accent);
+}
+
+.rooms-set-bonus-tag.power {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--success);
+}
+
+.rooms-set-level {
+  font-size: 0.55em;
+  font-weight: 800;
+  color: var(--coin);
+  background: rgba(255, 220, 0, 0.1);
+  padding: 2px 5px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ========== CENTER PANEL ========== */
+.rooms-center {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Top section: description + sim area side by side */
+.rooms-top-section {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+  align-items: stretch;
+}
+
+.rooms-description-box {
+  flex: 1;
+  background: var(--secondary);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  min-width: 0;
+}
+
+.rooms-description {
+  font-size: 0.8em;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Simulation area (right side of top section) */
+.rooms-sim-area {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 260px;
+}
+
+/* Simulation button - separate, standalone */
+.rooms-sim-btn {
+  width: 100%;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.7em;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #3a3b55;
+  color: var(--text-primary-active);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.rooms-sim-btn:hover {
+  background: #4a4b65;
+  color: var(--text-primary-active);
+}
+
+.rooms-sim-btn.active {
+  background: var(--accent);
+  color: var(--text-secondary);
+  box-shadow: 0 0 12px rgba(3, 225, 228, 0.3);
+}
+
+/* Stats block (stats + undo/redo + miners count) - single connected box */
+.rooms-stats-block {
+  background: var(--secondary);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Stats box - centered, two rows */
+.rooms-stats-box {
+  padding: 0.35rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.1rem;
+}
+
+.rooms-stats-line {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rooms-stat-power {
+  font-size: 0.85em;
+  font-weight: 800;
+  color: var(--text-primary-active);
+}
+
+.rooms-stat-bonus {
+  font-size: 0.85em;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.rooms-stat-sep {
+  font-size: 0.65em;
+  color: var(--text-primary);
+  opacity: 0.3;
+}
+
+.rooms-stat-change {
+  font-size: 0.8em;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.rooms-stat-change.positive { color: var(--success); }
+.rooms-stat-change.negative { color: var(--danger); }
+.rooms-stat-change.neutral { color: var(--text-primary); opacity: 0.5; }
+
+/* Raw miners power bar */
+.rooms-raw-power-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.2rem 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.rooms-raw-power-text {
+  font-size: 0.6em;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Miners count bar + undo/redo */
+.rooms-miners-count-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 0.4rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.rooms-miners-count-text {
+  font-size: 0.6em;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Undo / Redo */
+.rooms-undo-redo {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.rooms-undo-redo button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.rooms-undo-redo button:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.rooms-undo-redo button:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* Room tabs */
+.rooms-tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.rooms-tab {
+  width: 36px;
+  height: 36px;
+  font-size: 0.8em;
+  font-weight: 700;
+  border: 2px solid var(--tertiary);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--secondary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.rooms-tab:hover:not(.inactive-room) {
+  border-color: var(--text-primary);
+}
+
+.rooms-tab.active {
+  border-color: var(--tertiary);
+  color: var(--text-primary-active);
+  background: var(--tertiary);
+}
+
+.rooms-tab.inactive-room {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Room grid container */
+.rooms-grid-container {
+  border-radius: 0 6px 6px 6px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--secondary);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 720 / 450;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+
+.rooms-grid-container:active {
+  cursor: grabbing;
+}
+
+.rooms-grid-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.rooms-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Carousel slide transition */
+.room-slide-right-enter-active,
+.room-slide-right-leave-active,
+.room-slide-left-enter-active,
+.room-slide-left-leave-active {
+  transition: transform 0.35s ease;
+}
+
+/* Both elements visible during transition (no mode="out-in") */
+.room-slide-right-leave-active,
+.room-slide-left-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.room-slide-right-enter {
+  transform: translateX(100%);
+}
+
+.room-slide-right-leave-to {
+  transform: translateX(-100%);
+}
+
+.room-slide-left-enter {
+  transform: translateX(-100%);
+}
+
+.room-slide-left-leave-to {
+  transform: translateX(100%);
+}
+
+.rooms-grid-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Pair of racks (2 side by side, tight gap) */
+.room-rack-pair {
+  display: flex;
+  gap: 4px;
+}
+
+/* Rack cell in grid */
+.room-rack-cell {
+  width: 80px;
+  height: 120px;
+  position: relative;
+}
+
+/* Slot with rack background */
+.room-rack-cell.has-slot {
+  background: rgba(24, 25, 40, 0.75);
+  border: 2px solid var(--tertiary);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Empty slot - invisible */
+.room-rack-cell.empty-slot {
+  width: 80px;
+  height: 120px;
+  background: transparent;
+  border: none;
+}
+
+.room-rack-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Rack image: scaled up to compensate for transparent padding in source images */
+/* Source images are 126x100 with significant transparent margins */
+.room-rack-img {
+  position: absolute !important;
+  bottom: -15% !important;
+  left: -25% !important;
+  width: 150% !important;
+  height: 130% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+}
+
+/* Narrow racks: extra scale to compensate thinner images */
+.room-rack-img.rack-img-narrow {
+  left: -40% !important;
+  width: 180% !important;
+  height: 150% !important;
+  bottom: -25% !important;
+}
+
+/* 6-cell rack image: shorter, anchored to bottom */
+.room-rack-img.rack-img-6 {
+  height: 105% !important;
+  bottom: -15% !important;
+}
+
+.room-rack-img.rack-img-6.rack-img-narrow {
+  left: -40% !important;
+  width: 180% !important;
+  height: 120% !important;
+  bottom: -20% !important;
+}
+
+/* Miners overlay: sits on top of rack image */
+.room-miners-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0;
+  padding: 0 15%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* 8-cell overlay: 4 rows */
+.room-miners-overlay.overlay-8 {
+  grid-template-rows: repeat(4, 1fr);
+  top: 8px;
+  bottom: 22px;
+}
+
+/* 8-cell narrow racks: adjusted overlay and miner sizes */
+.room-miners-overlay.overlay-narrow {
+  top: 2px;
+  bottom: 19px;
+}
+
+.overlay-narrow .room-miner-cell .miner-thumb {
+  top: -35%;
+  width: 160%;
+  height: 192%;
+}
+
+.overlay-narrow .room-miner-cell.span-2 .miner-thumb {
+  top: -33%;
+  width: 90%;
+  height: 170%;
+}
+
+/* Special rack image */
+.room-rack-img.rack-img-6.rack-img-special {
+  height: 65% !important;
+  bottom: 8% !important;
+}
+
+/* Special rack overlay */
+.room-miners-overlay.overlay-6.overlay-special {
+  bottom: 22px;
+  height: 58%;
+  padding: 0 15%;
+}
+
+/* 6-cell narrow racks: adjusted overlay */
+.room-miners-overlay.overlay-6.overlay-narrow {
+  bottom: 19px;
+  height: 63%;
+  padding: 0 18%;
+}
+
+/* 6-cell overlay: 3 rows, aligned to bottom with rack */
+.room-miners-overlay.overlay-6 {
+  grid-template-rows: repeat(3, 1fr);
+  top: auto;
+  bottom: 18px;
+  height: 56%;
+  padding: 0 15%;
+}
+
+.room-miner-cell {
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
+}
+
+
+.room-miner-cell.span-2 {
+  grid-column: span 2;
+}
+
+.room-miner-cell .miner-thumb {
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 170%;
+  object-fit: contain;
+}
+
+.room-miner-cell.span-2 .miner-thumb {
+  top: -35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 170%;
+}
+
+/* Miner badges in room */
+.room-miner-badges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 1px;
+  z-index: 2;
+}
+
+/* Badges in right column cells */
+.room-miner-cell:nth-child(even):not(.span-2) .room-miner-badges {
+  left: 0%;
+}
+
+/* Badges in span-2 cells */
+.room-miner-cell.span-2 .room-miner-badges {
+  left: 0%;
+}
+
+.room-badge-icon {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+}
+
+.room-empty-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 200px;
+  color: var(--text-primary);
+  opacity: 0.4;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* ========== RIGHT PANEL ========== */
+.rooms-right {
+  width: 280px;
+  min-width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* How it works button */
+.rooms-how-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--secondary);
+  color: var(--text-primary);
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 0 0.5rem 0;
+}
+
+.rooms-how-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.rooms-how-icon {
+  font-size: 1.2em;
+}
+
+/* Active rooms config */
+.rooms-active-config {
+  background: var(--secondary);
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.rooms-active-label {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.rooms-active-switches {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.rooms-active-btn {
+  width: 30px;
+  height: 30px;
+  font-size: 0.7em;
+  font-weight: 700;
+  border: 2px solid var(--tertiary);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--secondary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.rooms-active-btn:hover {
+  border-color: var(--text-primary);
+}
+
+.rooms-active-btn.active {
+  border-color: var(--tertiary);
+  color: var(--text-primary-active);
+  background: var(--tertiary);
+}
+
+/* Sort dropdown */
+.rooms-sort-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rooms-sort-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 2px;
+  background: var(--primary);
+  border: 1px solid var(--tertiary);
+  border-radius: 4px;
+  z-index: 100;
+  min-width: 100px;
+  overflow: hidden;
+}
+
+.rooms-sort-option {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.6em;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.rooms-sort-option:hover {
+  background: var(--secondary);
+}
+
+.rooms-sort-option.active {
+  color: var(--accent);
+  background: var(--secondary);
+}
+
+/* Manually added card style */
+/* Delete button on cards */
+.rooms-list-card-delete {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px !important;
+  height: 14px;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s;
+  z-index: 3;
+  line-height: 1;
+}
+
+.rooms-list-card:hover .rooms-list-card-delete {
+  opacity: 0.5;
+}
+
+.rooms-list-card-delete:hover {
+  opacity: 1 !important;
+  color: var(--danger);
+}
+
+/* Rack removal - blur entire card content */
+.rooms-list-card.removing .rooms-list-card-img-area,
+.rooms-list-card.removing .rooms-list-card-info,
+.rooms-list-card.removing .rooms-list-card-quantity {
+  filter: blur(3px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* X button stays visible during removal */
+.rooms-list-card.removing .rooms-list-card-delete {
+  opacity: 0.8 !important;
+  z-index: 5;
+}
+
+/* Rack removal overlay - centered over entire card */
+.rooms-rack-remove-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  z-index: 4;
+}
+
+.rooms-rack-remove-qty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 70%;
+}
+
+.rooms-rack-remove-qty .rooms-add-qty-btn {
+  width: 20px !important;
+  height: 20px;
+  font-size: 0.75em;
+  border-radius: 4px;
+  background: var(--tertiary);
+  flex-shrink: 0;
+}
+
+.rooms-rack-remove-input {
+  width: 30px !important;
+  padding: 0 2px !important;
+  margin: 0 !important;
+  font-size: 0.8em;
+  font-weight: 800;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--tertiary);
+  border-radius: 3px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.rooms-rack-remove-input::-webkit-inner-spin-button,
+.rooms-rack-remove-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.rooms-rack-remove-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.rooms-rack-remove-confirm {
+  padding: 0.15rem !important;
+  margin: 0 !important;
+  font-size: 0.55em;
+  font-weight: 800;
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70% !important;
+}
+
+.rooms-rack-remove-confirm:hover {
+  opacity: 0.85;
+}
+
+.rooms-list-card.added-manually {
+  background: #1e1334;
+}
+
+/* Add modal */
+.rooms-add-modal {
+  background: var(--secondary);
+  border-radius: 8px;
+  padding: 1.2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.rooms-add-modal-title {
+  font-size: 1em;
+  font-weight: 800;
+  color: var(--text-primary-active);
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.rooms-add-controls {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.rooms-add-search {
+  width: 100% !important;
+  padding: 0.35rem 0.5rem !important;
+  background: var(--primary);
+  color: var(--text-primary);
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 0.8em;
+  box-sizing: border-box;
+  margin: 0 !important;
+}
+
+.rooms-add-search:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.rooms-add-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  gap: 0.4rem;
+  overflow-y: auto;
+  flex: 1;
+  align-content: start;
+}
+
+.rooms-add-card {
+  background: var(--primary);
+  border-radius: 6px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 2px solid var(--secondary);
+  transition: border-color 0.2s;
+  overflow: hidden;
+  min-height: 90px;
+}
+
+.rooms-add-card:hover {
+  border-color: var(--text-primary);
+}
+
+.rooms-add-card.selected {
+  border-color: var(--accent);
+}
+
+.rooms-add-card-img-area {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px 0 5px;
+  position: relative;
+}
+
+.rooms-add-card-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.rooms-add-card-info {
+  background: var(--secondary);
+  padding: 0.2rem 0.3rem;
+  text-align: center;
+  margin: auto 5px 5px 5px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.rooms-add-card-name {
+  font-size: 0.55em;
+  font-weight: 700;
+  color: var(--text-primary-active);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rooms-add-card-stats {
+  font-size: 0.5em;
+  color: var(--text-primary);
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rack quantity selector in add modal - covers info */
+.rooms-add-qty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--secondary);
+  border-radius: 4px;
+}
+
+.rooms-add-qty-btn {
+  width: 18px !important;
+  height: 18px;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.7em;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--text-primary);
+}
+
+.rooms-add-qty-btn:hover {
+  color: var(--accent);
+}
+
+.rooms-add-qty-val {
+  font-size: 0.65em;
+  font-weight: 800;
+  color: var(--accent);
+  min-width: 14px;
+  text-align: center;
+}
+
+/* Action buttons */
+.rooms-add-actions {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  flex-shrink: 0;
+}
+
+.rooms-add-confirm-btn {
+  flex: 1;
+  margin: 0 !important;
+  padding: 0.45rem !important;
+  font-size: 0.75em;
+  font-weight: 800;
+  background: var(--accent);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: auto !important;
+}
+
+.rooms-add-confirm-btn.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.rooms-add-confirm-btn:hover:not(.disabled) {
+  opacity: 0.9;
+}
+
+.rooms-add-cancel-btn {
+  flex: 1;
+  margin: 0 !important;
+  padding: 0.45rem !important;
+  font-size: 0.75em;
+  font-weight: 800;
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: auto !important;
+}
+
+.rooms-add-cancel-btn:hover {
+  opacity: 0.9;
+}
+
+/* Loading overlay */
+.rooms-loading-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(24, 25, 40, 0.7);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rooms-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--secondary);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: rooms-spin 0.6s linear infinite;
+}
+
+@keyframes rooms-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Skin selector */
+.rooms-skin-btn {
+  width: 100%;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.65em;
+  font-weight: 700;
+  background: var(--primary);
+  color: var(--text-primary);
+  border: 1px solid var(--tertiary);
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0.4rem 0 0 0;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.rooms-skin-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Skin modal */
+.rooms-skin-modal {
+  background: var(--secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.rooms-skin-modal-title {
+  font-size: 1em;
+  font-weight: 800;
+  color: var(--text-primary-active);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.rooms-skin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.rooms-skin-item {
+  aspect-ratio: 720 / 450;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.rooms-skin-item:hover {
+  border-color: var(--text-primary);
+}
+
+.rooms-skin-item.active {
+  border-color: var(--accent);
+}
+
+.rooms-skin-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rooms-skin-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: var(--text-primary-active);
+  font-size: 0.5em;
+  font-weight: 600;
+  padding: 1px 3px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Manual mode button (full width, like sim button) */
+.rooms-manual-btn {
+  width: 100%;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.7em;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #3a3b55;
+  color: var(--text-primary-active);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 0 0.5rem 0;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.rooms-manual-btn:hover {
+  background: #4a4b65;
+}
+
+.rooms-manual-btn.active {
+  background: var(--accent);
+  color: var(--text-secondary);
+  box-shadow: 0 0 12px rgba(3, 225, 228, 0.3);
+}
+
+/* Right panel tab buttons (Auto, Miners, Racks) */
+.rooms-right-buttons {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.rooms-right-btn {
+  flex: 1;
+  padding: 0.4rem 0.3rem;
+  font-size: 0.75em;
+  font-weight: 700;
+  border: 2px solid var(--tertiary);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--secondary);
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.rooms-right-btn:hover {
+  border-color: var(--text-primary);
+}
+
+.rooms-right-btn.active {
+  background: var(--tertiary);
+  color: var(--text-primary-active);
+  border-color: var(--tertiary);
+}
+
+/* Tab content panel */
+.rooms-tab-content {
+  background: var(--secondary);
+  border-radius: 6px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.rooms-tab-content-stretch {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Auto mode panel */
+.rooms-auto-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.rooms-auto-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.rooms-auto-label {
+  font-size: 0.65em;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.rooms-auto-order {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.rooms-auto-order-btn {
+  flex: 1;
+  padding: 0.4rem 0.3rem;
+  font-size: 0.75em;
+  font-weight: 700;
+  border: 2px solid var(--tertiary);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--secondary);
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.rooms-auto-order-btn:hover {
+  border-color: var(--text-primary);
+}
+
+.rooms-auto-order-btn.active {
+  background: var(--tertiary);
+  color: var(--text-primary-active);
+  border-color: var(--tertiary);
+}
+
+.rooms-auto-input {
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 0.75em;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.rooms-auto-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.rooms-auto-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rooms-auto-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--tertiary);
+  background: var(--secondary);
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.rooms-auto-checkbox input[type="checkbox"]:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.rooms-auto-checkbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 3px;
+  height: 7px;
+  border: solid var(--text-secondary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.rooms-auto-checkbox label {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.rooms-auto-go {
+  padding: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 800;
+  background: var(--accent);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.rooms-auto-go:hover { opacity: 0.9; }
+
+/* Miners/Racks list panel */
+.rooms-list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.rooms-list-header {
+  flex-shrink: 0;
+  font-size: 0.6em;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.rooms-list-header-note {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: var(--text-primary);
+  opacity: 0.5;
+  margin-top: 0.15rem;
+  text-transform: none;
+}
+
+.rooms-list-controls {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.rooms-list-search {
+  flex: 1;
+  padding: 0.25rem 0.4rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 0.7em;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.rooms-list-search:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.rooms-list-btn {
+  padding: 0.25rem 0.4rem;
+  font-size: 0.6em;
+  font-weight: 700;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--text-primary);
+  margin: 0;
+  width: auto;
+}
+
+.rooms-list-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Cards grid */
+.rooms-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  gap: 0.4rem;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 2px;
+  align-content: start;
+}
+
+.rooms-list-card {
+  background: var(--primary);
+  border-radius: 6px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 2px solid var(--secondary);
+  transition: border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+  min-height: 95px;
+}
+
+.rooms-list-card:hover {
+  border-color: var(--accent);
+}
+
+.rooms-list-card-quantity {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background: var(--secondary);
+  color: var(--text-primary-active);
+  font-size: 0.5em;
+  font-weight: 700;
+  padding: 1px 4px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+/* Image area */
+.rooms-list-card-img-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  min-height: 50px;
+}
+
+/* Miner row: image as base, badges overlaid */
+.rooms-list-card-miner-row {
+  position: relative;
+  width: 65px;
+  height: 45px;
+}
+
+.rooms-list-card-miner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rooms-list-card-badges {
+  display: flex;
+  gap: 2px;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  left: 5px;
+}
+
+.rooms-list-card-badges .badge-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Rack image (no miner-row needed) */
+.rooms-list-card-img {
+  max-width: 100%;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Info area - stuck to bottom, floating */
+.rooms-list-card-info {
+  background: var(--secondary);
+  padding: 0.25rem 0.4rem;
+  text-align: center;
+  flex-shrink: 0;
+  margin: 0 5px 5px 5px;
+  border-radius: 4px;
+}
+
+.rooms-list-card-name {
+  font-size: 0.55em;
+  font-weight: 700;
+  color: var(--text-primary-active);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 0.15rem;
+}
+
+.rooms-list-card-stats {
+  font-size: 0.5em;
+  color: var(--text-primary);
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.rooms-list-card-power {
+  font-weight: 700;
+  color: var(--text-primary-active);
+}
+
+.rooms-list-card-sep {
+  opacity: 0.3;
+}
+
+.rooms-list-card-bonus {
+  color: var(--accent);
+  font-weight: 700;
+  background: rgba(3, 225, 228, 0.1);
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+/* Empty state */
+.rooms-list-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  color: var(--text-primary);
+  opacity: 0.4;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+/* ========== MODALS ========== */
+
+/* Generic overlay */
+.rooms-modal-overlay,
+.rooms-preview-overlay,
+.rooms-confirm-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rooms-preview-overlay { cursor: pointer; background: rgba(0, 0, 0, 0.9); }
+
+/* Image preview */
+.rooms-preview-container {
+  position: relative;
+  display: inline-block;
+}
+
+.rooms-preview-img {
+  max-width: 60vw;
+  max-height: 60vh;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.rooms-preview-close {
+  position: absolute;
+  top: 0; right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 36px; height: 36px;
+  padding: 0; margin: 0;
+  border-radius: 0 4px 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rooms-preview-close:hover { color: var(--accent); }
+
+/* How it works modal */
+.rooms-modal {
+  background: var(--secondary);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  min-height: 200px;
+}
+
+.rooms-modal-close {
+  position: absolute;
+  top: 8px; right: 8px;
+  width: 30px; height: 30px;
+  padding: 0; margin: 0;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.rooms-modal-close:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Simulation save modal */
+.rooms-save-modal {
+  background: var(--secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.rooms-save-modal p {
+  font-size: 0.85em;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.rooms-save-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.rooms-save-buttons button {
+  padding: 0.4rem 1rem;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  width: auto;
+}
+
+.rooms-save-btn {
+  background: var(--accent);
+  color: var(--text-secondary);
+  border: none;
+}
+
+.rooms-discard-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+}
+
+/* Confirm modal */
+.rooms-confirm-modal {
+  background: var(--secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.rooms-confirm-modal p {
+  font-size: 0.8em;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.rooms-confirm-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.rooms-confirm-buttons button {
+  padding: 0.4rem 1rem;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  width: auto;
+}
+
+.rooms-confirm-yes {
+  background: var(--accent);
+  color: var(--text-secondary);
+  border: none;
+}
+
+.rooms-confirm-no {
+  background: var(--danger);
+  color: white;
+  border: none;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1100px) {
+  .rooms-page {
+    flex-wrap: wrap;
+  }
+
+  .rooms-import {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .rooms-sim-area {
+    width: auto;
+    min-width: 220px;
+  }
+
+  .rooms-center { width: 100%; }
+  .rooms-right { width: 100%; min-width: unset; }
+}
+
+@media (max-width: 768px) {
+  .rooms-page { flex-direction: column; }
+  .rooms-import { width: 100%; min-width: unset; }
+  .rooms-right { width: 100%; min-width: unset; }
+
+  .room-rack-cell {
+    width: 65px;
+    height: 70px;
+  }
+
+  .rooms-top-section {
+    flex-direction: column;
+  }
+
+  .rooms-sim-area {
+    width: 100%;
+  }
+
+  .rooms-preview-img {
+    max-width: 85vw;
+    max-height: 80vh;
+  }
+}

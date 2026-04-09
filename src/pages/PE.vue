@@ -109,9 +109,9 @@
           </thead>
           <tbody>
             <tr v-for="(reward, idx) in PeData.event.rewards" :key="idx">
-              <td>{{ idx + 1 }}</td>
-              <td>{{ PeData.event.levels_config[idx].required_xp }}</td>
-              <td>{{ PeData.event.levels_config[idx].level_xp }}</td>
+              <td>{{ reward.required_level }}</td>
+              <td>{{ PeData.event.levels_config[reward.required_level - 1]?.required_xp }}</td>
+              <td>{{ PeData.event.levels_config[reward.required_level - 1]?.level_xp }}</td>
               <td class='reward-name'>
                 {{ getRewardName(reward) }}
                 <br/>
@@ -124,8 +124,8 @@
                   class='level-image'
                 />
               </td>
-              <td class='reward-boxes'>{{ getRewardBoxes(PeData.event.levels_config[idx].required_xp) }} {{ t.pe?.boxes }}</td>
-              <td class='reward-marketplace'>{{ getRewardMarket(PeData.event.levels_config[idx].required_xp) }} RLT</td>
+              <td class='reward-boxes'>{{ getRewardBoxes(PeData.event.levels_config[reward.required_level - 1]?.required_xp) }} {{ t.pe?.boxes }}</td>
+              <td class='reward-marketplace'>{{ getRewardMarket(PeData.event.levels_config[reward.required_level - 1]?.required_xp) }} RLT</td>
             </tr>
           </tbody>
         </table>
@@ -150,6 +150,14 @@ export default {
     for (let i = 1; i <= maxMultiplier; i++) {
       mult.push(i)
     }
+
+    // const filteredRewards = PeData.event.rewards.reduce((acc, reward) => {
+    //   if (!acc.find(r => r.required_level === reward.required_level)) {
+    //     acc.push(reward)
+    //   }
+    //   return acc
+    // }, [])
+    // PeData.event.rewards = filteredRewards
 
     return {
       stPath: 'https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/',
@@ -314,6 +322,7 @@ export default {
         case 'power': filename = 'others/reward_power.png'; break
         case 'utility_item': filename = `others/${reward.item_id}.gif`; break
         case 'loot_box': filename = `box/${reward.item_id}.png`; break
+        case 'mystery_box': filename = `box/${reward.item_id}.png`; break
         case 'battery': filename = `others/${reward.item_id}.png`; break
         case 'mutation_component': filename = `mutation_component/${reward.item_id}.png`; break
         case 'rack': filename = `rack/${reward.item_id}.png`; break
@@ -338,6 +347,7 @@ export default {
         case 'utility_item': return (reward.amount > 1 ? reward.amount : '') + ' ' + reward.item.name.en
         case 'mutation_component': return (reward.amount > 1 ? reward.amount : '') + ' ' + reward.item.name.en
         case 'loot_box': return reward.item.title.en
+        case 'mystery_box': return reward.item.title.en
         case 'battery': return reward.title.en
         case 'rack':
         case 'miner': return reward.item.name.en
