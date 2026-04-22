@@ -17806,5 +17806,17 @@
     "can_be_merged": false,
     "cells": 2,
     "filename": "depth_seeker.gif"
+  },
+  {
+    "id": "69e8b12bdf1861edd810fdc9",
+    "name": "Naturez",
+    "bonus": 2,
+    "power": "12.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": false,
+    "cells": 2,
+    "filename": "naturez.gif"
   }
 ]
