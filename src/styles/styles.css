@@ -422,6 +422,16 @@ header {
   color: var(--accent);
 }
 
+.navbar-links a.nav-glow {
+  text-shadow: 0 0 4px var(--accent), 0 0 10px var(--accent);
+  animation: nav-glow-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes nav-glow-pulse {
+  0%, 100% { text-shadow: 0 0 4px var(--accent), 0 0 10px var(--accent); }
+  50% { text-shadow: 0 0 2px var(--accent), 0 0 5px var(--accent); }
+}
+
 /* Ocultar el botón de hamburguesa en el escritorio */
 .navbar-toggle {
   display: none;

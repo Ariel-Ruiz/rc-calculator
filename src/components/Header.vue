@@ -40,10 +40,14 @@
         >
           {{ t.nav && t.nav.burning }}
         </router-link>
+        <!-- <a href="#" class="comming-soon" tabindex="-1" aria-disabled="true">
+          {{ t.nav && t.nav.rooms }}
+          <div class="comming-soon-text">{{ t.nav && t.nav.comming_soon }}</div>
+        </a> -->
         <router-link
           to="/rooms"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/rooms' }"
+          :class="{ active: $route.path === '/rooms', 'nav-glow': true }"
         >
           {{ t.nav && t.nav.rooms }}
         </router-link>

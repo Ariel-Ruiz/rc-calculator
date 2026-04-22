@@ -79,11 +79,18 @@
     "maxPrice": "Max Price",
     "apply": "APPLY",
     "maintenanceTitle": "Under Maintenance",
-    "maintenanceSubtitle": "It will be available in a few minutes..."
+    "maintenanceSubtitle": "It will be available in a few minutes...",
+    "sellable": "Sellable",
+    "notSellable": "Not Sellable",
+    "filterSellable": "Sellable",
+    "filterAll": "All",
+    "reset": "RESET"
   },
   "rooms": {
     "title": "Rooms",
-    "description": "Simulate and optimize the distribution of your miners and racks across your rooms. Import your collection, configure your rooms, and find the best setup to maximize your mining power.",
+    "beta_notice": "<b>Beta Version</b> — This feature is under development. If you find any bugs or have suggestions, please let me know on <a class='source-link' target='_blank' href='https://t.me/Ar1el_23'>Telegram</a> or <b>Discord: ar1el_23</b>",
+    "description": "Optimize the distribution of your miners and racks to maximize your mining power. <br> <b>You can copy the data from:</b> <br> <a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a> <br> <div class='rooms-desc-warning'>The calculated power does not include temporary power, freon, hamsters or other types of temporary bonuses.</div> <div class='rooms-desc-warning'>Room power in the game may take a few minutes to update. To see it instantly, check <a class='source-link' href='https://rollercoin.com/profile/profile-stats' target='_blank'>Profile Stats</a>.</div>",
+    "set_power_note": "This power is added in the game as temporary power",
     "import_example_alt": "Import example",
     "placeholder": "paste collection data here...",
     "add": "ADD",
@@ -127,11 +134,13 @@
     "max_power": "MAX POWER (EH/S)",
     "input_number": "Input number",
     "empty_rooms_before": "Empty rooms before?",
+    "auto_description": "Automatically finds the best distribution of miners and racks across all your active rooms to maximize power.",
     "go": "GO!",
     "search": "Search...",
     "sort": "SORT",
     "continue": "CONTINUE",
     "select_miners": "SELECT THE MINERS TO ADD TO THE ROOM",
+    "click_or_drag_miners": "CLICK OR DRAG MINERS TO ADD TO THE ROOM",
     "select_miners_note": "Changing the manual mode will apply the miners to the room automatically",
     "click_or_drag_racks": "CLICK OR DRAG RACKS TO ADD TO THE ROOM",
     "available_miners": "Available miners",
@@ -141,6 +150,10 @@
     "add_racks_title": "Add Racks",
     "no_miners": "No miners loaded. Import your collection first.",
     "no_racks": "No racks available.",
-    "empty_room": "Empty room. Add miners and racks from the right panel."
+    "empty_room": "Empty room. Add miners and racks from the right panel.",
+    "manual_to_add": "TO ADD",
+    "manual_to_remove": "TO REMOVE",
+    "manual_rack_changes": "RACK CHANGES",
+    "hiw_go": "LET'S GO!"
   }
 }

@@ -1,0 +1,84 @@
+[
+  {
+    "section": "Primeros pasos",
+    "details": [
+      {
+        "text": "Ve a la sección de Collection en RollerCoin, selecciona todos los mineros que tengas, copia y pégalo en el área de texto del panel izquierdo. Haz clic en AGREGAR para importar tus mineros.",
+        "img": "rooms/howitworks/1.png"
+      },
+      {
+        "text": "Tus mineros importados aparecerán en la pestaña MINEROS del panel derecho, listos para ser colocados.",
+        "img": "rooms/howitworks/2.png"
+      },
+      {
+        "text": "También puedes agregar racks desde la pestaña RACKS usando el botón AGREGAR para ampliar la capacidad de tus salas.",
+        "img": "rooms/howitworks/3.png"
+      },
+      {
+        "text": "Navega entre tus salas usando las pestañas en la parte superior del grid.",
+        "img": "rooms/howitworks/4.png"
+      },
+      {
+        "text": "Administra tus salas activas y cambia el fondo desde el panel de configuración a la derecha.",
+        "img": "rooms/howitworks/5.png"
+      }
+    ]
+  },
+  {
+    "section": "Resumen",
+    "details": [
+      {
+        "text": "El panel superior muestra tu potencia total, bonus activo y los cambios en tiempo real a medida que modificas la configuración de tus salas.",
+        "img": "rooms/howitworks/6.png"
+      },
+      {
+        "text": "Los bonus de set activos de tus mineros y racks colocados se muestran en el panel izquierdo.",
+        "img": "rooms/howitworks/7.png"
+      }
+    ]
+  },
+  {
+    "section": "Agregar Mineros",
+    "details": [
+      {
+        "text": "Selecciona uno o más mineros y haz clic en CONTINUAR para previsualizar los cambios. El sistema muestra qué se agregará, qué se quitará (si las salas están llenas) y el impacto en potencia/bonus antes de confirmar.",
+        "img": "rooms/howitworks/8.png"
+      }
+    ]
+  },
+  {
+    "section": "Modo Auto",
+    "details": [
+      {
+        "text": "El modo Auto encuentra la distribución óptima de mineros y racks en todas las salas activas para maximizar el poder. Puedes establecer un límite máximo de potencia en Eh/s.",
+        "img": "rooms/howitworks/9.png"
+      }
+    ]
+  },
+  {
+    "section": "Modo Manual",
+    "details": [
+      {
+        "text": "El modo Manual te da control total sobre la colocación. Haz clic o arrastra mineros y racks directamente a las posiciones de la sala.",
+        "img": "rooms/howitworks/10.png"
+      },
+      {
+        "text": "Cuando está activo, los elementos se colocan al instante con clic o arrastrándolos al grid. Los destinos válidos se iluminan en verde.",
+        "img": "rooms/howitworks/11.png"
+      },
+      {
+        "text": "Con el modo manual activo, pasa el cursor sobre un rack o minero para ver la opción de quitarlo. Al quitar un rack, también se retiran los mineros que contenga.",
+        "img": "rooms/howitworks/13.png"
+      }
+    ]
+  },
+  {
+    "section": "Simulación",
+    "details": [
+      {
+        "text": "Activa la Simulación para probar diferentes configuraciones sin perder tu configuración actual. Guarda o descarta los cambios cuando termines.",
+        "img": "rooms/howitworks/12.png"
+      }
+    ]
+  }
+]

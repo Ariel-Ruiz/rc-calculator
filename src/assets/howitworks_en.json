@@ -1,0 +1,84 @@
+[
+  {
+    "section": "Getting Started",
+    "details": [
+      {
+        "text": "Go to the Collection section in RollerCoin, select all the miners you have, copy and paste them into the text area on the left panel. Click ADD to import your miners.",
+        "img": "rooms/howitworks/1.png"
+      },
+      {
+        "text": "Your imported miners will appear in the MINERS tab on the right panel, ready to be placed.",
+        "img": "rooms/howitworks/2.png"
+      },
+      {
+        "text": "You can also add racks from the RACKS tab using the ADD button to expand your room capacity.",
+        "img": "rooms/howitworks/3.png"
+      },
+      {
+        "text": "Navigate between your rooms using the tabs at the top of the room grid.",
+        "img": "rooms/howitworks/4.png"
+      },
+      {
+        "text": "Manage your active rooms and change the room background from the settings panel on the right.",
+        "img": "rooms/howitworks/5.png"
+      }
+    ]
+  },
+  {
+    "section": "Stats Overview",
+    "details": [
+      {
+        "text": "The top panel displays your total power, active bonus, and real-time changes as you modify your room setup.",
+        "img": "rooms/howitworks/6.png"
+      },
+      {
+        "text": "Active set bonuses from your placed miners and racks are shown in the left panel.",
+        "img": "rooms/howitworks/7.png"
+      }
+    ]
+  },
+  {
+    "section": "Add Miners",
+    "details": [
+      {
+        "text": "Select one or more miners and click CONTINUE to preview the changes. The system shows what will be added, removed (if rooms are full), and the power/bonus impact before confirming.",
+        "img": "rooms/howitworks/8.png"
+      }
+    ]
+  },
+  {
+    "section": "Auto Mode",
+    "details": [
+      {
+        "text": "Auto mode finds the optimal distribution of miners and racks across all active rooms to maximize power. You can set a maximum power limit in Eh/s.",
+        "img": "rooms/howitworks/9.png"
+      }
+    ]
+  },
+  {
+    "section": "Manual Mode",
+    "details": [
+      {
+        "text": "Manual mode gives you full control over placement. Click or drag miners and racks directly into specific room slots.",
+        "img": "rooms/howitworks/10.png"
+      },
+      {
+        "text": "When active, items are placed instantly on click or by dragging them onto the room grid. Valid drop targets highlight in green.",
+        "img": "rooms/howitworks/11.png"
+      },
+      {
+        "text": "With manual mode active, hover over a rack or miner to see the option to remove it. Removing a rack also removes all miners inside it.",
+        "img": "rooms/howitworks/13.png"
+      }
+    ]
+  },
+  {
+    "section": "Simulation",
+    "details": [
+      {
+        "text": "Activate Simulation to test different configurations without losing your current setup. Save or discard changes when you're done.",
+        "img": "rooms/howitworks/12.png"
+      }
+    ]
+  }
+]

@@ -79,11 +79,18 @@
     "maxPrice": "Precio Máx",
     "apply": "APLICAR",
     "maintenanceTitle": "En Mantenimiento",
-    "maintenanceSubtitle": "Estará disponible en unos minutos..."
+    "maintenanceSubtitle": "Estará disponible en unos minutos...",
+    "sellable": "Vendible",
+    "notSellable": "No Vendible",
+    "filterSellable": "Vendible",
+    "filterAll": "Todos",
+    "reset": "RESETEAR"
   },
   "rooms": {
     "title": "Rooms",
-    "description": "Simula y optimiza la distribución de tus mineros y racks en tus salas. Importa tu colección, configura tus salas y encuentra la mejor configuración para maximizar tu poder de minería.",
+    "beta_notice": "<b>Versión Beta</b> — Esta función está en desarrollo. Si encuentras algún error o tienes sugerencias, avísame en <a class='source-link' target='_blank' href='https://t.me/Ar1el_23'>Telegram</a> o en <b>Discord: ar1el_23</b>",
+    "description": "Optimiza la distribución de tus mineros y racks para maximizar tu poder de minería. <br> <b>Puedes copiar los datos desde:</b> <br> <a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a> <br> <div class='rooms-desc-warning'>El poder calculado no incluye poder temporal, freon, hamsters u otros tipos de bonificaciones temporales.</div> <div class='rooms-desc-warning'>El poder resultante de las salas en el juego puede tardar algunos minutos en actualizarse. Para verlo de inmediato, revisa <a class='source-link' href='https://rollercoin.com/profile/profile-stats' target='_blank'>Profile Stats</a>.</div>",
+    "set_power_note": "Este poder es agregado en el juego como poder temporal",
     "import_example_alt": "Ejemplo de importación",
     "placeholder": "pega los datos de tu colección aquí...",
     "add": "AGREGAR",
@@ -127,11 +134,13 @@
     "max_power": "PODER MÁX (EH/S)",
     "input_number": "Ingresa un número",
     "empty_rooms_before": "¿Vaciar salas antes?",
+    "auto_description": "Encuentra automáticamente la mejor distribución de mineros y racks en todas tus salas activas para maximizar el poder.",
     "go": "GO!",
     "search": "Buscar...",
     "sort": "ORDENAR",
     "continue": "CONTINUAR",
     "select_miners": "SELECCIONA LOS MINEROS PARA AGREGAR A LA SALA",
+    "click_or_drag_miners": "HAZ CLIC O ARRASTRA MINEROS PARA AGREGAR A LA SALA",
     "select_miners_note": "Cambiar el modo manual aplicará los mineros a la sala automáticamente",
     "click_or_drag_racks": "HAZ CLIC O ARRASTRA RACKS PARA AGREGAR A LA SALA",
     "available_miners": "Mineros disponibles",
@@ -141,6 +150,10 @@
     "add_racks_title": "Agregar Racks",
     "no_miners": "No hay mineros cargados. Importa tu colección primero.",
     "no_racks": "No hay racks disponibles.",
-    "empty_room": "Sala vacía. Agrega mineros y racks desde el panel derecho."
+    "empty_room": "Sala vacía. Agrega mineros y racks desde el panel derecho.",
+    "manual_to_add": "A AGREGAR",
+    "manual_to_remove": "A SACAR",
+    "manual_rack_changes": "CAMBIOS DE RACK",
+    "hiw_go": "¡VAMOS A ELLO!"
   }
 }

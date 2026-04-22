@@ -206,7 +206,7 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.5
+      let phXRLT = 0.4
       let feeXBox = 0.15
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
@@ -316,6 +316,11 @@ export default {
     },
     getRewardImage(reward) {
       let filename = ''
+      // console.log(reward)
+      if (reward?.type == 'utility_item' && (reward?.item?.name?.en == 'Ancient key' || reward?.item?.name?.en == 'Old key' || reward?.item?.name?.en == 'Basic key' || reward?.item?.name?.en == 'Forbidden key') ) {
+        filename = `others/${reward.item_id}.png`
+        return this.stPath + filename
+      }
       switch (reward.type) {
         case 'money': filename = `others/reward_${reward.currency.toLowerCase()}.png`; break
         case 'season_pass_xp': filename = 'others/season_pass_xp.png'; break

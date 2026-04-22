@@ -14,7 +14,7 @@
 }
 
 .event-title {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 800;
   color: var(--accent);
   margin: 0;
@@ -384,7 +384,7 @@
   border-color: var(--accent);
 }
 
-.btn-apply-filters {
+.btn-reset-filters {
   flex: 1;
   padding: 0.2rem 0.6rem;
   background: var(--accent);
@@ -398,7 +398,7 @@
   white-space: nowrap;
 }
 
-.btn-apply-filters:hover {
+.btn-reset-filters:hover {
   opacity: 0.9;
 }
 
@@ -616,6 +616,38 @@
 .card-bonus {
   color: var(--accent);
   font-weight: 600;
+}
+
+.card-sellable {
+  font-size: 0.65em;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.card-sellable.sellable {
+  color: #4caf50;
+}
+
+.card-sellable.not-sellable {
+  color: #f44336;
+}
+
+.filter-input-group select {
+  width: 100%;
+  padding: 0.2rem 0.4rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 0.75em;
+  box-sizing: border-box;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.filter-input-group select:focus {
+  outline: none;
+  border-color: var(--accent);
 }
 
 .card-footer {
@@ -861,7 +893,7 @@
     align-items: flex-start;
   }
 
-  .btn-apply-filters {
+  .btn-reset-filters {
     flex: 1 1 100%;
     margin-top: 0.2rem;
     padding: 0.35rem 0.8rem;

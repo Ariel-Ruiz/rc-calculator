@@ -132,8 +132,16 @@
           <label>{{ t.burning?.maxPrice }}</label>
           <input type="number" v-model.number="filterMaxPrice" min="0" step="0.01" />
         </div>
-        <button class="btn-apply-filters" @click="applyFilters">
-          {{ t.burning?.apply }}
+        <div class="filter-input-group">
+          <label>{{ t.burning?.filterSellable }}</label>
+          <select v-model="filterSellable">
+            <option value="all">{{ t.burning?.filterAll }}</option>
+            <option value="sellable">{{ t.burning?.sellable }}</option>
+            <option value="not-sellable">{{ t.burning?.notSellable }}</option>
+          </select>
+        </div>
+        <button class="btn-reset-filters" @click="resetFilters">
+          {{ t.burning?.reset || 'RESET' }}
         </button>
       </div>
       <div v-if="filteredResults.length > 0" class="results-grid">
@@ -183,6 +191,9 @@
               <span class="card-power">{{ item.power }}</span>
               <span class="card-separator">|</span>
               <span class="card-bonus">{{ item.bonus }}%</span>
+            </div>
+            <div :class="['card-sellable', item.isSellable ? 'sellable' : 'not-sellable']">
+              {{ item.isSellable ? t.burning?.sellable : t.burning?.notSellable }}
             </div>
           </div>
           <div v-if="item.price !== null" class="card-footer">
@@ -235,18 +246,14 @@ export default {
       inputText: '',
       results: [],
       selectedUids: {},
-      sortBy: 'ppr-desc',
+      sortBy: 'points-desc', //'ppr-desc',
       sortMenuOpen: false,
       filtersOpen: false,
       filterMinPoints: null,
       filterMinPtsRlt: null,
       filterMaxPrice: null,
-      activeFilters: {
-        minPoints: null,
-        minPtsRlt: null,
-        maxPrice: null
-      },
       previewImage: null,
+      filterSellable: 'all',
       hiddenSources: [],
       miners: minersData,
       exampleImages: {
@@ -273,9 +280,11 @@ export default {
     },
     computedResults() {
       return this.results.map(item => {
-        const points = this.calcularPuntos(item.power, item.bonus)
+        const minerData = this.findMiner(item)
+        const isSellable = minerData ? !!minerData.can_be_sold : false
+        const points = this.calcularPuntos(item.power, item.bonus, isSellable)
         const pointsPerRlt = item.price > 0 ? Math.round(points / item.price) : item.pointsPerRlt
-        return { ...item, points, pointsPerRlt }
+        return { ...item, points, pointsPerRlt, isSellable }
       })
     },
     sortedResults() {
@@ -305,9 +314,12 @@ export default {
         if (this.hiddenSources.includes(source)) return false
 
         // Apply numeric filters
-        if (this.activeFilters.minPoints !== null && item.points < this.activeFilters.minPoints) return false
-        if (this.activeFilters.minPtsRlt !== null && (item.pointsPerRlt === null || item.pointsPerRlt < this.activeFilters.minPtsRlt)) return false
-        if (this.activeFilters.maxPrice !== null && (item.price === null || item.price > this.activeFilters.maxPrice)) return false
+        if (this.filterMinPoints && item.points < this.filterMinPoints) return false
+        if (this.filterMinPtsRlt && (item.pointsPerRlt === null || item.pointsPerRlt < this.filterMinPtsRlt)) return false
+        if (this.filterMaxPrice && (item.price === null || item.price > this.filterMaxPrice)) return false
+
+        if (this.filterSellable === 'sellable' && !item.isSellable) return false
+        if (this.filterSellable === 'not-sellable' && item.isSellable) return false
 
         return true
       })
@@ -350,7 +362,7 @@ export default {
       return parseFloat(cleanedStr.replace(',', '.'))
     },
 
-    calcularPuntos(poder, bonus) {
+    calcularPuntos(poder, bonus, isSellable = false) {
       let valorPoder = this.parseNumericValue(poder)
       let valorBonus = this.parseNumericValue(bonus)
       let poderEnPhs = 0
@@ -366,30 +378,48 @@ export default {
       let pointsXPh = 1
       let pointsXBonus = 1
 
-      if (poderEnPhs >= 20) {
-        pointsXPh = 11200
+      if (poderEnPhs >= 20 && isSellable) {
+        pointsXPh = 14400
+        pointsXBonus = 60
+      } else if (poderEnPhs >= 20) {
+        pointsXPh = 9600
         pointsXBonus = 40
-      } else if (poderEnPhs >= 7) {
-        pointsXPh = 21000
+      } else if (poderEnPhs > 10 && isSellable) {
+        pointsXPh = 14400
+        pointsXBonus = 60
+      } else if (poderEnPhs > 10) {
+        pointsXPh = 9600
+        pointsXBonus = 40
+      } else if (poderEnPhs >= 5 && isSellable) {
+        pointsXPh = 18000
         pointsXBonus = 75
-      }  else if (poderEnPhs >= 5) {
-        pointsXPh = 14000
+      } else if (poderEnPhs >= 5) {
+        pointsXPh = 12000
         pointsXBonus = 50
+      } else if (poderEnPhs >= 2 && isSellable) {
+        pointsXPh = 22500
+        pointsXBonus = 94.2
       } else if (poderEnPhs >= 2) {
-        pointsXPh = 17500
+        pointsXPh = 15000
         pointsXBonus = 62.5
-      } else if (poderEnPhs > 1.2) {
-        pointsXPh = 26250
-        pointsXBonus = 94
+      } else if (poderEnPhs > 1 && isSellable) {
+        pointsXPh = 22500
+        pointsXBonus = 93.75
       } else if (poderEnPhs >= 1) {
-        pointsXPh = 17500
-        pointsXBonus = 63
-      } else if (poderEnPhs > 0.5) {
-        pointsXPh = 32600
-        pointsXBonus = 63
+        pointsXPh = 15000
+        pointsXBonus = 62.5
+      } else if (poderEnPhs >= 0.5 && isSellable) {
+        pointsXPh = 27900
+        pointsXBonus = 117
+      } else if (poderEnPhs >= 0.5) {
+        pointsXPh = 18600
+        pointsXBonus = 77.5
+      } else if (isSellable){
+        pointsXPh = 46500
+        pointsXBonus = 193.7
       } else {
-        pointsXPh = 21700
-        pointsXBonus = 78
+        pointsXPh = 18600
+        pointsXBonus = 77.5
       }
 
       let puntos = poderEnPhs * pointsXPh + (pointsXBonus * valorBonus)
@@ -514,7 +544,9 @@ export default {
               }
 
               if (name && power) {
-                const points = this.calcularPuntos(power, bonus)
+                const minerData = this.findMiner({ name: this.getCleanName(name), minerId })
+                const isSellable = minerData ? !!minerData.can_be_sold : false
+                const points = this.calcularPuntos(power, bonus, isSellable)
                 addMiner({
                   name,
                   power,
@@ -606,7 +638,9 @@ export default {
           }
 
           if (name && power && bonus !== '') {
-            const points = this.calcularPuntos(power, bonus)
+            const minerData = this.findMiner({ name: this.getCleanName(name), minerId: null })
+            const isSellable = minerData ? !!minerData.can_be_sold : false
+            const points = this.calcularPuntos(power, bonus, isSellable)
             addMiner({
               name,
               power,
@@ -679,7 +713,9 @@ export default {
           }
 
           if (name && power && bonus) {
-            const points = this.calcularPuntos(power, bonus)
+            const minerData = this.findMiner({ name: this.getCleanName(name), minerId: null })
+            const isSellable = minerData ? !!minerData.can_be_sold : false
+            const points = this.calcularPuntos(power, bonus, isSellable)
             addMiner({
               name,
               power,
@@ -758,7 +794,9 @@ export default {
           }
 
           if (name && power && bonus) {
-            const points = this.calcularPuntos(power, bonus)
+            const minerData = this.findMiner({ name: this.getCleanName(name), minerId })
+            const isSellable = minerData ? !!minerData.can_be_sold : false
+            const points = this.calcularPuntos(power, bonus, isSellable)
             addMiner({
               name,
               power,
@@ -817,7 +855,9 @@ export default {
               if (quantityMatch) quantity = parseInt(quantityMatch[1])
             }
 
-            const points = this.calcularPuntos(power, bonus)
+            const minerData = this.findMiner({ name: this.getCleanName(name), minerId: null })
+            const isSellable = minerData ? !!minerData.can_be_sold : false
+            const points = this.calcularPuntos(power, bonus, isSellable)
             const pointsPerRlt = price > 0 ? Math.round(points / price) : 0
 
             addMiner({
@@ -983,10 +1023,11 @@ export default {
       }
     },
 
-    applyFilters() {
-      this.activeFilters.minPoints = this.filterMinPoints || null
-      this.activeFilters.minPtsRlt = this.filterMinPtsRlt || null
-      this.activeFilters.maxPrice = this.filterMaxPrice || null
+    resetFilters() {
+      this.filterMinPoints = null
+      this.filterMinPtsRlt = null
+      this.filterMaxPrice = null
+      this.filterSellable = 'all'
     },
 
     getRarityLevel(name) {

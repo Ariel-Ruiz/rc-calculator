@@ -13,10 +13,27 @@
 }
 
 .rooms-import .event-title {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 800;
   color: var(--accent);
   margin: 0 0 0.5rem 0;
+}
+
+.rooms-beta-notice {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  border-radius: 4px;
+  padding: 0.4rem 0.5rem;
+  color: #ffc107;
+  font-size: 0.65em;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.rooms-beta-notice .source-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .rooms-import-example {
@@ -32,16 +49,23 @@
   border-color: var(--accent);
 }
 
+.rooms-copy-info {
+  font-size: 0.7em;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem 0;
+  line-height: 1.6;
+}
+
 .rooms-textarea {
   width: 100%;
-  min-height: 120px;
+  min-height: 60px;
   padding: 0.5rem;
   background: var(--secondary);
   color: var(--text-primary);
   border: 1px solid #444;
   border-radius: 4px;
   font-family: "Segoe UI", sans-serif;
-  font-size: 0.85em;
+  font-size: 0.7em;
   resize: vertical;
   box-sizing: border-box;
   margin: 0;
@@ -112,7 +136,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.35rem 0.4rem;
+  padding: 0 0.4rem 0.35rem 0.4em;
   background: var(--primary);
   border-radius: 5px;
   margin-bottom: 0.3rem;
@@ -139,10 +163,8 @@
   font-size: 0.6em;
   font-weight: 700;
   color: var(--text-primary-active);
-  display: block;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 .rooms-set-bonuses {
@@ -168,6 +190,20 @@
   background: rgba(76, 175, 80, 0.15);
   color: var(--success);
 }
+
+.rooms-set-power-info {
+  cursor: help;
+  font-size: 1.1em;
+  color: var(--accent);
+  opacity: 0.7;
+  position: relative;
+  margin-left: 2px;
+}
+
+.rooms-set-power-info:hover {
+  opacity: 1;
+}
+
 
 .rooms-set-level {
   font-size: 0.55em;
@@ -202,10 +238,30 @@
 }
 
 .rooms-description {
-  font-size: 0.8em;
+  font-size: 0.68em;
   color: var(--text-primary);
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
+}
+
+.rooms-description .source-link {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.rooms-description .source-link:hover {
+  opacity: 0.8;
+}
+
+.rooms-desc-warning {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  border-radius: 4px;
+  padding: 0.4rem 0.5rem;
+  color: #ffc107;
+  line-height: 1.4;
+  margin-top: 0.4rem;
 }
 
 /* Simulation area (right side of top section) */
@@ -408,6 +464,8 @@
   background-color: var(--secondary);
   background-size: cover;
   background-position: center;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
   background-repeat: no-repeat;
   aspect-ratio: 720 / 450;
   user-select: none;
@@ -489,6 +547,7 @@
   height: 120px;
   position: relative;
 }
+
 
 /* Slot with rack background */
 .room-rack-cell.has-slot {
@@ -624,6 +683,15 @@
   overflow: hidden;
   min-height: 0;
   min-width: 0;
+}
+
+/* Prevent oversized miner thumbs from stealing hover on neighboring cells */
+.room-miner-cell .miner-thumb {
+  pointer-events: none;
+}
+
+.room-miner-cell.has-miner {
+  pointer-events: auto;
 }
 
 
@@ -1340,6 +1408,15 @@
   gap: 0.6rem;
 }
 
+.rooms-auto-info {
+  background: var(--tertiary);
+  border-radius: 4px;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.6em;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
 .rooms-auto-row {
   display: flex;
   flex-direction: column;
@@ -1742,6 +1819,175 @@
   min-height: 200px;
 }
 
+.hiw-modal {
+  background: var(--primary);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem 1.8rem;
+  max-width: 550px;
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-height: 85vh;
+}
+
+.hiw-title {
+  font-size: 1.4em;
+  font-weight: 800;
+  color: var(--text-primary-active);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hiw-tabs {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  flex-shrink: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #555 transparent;
+}
+
+.hiw-tabs::-webkit-scrollbar {
+  height: 3px;
+}
+
+.hiw-tabs::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.hiw-tab {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.7em;
+  font-weight: 700;
+  border: 1px solid #555;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: auto;
+  margin: 0;
+}
+
+.hiw-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hiw-tab.active {
+  background: var(--accent);
+  color: var(--text-secondary);
+  border-color: var(--accent);
+}
+
+.hiw-text {
+  font-size: 0.8em;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.hiw-img-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hiw-arrow {
+  flex-shrink: 0;
+  width: 30px;
+  height: 50px;
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 0.9em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.hiw-arrow:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hiw-arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.hiw-img-container {
+  flex: 1;
+  min-height: 250px;
+  background: var(--secondary);
+  border: 1px solid #333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hiw-img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.hiw-img-placeholder {
+  font-size: 2em;
+  color: #555;
+  font-weight: 700;
+}
+
+.hiw-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.hiw-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.hiw-dot.active {
+  background: var(--accent);
+}
+
+.hiw-go-btn {
+  width: auto;
+  margin: 0 auto;
+  padding: 0.6rem 2rem;
+  font-size: 0.9em;
+  font-weight: 800;
+  background: var(--accent);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hiw-go-btn:hover {
+  opacity: 0.9;
+}
+
 .rooms-modal-close {
   position: absolute;
   top: 8px; right: 8px;
@@ -1871,14 +2117,510 @@
   .rooms-right { width: 100%; min-width: unset; }
 }
 
+/* Miner tooltip (fixed position, rendered via JS) */
+.room-miner-tooltip-fixed {
+  position: fixed;
+  transform: translateX(-50%);
+  background: var(--primary);
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 4px 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.room-miner-tooltip-fixed::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--primary);
+}
+
+.room-miner-tooltip-fixed .tooltip-name {
+  font-size: 0.6em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.room-miner-tooltip-fixed .tooltip-stats {
+  font-size: 0.5em;
+  color: #03e1e4;
+}
+
+.room-miner-tooltip-fixed.tooltip-down::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: var(--primary);
+}
+
+/* Manual mode: miner remove overlay (X centered, image blurs) */
+.room-miner-remove-overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--danger);
+  cursor: pointer;
+  z-index: 16;
+}
+
+/* When hovering a miner cell in manual mode: show X, blur image, hide tooltip */
+.room-miner-cell.manual-miner:hover .room-miner-remove-overlay {
+  display: flex;
+}
+
+.room-miner-cell.manual-miner:hover .miner-thumb {
+  filter: blur(1px) brightness(0.6) !important;
+}
+
+.room-miner-cell.manual-miner:hover .room-miner-badges {
+  opacity: 0.2;
+}
+
+.room-miner-cell.manual-miner:hover .room-miner-tooltip {
+  display: none !important;
+}
+
+/* Rack remove button (mobile - inline, always visible in manual mode) */
+.room-rack-remove-mobile {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: var(--danger);
+  border: none;
+  font-size: 0.8em;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 15;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+}
+
+/* Rack remove button (desktop - fixed position, rendered via JS) */
+.room-rack-remove-fixed {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: var(--danger);
+  border: none;
+  font-size: 1.1em;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.9));
+  transform: translate(-50%, -50%);
+}
+
+/* ========== MANUAL MODE - DRAG AND DROP ========== */
+
+/* Custom drag ghost */
+.manual-drag-ghost {
+  position: fixed;
+  z-index: 99999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.drag-ghost-img-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.drag-ghost-img-wrap.drag-ghost-miner {
+  width: 52px;
+}
+
+.drag-ghost-img-wrap.drag-ghost-rack {
+  width: 110px;
+}
+
+.manual-drag-ghost .drag-ghost-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.7));
+}
+
+.drag-ghost-badges {
+  display: flex;
+  gap: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.drag-ghost-badges img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+}
+
+.drag-ghost-rack .drag-ghost-badges {
+  top: 0;
+  left: 16px;
+}
+
+.drag-ghost-rack .drag-ghost-badges img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Grab cursor in manual mode (applied via JS userSelect on body during drag) */
+
+/* Valid drop target - green dashed border */
+.room-rack-cell.drop-target-valid {
+  position: relative;
+}
+
+.room-rack-cell.drop-target-valid::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 2px dashed rgba(76, 175, 80, 0.6);
+  border-radius: 4px;
+  background: rgba(76, 175, 80, 0.1);
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.15s ease;
+}
+
+/* Hover over valid target - solid green */
+.room-rack-cell.drop-target-hover::after {
+  border: 2px solid #4caf50;
+  background: rgba(76, 175, 80, 0.3);
+  box-shadow: inset 0 0 12px rgba(76, 175, 80, 0.4);
+}
+
+/* Empty slot becomes visible when it's a valid rack drop target */
+.room-rack-cell.empty-slot.drop-target-valid {
+  min-width: 80px;
+  min-height: 100px;
+}
+
+/* ========== MANUAL ADD MINERS ========== */
+
+/* Selected miner card */
+.rooms-list-card.manual-selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(3, 225, 228, 0.35);
+  background: rgba(3, 225, 228, 0.08);
+}
+
+.rooms-list-card.manual-selected::after {
+  content: '\2713';
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  color: var(--text-secondary);
+  border-radius: 50%;
+  font-size: 0.55em;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.rooms-list-card.manual-selected .rooms-list-card-quantity {
+  display: none;
+}
+
+/* Continue button */
+.rooms-manual-continue-btn {
+  flex-shrink: 0;
+  padding: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 800;
+  background: var(--accent);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rooms-manual-continue-btn:hover {
+  opacity: 0.9;
+}
+
+/* Summary panel */
+.rooms-manual-summary-panel {
+  gap: 0;
+}
+
+/* Scrollable area for all sections */
+.rooms-manual-scroll-area {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-right: 2px;
+}
+
+.rooms-manual-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.rooms-manual-section-title {
+  font-size: 0.65em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.rooms-manual-add-title {
+  color: var(--accent);
+  background: rgba(3, 225, 228, 0.15);
+}
+
+.rooms-manual-remove-title {
+  color: var(--danger);
+  background: rgba(255, 82, 82, 0.15);
+}
+
+/* Pinned bottom */
+.rooms-manual-bottom {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid #333;
+  margin-top: 0.4rem;
+}
+
+.rooms-manual-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  background: var(--primary);
+  border: 1px solid transparent;
+}
+
+.rooms-manual-item-add {
+  border-left: 3px solid var(--accent);
+}
+
+.rooms-manual-item-remove {
+  border-left: 3px solid var(--danger);
+}
+
+.rooms-manual-item-rack {
+  border-left: 3px solid #f0a500;
+}
+
+.rooms-manual-summary-img {
+  width: 32px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.rooms-manual-summary-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.rooms-manual-summary-name {
+  font-size: 0.55em;
+  font-weight: 700;
+  color: var(--text-primary-active);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rooms-manual-summary-stats {
+  font-size: 0.5em;
+  color: var(--text-primary);
+  opacity: 0.7;
+}
+
+/* Stats summary */
+.rooms-manual-stats-summary {
+  background: var(--primary);
+  border-radius: 4px;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border: 1px solid #333;
+}
+
+.rooms-manual-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65em;
+  justify-content: center;
+}
+
+.rooms-manual-stats-label {
+  font-weight: 700;
+  color: var(--text-primary);
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.rooms-manual-stats-value {
+  font-weight: 700;
+  color: var(--text-primary-active);
+}
+
+.rooms-manual-stats-value.positive {
+  color: #00e676;
+}
+
+.rooms-manual-stats-value.negative {
+  color: var(--danger);
+}
+
+.rooms-manual-stats-value.neutral {
+  color: var(--text-primary);
+  opacity: 0.5;
+}
+
+/* Actions */
+.rooms-manual-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.rooms-manual-actions button {
+  flex: 1;
+  padding: 0.45rem;
+  font-size: 0.7em;
+  font-weight: 800;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
   .rooms-page { flex-direction: column; }
   .rooms-import { width: 100%; min-width: unset; }
   .rooms-right { width: 100%; min-width: unset; }
 
+  .rooms-grid-container {
+    aspect-ratio: 9 / 14.4;
+  }
+
   .room-rack-cell {
     width: 65px;
-    height: 70px;
+    height: 85px;
+  }
+
+  /* Manual mode: always show remove buttons on mobile (no hover) */
+  /* Show delete button on cards always on mobile */
+  .rooms-list-card .rooms-list-card-delete {
+    opacity: 0.5;
+  }
+
+  .room-miner-cell.manual-miner .room-miner-remove-overlay {
+    display: flex;
+    font-size: 0.9em;
+    opacity: 0.7;
+  }
+
+  .room-miner-cell.manual-miner .miner-thumb {
+    filter: brightness(0.7) !important;
+  }
+
+  .room-rack-inner.manual-active .room-rack-remove-mobile {
+    display: flex;
+  }
+
+  .room-rack-cell.empty-slot {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .room-rack-pair {
+    gap: 3px;
+  }
+
+  .rooms-grid-row {
+    gap: 4px;
+  }
+
+  .rooms-grid {
+    gap: 4px;
+  }
+
+  .room-miners-overlay.overlay-narrow {
+    top: -2px;
+    bottom: 11px;
+  }
+
+  .room-miners-overlay.overlay-6.overlay-narrow {
+    bottom: 12px;
+    height: 68%;
+    padding: 0 18%;
+    top: auto;
+  }
+
+  .room-miners-overlay.overlay-6.overlay-special {
+    bottom: 12px;
+    height: 64%;
+    padding: 0 15%;
+  }
+
+  .room-miners-overlay.overlay-8 {
+    grid-template-rows: repeat(4, 1fr);
+    top: 1px;
+    bottom: 12px;
   }
 
   .rooms-top-section {
