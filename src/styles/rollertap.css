@@ -28,7 +28,19 @@
 }
 
 .coin-icon {
-  width: 16px;
+  width: 10px;
+  height: 10px;
+  vertical-align: -1px;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.coin-icon-lg {
+  width: 14px;
+  height: 14px;
 }
 
 .card-container {

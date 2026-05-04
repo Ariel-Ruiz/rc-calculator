@@ -32,7 +32,7 @@ body {
   background-size: 400px;
 }
 main {
-  padding: 1.5rem 10%;
+  padding: 1rem 10%;
 }
 
 @media (max-width: 768px) {
@@ -548,16 +548,14 @@ header {
 
   /* Mostrar los enlaces cuando el menú está abierto */
   .navbar-links.open {
-    max-height: 200px;
-    /* Ajusta este valor según la altura máxima esperada de tu menú */
-    /* Puedes usar un valor lo suficientemente grande para asegurar que todo el contenido sea visible */
+    max-height: 400px;
   }
 
   /* Estilos específicos para los enlaces en el menú desplegable */
   .navbar-links a,
   .navbar-lang {
     width: 100%;
-    padding-top: 1rem;
+    padding-top: .5rem;
     padding-bottom: 0rem;
     /* border-bottom: 1px solid var(--text-primary); */
   }
@@ -565,8 +563,8 @@ header {
   .navbar-links a:last-child,
   .navbar-lang {
     border-bottom: none;
-    padding-top: 0;
-    padding-bottom: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .8rem;
   }
 
   .table-wrapper {
@@ -590,4 +588,114 @@ header {
 ::-webkit-scrollbar-thumb {
   background-color: var(--text-primary);
   border-radius: 10px;
+}
+
+/* ===== Promocode FAB & Modal ===== */
+.promocode-fab {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  width: auto !important;
+  margin: 0 !important;
+  background: var(--accent);
+  color: var(--text-secondary);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.65rem;
+  cursor: pointer;
+  z-index: 9000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+
+.promocode-fab:hover {
+  transform: scale(1.05);
+}
+
+.promocode-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 9500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promocode-modal {
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 340px;
+  text-align: center;
+  position: relative;
+}
+
+.promocode-close {
+  position: absolute;
+  top: 8px; right: 12px;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.promocode-close:hover {
+  color: var(--text-primary-active);
+}
+
+.promocode-title {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem;
+}
+
+.promocode-desc {
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  margin: 0 0 1rem;
+}
+
+.promocode-input {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--secondary);
+  border: 2px solid var(--tertiary);
+  border-radius: 6px;
+  color: var(--text-primary-active);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  box-sizing: border-box;
+}
+
+.promocode-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.promocode-btn {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0.5rem;
+  background: var(--accent);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.promocode-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

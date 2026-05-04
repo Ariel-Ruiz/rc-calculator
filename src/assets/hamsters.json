@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Cowham",
+    "img": "hamsters/cowham.gif",
+    "baseStats": { "hp": 40, "str": 30, "luck": 40 },
+    "abilities": [
+      { "type": "experience", "value": 10 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Guile",
+    "img": "hamsters/guile.gif",
+    "baseStats": { "hp": 50, "str": 30, "luck": 20 },
+    "abilities": [
+      { "type": "survive", "value": 5 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Big Daddy",
+    "img": "hamsters/big-daddy.gif",
+    "baseStats": { "hp": 50, "str": 90, "luck": 50 },
+    "abilities": [
+      { "type": "rest", "value": -50 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "The Dracula",
+    "img": "hamsters/the-dracula.gif",
+    "baseStats": { "hp": 10, "str": 50, "luck": 90 },
+    "abilities": [
+      { "type": "experience", "value": 30 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "The Hamster",
+    "img": "hamsters/the-hamster.gif",
+    "baseStats": { "hp": 20, "str": 10, "luck": 20 },
+    "abilities": [],
+    "ultimate": ""
+  },
+  {
+    "name": "Naughty Claus",
+    "img": "hamsters/naughty-claus.gif",
+    "baseStats": { "hp": 85, "str": 45, "luck": 55 },
+    "abilities": [
+      { "type": "survive", "value": 10 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Uncle",
+    "img": "hamsters/uncle.gif",
+    "baseStats": { "hp": 85, "str": 85, "luck": 30 },
+    "abilities": [
+      { "type": "extra_rewards", "value": 50 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Birthday Bob",
+    "img": "hamsters/birthday-bob.gif",
+    "baseStats": { "hp": 30, "str": 30, "luck": 10 },
+    "abilities": [
+      { "type": "rest", "value": -4 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Valkirita",
+    "img": "hamsters/valkirita.gif",
+    "baseStats": { "hp": 90, "str": 90, "luck": 25 },
+    "abilities": [
+      { "type": "expedition_time", "value": -50 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Banjo Walker",
+    "img": "hamsters/banjo-walker.gif",
+    "baseStats": { "hp": 65, "str": 30, "luck": 80 },
+    "abilities": [
+      { "type": "experience", "value": 30 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Dusty McUncle",
+    "img": "hamsters/dusty-mcuncle.gif",
+    "baseStats": { "hp": 80, "str": 80, "luck": 40 },
+    "abilities": [
+      { "type": "extra_rewards", "value": 40 },
+      { "type": "back_to_work", "value": 25 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Mamita",
+    "img": "hamsters/mamita.gif",
+    "baseStats": { "hp": 85, "str": 30, "luck": 85 },
+    "abilities": [
+      { "type": "rest", "value": -25 },
+      { "type": "experience", "value": 50 },
+      { "type": "influencer", "value": 150, "value2": 20 }
+    ],
+    "ultimate": ""
+  },
+  {
+    "name": "Plague Dancer",
+    "img": "hamsters/plague-dancer.gif",
+    "baseStats": { "hp": 25, "str": 90, "luck": 80 },
+    "abilities": [
+      { "type": "survive", "value": 15 },
+      { "type": "rest", "value": -40 }
+    ],
+    "ultimate": "x3-5 chests if survives"
+  },
+  {
+    "name": "Anomaly",
+    "img": "hamsters/anomaly.gif",
+    "baseStats": { "hp": 60, "str": 60, "luck": 40 },
+    "abilities": [
+      { "type": "extra_rewards", "value": 20 },
+      { "type": "expedition_time", "value": -20 }
+    ],
+    "ultimate": "All stats to 100"
+  },
+  {
+    "name": "Lord Hexron",
+    "img": "hamsters/lord-hexron.gif",
+    "baseStats": { "hp": 85, "str": 85, "luck": 35 },
+    "abilities": [
+      { "type": "expedition_time", "value": -50 },
+      { "type": "rest", "value": -50 }
+    ],
+    "ultimate": "Crypto reward if survives"
+  },
+  {
+    "name": "Sir Catch-a-Lot",
+    "img": "hamsters/sir-catch-a-lot.gif",
+    "baseStats": { "hp": 45, "str": 75, "luck": 95 },
+    "abilities": [
+      { "type": "back_to_work", "value": 25 },
+      { "type": "experience", "value": 30 }
+    ],
+    "ultimate": "x3-5 chests if survives"
+  },
+  {
+    "name": "Lucky Red",
+    "img": "hamsters/lucky-red.gif",
+    "baseStats": { "hp": 70, "str": 80, "luck": 50 },
+    "abilities": [
+      { "type": "extra_rewards", "value": 25 },
+      { "type": "influencer", "value": 150, "value2": 5 }
+    ],
+    "ultimate": "Guaranteed survival"
+  },
+  {
+    "name": "Partello",
+    "img": "hamsters/partello.gif",
+    "baseStats": { "hp": 20, "str": 35, "luck": 35 },
+    "abilities": [
+      { "type": "experience", "value": 30 }
+    ],
+    "ultimate": "Extra common parts if survives"
+  },
+  {
+    "name": "Kitsumi",
+    "img": "hamsters/kitsumi.gif",
+    "baseStats": { "hp": 90, "str": 40, "luck": 90 },
+    "abilities": [
+      { "type": "buyback_discount", "value": -50 },
+      { "type": "remote_bonus", "value": 2, "formula": "(str+hp+luck)*2%" }
+    ],
+    "ultimate": "Smart Study: no cooldown, +1 skill point on success"
+  },
+  {
+    "name": "Hammy Hooks",
+    "img": "hamsters/hammy-hooks.gif",
+    "baseStats": { "hp": 80, "str": 80, "luck": 45 },
+    "abilities": [
+      { "type": "survive", "value": 10 },
+      { "type": "rest", "value": -50 },
+      { "type": "remote_bonus", "value": 2, "formula": "(str+hp+luck)*2%" }
+    ],
+    "ultimate": "Boost mode: all stats to 100"
+  },
+  {
+    "name": "Mr. Jack",
+    "img": "hamsters/mr-jack.gif",
+    "baseStats": { "hp": 25, "str": 25, "luck": 15 },
+    "abilities": [],
+    "ultimate": ""
+  }
+]

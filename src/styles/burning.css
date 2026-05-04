@@ -632,6 +632,25 @@
   color: #f44336;
 }
 
+.sellable-link {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  background: #4caf50;
+  color: #ffffff !important;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.65em;
+}
+
+.sellable-link:hover {
+  background: #66bb6a;
+}
+
 .filter-input-group select {
   width: 100%;
   padding: 0.2rem 0.4rem;

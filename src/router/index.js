@@ -5,6 +5,8 @@ import Rollertap from '../pages/Rollertap.vue'
 import PE from '../pages/PE.vue'
 import BurningEvent from '../pages/BurningEvent.vue'
 import Rooms from '../pages/Rooms.vue'
+import Hamsters from '../pages/Hamsters.vue'
+import Marketplace from '../pages/Marketplace.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,16 @@ const routes = [
     path: '/rooms',
     name: 'Rooms',
     component: Rooms
+  },
+  {
+    path: '/hamsters',
+    name: 'Hamsters',
+    component: Hamsters
+  },
+  {
+    path: '/marketplace',
+    name: 'Marketplace',
+    component: Marketplace
   }
 ]
 

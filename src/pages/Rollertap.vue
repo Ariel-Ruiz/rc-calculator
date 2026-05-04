@@ -8,7 +8,7 @@
     <div class="resume">
       <div class="resume-profit">
         <span> {{ t?.rollertap?.coinsPerHour }}
-          <span class="coin"> 🪙{{ getTotalIncome() }}</span>
+          <span class="coin"> <img :src="coinImg" alt="coin" class="coin-icon coin-icon-lg" />{{ getTotalIncome() }}</span>
         </span>
       </div>
     </div>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="card-profit">
-          {{ t?.rollertap?.profitPerHour }}: <span class="coin">🪙{{ handleCoins(row.coinsPerHour) }}</span>
+          {{ t?.rollertap?.profitPerHour }}: <span class="coin"><img :src="coinImg" alt="coin" class="coin-icon" />{{ handleCoins(row.coinsPerHour) }}</span>
         </div>
         <div v-if="row.currentLevel === row.levels.length" class="last-level-message">
           {{ t?.rollertap?.lastLevelMessage }}
@@ -57,8 +57,8 @@
         </div>
         <div v-else class="next-level" :style="{ backgroundColor: getNextLevelColor(row) }">
           <div class="level-title">{{ t?.rollertap?.nextLevel }}</div>
-          <div class="coin">+🪙{{ handleCoins(row.levels[row.currentLevel].coinsPerHour) }}</div>
-          <div class="cost">{{ t?.rollertap?.cost }}: 🪙{{ handleCoins(row.levels[row.currentLevel].price) }}</div>
+          <div class="coin">+<img :src="coinImg" alt="coin" class="coin-icon" />{{ handleCoins(row.levels[row.currentLevel].coinsPerHour) }}</div>
+          <div class="cost">{{ t?.rollertap?.cost }}: <img :src="coinImg" alt="coin" class="coin-icon" />{{ handleCoins(row.levels[row.currentLevel].price) }}</div>
           <div class="roi">{{ t?.rollertap?.roiInHours }}: {{ handleHours(getRoi(row.levels[row.currentLevel])) }}</div>
         </div>
       </div>
@@ -104,7 +104,7 @@
         <div v-else class="next-level" style="background-color: var(--secondary)">
           <div class="level-title">{{ t?.rollertap?.nextLevel }}</div>
           <div class="coin">+{{ handleCoins(unclesBlessing.levels[unclesBlessing.currentLevel].value * 100) }}%</div>
-          <div class="cost">{{ t?.rollertap?.cost }}: 🪙{{ handleCoins(unclesBlessing.levels[unclesBlessing.currentLevel].price) }}</div>
+          <div class="cost">{{ t?.rollertap?.cost }}: <img :src="coinImg" alt="coin" class="coin-icon" />{{ handleCoins(unclesBlessing.levels[unclesBlessing.currentLevel].price) }}</div>
         </div>
       </div>
     </div>
@@ -117,6 +117,7 @@
 // Para mantener este archivo más pequeño y manejable
 
 import '../styles/rollertap.css'
+import coinImg from '../assets/rollertap/coin.png'
 import funnyHamster from '../assets/rollertap/1.png'
 import magicHamster from '../assets/rollertap/2.png'
 import mightyHamster from '../assets/rollertap/3.png'
@@ -171,6 +172,7 @@ export default {
         knightHamster,
         cosmoHamster
       }),
+      coinImg,
       unclesBlessing: defaultUnclesBlessing,
       defaultUnclesBlessingImage: defaultUnclesBlessing.image,
       defaultUnclesBlessingName: defaultUnclesBlessing.name,

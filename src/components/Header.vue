@@ -40,10 +40,6 @@
         >
           {{ t.nav && t.nav.burning }}
         </router-link>
-        <!-- <a href="#" class="comming-soon" tabindex="-1" aria-disabled="true">
-          {{ t.nav && t.nav.rooms }}
-          <div class="comming-soon-text">{{ t.nav && t.nav.comming_soon }}</div>
-        </a> -->
         <router-link
           to="/rooms"
           @click.native="toggleMenu"
@@ -51,6 +47,24 @@
         >
           {{ t.nav && t.nav.rooms }}
         </router-link>
+        <router-link
+          to="/hamsters"
+          @click.native="toggleMenu"
+          :class="{ active: $route.path === '/hamsters' }"
+        >
+          {{ t.nav && t.nav.hamsters }}
+        </router-link>
+        <router-link
+          to="/marketplace"
+          @click.native="toggleMenu"
+          :class="{ active: $route.path === '/marketplace', 'nav-glow': true }"
+        >
+          {{ t.nav && t.nav.marketplace }}
+        </router-link>
+        <!-- <a href="#" class="comming-soon" tabindex="-1" aria-disabled="true">
+          {{ t.nav && t.nav.marketplace }}
+          <div class="comming-soon-text">{{ t.nav && t.nav.comming_soon }}</div>
+        </a> -->
       </nav>
       <div class="navbar-lang-container">
         <button class="navbar-lang" id="toggleLang" @click="toggleLang">

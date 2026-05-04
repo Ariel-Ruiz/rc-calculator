@@ -1,0 +1,233 @@
+.hamsters-container {
+  padding: 0rem;
+  text-align: center;
+}
+
+.hamsters-container .event-title {
+  margin-bottom: 1.2rem;
+}
+
+.hamsters-scroll-wrapper {
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 10px;
+  background-color: var(--secondary);
+  padding: 0px 0px 5px 5px;
+  cursor: grab;
+}
+
+.hamsters-scroll-wrapper:active {
+  cursor: grabbing;
+}
+
+.hamsters-table {
+  min-width: 1200px;
+  font-size: 0.92rem;
+  border-collapse: collapse;
+  overflow: auto;
+}
+
+.hamsters-table thead th {
+  position: sticky !important;
+  top: 0;
+  z-index: 5;
+  background: var(--secondary);
+  box-shadow: 0 1px 0 0 var(--secondary), 0 -1px 0 0 var(--secondary);
+}
+
+.hamster-img-cell {
+  position: sticky !important;
+  left: -6px;
+  z-index: 3;
+  background: var(--primary);
+  width: 74px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.hamsters-table thead th:first-child {
+  position: sticky !important;
+  top: 0;
+  z-index: 10;
+}
+
+tr:hover .hamster-img-cell,
+.maxstats-hover .hamster-img-cell {
+  background: var(--secondary);
+}
+
+.hamsters-table th {
+  padding: 0.5rem;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.hamsters-table td {
+  padding: 0.4rem 0.5rem;
+  vertical-align: middle;
+}
+
+.exp-header {
+  min-width: 130px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.exp-header:hover .exp-header-name {
+  text-shadow: 0 0 3px var(--accent), 0 0 6px var(--accent);
+}
+
+.exp-sorted .exp-header-name {
+  color: var(--accent);
+  text-shadow: 0 0 2px var(--accent), 0 0 5px var(--accent);
+}
+
+.exp-header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-header-name {
+  position: absolute;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary-active);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 1;
+}
+
+.exp-header-img {
+  width: 130px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.hamster-img {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.hamster-name {
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--text-primary-active);
+}
+
+.stats-cell {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.total-stats-cell {
+  text-align: center;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.extra-survival-cell {
+  text-align: center;
+}
+
+.extra-survive-tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  background: rgba(76, 175, 80, 0.3);
+  color: var(--success);
+}
+
+.survival-cell {
+  text-align: center;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--text-primary-active);
+}
+
+.base-surv {
+  color: var(--text-primary-active) !important;
+}
+
+.survival-high {
+  color: var(--success);
+}
+
+.survival-mid {
+  color: var(--coin);
+}
+
+.survival-low {
+  color: var(--danger);
+}
+
+.kitsumi-row {
+  border-top: 1px dashed var(--tertiary);
+}
+
+.kitsumi-group.maxstats-hover,
+.kitsumi-group:hover {
+  background-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .hamsters-container {
+    padding: 0.1rem;
+  }
+
+  .hamsters-scroll-wrapper {
+    padding: 0;
+    border-radius: 4px;
+  }
+
+  .hamsters-table {
+    font-size: 0.74rem;
+    min-width: 960px;
+  }
+
+  .hamsters-table th {
+    padding: 0.15rem 0.15rem;
+    font-size: 0.69rem;
+  }
+
+  .hamsters-table td {
+    padding: 0.15rem 0.15rem;
+  }
+
+  .hamster-img {
+    width: 59px;
+    height: 59px;
+  }
+
+  .hamster-img-cell {
+    width: 59px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .exp-header-img {
+    width: 104px;
+    height: 32px;
+  }
+
+  .exp-header-name {
+    font-size: 0.72rem;
+  }
+
+  .exp-header {
+    min-width: 104px;
+  }
+
+  .extra-survive-tag {
+    font-size: 0.69rem;
+    padding: 0.1rem 0.3rem;
+  }
+}

@@ -206,7 +206,7 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.4
+      let phXRLT = 0.5
       let feeXBox = 0.15
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {

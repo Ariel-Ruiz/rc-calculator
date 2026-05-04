@@ -7,7 +7,15 @@
       "Bash(node:*)",
       "Bash(npm run build:*)",
       "Bash(ls:*)",
-      "Bash(npx vite:*)"
+      "Bash(npx vite:*)",
+      "WebFetch(domain:rollercoin.com)",
+      "Bash(npm run:*)",
+      "Bash(grep:*)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(json.dumps\\(data[:2], indent=2\\)\\); print\\(f'Total racks: {len\\(data\\)}'\\)\")",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(f'Total miners: {len\\(data\\)}'\\); filenames = [m.get\\('filename',''\\) for m in data]; print\\(f'With filename: {sum\\(1 for f in filenames if f\\)}'\\); print\\(f'Without filename: {sum\\(1 for f in filenames if not f\\)}'\\)\")",
+      "Bash(file \"/c/Users/Personal/Documents/rc-resources/miner/\"*.gif)",
+      "Bash(file \"/c/Users/Personal/Documents/rc-resources/rack/\"*.png)",
+      "Bash(python3:*)"
     ]
   }
 }

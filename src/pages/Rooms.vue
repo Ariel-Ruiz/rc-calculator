@@ -10,20 +10,30 @@
 
       <div class="rooms-beta-notice" v-html="t.rooms?.beta_notice"></div>
 
-      <img
-        :src="exampleImage"
-        :alt="t.rooms?.import_example_alt"
-        class="rooms-import-example"
-        @click="previewImage = exampleImage"
-      />
+      <div class="rooms-examples-label">{{ t.rooms?.examples || 'Examples:' }}</div>
+      <div class="rooms-examples-row">
+        <div class="rooms-example-thumb" @click="previewImage = exampleImages.collection">
+          <img :src="exampleImages.collection" alt="Collection" />
+          <span>Collection</span>
+        </div>
+        <div class="rooms-example-thumb" @click="previewImage = exampleImages.inventory">
+          <img :src="exampleImages.inventory" alt="Inventory" />
+          <span>Inventory</span>
+        </div>
+        <div class="rooms-example-thumb" @click="previewImage = exampleImages.sell">
+          <img :src="exampleImages.sell" alt="Sell" />
+          <span>Sell</span>
+        </div>
+      </div>
 
       <textarea
         v-model="importText"
         class="rooms-textarea"
-        :placeholder="t.rooms?.placeholder"
+        placeholder="Paste data here..."
       ></textarea>
 
       <button class="rooms-btn-add rooms-btn-full" @click="addMiners">{{ t.rooms?.add }}</button>
+      <button class="rooms-btn-auto-import" @click="showAutoImport = 'select'">{{ t.rooms?.auto_import || 'AUTO IMPORT ROOMS' }}</button>
 
       <div class="rooms-import-buttons">
         <button class="rooms-btn-clear-rooms" @click="showClearRoomsConfirm = true">{{ t.rooms?.clear_rooms }}</button>
@@ -191,7 +201,7 @@
                                   <img
                                     :src="getMinerImageUrl(minerSlot.miner)"
                                     :alt="minerSlot.miner.name"
-                                    class="miner-thumb"
+                                    :class="['miner-thumb', { 'default-miner-img': isDefaultMinerImg(minerSlot.miner) }]"
                                   />
                                   <div class="room-miner-badges">
                                     <img
@@ -356,21 +366,26 @@
             </div>
             <div v-if="filteredAvailableMiners.length > 0" class="rooms-list-grid">
               <div
-                v-for="miner in sortedAvailableMiners"
-                :key="miner.uid"
-                :class="['rooms-list-card', { 'added-manually': miner.addedManually, 'manual-selected': !manualMode && manualSelectedMiners[miner.uid] }]"
-                @click="!manualMode && toggleManualMinerSelect(miner.uid)"
-                @mousedown="manualMode && onManualMouseDown('miner', miner, $event)"
+                v-for="miner in stackedAvailableMiners"
+                :key="miner.name + '|' + miner.power + '|' + miner.bonus"
+                :class="['rooms-list-card', { 'added-manually': miner.addedManually, 'manual-selected': !manualMode && miner._instances.some(inst => manualSelectedMiners[inst.uid]), 'removing': minerRemovalKey === (miner.name + '|' + miner.power + '|' + miner.bonus), 'adding': minerAddKey === (miner.name + '|' + miner.power + '|' + miner.bonus) }]"
+                @click="!manualMode && selectStackedMiner(miner)"
+                @mousedown="manualMode && onManualMouseDown('miner', miner._instances[0], $event)"
               >
-                <button class="rooms-list-card-delete" @click.stop="removeMiner(miner)">&times;</button>
-                <span class="rooms-list-card-quantity">{{ (miner.cells || 1) === 1 ? '1 cell' : '2 cells' }}</span>
+                <div class="rooms-list-card-actions" @click.stop @mousedown.stop>
+                  <button class="rooms-list-card-delete" @click="startMinerRemoval(miner)">&times;</button>
+                  <button class="rooms-list-card-add-btn" @click="startMinerAddDuplicate(miner)">+</button>
+                </div>
+                <span class="rooms-list-card-qty-row">
+                  <span v-if="miner._stackQty > 1" class="rooms-list-card-stack-qty">{{ miner._stackQty }}</span>
+                  <span class="rooms-list-card-quantity">{{ (miner.cells || 1) === 1 ? '1 cell' : '2 cells' }}</span>
+                </span>
                 <div class="rooms-list-card-img-area">
                   <div class="rooms-list-card-miner-row">
                     <img
-                      v-if="getMinerImageUrl(miner)"
                       :src="getMinerImageUrl(miner)"
                       :alt="miner.name"
-                      class="rooms-list-card-miner-img"
+                      :class="['rooms-list-card-miner-img', { 'default-miner-img': isDefaultMinerImg(miner) }]"
                     />
                     <div class="rooms-list-card-badges">
                       <img
@@ -395,12 +410,45 @@
                   </div>
                 </div>
                 <div class="rooms-list-card-info">
-                  <div class="rooms-list-card-name" :title="getCleanName(miner.name)">{{ getCleanName(miner.name) }}</div>
-                  <div class="rooms-list-card-stats">
-                    <span class="rooms-list-card-power">{{ miner.power }}</span>
-                    <span class="rooms-list-card-sep">|</span>
-                    <span class="rooms-list-card-bonus">{{ miner.bonus }}%</span>
+                  <template v-if="!manualMode && minerSelectState[miner.name + '|' + miner.power + '|' + miner.bonus]">
+                    <div class="rooms-list-card-select-qty" @click.stop>
+                      <button class="rooms-add-qty-btn" @click="changeMinerSelectQty(miner, -1)">-</button>
+                      <span class="rooms-add-qty-val">{{ minerSelectState[miner.name + '|' + miner.power + '|' + miner.bonus].qty }}</span>
+                      <button class="rooms-add-qty-btn" @click="changeMinerSelectQty(miner, 1)">+</button>
+                    </div>
+                  </template>
+                  <template v-else>
+                    <div class="rooms-list-card-name" :title="getCleanName(miner.name)">{{ getCleanName(miner.name) }}</div>
+                    <div class="rooms-list-card-stats">
+                      <span class="rooms-list-card-power">{{ miner.power }}</span>
+                      <span class="rooms-list-card-sep">|</span>
+                      <span class="rooms-list-card-bonus">{{ miner.bonus }}%</span>
+                    </div>
+                  </template>
+                </div>
+                <div v-if="minerRemovalKey === (miner.name + '|' + miner.power + '|' + miner.bonus)" class="rooms-rack-remove-overlay" @click.stop @mousedown.stop>
+                  <div class="rooms-rack-remove-qty">
+                    <button class="rooms-add-qty-btn" @click="minerRemovalQty = Math.max(1, minerRemovalQty - 1)">-</button>
+                    <input
+                      type="number"
+                      class="rooms-rack-remove-input"
+                      :value="minerRemovalQty"
+                      @input="onMinerRemovalInput($event)"
+                      @blur="clampMinerRemovalInput($event)"
+                      min="1"
+                      :max="minerRemovalMax"
+                    />
+                    <button class="rooms-add-qty-btn" @click="minerRemovalQty = Math.min(minerRemovalMax, minerRemovalQty + 1)">+</button>
                   </div>
+                  <button class="rooms-rack-remove-confirm" @click="confirmMinerRemoval">{{ t.rooms?.delete || 'DELETE' }}</button>
+                </div>
+                <div v-if="minerAddKey === (miner.name + '|' + miner.power + '|' + miner.bonus)" class="rooms-rack-remove-overlay" @click.stop @mousedown.stop>
+                  <div class="rooms-rack-remove-qty">
+                    <button class="rooms-add-qty-btn" @click="minerAddQty = Math.max(1, minerAddQty - 1)">-</button>
+                    <input type="number" class="rooms-rack-remove-input" :value="minerAddQty" @input="e => { const v = parseInt(e.target.value); if (!isNaN(v) && v >= 1) minerAddQty = v }" min="1" />
+                    <button class="rooms-add-qty-btn" @click="minerAddQty++">+</button>
+                  </div>
+                  <button class="rooms-rack-add-confirm" @click="confirmMinerAddDuplicate">{{ t.rooms?.add || 'ADD' }}</button>
                 </div>
               </div>
             </div>
@@ -515,11 +563,17 @@
               <div
                 v-for="rack in sortedAvailableRacks"
                 :key="rack.id + '-' + rack.index"
-                :class="['rooms-list-card', { 'added-manually': rack.addedManually, 'removing': rackRemovalId === (rack.id || rack.name) }]"
+                :class="['rooms-list-card', { 'added-manually': rack.addedManually, 'removing': rackRemovalId === (rack.id || rack.name), 'adding': rackAddId === (rack.id || rack.name) }]"
                 @mousedown="manualMode && onManualMouseDown('rack', rack, $event)"
               >
-                <button class="rooms-list-card-delete" @click.stop="startRackRemoval(rack)">&times;</button>
-                <span class="rooms-list-card-quantity">{{ rack.available }}</span>
+                <div class="rooms-list-card-actions" @click.stop @mousedown.stop>
+                  <button class="rooms-list-card-delete" @click="startRackRemoval(rack)">&times;</button>
+                  <button class="rooms-list-card-add-btn" @click="startRackAdd(rack)">+</button>
+                </div>
+                <span class="rooms-list-card-qty-row">
+                  <span v-if="rack.available > 1" class="rooms-list-card-stack-qty">{{ rack.available }}</span>
+                  <span class="rooms-list-card-quantity">{{ rack.size }} cells</span>
+                </span>
                 <div class="rooms-list-card-img-area">
                   <div class="rooms-list-card-miner-row">
                     <img
@@ -534,16 +588,12 @@
                 </div>
                 <div class="rooms-list-card-info">
                   <div class="rooms-list-card-name" :title="rack.name">{{ rack.name }}</div>
-                  <div class="rooms-list-card-stats">
-                    <span class="rooms-list-card-power">{{ rack.size }} cells</span>
-                    <template v-if="rack.bonus > 0">
-                      <span class="rooms-list-card-sep">|</span>
-                      <span class="rooms-list-card-bonus">{{ rack.bonus }}%</span>
-                    </template>
+                  <div v-if="rack.bonus > 0" class="rooms-list-card-stats">
+                    <span class="rooms-list-card-bonus">{{ rack.bonus }}%</span>
                   </div>
                 </div>
                 <!-- Removal overlay -->
-                <div v-if="rackRemovalId === (rack.id || rack.name)" class="rooms-rack-remove-overlay">
+                <div v-if="rackRemovalId === (rack.id || rack.name)" class="rooms-rack-remove-overlay" @click.stop @mousedown.stop>
                   <div class="rooms-rack-remove-qty">
                     <button class="rooms-add-qty-btn" @click="rackRemovalQty = Math.max(1, rackRemovalQty - 1)">-</button>
                     <input
@@ -558,6 +608,14 @@
                     <button class="rooms-add-qty-btn" @click="rackRemovalQty = Math.min(rackRemovalMax, rackRemovalQty + 1)">+</button>
                   </div>
                   <button class="rooms-rack-remove-confirm" @click="confirmRackRemoval">{{ t.rooms?.delete || 'DELETE' }}</button>
+                </div>
+                <div v-if="rackAddId === (rack.id || rack.name)" class="rooms-rack-remove-overlay" @click.stop @mousedown.stop>
+                  <div class="rooms-rack-remove-qty">
+                    <button class="rooms-add-qty-btn" @click="rackAddQty = Math.max(1, rackAddQty - 1)">-</button>
+                    <input type="number" class="rooms-rack-remove-input" :value="rackAddQty" @input="e => { const v = parseInt(e.target.value); if (!isNaN(v) && v >= 1) rackAddQty = v }" min="1" />
+                    <button class="rooms-add-qty-btn" @click="rackAddQty++">+</button>
+                  </div>
+                  <button class="rooms-rack-add-confirm" @click="confirmRackAdd">{{ t.rooms?.add || 'ADD' }}</button>
                 </div>
               </div>
             </div>
@@ -797,12 +855,84 @@
         </div>
       </div>
     </div>
+
+    <!-- Auto Import Modal -->
+    <div v-if="showAutoImport" class="rooms-confirm-overlay" @click.self="showAutoImport = null">
+      <div class="rooms-auto-import-modal">
+        <!-- Step 1: Select method -->
+        <template v-if="showAutoImport === 'select'">
+          <h2 class="rooms-ai-title">{{ t.rooms?.auto_import || 'AUTO IMPORT ROOMS' }}</h2>
+          <div class="rooms-ai-options">
+            <div class="rooms-ai-option">
+              <h3>Network (F12)</h3>
+              <div class="rooms-ai-option-desc">
+                {{ t.rooms?.ai_network_desc || 'Import your rooms configuration from RollerCoin\'s network data' }}
+              </div>
+              <button class="rooms-ai-option-btn" @click="showAutoImport = 'network'">
+                {{ t.rooms?.ai_continue || 'CONTINUE' }}
+              </button>
+            </div>
+            <div class="rooms-ai-option rooms-ai-option-disabled">
+              <h3>{{ t.rooms?.ai_screenshot_title || 'Screenshot' }}</h3>
+              <div class="rooms-ai-option-desc">
+                {{ t.rooms?.ai_screenshot_desc || 'Import your rooms from screenshots using image recognition' }}
+              </div>
+              <button class="rooms-ai-option-btn" disabled>
+                {{ t.rooms?.ai_coming_soon || 'COMING SOON' }}
+              </button>
+            </div>
+          </div>
+        </template>
+
+        <!-- Step 2: Network import -->
+        <template v-if="showAutoImport === 'network'">
+          <h2 class="rooms-ai-title">Network (F12)</h2>
+          <div class="rooms-ai-instructions">
+            <b>{{ t.rooms?.ai_how_to || 'How to get the data:' }}</b>
+            <ol>
+              <li>{{ t.rooms?.ai_step1 || 'Go to' }} <a class="source-link" href="https://rollercoin.com/game" target="_blank">rollercoin.com/game</a></li>
+              <li>{{ t.rooms?.ai_step2 || 'Press F12 to open DevTools → Network tab' }}</li>
+              <li>{{ t.rooms?.ai_step3 || 'Reload the page (F5)' }}</li>
+              <li>{{ t.rooms?.ai_step4 || 'Search for "room-config" in the filter' }}</li>
+              <li>{{ t.rooms?.ai_step5 || 'Click the request → Response tab → Copy all' }}</li>
+            </ol>
+          </div>
+          <div class="rooms-ai-network-content">
+            <textarea
+              v-model="autoImportText"
+              class="rooms-textarea rooms-ai-textarea"
+              :placeholder="t.rooms?.ai_paste || 'Paste the JSON response here...'"
+            ></textarea>
+            <img
+              v-if="networkExampleImg"
+              :src="networkExampleImg"
+              alt="Network example"
+              class="rooms-ai-example-img"
+              @click="previewImage = networkExampleImg"
+            />
+          </div>
+          <div class="rooms-ai-actions">
+            <button class="rooms-ai-back-btn" @click="showAutoImport = 'select'">{{ t.rooms?.ai_back || '← BACK' }}</button>
+            <button class="rooms-ai-import-btn" @click="importFromNetwork" :disabled="!autoImportText.trim()">
+              {{ t.rooms?.ai_import || 'IMPORT' }}
+            </button>
+          </div>
+          <div v-if="autoImportError" class="rooms-ai-error">{{ autoImportError }}</div>
+          <div v-if="autoImportSuccess" class="rooms-ai-success">{{ autoImportSuccess }}</div>
+        </template>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import '../styles/rooms.css'
 import exampleCollection from '../assets/example_collection.png'
+import exampleInventory from '../assets/example_inventory.png'
+import exampleSell from '../assets/example_sell.png'
+import defaultMinerImg from '../assets/miners/default.svg'
+let networkExampleImg = null
+try { networkExampleImg = new URL('../assets/example_network_import.png', import.meta.url).href } catch (e) {}
 import minersData from '../assets/miners.json'
 import racksData from '../assets/racks.json'
 import setsData from '../assets/sets.json'
@@ -863,7 +993,7 @@ export default {
   data() {
     return {
       storagePath: 'https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/',
-      exampleImage: exampleCollection,
+      exampleImages: { collection: exampleCollection, inventory: exampleInventory, sell: exampleSell },
       roomSkins: roomSkinsData,
       selectedSkin: roomSkinsData[0]?.id || 'room_background',
       showSkinSelector: false,
@@ -924,6 +1054,19 @@ export default {
       rackRemovalId: null,
       rackRemovalQty: 1,
       rackRemovalMax: 1,
+      minerRemovalKey: null,
+      minerRemovalQty: 1,
+      minerRemovalMax: 1,
+      minerSelectState: {},
+      minerAddKey: null,
+      minerAddQty: 1,
+      rackAddId: null,
+      rackAddQty: 1,
+      showAutoImport: null,
+      autoImportText: '',
+      autoImportError: '',
+      autoImportSuccess: '',
+      networkExampleImg,
       manualSelectedMiners: {},
       manualAddStep: 'select',
       manualAddPlan: null,
@@ -1001,6 +1144,18 @@ export default {
         case 'bonus-asc': return list.sort((a, b) => (parseFloat(a.bonus) || 0) - (parseFloat(b.bonus) || 0))
         default: return list
       }
+    },
+    stackedAvailableMiners() {
+      const groups = {}
+      this.sortedAvailableMiners.forEach(m => {
+        const key = `${m.name}|${m.power}|${m.bonus}`
+        if (!groups[key]) {
+          groups[key] = { ...m, _stackQty: 0, _instances: [] }
+        }
+        groups[key]._stackQty++
+        groups[key]._instances.push(m)
+      })
+      return Object.values(groups)
     },
     sortedAvailableRacks() {
       const list = [...this.filteredAvailableRacks]
@@ -1099,16 +1254,23 @@ export default {
       return total
     },
     // General bonus (miner bonuses + set bonuses of type "bonus", NOT rack bonuses)
+    // Duplicate miners (same name) only contribute bonus ONCE
     totalBonus() {
       let total = 0
+      const seenBonus = new Set()
       for (let r = 1; r <= 4; r++) {
         if (!this.activeRooms[r - 1]) continue
         Object.values(this.rooms[r]).forEach(slot => {
-          // Miner individual bonuses
           if (slot.miners) {
-            slot.miners.forEach(m => { if (m) total += parseFloat(m.bonus) || 0 })
+            slot.miners.forEach(m => {
+              if (!m) return
+              const key = `${m.name}|${m.power}|${m.bonus}`
+              if (!seenBonus.has(key)) {
+                seenBonus.add(key)
+                total += parseFloat(m.bonus) || 0
+              }
+            })
           }
-          // Set level bonus (type "bonus" or mixed)
           const setBonus = this.getSlotSetBonus(slot)
           if (setBonus) {
             if (setBonus.type === 'bonus') total += setBonus.value
@@ -1293,12 +1455,48 @@ export default {
     },
 
     // ========== IMPORT / PARSE ==========
-    parseCollectionInput(text) {
+    parseInput(text) {
       const miners = []
       const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0)
       let uidCounter = Date.now()
-      let i = 0
 
+      const findExisting = (miner) => {
+        return miners.find(m =>
+          m.name === miner.name &&
+          m.power === miner.power &&
+          m.bonus === miner.bonus &&
+          m.source === miner.source
+        )
+      }
+
+      const addMiner = (miner) => {
+        miner.uid = uidCounter++
+        const existing = findExisting(miner)
+        if (existing) {
+          if (miner.isSet && !existing.isSet) existing.isSet = true
+          if (miner.minerId && !existing.minerId) existing.minerId = miner.minerId
+          if ((miner.source === 'INVENTORY' || miner.source === 'SELL') && miner.quantity) {
+            existing.quantity = (existing.quantity || 1) + miner.quantity
+          }
+        } else {
+          miners.push(miner)
+        }
+      }
+
+      const buildMinerEntry = (fields) => {
+        const dbMiner = this.findMiner({ name: this.getCleanName(fields.name), minerId: fields.minerId || null })
+        const cells = dbMiner ? dbMiner.cells : 2
+        const setName = (dbMiner && dbMiner.is_set && dbMiner.set) ? dbMiner.set : null
+        const resolvedMinerId = dbMiner ? dbMiner.id : (fields.minerId || null)
+        return {
+          uid: 0, name: fields.name, power: fields.power, bonus: fields.bonus,
+          quantity: fields.quantity || 1, isSet: fields.isSet || false,
+          isLegacy: fields.isLegacy || false, minerId: resolvedMinerId,
+          cells, setName, source: fields.source
+        }
+      }
+
+      let i = 0
       while (i < lines.length) {
         if ((lines[i].match(/^product\d*$/i) && !lines[i].includes('set badge')) ||
             lines[i] === 'In collection' ||
@@ -1307,6 +1505,7 @@ export default {
           continue
         }
 
+        // ========== COLLECTION FORMAT ==========
         const collectionBonusMatch = lines[i].match(/^Bonus power \+([\d.,]+)%$/i)
         if (collectionBonusMatch) {
           let bonus = collectionBonusMatch[1]
@@ -1347,25 +1546,192 @@ export default {
                 else if (rarity) name = `${rarity} ${name}`
               }
 
+              let endIdx = nameIndex + 1
               for (let j = nameIndex + 1; j < Math.min(i + 12, lines.length); j++) {
                 const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
                 if (powerMatch) power = `${powerMatch[1]} ${powerMatch[2]}`
+                endIdx = j + 1
                 if (lines[j] === 'Miner details') break
               }
 
               if (name && power) {
-                const dbMiner = this.findMiner({ name, minerId })
-                const cells = dbMiner ? dbMiner.cells : 1
-                const setName = (dbMiner && dbMiner.is_set && dbMiner.set) ? dbMiner.set : null
-                miners.push({
-                  uid: uidCounter++, name, power, bonus, isSet, isLegacy, minerId, cells, setName, source: 'COLLECTION'
-                })
+                addMiner(buildMinerEntry({ name, power, bonus, quantity: 1, isSet, isLegacy, minerId, source: 'COLLECTION' }))
+              }
+              i = endIdx
+            } else {
+              i++
+            }
+          } else {
+            i++
+          }
+          continue
+        }
+
+        // ========== INVENTORY FORMAT ==========
+        const isInventoryLegacy = lines[i] === 'Rating star' && i + 2 < lines.length && lines[i + 2] === 'Set'
+        const isInventorySetBadge = lines[i] === 'set badge' && i + 2 < lines.length && lines[i + 2] === 'Set'
+        const isInventoryNormal = i + 1 < lines.length && lines[i + 1] === 'Set' && lines[i] !== 'Rating star' && lines[i] !== 'set badge'
+
+        if (isInventoryLegacy || isInventorySetBadge || isInventoryNormal) {
+          let name = ''
+          let power = ''
+          let bonus = ''
+          let quantity = 1
+          let isLegacy = isInventoryLegacy
+          let isSet = isInventorySetBadge
+          let startIndex = i
+
+          if (isInventoryLegacy) {
+            name = `Legacy ${lines[i + 1]}`
+            startIndex = i + 1
+          } else if (isInventorySetBadge) {
+            let candidateName = lines[i + 1]
+            startIndex = i + 1
+            if (candidateName.toLowerCase().endsWith(' set') && i + 3 < lines.length) {
+              candidateName = lines[i + 3]
+              startIndex = i + 3
+            }
+            name = candidateName
+          } else {
+            name = lines[i]
+            if (i > 0 && lines[i - 1].match(/^[1-5]$/)) {
+              const prevPrevLine = i > 1 ? lines[i - 2].toLowerCase() : ''
+              const isPropertyValue = prevPrevLine.match(/^(power|bonus|quantity|from|price|size|miner details|ph\/s|th\/s|eh\/s|gh\/s|%)[:.]?$/i) ||
+                                       prevPrevLine.match(/\d+\s*(ph\/s|th\/s|eh\/s|gh\/s|%)/i)
+              if (!isPropertyValue) {
+                const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
+                const rarity = rarityMap[lines[i - 1]]
+                if (rarity) name = `${rarity} ${name}`
               }
             }
+          }
+
+          let foundQuantityLabel = false
+          for (let j = startIndex + 2; j < Math.min(startIndex + 15, lines.length); j++) {
+            const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
+            if (powerMatch) power = `${powerMatch[1]} ${powerMatch[2]}`
+            const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
+            if (bonusMatch) bonus = bonusMatch[1]
+            if (lines[j].match(/^Quantity:?$/i)) foundQuantityLabel = true
+            if (foundQuantityLabel && lines[j].match(/^\d+$/)) {
+              quantity = parseInt(lines[j])
+              foundQuantityLabel = false
+            }
+            if (lines[j] === 'Miner details') break
+          }
+
+          if (name && power && bonus !== '') {
+            addMiner(buildMinerEntry({ name, power, bonus, quantity, isSet, isLegacy, minerId: null, source: 'INVENTORY' }))
+          }
+          i += (isInventoryLegacy || isInventorySetBadge) ? 2 : 1
+          continue
+        }
+
+        // ========== SELL FORMAT (MOBILE) ==========
+        const isMobileSell = i + 1 < lines.length &&
+          lines[i + 1] === 'Size' &&
+          !lines[i].match(/^[a-f0-9]{24}/i) &&
+          !lines[i].match(/^(product|In collection|Rating star|set badge|\d+)$/i) &&
+          !(i > 0 && lines[i - 1] === 'Set')
+
+        if (isMobileSell) {
+          let name = lines[i]
+          let power = ''
+          let bonus = ''
+          let quantity = 1
+          let isLegacy = false
+          let isSet = false
+
+          if (i > 0) {
+            if (lines[i - 1] === 'Rating star') {
+              isLegacy = true
+              name = `Legacy ${name}`
+            } else if (lines[i - 1] === 'set badge') {
+              isSet = true
+            } else if (lines[i - 1].match(/^(Uncommon|Rare|Epic|Legendary|Unreal)$/i)) {
+              name = `${lines[i - 1]} ${name}`
+            }
+          }
+
+          let foundQuantityLabelMobile = false
+          for (let j = i + 2; j < Math.min(i + 15, lines.length); j++) {
+            const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
+            if (powerMatch) power = `${powerMatch[1]} ${powerMatch[2]}`
+            const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
+            if (bonusMatch) bonus = bonusMatch[1]
+            if (lines[j].match(/^Quantity:?$/i)) foundQuantityLabelMobile = true
+            if (foundQuantityLabelMobile && lines[j].match(/^\d+$/)) {
+              quantity = parseInt(lines[j])
+              foundQuantityLabelMobile = false
+            }
+            if (lines[j] === 'iconSell Miner') break
+          }
+
+          if (name && power && bonus) {
+            addMiner(buildMinerEntry({ name, power, bonus, quantity, isSet, isLegacy, minerId: null, source: 'SELL' }))
           }
           i++
           continue
         }
+
+        // ========== SELL FORMAT (DESKTOP) ==========
+        const sellIdMatch = lines[i].match(/^([a-f0-9]{24})([1-5])?(Rating star|set badge)?$/i)
+        if (sellIdMatch) {
+          const minerId = sellIdMatch[1]
+          let name = ''
+          let power = ''
+          let bonus = ''
+          let quantity = 1
+          let rarity = ''
+          let isLegacy = sellIdMatch[3] && sellIdMatch[3].toLowerCase() === 'rating star'
+          let isSet = sellIdMatch[3] && sellIdMatch[3].toLowerCase() === 'set badge'
+
+          // Rarity from ID suffix digit
+          if (sellIdMatch[2]) {
+            const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
+            rarity = rarityMap[sellIdMatch[2]] || ''
+          }
+
+          let nameIndex = i + 1
+          // Skip rarity text line if present (may duplicate ID suffix rarity)
+          if (nameIndex < lines.length && lines[nameIndex].match(/^(Uncommon|Rare|Epic|Legendary|Unreal)$/i)) {
+            if (!rarity) rarity = lines[nameIndex]
+            nameIndex++
+          }
+
+          if (nameIndex < lines.length) {
+            name = lines[nameIndex]
+            if (isSet && name.toLowerCase().endsWith(' set')) {
+              nameIndex++
+              if (nameIndex < lines.length) name = lines[nameIndex]
+            }
+            if (isLegacy) name = `Legacy ${name}`
+            else if (rarity) name = `${rarity} ${name}`
+          }
+
+          let foundQuantityLabelDesktop = false
+          let endIdx = nameIndex + 1
+          for (let j = nameIndex + 1; j < Math.min(i + 20, lines.length); j++) {
+            const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
+            if (powerMatch) power = `${powerMatch[1]} ${powerMatch[2]}`
+            const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
+            if (bonusMatch) bonus = bonusMatch[1]
+            if (lines[j].match(/^Quantity:?$/i)) foundQuantityLabelDesktop = true
+            if (foundQuantityLabelDesktop && lines[j].match(/^\d+$/)) {
+              quantity = parseInt(lines[j])
+              foundQuantityLabelDesktop = false
+            }
+            endIdx = j + 1
+            if (lines[j] === 'iconSell Miner') break
+          }
+
+          if (name && power && bonus) {
+            addMiner(buildMinerEntry({ name, power, bonus, quantity, isSet, isLegacy, minerId, source: 'SELL' }))
+          }
+          i = endIdx
+          continue
+        }
+
         i++
       }
       return miners
@@ -1375,13 +1741,55 @@ export default {
       if (!this.importText.trim()) return
       this.loading = true
       setTimeout(() => {
-        const newMiners = this.parseCollectionInput(this.importText)
+        const newMiners = this.parseInput(this.importText)
         if (newMiners.length > 0) {
+          let uidCounter = Date.now()
           newMiners.forEach(newMiner => {
-            const exists = this.loadedMiners.find(m =>
+            // Find existing by name+power+bonus (regardless of source)
+            const existing = this.loadedMiners.find(m =>
               m.name === newMiner.name && m.power === newMiner.power && m.bonus === newMiner.bonus
             )
-            if (!exists) this.loadedMiners.push(newMiner)
+
+            if (existing) {
+              // Update minerId if we didn't have it
+              if (newMiner.minerId && !existing.minerId) {
+                this.loadedMiners.filter(m =>
+                  m.name === newMiner.name && m.power === newMiner.power && m.bonus === newMiner.bonus
+                ).forEach(m => { if (!m.minerId) m.minerId = newMiner.minerId })
+              }
+              if (newMiner.isSet && !existing.isSet) existing.isSet = true
+
+              if (newMiner.source === 'SELL' || newMiner.source === 'INVENTORY') {
+                // Count how many instances of this miner already exist
+                const currentQty = this.loadedMiners.filter(m =>
+                  m.name === newMiner.name && m.power === newMiner.power && m.bonus === newMiner.bonus
+                ).length
+                if (newMiner.quantity > currentQty) {
+                  const toAdd = newMiner.quantity - currentQty
+                  for (let k = 0; k < toAdd; k++) {
+                    this.loadedMiners.push({
+                      ...newMiner,
+                      uid: uidCounter++,
+                      cells: existing.cells,
+                      setName: existing.setName
+                    })
+                  }
+                }
+              }
+              // COLLECTION source: already exists, skip (no duplicates)
+            } else {
+              // Miner doesn't exist yet
+              if (newMiner.source === 'SELL' || newMiner.source === 'INVENTORY') {
+                // Add quantity instances
+                for (let k = 0; k < (newMiner.quantity || 1); k++) {
+                  this.loadedMiners.push({ ...newMiner, uid: uidCounter++ })
+                }
+              } else {
+                // COLLECTION: add 1 instance
+                newMiner.uid = uidCounter++
+                this.loadedMiners.push(newMiner)
+              }
+            }
           })
           this.importText = ''
           this.minerImageCache = {}
@@ -1392,6 +1800,341 @@ export default {
     },
 
     clearImport() { this.importText = '' },
+
+    // ========== AUTO IMPORT FROM NETWORK ==========
+    importFromNetwork() {
+      this.autoImportError = ''
+      this.autoImportSuccess = ''
+      try {
+        const raw = this.autoImportText.trim()
+        const json = JSON.parse(raw)
+        const data = json.data || json
+
+        if (!data.miners || !data.racks) {
+          this.autoImportError = 'Invalid data: missing miners or racks'
+          return
+        }
+
+        let uidCounter = Date.now()
+        const placedUids = new Set()
+
+        // Build rack map: user_rack_id → rack network data
+        const rackMap = {}
+        for (const r of data.racks) { rackMap[r._id] = r }
+
+        // Ensure all network miners exist in loadedMiners (create missing ones)
+        const claimedForCheck = new Set()
+        for (const m of data.miners) {
+          const netName = (m.name || '').toLowerCase().trim()
+          const netPowerGhs = m.power || 0
+
+          // Check if we already have a matching miner (not yet claimed for this check)
+          const existing = this.loadedMiners.find(lm => {
+            if (claimedForCheck.has(lm.uid)) return false
+            const lmClean = this.getCleanName(lm.name).toLowerCase().trim()
+            if (lmClean !== netName) return false
+            const lmPower = this.parsePowerToGhs(lm.power)
+            return Math.abs(lmPower - netPowerGhs) < Math.max(netPowerGhs * 0.01, 1)
+          })
+
+          if (existing) {
+            claimedForCheck.add(existing.uid)
+          } else {
+            const power = this._formatPower(netPowerGhs)
+            const bonus = String((m.bonus_percent || 0) / 100)
+            const cells = m.width || 2
+            const minerId = m.miner_id || null
+            const dbMiner = this.findMiner({ name: m.name, minerId })
+            // Build name with rarity prefix from merge level
+            const levelMap = { 1: 'Uncommon', 2: 'Rare', 3: 'Epic', 4: 'Legendary', 5: 'Unreal' }
+            const prefix = m.type === 'merge' && m.level > 0 ? (levelMap[m.level] || '') : ''
+            const minerName = prefix ? `${prefix} ${m.name}` : m.name
+            const newUid = uidCounter++
+            this.loadedMiners.push({
+              uid: newUid,
+              name: minerName,
+              power, bonus, cells,
+              minerId: dbMiner ? dbMiner.id : minerId,
+              isSet: m.is_in_set || false,
+              isLegacy: false,
+              setName: (dbMiner && dbMiner.is_set && dbMiner.set) ? dbMiner.set : null,
+              source: 'NETWORK'
+            })
+            claimedForCheck.add(newUid)
+          }
+        }
+
+        // Ensure all network racks exist in userRacks (create missing ones)
+        const rackCounts = {}
+        for (const r of data.racks) {
+          rackCounts[r.rack_id] = (rackCounts[r.rack_id] || 0) + 1
+        }
+        for (const [rackId, needed] of Object.entries(rackCounts)) {
+          const existing = this.userRacks.find(ur => ur.id === rackId)
+          if (existing) {
+            if (existing.quantity < needed) existing.quantity = needed
+          } else {
+            const dbRack = this.racksDefinitions.find(rd => rd.id === rackId)
+            if (dbRack) {
+              this.userRacks.push({ ...dbRack, quantity: needed, addedManually: false })
+            }
+          }
+        }
+
+        // Build rooms: place racks in their positions
+        const activeRooms = [...this.activeRooms]
+        const rooms = { 1: {}, 2: {}, 3: {}, 4: {} }
+
+        const availableRooms = data.rooms_available || data.rooms || []
+        for (const ar of availableRooms) {
+          const level = ar.room_info?.level
+          if (level >= 0 && level <= 3) activeRooms[level] = true
+        }
+
+        // Place racks in room slots using flat index mapped to our grid
+        for (const r of data.racks) {
+          const roomNum = r.placement.room_level + 1
+          if (roomNum < 1 || roomNum > 4) continue
+
+          // Convert network x,y to our slot key
+          const layout = this.getDataLayout(roomNum)
+          const networkCols = r.placement.x !== undefined ? Math.max(4, ...data.racks.filter(rr => rr.placement.room_level === r.placement.room_level).map(rr => rr.placement.x + 1)) : 4
+          const flatIdx = r.placement.y * networkCols + r.placement.x
+
+          // Map flat index to our layout slot key
+          let slotIdx = 0
+          let slotKey = null
+          for (let row = 0; row < layout.length; row++) {
+            for (let col = 0; col < layout[row].length; col++) {
+              if (!layout[row][col]) continue
+              if (slotIdx === flatIdx) { slotKey = `${row}-${col}`; break }
+              slotIdx++
+            }
+            if (slotKey) break
+          }
+          if (!slotKey) continue
+
+          const rackId = r.rack_id
+          const dbRack = this.racksDefinitions.find(rd => rd.id === rackId)
+          rooms[roomNum][slotKey] = {
+            rack: dbRack
+              ? { ...dbRack }
+              : { id: rackId, name: r.name, size: (r.rack_info.width || 2) * (r.rack_info.height || 4), bonus: (r.bonus || 0) / 100, is_set: r.is_in_set || false, set: null },
+            miners: []
+          }
+          // Store userRackId for miner placement lookup
+          rooms[roomNum][slotKey]._userRackId = r._id
+        }
+
+        // Sort network miners by placement (y then x) within each rack for correct order
+        const minersByRack = {}
+        for (const m of data.miners) {
+          if (!m.placement || !m.placement.user_rack_id) continue
+          const rackUid = m.placement.user_rack_id
+          if (!minersByRack[rackUid]) minersByRack[rackUid] = []
+          minersByRack[rackUid].push(m)
+        }
+        for (const arr of Object.values(minersByRack)) {
+          arr.sort((a, b) => a.placement.y - b.placement.y || a.placement.x - b.placement.x)
+        }
+
+        // Place miners: find the slot by _userRackId, match to loadedMiners
+        for (const [rackUid, netMiners] of Object.entries(minersByRack)) {
+          // Find the slot that has this _userRackId
+          let slot = null
+          for (const roomNum of [1, 2, 3, 4]) {
+            for (const s of Object.values(rooms[roomNum])) {
+              if (s._userRackId === rackUid) { slot = s; break }
+            }
+            if (slot) break
+          }
+          if (!slot) continue
+
+          for (const nm of netMiners) {
+            const netName = (nm.name || '').toLowerCase().trim()
+            const netPowerGhs = nm.power || 0
+
+            // Find matching loadedMiner by clean name + closest power
+            let bestMatch = null, bestPowerDiff = Infinity
+            for (const lm of this.loadedMiners) {
+              if (placedUids.has(lm.uid)) continue
+              const lmCleanName = this.getCleanName(lm.name).toLowerCase().trim()
+              if (lmCleanName !== netName) continue
+              const lmPowerGhs = this.parsePowerToGhs(lm.power)
+              const diff = Math.abs(lmPowerGhs - netPowerGhs)
+              if (diff < bestPowerDiff) { bestPowerDiff = diff; bestMatch = lm }
+            }
+
+            if (bestMatch) {
+              slot.miners.push(bestMatch)
+              placedUids.add(bestMatch.uid)
+            }
+          }
+        }
+
+        this.recordCurrentState()
+        this.rooms = rooms
+        this.activeRooms = activeRooms
+        this.minerImageCache = {}
+        this.saveSnapshot()
+        this.saveToStorage()
+
+        const placed = placedUids.size
+        const total = data.miners.length
+        this.autoImportSuccess = `Placed ${placed}/${total} miners in ${data.racks.length} racks`
+        setTimeout(() => { this.showAutoImport = null; this.autoImportText = ''; this.autoImportSuccess = '' }, 2000)
+
+      } catch (e) {
+        this.autoImportError = 'Error parsing JSON: ' + e.message
+      }
+    },
+
+    _formatPower(ghs) {
+      if (ghs >= 1e9) return `${(ghs / 1e9).toFixed(3)} Eh/s`
+      if (ghs >= 1e6) return `${(ghs / 1e6).toFixed(3)} Ph/s`
+      if (ghs >= 1e3) return `${(ghs / 1e3).toFixed(3)} Th/s`
+      return `${ghs.toFixed(3)} Gh/s`
+    },
+
+    // ========== STACKED MINER HELPERS ==========
+    selectStackedMiner(stacked) {
+      if (this._actionJustDone) { this._actionJustDone = false; return }
+      if (this.minerRemovalKey || this.minerAddKey) return
+      const key = `${stacked.name}|${stacked.power}|${stacked.bonus}`
+      const hasSelector = !!this.minerSelectState[key]
+
+      if (hasSelector) {
+        // Deselect and close selector
+        stacked._instances.forEach(inst => this.$delete(this.manualSelectedMiners, inst.uid))
+        this.$delete(this.minerSelectState, key)
+      } else if (stacked._stackQty === 1) {
+        // Only 1 available, toggle directly
+        const selected = this.manualSelectedMiners[stacked._instances[0].uid]
+        if (selected) {
+          this.$delete(this.manualSelectedMiners, stacked._instances[0].uid)
+        } else {
+          this.$set(this.manualSelectedMiners, stacked._instances[0].uid, true)
+        }
+      } else {
+        // Multiple available, show qty selector starting at 1
+        this.$set(this.minerSelectState, key, { qty: 1, max: stacked._stackQty })
+        this.$set(this.manualSelectedMiners, stacked._instances[0].uid, true)
+      }
+    },
+    changeMinerSelectQty(miner, delta) {
+      const key = `${miner.name}|${miner.power}|${miner.bonus}`
+      const state = this.minerSelectState[key]
+      if (!state) return
+      const newVal = state.qty + delta
+      if (newVal < 1) {
+        // Deselect all and close
+        const stacked = this.stackedAvailableMiners.find(m => `${m.name}|${m.power}|${m.bonus}` === key)
+        if (stacked) stacked._instances.forEach(inst => this.$delete(this.manualSelectedMiners, inst.uid))
+        this.$delete(this.minerSelectState, key)
+        return
+      }
+      const qty = Math.min(newVal, state.max)
+      this.$set(this.minerSelectState, key, { qty, max: state.max })
+      // Apply selection
+      const stacked = this.stackedAvailableMiners.find(m => `${m.name}|${m.power}|${m.bonus}` === key)
+      if (stacked) {
+        stacked._instances.forEach(inst => this.$delete(this.manualSelectedMiners, inst.uid))
+        for (let k = 0; k < Math.min(qty, stacked._instances.length); k++) {
+          this.$set(this.manualSelectedMiners, stacked._instances[k].uid, true)
+        }
+      }
+    },
+    startMinerRemoval(stacked) {
+      const key = `${stacked.name}|${stacked.power}|${stacked.bonus}`
+      this.minerAddKey = null
+      if (this.minerRemovalKey === key) { this.minerRemovalKey = null; return }
+      this.minerRemovalKey = key
+      this.minerRemovalQty = 1
+      this.minerRemovalMax = stacked._stackQty
+    },
+    onMinerRemovalInput(e) {
+      const raw = e.target.value
+      if (raw === '' || raw === '-') return
+      let val = parseInt(raw)
+      if (isNaN(val) || val < 1) { val = 1; e.target.value = val }
+      else if (val > this.minerRemovalMax) { val = this.minerRemovalMax; e.target.value = val }
+      this.minerRemovalQty = val
+    },
+    clampMinerRemovalInput(e) {
+      let val = parseInt(e.target.value)
+      if (isNaN(val) || val < 1) val = 1
+      if (val > this.minerRemovalMax) val = this.minerRemovalMax
+      this.minerRemovalQty = val
+      e.target.value = val
+    },
+    confirmMinerRemoval() {
+      const parts = this.minerRemovalKey.split('|')
+      const name = parts[0], power = parts[1], bonus = parts[2]
+      let remaining = this.minerRemovalQty
+      for (let i = this.loadedMiners.length - 1; i >= 0 && remaining > 0; i--) {
+        const m = this.loadedMiners[i]
+        if (m.name === name && m.power === power && m.bonus === bonus) {
+          this.loadedMiners.splice(i, 1)
+          remaining--
+        }
+      }
+      this.minerRemovalKey = null
+      this._actionJustDone = true
+      this.minerImageCache = {}
+      this.saveToStorage()
+    },
+
+    // ========== ADD DUPLICATES ==========
+    startMinerAddDuplicate(stacked) {
+      const key = `${stacked.name}|${stacked.power}|${stacked.bonus}`
+      if (this.minerAddKey === key) { this.minerAddKey = null; return }
+      this.minerRemovalKey = null
+      this.minerAddKey = key
+      this.minerAddQty = 1
+    },
+    confirmMinerAddDuplicate() {
+      const parts = this.minerAddKey.split('|')
+      const ref = this.loadedMiners.find(m => m.name === parts[0] && m.power === parts[1] && m.bonus === parts[2])
+      if (!ref) { this.minerAddKey = null; return }
+      let uidCounter = Date.now()
+      for (let i = 0; i < this.minerAddQty; i++) {
+        this.loadedMiners.push({ ...ref, uid: uidCounter++ })
+      }
+      this.minerAddKey = null
+      this._actionJustDone = true
+      this.minerImageCache = {}
+      this.saveToStorage()
+    },
+    startRackAdd(rack) {
+      const key = rack.id || rack.name
+      if (this.rackAddId === key) { this.rackAddId = null; return }
+      this.rackRemovalId = null
+      this.rackAddId = key
+      this.rackAddQty = 1
+    },
+    confirmRackAdd() {
+      this._changeRackQty(this.rackAddId, this.rackAddQty)
+      this.rackAddId = null
+      this._actionJustDone = true
+      this.saveToStorage()
+    },
+    confirmRackRemoval() {
+      this._changeRackQty(this.rackRemovalId, -this.rackRemovalQty)
+      this.rackRemovalId = null
+      this._actionJustDone = true
+      this.saveToStorage()
+    },
+    _changeRackQty(rackKey, delta) {
+      const idx = this.userRacks.findIndex(r => (r.id || r.name) === rackKey)
+      if (idx !== -1) {
+        this.$set(this.userRacks, idx, { ...this.userRacks[idx], quantity: this.userRacks[idx].quantity + delta })
+      } else {
+        const dbRack = this.racksDefinitions.find(r => (r.id || r.name) === rackKey)
+        if (dbRack) {
+          this.userRacks.push({ ...dbRack, quantity: delta, addedManually: false })
+        }
+      }
+    },
 
     // ========== REMOVE MINERS/RACKS ==========
     removeMiner(miner) {
@@ -1404,11 +2147,8 @@ export default {
     },
     startRackRemoval(rack) {
       const key = rack.id || rack.name
-      if (this.rackRemovalId === key) {
-        // Cancel removal
-        this.rackRemovalId = null
-        return
-      }
+      this.rackAddId = null
+      if (this.rackRemovalId === key) { this.rackRemovalId = null; return }
       this.rackRemovalId = key
       this.rackRemovalQty = 1
       this.rackRemovalMax = rack.available
@@ -1432,18 +2172,6 @@ export default {
       if (val > this.rackRemovalMax) val = this.rackRemovalMax
       this.rackRemovalQty = val
       e.target.value = val
-    },
-    confirmRackRemoval() {
-      const ur = this.userRacks.find(r => (r.id || r.name) === this.rackRemovalId)
-      if (ur) {
-        ur.quantity -= this.rackRemovalQty
-        if (ur.quantity <= 0) {
-          const idx = this.userRacks.indexOf(ur)
-          this.userRacks.splice(idx, 1)
-        }
-      }
-      this.rackRemovalId = null
-      this.saveToStorage()
     },
 
     // ========== ADD MODAL ==========
@@ -1474,23 +2202,27 @@ export default {
       if (this.showAddModal === 'miners') {
         let uidCounter = Date.now()
         for (const minerId in this.addModalSelected) {
+          const qty = this.addModalSelected[minerId]
           const dbMiner = this.miners.find(m => m.id === minerId)
           if (!dbMiner) continue
-          const exists = this.loadedMiners.find(m => m.minerId === minerId)
-          if (exists) continue
-          this.loadedMiners.push({
-            uid: uidCounter++,
-            name: dbMiner.name,
-            power: dbMiner.power,
-            bonus: dbMiner.bonus,
-            isSet: dbMiner.is_set,
-            isLegacy: false,
-            minerId: dbMiner.id,
-            cells: dbMiner.cells || 1,
-            setName: (dbMiner.is_set && dbMiner.set) ? dbMiner.set : null,
-            source: 'MANUAL',
-            addedManually: true
-          })
+          // Count how many of this miner already exist
+          const currentQty = this.loadedMiners.filter(m => m.minerId === minerId).length
+          const toAdd = Math.max(0, qty - currentQty)
+          for (let k = 0; k < toAdd; k++) {
+            this.loadedMiners.push({
+              uid: uidCounter++,
+              name: dbMiner.name,
+              power: dbMiner.power,
+              bonus: dbMiner.bonus,
+              isSet: dbMiner.is_set,
+              isLegacy: false,
+              minerId: dbMiner.id,
+              cells: dbMiner.cells || 1,
+              setName: (dbMiner.is_set && dbMiner.set) ? dbMiner.set : null,
+              source: 'MANUAL',
+              addedManually: true
+            })
+          }
         }
       } else {
         // Racks - add to user racks list, summing if already exists
@@ -1727,17 +2459,47 @@ export default {
       return this._setMapCache
     },
 
+    _topCandidates(miners, n) {
+      const byPower = [...miners].sort((a, b) => b.power - a.power).slice(0, n)
+      const byBonus = [...miners].sort((a, b) => b.bonus - a.bonus).slice(0, n)
+      const seen = new Set()
+      const result = []
+      for (const c of [...byPower, ...byBonus]) {
+        const uid = c.miner.uid
+        if (!seen.has(uid)) { seen.add(uid); result.push(c) }
+      }
+      return result
+    },
+    _dedupByName(miners) {
+      const seen = new Set()
+      const result = []
+      for (const m of miners) {
+        const name = m.miner ? m.miner.name : null
+        if (name && seen.has(name)) continue
+        if (name) seen.add(name)
+        result.push(m)
+      }
+      return result
+    },
+
     // Calculate full EP from rack assignments
+    // Duplicate miners (same name) only contribute bonus ONCE
     _calcFullPower(assignments) {
       const setMap = this._getSetMap()
       let rawTotal = 0, bonusTotal = 0, rackExtra = 0, setPowerExtra = 0
+      const seenBonus = new Set()
       for (let i = 0; i < assignments.length; i++) {
         const ra = assignments[i]
         let slotRaw = 0
         for (let j = 0; j < ra.miners.length; j++) {
           const m = ra.miners[j]
           rawTotal += m.power
-          bonusTotal += m.bonus
+          const mRef = m.miner || m
+          const dedupKey = `${mRef.name}|${mRef.power}|${mRef.bonus}`
+          if (!seenBonus.has(dedupKey)) {
+            seenBonus.add(dedupKey)
+            bonusTotal += m.bonus
+          }
           slotRaw += m.power
         }
         if (ra.rackBonus) rackExtra += slotRaw * ra.rackBonus / 100
@@ -1862,23 +2624,16 @@ export default {
       let totalCells = 0
       const maxCells = rackConfigs.reduce((s, r) => s + r.size, 0)
       let currentEP = 0
-      const TOP_N = Math.min(40, remaining.length)
-
-      // Identify set names used in rack config so set miners are always evaluated
-      const configSetNames = new Set()
-      rackConfigs.forEach(r => { if (r.is_set && r.set) configSetNames.add(r.set) })
 
       while (remaining.length > 0 && totalCells < maxCells) {
-        remaining.sort((a, b) => b.iep - a.iep)
-        const limit = Math.min(TOP_N, remaining.length)
-
-        // Build eval candidates: top N by iep + ALL matching set miners beyond top N
-        const evalIndices = new Set()
-        for (let i = 0; i < limit; i++) evalIndices.add(i)
-        if (configSetNames.size > 0) {
-          for (let i = limit; i < remaining.length; i++) {
-            if (remaining[i].setName && configSetNames.has(remaining[i].setName)) evalIndices.add(i)
-          }
+        // Evaluate ONE candidate per unique miner name (duplicates give identical results)
+        const evalIndices = []
+        const nameSeen = new Set()
+        for (let i = 0; i < remaining.length; i++) {
+          const name = remaining[i].miner ? remaining[i].miner.name : null
+          if (name && nameSeen.has(name)) continue
+          if (name) nameSeen.add(name)
+          evalIndices.push(i)
         }
 
         let bestIdx = -1, bestEP = currentEP
@@ -1975,12 +2730,22 @@ export default {
       let currentEP = this._buildRackAssignment(rackConfigs, marginalSelected).ep
 
       while (marginalRemaining.length > 0 && marginalCells < maxCells) {
+        marginalRemaining.sort((a, b) => b.iep - a.iep)
         let bestIdx = -1, bestEP = currentEP
-        for (let i = 0; i < marginalRemaining.length; i++) {
+        const evalIndicesM = []
+        const nameSeenM = new Set()
+        for (let i = 0; i < marginalRemaining.length && evalIndicesM.length < 25; i++) {
+          const name = marginalRemaining[i].miner ? marginalRemaining[i].miner.name : null
+          if (name && nameSeenM.has(name)) continue
+          if (name) nameSeenM.add(name)
+          evalIndicesM.push(i)
+        }
+        for (const i of evalIndicesM) {
           const m = marginalRemaining[i]
           if (marginalCells + m.cells > maxCells) continue
-          const test = [...marginalSelected, m]
-          const { ep } = this._buildRackAssignment(rackConfigs, test)
+          marginalSelected.push(m)
+          const { ep } = this._buildRackAssignment(rackConfigs, marginalSelected)
+          marginalSelected.pop()
           if (maxPowerGhs !== null && ep > maxPowerGhs) continue
           if (ep > bestEP) { bestEP = ep; bestIdx = i }
         }
@@ -2091,75 +2856,76 @@ export default {
         if (qty > 0) available.push({ ...ur, qty: Math.min(qty, totalSlots) })
       }
 
-      const regular = this.racksDefinitions.find(r => r.name === 'Regular Rack 8')
       const configs = []
+      // Limit totalSlots to actual racks available
+      const totalAvailableRacks = available.reduce((s, r) => s + r.qty, 0)
+      totalSlots = Math.min(totalSlots, totalAvailableRacks)
 
-      // Helper to fill remaining slots with regular rack
-      const fillRegular = (config) => {
-        while (config.length < totalSlots && regular) {
-          config.push({ ...regular, bonus: 0, size: 8, is_set: false, set: null })
+      // Helper: fill remaining slots using available racks (bonus desc, then no-bonus)
+      const fillRemaining = (config) => {
+        // Count how many of each rack are already used
+        const used = {}
+        for (const r of config) { const k = r.id || r.name; used[k] = (used[k] || 0) + 1 }
+        // Sort all available by bonus desc
+        const sorted = [...available].sort((a, b) => (b.bonus || 0) - (a.bonus || 0))
+        for (const ar of sorted) {
+          const k = ar.id || ar.name
+          let rem = ar.qty - (used[k] || 0)
+          while (rem > 0 && config.length < totalSlots) {
+            config.push({ ...ar })
+            rem--
+          }
         }
         return config
       }
 
-      // Config 1: all Regular Rack 8
-      if (regular) {
-        configs.push(fillRegular([]))
-      }
+      // Config 1: all available racks sorted by bonus desc
+      configs.push(fillRemaining([]))
 
-      // Config 2: all bonus racks (including set racks) sorted by bonus desc, fill rest regular
-      const bonusRacks = available.filter(r => (r.bonus || 0) > 0).sort((a, b) => (b.bonus || 0) - (a.bonus || 0))
-      if (bonusRacks.length > 0) {
-        const config = []
-        for (const br of bonusRacks) {
-          for (let i = 0; i < br.qty && config.length < totalSlots; i++) {
-            config.push({ ...br })
-          }
-        }
-        configs.push(fillRegular(config))
-      }
-
-      // Config 3: only 8-cell bonus racks, fill rest regular
-      const bonus8 = bonusRacks.filter(r => r.size === 8)
-      if (bonus8.length > 0) {
-        const config = []
-        for (const br of bonus8) {
-          for (let i = 0; i < br.qty && config.length < totalSlots; i++) {
-            config.push({ ...br })
-          }
-        }
-        configs.push(fillRegular(config))
-      }
-
-      // Config 4: set racks + highest bonus non-set racks, fill rest regular
+      // Config 2: set racks first, then rest by bonus
       const setRacks = available.filter(r => r.is_set)
       if (setRacks.length > 0) {
         const config = []
-        // Add set racks first
         for (const sr of setRacks) {
           for (let i = 0; i < sr.qty && config.length < totalSlots; i++) {
             config.push({ ...sr })
           }
         }
-        // Then non-set bonus racks
-        const nonSetBonus = bonusRacks.filter(r => !r.is_set)
-        for (const br of nonSetBonus) {
+        configs.push(fillRemaining(config))
+      }
+
+      // Config 3: bonus racks first (no sets), then rest
+      const bonusNoSet = available.filter(r => (r.bonus || 0) > 0 && !r.is_set).sort((a, b) => (b.bonus || 0) - (a.bonus || 0))
+      if (bonusNoSet.length > 0) {
+        const config = []
+        for (const br of bonusNoSet) {
           for (let i = 0; i < br.qty && config.length < totalSlots; i++) {
             config.push({ ...br })
           }
         }
-        configs.push(fillRegular(config))
+        configs.push(fillRemaining(config))
       }
 
-      // Config 5: only set racks, fill rest regular (to test set-only benefit)
-      if (setRacks.length > 0) {
+      // Config 4: set racks + bonus racks, then rest
+      if (setRacks.length > 0 && bonusNoSet.length > 0) {
         const config = []
         for (const sr of setRacks) {
-          for (let i = 0; i < sr.qty && config.length < totalSlots; i++) {
-            config.push({ ...sr })
-          }
+          for (let i = 0; i < sr.qty && config.length < totalSlots; i++) config.push({ ...sr })
         }
-        configs.push(fillRegular(config))
+        for (const br of bonusNoSet) {
+          for (let i = 0; i < br.qty && config.length < totalSlots; i++) config.push({ ...br })
+        }
+        configs.push(fillRemaining(config))
+      }
+
+      // Config 5: only 8-cell racks
+      const racks8 = available.filter(r => r.size === 8).sort((a, b) => (b.bonus || 0) - (a.bonus || 0))
+      if (racks8.length > 0) {
+        const config = []
+        for (const r of racks8) {
+          for (let i = 0; i < r.qty && config.length < totalSlots; i++) config.push({ ...r })
+        }
+        if (config.length > 0) configs.push(config)
       }
 
       return configs
@@ -2189,14 +2955,18 @@ export default {
       const maxPowerGhs = this.autoMaxPower ? this.autoMaxPower * 1e9 : null
 
       // 3. Prepare miner data (setName already stored on each miner)
-      const minerData = this.loadedMiners.map(m => ({
-        miner: m,
-        power: this.parsePowerToGhs(m.power),
-        bonus: parseFloat(m.bonus) || 0,
-        cells: m.cells || 1,
-        iep: this.parsePowerToGhs(m.power) * (1 + (parseFloat(m.bonus) || 0) / 100),
-        setName: m.setName || null
-      }))
+      const minerData = this.loadedMiners.map(m => {
+        const bonus = parseFloat(m.bonus) || 0
+        const power = this.parsePowerToGhs(m.power)
+        return {
+          miner: m,
+          power,
+          bonus,
+          cells: m.cells || 1,
+          iep: power * (1 + bonus / 100),
+          setName: m.setName || null
+        }
+      })
 
       // 4. Generate rack configurations to try
       const rackConfigs = this._generateRackConfigs(totalSlots)
@@ -2208,11 +2978,10 @@ export default {
       for (const config of rackConfigs) {
         const hasSetRacks = config.some(r => r.is_set && r.set)
         const strategies = [
-          this._greedyMarginalWithRacks(minerData, config, maxPowerGhs),
-          this._greedySelectWithRacks(minerData, config, maxPowerGhs, (a, b) => b.iep - a.iep),
           this._greedySelectWithRacks(minerData, config, maxPowerGhs, (a, b) => b.power - a.power),
+          this._greedySelectWithRacks(minerData, config, maxPowerGhs, (a, b) => b.iep - a.iep),
+          this._greedySelectWithRacks(minerData, config, maxPowerGhs, (a, b) => (b.power / b.cells) - (a.power / a.cells)),
           this._greedySelectWithRacks(minerData, config, maxPowerGhs, (a, b) => b.bonus - a.bonus),
-          this._greedySelectWithRacks(minerData, config, maxPowerGhs, (a, b) => (b.iep / b.cells) - (a.iep / a.cells)),
           ...(hasSetRacks ? [this._greedyWithSetCommit(minerData, config, maxPowerGhs)] : [])
         ]
 
@@ -2224,127 +2993,189 @@ export default {
         }
       }
 
-      // 5b. Post-optimize: try batch-swapping set miners on EVERY set-rack config
-      if (bestResult) {
-        for (const config of rackConfigs) {
-          if (!config.some(r => r.is_set && r.set)) continue
-
-          const maxCells = config.reduce((s, r) => s + r.size, 0)
-          const testSelected = []
-          let usedCells = 0
-          const sorted = [...bestResult.selected].sort((a, b) => b.iep - a.iep)
-          for (const m of sorted) {
-            if (usedCells + m.cells <= maxCells) {
-              testSelected.push(m)
-              usedCells += m.cells
-            }
-          }
-
-          const ep = this._swapOptimize(testSelected, minerData, config, maxPowerGhs)
-          if ((maxPowerGhs === null || ep <= maxPowerGhs) && ep > bestResult.ep) {
-            bestResult = { selected: testSelected, ep }
-            bestConfig = config
-          }
-        }
-      }
-
-      // 5c. Final validation: if result exceeds limit, strip miners until it fits
+      // 5b. Final validation: if result exceeds limit, strip miners
       if (maxPowerGhs !== null && bestResult && bestConfig) {
         while (bestResult.selected.length > 0) {
           const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
           if (ep <= maxPowerGhs) { bestResult.ep = ep; break }
-          // Remove the miner with lowest individual contribution
-          let worstIdx = 0, worstIep = Infinity
+          let worstIdx = 0, worstPow = Infinity
           for (let i = 0; i < bestResult.selected.length; i++) {
-            if (bestResult.selected[i].iep < worstIep) { worstIep = bestResult.selected[i].iep; worstIdx = i }
+            if (bestResult.selected[i].power < worstPow) { worstPow = bestResult.selected[i].power; worstIdx = i }
           }
           bestResult.selected.splice(worstIdx, 1)
         }
       }
 
-      // 5d. Gap-fill: after optimization, try to fill remaining rack cells with unselected miners
+
+      // 5c. Gap-fill: fill remaining rack cells with unselected miners sorted by power
       if (bestResult && bestConfig) {
-        const selectedUids = new Set(bestResult.selected.map(m => m.miner.uid))
-        const unselected = minerData.filter(m => !selectedUids.has(m.miner.uid))
-        if (unselected.length > 0) {
-          let changed = true
-          while (changed) {
-            changed = false
-            const assignment = this._buildRackAssignment(bestConfig, bestResult.selected)
-            // Find remaining capacity per rack
-            const gaps = []
-            for (let i = 0; i < assignment.assignments.length; i++) {
-              const ra = assignment.assignments[i]
-              const remaining = ra.size - ra.used
-              if (remaining > 0) gaps.push({ idx: i, remaining, bonus: ra.rackBonus, setName: ra.setName })
+        const maxCells = bestConfig.reduce((s, r) => s + r.size, 0)
+        let usedCells = bestResult.selected.reduce((s, x) => s + x.cells, 0)
+        const selUids = new Set(bestResult.selected.map(m => m.miner.uid))
+        const unselected = minerData.filter(m => !selUids.has(m.miner.uid)).sort((a, b) => b.power - a.power)
+        for (const m of unselected) {
+          if (usedCells + m.cells > maxCells) continue
+          bestResult.selected.push(m)
+          usedCells += m.cells
+          if (maxPowerGhs !== null) {
+            const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
+            if (ep > maxPowerGhs) { bestResult.selected.pop(); usedCells -= m.cells; continue }
+          }
+        }
+        bestResult.ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
+      }
+
+
+      // 5d. Swap optimization: O(1) estimate with rack bonus + confirm top N
+      if (bestResult && bestConfig) {
+        let improved = true
+        let swapIter = 0
+        while (improved) {
+          improved = false
+          swapIter++
+          const selUids = new Set(bestResult.selected.map(m => m.miner.uid))
+          const allUnsel = minerData.filter(m => !selUids.has(m.miner.uid))
+          if (allUnsel.length === 0) { console.timeEnd('5d-iter-' + swapIter); break }
+          const unselDedup = this._dedupByName(allUnsel)
+
+          // Get current assignment to know rack bonus per miner
+          const curAssign = this._buildRackAssignment(bestConfig, bestResult.selected)
+          const minerRackBonus = {}
+          for (const ra of curAssign.assignments) {
+            for (const m of ra.miners) { minerRackBonus[m.miner.uid] = ra.rackBonus }
+          }
+
+          // Pre-compute current state
+          const nameCount = {}
+          let curRawPower = 0, curBonus = 0, curRackExtra = 0
+          const bonusSeen = new Set()
+          for (const s of bestResult.selected) {
+            curRawPower += s.power
+            curRackExtra += s.power * (minerRackBonus[s.miner.uid] || 0) / 100
+            nameCount[s.miner.name] = (nameCount[s.miner.name] || 0) + 1
+            if (!bonusSeen.has(s.miner.name)) { bonusSeen.add(s.miner.name); curBonus += s.bonus }
+          }
+          const curEst = curRawPower * (1 + curBonus / 100) + curRackExtra
+
+          // Estimate with rack bonus awareness
+          const est1for1 = (sel, uns) => {
+            const rackB = minerRackBonus[sel.miner.uid] || 0
+            let newRaw = curRawPower - sel.power + uns.power
+            let newBonus = curBonus
+            if (nameCount[sel.miner.name] === 1) newBonus -= sel.bonus
+            if (!nameCount[uns.miner.name]) newBonus += uns.bonus
+            const newRackExtra = curRackExtra - sel.power * rackB / 100 + uns.power * rackB / 100
+            return newRaw * (1 + newBonus / 100) + newRackExtra
+          }
+
+          let bestAction = null, bestEp = bestResult.ep
+
+          // === 1-for-1: estimate all, confirm top 100 ===
+          const top1for1 = []
+          for (let si = 0; si < bestResult.selected.length; si++) {
+            const sel = bestResult.selected[si]
+            for (const uns of unselDedup) {
+              if (uns.cells !== sel.cells) continue
+              top1for1.push({ si, sel, uns, est: est1for1(sel, uns) })
             }
-            if (gaps.length === 0) break
-            // Try to fill gaps with best unselected miners that fit
-            const totalRemaining = gaps.reduce((s, g) => s + g.remaining, 0)
-            if (totalRemaining === 0) break
-            // Sort unselected by iep desc
-            unselected.sort((a, b) => b.iep - a.iep)
-            for (let u = 0; u < unselected.length; u++) {
-              const m = unselected[u]
-              // Check if this miner fits in any gap
-              const fitsInGap = gaps.some(g => g.remaining >= m.cells)
-              if (fitsInGap) {
-                bestResult.selected.push(m)
-                unselected.splice(u, 1)
-                changed = true
-                // Check power limit
-                if (maxPowerGhs !== null) {
-                  const newEp = this._buildRackAssignment(bestConfig, bestResult.selected).ep
-                  if (newEp > maxPowerGhs) {
-                    bestResult.selected.pop()
-                    unselected.push(m) // put it back but don't retry
-                    changed = false
-                    continue
-                  }
+          }
+          top1for1.sort((a, b) => b.est - a.est)
+          for (const c of top1for1.slice(0, 300)) {
+            bestResult.selected[c.si] = c.uns
+            const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
+            bestResult.selected[c.si] = c.sel
+            if ((maxPowerGhs === null || ep <= maxPowerGhs) && ep > bestEp) {
+              bestEp = ep; bestAction = { type: '1for1', si: c.si, uns: c.uns }
+            }
+          }
+
+          // === 2-for-1: estimate + confirm top 50 (only if 1-for-1 didn't improve) ===
+          const unsel1 = allUnsel.filter(c => c.cells === 1).sort((a, b) => b.power - a.power).slice(0, 10)
+          if (!bestAction && unsel1.length >= 2) {
+            const top2for1 = []
+            const sel2 = bestResult.selected.map((m, i) => ({ m, i })).filter(x => x.m.cells === 2)
+            for (const { m: sel, i: si } of sel2) {
+              const rB = minerRackBonus[sel.miner.uid] || 0
+              for (let a = 0; a < unsel1.length; a++) {
+                for (let b = a + 1; b < unsel1.length; b++) {
+                  let newRaw = curRawPower - sel.power + unsel1[a].power + unsel1[b].power
+                  let newBon = curBonus
+                  if (nameCount[sel.miner.name] === 1) newBon -= sel.bonus
+                  if (!nameCount[unsel1[a].miner.name]) newBon += unsel1[a].bonus
+                  if (!nameCount[unsel1[b].miner.name] && unsel1[b].miner.name !== unsel1[a].miner.name) newBon += unsel1[b].bonus
+                  const nre = curRackExtra - sel.power * rB / 100 + (unsel1[a].power + unsel1[b].power) * rB / 100
+                  top2for1.push({ si, sel, a, b, est: newRaw * (1 + newBon / 100) + nre })
                 }
-                break // re-evaluate gaps after adding
+              }
+            }
+            top2for1.sort((a, b) => b.est - a.est)
+            for (const c of top2for1.slice(0, 300)) {
+              bestResult.selected[c.si] = unsel1[c.a]
+              bestResult.selected.push(unsel1[c.b])
+              const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
+              bestResult.selected.pop()
+              bestResult.selected[c.si] = c.sel
+              if ((maxPowerGhs === null || ep <= maxPowerGhs) && ep > bestEp) {
+                bestEp = ep; bestAction = { type: '2for1', si: c.si, pair: [unsel1[c.a], unsel1[c.b]] }
               }
             }
           }
-          bestResult.ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
-        }
-      }
 
-      // 5e. Set miner swap: try replacing each set miner with a stronger non-set miner
-      // This catches cases where a set miner was selected only because of inflated set bonus
-      if (bestResult && bestConfig) {
-        let improved = true
-        while (improved) {
-          improved = false
-          const currentEp = this._buildRackAssignment(bestConfig, bestResult.selected).ep
-          const selUids = new Set(bestResult.selected.map(m => m.miner.uid))
-          const unsel = minerData.filter(m => !selUids.has(m.miner.uid))
-
-          // Find set miners in current selection
-          for (let si = 0; si < bestResult.selected.length; si++) {
-            const sel = bestResult.selected[si]
-            if (!sel.setName) continue // only test set miners
-
-            // Find best unselected miner with same cell count
-            let bestUns = null, bestEp = currentEp
-            for (const uns of unsel) {
-              if (uns.cells !== sel.cells) continue
-              bestResult.selected[si] = uns
-              const testEp = this._buildRackAssignment(bestConfig, bestResult.selected).ep
-              if (testEp > bestEp) { bestEp = testEp; bestUns = uns }
-              bestResult.selected[si] = sel // restore
+          // === 1-for-2: estimate + confirm top 20 (only if nothing found) ===
+          const unsel2 = unselDedup.filter(c => c.cells === 2).sort((a, b) => b.power - a.power).slice(0, 5)
+          if (!bestAction && unsel2.length > 0) {
+            const weakSel1 = bestResult.selected.map((m, i) => ({ m, i })).filter(x => x.m.cells === 1)
+              .sort((a, b) => a.m.power - b.m.power).slice(0, 6)
+            const top1for2 = []
+            for (let a = 0; a < weakSel1.length; a++) {
+              for (let b = a + 1; b < weakSel1.length; b++) {
+                const selA = weakSel1[a].m, selB = weakSel1[b].m
+                const rA = minerRackBonus[selA.miner.uid] || 0
+                const rB = minerRackBonus[selB.miner.uid] || 0
+                for (const two of unsel2) {
+                  let newRaw = curRawPower - selA.power - selB.power + two.power
+                  let newBon = curBonus
+                  if (nameCount[selA.miner.name] === 1) newBon -= selA.bonus
+                  if (nameCount[selB.miner.name] === 1 && selB.miner.name !== selA.miner.name) newBon -= selB.bonus
+                  if (!nameCount[two.miner.name]) newBon += two.bonus
+                  const avgR = (rA + rB) / 2
+                  const nre = curRackExtra - selA.power * rA / 100 - selB.power * rB / 100 + two.power * avgR / 100
+                  top1for2.push({ idxA: weakSel1[a].i, idxB: weakSel1[b].i, two, est: newRaw * (1 + newBon / 100) + nre })
+                }
+              }
             }
-
-            if (bestUns) {
-              // Swap is better — apply it
-              const idx = unsel.indexOf(bestUns)
-              if (idx >= 0) unsel.splice(idx, 1)
-              unsel.push(sel)
-              bestResult.selected[si] = bestUns
-              bestResult.ep = bestEp
-              improved = true
-              break // restart loop with new selection
+            top1for2.sort((a, b) => b.est - a.est)
+            for (const c of top1for2.slice(0, 50)) {
+              const idxHi = Math.max(c.idxA, c.idxB), idxLo = Math.min(c.idxA, c.idxB)
+              const saved0 = bestResult.selected[idxHi], saved1 = bestResult.selected[idxLo]
+              bestResult.selected.splice(idxHi, 1)
+              bestResult.selected.splice(idxLo, 1)
+              bestResult.selected.push(c.two)
+              const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
+              bestResult.selected.pop()
+              bestResult.selected.splice(idxLo, 0, saved1)
+              bestResult.selected.splice(idxHi, 0, saved0)
+              if ((maxPowerGhs === null || ep <= maxPowerGhs) && ep > bestEp) {
+                bestEp = ep; bestAction = { type: '1for2', idxA: c.idxA, idxB: c.idxB, two: c.two }
+              }
             }
+          }
+
+          // Apply best action
+          if (bestAction) {
+            if (bestAction.type === '1for1') {
+              bestResult.selected[bestAction.si] = bestAction.uns
+            } else if (bestAction.type === '2for1') {
+              bestResult.selected.splice(bestAction.si, 1)
+              bestResult.selected.push(bestAction.pair[0], bestAction.pair[1])
+            } else if (bestAction.type === '1for2') {
+              const [ia, ib] = [bestAction.idxA, bestAction.idxB].sort((a, b) => b - a)
+              bestResult.selected.splice(ia, 1)
+              bestResult.selected.splice(ib, 1)
+              bestResult.selected.push(bestAction.two)
+            }
+            bestResult.ep = bestEp
+            improved = true
           }
         }
       }
@@ -2366,7 +3197,8 @@ export default {
         for (let rowIdx = 0; rowIdx < layout.length; rowIdx++) {
           for (let colIdx = 0; colIdx < layout[rowIdx].length; colIdx++) {
             if (!layout[rowIdx][colIdx]) continue
-            const rack = sortedRacks[rackIdx++] || sortedRacks[0]
+            if (rackIdx >= sortedRacks.length) break
+            const rack = sortedRacks[rackIdx++]
             const key = `${rowIdx}-${colIdx}`
             this.$set(this.rooms[r], key, { rack: { ...rack }, miners: [] })
             rackSlots.push({
@@ -2786,6 +3618,7 @@ export default {
       this.manualSelectedMiners = {}
       this.manualAddStep = 'select'
       this.manualAddPlan = null
+      this.minerSelectState = {}
     },
 
     confirmManualAdd() {
@@ -2831,15 +3664,19 @@ export default {
       Object.values(currentlyPlaced).forEach(m => allMiners.push(m))
       selectedMiners.forEach(m => { if (!currentlyPlaced[m.uid]) allMiners.push(m) })
 
-      const minerData = allMiners.map(m => ({
-        miner: m,
-        power: this.parsePowerToGhs(m.power),
-        bonus: parseFloat(m.bonus) || 0,
-        cells: m.cells || 1,
-        iep: this.parsePowerToGhs(m.power) * (1 + (parseFloat(m.bonus) || 0) / 100),
-        setName: m.setName || null,
-        isForced: selectedUids.has(m.uid)
-      }))
+      const minerData = allMiners.map(m => {
+        const bonus = parseFloat(m.bonus) || 0
+        const power = this.parsePowerToGhs(m.power)
+        return {
+          miner: m,
+          power,
+          bonus,
+          cells: m.cells || 1,
+          iep: power * (1 + bonus / 100),
+          setName: m.setName || null,
+          isForced: selectedUids.has(m.uid)
+        }
+      })
 
       // 4. FAST PATH: if selected miners fit in current racks, just place them directly
       const cellsNeeded = selectedMiners.reduce((s, m) => s + (m.cells || 1), 0)
@@ -3286,6 +4123,7 @@ export default {
 
     _simulateTotals(roomsState, activeRoomsState) {
       let rawPower = 0, totalBonus = 0, rackBonusExtra = 0, setPowerExtra = 0
+      const seenBonus = new Set()
       for (let r = 1; r <= 4; r++) {
         if (!activeRoomsState[r - 1]) continue
         Object.values(roomsState[r]).forEach(slot => {
@@ -3293,7 +4131,11 @@ export default {
             slot.miners.forEach(m => {
               if (m) {
                 rawPower += this.parsePowerToGhs(m.power)
-                totalBonus += parseFloat(m.bonus) || 0
+                const key = `${m.name}|${m.power}|${m.bonus}`
+                if (!seenBonus.has(key)) {
+                  seenBonus.add(key)
+                  totalBonus += parseFloat(m.bonus) || 0
+                }
               }
             })
           }
@@ -3453,14 +4295,16 @@ export default {
       return found || null
     },
     getMinerImageUrl(item) {
-      // Cache lookup
       const cacheKey = item.uid || item.minerId || item.name
       if (this.minerImageCache[cacheKey] !== undefined) return this.minerImageCache[cacheKey]
 
       const miner = this.findMiner(item)
-      const url = miner && miner.filename ? `${this.storagePath}miner/${miner.filename}` : null
+      const url = miner && miner.filename ? `${this.storagePath}miner/${miner.filename}` : defaultMinerImg
       this.minerImageCache[cacheKey] = url
       return url
+    },
+    isDefaultMinerImg(item) {
+      return this.getMinerImageUrl(item) === defaultMinerImg
     },
     getAssetUrl(path) { return `${this.storagePath}${path}` },
     getRackImageUrl(rack) {
@@ -3596,26 +4440,44 @@ export default {
         userRacks: this.userRacks
       }))
     },
+    _refreshMinerData(miner) {
+      const dbMiner = this.findMiner(miner)
+      if (dbMiner) {
+        miner.cells = dbMiner.cells || 2
+        miner.minerId = dbMiner.id
+        miner.isSet = dbMiner.is_set || false
+        miner.setName = (dbMiner.is_set && dbMiner.set) ? dbMiner.set : null
+      } else {
+        if (miner.cells === undefined) miner.cells = 2
+        if (miner.setName === undefined) miner.setName = null
+      }
+      return miner
+    },
     loadFromStorage() {
       const saved = localStorage.getItem('rooms_state')
       if (saved) {
         try {
           const state = JSON.parse(saved)
           if (state.loadedMiners) {
-            // Migrate: ensure all miners have setName
-            this.loadedMiners = state.loadedMiners.map(m => {
-              if (m.setName === undefined) {
-                const dbMiner = this.findMiner(m)
-                m.setName = (dbMiner && dbMiner.is_set && dbMiner.set) ? dbMiner.set : null
-              }
-              return m
-            })
+            this.loadedMiners = state.loadedMiners.map(m => this._refreshMinerData(m))
           }
-          if (state.rooms) this.rooms = state.rooms
+          if (state.rooms) {
+            // Refresh miners placed in rooms too
+            for (const r of [1, 2, 3, 4]) {
+              if (!state.rooms[r]) continue
+              Object.values(state.rooms[r]).forEach(slot => {
+                if (slot.miners) {
+                  slot.miners = slot.miners.map(m => m ? this._refreshMinerData(m) : m)
+                }
+              })
+            }
+            this.rooms = state.rooms
+          }
           if (state.activeRooms) this.activeRooms = state.activeRooms
           if (state.userRacks) this.userRacks = state.userRacks
         } catch (e) { /* ignore */ }
       }
+      this.minerImageCache = {}
       const skin = localStorage.getItem('rooms_skin')
       if (skin) this.selectedSkin = skin
     }

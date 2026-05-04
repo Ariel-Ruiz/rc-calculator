@@ -192,7 +192,16 @@
               <span class="card-separator">|</span>
               <span class="card-bonus">{{ item.bonus }}%</span>
             </div>
-            <div :class="['card-sellable', item.isSellable ? 'sellable' : 'not-sellable']">
+            <a
+              v-if="item.isSellable && item.minerId"
+              :href="'https://rollercoin.com/marketplace/buy/miner/' + item.minerId"
+              target="_blank"
+              class="card-sellable sellable sellable-link"
+              @click.stop
+            >
+              {{ t.burning?.sellable }}
+            </a>
+            <div v-else :class="['card-sellable', item.isSellable ? 'sellable' : 'not-sellable']">
               {{ item.isSellable ? t.burning?.sellable : t.burning?.notSellable }}
             </div>
           </div>
@@ -278,9 +287,16 @@ export default {
       const option = this.sortOptions.find(o => o.value === this.sortBy)
       return option ? option.label : 'Sort'
     },
+    minerCache() {
+      const cache = {}
+      for (const m of this.miners) {
+        cache[m.id] = m
+      }
+      return cache
+    },
     computedResults() {
       return this.results.map(item => {
-        const minerData = this.findMiner(item)
+        const minerData = this.findMinerCached(item)
         const isSellable = minerData ? !!minerData.can_be_sold : false
         const points = this.calcularPuntos(item.power, item.bonus, isSellable)
         const pointsPerRlt = item.price > 0 ? Math.round(points / item.price) : item.pointsPerRlt
@@ -324,13 +340,19 @@ export default {
         return true
       })
     },
+    computedResultsMap() {
+      const map = {}
+      for (const item of this.computedResults) {
+        map[item.uid] = item
+      }
+      return map
+    },
     selectedPoints() {
       let total = 0
       for (const uid in this.selectedUids) {
         const qty = this.selectedUids[uid]
         if (qty) {
-          const uidNum = parseInt(uid)
-          const item = this.computedResults.find(r => r.uid === uidNum)
+          const item = this.computedResultsMap[uid]
           if (item) {
             total += item.points * qty
           }
@@ -535,11 +557,13 @@ export default {
               }
 
               // Look for Power in following lines
+              let endIdx = nameIndex + 1
               for (let j = nameIndex + 1; j < Math.min(i + 12, lines.length); j++) {
                 const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
                 if (powerMatch) {
                   power = `${powerMatch[1]} ${powerMatch[2]}`
                 }
+                endIdx = j + 1
                 if (lines[j] === 'Miner details') break
               }
 
@@ -561,10 +585,13 @@ export default {
                   minerId
                 })
               }
+              i = endIdx
+            } else {
+              i++
             }
+          } else {
+            i++
           }
-
-          i++
           continue
         }
 
@@ -736,8 +763,8 @@ export default {
         }
 
         // ========== SELL FORMAT (DESKTOP) ==========
-        // Desktop format: Hex ID first, then name
-        const sellIdMatch = lines[i].match(/^([a-f0-9]{24,})(Rating star|set badge)?$/i)
+        // Desktop format: Hex ID first (24 chars), optionally followed by rarity digit (1-5)
+        const sellIdMatch = lines[i].match(/^([a-f0-9]{24})([1-5])?(Rating star|set badge)?$/i)
         if (sellIdMatch) {
           const minerId = sellIdMatch[1]
           let name = ''
@@ -745,12 +772,19 @@ export default {
           let bonus = ''
           let quantity = 1
           let rarity = ''
-          let isLegacy = sellIdMatch[2] && sellIdMatch[2].toLowerCase() === 'rating star'
-          let isSet = sellIdMatch[2] && sellIdMatch[2].toLowerCase() === 'set badge'
+          let isLegacy = sellIdMatch[3] && sellIdMatch[3].toLowerCase() === 'rating star'
+          let isSet = sellIdMatch[3] && sellIdMatch[3].toLowerCase() === 'set badge'
+
+          // Rarity from ID suffix digit
+          if (sellIdMatch[2]) {
+            const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
+            rarity = rarityMap[sellIdMatch[2]] || ''
+          }
 
           let nameIndex = i + 1
+          // Skip rarity text line if present (may duplicate ID suffix rarity)
           if (nameIndex < lines.length && lines[nameIndex].match(/^(Uncommon|Rare|Epic|Legendary|Unreal)$/i)) {
-            rarity = lines[nameIndex]
+            if (!rarity) rarity = lines[nameIndex]
             nameIndex++
           }
 
@@ -773,7 +807,8 @@ export default {
           }
 
           let foundQuantityLabelDesktop = false
-          for (let j = nameIndex + 1; j < Math.min(i + 15, lines.length); j++) {
+          let endIdx = nameIndex + 1
+          for (let j = nameIndex + 1; j < Math.min(i + 20, lines.length); j++) {
             const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
             if (powerMatch) power = `${powerMatch[1]} ${powerMatch[2]}`
 
@@ -790,6 +825,7 @@ export default {
               foundQuantityLabelDesktop = false
             }
 
+            endIdx = j + 1
             if (lines[j] === 'iconSell Miner') break
           }
 
@@ -812,7 +848,7 @@ export default {
             })
           }
 
-          i++
+          i = endIdx
           continue
         }
 
@@ -1083,6 +1119,16 @@ export default {
       // U+0027 ' apostrophe, U+2019 ' right single quote, U+2018 ' left single quote
       // U+0060 ` grave, U+00B4 ´ acute, U+2032 ′ prime
       return str.replace(/[\u0027\u2019\u2018\u0060\u00B4\u2032]/g, "'")
+    },
+
+    findMinerCached(item) {
+      if (item.minerId && this.minerCache[item.minerId]) {
+        return this.minerCache[item.minerId]
+      }
+      if (item._minerRef !== undefined) return item._minerRef
+      const found = this.findMiner(item)
+      item._minerRef = found
+      return found
     },
 
     findMiner(item) {
