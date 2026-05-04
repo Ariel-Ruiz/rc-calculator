@@ -23,5 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
-.claude/*
+# Claude Code local settings
 .claude/settings.local.json
+
+# If you prefer to keep your CLAUDE.md private (optional)
+# CLAUDE.md
+
+# General Claude temp/cache files
+.claude/
