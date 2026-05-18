@@ -1,25 +1,55 @@
 <template>
-  <div class="container">
-    <div class="input-section">
-      <div id="warning" style="color: #e85217">{{ t.warning || 'Asegúrese...' }}</div>
-      <img :src="exampleImg" width="100%" alt="example" />
-      <h5 id="networkLabel">{{ t.networkLabel || 'Red de tu liga' }}</h5>
+  <div class="profit-container">
+    <div class="profit-input">
+      <h1 class="event-title">{{ t.profitTitle || 'Profit' }}</h1>
+      <div class="event-subtitle">{{ t.profitSubtitle || 'Mining Rewards Calculator' }}</div>
+      <p class="help" v-html="t.warning || ''"></p>
+
+      <div class="profit-example">
+        <img
+          :src="exampleImg"
+          alt="example"
+          class="profit-example-thumb"
+          @click="previewImage = exampleImg"
+        />
+      </div>
+
+      <div v-if="previewImage" class="image-preview-overlay" @click="previewImage = null">
+        <div class="image-preview-container" @click.stop>
+          <img :src="previewImage" alt="Preview" class="image-preview" />
+          <button class="preview-close" @click="previewImage = null">&times;</button>
+        </div>
+      </div>
+
+      <label class="profit-label">{{ t.networkLabel || 'Your league network' }}</label>
       <textarea
         id="networkInput"
         v-model="networkInput"
+        class="profit-textarea"
         :placeholder="t.networkPlaceholder || 'Pega aquí los datos de la red...'"
       />
-      <h5 id="powerLabel">{{ t.powerLabel || 'Poder en Ph/s' }}</h5>
+      <label class="profit-label">{{ t.powerInLabel || 'Power in' }}</label>
+      <div class="toogle-currency-tab profit-unit-tab">
+        <div
+          :class="['toogle-currency', { 'active': powerUnit === 'EH' }]"
+          @click="powerUnit = 'EH'"
+        >EH/s</div>
+        <div
+          :class="['toogle-currency', { 'active': powerUnit === 'PH' }]"
+          @click="powerUnit = 'PH'"
+        >PH/s</div>
+      </div>
       <input
         type="number"
         id="myPower"
+        class="profit-power-input"
         v-model.number="myPower"
-        :placeholder="t.powerPlaceholder || 'Tu poder (PH/s)'"
+        :placeholder="powerUnit === 'EH' ? (t.powerPlaceholderEh || 'Your power (EH/s)') : (t.powerPlaceholderPh || 'Your power (PH/s)')"
       />
-      <button id="processBtn" @click="procesarRed">{{ t.processBtn || 'Procesar' }}</button>
+      <button class="btn-calculate" @click="procesarRed">{{ t.processBtn || 'Procesar' }}</button>
     </div>
 
-    <div class="results-section">
+    <div class="profit-results">
       <div class="result-buttons">
         <div class="toogle-currency-tab">
           <div
@@ -35,7 +65,12 @@
         </div>
       </div>
 
-      <div class="table-wrapper">
+      <div v-if="!pricesLoaded" class="profit-loading">
+        <div class="profit-spinner"></div>
+        <span>Loading prices...</span>
+      </div>
+
+      <div v-else class="table-wrapper">
         <table id="resultTable">
           <thead>
             <tr>
@@ -47,6 +82,7 @@
               <th id="thPerDay">{{ t.thPerDay || '' }}</th>
               <th id="thPerWeek">{{ t.thPerWeek || '' }}</th>
               <th id="thPerMonth">{{ t.thPerMonth || '' }}</th>
+              <th id="thWithdrawIn">{{ t.thWithdrawIn || '' }}</th>
             </tr>
           </thead>
           <tbody>
@@ -68,6 +104,12 @@
               <td class="day">{{ r.calc.perDay.toFixed(useUSD ? 2 : 4) }} {{ r.calc.suffix }}</td>
               <td class="week">{{ r.calc.perWeek.toFixed(useUSD ? 2 : 4) }} {{ r.calc.suffix }}</td>
               <td class="month">{{ r.calc.perMonth.toFixed(useUSD ? 2 : 3) }} {{ r.calc.suffix }}</td>
+              <td class="withdraw" v-if="r.calc.withdrawMin !== null">
+                <span class="withdraw-min">{{ r.calc.withdrawMin }} {{ r.p.symbol }}</span>
+                <br/>
+                <span class="withdraw-days">{{ r.calc.withdrawDays !== null ? r.calc.withdrawDays + 'd' : '-' }}</span>
+              </td>
+              <td v-else></td>
             </tr>
           </tbody>
         </table>
@@ -77,6 +119,7 @@
 </template>
 
 <script>
+import '../styles/profit.css'
 import moment from 'moment'
 import { fetchAllPrices, fetchPrice, loadPricesFromStorage } from '../lib/prices'
 import { convertirAHs, tiempoASegundos } from '../lib/calculations'
@@ -96,6 +139,19 @@ import polIcon from '../assets/symbols/matic.svg'
 import algoIcon from '../assets/symbols/algo.svg'
 import usdtIcon from '../assets/symbols/usdt.svg'
 import exampleImg from '../assets/example.png'
+
+// ---- Minimum withdraw amounts per coin ----
+const withdrawMinimums = {
+  BTC: 0.00085,
+  ETH: 0.014,
+  LTC: 5,
+  BNB: 0.06,
+  DOGE: 220,
+  XRP: 40,
+  TRX: 300,
+  SOL: 0.6,
+  POL: 300
+}
 
 const symbolIcons = {
   RLT: rltIcon,
@@ -138,13 +194,15 @@ export default {
 
     return {
       networkInput: '',
-      myPower: Number(localStorage.getItem('power') || 1000),
+      myPower: localStorage.getItem('power') ? Number(localStorage.getItem('power')) : null,
       parsedLines: savedLines ? JSON.parse(savedLines) : defaultLines,
       useUSD: localStorage.getItem('useUSD') === '1',
       lastPricesLoaded: localStorage.getItem('lastPricesLoaded') || '',
+      powerUnit: localStorage.getItem('powerUnit') || 'EH',
       pricesLoaded: false,
       symbolIcons,
-      exampleImg
+      exampleImg,
+      previewImage: null
     }
   },
   computed: {
@@ -171,6 +229,9 @@ export default {
     },
     useUSD(newVal) {
       localStorage.setItem('useUSD', newVal ? '1' : '')
+    },
+    powerUnit(newVal) {
+      localStorage.setItem('powerUnit', newVal)
     }
   },
   mounted() {
@@ -210,8 +271,8 @@ export default {
       this.parsedLines = cp
     },
     computeForLine(data) {
-      const myPowerPH = this.myPower || 0
-      const myPowerHs = myPowerPH * 1e15
+      const myPowerVal = this.myPower || 0
+      const myPowerHs = myPowerVal * (this.powerUnit === 'EH' ? 1e18 : 1e15)
 
       const [powerValueStr, powerUnit] = data.power.split(' ')
       const netPowerHs = convertirAHs(parseFloat(powerValueStr) || 0, powerUnit || '')
@@ -229,7 +290,7 @@ export default {
       let myRewardMonth = myRewardDay * 30
 
       let suffix = rewardSymbol
-      if (this.useUSD && data.symbol != 'HMT') {
+      if (this.useUSD && data.symbol != 'HMT' && data.symbol != 'RST') {
         const price = fetchPrice(rewardSymbol)
         myRewardBlock *= price
         myRewardDay *= price
@@ -238,11 +299,20 @@ export default {
         suffix = 'USD'
       }
 
+      const withdrawMin = withdrawMinimums[data.symbol] ?? null
+      let withdrawDays = null
+      if (withdrawMin != null) {
+        const rawPerDay = netPowerHs > 0 ? ((myPowerHs / netPowerHs) * rewardValue) * (86400 / blockSeconds) : 0
+        withdrawDays = rawPerDay > 0 ? Math.ceil(withdrawMin / rawPerDay) : null
+      }
+
       return {
         perBlock: myRewardBlock,
         perDay: myRewardDay,
         perWeek: myRewardWeek,
         perMonth: myRewardMonth,
+        withdrawMin,
+        withdrawDays,
         suffix
       }
     }

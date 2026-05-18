@@ -101,6 +101,11 @@ tr:hover .hamster-img-cell,
   z-index: 1;
 }
 
+.exp-header-duration {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .exp-header-img {
   width: 130px;
   height: 40px;

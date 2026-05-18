@@ -194,5 +194,34 @@
     "baseStats": { "hp": 25, "str": 25, "luck": 15 },
     "abilities": [],
     "ultimate": ""
+  },
+  {
+    "name": "Uncle'Azoth",
+    "img": "hamsters/uncle-azoth.gif",
+    "baseStats": { "hp": 85, "str": 85, "luck": 60 },
+    "abilities": [
+      { "type": "x3_passive", "value": 3 }
+    ],
+    "ultimate": "Loot Conversion: 24 Points"
+  },
+  {
+    "name": "Goodncle",
+    "img": "hamsters/goodncle.gif",
+    "baseStats": { "hp": 60, "str": 40, "luck": 80 },
+    "abilities": [
+      { "type": "extra_rewards", "value": 50 },
+      { "type": "buyback_discount", "value": -50 }
+    ],
+    "ultimate": "Chests Multiplier x3/5/30: 24 Points"
+  },
+  {
+    "name": "Badncle",
+    "img": "hamsters/badncle.gif",
+    "baseStats": { "hp": 60, "str": 80, "luck": 40 },
+    "abilities": [
+      { "type": "extra_rewards", "value": 50 },
+      { "type": "buyback_discount", "value": -50 }
+    ],
+    "ultimate": "Chests Multiplier x3/5/30: 24 Points"
   }
 ]

@@ -1,8 +1,8 @@
 {
-  "multiplier": 0.1,
+  "multiplier": 0.2,
   "tasks": [
     {
-      "id": "69f8afa2b94e4ce33de85a32",
+      "id": "6a06fedeb94e4ce33de85b80",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "69f8afa2b94e4ce33de85a33",
+      "id": "6a06fedeb94e4ce33de85b81",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -44,7 +44,7 @@
       "sort": 2
     },
     {
-      "id": "69f8afa2b94e4ce33de85a34",
+      "id": "6a06fedeb94e4ce33de85b82",
       "xp_type": "number",
       "xp_reward": 150,
       "amount": 6667,
@@ -65,10 +65,10 @@
       "sort": 3
     },
     {
-      "id": "69f8afa2b94e4ce33de85a35",
+      "id": "6a06fedeb94e4ce33de85b83",
       "xp_type": "number",
-      "xp_reward": 2000,
-      "amount": 500,
+      "xp_reward": 3003,
+      "amount": 333,
       "tag": {
         "color": "",
         "text": "",
@@ -88,98 +88,62 @@
   ],
   "event": {
     "event": {
-      "_id": "69f8afa1a11db8e6a7aaa0fc",
-      "max_xp": 33447000,
+      "_id": "6a06fedebeecc82fcd8b85f8",
+      "max_xp": 112290000,
       "max_multiplier": 10000,
-      "max_level": 25,
+      "max_level": 50,
       "tag": {
-        "text": "",
-        "color": "",
-        "text_color": ""
+        "text": "50"
       },
       "progression_event_type": "default",
-      "end_date": "2026-05-08T15:00:00.000Z",
-      "last_updated": 1777905570106,
+      "end_date": "2026-05-18T15:00:00.000Z",
+      "last_updated": 1778843358800,
       "description": {
-        "en": "[04–08] Binks Below",
-        "cn": "[04–08] Binks Below"
+        "en": "Panic at the Party",
+        "cn": "Panic at the Party"
       },
       "title": {
-        "en": "Binks Below",
-        "cn": "Binks Below"
+        "en": "Panic at the Party",
+        "cn": "Panic at the Party"
       }
     },
     "rewards": [
       {
-        "id": "69f8afa2b94e4ce33de85a37",
-        "item_id": null,
-        "amount": 200000,
-        "currency": "RLT",
+        "id": "6a06fedeb94e4ce33de85b85",
+        "item_id": "6454bcdf75f06df66d28af04",
+        "amount": 10,
+        "currency": "",
         "ttl_time": 0,
         "required_level": 1,
-        "type": "money",
+        "type": "battery",
         "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
+          "en": "Battery",
+          "cn": "Battery"
         },
         "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
+          "en": "Battery Reward Description",
+          "cn": "Battery Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "description": {
+            "en": "Batteries used to replenish electricity and save efficiency of the miners in your room.",
+            "cn": "Batteries used to replenish electricity and save efficiency of the miners in your room."
+          },
+          "_id": "6454bcdf75f06df66d28af04",
+          "level": 1
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a39",
-        "item_id": null,
-        "amount": 5000000,
-        "currency": "",
-        "ttl_time": 1209600000,
-        "required_level": 2,
-        "type": "power",
-        "title": {
-          "en": "Power",
-          "cn": "Power"
-        },
-        "description": {
-          "en": "Power Reward Description",
-          "cn": "Power Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a3b",
-        "item_id": null,
-        "amount": 50,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 3,
-        "type": "season_pass_xp",
-        "title": {
-          "en": "Season Pass XP",
-          "cn": "Season Pass XP"
-        },
-        "description": {
-          "en": "Season Pass XP Description",
-          "cn": "Season Pass XP Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a3d",
+        "id": "6a06fedeb94e4ce33de85b87",
         "item_id": "6834276c6b8c472444c3725c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 4,
+        "required_level": 2,
         "type": "utility_item",
         "title": {
           "en": "Utility Item",
@@ -214,12 +178,160 @@
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a3f",
-        "item_id": "6571ab76ca8bfef34adcd9ea",
+        "id": "6a06fedeb94e4ce33de85b89",
+        "item_id": null,
+        "amount": 50,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 3,
+        "type": "season_pass_xp",
+        "title": {
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
+        },
+        "description": {
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6a06fedeb94e4ce33de85b8b",
+        "item_id": "698b0f611a5d82de5b6ef3ca",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
+        "required_level": 4,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b0f611a5d82de5b6ef3ca",
+          "power": 500000,
+          "width": 2,
+          "name": {
+            "en": "Vintage",
+            "cn": "Vintage",
+            "es": "Vintage",
+            "pt": "Vintage"
+          },
+          "description": {
+            "en": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "cn": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "es": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "pt": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "vintage",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 300,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedeb94e4ce33de85b8d",
+        "item_id": null,
+        "amount": 400000,
+        "currency": "RLT",
+        "ttl_time": 0,
         "required_level": 5,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85b8f",
+        "item_id": "698b0f611a5d82de5b6ef3ca",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 6,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b0f611a5d82de5b6ef3ca",
+          "power": 500000,
+          "width": 2,
+          "name": {
+            "en": "Vintage",
+            "cn": "Vintage",
+            "es": "Vintage",
+            "pt": "Vintage"
+          },
+          "description": {
+            "en": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "cn": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "es": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "pt": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "vintage",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 300,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85b91",
+        "item_id": "64d6299b6d7008148575df79",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 7,
         "type": "rack",
         "title": {
           "en": "Rack Title",
@@ -235,26 +347,152 @@
         },
         "item": {
           "name": {
-            "en": "Festive Rack 8",
-            "cn": "Festive Rack 8"
+            "en": "Silver Rack 8",
+            "cn": "Silver Rack 8"
           },
           "description": {
-            "en": "Bask in the radiant glow of Festive Rack 8, where the holiday lights weave a dazzling tapestry of joy",
-            "cn": "Bask in the radiant glow of Festive Rack 8, where the holiday lights weave a dazzling tapestry of joy"
+            "en": "When you asked the seller about the material of this rack, he jokingly responded with 'Silver.' It seems he had quite an unusual sense of humor, but this sturdy and spacious 'Silver' Rack for miners proves that there's more to it than meets the eye.",
+            "cn": "When you asked the seller about the material of this rack, he jokingly responded with 'Silver.' It seems he had quite an unusual sense of humor, but this sturdy and spacious 'Silver' Rack for miners proves that there's more to it than meets the eye."
           },
-          "_id": "6571ab76ca8bfef34adcd9ea",
+          "_id": "64d6299b6d7008148575df79",
           "capacity": 8,
           "is_can_be_sold_on_mp": true,
           "is_in_set": false
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a41",
-        "item_id": "67d1c54536daea2ef871b292",
+        "id": "6a06fedfb94e4ce33de85b93",
+        "item_id": "698b108f1a5d82de5b6ef4ad",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 6,
+        "required_level": 8,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b108f1a5d82de5b6ef4ad",
+          "power": 1500000,
+          "width": 2,
+          "name": {
+            "en": "Mergedge X",
+            "cn": "Mergedge X",
+            "es": "Mergedge X",
+            "pt": "Mergedge X"
+          },
+          "description": {
+            "en": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "cn": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "es": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "pt": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "mergedge_x",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85b95",
+        "item_id": null,
+        "amount": 200000000,
+        "currency": "RST",
+        "ttl_time": 0,
+        "required_level": 9,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85b97",
+        "item_id": "697214f26cca9b4fec386a71",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 10,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "697214f26cca9b4fec386a71",
+          "power": 6570000,
+          "width": 2,
+          "name": {
+            "en": "Signal Bean",
+            "cn": "Signal Bean",
+            "es": "Signal Bean",
+            "pt": "Signal Bean"
+          },
+          "description": {
+            "en": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "cn": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "es": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "pt": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "signal_bean",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 250,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85b99",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 2,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 11,
         "type": "utility_item",
         "title": {
           "en": "Utility Item",
@@ -289,276 +527,12 @@
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a43",
-        "item_id": "69d81993135acbe76adee44a",
+        "id": "6a06fedfb94e4ce33de85b9b",
+        "item_id": "698b0f611a5d82de5b6ef3cd",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 7,
-        "type": "mystery_box",
-        "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
-        },
-        "description": {
-          "en": "Mystery Box Reward Description",
-          "cn": "Mystery Box Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "69d81993135acbe76adee44a",
-          "title": {
-            "en": "Basic Engineer box",
-            "cn": "",
-            "es": "",
-            "pt": ""
-          },
-          "items": [
-            {
-              "type": "utility_item",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Old key",
-                  "cn": "",
-                  "es": "",
-                  "pt": ""
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/old_key.png"
-                }
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "battery",
-              "amount": 20,
-              "sort": 1,
-              "item_info": {
-                "name": {
-                  "en": "Battery",
-                  "cn": "Battery"
-                },
-                "level": 1
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "HMT",
-              "amount": 100000000,
-              "sort": 2,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "utility_item",
-              "amount": 5,
-              "sort": 3,
-              "item_info": {
-                "name": {
-                  "en": "Old key",
-                  "cn": "",
-                  "es": "",
-                  "pt": ""
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/old_key.png"
-                }
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "utility_item",
-              "amount": 1,
-              "sort": 4,
-              "item_info": {
-                "name": {
-                  "en": "Recharger",
-                  "cn": "Recharger",
-                  "es": "Recharger",
-                  "pt": "Recharger"
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/recharger.gif"
-                }
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "utility_item",
-              "amount": 1,
-              "sort": 5,
-              "item_info": {
-                "name": {
-                  "en": "24h Booster",
-                  "cn": "24h Booster",
-                  "es": "24h Booster",
-                  "pt": "24h Booster"
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/683427626b8c472444c3725b.gif?v=1748874570577"
-                }
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "utility_item",
-              "amount": 3,
-              "sort": 6,
-              "item_info": {
-                "name": {
-                  "en": "Speed Up Item",
-                  "cn": "Speed Up Item",
-                  "es": "Speed Up Item",
-                  "pt": "Speed Up Item"
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
-                }
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 7,
-              "item_info": {
-                "name": {
-                  "en": "Blueprint",
-                  "cn": "Blueprint",
-                  "es": "Blueprint",
-                  "pt": "Blueprint"
-                },
-                "power": 1000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "utility_item",
-              "amount": 3,
-              "sort": 8,
-              "item_info": {
-                "name": {
-                  "en": "Basic key",
-                  "cn": "",
-                  "es": "",
-                  "pt": ""
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/basic_key.png"
-                }
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 1,
-              "sort": 9,
-              "item_info": {
-                "name": {
-                  "en": "Epic Fan",
-                  "cn": "Epic Fan"
-                }
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 10,
-              "item_info": {
-                "name": {
-                  "en": "Crafting Gem",
-                  "cn": "Crafting Gem",
-                  "es": "Crafting Gem",
-                  "pt": "Crafting Gem"
-                },
-                "power": 100000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "utility_item",
-              "amount": 1,
-              "sort": 11,
-              "item_info": {
-                "name": {
-                  "en": "Ancient key",
-                  "cn": "",
-                  "es": "",
-                  "pt": ""
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/ancient_key.png"
-                }
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 1,
-              "sort": 12,
-              "item_info": {
-                "name": {
-                  "en": "Legendary Fan",
-                  "cn": "Legendary Fan"
-                }
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "utility_item",
-              "amount": 2,
-              "sort": 13,
-              "item_info": {
-                "name": {
-                  "en": "Ancient key",
-                  "cn": "",
-                  "es": "",
-                  "pt": ""
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/ancient_key.png"
-                }
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "utility_item",
-              "amount": 1,
-              "sort": 14,
-              "item_info": {
-                "name": {
-                  "en": "Forbidden key",
-                  "cn": "",
-                  "es": "",
-                  "pt": ""
-                },
-                "media": {
-                  "preview_url": "static/img/market/utility_items/forbidden_key.png"
-                }
-              },
-              "base_color_hex": "ffdc00"
-            }
-          ],
-          "media": {
-            "box_url": "static/img/mystery_boxes/69d81993135acbe76adee44a/box_img_751ee386-bb88-40b1-8e7f-88c750c11864.png",
-            "cover_url": "static/img/mystery_boxes/69d81993135acbe76adee44a/cover_img_344e59ab-feaa-46b2-a3e1-b97bcb356b52.png",
-            "box_image_url": "static/img/mystery_boxes/69d81993135acbe76adee44a/box_img_url_2b6b80ab-97b5-4e86-b081-185d223aa21c.png"
-          }
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a45",
-        "item_id": "66337fe212e054c26801ea35",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 8,
+        "required_level": 12,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -573,45 +547,45 @@
           "max": 0
         },
         "item": {
-          "_id": "66337fe212e054c26801ea35",
-          "power": 2100000,
+          "_id": "698b0f611a5d82de5b6ef3cd",
+          "power": 6000000,
           "width": 2,
           "name": {
-            "en": "LightBeat",
-            "cn": "LightBeat",
-            "es": "LightBeat",
-            "pt": "LightBeat"
+            "en": "Vintage",
+            "cn": "Vintage",
+            "es": "Vintage",
+            "pt": "Vintage"
           },
           "description": {
-            "en": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "cn": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "es": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "pt": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!"
+            "en": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "cn": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "es": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "pt": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "lightbeat",
+          "level": 1,
+          "type": "merge",
+          "filename": "vintage",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 556,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 500,
           "is_in_set": false
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a47",
-        "item_id": "69d8038b135acbe76adead60",
+        "id": "6a06fedfb94e4ce33de85b9d",
+        "item_id": "69d80fa5135acbe76aded522",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 9,
+        "required_level": 13,
         "type": "mystery_box",
         "title": {
           "en": "Loot Box",
@@ -626,9 +600,1046 @@
           "max": 0
         },
         "item": {
-          "_id": "69d8038b135acbe76adead60",
+          "_id": "69d80fa5135acbe76aded522",
           "title": {
-            "en": "Old miners case",
+            "en": "Recycled Parts box",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "items": [
+            {
+              "type": "mutation_component",
+              "amount": 20,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Common Hashboard",
+                  "cn": "Common Hashboard"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 30,
+              "sort": 1,
+              "item_info": {
+                "name": {
+                  "en": "Common Fan",
+                  "cn": "Common Fan"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 40,
+              "sort": 2,
+              "item_info": {
+                "name": {
+                  "en": "Common Wire",
+                  "cn": "Common Wire"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 10,
+              "sort": 3,
+              "item_info": {
+                "name": {
+                  "en": "Common Hashboard",
+                  "cn": "Common Hashboard"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 20,
+              "sort": 4,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Fan",
+                  "cn": "Uncommon Fan"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 30,
+              "sort": 5,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Wire",
+                  "cn": "Uncommon Wire"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 50,
+              "sort": 6,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Hashboard",
+                  "cn": "Uncommon Hashboard"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 80,
+              "sort": 7,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Fan",
+                  "cn": "Uncommon Fan"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 100,
+              "sort": 8,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Wire",
+                  "cn": "Uncommon Wire"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 4,
+              "sort": 9,
+              "item_info": {
+                "name": {
+                  "en": "Rare Fan",
+                  "cn": "Rare Fan"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 5,
+              "sort": 10,
+              "item_info": {
+                "name": {
+                  "en": "Rare Wire",
+                  "cn": "Rare Wire"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 8,
+              "sort": 11,
+              "item_info": {
+                "name": {
+                  "en": "Rare Hashboard",
+                  "cn": "Rare Hashboard"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 10,
+              "sort": 12,
+              "item_info": {
+                "name": {
+                  "en": "Rare Fan",
+                  "cn": "Rare Fan"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 12,
+              "sort": 13,
+              "item_info": {
+                "name": {
+                  "en": "Rare Wire",
+                  "cn": "Rare Wire"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 3,
+              "sort": 14,
+              "item_info": {
+                "name": {
+                  "en": "Epic Hashboard",
+                  "cn": "Epic Hashboard"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 3,
+              "sort": 15,
+              "item_info": {
+                "name": {
+                  "en": "Epic Wire",
+                  "cn": "Epic Wire"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 4,
+              "sort": 16,
+              "item_info": {
+                "name": {
+                  "en": "Epic Fan",
+                  "cn": "Epic Fan"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 6,
+              "sort": 17,
+              "item_info": {
+                "name": {
+                  "en": "Epic Wire",
+                  "cn": "Epic Wire"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 8,
+              "sort": 18,
+              "item_info": {
+                "name": {
+                  "en": "Epic Fan",
+                  "cn": "Epic Fan"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 10,
+              "sort": 19,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Fan",
+                  "cn": "Legendary Fan"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 15,
+              "sort": 20,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Fan",
+                  "cn": "Legendary Fan"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 5,
+              "sort": 21,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Wire",
+                  "cn": "Legendary Wire"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 10,
+              "sort": 22,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Hashboard",
+                  "cn": "Legendary Hashboard"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            }
+          ],
+          "media": {
+            "box_url": "static/img/mystery_boxes/69d80fa5135acbe76aded522/box_img_b39fa797-edbd-4e04-a0e6-2158d664c89e.png",
+            "cover_url": "static/img/mystery_boxes/69d80fa5135acbe76aded522/cover_img_77a8080d-5c87-4b6d-ba00-a93bfa73e5dc.png",
+            "box_image_url": "static/img/mystery_boxes/69d80fa5135acbe76aded522/box_img_url_02356da4-9e53-423e-b72f-ec51a3e4797d.png"
+          }
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85b9f",
+        "item_id": "698b108f1a5d82de5b6ef4ad",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 14,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b108f1a5d82de5b6ef4ad",
+          "power": 1500000,
+          "width": 2,
+          "name": {
+            "en": "Mergedge X",
+            "cn": "Mergedge X",
+            "es": "Mergedge X",
+            "pt": "Mergedge X"
+          },
+          "description": {
+            "en": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "cn": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "es": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "pt": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "mergedge_x",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85ba1",
+        "item_id": "68109bc36cce9be19c451f58",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 15,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Carved North Rack 6",
+            "cn": "Carved North Rack 6"
+          },
+          "description": {
+            "en": "Holds your treasures with pride and strength.",
+            "cn": "Holds your treasures with pride and strength."
+          },
+          "_id": "68109bc36cce9be19c451f58",
+          "capacity": 6,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85ba3",
+        "item_id": "69aed5b3446a62b77c179218",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 16,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69aed5b3446a62b77c179218",
+          "power": 5000000,
+          "width": 2,
+          "name": {
+            "en": "Furnacer",
+            "cn": "Furnacer",
+            "es": "Furnacer",
+            "pt": "Furnacer"
+          },
+          "description": {
+            "en": "More bots, more crafts, more power...",
+            "cn": "More bots, more crafts, more power...",
+            "es": "More bots, more crafts, more power...",
+            "pt": "More bots, more crafts, more power..."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "furnacer",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85ba5",
+        "item_id": "69d80fa5135acbe76aded522",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 17,
+        "type": "mystery_box",
+        "title": {
+          "en": "Loot Box",
+          "cn": "Loot Box"
+        },
+        "description": {
+          "en": "Mystery Box Reward Description",
+          "cn": "Mystery Box Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69d80fa5135acbe76aded522",
+          "title": {
+            "en": "Recycled Parts box",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "items": [
+            {
+              "type": "mutation_component",
+              "amount": 20,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Common Hashboard",
+                  "cn": "Common Hashboard"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 30,
+              "sort": 1,
+              "item_info": {
+                "name": {
+                  "en": "Common Fan",
+                  "cn": "Common Fan"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 40,
+              "sort": 2,
+              "item_info": {
+                "name": {
+                  "en": "Common Wire",
+                  "cn": "Common Wire"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 10,
+              "sort": 3,
+              "item_info": {
+                "name": {
+                  "en": "Common Hashboard",
+                  "cn": "Common Hashboard"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 20,
+              "sort": 4,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Fan",
+                  "cn": "Uncommon Fan"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 30,
+              "sort": 5,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Wire",
+                  "cn": "Uncommon Wire"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 50,
+              "sort": 6,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Hashboard",
+                  "cn": "Uncommon Hashboard"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 80,
+              "sort": 7,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Fan",
+                  "cn": "Uncommon Fan"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 100,
+              "sort": 8,
+              "item_info": {
+                "name": {
+                  "en": "Uncommon Wire",
+                  "cn": "Uncommon Wire"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 4,
+              "sort": 9,
+              "item_info": {
+                "name": {
+                  "en": "Rare Fan",
+                  "cn": "Rare Fan"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 5,
+              "sort": 10,
+              "item_info": {
+                "name": {
+                  "en": "Rare Wire",
+                  "cn": "Rare Wire"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 8,
+              "sort": 11,
+              "item_info": {
+                "name": {
+                  "en": "Rare Hashboard",
+                  "cn": "Rare Hashboard"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 10,
+              "sort": 12,
+              "item_info": {
+                "name": {
+                  "en": "Rare Fan",
+                  "cn": "Rare Fan"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 12,
+              "sort": 13,
+              "item_info": {
+                "name": {
+                  "en": "Rare Wire",
+                  "cn": "Rare Wire"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 3,
+              "sort": 14,
+              "item_info": {
+                "name": {
+                  "en": "Epic Hashboard",
+                  "cn": "Epic Hashboard"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 3,
+              "sort": 15,
+              "item_info": {
+                "name": {
+                  "en": "Epic Wire",
+                  "cn": "Epic Wire"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 4,
+              "sort": 16,
+              "item_info": {
+                "name": {
+                  "en": "Epic Fan",
+                  "cn": "Epic Fan"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 6,
+              "sort": 17,
+              "item_info": {
+                "name": {
+                  "en": "Epic Wire",
+                  "cn": "Epic Wire"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 8,
+              "sort": 18,
+              "item_info": {
+                "name": {
+                  "en": "Epic Fan",
+                  "cn": "Epic Fan"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 10,
+              "sort": 19,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Fan",
+                  "cn": "Legendary Fan"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 15,
+              "sort": 20,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Fan",
+                  "cn": "Legendary Fan"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 5,
+              "sort": 21,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Wire",
+                  "cn": "Legendary Wire"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 10,
+              "sort": 22,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Hashboard",
+                  "cn": "Legendary Hashboard"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            }
+          ],
+          "media": {
+            "box_url": "static/img/mystery_boxes/69d80fa5135acbe76aded522/box_img_b39fa797-edbd-4e04-a0e6-2158d664c89e.png",
+            "cover_url": "static/img/mystery_boxes/69d80fa5135acbe76aded522/cover_img_77a8080d-5c87-4b6d-ba00-a93bfa73e5dc.png",
+            "box_image_url": "static/img/mystery_boxes/69d80fa5135acbe76aded522/box_img_url_02356da4-9e53-423e-b72f-ec51a3e4797d.png"
+          }
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85ba7",
+        "item_id": "697214f26cca9b4fec386a71",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 18,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "697214f26cca9b4fec386a71",
+          "power": 6570000,
+          "width": 2,
+          "name": {
+            "en": "Signal Bean",
+            "cn": "Signal Bean",
+            "es": "Signal Bean",
+            "pt": "Signal Bean"
+          },
+          "description": {
+            "en": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "cn": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "es": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "pt": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "signal_bean",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 250,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85ba9",
+        "item_id": "69aed5b3446a62b77c179218",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 19,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69aed5b3446a62b77c179218",
+          "power": 5000000,
+          "width": 2,
+          "name": {
+            "en": "Furnacer",
+            "cn": "Furnacer",
+            "es": "Furnacer",
+            "pt": "Furnacer"
+          },
+          "description": {
+            "en": "More bots, more crafts, more power...",
+            "cn": "More bots, more crafts, more power...",
+            "es": "More bots, more crafts, more power...",
+            "pt": "More bots, more crafts, more power..."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "furnacer",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85bab",
+        "item_id": null,
+        "amount": 2500000000,
+        "currency": "RST",
+        "ttl_time": 0,
+        "required_level": 20,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85bad",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 6,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 21,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "media": {
+            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
+          },
+          "_id": "67d1c54536daea2ef871b292",
+          "name": {
+            "en": "Speed Up Item",
+            "cn": "Speed Up Item",
+            "es": "Speed Up Item",
+            "pt": "Speed Up Item"
+          },
+          "description": {
+            "en": "Ticket for speed up expedition",
+            "cn": "Ticket for speed up expedition",
+            "es": "Ticket for speed up expedition",
+            "pt": "Ticket for speed up expedition"
+          },
+          "type": "expedition_speed_up"
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85baf",
+        "item_id": "698b0f611a5d82de5b6ef3d3",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 22,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b0f611a5d82de5b6ef3d3",
+          "power": 18000000,
+          "width": 2,
+          "name": {
+            "en": "Vintage",
+            "cn": "Vintage",
+            "es": "Vintage",
+            "pt": "Vintage"
+          },
+          "description": {
+            "en": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "cn": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "es": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "pt": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "vintage",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85bb1",
+        "item_id": "6a06e714beecc82fcd8b011f",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 23,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a06e714beecc82fcd8b011f",
+          "power": 20000000,
+          "width": 2,
+          "name": {
+            "en": "Screambean",
+            "cn": "Screambean",
+            "es": "Screambean",
+            "pt": "Screambean"
+          },
+          "description": {
+            "en": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "cn": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "es": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "pt": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "screambean",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a06fedfb94e4ce33de85bb3",
+        "item_id": "69d80624135acbe76adebaa9",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 24,
+        "type": "mystery_box",
+        "title": {
+          "en": "Loot Box",
+          "cn": "Loot Box"
+        },
+        "description": {
+          "en": "Mystery Box Reward Description",
+          "cn": "Mystery Box Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69d80624135acbe76adebaa9",
+          "title": {
+            "en": "Ancient Miners Case",
             "cn": "",
             "es": "",
             "pt": ""
@@ -700,14 +1711,14 @@
               "sort": 4,
               "item_info": {
                 "name": {
-                  "en": "Shinogi",
-                  "cn": "Shinogi",
-                  "es": "Shinogi",
-                  "pt": "Shinogi"
+                  "en": "Plague Doctor",
+                  "cn": "Plague Doctor",
+                  "es": "Plague Doctor",
+                  "pt": "Plague Doctor"
                 },
-                "power": 2000000
+                "power": 3500000
               },
-              "base_color_hex": "2bd600"
+              "base_color_hex": "dddddd"
             },
             {
               "type": "miner",
@@ -715,12 +1726,12 @@
               "sort": 5,
               "item_info": {
                 "name": {
-                  "en": "Hoarder's Wealth",
-                  "cn": "Hoarder's Wealth",
-                  "es": "Hoarder's Wealth",
-                  "pt": "Hoarder's Wealth"
+                  "en": "Hephaestus Hall",
+                  "cn": "Hephaestus Hall",
+                  "es": "Hephaestus Hall",
+                  "pt": "Hephaestus Hall"
                 },
-                "power": 4000000
+                "power": 5000000
               },
               "base_color_hex": "2bd600"
             },
@@ -730,12 +1741,12 @@
               "sort": 6,
               "item_info": {
                 "name": {
-                  "en": "Final Drive",
-                  "cn": "Final Drive",
-                  "es": "Final Drive",
-                  "pt": "Final Drive"
+                  "en": "FireStar",
+                  "cn": "FireStar",
+                  "es": "FireStar",
+                  "pt": "FireStar"
                 },
-                "power": 4125000
+                "power": 5000000
               },
               "base_color_hex": "2bd600"
             },
@@ -745,12 +1756,12 @@
               "sort": 7,
               "item_info": {
                 "name": {
-                  "en": "Mask On",
-                  "cn": "Mask On",
-                  "es": "Mask On",
-                  "pt": "Mask On"
+                  "en": "RollerPrisoner",
+                  "cn": "RollerPrisoner",
+                  "es": "RollerPrisoner",
+                  "pt": "RollerPrisoner"
                 },
-                "power": 4500000
+                "power": 6000000
               },
               "base_color_hex": "2bd600"
             },
@@ -760,12 +1771,12 @@
               "sort": 8,
               "item_info": {
                 "name": {
-                  "en": "MinerVille",
-                  "cn": "MinerVille",
-                  "es": "MinerVille",
-                  "pt": "MinerVille"
+                  "en": "Vintage",
+                  "cn": "Vintage",
+                  "es": "Vintage",
+                  "pt": "Vintage"
                 },
-                "power": 4750000
+                "power": 6000000
               },
               "base_color_hex": "2bd600"
             },
@@ -775,14 +1786,14 @@
               "sort": 9,
               "item_info": {
                 "name": {
-                  "en": "Red Mask On",
-                  "cn": "Red Mask On",
-                  "es": "Red Mask On",
-                  "pt": "Red Mask On"
+                  "en": "Satoshi Oni",
+                  "cn": "Satoshi Oni",
+                  "es": "Satoshi Oni",
+                  "pt": "Satoshi Oni"
                 },
-                "power": 5500000
+                "power": 6500000
               },
-              "base_color_hex": "03e1e4"
+              "base_color_hex": "2bd600"
             },
             {
               "type": "miner",
@@ -790,14 +1801,14 @@
               "sort": 10,
               "item_info": {
                 "name": {
-                  "en": "RollerPrisoner",
-                  "cn": "RollerPrisoner",
-                  "es": "RollerPrisoner",
-                  "pt": "RollerPrisoner"
+                  "en": "Abstract Coil",
+                  "cn": "Abstract Coil",
+                  "es": "Abstract Coil",
+                  "pt": "Abstract Coil"
                 },
-                "power": 6000000
+                "power": 8000000
               },
-              "base_color_hex": "03e1e4"
+              "base_color_hex": "2bd600"
             },
             {
               "type": "miner",
@@ -805,14 +1816,14 @@
               "sort": 11,
               "item_info": {
                 "name": {
-                  "en": "Red Trail Stallion",
-                  "cn": "Red Trail Stallion",
-                  "es": "Red Trail Stallion",
-                  "pt": "Red Trail Stallion"
+                  "en": "Final Drive",
+                  "cn": "Final Drive",
+                  "es": "Final Drive",
+                  "pt": "Final Drive"
                 },
-                "power": 6500000
+                "power": 10750000
               },
-              "base_color_hex": "03e1e4"
+              "base_color_hex": "2bd600"
             },
             {
               "type": "miner",
@@ -820,12 +1831,12 @@
               "sort": 12,
               "item_info": {
                 "name": {
-                  "en": "Crimson Sparkcaster",
-                  "cn": "Crimson Sparkcaster",
-                  "es": "Crimson Sparkcaster",
-                  "pt": "Crimson Sparkcaster"
+                  "en": "Mergedge X",
+                  "cn": "Mergedge X",
+                  "es": "Mergedge X",
+                  "pt": "Mergedge X"
                 },
-                "power": 7250000
+                "power": 10000000
               },
               "base_color_hex": "03e1e4"
             },
@@ -835,12 +1846,12 @@
               "sort": 13,
               "item_info": {
                 "name": {
-                  "en": "Cupid's Cut",
-                  "cn": "Cupid's Cut",
-                  "es": "Cupid's Cut",
-                  "pt": "Cupid's Cut"
+                  "en": "Shinogi",
+                  "cn": "Shinogi",
+                  "es": "Shinogi",
+                  "pt": "Shinogi"
                 },
-                "power": 7350000
+                "power": 10000000
               },
               "base_color_hex": "03e1e4"
             },
@@ -857,7 +1868,7 @@
                 },
                 "power": 10000000
               },
-              "base_color_hex": "ff2fd1"
+              "base_color_hex": "03e1e4"
             },
             {
               "type": "miner",
@@ -872,12 +1883,27 @@
                 },
                 "power": 10000000
               },
-              "base_color_hex": "ff2fd1"
+              "base_color_hex": "03e1e4"
             },
             {
               "type": "miner",
               "amount": 1,
               "sort": 16,
+              "item_info": {
+                "name": {
+                  "en": "Hoarder's Wealth",
+                  "cn": "Hoarder's Wealth",
+                  "es": "Hoarder's Wealth",
+                  "pt": "Hoarder's Wealth"
+                },
+                "power": 12000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 17,
               "item_info": {
                 "name": {
                   "en": "Jump&Run",
@@ -887,22 +1913,7 @@
                 },
                 "power": 12000000
               },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 17,
-              "item_info": {
-                "name": {
-                  "en": "Edge Case",
-                  "cn": "Edge Case",
-                  "es": "Edge Case",
-                  "pt": "Edge Case"
-                },
-                "power": 15000000
-              },
-              "base_color_hex": "ff2fd1"
+              "base_color_hex": "03e1e4"
             },
             {
               "type": "miner",
@@ -910,14 +1921,14 @@
               "sort": 18,
               "item_info": {
                 "name": {
-                  "en": "Kumiki Node",
-                  "cn": "Kumiki node",
-                  "es": "Kumiki node",
-                  "pt": "Kumiki node"
+                  "en": "Ray of love",
+                  "cn": "Ray of love",
+                  "es": "Ray of love",
+                  "pt": "Ray of love"
                 },
-                "power": 18000000
+                "power": 14000000
               },
-              "base_color_hex": "ff2fd1"
+              "base_color_hex": "03e1e4"
             },
             {
               "type": "miner",
@@ -925,19 +1936,79 @@
               "sort": 19,
               "item_info": {
                 "name": {
-                  "en": "Elite",
-                  "cn": "Elite",
-                  "es": "Elite",
-                  "pt": "Elite"
+                  "en": "FireStar",
+                  "cn": "FireStar",
+                  "es": "FireStar",
+                  "pt": "FireStar"
                 },
-                "power": 25000000
+                "power": 15000000
               },
-              "base_color_hex": "ffdc00"
+              "base_color_hex": "03e1e4"
             },
             {
               "type": "miner",
               "amount": 1,
               "sort": 20,
+              "item_info": {
+                "name": {
+                  "en": "Colorfull",
+                  "cn": "Colorfull",
+                  "es": "Colorfull",
+                  "pt": "Colorfull"
+                },
+                "power": 18000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 21,
+              "item_info": {
+                "name": {
+                  "en": "X-Craft",
+                  "cn": "X-Craft",
+                  "es": "X-Craft",
+                  "pt": "X-Craft"
+                },
+                "power": 18000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 22,
+              "item_info": {
+                "name": {
+                  "en": "Walk Alone",
+                  "cn": "Walk Alone",
+                  "es": "Walk Alone",
+                  "pt": "Walk Alone"
+                },
+                "power": 20000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 23,
+              "item_info": {
+                "name": {
+                  "en": "Zeus",
+                  "cn": "Zeus",
+                  "es": "Zeus",
+                  "pt": "Zeus"
+                },
+                "power": 23000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 24,
               "item_info": {
                 "name": {
                   "en": "Pagliacci",
@@ -947,53 +2018,173 @@
                 },
                 "power": 25000000
               },
-              "base_color_hex": "ffdc00"
+              "base_color_hex": "ff2fd1"
             },
             {
               "type": "miner",
               "amount": 1,
-              "sort": 21,
+              "sort": 25,
               "item_info": {
                 "name": {
-                  "en": "Pip-33",
-                  "cn": "Pip-33",
-                  "es": "Pip-33",
-                  "pt": "Pip-33"
+                  "en": "Abstract Coil",
+                  "cn": "Abstract Coil",
+                  "es": "Abstract Coil",
+                  "pt": "Abstract Coil"
                 },
                 "power": 25000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 26,
+              "item_info": {
+                "name": {
+                  "en": "Mergedge X",
+                  "cn": "Mergedge X",
+                  "es": "Mergedge X",
+                  "pt": "Mergedge X"
+                },
+                "power": 36000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 27,
+              "item_info": {
+                "name": {
+                  "en": "Magnum Opus",
+                  "cn": "Magnum Opus",
+                  "es": "Magnum Opus",
+                  "pt": "Magnum Opus"
+                },
+                "power": 40000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 28,
+              "item_info": {
+                "name": {
+                  "en": "Plasma Ray",
+                  "cn": "Plasma Ray",
+                  "es": "Plasma Ray",
+                  "pt": "Plasma Ray"
+                },
+                "power": 50000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 29,
+              "item_info": {
+                "name": {
+                  "en": "Edge Case",
+                  "cn": "Edge Case",
+                  "es": "Edge Case",
+                  "pt": "Edge Case"
+                },
+                "power": 65000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 30,
+              "item_info": {
+                "name": {
+                  "en": "Resident Ham",
+                  "cn": "Resident Ham",
+                  "es": "Resident Ham",
+                  "pt": "Resident Ham"
+                },
+                "power": 94000000
               },
               "base_color_hex": "ffdc00"
             },
             {
               "type": "miner",
               "amount": 1,
-              "sort": 22,
+              "sort": 31,
               "item_info": {
                 "name": {
-                  "en": "Blockbreaker Rosie",
-                  "cn": "Blockbreaker Rosie",
-                  "es": "Blockbreaker Rosie",
-                  "pt": "Blockbreaker Rosie"
+                  "en": "Satoshi Oni",
+                  "cn": "Satoshi Oni",
+                  "es": "Satoshi Oni",
+                  "pt": "Satoshi Oni"
                 },
-                "power": 80000000
+                "power": 100000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 32,
+              "item_info": {
+                "name": {
+                  "en": "Walk Alone",
+                  "cn": "Walk Alone",
+                  "es": "Walk Alone",
+                  "pt": "Walk Alone"
+                },
+                "power": 185000000
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 33,
+              "item_info": {
+                "name": {
+                  "en": "Zeus",
+                  "cn": "Zeus",
+                  "es": "Zeus",
+                  "pt": "Zeus"
+                },
+                "power": 270000000
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 34,
+              "item_info": {
+                "name": {
+                  "en": "Plasma Ray",
+                  "cn": "Plasma Ray",
+                  "es": "Plasma Ray",
+                  "pt": "Plasma Ray"
+                },
+                "power": 500000000
               },
               "base_color_hex": "ffdc00"
             }
           ],
           "media": {
-            "box_url": "static/img/mystery_boxes/69d8038b135acbe76adead60/box_img_8dc8fa5c-7f28-45d7-ab29-cf3793fa6ea2.png",
-            "cover_url": "static/img/mystery_boxes/69d8038b135acbe76adead60/cover_img_e1842e9c-1652-4452-b4a3-e21c611d86d0.png",
-            "box_image_url": "static/img/mystery_boxes/69d8038b135acbe76adead60/box_img_url_78104c22-647c-471c-ace8-3805643d6c67.png"
+            "box_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/box_img_f200167b-002d-4dda-b705-e26feff87fcb.png",
+            "cover_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/cover_img_b9b43381-1871-431a-930a-245e12acb682.png",
+            "box_image_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/box_img_url_ac427a35-564a-4cfb-9df6-bc76d670902c.png"
           }
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a49",
-        "item_id": "69f8a676a11db8e6a7aa8e24",
+        "id": "6a06fedfb94e4ce33de85bb5",
+        "item_id": "698b108f1a5d82de5b6ef4b0",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 10,
+        "required_level": 25,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1008,232 +2199,20 @@
           "max": 0
         },
         "item": {
-          "_id": "69f8a676a11db8e6a7aa8e24",
-          "power": 3000000,
+          "_id": "698b108f1a5d82de5b6ef4b0",
+          "power": 10000000,
           "width": 2,
           "name": {
-            "en": "Deep Galaxy",
-            "cn": "Deep Galaxy",
-            "es": "Deep Galaxy",
-            "pt": "Deep Galaxy"
+            "en": "Mergedge X",
+            "cn": "Mergedge X",
+            "es": "Mergedge X",
+            "pt": "Mergedge X"
           },
           "description": {
-            "en": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "cn": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "es": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "pt": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "deep_galaxy",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a4b",
-        "item_id": "66337fe212e054c26801ea35",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 11,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "66337fe212e054c26801ea35",
-          "power": 2100000,
-          "width": 2,
-          "name": {
-            "en": "LightBeat",
-            "cn": "LightBeat",
-            "es": "LightBeat",
-            "pt": "LightBeat"
-          },
-          "description": {
-            "en": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "cn": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "es": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "pt": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "lightbeat",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 556,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a4d",
-        "item_id": "681357bbdc2ac5e3bdb9e34d",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 12,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "681357bbdc2ac5e3bdb9e34d",
-          "power": 9000000,
-          "width": 2,
-          "name": {
-            "en": "HAM-HAM",
-            "cn": "HAM-HAM",
-            "es": "HAM-HAM",
-            "pt": "HAM-HAM"
-          },
-          "description": {
-            "en": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "cn": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "es": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "pt": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "ham_ham",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 850,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a4f",
-        "item_id": "69f8a676a11db8e6a7aa8e24",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 13,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "69f8a676a11db8e6a7aa8e24",
-          "power": 3000000,
-          "width": 2,
-          "name": {
-            "en": "Deep Galaxy",
-            "cn": "Deep Galaxy",
-            "es": "Deep Galaxy",
-            "pt": "Deep Galaxy"
-          },
-          "description": {
-            "en": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "cn": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "es": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "pt": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "deep_galaxy",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a51",
-        "item_id": "66337fe212e054c26801ea38",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 14,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "66337fe212e054c26801ea38",
-          "power": 5512500,
-          "width": 2,
-          "name": {
-            "en": "LightBeat",
-            "cn": "LightBeat",
-            "es": "LightBeat",
-            "pt": "LightBeat"
-          },
-          "description": {
-            "en": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "cn": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "es": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "pt": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!"
+            "en": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "cn": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "es": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "pt": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance."
           },
           "created_by_title": {
             "link": "",
@@ -1241,24 +2220,23 @@
           },
           "level": 1,
           "type": "merge",
-          "filename": "lightbeat",
+          "filename": "mergedge_x",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 832,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
           "is_in_set": false
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a53",
-        "item_id": "69f8a676a11db8e6a7aa8e28",
+        "id": "6a070002b94e4ce33de85bb7",
+        "item_id": "697214f26cca9b4fec386a77",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 15,
+        "required_level": 26,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1273,45 +2251,79 @@
           "max": 0
         },
         "item": {
-          "_id": "69f8a676a11db8e6a7aa8e28",
-          "power": 9000000,
+          "_id": "697214f26cca9b4fec386a77",
+          "power": 17250000,
           "width": 2,
           "name": {
-            "en": "Deep Galaxy",
-            "cn": "Deep Galaxy",
-            "es": "Deep Galaxy",
-            "pt": "Deep Galaxy"
+            "en": "Signal Bean",
+            "cn": "Signal Bean",
+            "es": "Signal Bean",
+            "pt": "Signal Bean"
           },
           "description": {
-            "en": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "cn": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "es": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "pt": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto."
+            "en": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "cn": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "es": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "pt": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
+          "level": 2,
           "type": "merge",
-          "filename": "deep_galaxy",
+          "filename": "signal_bean",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
+          "is_can_be_sold_on_mp": false,
           "bonus": 600,
           "is_in_set": false
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a55",
-        "item_id": "69f8a676a11db8e6a7aa8e2f",
+        "id": "6a070002b94e4ce33de85bb9",
+        "item_id": "68dbc757c05c26894e019db1",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 16,
+        "required_level": 27,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Server Rack 6",
+            "cn": "Server Rack 6"
+          },
+          "description": {
+            "en": "Six lines, six chances to bend the code. Plug in and let the system hum around you.",
+            "cn": "Six lines, six chances to bend the code. Plug in and let the system hum around you."
+          },
+          "_id": "68dbc757c05c26894e019db1",
+          "capacity": 6,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bbb",
+        "item_id": "697214f26cca9b4fec386a7d",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 28,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1326,45 +2338,172 @@
           "max": 0
         },
         "item": {
-          "_id": "69f8a676a11db8e6a7aa8e2f",
-          "power": 27000000,
+          "_id": "697214f26cca9b4fec386a7d",
+          "power": 45300000,
           "width": 2,
           "name": {
-            "en": "Deep Galaxy",
-            "cn": "Deep Galaxy",
-            "es": "Deep Galaxy",
-            "pt": "Deep Galaxy"
+            "en": "Signal Bean",
+            "cn": "Signal Bean",
+            "es": "Signal Bean",
+            "pt": "Signal Bean"
           },
           "description": {
-            "en": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "cn": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "es": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "pt": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto."
+            "en": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "cn": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "es": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment.",
+            "pt": "Keeps circling. Keeps producing. Never stops watching your setup work. No comments, just judgment."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
+          "level": 3,
           "type": "merge",
-          "filename": "deep_galaxy",
+          "filename": "signal_bean",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
+          "is_can_be_sold_on_mp": false,
           "bonus": 1200,
           "is_in_set": false
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a57",
-        "item_id": "681357bbdc2ac5e3bdb9e34d",
+        "id": "6a070002b94e4ce33de85bbd",
+        "item_id": "69b1509c5fd2124c0bf7c297",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 17,
+        "required_level": 29,
+        "type": "mystery_box",
+        "title": {
+          "en": "Loot Box",
+          "cn": "Loot Box"
+        },
+        "description": {
+          "en": "Mystery Box Reward Description",
+          "cn": "Mystery Box Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69b1509c5fd2124c0bf7c297",
+          "title": {
+            "en": "Lucky 1000 RLT Case",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "items": [
+            {
+              "type": "RLT",
+              "amount": 1000000000,
+              "sort": 0,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "RLT",
+              "amount": 500000000,
+              "sort": 1,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "RLT",
+              "amount": 150000000,
+              "sort": 2,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "RLT",
+              "amount": 50000000,
+              "sort": 3,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "RLT",
+              "amount": 21000000,
+              "sort": 4,
+              "item_info": null,
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "RLT",
+              "amount": 18000000,
+              "sort": 5,
+              "item_info": null,
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "RLT",
+              "amount": 15000000,
+              "sort": 6,
+              "item_info": null,
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "RLT",
+              "amount": 11000000,
+              "sort": 7,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "RLT",
+              "amount": 10000000,
+              "sort": 8,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "RLT",
+              "amount": 9000000,
+              "sort": 9,
+              "item_info": null,
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "RLT",
+              "amount": 7000000,
+              "sort": 10,
+              "item_info": null,
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "RLT",
+              "amount": 6000000,
+              "sort": 11,
+              "item_info": null,
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "RLT",
+              "amount": 5000000,
+              "sort": 12,
+              "item_info": null,
+              "base_color_hex": "dddddd"
+            }
+          ],
+          "media": {
+            "box_url": "static/img/mystery_boxes/69b1509c5fd2124c0bf7c297/cover_img_8f73f4db-eb28-41f5-8f36-a694a14f6c10.png",
+            "cover_url": "static/img/mystery_boxes/69b1509c5fd2124c0bf7c297/cover_img_8f73f4db-eb28-41f5-8f36-a694a14f6c10.png",
+            "box_image_url": "static/img/mystery_boxes/69b1509c5fd2124c0bf7c297/box_img_url_71f33c9b-9a43-4695-823c-0d84867a36ff.png"
+          }
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bbf",
+        "item_id": "6a06e714beecc82fcd8b011f",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 30,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1379,20 +2518,20 @@
           "max": 0
         },
         "item": {
-          "_id": "681357bbdc2ac5e3bdb9e34d",
-          "power": 9000000,
+          "_id": "6a06e714beecc82fcd8b011f",
+          "power": 20000000,
           "width": 2,
           "name": {
-            "en": "HAM-HAM",
-            "cn": "HAM-HAM",
-            "es": "HAM-HAM",
-            "pt": "HAM-HAM"
+            "en": "Screambean",
+            "cn": "Screambean",
+            "es": "Screambean",
+            "pt": "Screambean"
           },
           "description": {
-            "en": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "cn": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "es": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "pt": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless."
+            "en": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "cn": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "es": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "pt": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise."
           },
           "created_by_title": {
             "link": "",
@@ -1400,24 +2539,59 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "ham_ham",
+          "filename": "screambean",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 850,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
           "is_in_set": false
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a59",
-        "item_id": "66337fe212e054c26801ea40",
+        "id": "6a070002b94e4ce33de85bc1",
+        "item_id": "6938408e4dba654aa4065fda",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 18,
+        "required_level": 31,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Library Rack 8",
+            "cn": "Library Rack 8"
+          },
+          "description": {
+            "en": "Eight shelves, eight chances to bend the code. Plug in and let the system hum around you.",
+            "cn": "Eight shelves, eight chances to bend the code. Plug in and let the system hum around you."
+          },
+          "_id": "6938408e4dba654aa4065fda",
+          "capacity": 8,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bc3",
+        "item_id": "698b14661a5d82de5b6f0f8a",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 32,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1432,20 +2606,112 @@
           "max": 0
         },
         "item": {
-          "_id": "66337fe212e054c26801ea40",
-          "power": 14470365,
+          "_id": "698b14661a5d82de5b6f0f8a",
+          "power": 40000000,
           "width": 2,
           "name": {
-            "en": "LightBeat",
-            "cn": "LightBeat",
-            "es": "LightBeat",
-            "pt": "LightBeat"
+            "en": "Magnum Opus",
+            "cn": "Magnum Opus",
+            "es": "Magnum Opus",
+            "pt": "Magnum Opus"
           },
           "description": {
-            "en": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "cn": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "es": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "pt": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!"
+            "en": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "cn": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "es": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "pt": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "magnum_opus",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1800,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bc5",
+        "item_id": "6319f7baa8ce530569ed16b9",
+        "amount": 2000,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 33,
+        "type": "mutation_component",
+        "title": {
+          "en": "Component Title",
+          "cn": "Component Title"
+        },
+        "description": {
+          "en": "Component Reward Description",
+          "cn": "Component Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6319f7baa8ce530569ed16b9",
+          "name": {
+            "en": "Uncommon Fan",
+            "cn": "Uncommon Fan"
+          },
+          "mutation_components_rarity_groups_id": "6319f60da8ce530569e56207",
+          "rarity_group": {
+            "_id": "6319f60da8ce530569e56207",
+            "title": {
+              "en": "Uncommon",
+              "cn": "Uncommon"
+            },
+            "base_color_hex": "2bd600",
+            "sort": 1
+          },
+          "rarity_color_hex": "2bd600"
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bc7",
+        "item_id": "69aed5b3446a62b77c17921f",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 34,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69aed5b3446a62b77c17921f",
+          "power": 15000000,
+          "width": 2,
+          "name": {
+            "en": "Furnacer",
+            "cn": "Furnacer",
+            "es": "Furnacer",
+            "pt": "Furnacer"
+          },
+          "description": {
+            "en": "More bots, more crafts, more power...",
+            "cn": "More bots, more crafts, more power...",
+            "es": "More bots, more crafts, more power...",
+            "pt": "More bots, more crafts, more power..."
           },
           "created_by_title": {
             "link": "",
@@ -1453,24 +2719,116 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "lightbeat",
+          "filename": "furnacer",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bc9",
+        "item_id": "69d801f5135acbe76adea2eb",
+        "amount": 2,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 35,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "media": {
+            "preview_url": "static/img/market/utility_items/ancient_key.png"
+          },
+          "_id": "69d801f5135acbe76adea2eb",
+          "description": {
+            "en": "With this key you can open all locked *Old*, *Basic* and *Ancient lootboxes",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "name": {
+            "en": "Ancient key",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "type": "mystery_boxes_keys"
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bcb",
+        "item_id": "6a06e714beecc82fcd8b0123",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 36,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a06e714beecc82fcd8b0123",
+          "power": 100000000,
+          "width": 2,
+          "name": {
+            "en": "Screambean",
+            "cn": "Screambean",
+            "es": "Screambean",
+            "pt": "Screambean"
+          },
+          "description": {
+            "en": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "cn": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "es": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "pt": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "screambean",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1086,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1500,
           "is_in_set": false
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a5b",
+        "id": "6a070002b94e4ce33de85bcd",
         "item_id": "69d80b8b135acbe76adec90a",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 19,
+        "required_level": 37,
         "type": "mystery_box",
         "title": {
           "en": "Loot Box",
@@ -2042,12 +3400,12 @@
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a5d",
-        "item_id": "681357bbdc2ac5e3bdb9e350",
+        "id": "6a070002b94e4ce33de85bcf",
+        "item_id": "698b108f1a5d82de5b6ef4b6",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 20,
+        "required_level": 38,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -2062,740 +3420,20 @@
           "max": 0
         },
         "item": {
-          "_id": "681357bbdc2ac5e3bdb9e350",
-          "power": 23630000,
+          "_id": "698b108f1a5d82de5b6ef4b6",
+          "power": 36000000,
           "width": 2,
           "name": {
-            "en": "HAM-HAM",
-            "cn": "HAM-HAM",
-            "es": "HAM-HAM",
-            "pt": "HAM-HAM"
+            "en": "Mergedge X",
+            "cn": "Mergedge X",
+            "es": "Mergedge X",
+            "pt": "Mergedge X"
           },
           "description": {
-            "en": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "cn": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "es": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "pt": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "ham_ham",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1100,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a5f",
-        "item_id": "69d80624135acbe76adebaa9",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 21,
-        "type": "mystery_box",
-        "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
-        },
-        "description": {
-          "en": "Mystery Box Reward Description",
-          "cn": "Mystery Box Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "69d80624135acbe76adebaa9",
-          "title": {
-            "en": "Ancient Miners Case",
-            "cn": "",
-            "es": "",
-            "pt": ""
-          },
-          "items": [
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Plague Doctor",
-                  "cn": "Plague Doctor",
-                  "es": "Plague Doctor",
-                  "pt": "Plague Doctor"
-                },
-                "power": 500000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 1,
-              "item_info": {
-                "name": {
-                  "en": "FireStar",
-                  "cn": "FireStar",
-                  "es": "FireStar",
-                  "pt": "FireStar"
-                },
-                "power": 1500000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 2,
-              "item_info": {
-                "name": {
-                  "en": "Mergedge X",
-                  "cn": "Mergedge X",
-                  "es": "Mergedge X",
-                  "pt": "Mergedge X"
-                },
-                "power": 1500000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 3,
-              "item_info": {
-                "name": {
-                  "en": "Furnacer",
-                  "cn": "Furnacer",
-                  "es": "Furnacer",
-                  "pt": "Furnacer"
-                },
-                "power": 2000000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 4,
-              "item_info": {
-                "name": {
-                  "en": "Plague Doctor",
-                  "cn": "Plague Doctor",
-                  "es": "Plague Doctor",
-                  "pt": "Plague Doctor"
-                },
-                "power": 3500000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 5,
-              "item_info": {
-                "name": {
-                  "en": "Hephaestus Hall",
-                  "cn": "Hephaestus Hall",
-                  "es": "Hephaestus Hall",
-                  "pt": "Hephaestus Hall"
-                },
-                "power": 5000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 6,
-              "item_info": {
-                "name": {
-                  "en": "FireStar",
-                  "cn": "FireStar",
-                  "es": "FireStar",
-                  "pt": "FireStar"
-                },
-                "power": 5000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 7,
-              "item_info": {
-                "name": {
-                  "en": "RollerPrisoner",
-                  "cn": "RollerPrisoner",
-                  "es": "RollerPrisoner",
-                  "pt": "RollerPrisoner"
-                },
-                "power": 6000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 8,
-              "item_info": {
-                "name": {
-                  "en": "Vintage",
-                  "cn": "Vintage",
-                  "es": "Vintage",
-                  "pt": "Vintage"
-                },
-                "power": 6000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 9,
-              "item_info": {
-                "name": {
-                  "en": "Satoshi Oni",
-                  "cn": "Satoshi Oni",
-                  "es": "Satoshi Oni",
-                  "pt": "Satoshi Oni"
-                },
-                "power": 6500000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 10,
-              "item_info": {
-                "name": {
-                  "en": "Abstract Coil",
-                  "cn": "Abstract Coil",
-                  "es": "Abstract Coil",
-                  "pt": "Abstract Coil"
-                },
-                "power": 8000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 11,
-              "item_info": {
-                "name": {
-                  "en": "Final Drive",
-                  "cn": "Final Drive",
-                  "es": "Final Drive",
-                  "pt": "Final Drive"
-                },
-                "power": 10750000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 12,
-              "item_info": {
-                "name": {
-                  "en": "Mergedge X",
-                  "cn": "Mergedge X",
-                  "es": "Mergedge X",
-                  "pt": "Mergedge X"
-                },
-                "power": 10000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 13,
-              "item_info": {
-                "name": {
-                  "en": "Shinogi",
-                  "cn": "Shinogi",
-                  "es": "Shinogi",
-                  "pt": "Shinogi"
-                },
-                "power": 10000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 14,
-              "item_info": {
-                "name": {
-                  "en": "Arigato",
-                  "cn": "Arigato",
-                  "es": "Arigato",
-                  "pt": "Arigato"
-                },
-                "power": 10000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 15,
-              "item_info": {
-                "name": {
-                  "en": "Resident Ham",
-                  "cn": "Resident Ham",
-                  "es": "Resident Ham",
-                  "pt": "Resident Ham"
-                },
-                "power": 10000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 16,
-              "item_info": {
-                "name": {
-                  "en": "Hoarder's Wealth",
-                  "cn": "Hoarder's Wealth",
-                  "es": "Hoarder's Wealth",
-                  "pt": "Hoarder's Wealth"
-                },
-                "power": 12000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 17,
-              "item_info": {
-                "name": {
-                  "en": "Jump&Run",
-                  "cn": "Jump&Run",
-                  "es": "Jump&Run",
-                  "pt": "Jump&Run"
-                },
-                "power": 12000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 18,
-              "item_info": {
-                "name": {
-                  "en": "Ray of love",
-                  "cn": "Ray of love",
-                  "es": "Ray of love",
-                  "pt": "Ray of love"
-                },
-                "power": 14000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 19,
-              "item_info": {
-                "name": {
-                  "en": "FireStar",
-                  "cn": "FireStar",
-                  "es": "FireStar",
-                  "pt": "FireStar"
-                },
-                "power": 15000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 20,
-              "item_info": {
-                "name": {
-                  "en": "Colorfull",
-                  "cn": "Colorfull",
-                  "es": "Colorfull",
-                  "pt": "Colorfull"
-                },
-                "power": 18000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 21,
-              "item_info": {
-                "name": {
-                  "en": "X-Craft",
-                  "cn": "X-Craft",
-                  "es": "X-Craft",
-                  "pt": "X-Craft"
-                },
-                "power": 18000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 22,
-              "item_info": {
-                "name": {
-                  "en": "Walk Alone",
-                  "cn": "Walk Alone",
-                  "es": "Walk Alone",
-                  "pt": "Walk Alone"
-                },
-                "power": 20000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 23,
-              "item_info": {
-                "name": {
-                  "en": "Zeus",
-                  "cn": "Zeus",
-                  "es": "Zeus",
-                  "pt": "Zeus"
-                },
-                "power": 23000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 24,
-              "item_info": {
-                "name": {
-                  "en": "Pagliacci",
-                  "cn": "Pagliacci",
-                  "es": "Pagliacci",
-                  "pt": "Pagliacci"
-                },
-                "power": 25000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 25,
-              "item_info": {
-                "name": {
-                  "en": "Abstract Coil",
-                  "cn": "Abstract Coil",
-                  "es": "Abstract Coil",
-                  "pt": "Abstract Coil"
-                },
-                "power": 25000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 26,
-              "item_info": {
-                "name": {
-                  "en": "Mergedge X",
-                  "cn": "Mergedge X",
-                  "es": "Mergedge X",
-                  "pt": "Mergedge X"
-                },
-                "power": 36000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 27,
-              "item_info": {
-                "name": {
-                  "en": "Magnum Opus",
-                  "cn": "Magnum Opus",
-                  "es": "Magnum Opus",
-                  "pt": "Magnum Opus"
-                },
-                "power": 40000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 28,
-              "item_info": {
-                "name": {
-                  "en": "Plasma Ray",
-                  "cn": "Plasma Ray",
-                  "es": "Plasma Ray",
-                  "pt": "Plasma Ray"
-                },
-                "power": 50000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 29,
-              "item_info": {
-                "name": {
-                  "en": "Edge Case",
-                  "cn": "Edge Case",
-                  "es": "Edge Case",
-                  "pt": "Edge Case"
-                },
-                "power": 65000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 30,
-              "item_info": {
-                "name": {
-                  "en": "Resident Ham",
-                  "cn": "Resident Ham",
-                  "es": "Resident Ham",
-                  "pt": "Resident Ham"
-                },
-                "power": 94000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 31,
-              "item_info": {
-                "name": {
-                  "en": "Satoshi Oni",
-                  "cn": "Satoshi Oni",
-                  "es": "Satoshi Oni",
-                  "pt": "Satoshi Oni"
-                },
-                "power": 100000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 32,
-              "item_info": {
-                "name": {
-                  "en": "Walk Alone",
-                  "cn": "Walk Alone",
-                  "es": "Walk Alone",
-                  "pt": "Walk Alone"
-                },
-                "power": 185000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 33,
-              "item_info": {
-                "name": {
-                  "en": "Zeus",
-                  "cn": "Zeus",
-                  "es": "Zeus",
-                  "pt": "Zeus"
-                },
-                "power": 270000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 34,
-              "item_info": {
-                "name": {
-                  "en": "Plasma Ray",
-                  "cn": "Plasma Ray",
-                  "es": "Plasma Ray",
-                  "pt": "Plasma Ray"
-                },
-                "power": 500000000
-              },
-              "base_color_hex": "ffdc00"
-            }
-          ],
-          "media": {
-            "box_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/box_img_f200167b-002d-4dda-b705-e26feff87fcb.png",
-            "cover_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/cover_img_b9b43381-1871-431a-930a-245e12acb682.png",
-            "box_image_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/box_img_url_ac427a35-564a-4cfb-9df6-bc76d670902c.png"
-          }
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a61",
-        "item_id": "69f8a676a11db8e6a7aa8e36",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 22,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "69f8a676a11db8e6a7aa8e36",
-          "power": 81000000,
-          "width": 2,
-          "name": {
-            "en": "Deep Galaxy",
-            "cn": "Deep Galaxy",
-            "es": "Deep Galaxy",
-            "pt": "Deep Galaxy"
-          },
-          "description": {
-            "en": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "cn": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "es": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "pt": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "deep_galaxy",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 2400,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a63",
-        "item_id": "66337fe212e054c26801ea48",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 23,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "66337fe212e054c26801ea48",
-          "power": 37984800,
-          "width": 2,
-          "name": {
-            "en": "LightBeat",
-            "cn": "LightBeat",
-            "es": "LightBeat",
-            "pt": "LightBeat"
-          },
-          "description": {
-            "en": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "cn": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "es": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!",
-            "pt": "Meet the LightBeat miner, the only device in the galaxy that mines cryptocurrency at lightspeed, slicing through blockchain algorithms like a lightsaber through a room full of stormtroopers. It’s so powerful, even the Dark Side is considering a switch to crypto!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "lightbeat",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1455,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "69f8afa2b94e4ce33de85a65",
-        "item_id": "681357bbdc2ac5e3bdb9e356",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 24,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "681357bbdc2ac5e3bdb9e356",
-          "power": 62030000,
-          "width": 2,
-          "name": {
-            "en": "HAM-HAM",
-            "cn": "HAM-HAM",
-            "es": "HAM-HAM",
-            "pt": "HAM-HAM"
-          },
-          "description": {
-            "en": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "cn": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "es": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless.",
-            "pt": "Towering across the crypto battlefield, this beast stomps through blocks with mechanical precision and unstoppable rhythm. Built like an AT-AT but driven by hunger for profit, it’s a walking force of ham-fueled domination—slow, steady, and absolutely relentless."
+            "en": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "cn": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "es": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "pt": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance."
           },
           "created_by_title": {
             "link": "",
@@ -2803,23 +3441,23 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "ham_ham",
+          "filename": "mergedge_x",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1500,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2000,
           "is_in_set": false
         }
       },
       {
-        "id": "69f8afa2b94e4ce33de85a67",
-        "item_id": "69f8a676a11db8e6a7aa8e3d",
+        "id": "6a070002b94e4ce33de85bd1",
+        "item_id": "698b14661a5d82de5b6f0f8a",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 25,
+        "required_level": 39,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -2834,20 +3472,219 @@
           "max": 0
         },
         "item": {
-          "_id": "69f8a676a11db8e6a7aa8e3d",
-          "power": 243000000,
+          "_id": "698b14661a5d82de5b6f0f8a",
+          "power": 40000000,
           "width": 2,
           "name": {
-            "en": "Deep Galaxy",
-            "cn": "Deep Galaxy",
-            "es": "Deep Galaxy",
-            "pt": "Deep Galaxy"
+            "en": "Magnum Opus",
+            "cn": "Magnum Opus",
+            "es": "Magnum Opus",
+            "pt": "Magnum Opus"
           },
           "description": {
-            "en": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "cn": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "es": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto.",
-            "pt": "Hidden beneath cosmic depths, this miner echoes an ancient, fluid civilization. Glowing with otherworldly calm, it turns the silent pressure of the universe into flowing streams of crypto."
+            "en": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "cn": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "es": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "pt": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "magnum_opus",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1800,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bd3",
+        "item_id": "6a06e714beecc82fcd8b012a",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 40,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a06e714beecc82fcd8b012a",
+          "power": 250000000,
+          "width": 2,
+          "name": {
+            "en": "Screambean",
+            "cn": "Screambean",
+            "es": "Screambean",
+            "pt": "Screambean"
+          },
+          "description": {
+            "en": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "cn": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "es": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "pt": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "screambean",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 3000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bd5",
+        "item_id": "69d8021a135acbe76adea346",
+        "amount": 2,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 41,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "media": {
+            "preview_url": "static/img/market/utility_items/forbidden_key.png"
+          },
+          "_id": "69d8021a135acbe76adea346",
+          "description": {
+            "en": "With this key you can open all locked *Old*, *Basic*, *Ancient* and *Forbidden* lootboxes",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "name": {
+            "en": "Forbidden key",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "type": "mystery_boxes_keys"
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bd7",
+        "item_id": "698b0f611a5d82de5b6ef3d9",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 42,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b0f611a5d82de5b6ef3d9",
+          "power": 50000000,
+          "width": 2,
+          "name": {
+            "en": "Vintage",
+            "cn": "Vintage",
+            "es": "Vintage",
+            "pt": "Vintage"
+          },
+          "description": {
+            "en": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "cn": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "es": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "pt": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "vintage",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bd9",
+        "item_id": "698b0f611a5d82de5b6ef3df",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 43,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b0f611a5d82de5b6ef3df",
+          "power": 250000000,
+          "width": 2,
+          "name": {
+            "en": "Vintage",
+            "cn": "Vintage",
+            "es": "Vintage",
+            "pt": "Vintage"
+          },
+          "description": {
+            "en": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "cn": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "es": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight.",
+            "pt": "Rare exhibit from another era, polished by time. Quiet, elegant, and still carrying serious crypto weight."
           },
           "created_by_title": {
             "link": "",
@@ -2855,14 +3692,370 @@
           },
           "level": 4,
           "type": "merge",
-          "filename": "deep_galaxy",
+          "filename": "vintage",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 4800,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 4000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bdb",
+        "item_id": "6a06e714beecc82fcd8b0131",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 44,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a06e714beecc82fcd8b0131",
+          "power": 500000000,
+          "width": 2,
+          "name": {
+            "en": "Screambean",
+            "cn": "Screambean",
+            "es": "Screambean",
+            "pt": "Screambean"
+          },
+          "description": {
+            "en": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "cn": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "es": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "pt": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "screambean",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 6000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bdd",
+        "item_id": "698b14661a5d82de5b6f0f8d",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 45,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b14661a5d82de5b6f0f8d",
+          "power": 140000000,
+          "width": 2,
+          "name": {
+            "en": "Magnum Opus",
+            "cn": "Magnum Opus",
+            "es": "Magnum Opus",
+            "pt": "Magnum Opus"
+          },
+          "description": {
+            "en": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "cn": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "es": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "pt": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "magnum_opus",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2800,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85bdf",
+        "item_id": "698b108f1a5d82de5b6ef4bc",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 46,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b108f1a5d82de5b6ef4bc",
+          "power": 250000000,
+          "width": 2,
+          "name": {
+            "en": "Mergedge X",
+            "cn": "Mergedge X",
+            "es": "Mergedge X",
+            "pt": "Mergedge X"
+          },
+          "description": {
+            "en": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "cn": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "es": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance.",
+            "pt": "Refined evolution of raw power — sharper, faster, cleaner. This upgrade slices through the chain with perfected balance."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "mergedge_x",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 3500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85be1",
+        "item_id": "61b35e3767433d2dc57f86a2",
+        "amount": 200,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 47,
+        "type": "mutation_component",
+        "title": {
+          "en": "Component Title",
+          "cn": "Component Title"
+        },
+        "description": {
+          "en": "Component Reward Description",
+          "cn": "Component Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "61b35e3767433d2dc57f86a2",
+          "name": {
+            "en": "Rare Hashboard",
+            "cn": "Rare Hashboard"
+          },
+          "mutation_components_rarity_groups_id": "6196275b67433d2dc533840e",
+          "rarity_group": {
+            "_id": "6196275b67433d2dc533840e",
+            "title": {
+              "en": "Rare",
+              "cn": "Rare"
+            },
+            "base_color_hex": "03e1e4",
+            "sort": 2
+          },
+          "rarity_color_hex": "03e1e4"
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85be3",
+        "item_id": "698b14661a5d82de5b6f0f93",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 48,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b14661a5d82de5b6f0f93",
+          "power": 460000000,
+          "width": 2,
+          "name": {
+            "en": "Magnum Opus",
+            "cn": "Magnum Opus",
+            "es": "Magnum Opus",
+            "pt": "Magnum Opus"
+          },
+          "description": {
+            "en": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "cn": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "es": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "pt": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "magnum_opus",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 4000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85be5",
+        "item_id": "698b14661a5d82de5b6f0f99",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 49,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "698b14661a5d82de5b6f0f99",
+          "power": 1329000000,
+          "width": 2,
+          "name": {
+            "en": "Magnum Opus",
+            "cn": "Magnum Opus",
+            "es": "Magnum Opus",
+            "pt": "Magnum Opus"
+          },
+          "description": {
+            "en": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "cn": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "es": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design.",
+            "pt": "The final form of engineering ambition. Perfectly balanced, flawlessly executed — a true miracle of crypto design."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "magnum_opus",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 6000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a070002b94e4ce33de85be7",
+        "item_id": "6a06e714beecc82fcd8b0138",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 50,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a06e714beecc82fcd8b0138",
+          "power": 1500000000,
+          "width": 2,
+          "name": {
+            "en": "Screambean",
+            "cn": "Screambean",
+            "es": "Screambean",
+            "pt": "Screambean"
+          },
+          "description": {
+            "en": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "cn": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "es": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise.",
+            "pt": "Tiny pill, massive nightmare. Born from prank-night chaos, this cursed little bean unleashes pure panic energy — turning every crypto moment into a scream-worthy surprise."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "screambean",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 8000,
           "is_in_set": false
         }
       }
@@ -2870,128 +4063,253 @@
     "levels_config": [
       {
         "level": 1,
-        "level_xp": 2000,
-        "required_xp": 2000
+        "level_xp": 4000,
+        "required_xp": 4000
       },
       {
         "level": 2,
-        "level_xp": 10000,
-        "required_xp": 12000
+        "level_xp": 14000,
+        "required_xp": 18000
       },
       {
         "level": 3,
-        "level_xp": 25000,
-        "required_xp": 37000
+        "level_xp": 20000,
+        "required_xp": 38000
       },
       {
         "level": 4,
-        "level_xp": 100000,
-        "required_xp": 137000
+        "level_xp": 58000,
+        "required_xp": 96000
       },
       {
         "level": 5,
-        "level_xp": 10000,
-        "required_xp": 147000
+        "level_xp": 22000,
+        "required_xp": 118000
       },
       {
         "level": 6,
-        "level_xp": 50000,
-        "required_xp": 197000
+        "level_xp": 40000,
+        "required_xp": 158000
       },
       {
         "level": 7,
-        "level_xp": 250000,
-        "required_xp": 447000
+        "level_xp": 48000,
+        "required_xp": 206000
       },
       {
         "level": 8,
-        "level_xp": 750000,
-        "required_xp": 1197000
+        "level_xp": 124000,
+        "required_xp": 330000
       },
       {
         "level": 9,
-        "level_xp": 250000,
-        "required_xp": 1447000
+        "level_xp": 36000,
+        "required_xp": 366000
       },
       {
         "level": 10,
-        "level_xp": 500000,
-        "required_xp": 1947000
+        "level_xp": 68000,
+        "required_xp": 434000
       },
       {
         "level": 11,
-        "level_xp": 680000,
-        "required_xp": 2627000
+        "level_xp": 74000,
+        "required_xp": 508000
       },
       {
         "level": 12,
-        "level_xp": 1250000,
-        "required_xp": 3877000
+        "level_xp": 190000,
+        "required_xp": 698000
       },
       {
         "level": 13,
-        "level_xp": 490000,
-        "required_xp": 4367000
+        "level_xp": 50000,
+        "required_xp": 748000
       },
       {
         "level": 14,
-        "level_xp": 860000,
-        "required_xp": 5227000
+        "level_xp": 94000,
+        "required_xp": 842000
       },
       {
         "level": 15,
-        "level_xp": 930000,
-        "required_xp": 6157000
+        "level_xp": 100000,
+        "required_xp": 942000
       },
       {
         "level": 16,
-        "level_xp": 1690000,
-        "required_xp": 7847000
+        "level_xp": 258000,
+        "required_xp": 1200000
       },
       {
         "level": 17,
-        "level_xp": 630000,
-        "required_xp": 8477000
+        "level_xp": 62000,
+        "required_xp": 1262000
       },
       {
         "level": 18,
-        "level_xp": 1110000,
-        "required_xp": 9587000
+        "level_xp": 120000,
+        "required_xp": 1382000
       },
       {
         "level": 19,
-        "level_xp": 1170000,
-        "required_xp": 10757000
+        "level_xp": 128000,
+        "required_xp": 1510000
       },
       {
         "level": 20,
-        "level_xp": 2120000,
-        "required_xp": 12877000
+        "level_xp": 900000,
+        "required_xp": 2410000
       },
       {
         "level": 21,
-        "level_xp": 770000,
-        "required_xp": 13647000
+        "level_xp": 240000,
+        "required_xp": 2650000
       },
       {
         "level": 22,
-        "level_xp": 3000000,
-        "required_xp": 16647000
+        "level_xp": 1100000,
+        "required_xp": 3750000
       },
       {
         "level": 23,
-        "level_xp": 2800000,
-        "required_xp": 19447000
+        "level_xp": 1160000,
+        "required_xp": 4910000
       },
       {
         "level": 24,
-        "level_xp": 4000000,
-        "required_xp": 23447000
+        "level_xp": 2080000,
+        "required_xp": 6990000
       },
       {
         "level": 25,
+        "level_xp": 740000,
+        "required_xp": 7730000
+      },
+      {
+        "level": 26,
+        "level_xp": 1320000,
+        "required_xp": 9050000
+      },
+      {
+        "level": 27,
+        "level_xp": 900000,
+        "required_xp": 9950000
+      },
+      {
+        "level": 28,
+        "level_xp": 2440000,
+        "required_xp": 12390000
+      },
+      {
+        "level": 29,
+        "level_xp": 860000,
+        "required_xp": 13250000
+      },
+      {
+        "level": 30,
+        "level_xp": 1000000,
+        "required_xp": 14250000
+      },
+      {
+        "level": 31,
+        "level_xp": 1560000,
+        "required_xp": 15810000
+      },
+      {
+        "level": 32,
+        "level_xp": 2800000,
+        "required_xp": 18610000
+      },
+      {
+        "level": 33,
+        "level_xp": 960000,
+        "required_xp": 19570000
+      },
+      {
+        "level": 34,
+        "level_xp": 1720000,
+        "required_xp": 21290000
+      },
+      {
+        "level": 35,
+        "level_xp": 1760000,
+        "required_xp": 23050000
+      },
+      {
+        "level": 36,
+        "level_xp": 3160000,
+        "required_xp": 26210000
+      },
+      {
+        "level": 37,
+        "level_xp": 1080000,
+        "required_xp": 27290000
+      },
+      {
+        "level": 38,
+        "level_xp": 1920000,
+        "required_xp": 29210000
+      },
+      {
+        "level": 39,
+        "level_xp": 1980000,
+        "required_xp": 31190000
+      },
+      {
+        "level": 40,
+        "level_xp": 5400000,
+        "required_xp": 36590000
+      },
+      {
+        "level": 41,
+        "level_xp": 1700000,
+        "required_xp": 38290000
+      },
+      {
+        "level": 42,
+        "level_xp": 2500000,
+        "required_xp": 40790000
+      },
+      {
+        "level": 43,
+        "level_xp": 4600000,
+        "required_xp": 45390000
+      },
+      {
+        "level": 44,
+        "level_xp": 6400000,
+        "required_xp": 51790000
+      },
+      {
+        "level": 45,
+        "level_xp": 3500000,
+        "required_xp": 55290000
+      },
+      {
+        "level": 46,
+        "level_xp": 5000000,
+        "required_xp": 60290000
+      },
+      {
+        "level": 47,
+        "level_xp": 5000000,
+        "required_xp": 65290000
+      },
+      {
+        "level": 48,
+        "level_xp": 7000000,
+        "required_xp": 72290000
+      },
+      {
+        "level": 49,
         "level_xp": 10000000,
-        "required_xp": 33447000
+        "required_xp": 82290000
+      },
+      {
+        "level": 50,
+        "level_xp": 30000000,
+        "required_xp": 112290000
       }
     ]
   }

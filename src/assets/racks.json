@@ -574,5 +574,23 @@
     "is_set": false,
     "set": null,
     "can_be_sold": true
+  },
+  {
+    "id": "69e243291b59349974d8f5a5",
+    "name": "Aquarium Rack 8",
+    "size": 8,
+    "bonus": 23,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "69e243291b59349974d8f5a4",
+    "name": "Aquarium Rack 6",
+    "size": 6,
+    "bonus": 39,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
   }
 ]

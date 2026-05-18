@@ -2,11 +2,14 @@
   "page_title": "Calculadora Rollercoin",
   "promocode_desc": "Introduce el código para reclamarlo en RollerCoin",
   "promocode_redeem": "RECLAMAR",
-  "warning": "Asegurarse de copiar toda la información de la red desde la sección 𝗟𝗲𝗮𝗴𝘂𝗲 𝗣𝗼𝘄𝗲𝗿!!!!",
+  "profitTitle": "Profit",
+  "profitSubtitle": "Calculadora de Ganancias Mineras",
+  "warning": "Copia toda la información de la red desde la sección <a class='source-link' href='https://rollercoin.com/game/league' target='_blank'>League Power</a>.",
   "networkLabel": "Red de tu liga",
   "networkPlaceholder": "Pega aquí los datos de la red...",
-  "powerLabel": "Poder en Ph/s",
-  "powerPlaceholder": "Tu poder (PH/s)",
+  "powerInLabel": "Poder en",
+  "powerPlaceholderEh": "Tu poder (EH/s)",
+  "powerPlaceholderPh": "Tu poder (PH/s)",
   "processBtn": "CALCULAR",
   "thCoin": "MONEDA",
   "thNetPower": "RED",
@@ -16,6 +19,7 @@
   "thPerDay": "POR DÍA",
   "thPerWeek": "POR SEMANA",
   "thPerMonth": "POR MES",
+  "thWithdrawIn": "RETIRO EN",
   "sidebar": {
     "calculadoras": "CALCULADORAS",
     "profit": "PROFIT",
@@ -43,7 +47,8 @@
     "help": "Configura el nivel de tus hamsters tal y como lo tienes en el bot de Telegram 🦆",
     "createAccount": "Puedes crear tu cuenta de Rollertap ",
     "here": "Aquí",
-    "extraIncome": "Ingreso Extra"
+    "extraIncome": "Ingreso Extra",
+    "simulatedTooltip": "Datos estimados a partir de patrones del juego. Pueden variar respecto a los valores reales."
   },
   "pe" : {
     "progression_event": "Evento de Progresión",

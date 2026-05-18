@@ -60,6 +60,7 @@
           <div class="coin">+<img :src="coinImg" alt="coin" class="coin-icon" />{{ handleCoins(row.levels[row.currentLevel].coinsPerHour) }}</div>
           <div class="cost">{{ t?.rollertap?.cost }}: <img :src="coinImg" alt="coin" class="coin-icon" />{{ handleCoins(row.levels[row.currentLevel].price) }}</div>
           <div class="roi">{{ t?.rollertap?.roiInHours }}: {{ handleHours(getRoi(row.levels[row.currentLevel])) }}</div>
+          <div v-if="row.levels[row.currentLevel].simulated" class="simulated-badge" @mouseenter="showSimTooltip($event)" @mouseleave="hideSimTooltip()">SIMULATED</div>
         </div>
       </div>
     </div>
@@ -108,6 +109,10 @@
         </div>
       </div>
     </div>
+    <div v-if="simTooltipVisible" class="sim-tooltip" :style="simTooltipStyle">
+      {{ t?.rollertap?.simulatedTooltip }}
+      <div class="sim-tooltip-arrow"></div>
+    </div>
   </div>
 </template>
 
@@ -139,6 +144,7 @@ import officeHamster from '../assets/rollertap/22.png'
 import fifiHamster from '../assets/rollertap/23.png'
 import knightHamster from '../assets/rollertap/hamster_knight.png'
 import cosmoHamster from '../assets/rollertap/cosmo_hamster.png'
+import plumberHamster from '../assets/rollertap/plumber_hamster.png'
 
 // Importar los datos desde el archivo React original para evitar duplicación
 // Los datos están definidos en el archivo TypeScript y se copian aquí
@@ -170,13 +176,16 @@ export default {
         officeHamster,
         fifiHamster,
         knightHamster,
-        cosmoHamster
+        cosmoHamster,
+        plumberHamster
       }),
       coinImg,
       unclesBlessing: defaultUnclesBlessing,
       defaultUnclesBlessingImage: defaultUnclesBlessing.image,
       defaultUnclesBlessingName: defaultUnclesBlessing.name,
-      defaultUnclesBlessingLevels: defaultUnclesBlessing.levels
+      defaultUnclesBlessingLevels: defaultUnclesBlessing.levels,
+      simTooltipVisible: false,
+      simTooltipStyle: {}
     }
   },
   computed: {
@@ -188,6 +197,17 @@ export default {
     this.loadSavedData()
   },
   methods: {
+    showSimTooltip(e) {
+      const rect = e.target.getBoundingClientRect()
+      this.simTooltipStyle = {
+        top: (rect.top - 8) + 'px',
+        left: (rect.left + rect.width / 2) + 'px'
+      }
+      this.simTooltipVisible = true
+    },
+    hideSimTooltip() {
+      this.simTooltipVisible = false
+    },
     loadSavedData() {
       const savedRows = localStorage.getItem('rollertap_rows')
       if (savedRows) {

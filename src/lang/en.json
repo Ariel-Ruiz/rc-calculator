@@ -2,11 +2,14 @@
   "page_title": "Rollercoin Calculator",
   "promocode_desc": "Enter the code to redeem it on RollerCoin",
   "promocode_redeem": "REDEEM",
-  "warning": "Make sure to copy all the network info from the 𝗟𝗲𝗮𝗴𝘂𝗲 𝗣𝗼𝘄𝗲𝗿 section!!!!",
+  "profitTitle": "Profit",
+  "profitSubtitle": "Mining Rewards Calculator",
+  "warning": "Copy all the network info from the <a class='source-link' href='https://rollercoin.com/game/league' target='_blank'>League Power</a> section.",
   "networkLabel": "Your league network",
   "networkPlaceholder": "Paste the network data here...",
-  "powerLabel": "Power in Ph/s",
-  "powerPlaceholder": "Your power (PH/s)",
+  "powerInLabel": "Power in",
+  "powerPlaceholderEh": "Your power (EH/s)",
+  "powerPlaceholderPh": "Your power (PH/s)",
   "processBtn": "CALCULATE",
   "thCoin": "COIN",
   "thNetPower": "NETWORK",
@@ -16,6 +19,7 @@
   "thPerDay": "PER DAY",
   "thPerWeek": "PER WEEK",
   "thPerMonth": "PER MONTH",
+  "thWithdrawIn": "WITHDRAW IN",
   "sidebar": {
     "calculadoras": "CALCULATORS",
     "profit": "PROFIT",
@@ -43,7 +47,8 @@
     "help": "Set your hamsters level to the same level you have in the Telegram bot 🦆",
     "createAccount": "You can create your Rollertap account ",
     "here": "Here",
-    "extraIncome": "Extra Income"
+    "extraIncome": "Extra Income",
+    "simulatedTooltip": "Data estimated from game patterns. May vary from actual values."
   },
   "pe": {
     "progression_event": "Progression Event",

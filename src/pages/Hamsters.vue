@@ -31,7 +31,7 @@
                   :alt="exp.name"
                   class="exp-header-img"
                 />
-                <span class="exp-header-name">{{ exp.name }}</span>
+                <span class="exp-header-name">{{ exp.name }}<br/><span class="exp-header-duration">{{ exp.duration }}</span></span>
               </div>
             </th>
           </tr>

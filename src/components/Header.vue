@@ -22,7 +22,7 @@
         <router-link
           to="/rollertap"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/rollertap' }"
+          :class="{ active: $route.path === '/rollertap', 'nav-glow': true }"
         >
           {{ t.nav && t.nav.rollertap }}
         </router-link>
@@ -43,7 +43,7 @@
         <router-link
           to="/rooms"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/rooms', 'nav-glow': true }"
+          :class="{ active: $route.path === '/rooms' }"
         >
           {{ t.nav && t.nav.rooms }}
         </router-link>

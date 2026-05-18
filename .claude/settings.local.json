@@ -15,7 +15,9 @@
       "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(f'Total miners: {len\\(data\\)}'\\); filenames = [m.get\\('filename',''\\) for m in data]; print\\(f'With filename: {sum\\(1 for f in filenames if f\\)}'\\); print\\(f'Without filename: {sum\\(1 for f in filenames if not f\\)}'\\)\")",
       "Bash(file \"/c/Users/Personal/Documents/rc-resources/miner/\"*.gif)",
       "Bash(file \"/c/Users/Personal/Documents/rc-resources/rack/\"*.png)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(git checkout:*)",
+      "Bash(python -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(m['name']\\) for m in data]\")"
     ]
   }
 }
