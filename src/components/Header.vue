@@ -22,7 +22,7 @@
         <router-link
           to="/rollertap"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/rollertap', 'nav-glow': true }"
+          :class="{ active: $route.path === '/rollertap', }"
         >
           {{ t.nav && t.nav.rollertap }}
         </router-link>
@@ -57,7 +57,7 @@
         <router-link
           to="/marketplace"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/marketplace', 'nav-glow': true }"
+          :class="{ active: $route.path === '/marketplace', }"
         >
           {{ t.nav && t.nav.marketplace }}
         </router-link>

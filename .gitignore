@@ -13,8 +13,7 @@ dist-ssr
 *.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
+.vscode/
 .idea
 .DS_Store
 *.suo
@@ -23,11 +22,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Claude Code local settings
-.claude/settings.local.json
-
-# If you prefer to keep your CLAUDE.md private (optional)
-# CLAUDE.md
-
-# General Claude temp/cache files
+# Claude Code
 .claude/

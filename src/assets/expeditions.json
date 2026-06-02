@@ -1,27 +1,11 @@
 [
   {
-    "name": "Valhalla Trail",
-    "img": "expeditions/valhalla-trail.png",
-    "duration": "18h",
-    "difficulty": 8,
-    "rewardsValue": 7,
-    "rewardsAmount": 8
-  },
-  {
-    "name": "Deep Forest (Hard)",
-    "img": "expeditions/deep-forest-hard.png",
+    "name": "Lost Shrine",
+    "img": "expeditions/lost-shrine.png",
     "duration": "30h",
     "difficulty": 10,
     "rewardsValue": 10,
     "rewardsAmount": 10
-  },
-  {
-    "name": "Dark Valleys",
-    "img": "expeditions/dark-valleys.png",
-    "duration": "24h",
-    "difficulty": 7,
-    "rewardsValue": 8,
-    "rewardsAmount": 9
   },
   {
     "name": "Tousland",
@@ -32,12 +16,20 @@
     "rewardsAmount": 5
   },
   {
-    "name": "Deep Forest",
-    "img": "expeditions/deep-forest.png",
-    "duration": "3h",
-    "difficulty": 2,
-    "rewardsValue": 2,
-    "rewardsAmount": 4
+    "name": "Valhalla Trail",
+    "img": "expeditions/valhalla-trail.png",
+    "duration": "18h",
+    "difficulty": 8,
+    "rewardsValue": 7,
+    "rewardsAmount": 8
+  },
+  {
+    "name": "Dark Valleys",
+    "img": "expeditions/dark-valleys.png",
+    "duration": "24h",
+    "difficulty": 7,
+    "rewardsValue": 8,
+    "rewardsAmount": 9
   },
   {
     "name": "Snowlit Avenue",
@@ -46,5 +38,13 @@
     "difficulty": 6,
     "rewardsValue": 9,
     "rewardsAmount": 8
+  },
+  {
+    "name": "Deep Forest",
+    "img": "expeditions/deep-forest.png",
+    "duration": "3h",
+    "difficulty": 2,
+    "rewardsValue": 2,
+    "rewardsAmount": 4
   }
 ]

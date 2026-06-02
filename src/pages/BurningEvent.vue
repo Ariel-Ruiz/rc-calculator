@@ -400,16 +400,10 @@ export default {
       let pointsXPh = 1
       let pointsXBonus = 1
 
-      if (poderEnPhs >= 20 && isSellable) {
+      if (poderEnPhs >= 10 && isSellable) {
         pointsXPh = 14400
         pointsXBonus = 60
-      } else if (poderEnPhs >= 20) {
-        pointsXPh = 9600
-        pointsXBonus = 40
-      } else if (poderEnPhs > 10 && isSellable) {
-        pointsXPh = 14400
-        pointsXBonus = 60
-      } else if (poderEnPhs > 10) {
+      } else if (poderEnPhs >= 10) {
         pointsXPh = 9600
         pointsXBonus = 40
       } else if (poderEnPhs >= 5 && isSellable) {
@@ -418,13 +412,7 @@ export default {
       } else if (poderEnPhs >= 5) {
         pointsXPh = 12000
         pointsXBonus = 50
-      } else if (poderEnPhs >= 2 && isSellable) {
-        pointsXPh = 22500
-        pointsXBonus = 94.2
-      } else if (poderEnPhs >= 2) {
-        pointsXPh = 15000
-        pointsXBonus = 62.5
-      } else if (poderEnPhs > 1 && isSellable) {
+      } else if (poderEnPhs >= 1 && isSellable) {
         pointsXPh = 22500
         pointsXBonus = 93.75
       } else if (poderEnPhs >= 1) {
@@ -432,13 +420,10 @@ export default {
         pointsXBonus = 62.5
       } else if (poderEnPhs >= 0.5 && isSellable) {
         pointsXPh = 27900
-        pointsXBonus = 117
-      } else if (poderEnPhs >= 0.5) {
-        pointsXPh = 18600
-        pointsXBonus = 77.5
-      } else if (isSellable){
+        pointsXBonus = 116.25
+      } else if (isSellable) {
         pointsXPh = 46500
-        pointsXBonus = 193.7
+        pointsXBonus = 193.75
       } else {
         pointsXPh = 18600
         pointsXBonus = 77.5
@@ -518,22 +503,15 @@ export default {
             isLegacy = idLine.includes('Rating star')
 
             // Check if it's a valid ID line (hex chars at start)
-            const idMatch = idLine.match(/^[a-f0-9]{24}/i)
+            const cleanId = idLine.replace('set badge', '').replace('Rating star', '').trim()
+            const idMatch = cleanId.match(/^([a-f0-9]{24})([1-5])?$/i)
 
             if (idMatch) {
-              const minerId = idMatch[0]
+              const minerId = idMatch[0].substring(0, 24)
               isSet = isSetBadge
-
-              // Check for rarity number AFTER the 24-char hex ID (not the last char of the ID itself)
-              const cleanId = idLine.replace('set badge', '').replace('Rating star', '').trim()
-              // Only check for rarity if there's content after the 24-char ID
-              if (cleanId.length > 24) {
-                const afterId = cleanId.slice(24)
-                const rarityMatch = afterId.match(/^[1-5]$/)
-                if (rarityMatch) {
-                  const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
-                  rarity = rarityMap[rarityMatch[0]] || ''
-                }
+              if (idMatch[2]) {
+                const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
+                rarity = rarityMap[idMatch[2]] || ''
               }
 
               // Get name
@@ -585,7 +563,7 @@ export default {
                   minerId
                 })
               }
-              i = endIdx
+              i = endIdx - 1
             } else {
               i++
             }
@@ -775,7 +753,6 @@ export default {
           let isLegacy = sellIdMatch[3] && sellIdMatch[3].toLowerCase() === 'rating star'
           let isSet = sellIdMatch[3] && sellIdMatch[3].toLowerCase() === 'set badge'
 
-          // Rarity from ID suffix digit
           if (sellIdMatch[2]) {
             const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
             rarity = rarityMap[sellIdMatch[2]] || ''
@@ -848,7 +825,7 @@ export default {
             })
           }
 
-          i = endIdx
+          i = endIdx - 1
           continue
         }
 

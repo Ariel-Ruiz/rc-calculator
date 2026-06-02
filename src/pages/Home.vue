@@ -27,6 +27,7 @@
         v-model="networkInput"
         class="profit-textarea"
         :placeholder="t.networkPlaceholder || 'Pega aquí los datos de la red...'"
+        @blur="saveNetwork"
       />
       <label class="profit-label">{{ t.powerInLabel || 'Power in' }}</label>
       <div class="toogle-currency-tab profit-unit-tab">
@@ -45,6 +46,7 @@
         class="profit-power-input"
         v-model.number="myPower"
         :placeholder="powerUnit === 'EH' ? (t.powerPlaceholderEh || 'Your power (EH/s)') : (t.powerPlaceholderPh || 'Your power (PH/s)')"
+        @blur="updateNetworkPower"
       />
       <button class="btn-calculate" @click="procesarRed">{{ t.processBtn || 'Procesar' }}</button>
     </div>
@@ -139,6 +141,8 @@ import polIcon from '../assets/symbols/matic.svg'
 import algoIcon from '../assets/symbols/algo.svg'
 import usdtIcon from '../assets/symbols/usdt.svg'
 import exampleImg from '../assets/example.png'
+import { db } from '../firebase'
+import { ref as dbRef, set } from 'firebase/database'
 
 // ---- Minimum withdraw amounts per coin ----
 const withdrawMinimums = {
@@ -194,6 +198,7 @@ export default {
 
     return {
       networkInput: '',
+      lastSavedNetworkHash: null,
       myPower: localStorage.getItem('power') ? Number(localStorage.getItem('power')) : null,
       parsedLines: savedLines ? JSON.parse(savedLines) : defaultLines,
       useUSD: localStorage.getItem('useUSD') === '1',
@@ -246,6 +251,32 @@ export default {
         loadPricesFromStorage()
       }
       this.pricesLoaded = true
+    },
+    async saveNetwork() {
+      const text = this.networkInput.trim()
+      if (!text) return
+      try {
+        let hash = 0
+        for (let i = 0; i < text.length; i++) {
+          hash = ((hash << 5) - hash + text.charCodeAt(i)) | 0
+        }
+        const key = (hash >>> 0).toString(36)
+        if (key === this.lastSavedNetworkHash) return
+        this.lastSavedNetworkHash = key
+        await set(dbRef(db, 'networks/' + key), {
+          network: text,
+          power: this.myPower || null,
+          powerUnit: this.powerUnit,
+          timestamp: Date.now()
+        })
+      } catch (e) { /* silent */ }
+    },
+    async updateNetworkPower() {
+      if (!this.lastSavedNetworkHash || !this.myPower) return
+      try {
+        await set(dbRef(db, 'networks/' + this.lastSavedNetworkHash + '/power'), this.myPower)
+        await set(dbRef(db, 'networks/' + this.lastSavedNetworkHash + '/powerUnit'), this.powerUnit)
+      } catch (e) { /* silent */ }
     },
     procesarRed() {
       if (!this.networkInput) return

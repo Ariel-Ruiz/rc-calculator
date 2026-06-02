@@ -206,7 +206,7 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.088
+      let phXRLT = 0.16
       let feeXBox = 0.15
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
@@ -329,6 +329,8 @@ export default {
         case 'loot_box': filename = `box/${reward.item_id}.png`; break
         case 'mystery_box': filename = `box/${reward.item_id}.png`; break
         case 'battery': filename = `others/${reward.item_id}.png`; break
+        case 'trophy': filename = `others/${reward.item_id}.png`; break
+        case 'hat': filename = `others/${reward.item_id}.png`; break
         case 'mutation_component': filename = `mutation_component/${reward.item_id}.png`; break
         case 'rack': filename = `rack/${reward.item_id}.png`; break
         case 'miner': filename = `miner/${reward.item.filename}.gif`; break
@@ -354,6 +356,8 @@ export default {
         case 'loot_box': return reward.item.title.en
         case 'mystery_box': return reward.item.title.en
         case 'battery': return reward.title.en
+        case 'trophy': return reward.item.name.en
+        case 'hat': return reward.item.title.en
         case 'rack':
         case 'miner': return reward.item.name.en
       }

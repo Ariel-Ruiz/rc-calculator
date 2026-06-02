@@ -192,7 +192,7 @@
                             <template v-for="(minerSlot, mIdx) in getRackMiners(currentRoom, rowIdx, cell.colIdx)">
                               <div
                                 :key="mIdx"
-                                :class="['room-miner-cell', { 'span-2': minerSlot.span === 2, 'has-miner': !!minerSlot.miner, 'manual-miner': manualMode && minerSlot.miner }]"
+                                :class="['room-miner-cell', { 'span-2': minerSlot.span === 2, 'has-miner': !!minerSlot.miner, 'manual-miner': manualMode && minerSlot.miner, 'auto-added': minerSlot.miner && autoAddedUids.has(minerSlot.miner.uid) }]"
                                 @mouseenter="minerSlot.miner && showMinerTooltip(minerSlot.miner, $event)"
                                 @mouseleave="hideMinerTooltip"
                                 @click.stop="manualMode && minerSlot.miner && removeMinerFromRoom(currentRoom, rowIdx, cell.colIdx, minerSlot.miner)"
@@ -303,22 +303,6 @@
         <template v-if="mode === 'auto'">
           <div class="rooms-auto-panel">
             <div class="rooms-auto-info">{{ t.rooms?.auto_description }}</div>
-            <!-- TODO: order by power/bonus - disabled for now
-            <div class="rooms-auto-row">
-              <span class="rooms-auto-label">{{ t.rooms?.order_by }}</span>
-              <div class="rooms-auto-order">
-                <button
-                  :class="['rooms-auto-order-btn', { active: autoOrderBy === 'power' }]"
-                  @click="autoOrderBy = 'power'"
-                >{{ t.rooms?.power }}</button>
-                <button
-                  :class="['rooms-auto-order-btn', { active: autoOrderBy === 'bonus' }]"
-                  @click="autoOrderBy = 'bonus'"
-                >{{ t.rooms?.bonus }}</button>
-              </div>
-            </div>
-            -->
-
             <div class="rooms-auto-row">
               <span class="rooms-auto-label">{{ t.rooms?.max_power }}</span>
               <input
@@ -331,6 +315,30 @@
               />
             </div>
 
+            <div class="rooms-auto-row">
+              <span class="rooms-auto-label">{{ t.rooms?.priority || 'Priority' }}</span>
+              <div class="rooms-auto-order">
+                <button
+                  :class="['rooms-auto-order-btn', { active: autoPriority === 'default' }]"
+                  @click="autoPriority = 'default'"
+                >{{ t.rooms?.priority_default || 'Default' }}</button>
+                <button
+                  :class="['rooms-auto-order-btn', { active: autoPriority === 'power' }]"
+                  :disabled="!autoMaxPower"
+                  @click="autoPriority = 'power'"
+                >{{ t.rooms?.priority_power || 'Raw Power' }}</button>
+                <button
+                  :class="['rooms-auto-order-btn', { active: autoPriority === 'bonus' }]"
+                  :disabled="!autoMaxPower"
+                  @click="autoPriority = 'bonus'"
+                >{{ t.rooms?.priority_bonus || 'Bonus' }}</button>
+              </div>
+            </div>
+
+            <!-- <div class="rooms-auto-checkbox">
+              <input type="checkbox" id="autoEmptyRooms" v-model="autoEmptyRooms" />
+              <label for="autoEmptyRooms">{{ t.rooms?.empty_rooms_before || 'Empty rooms before' }}</label>
+            </div> -->
 
             <button class="rooms-auto-go" @click="runAutoFill">{{ t.rooms?.go }}</button>
           </div>
@@ -1022,7 +1030,9 @@ export default {
       hiwDetail: 0,
       autoOrderBy: 'power',
       autoMaxPower: null,
+      autoPriority: 'default',
       autoEmptyRooms: true,
+      autoAddedUids: new Set(),
       loading: false,
       minerSearch: '',
       minerSearchDebounced: '',
@@ -1084,6 +1094,10 @@ export default {
     },
     mode() {
       this.cancelManualAdd()
+      this.autoAddedUids = new Set()
+    },
+    autoMaxPower(val) {
+      if (!val && this.autoPriority !== 'default') this.autoPriority = 'default'
     },
     currentRoom() {
       this.cancelManualAdd()
@@ -1520,20 +1534,16 @@ export default {
             const idLine = lines[i + 1]
             const isSetBadge = idLine.includes('set badge')
             isLegacy = idLine.includes('Rating star')
-            const idMatch = idLine.match(/^[a-f0-9]{24}/i)
+            const cleanId = idLine.replace('set badge', '').replace('Rating star', '').trim()
+            const idMatch = cleanId.match(/^([a-f0-9]{24})([1-5])?$/i)
 
             if (idMatch) {
-              minerId = idMatch[0]
-              isSet = isSetBadge
-              const cleanId = idLine.replace('set badge', '').replace('Rating star', '').trim()
-              if (cleanId.length > 24) {
-                const afterId = cleanId.slice(24)
-                const rarityMatch = afterId.match(/^[1-5]$/)
-                if (rarityMatch) {
-                  const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
-                  rarity = rarityMap[rarityMatch[0]] || ''
-                }
+              minerId = idMatch[1]
+              if (idMatch[2]) {
+                const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
+                rarity = rarityMap[idMatch[2]] || ''
               }
+              isSet = isSetBadge
 
               let nameIndex = i + 2
               if (isSet && nameIndex < lines.length) {
@@ -1557,7 +1567,7 @@ export default {
               if (name && power) {
                 addMiner(buildMinerEntry({ name, power, bonus, quantity: 1, isSet, isLegacy, minerId, source: 'COLLECTION' }))
               }
-              i = endIdx
+              i = endIdx - 1
             } else {
               i++
             }
@@ -1686,7 +1696,6 @@ export default {
           let isLegacy = sellIdMatch[3] && sellIdMatch[3].toLowerCase() === 'rating star'
           let isSet = sellIdMatch[3] && sellIdMatch[3].toLowerCase() === 'set badge'
 
-          // Rarity from ID suffix digit
           if (sellIdMatch[2]) {
             const rarityMap = { '1': 'Uncommon', '2': 'Rare', '3': 'Epic', '4': 'Legendary', '5': 'Unreal' }
             rarity = rarityMap[sellIdMatch[2]] || ''
@@ -1728,7 +1737,7 @@ export default {
           if (name && power && bonus) {
             addMiner(buildMinerEntry({ name, power, bonus, quantity, isSet, isLegacy, minerId, source: 'SELL' }))
           }
-          i = endIdx
+          i = endIdx - 1
           continue
         }
 
@@ -2482,9 +2491,9 @@ export default {
       return result
     },
 
-    // Calculate full EP from rack assignments
+    // Calculate full EP stats from rack assignments
     // Duplicate miners (same name) only contribute bonus ONCE
-    _calcFullPower(assignments) {
+    _calcFullPowerStats(assignments) {
       const setMap = this._getSetMap()
       let rawTotal = 0, bonusTotal = 0, rackExtra = 0, setPowerExtra = 0
       const seenBonus = new Set()
@@ -2522,7 +2531,12 @@ export default {
           }
         }
       }
-      return rawTotal * (1 + bonusTotal / 100) + rackExtra + setPowerExtra
+      const ep = rawTotal * (1 + bonusTotal / 100) + rackExtra + setPowerExtra
+      return { ep, rawPower: rawTotal, bonusTotal }
+    },
+
+    _calcFullPower(assignments) {
+      return this._calcFullPowerStats(assignments).ep
     },
 
     // Build rack assignment and calculate EP
@@ -2581,7 +2595,8 @@ export default {
         }
       }
 
-      return { assignments, ep: this._calcFullPower(assignments) }
+      const stats = this._calcFullPowerStats(assignments)
+      return { assignments, ep: stats.ep, rawPower: stats.rawPower, bonusTotal: stats.bonusTotal }
     },
 
     // Fast EP estimate without full rack assignment
@@ -2934,11 +2949,199 @@ export default {
     runAutoFill() {
       this.loading = true
       this.recordCurrentState()
-      setTimeout(() => { this._doAutoFill() }, 50)
+      if (!this.autoEmptyRooms) {
+        setTimeout(() => { this._doIncrementalFill() }, 50)
+      } else {
+        setTimeout(() => { this._doAutoFill() }, 50)
+      }
+    },
+
+    _doIncrementalFill() {
+      this.autoAddedUids = new Set()
+      const maxPowerGhs = this.autoMaxPower ? this.autoMaxPower * 1e9 : null
+      const priority = (maxPowerGhs !== null) ? this.autoPriority : 'default'
+
+      // 1. If over limit, remove weakest miners one by one
+      if (maxPowerGhs !== null) {
+        // Single reactivity trigger to get accurate power
+        for (let r = 1; r <= 4; r++) {
+          if (this.activeRooms[r - 1]) this.$set(this.rooms, r, this.rooms[r])
+        }
+        while (this.totalPower > maxPowerGhs) {
+          let worstRoom = null, worstKey = null, worstIdx = -1, worstVal = Infinity
+          for (let r = 1; r <= 4; r++) {
+            if (!this.activeRooms[r - 1]) continue
+            Object.entries(this.rooms[r]).forEach(([key, slot]) => {
+              if (!slot.miners) return
+              slot.miners.forEach((m, idx) => {
+                if (!m) return
+                const p = this.parsePowerToGhs(m.power)
+                const b = parseFloat(m.bonus) || 0
+                const val = priority === 'bonus' ? b : priority === 'power' ? p : p * (1 + b / 100)
+                if (val < worstVal) { worstVal = val; worstRoom = r; worstKey = key; worstIdx = idx }
+              })
+            })
+          }
+          if (worstRoom === null) break
+          this.rooms[worstRoom][worstKey].miners.splice(worstIdx, 1)
+          // Force recalc
+          this.$set(this.rooms, worstRoom, this.rooms[worstRoom])
+        }
+      }
+
+      // 2. Collect placed UIDs and available miners
+      const placedUids = new Set()
+      for (let r = 1; r <= 4; r++) {
+        if (!this.activeRooms[r - 1]) continue
+        Object.values(this.rooms[r]).forEach(slot => {
+          if (slot.miners) slot.miners.forEach(m => { if (m && m.uid) placedUids.add(m.uid) })
+        })
+      }
+
+      const availableMiners = this.loadedMiners.filter(m => !placedUids.has(m.uid))
+      const sortFn = priority === 'bonus'
+        ? (a, b) => (parseFloat(b.bonus) || 0) - (parseFloat(a.bonus) || 0)
+        : priority === 'power'
+          ? (a, b) => this.parsePowerToGhs(b.power) - this.parsePowerToGhs(a.power)
+          : (a, b) => {
+              const aIep = this.parsePowerToGhs(a.power) * (1 + (parseFloat(a.bonus) || 0) / 100)
+              const bIep = this.parsePowerToGhs(b.power) * (1 + (parseFloat(b.bonus) || 0) / 100)
+              return bIep - aIep
+            }
+      availableMiners.sort(sortFn)
+
+      // 3. Collect free cells in existing racks + place racks in empty room slots
+      const freeSlots = []
+      const avRacks = [...this.availableRacks].sort((a, b) => (b.bonus || 0) - (a.bonus || 0))
+      const addedRackCounts = {}
+
+      for (let r = 1; r <= 4; r++) {
+        if (!this.activeRooms[r - 1]) continue
+        const layout = this.getDataLayout(r)
+        for (let rowIdx = 0; rowIdx < layout.length; rowIdx++) {
+          for (let colIdx = 0; colIdx < layout[rowIdx].length; colIdx++) {
+            if (!layout[rowIdx][colIdx]) continue
+            const key = `${rowIdx}-${colIdx}`
+
+            // If slot has a rack, check for free cells
+            if (this.rooms[r][key] && this.rooms[r][key].rack) {
+              const slot = this.rooms[r][key]
+              const usedCells = (slot.miners || []).reduce((s, m) => s + (parseInt(m.cells) || 1), 0)
+              const freeCells = (slot.rack.size || 8) - usedCells
+              if (freeCells > 0) freeSlots.push({ slot, freeCells, bonus: slot.rack.bonus || 0 })
+              continue
+            }
+
+            // Empty slot - assign best available rack
+            let picked = null
+            for (const ar of avRacks) {
+              const rk = ar.id || ar.name
+              if ((addedRackCounts[rk] || 0) < ar.available) { picked = ar; break }
+            }
+            if (!picked) continue
+            addedRackCounts[picked.id || picked.name] = (addedRackCounts[picked.id || picked.name] || 0) + 1
+            const newSlot = { rack: { ...picked }, miners: [] }
+            this.$set(this.rooms[r], key, newSlot)
+            freeSlots.push({ slot: newSlot, freeCells: picked.size || 8, bonus: picked.bonus || 0 })
+          }
+        }
+      }
+      freeSlots.sort((a, b) => b.bonus - a.bonus)
+
+      // 4. Add all miners that fit (no limit or within limit)
+      const toAdd = []
+      for (const miner of availableMiners) {
+        const cells = parseInt(miner.cells) || 1
+        const rack = freeSlots.find(s => s.freeCells >= cells)
+        if (!rack) continue
+        rack.slot.miners.push(miner)
+        rack.freeCells -= cells
+        toAdd.push({ miner, rack })
+      }
+
+      // 5. If limit, check total and remove excess (from the weakest added miners)
+      if (maxPowerGhs !== null && toAdd.length > 0) {
+        // Trigger reactivity once to get accurate total
+        for (let r = 1; r <= 4; r++) {
+          if (this.activeRooms[r - 1]) this.$set(this.rooms, r, this.rooms[r])
+        }
+
+        // Sort added miners by contribution (weakest first) for removal
+        const addedByVal = [...toAdd]
+        addedByVal.sort((a, b) => {
+          const pa = this.parsePowerToGhs(a.miner.power), pb = this.parsePowerToGhs(b.miner.power)
+          const ba = parseFloat(a.miner.bonus) || 0, bb = parseFloat(b.miner.bonus) || 0
+          const va = pa * (1 + ba / 100), vb = pb * (1 + bb / 100)
+          return va - vb
+        })
+
+        while (this.totalPower > maxPowerGhs && addedByVal.length > 0) {
+          const worst = addedByVal.shift()
+          const idx = worst.rack.slot.miners.indexOf(worst.miner)
+          if (idx !== -1) {
+            worst.rack.slot.miners.splice(idx, 1)
+            worst.rack.freeCells += (parseInt(worst.miner.cells) || 1)
+            toAdd.splice(toAdd.indexOf(worst), 1)
+          }
+          this.$set(this.rooms, 1, this.rooms[1]) // trigger recalc
+        }
+
+        // 6. Gap-close: try removed miners + remaining skipped to fill closer to limit
+        const remaining = availableMiners.filter(m => !toAdd.some(a => a.miner.uid === m.uid) && !placedUids.has(m.uid))
+        let improved = true
+        while (improved) {
+          improved = false
+          const curPow = this.totalPower
+          let bestMiner = null, bestRack = null, bestPow = curPow
+
+          for (const miner of remaining) {
+            const cells = parseInt(miner.cells) || 1
+            const rack = freeSlots.find(s => s.freeCells >= cells)
+            if (!rack) continue
+
+            // Estimate: just check if adding fits
+            rack.slot.miners.push(miner)
+            for (let r = 1; r <= 4; r++) {
+              if (this.activeRooms[r - 1]) this.$set(this.rooms, r, this.rooms[r])
+            }
+            const newPow = this.totalPower
+            rack.slot.miners.pop()
+
+            if (newPow <= maxPowerGhs && newPow > bestPow) {
+              bestPow = newPow; bestMiner = miner; bestRack = rack
+            }
+          }
+
+          if (bestMiner) {
+            bestRack.slot.miners.push(bestMiner)
+            bestRack.freeCells -= (parseInt(bestMiner.cells) || 1)
+            toAdd.push({ miner: bestMiner, rack: bestRack })
+            remaining.splice(remaining.indexOf(bestMiner), 1)
+            for (let r = 1; r <= 4; r++) {
+              if (this.activeRooms[r - 1]) this.$set(this.rooms, r, this.rooms[r])
+            }
+            improved = true
+          }
+        }
+      }
+
+      // Mark added miners
+      for (const { miner } of toAdd) this.autoAddedUids.add(miner.uid)
+
+      // Single final reactivity trigger
+      for (let r = 1; r <= 4; r++) {
+        if (this.activeRooms[r - 1]) this.$set(this.rooms, r, this.rooms[r])
+      }
+
+      this.saveSnapshot()
+      this.saveToStorage()
+      this.loading = false
     },
 
     _doAutoFill() {
-      // 1. Clear all active rooms
+      this.autoAddedUids = new Set()
+
+      // Clear all active rooms (algorithm needs clean slate)
       for (let r = 1; r <= 4; r++) {
         if (this.activeRooms[r - 1]) this.$set(this.rooms, r, {})
       }
@@ -2975,6 +3178,24 @@ export default {
       let bestResult = null
       let bestConfig = null
 
+      const priority = (maxPowerGhs !== null) ? this.autoPriority : 'default'
+
+      const _isBetter = (candidate, current, config) => {
+        if (!current) return true
+        if (priority === 'default') return candidate.ep > current.ep
+        // For power/bonus priority: first maximize EP (get closest to limit), then use priority as tiebreaker
+        const epDiff = candidate.ep - current.ep
+        // If candidate has significantly more EP (>0.1% of limit), prefer it regardless of priority
+        if (maxPowerGhs && Math.abs(epDiff) > maxPowerGhs * 0.001) return epDiff > 0
+        // Similar EP - use priority metric as tiebreaker
+        const cStats = this._buildRackAssignment(config, candidate.selected)
+        const bStats = current._stats || this._buildRackAssignment(bestConfig, current.selected)
+        current._stats = bStats
+        if (priority === 'power') return cStats.rawPower > bStats.rawPower
+        if (priority === 'bonus') return cStats.bonusTotal > bStats.bonusTotal
+        return epDiff > 0
+      }
+
       for (const config of rackConfigs) {
         const hasSetRacks = config.some(r => r.is_set && r.set)
         const strategies = [
@@ -2986,8 +3207,9 @@ export default {
         ]
 
         for (const s of strategies) {
-          if (!bestResult || s.ep > bestResult.ep) {
+          if (_isBetter(s, bestResult, config)) {
             bestResult = s
+            bestResult._stats = null
             bestConfig = config
           }
         }
@@ -2998,9 +3220,10 @@ export default {
         while (bestResult.selected.length > 0) {
           const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
           if (ep <= maxPowerGhs) { bestResult.ep = ep; break }
-          let worstIdx = 0, worstPow = Infinity
+          let worstIdx = 0, worstVal = Infinity
           for (let i = 0; i < bestResult.selected.length; i++) {
-            if (bestResult.selected[i].power < worstPow) { worstPow = bestResult.selected[i].power; worstIdx = i }
+            const val = priority === 'bonus' ? bestResult.selected[i].bonus : bestResult.selected[i].power
+            if (val < worstVal) { worstVal = val; worstIdx = i }
           }
           bestResult.selected.splice(worstIdx, 1)
         }
@@ -3012,7 +3235,8 @@ export default {
         const maxCells = bestConfig.reduce((s, r) => s + r.size, 0)
         let usedCells = bestResult.selected.reduce((s, x) => s + x.cells, 0)
         const selUids = new Set(bestResult.selected.map(m => m.miner.uid))
-        const unselected = minerData.filter(m => !selUids.has(m.miner.uid)).sort((a, b) => b.power - a.power)
+        const gapSort = priority === 'bonus' ? ((a, b) => b.bonus - a.bonus) : ((a, b) => b.power - a.power)
+        const unselected = minerData.filter(m => !selUids.has(m.miner.uid)).sort(gapSort)
         for (const m of unselected) {
           if (usedCells + m.cells > maxCells) continue
           bestResult.selected.push(m)
@@ -3068,23 +3292,50 @@ export default {
             return newRaw * (1 + newBonus / 100) + newRackExtra
           }
 
-          let bestAction = null, bestEp = bestResult.ep
+          let bestAction = null, bestEp = bestResult.ep, bestSwapMetric = null
+          const _swapMetric = (stats) => {
+            if (priority === 'power') return stats.rawPower
+            if (priority === 'bonus') return stats.bonusTotal
+            return stats.ep
+          }
+          if (priority !== 'default') {
+            const curStats = this._buildRackAssignment(bestConfig, bestResult.selected)
+            bestSwapMetric = _swapMetric(curStats)
+          }
 
           // === 1-for-1: estimate all, confirm top 100 ===
+          const est1for1Prio = (sel, uns) => {
+            if (priority === 'power') return curRawPower - sel.power + uns.power
+            if (priority === 'bonus') {
+              let nb = curBonus
+              if (nameCount[sel.miner.name] === 1) nb -= sel.bonus
+              if (!nameCount[uns.miner.name]) nb += uns.bonus
+              return nb
+            }
+            return est1for1(sel, uns)
+          }
           const top1for1 = []
           for (let si = 0; si < bestResult.selected.length; si++) {
             const sel = bestResult.selected[si]
             for (const uns of unselDedup) {
               if (uns.cells !== sel.cells) continue
-              top1for1.push({ si, sel, uns, est: est1for1(sel, uns) })
+              top1for1.push({ si, sel, uns, est: est1for1Prio(sel, uns) })
             }
           }
           top1for1.sort((a, b) => b.est - a.est)
+          const epFloor = priority !== 'default' && maxPowerGhs ? bestEp - maxPowerGhs * 0.001 : -Infinity
           for (const c of top1for1.slice(0, 300)) {
             bestResult.selected[c.si] = c.uns
-            const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
+            const swapResult = this._buildRackAssignment(bestConfig, bestResult.selected)
             bestResult.selected[c.si] = c.sel
-            if ((maxPowerGhs === null || ep <= maxPowerGhs) && ep > bestEp) {
+            const ep = swapResult.ep
+            if (maxPowerGhs !== null && ep > maxPowerGhs) continue
+            if (priority !== 'default') {
+              const metric = _swapMetric(swapResult)
+              if (ep >= epFloor && metric > bestSwapMetric) {
+                bestEp = ep; bestSwapMetric = metric; bestAction = { type: '1for1', si: c.si, uns: c.uns }
+              }
+            } else if (ep > bestEp) {
               bestEp = ep; bestAction = { type: '1for1', si: c.si, uns: c.uns }
             }
           }
@@ -3112,10 +3363,17 @@ export default {
             for (const c of top2for1.slice(0, 300)) {
               bestResult.selected[c.si] = unsel1[c.a]
               bestResult.selected.push(unsel1[c.b])
-              const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
+              const swapResult = this._buildRackAssignment(bestConfig, bestResult.selected)
               bestResult.selected.pop()
               bestResult.selected[c.si] = c.sel
-              if ((maxPowerGhs === null || ep <= maxPowerGhs) && ep > bestEp) {
+              const ep = swapResult.ep
+              if (maxPowerGhs !== null && ep > maxPowerGhs) continue
+              if (priority !== 'default') {
+                const metric = _swapMetric(swapResult)
+                if (ep >= epFloor && metric > bestSwapMetric) {
+                  bestEp = ep; bestSwapMetric = metric; bestAction = { type: '2for1', si: c.si, pair: [unsel1[c.a], unsel1[c.b]] }
+                }
+              } else if (ep > bestEp) {
                 bestEp = ep; bestAction = { type: '2for1', si: c.si, pair: [unsel1[c.a], unsel1[c.b]] }
               }
             }
@@ -3151,11 +3409,18 @@ export default {
               bestResult.selected.splice(idxHi, 1)
               bestResult.selected.splice(idxLo, 1)
               bestResult.selected.push(c.two)
-              const ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
+              const swapResult = this._buildRackAssignment(bestConfig, bestResult.selected)
               bestResult.selected.pop()
               bestResult.selected.splice(idxLo, 0, saved1)
               bestResult.selected.splice(idxHi, 0, saved0)
-              if ((maxPowerGhs === null || ep <= maxPowerGhs) && ep > bestEp) {
+              const ep = swapResult.ep
+              if (maxPowerGhs !== null && ep > maxPowerGhs) continue
+              if (priority !== 'default') {
+                const metric = _swapMetric(swapResult)
+                if (ep >= epFloor && metric > bestSwapMetric) {
+                  bestEp = ep; bestSwapMetric = metric; bestAction = { type: '1for2', idxA: c.idxA, idxB: c.idxB, two: c.two }
+                }
+              } else if (ep > bestEp) {
                 bestEp = ep; bestAction = { type: '1for2', idxA: c.idxA, idxB: c.idxB, two: c.two }
               }
             }

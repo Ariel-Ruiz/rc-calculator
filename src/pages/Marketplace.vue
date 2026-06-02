@@ -41,7 +41,7 @@
       <div class="mp-top-bar">
         <div class="mp-tabs">
           <button :class="['mp-tab', { active: activeTab === 'sell' }]" @click="activeTab = 'sell'">SELL</button>
-          <button :class="['mp-tab', { active: activeTab === 'buy' }]" @click="activeTab = 'buy'">BUY</button>
+          <button :class="['mp-tab', 'mp-tab-disabled']" disabled title="Coming soon">BUY</button>
         </div>
         <div class="mp-top-right">
           <button class="mp-filter-toggle" @click="filtersOpen = !filtersOpen">
@@ -350,13 +350,14 @@ export default {
           }
           let foundQty = false
           for (let j = i + 2; j < Math.min(i + 15, lines.length); j++) {
+            if (lines[j].match(/^[a-f0-9]{24}([1-5])?(Rating star|set badge)?$/i)) break
             const pm = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
             if (pm) power = `${pm[1]} ${pm[2]}`
             const bm = lines[j].match(/^([\d.,]+)\s*%$/)
             if (bm) bonus = bm[1]
             if (lines[j].match(/^Quantity:?$/i)) foundQty = true
             if (foundQty && lines[j].match(/^\d+$/)) { quantity = parseInt(lines[j]); foundQty = false }
-            if (lines[j] === 'iconSell Miner') break
+            if (lines[j].match(/iconSell Miner|^Sell Miner$/i)) break
           }
           if (name && power && bonus) this.addResult('sell', { name, power, bonus, quantity, isLegacy, isSet, minerId: null })
           i++; continue
@@ -382,6 +383,7 @@ export default {
           }
           let foundQty = false, endIdx = ni + 1
           for (let j = ni + 1; j < Math.min(i + 20, lines.length); j++) {
+            if (lines[j].match(/^[a-f0-9]{24}([1-5])?(Rating star|set badge)?$/i)) { endIdx = j; break }
             const pm = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
             if (pm) power = `${pm[1]} ${pm[2]}`
             const bm = lines[j].match(/^([\d.,]+)\s*%$/)
@@ -389,10 +391,10 @@ export default {
             if (lines[j].match(/^Quantity:?$/i)) foundQty = true
             if (foundQty && lines[j].match(/^\d+$/)) { quantity = parseInt(lines[j]); foundQty = false }
             endIdx = j + 1
-            if (lines[j] === 'iconSell Miner') break
+            if (lines[j].match(/iconSell Miner|^Sell Miner$/i)) break
           }
           if (name && power && bonus) this.addResult('sell', { name, power, bonus, quantity, isLegacy, isSet, minerId })
-          i = endIdx; continue
+          i = endIdx - 1; continue
         }
       }
     },
@@ -437,13 +439,15 @@ export default {
       const existing = list.find(r => r.name === miner.name && r.power === miner.power && r.bonus === miner.bonus)
       if (existing) {
         if (tab === 'sell') existing.quantity = miner.quantity
-        if (miner.minerId && !existing.minerId) existing.minerId = miner.minerId
+        if (miner.minerId) existing.minerId = miner.minerId
         if (tab === 'buy' && miner.price) existing.price = miner.price
         return
       }
       const minerData = this.findMiner(miner)
       const isSellable = minerData ? !!minerData.can_be_sold : false
-      list.push({ ...miner, uid: this.uidCounter++, isSellable, minerId: miner.minerId || (minerData ? minerData.id : null) })
+      const isMerged = this.getRarityLevel(miner.name) && this.getRarityLevel(miner.name) !== 'legacy'
+      const fallbackId = (!isMerged && minerData) ? minerData.id : null
+      list.push({ ...miner, uid: this.uidCounter++, isSellable, minerId: miner.minerId || fallbackId })
     },
 
     removeItem(item) {

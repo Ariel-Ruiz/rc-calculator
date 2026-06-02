@@ -78,6 +78,11 @@
   color: var(--text-secondary);
 }
 
+.mp-tab-disabled {
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
+
 .mp-top-right {
   display: flex;
   gap: 0.4rem;
