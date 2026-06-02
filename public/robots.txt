@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ariel-ruiz.github.io/rc-calculator/sitemap.xml

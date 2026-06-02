@@ -2,7 +2,7 @@
   "multiplier": 0.1,
   "tasks": [
     {
-      "id": "6a16e7d1b94e4ce33de85dbe",
+      "id": "6a1eb6dcb94e4ce33de85e6e",
       "xp_type": "number",
       "xp_reward": 500,
       "amount": 0,
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "6a16e7d1b94e4ce33de85dbf",
+      "id": "6a1eb6dcb94e4ce33de85e6f",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -44,7 +44,7 @@
       "sort": 2
     },
     {
-      "id": "6a16e7d1b94e4ce33de85dc0",
+      "id": "6a1eb6dcb94e4ce33de85e70",
       "xp_type": "number",
       "xp_reward": 150,
       "amount": 6667,
@@ -65,7 +65,7 @@
       "sort": 3
     },
     {
-      "id": "6a16e7d1b94e4ce33de85dc1",
+      "id": "6a1eb6dcb94e4ce33de85e71",
       "xp_type": "number",
       "xp_reward": 5000,
       "amount": 200,
@@ -86,7 +86,7 @@
       "sort": 5
     },
     {
-      "id": "6a16e7d1b94e4ce33de85dc2",
+      "id": "6a1eb6dcb94e4ce33de85e72",
       "xp_type": "number",
       "xp_reward": 5000,
       "amount": 200,
@@ -109,33 +109,33 @@
   ],
   "event": {
     "event": {
-      "_id": "6a16e7d0da9a87b6009c3121",
-      "max_xp": 23081000,
+      "_id": "6a1eb6dcda9a87b600a64f10",
+      "max_xp": 24899000,
       "max_multiplier": 10000,
-      "max_level": 30,
+      "max_level": 26,
       "tag": {
         "text": "",
         "color": "",
         "text_color": ""
       },
       "progression_event_type": "default",
-      "end_date": "2026-05-30T15:00:00.000Z",
-      "last_updated": 1779886033358,
+      "end_date": "2026-06-05T15:00:00.000Z",
+      "last_updated": 1780397788294,
       "description": {
-        "en": "BBQ Meat",
-        "cn": "BBQ Meat"
+        "en": "[02–05 Jun] Masters of Power",
+        "cn": "[02–05 Jun] Masters of Power"
       },
       "title": {
-        "en": "BBQ Meat",
-        "cn": "BBQ Meat"
+        "en": "Masters of Power",
+        "cn": "Masters of Power"
       }
     },
     "rewards": [
       {
-        "id": "6a16e7d1b94e4ce33de85dc4",
+        "id": "6a1eb6dcb94e4ce33de85e74",
         "item_id": null,
-        "amount": 20000000,
-        "currency": "RST",
+        "amount": 250000,
+        "currency": "RLT",
         "ttl_time": 0,
         "required_level": 1,
         "type": "money",
@@ -153,42 +153,50 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dc6",
-        "item_id": "6a0dc58697fee3b550b7e5dc",
+        "id": "6a1eb6dcb94e4ce33de85e76",
+        "item_id": "6834276c6b8c472444c3725c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 2,
-        "type": "hat",
+        "type": "utility_item",
         "title": {
-          "en": "Hat Title",
-          "cn": "Hat Title"
+          "en": "Utility Item",
+          "cn": "Utility Item"
         },
         "description": {
-          "en": "Hat Reward Description",
-          "cn": "Hat Reward Description"
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "title": {
-            "en": "BBQ Meat Hat",
-            "cn": "BBQ Meat Hat"
+          "media": {
+            "preview_url": "static/img/market/utility_items/6834276c6b8c472444c3725c.gif?v=1748874570576"
+          },
+          "_id": "6834276c6b8c472444c3725c",
+          "name": {
+            "en": "12h Booster",
+            "cn": "12h Booster",
+            "es": "12h Booster",
+            "pt": "12h Booster"
           },
           "description": {
-            "en": "BBQ Meat Hat",
-            "cn": "BBQ Meat Hat"
+            "en": "Booster will increase your basic power from minigames for 12 hours.",
+            "cn": "Booster will increase your basic power from minigames for 12 hours.",
+            "es": "Booster will increase your basic power from minigames for 12 hours.",
+            "pt": "Booster will increase your basic power from minigames for 12 hours."
           },
-          "_id": "6a0dc58697fee3b550b7e5dc"
+          "type": "game_booster"
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dc8",
+        "id": "6a1eb6dcb94e4ce33de85e78",
         "item_id": null,
-        "amount": 200000,
-        "currency": "RLT",
+        "amount": 50000000,
+        "currency": "RST",
         "ttl_time": 0,
         "required_level": 3,
         "type": "money",
@@ -206,64 +214,12 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dca",
-        "item_id": "68b6dbf2f58321ae064c22d9",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 4,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68b6dbf2f58321ae064c22d9",
-          "power": 1000000,
-          "width": 2,
-          "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
-          },
-          "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "shalerig",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85dcc",
+        "id": "6a1eb6dcb94e4ce33de85e7a",
         "item_id": "69b158245fd2124c0bf7dd2d",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 5,
+        "required_level": 4,
         "type": "mystery_box",
         "title": {
           "en": "Loot Box",
@@ -407,12 +363,12 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dce",
-        "item_id": "68b6dbf2f58321ae064c22d9",
+        "id": "6a1eb6dcb94e4ce33de85e7c",
+        "item_id": "65ba410143dcad8f6d110aab",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 6,
+        "required_level": 5,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -427,44 +383,247 @@
           "max": 0
         },
         "item": {
-          "_id": "68b6dbf2f58321ae064c22d9",
-          "power": 1000000,
+          "_id": "65ba410143dcad8f6d110aab",
+          "power": 4965000,
           "width": 2,
           "name": {
-            "en": "ShaleRig",
-            "cn": "ShaleRig",
-            "es": "ShaleRig",
-            "pt": "ShaleRig"
+            "en": "Cup Of Power",
+            "cn": "Cup Of Power",
+            "es": "Cup Of Power",
+            "pt": "Cup Of Power"
           },
           "description": {
-            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
-            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
+            "en": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "cn": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "es": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "pt": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 1,
-          "type": "merge",
-          "filename": "shalerig",
+          "level": 0,
+          "type": "basic",
+          "filename": "cup_of_power",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50
+            "frame_height": 50,
+            "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 500,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 100,
           "is_in_set": false
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dd0",
-        "item_id": "69d8038b135acbe76adead60",
+        "id": "6a1eb6dcb94e4ce33de85e7e",
+        "item_id": "69b15c655fd2124c0bf7f2e6",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 6,
+        "type": "mystery_box",
+        "title": {
+          "en": "Loot Box",
+          "cn": "Loot Box"
+        },
+        "description": {
+          "en": "Mystery Box Reward Description",
+          "cn": "Mystery Box Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69b15c655fd2124c0bf7f2e6",
+          "title": {
+            "en": "Freon Case Medium",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "items": [
+            {
+              "type": "FREON",
+              "amount": 100000000000,
+              "sort": 0,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 50000000000,
+              "sort": 1,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 25000000000,
+              "sort": 2,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 15000000000,
+              "sort": 3,
+              "item_info": null,
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "FREON",
+              "amount": 10000000000,
+              "sort": 4,
+              "item_info": null,
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "FREON",
+              "amount": 7500000000,
+              "sort": 5,
+              "item_info": null,
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "FREON",
+              "amount": 5000000000,
+              "sort": 6,
+              "item_info": null,
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "FREON",
+              "amount": 3500000000,
+              "sort": 7,
+              "item_info": null,
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "FREON",
+              "amount": 2750000000,
+              "sort": 8,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 2500000000,
+              "sort": 9,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 2250000000,
+              "sort": 10,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 2000000000,
+              "sort": 11,
+              "item_info": null,
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "FREON",
+              "amount": 1900000000,
+              "sort": 12,
+              "item_info": null,
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "FREON",
+              "amount": 1800000000,
+              "sort": 13,
+              "item_info": null,
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "FREON",
+              "amount": 1750000000,
+              "sort": 14,
+              "item_info": null,
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "FREON",
+              "amount": 1700000000,
+              "sort": 15,
+              "item_info": null,
+              "base_color_hex": "dddddd"
+            }
+          ],
+          "media": {
+            "box_url": "static/img/mystery_boxes/69b15c655fd2124c0bf7f2e6/box_img_fd92414c-3403-4a61-8525-e24c715d4436.png",
+            "cover_url": "static/img/mystery_boxes/69b15c655fd2124c0bf7f2e6/cover_img_386e4276-2cf2-46e0-9111-30b520c79e2e.png",
+            "box_image_url": "static/img/mystery_boxes/69b15c655fd2124c0bf7f2e6/box_img_url_b6c6ad96-c3cb-4c82-9cc8-c110276af685.png"
+          }
+        }
+      },
+      {
+        "id": "6a1eb6dcb94e4ce33de85e80",
+        "item_id": "65ba410143dcad8f6d110aab",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 7,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "65ba410143dcad8f6d110aab",
+          "power": 4965000,
+          "width": 2,
+          "name": {
+            "en": "Cup Of Power",
+            "cn": "Cup Of Power",
+            "es": "Cup Of Power",
+            "pt": "Cup Of Power"
+          },
+          "description": {
+            "en": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "cn": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "es": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "pt": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "cup_of_power",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 100,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a1eb6dcb94e4ce33de85e82",
+        "item_id": "69d8038b135acbe76adead60",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 8,
         "type": "mystery_box",
         "title": {
           "en": "Loot Box",
@@ -841,12 +1000,12 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dd2",
-        "item_id": "6661dceadddadd0605eedd3d",
+        "id": "6a1eb6dcb94e4ce33de85e84",
+        "item_id": "662255c7a8444c20d1ca745a",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 8,
+        "required_level": 9,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -861,234 +1020,44 @@
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd3d",
-          "power": 8268750,
+          "_id": "662255c7a8444c20d1ca745a",
+          "power": 7875000,
           "width": 2,
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "Last Defender",
+            "cn": "Last Defender",
+            "es": "Last Defender",
+            "pt": "Last Defender"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
+            "en": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "cn": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "es": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "pt": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 2,
+          "level": 1,
           "type": "merge",
-          "filename": "beachside_billionaire",
+          "filename": "last_defender",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 744,
+          "bonus": 439,
           "is_in_set": false
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dd4",
-        "item_id": "683427626b8c472444c3725b",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 9,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "media": {
-            "preview_url": "static/img/market/utility_items/683427626b8c472444c3725b.gif?v=1748874570577"
-          },
-          "_id": "683427626b8c472444c3725b",
-          "name": {
-            "en": "24h Booster",
-            "cn": "24h Booster",
-            "es": "24h Booster",
-            "pt": "24h Booster"
-          },
-          "description": {
-            "en": "Booster will increase your basic power from minigames for 24 hours.",
-            "cn": "Booster will increase your basic power from minigames for 24 hours.",
-            "es": "Booster will increase your basic power from minigames for 24 hours.",
-            "pt": "Booster will increase your basic power from minigames for 24 hours."
-          },
-          "type": "game_booster"
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85dd6",
-        "item_id": "69b15c655fd2124c0bf7f2e6",
-        "amount": 1,
+        "id": "6a1eb6dcb94e4ce33de85e86",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 2,
         "currency": "",
         "ttl_time": 0,
         "required_level": 10,
-        "type": "mystery_box",
-        "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
-        },
-        "description": {
-          "en": "Mystery Box Reward Description",
-          "cn": "Mystery Box Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "69b15c655fd2124c0bf7f2e6",
-          "title": {
-            "en": "Freon Case Medium",
-            "cn": "",
-            "es": "",
-            "pt": ""
-          },
-          "items": [
-            {
-              "type": "FREON",
-              "amount": 100000000000,
-              "sort": 0,
-              "item_info": null,
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "FREON",
-              "amount": 50000000000,
-              "sort": 1,
-              "item_info": null,
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "FREON",
-              "amount": 25000000000,
-              "sort": 2,
-              "item_info": null,
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "FREON",
-              "amount": 15000000000,
-              "sort": 3,
-              "item_info": null,
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "FREON",
-              "amount": 10000000000,
-              "sort": 4,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "FREON",
-              "amount": 7500000000,
-              "sort": 5,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "FREON",
-              "amount": 5000000000,
-              "sort": 6,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "FREON",
-              "amount": 3500000000,
-              "sort": 7,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "FREON",
-              "amount": 2750000000,
-              "sort": 8,
-              "item_info": null,
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "FREON",
-              "amount": 2500000000,
-              "sort": 9,
-              "item_info": null,
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "FREON",
-              "amount": 2250000000,
-              "sort": 10,
-              "item_info": null,
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "FREON",
-              "amount": 2000000000,
-              "sort": 11,
-              "item_info": null,
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "FREON",
-              "amount": 1900000000,
-              "sort": 12,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "FREON",
-              "amount": 1800000000,
-              "sort": 13,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "FREON",
-              "amount": 1750000000,
-              "sort": 14,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "FREON",
-              "amount": 1700000000,
-              "sort": 15,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            }
-          ],
-          "media": {
-            "box_url": "static/img/mystery_boxes/69b15c655fd2124c0bf7f2e6/box_img_fd92414c-3403-4a61-8525-e24c715d4436.png",
-            "cover_url": "static/img/mystery_boxes/69b15c655fd2124c0bf7f2e6/cover_img_386e4276-2cf2-46e0-9111-30b520c79e2e.png",
-            "box_image_url": "static/img/mystery_boxes/69b15c655fd2124c0bf7f2e6/box_img_url_b6c6ad96-c3cb-4c82-9cc8-c110276af685.png"
-          }
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85dd8",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 5,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 11,
         "type": "utility_item",
         "title": {
           "en": "Utility Item",
@@ -1123,8 +1092,60 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dda",
-        "item_id": "6a16e4c7da9a87b6009c2a29",
+        "id": "6a1eb6dcb94e4ce33de85e88",
+        "item_id": "662255c7a8444c20d1ca745a",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 11,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "662255c7a8444c20d1ca745a",
+          "power": 7875000,
+          "width": 2,
+          "name": {
+            "en": "Last Defender",
+            "cn": "Last Defender",
+            "es": "Last Defender",
+            "pt": "Last Defender"
+          },
+          "description": {
+            "en": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "cn": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "es": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "pt": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "last_defender",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 439,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a1eb6dcb94e4ce33de85e8a",
+        "item_id": "65ba410143dcad8f6d110aae",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1143,41 +1164,41 @@
           "max": 0
         },
         "item": {
-          "_id": "6a16e4c7da9a87b6009c2a29",
-          "power": 13000000,
+          "_id": "65ba410143dcad8f6d110aae",
+          "power": 13033125,
           "width": 2,
           "name": {
-            "en": "Smoke Rack",
-            "cn": "Smoke Rack",
-            "es": "Smoke Rack",
-            "pt": "Smoke Rack"
+            "en": "Cup Of Power",
+            "cn": "Cup Of Power",
+            "es": "Cup Of Power",
+            "pt": "Cup Of Power"
           },
           "description": {
-            "en": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "cn": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "es": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "pt": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards."
+            "en": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "cn": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "es": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power.",
+            "pt": "What is the meaning of to be? All answers hidden in the tower? You’re here to win, and you will be The One who holds the freaking power."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 0,
-          "type": "basic",
-          "filename": "smoke_rack",
+          "level": 1,
+          "type": "merge",
+          "filename": "cup_of_power",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 900,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 240,
           "is_in_set": false
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85ddc",
-        "item_id": "6661dceadddadd0605eedd3d",
+        "id": "6a1eb6dcb94e4ce33de85e8c",
+        "item_id": "6a1ea3afda9a87b600a5f04c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1196,73 +1217,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd3d",
-          "power": 8268750,
+          "_id": "6a1ea3afda9a87b600a5f04c",
+          "power": 20000000,
           "width": 2,
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "Power Master",
+            "cn": "Power Master",
+            "es": "Power Master",
+            "pt": "Power Master"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 2,
-          "type": "merge",
-          "filename": "beachside_billionaire",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 744,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85dde",
-        "item_id": "6a16e4c7da9a87b6009c2a29",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 14,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6a16e4c7da9a87b6009c2a29",
-          "power": 13000000,
-          "width": 2,
-          "name": {
-            "en": "Smoke Rack",
-            "cn": "Smoke Rack",
-            "es": "Smoke Rack",
-            "pt": "Smoke Rack"
-          },
-          "description": {
-            "en": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "cn": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "es": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "pt": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards."
+            "en": "Become a true master and unleash mystical power of hidden chains!",
+            "cn": "Become a true master and unleash mystical power of hidden chains!",
+            "es": "Become a true master and unleash mystical power of hidden chains!",
+            "pt": "Become a true master and unleash mystical power of hidden chains!"
           },
           "created_by_title": {
             "link": "",
@@ -1270,234 +1238,24 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "smoke_rack",
+          "filename": "power_master",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 900,
+          "bonus": 1300,
           "is_in_set": false
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85de0",
-        "item_id": "6a16e4c7da9a87b6009c2a2d",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 15,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6a16e4c7da9a87b6009c2a2d",
-          "power": 25000000,
-          "width": 2,
-          "name": {
-            "en": "Smoke Rack",
-            "cn": "Smoke Rack",
-            "es": "Smoke Rack",
-            "pt": "Smoke Rack"
-          },
-          "description": {
-            "en": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "cn": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "es": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "pt": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "smoke_rack",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1500,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85de2",
-        "item_id": "6620f3a5b5426dc20a814338",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 16,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6620f3a5b5426dc20a814338",
-          "power": 73075170,
-          "width": 2,
-          "name": {
-            "en": "BurnThemAll",
-            "cn": "BurnThemAll",
-            "es": "BurnThemAll",
-            "pt": "BurnThemAll"
-          },
-          "description": {
-            "en": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "cn": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "es": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "pt": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "burnthemall",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1502,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85de4",
-        "item_id": "68e61a009f36c49e72db54dd",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 17,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68e61a009f36c49e72db54dd",
-          "power": 14000000,
-          "width": 1,
-          "name": {
-            "en": "Fire Evo",
-            "cn": "Fire Evo",
-            "es": "Fire Evo",
-            "pt": "Fire Evo"
-          },
-          "description": {
-            "en": "Born from magma and fury. Burns everything to fuel unstoppable power.",
-            "cn": "Born from magma and fury. Burns everything to fuel unstoppable power.",
-            "es": "Born from magma and fury. Burns everything to fuel unstoppable power.",
-            "pt": "Born from magma and fury. Burns everything to fuel unstoppable power."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "fire_evo",
-          "frames_data": {
-            "frame_width": 58,
-            "frame_height": 40,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 250,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85de6",
-        "item_id": "65326e78a072ea9506f9a21a",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 18,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "65326e78a072ea9506f9a21a",
-          "power": 12108285,
-          "width": 2,
-          "name": {
-            "en": "DjBone",
-            "cn": "DjBone",
-            "es": "DjBone",
-            "pt": "DjBone"
-          },
-          "description": {
-            "en": "Bone chilling tunes and the sick beats… Are you dancing or that's just your knees are shaking? By Ravell",
-            "cn": "Bone chilling tunes and the sick beats… Are you dancing or that's just your knees are shaking? By Ravell",
-            "es": "Bone chilling tunes and the sick beats… Are you dancing or that's just your knees are shaking? By Ravell",
-            "pt": "Bone chilling tunes and the sick beats… Are you dancing or that's just your knees are shaking? By Ravell"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 4,
-          "type": "merge",
-          "filename": "djbone",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 355,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85de8",
+        "id": "6a1eb6dcb94e4ce33de85e8e",
         "item_id": "69b160015fd2124c0bf80c93",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 19,
+        "required_level": 14,
         "type": "mystery_box",
         "title": {
           "en": "Loot Box",
@@ -1641,12 +1399,12 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dea",
-        "item_id": "6a16e4c7da9a87b6009c2a34",
+        "id": "6a1eb6dcb94e4ce33de85e90",
+        "item_id": "662255c7a8444c20d1ca7462",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 20,
+        "required_level": 15,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1661,20 +1419,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6a16e4c7da9a87b6009c2a34",
-          "power": 100000000,
+          "_id": "662255c7a8444c20d1ca7462",
+          "power": 20671875,
           "width": 2,
           "name": {
-            "en": "Smoke Rack",
-            "cn": "Smoke Rack",
-            "es": "Smoke Rack",
-            "pt": "Smoke Rack"
+            "en": "Last Defender",
+            "cn": "Last Defender",
+            "es": "Last Defender",
+            "pt": "Last Defender"
           },
           "description": {
-            "en": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "cn": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "es": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "pt": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards."
+            "en": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "cn": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "es": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "pt": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!"
           },
           "created_by_title": {
             "link": "",
@@ -1682,24 +1440,23 @@
           },
           "level": 2,
           "type": "merge",
-          "filename": "smoke_rack",
+          "filename": "last_defender",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 3000,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 725,
           "is_in_set": false
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dec",
-        "item_id": "6661dceadddadd0605eedd43",
+        "id": "6a1eb6dcb94e4ce33de85e92",
+        "item_id": "6a1ea3afda9a87b600a5f04c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 21,
+        "required_level": 16,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1714,20 +1471,179 @@
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd43",
-          "power": 21705495,
+          "_id": "6a1ea3afda9a87b600a5f04c",
+          "power": 20000000,
           "width": 2,
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "Power Master",
+            "cn": "Power Master",
+            "es": "Power Master",
+            "pt": "Power Master"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
+            "en": "Become a true master and unleash mystical power of hidden chains!",
+            "cn": "Become a true master and unleash mystical power of hidden chains!",
+            "es": "Become a true master and unleash mystical power of hidden chains!",
+            "pt": "Become a true master and unleash mystical power of hidden chains!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "power_master",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1300,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a1eb6dcb94e4ce33de85e94",
+        "item_id": "6a1ea3afda9a87b600a5f050",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 17,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a1ea3afda9a87b600a5f050",
+          "power": 45000000,
+          "width": 2,
+          "name": {
+            "en": "Power Master",
+            "cn": "Power Master",
+            "es": "Power Master",
+            "pt": "Power Master"
+          },
+          "description": {
+            "en": "Become a true master and unleash mystical power of hidden chains!",
+            "cn": "Become a true master and unleash mystical power of hidden chains!",
+            "es": "Become a true master and unleash mystical power of hidden chains!",
+            "pt": "Become a true master and unleash mystical power of hidden chains!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "power_master",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a1eb6dcb94e4ce33de85e96",
+        "item_id": "63ecc9a6547cfab9a233770e",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 18,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "63ecc9a6547cfab9a233770e",
+          "power": 8400000,
+          "width": 2,
+          "name": {
+            "en": "The Primordial",
+            "cn": "The Primordial",
+            "es": "The Primordial",
+            "pt": "The Primordial"
+          },
+          "description": {
+            "en": "This ancient power has been gathered from The Big Bang, which created our Universe. Unconquerable, immense, and unrivaled when it comes to mining! Four Elements united to bring it to you!",
+            "cn": "This ancient power has been gathered from The Big Bang, which created our Universe. Unconquerable, immense, and unrivaled when it comes to mining! Four Elements united to bring it to you!",
+            "es": "This ancient power has been gathered from The Big Bang, which created our Universe. Unconquerable, immense, and unrivaled when it comes to mining! Four Elements united to bring it to you!",
+            "pt": "This ancient power has been gathered from The Big Bang, which created our Universe. Unconquerable, immense, and unrivaled when it comes to mining! Four Elements united to bring it to you!"
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "the_primordial",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "bonus": 500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a1eb6dcb94e4ce33de85e98",
+        "item_id": "662255c7a8444c20d1ca746a",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 19,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "662255c7a8444c20d1ca746a",
+          "power": 54263685,
+          "width": 2,
+          "name": {
+            "en": "Last Defender",
+            "cn": "Last Defender",
+            "es": "Last Defender",
+            "pt": "Last Defender"
+          },
+          "description": {
+            "en": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "cn": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "es": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!",
+            "pt": "Meet the \"Last Defender\" miner, the only device capable of mining crypto as fiercely as the Romans defended against barbarians—except this machine won't fall to Goths, just to occasional software updates. It's so powerful, it could have mined enough Bitcoin to bribe Attila himself!"
           },
           "created_by_title": {
             "link": "",
@@ -1735,24 +1651,23 @@
           },
           "level": 3,
           "type": "merge",
-          "filename": "beachside_billionaire",
+          "filename": "last_defender",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 1156,
+          "bonus": 1127,
           "is_in_set": false
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dee",
+        "id": "6a1eb6dcb94e4ce33de85e9a",
         "item_id": "68aeda9d241211b065b84503",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 22,
+        "required_level": 20,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1800,12 +1715,12 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85df0",
-        "item_id": "6661dceadddadd0605eedd49",
+        "id": "6a1eb6dcb94e4ce33de85e9c",
+        "item_id": "6a1ea3afda9a87b600a5f057",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 23,
+        "required_level": 21,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1820,81 +1735,28 @@
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd49",
-          "power": 56976990,
+          "_id": "6a1ea3afda9a87b600a5f057",
+          "power": 150000000,
           "width": 2,
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "Power Master",
+            "cn": "Power Master",
+            "es": "Power Master",
+            "pt": "Power Master"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
+            "en": "Become a true master and unleash mystical power of hidden chains!",
+            "cn": "Become a true master and unleash mystical power of hidden chains!",
+            "es": "Become a true master and unleash mystical power of hidden chains!",
+            "pt": "Become a true master and unleash mystical power of hidden chains!"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 4,
+          "level": 2,
           "type": "merge",
-          "filename": "beachside_billionaire",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1732,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85df2",
-        "item_id": "6a16e4c7da9a87b6009c2a3b",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 24,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6a16e4c7da9a87b6009c2a3b",
-          "power": 200000000,
-          "width": 2,
-          "name": {
-            "en": "Smoke Rack",
-            "cn": "Smoke Rack",
-            "es": "Smoke Rack",
-            "pt": "Smoke Rack"
-          },
-          "description": {
-            "en": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "cn": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "es": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "pt": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "smoke_rack",
+          "filename": "power_master",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
@@ -1906,12 +1768,12 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85df4",
-        "item_id": "6620f3a5b5426dc20a814340",
+        "id": "6a1eb6dcb94e4ce33de85e9e",
+        "item_id": "67a3e6c079efd774f15e2737",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 25,
+        "required_level": 22,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1926,72 +1788,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6620f3a5b5426dc20a814340",
-          "power": 191822400,
+          "_id": "67a3e6c079efd774f15e2737",
+          "power": 65200000,
           "width": 2,
           "name": {
-            "en": "BurnThemAll",
-            "cn": "BurnThemAll",
-            "es": "BurnThemAll",
-            "pt": "BurnThemAll"
+            "en": "Stormcaller",
+            "cn": "Stormcaller",
+            "es": "Stormcaller",
+            "pt": "Stormcaller"
           },
           "description": {
-            "en": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "cn": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "es": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "pt": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 4,
-          "type": "merge",
-          "filename": "burnthemall",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 2251,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85df6",
-        "item_id": "6620f3a5b5426dc20a814338",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 26,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6620f3a5b5426dc20a814338",
-          "power": 73075170,
-          "width": 2,
-          "name": {
-            "en": "BurnThemAll",
-            "cn": "BurnThemAll",
-            "es": "BurnThemAll",
-            "pt": "BurnThemAll"
-          },
-          "description": {
-            "en": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "cn": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "es": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!",
-            "pt": "Meet the \"BurnThemAll\" miner, the Nero’s delight: this fiery beast of a machine mines crypto with the ferocity of Rome ablaze, promising a reign of riches while your electric bill burns to cinders. It’s not just mining; it’s an inferno of earnings!"
+            "en": "Summoning storms with a single spark, this miner commands the skies to rain down profits!",
+            "cn": "Summoning storms with a single spark, this miner commands the skies to rain down profits!",
+            "es": "Summoning storms with a single spark, this miner commands the skies to rain down profits!",
+            "pt": "Summoning storms with a single spark, this miner commands the skies to rain down profits!"
           },
           "created_by_title": {
             "link": "",
@@ -1999,172 +1809,23 @@
           },
           "level": 3,
           "type": "merge",
-          "filename": "burnthemall",
+          "filename": "stormcaller",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 1502,
+          "bonus": 1600,
           "is_in_set": false
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85df8",
-        "item_id": "69b160015fd2124c0bf80c93",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 27,
-        "type": "mystery_box",
-        "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
-        },
-        "description": {
-          "en": "Mystery Box Reward Description",
-          "cn": "Mystery Box Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "69b160015fd2124c0bf80c93",
-          "title": {
-            "en": "Freon Case Large",
-            "cn": "",
-            "es": "",
-            "pt": ""
-          },
-          "items": [
-            {
-              "type": "FREON",
-              "amount": 500000000000,
-              "sort": 0,
-              "item_info": null,
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "FREON",
-              "amount": 200000000000,
-              "sort": 1,
-              "item_info": null,
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "FREON",
-              "amount": 150000000000,
-              "sort": 2,
-              "item_info": null,
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "FREON",
-              "amount": 100000000000,
-              "sort": 3,
-              "item_info": null,
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "FREON",
-              "amount": 35000000000,
-              "sort": 4,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "FREON",
-              "amount": 20000000000,
-              "sort": 5,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "FREON",
-              "amount": 15000000000,
-              "sort": 6,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "FREON",
-              "amount": 10000000000,
-              "sort": 7,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "FREON",
-              "amount": 9000000000,
-              "sort": 8,
-              "item_info": null,
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "FREON",
-              "amount": 8500000000,
-              "sort": 9,
-              "item_info": null,
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "FREON",
-              "amount": 8000000000,
-              "sort": 10,
-              "item_info": null,
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "FREON",
-              "amount": 7500000000,
-              "sort": 11,
-              "item_info": null,
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "FREON",
-              "amount": 7000000000,
-              "sort": 12,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "FREON",
-              "amount": 6800000000,
-              "sort": 13,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "FREON",
-              "amount": 6600000000,
-              "sort": 14,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "FREON",
-              "amount": 6500000000,
-              "sort": 15,
-              "item_info": null,
-              "base_color_hex": "dddddd"
-            }
-          ],
-          "media": {
-            "box_url": "static/img/mystery_boxes/69b160015fd2124c0bf80c93/box_img_48890aa0-6709-424c-8c4c-ad882d57ebbe.png",
-            "cover_url": "static/img/mystery_boxes/69b160015fd2124c0bf80c93/cover_img_ef6d188e-ba68-4d4f-914d-dbd0244f9634.png",
-            "box_image_url": "static/img/mystery_boxes/69b160015fd2124c0bf80c93/box_img_url_6699016d-c9bc-47ad-a7af-fcfb0dd4cad3.png"
-          }
-        }
-      },
-      {
-        "id": "6a16e7d1b94e4ce33de85dfa",
+        "id": "6a1eb6dcb94e4ce33de85ea0",
         "item_id": "69d80b8b135acbe76adec90a",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 28,
+        "required_level": 23,
         "type": "mystery_box",
         "title": {
           "en": "Loot Box",
@@ -2736,12 +2397,12 @@
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dfc",
-        "item_id": "6798cb2444010f291a9c63fc",
+        "id": "6a1eb6dcb94e4ce33de85ea2",
+        "item_id": "67a3e6c079efd774f15e2737",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 29,
+        "required_level": 24,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -2756,20 +2417,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6798cb2444010f291a9c63fc",
-          "power": 162000000,
+          "_id": "67a3e6c079efd774f15e2737",
+          "power": 65200000,
           "width": 2,
           "name": {
-            "en": "Wealth Generator",
-            "cn": "Wealth Generator",
-            "es": "Wealth Generator",
-            "pt": "Wealth Generator"
+            "en": "Stormcaller",
+            "cn": "Stormcaller",
+            "es": "Stormcaller",
+            "pt": "Stormcaller"
           },
           "description": {
-            "en": "Inspired by the spirit of giving, this miner powers through blocks with the energy of a Red Envelope Rush. It transforms every moment into a cascade of prosperity, spreading fortune and abundance in true celebratory style.",
-            "cn": "Inspired by the spirit of giving, this miner powers through blocks with the energy of a Red Envelope Rush. It transforms every moment into a cascade of prosperity, spreading fortune and abundance in true celebratory style.",
-            "es": "Inspired by the spirit of giving, this miner powers through blocks with the energy of a Red Envelope Rush. It transforms every moment into a cascade of prosperity, spreading fortune and abundance in true celebratory style.",
-            "pt": "Inspired by the spirit of giving, this miner powers through blocks with the energy of a Red Envelope Rush. It transforms every moment into a cascade of prosperity, spreading fortune and abundance in true celebratory style."
+            "en": "Summoning storms with a single spark, this miner commands the skies to rain down profits!",
+            "cn": "Summoning storms with a single spark, this miner commands the skies to rain down profits!",
+            "es": "Summoning storms with a single spark, this miner commands the skies to rain down profits!",
+            "pt": "Summoning storms with a single spark, this miner commands the skies to rain down profits!"
           },
           "created_by_title": {
             "link": "",
@@ -2777,23 +2438,23 @@
           },
           "level": 3,
           "type": "merge",
-          "filename": "wealth_generator",
+          "filename": "stormcaller",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 2200,
+          "bonus": 1600,
           "is_in_set": false
         }
       },
       {
-        "id": "6a16e7d1b94e4ce33de85dfe",
-        "item_id": "6a16e4c7da9a87b6009c2a42",
+        "id": "6a1eb6dcb94e4ce33de85ea4",
+        "item_id": "6a1ea3afda9a87b600a5f05e",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 30,
+        "required_level": 25,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -2808,28 +2469,28 @@
           "max": 0
         },
         "item": {
-          "_id": "6a16e4c7da9a87b6009c2a42",
-          "power": 400000000,
+          "_id": "6a1ea3afda9a87b600a5f05e",
+          "power": 300000000,
           "width": 2,
           "name": {
-            "en": "Smoke Rack",
-            "cn": "Smoke Rack",
-            "es": "Smoke Rack",
-            "pt": "Smoke Rack"
+            "en": "Power Master",
+            "cn": "Power Master",
+            "es": "Power Master",
+            "pt": "Power Master"
           },
           "description": {
-            "en": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "cn": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "es": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards.",
-            "pt": "A festive burst of colorful energy designed to smash through algorithms and shower your data racks with sweet crypto rewards."
+            "en": "Become a true master and unleash mystical power of hidden chains!",
+            "cn": "Become a true master and unleash mystical power of hidden chains!",
+            "es": "Become a true master and unleash mystical power of hidden chains!",
+            "pt": "Become a true master and unleash mystical power of hidden chains!"
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 4,
+          "level": 3,
           "type": "merge",
-          "filename": "smoke_rack",
+          "filename": "power_master",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
@@ -2839,158 +2500,191 @@
           "bonus": 6500,
           "is_in_set": false
         }
+      },
+      {
+        "id": "6a1eb6dcb94e4ce33de85ea6",
+        "item_id": "6a1ea3afda9a87b600a5f065",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 26,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a1ea3afda9a87b600a5f065",
+          "power": 800000000,
+          "width": 2,
+          "name": {
+            "en": "Power Master",
+            "cn": "Power Master",
+            "es": "Power Master",
+            "pt": "Power Master"
+          },
+          "description": {
+            "en": "Become a true master and unleash mystical power of hidden chains!",
+            "cn": "Become a true master and unleash mystical power of hidden chains!",
+            "es": "Become a true master and unleash mystical power of hidden chains!",
+            "pt": "Become a true master and unleash mystical power of hidden chains!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "power_master",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 8000,
+          "is_in_set": false
+        }
       }
     ],
     "levels_config": [
       {
         "level": 1,
-        "level_xp": 3000,
-        "required_xp": 3000
+        "level_xp": 2000,
+        "required_xp": 2000
       },
       {
         "level": 2,
-        "level_xp": 9000,
-        "required_xp": 12000
+        "level_xp": 8000,
+        "required_xp": 10000
       },
       {
         "level": 3,
-        "level_xp": 13000,
-        "required_xp": 25000
+        "level_xp": 4000,
+        "required_xp": 14000
       },
       {
         "level": 4,
-        "level_xp": 35000,
-        "required_xp": 60000
+        "level_xp": 16000,
+        "required_xp": 30000
       },
       {
         "level": 5,
-        "level_xp": 14000,
-        "required_xp": 74000
+        "level_xp": 77000,
+        "required_xp": 107000
       },
       {
         "level": 6,
-        "level_xp": 25000,
-        "required_xp": 99000
+        "level_xp": 30000,
+        "required_xp": 137000
       },
       {
         "level": 7,
-        "level_xp": 29000,
-        "required_xp": 128000
+        "level_xp": 54000,
+        "required_xp": 191000
       },
       {
         "level": 8,
-        "level_xp": 75000,
-        "required_xp": 203000
+        "level_xp": 63000,
+        "required_xp": 254000
       },
       {
         "level": 9,
-        "level_xp": 22000,
-        "required_xp": 225000
+        "level_xp": 167000,
+        "required_xp": 421000
       },
       {
         "level": 10,
-        "level_xp": 41000,
-        "required_xp": 266000
+        "level_xp": 48000,
+        "required_xp": 469000
       },
       {
         "level": 11,
-        "level_xp": 45000,
-        "required_xp": 311000
+        "level_xp": 150000,
+        "required_xp": 619000
       },
       {
         "level": 12,
-        "level_xp": 500000,
-        "required_xp": 811000
+        "level_xp": 440000,
+        "required_xp": 1059000
       },
       {
         "level": 13,
-        "level_xp": 60000,
-        "required_xp": 871000
+        "level_xp": 820000,
+        "required_xp": 1879000
       },
       {
         "level": 14,
-        "level_xp": 250000,
-        "required_xp": 1121000
+        "level_xp": 320000,
+        "required_xp": 2199000
       },
       {
         "level": 15,
-        "level_xp": 750000,
-        "required_xp": 1871000
+        "level_xp": 560000,
+        "required_xp": 2759000
       },
       {
         "level": 16,
-        "level_xp": 1550000,
-        "required_xp": 3421000
+        "level_xp": 600000,
+        "required_xp": 3359000
       },
       {
         "level": 17,
-        "level_xp": 180000,
-        "required_xp": 3601000
+        "level_xp": 1100000,
+        "required_xp": 4459000
       },
       {
         "level": 18,
-        "level_xp": 330000,
-        "required_xp": 3931000
+        "level_xp": 410000,
+        "required_xp": 4869000
       },
       {
         "level": 19,
-        "level_xp": 340000,
-        "required_xp": 4271000
+        "level_xp": 730000,
+        "required_xp": 5599000
       },
       {
         "level": 20,
-        "level_xp": 620000,
-        "required_xp": 4891000
+        "level_xp": 800000,
+        "required_xp": 6399000
       },
       {
         "level": 21,
-        "level_xp": 220000,
-        "required_xp": 5111000
+        "level_xp": 1700000,
+        "required_xp": 8099000
       },
       {
         "level": 22,
-        "level_xp": 400000,
-        "required_xp": 5511000
+        "level_xp": 1100000,
+        "required_xp": 9199000
       },
       {
         "level": 23,
-        "level_xp": 420000,
-        "required_xp": 5931000
+        "level_xp": 950000,
+        "required_xp": 10149000
       },
       {
         "level": 24,
-        "level_xp": 900000,
-        "required_xp": 6831000
+        "level_xp": 1250000,
+        "required_xp": 11399000
       },
       {
         "level": 25,
-        "level_xp": 1400000,
-        "required_xp": 8231000
+        "level_xp": 3500000,
+        "required_xp": 14899000
       },
       {
         "level": 26,
-        "level_xp": 750000,
-        "required_xp": 8981000
-      },
-      {
-        "level": 27,
-        "level_xp": 450000,
-        "required_xp": 9431000
-      },
-      {
-        "level": 28,
-        "level_xp": 650000,
-        "required_xp": 10081000
-      },
-      {
-        "level": 29,
-        "level_xp": 5000000,
-        "required_xp": 15081000
-      },
-      {
-        "level": 30,
-        "level_xp": 8000000,
-        "required_xp": 23081000
+        "level_xp": 10000000,
+        "required_xp": 24899000
       }
     ]
   }

@@ -15786,7 +15786,7 @@
     "power": "1.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "terror_core.gif"
@@ -16062,7 +16062,7 @@
     "power": "260.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "celebration_wreck.gif"
@@ -16854,7 +16854,7 @@
     "power": "7.250 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "crimson_sparkcaster.gif"
@@ -18346,5 +18346,17 @@
     "can_be_merged": true,
     "cells": 2,
     "filename": "pinebyte_express.gif"
+  },
+  {
+    "id": "6a1ea3afda9a87b600a5f04c",
+    "name": "Power Master",
+    "bonus": 13,
+    "power": "20.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "power_master.gif"
   }
 ]
