@@ -181,7 +181,7 @@
   border-radius: 10px;
   padding: 1.5rem;
   width: 90%;
-  max-width: 520px;
+  max-width: 580px;
   max-height: 90vh;
   overflow-y: auto;
 }
@@ -244,6 +244,23 @@
   opacity: 0.5;
 }
 
+.rooms-ai-help-hint {
+  border: 1px solid #ffc107;
+  color: #ffc107;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin: 0.2rem 0rem;
+  display: inline-block;
+}
+
+.rooms-ai-help-hint-icon {
+  color: var(--accent);
+  font-weight: 800;
+}
+
 .rooms-ai-instructions {
   background: var(--secondary);
   border-radius: 6px;
@@ -276,6 +293,79 @@
 
 .rooms-ai-instructions a:hover {
   text-decoration: underline;
+}
+
+/* Steps with help tooltips */
+.rooms-ai-steps {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.rooms-ai-step {
+  margin-bottom: 0.15rem;
+}
+
+.rooms-ai-step-header {
+  display: inline;
+}
+
+.rooms-ai-step-text {
+  /* inline with the li marker */
+}
+
+.rooms-ai-help-btn {
+  width: 13px;
+  height: 13px;
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 3px;
+  transition: background 0.15s, color 0.15s;
+  margin-top: 4px;
+}
+
+.rooms-ai-help-btn:hover,
+.rooms-ai-help-btn.active {
+  background: var(--accent);
+  color: var(--text-secondary);
+}
+
+.rooms-ai-help-detail {
+  background: var(--primary);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.6rem;
+  margin: 0.3rem 0 0.5rem;
+  animation: rooms-ai-help-slidedown 0.2s ease-out;
+}
+
+@keyframes rooms-ai-help-slidedown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rooms-ai-help-text {
+  font-size: 0.65rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.rooms-ai-help-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid var(--secondary);
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.rooms-ai-help-img:hover {
+  border-color: var(--accent);
 }
 
 .rooms-ai-network-content {

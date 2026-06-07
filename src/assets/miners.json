@@ -18358,5 +18358,89 @@
     "can_be_merged": true,
     "cells": 2,
     "filename": "power_master.gif"
+  },
+  {
+    "id": "6a1ee69bda9a87b600a73af3",
+    "name": "Abyss Bite",
+    "bonus": 12,
+    "power": "38.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "abyss_bite.gif"
+  },
+  {
+    "id": "6a1ee788da9a87b600a73ef5",
+    "name": "Abyss Hunter",
+    "bonus": 18,
+    "power": "45.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "abyss_hunter.gif"
+  },
+  {
+    "id": "6a216ec6728342e342e3513a",
+    "name": "Big Catch",
+    "bonus": 12,
+    "power": "100.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "big_catch.gif"
+  },
+  {
+    "id": "6a217123728342e342e35a27",
+    "name": "Sleeper's Visage",
+    "bonus": 10,
+    "power": "300.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "sleepers_visage.gif"
+  },
+  {
+    "id": "6a21749f728342e342e3639e",
+    "name": "Number One",
+    "bonus": 12,
+    "power": "45.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "number_one.gif"
+  },
+  {
+    "id": "6a2188b0728342e342e4253f",
+    "name": "Sleeper's Maw",
+    "bonus": 7,
+    "power": "70.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "sleepers_maw.gif"
+  },
+  {
+    "id": "6a22a1c2728342e342e58d17",
+    "name": "Pink Rig",
+    "bonus": 3,
+    "power": "500.000 Th/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "pink_rig.gif"
   }
 ]

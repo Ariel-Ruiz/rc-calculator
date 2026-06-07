@@ -41,6 +41,7 @@
       <div class="mp-top-bar">
         <div class="mp-tabs">
           <button :class="['mp-tab', { active: activeTab === 'sell' }]" @click="activeTab = 'sell'">SELL</button>
+          <!-- <button :class="['mp-tab', { active: activeTab === 'buy' }]" @click="activeTab = 'buy'">BUY</button> -->
           <button :class="['mp-tab', 'mp-tab-disabled']" disabled title="Coming soon">BUY</button>
         </div>
         <div class="mp-top-right">

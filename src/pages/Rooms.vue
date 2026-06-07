@@ -865,7 +865,7 @@
     </div>
 
     <!-- Auto Import Modal -->
-    <div v-if="showAutoImport" class="rooms-confirm-overlay" @click.self="showAutoImport = null">
+    <div v-if="showAutoImport" class="rooms-confirm-overlay" @click.self="showAutoImport = null; autoImportHelpOpen = null">
       <div class="rooms-auto-import-modal">
         <!-- Step 1: Select method -->
         <template v-if="showAutoImport === 'select'">
@@ -894,15 +894,30 @@
 
         <!-- Step 2: Network import -->
         <template v-if="showAutoImport === 'network'">
-          <h2 class="rooms-ai-title">Network (F12)</h2>
+          <h2 class="rooms-ai-title">Network</h2>
           <div class="rooms-ai-instructions">
             <b>{{ t.rooms?.ai_how_to || 'How to get the data:' }}</b>
-            <ol>
-              <li>{{ t.rooms?.ai_step1 || 'Go to' }} <a class="source-link" href="https://rollercoin.com/game" target="_blank">rollercoin.com/game</a></li>
-              <li>{{ t.rooms?.ai_step2 || 'Press F12 to open DevTools → Network tab' }}</li>
-              <li>{{ t.rooms?.ai_step3 || 'Reload the page (F5)' }}</li>
-              <li>{{ t.rooms?.ai_step4 || 'Search for "room-config" in the filter' }}</li>
-              <li>{{ t.rooms?.ai_step5 || 'Click the request → Response tab → Copy all' }}</li>
+            <div class="rooms-ai-help-hint" v-html="(t.rooms?.ai_help_hint || 'Click {?} for help').replace('{?}', '<span class=\'rooms-ai-help-hint-icon\'>?</span>')"></div>
+            <ol class="rooms-ai-steps">
+              <li v-for="step in 7" :key="step" class="rooms-ai-step">
+                <div class="rooms-ai-step-header">
+                  <span class="rooms-ai-step-text" v-html="getStepText(step)"></span>
+                  <button
+                    class="rooms-ai-help-btn"
+                    :class="{ active: autoImportHelpOpen === step }"
+                    @click="autoImportHelpOpen = autoImportHelpOpen === step ? null : step"
+                  >?</button>
+                </div>
+                <div v-if="autoImportHelpOpen === step" class="rooms-ai-help-detail">
+                  <div class="rooms-ai-help-text">{{ t.rooms?.['ai_help' + step] }}</div>
+                  <img
+                    v-if="getAutoImportHelpImg(step)"
+                    :src="getAutoImportHelpImg(step)"
+                    class="rooms-ai-help-img"
+                    @click="previewImage = getAutoImportHelpImg(step)"
+                  />
+                </div>
+              </li>
             </ol>
           </div>
           <div class="rooms-ai-network-content">
@@ -941,6 +956,7 @@ import exampleSell from '../assets/example_sell.png'
 import defaultMinerImg from '../assets/miners/default.svg'
 let networkExampleImg = null
 try { networkExampleImg = new URL('../assets/example_network_import.png', import.meta.url).href } catch (e) {}
+const autoImportHelpImages = import.meta.glob('../assets/rooms/autoimport/*.png', { eager: true })
 import minersData from '../assets/miners.json'
 import racksData from '../assets/racks.json'
 import setsData from '../assets/sets.json'
@@ -1076,6 +1092,7 @@ export default {
       autoImportText: '',
       autoImportError: '',
       autoImportSuccess: '',
+      autoImportHelpOpen: null,
       networkExampleImg,
       manualSelectedMiners: {},
       manualAddStep: 'select',
@@ -1811,6 +1828,17 @@ export default {
     clearImport() { this.importText = '' },
 
     // ========== AUTO IMPORT FROM NETWORK ==========
+    getStepText(step) {
+      if (step === 1) {
+        return (this.t.rooms?.ai_step1 || 'Go to') + ' <a class="source-link" href="https://rollercoin.com/game" target="_blank">rollercoin.com/game</a>'
+      }
+      return this.t.rooms?.['ai_step' + step] || ''
+    },
+    getAutoImportHelpImg(step) {
+      const key = `../assets/rooms/autoimport/step${step}.png`
+      const mod = autoImportHelpImages[key]
+      return mod ? mod.default : ''
+    },
     importFromNetwork() {
       this.autoImportError = ''
       this.autoImportSuccess = ''

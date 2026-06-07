@@ -15,49 +15,49 @@
         <router-link
           to="/"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/' }"
+          :class="{ active: $route.name === 'Home' }"
         >
           {{ t.nav && t.nav.profit }}
         </router-link>
         <router-link
           to="/rollertap"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/rollertap', }"
+          :class="{ active: $route.name === 'Rollertap' }"
         >
           {{ t.nav && t.nav.rollertap }}
         </router-link>
         <router-link
           to="/current-progression"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/current-progression' }"
+          :class="{ active: $route.name === 'PE' }"
         >
           {{ t.nav && t.nav.progression }}
         </router-link>
         <router-link
           to="/burning-event"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/burning-event' }"
+          :class="{ active: $route.name === 'BurningEvent' }"
         >
           {{ t.nav && t.nav.burning }}
         </router-link>
         <router-link
           to="/rooms"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/rooms' }"
+          :class="{ active: $route.name === 'Rooms' }"
         >
           {{ t.nav && t.nav.rooms }}
         </router-link>
         <router-link
           to="/hamsters"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/hamsters' }"
+          :class="{ active: $route.name === 'Hamsters' }"
         >
           {{ t.nav && t.nav.hamsters }}
         </router-link>
         <router-link
           to="/marketplace"
           @click.native="toggleMenu"
-          :class="{ active: $route.path === '/marketplace', }"
+          :class="{ active: $route.name === 'Marketplace' }"
         >
           {{ t.nav && t.nav.marketplace }}
         </router-link>

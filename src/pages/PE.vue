@@ -143,7 +143,7 @@ export default {
   name: 'PE',
   inject: ['i18n'],
   data() {
-    const boxesPrices = [1.45, 3.45, 8.95, 22.95]
+    const boxesPrices = [1.99, 3.99, 11.99, 29.99]
     const discounts = [0, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
     const maxMultiplier = PeData.event.event.max_multiplier / 100
     const mult = []
@@ -167,7 +167,7 @@ export default {
         discount: 0,
         buy: 0,
         buyFinal: 0,
-        boxes: 1.45
+        boxes: 1.99
       },
       rentabilityScore: 0,
       recomendedMultiplier: [],
@@ -206,7 +206,7 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.17
+      let phXRLT = 0.8
       let feeXBox = 0.15
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
