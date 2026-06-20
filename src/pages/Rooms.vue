@@ -2,7 +2,7 @@
   <div class="rooms-page">
     <!-- Loading overlay -->
     <div v-if="loading" class="rooms-loading-overlay">
-      <div class="rooms-loading-spinner"></div>
+      <img src="../assets/duck.gif" alt="Loading" class="loading-duck" />
     </div>
     <!-- ========== LEFT PANEL - IMPORT ========== -->
     <div class="rooms-import">
@@ -38,6 +38,17 @@
       <div class="rooms-import-buttons">
         <button class="rooms-btn-clear-rooms" @click="showClearRoomsConfirm = true">{{ t.rooms?.clear_rooms }}</button>
         <button class="rooms-btn-clear" @click="showClearConfirm = true">{{ t.rooms?.clear_all }}</button>
+      </div>
+
+      <!-- Racks Power -->
+      <div v-if="rackBonusExtra > 0" class="rooms-racks-power">
+        <div class="rooms-racks-power-title">
+          <span class="rooms-racks-power-help">?
+            <span class="rooms-racks-power-tooltip">{{ t.rooms?.racks_power_tooltip || 'Total extra power contributed by racks with bonus applied to the miners inside them.' }}</span>
+          </span>
+          {{ t.rooms?.racks_power || 'Racks Power' }}
+        </div>
+        <div class="rooms-racks-power-value">+{{ formatPower(rackBonusExtra) }}</div>
       </div>
 
       <!-- Active Sets -->
@@ -77,19 +88,49 @@
       <div class="rooms-top-section">
         <div class="rooms-description-box">
           <p class="rooms-description" v-html="t.rooms?.description"></p>
+          <div v-if="!hiddenTips.temp_power" class="rooms-desc-warning">
+            <span v-html="t.rooms?.warning_temp_power"></span>
+            <span class="rooms-warning-close" @click="dismissTip('temp_power')">&times;</span>
+          </div>
+          <div v-if="!hiddenTips.room_delay" class="rooms-desc-warning">
+            <span v-html="t.rooms?.warning_room_delay"></span>
+            <span class="rooms-warning-close" @click="dismissTip('room_delay')">&times;</span>
+          </div>
         </div>
 
         <div class="rooms-sim-area">
-          <!-- Simulation toggle button (separate) -->
-          <button
-            :class="['rooms-sim-btn', { active: simulationActive }]"
-            @click="toggleSimulation"
-          >
-            {{ simulationActive ? t.rooms?.simulation_on_label : t.rooms?.simulation_off_label }}
-          </button>
+          <!-- Temporary bonus input -->
+          <div class="rooms-temp-bonus-bar">
+            <label class="rooms-temp-bonus-label">
+              <span class="rooms-temp-bonus-help">?
+                <span class="rooms-temp-bonus-tooltip">{{ t.rooms?.temp_bonus_tooltip || 'Temporary bonus not counted for league promotion (freon, hamsters, etc.)' }}</span>
+              </span>
+              {{ t.rooms?.temp_bonus || 'Temp Bonus' }}
+            </label>
+            <div class="rooms-temp-bonus-input-group">
+              <input
+                type="number"
+                class="rooms-temp-bonus-input"
+                :value="tempBonus"
+                @input="tempBonus = parseFloat($event.target.value) || 0"
+                min="0"
+                step="0.01"
+                placeholder="0"
+              />
+              <span class="rooms-temp-bonus-pct">%</span>
+            </div>
+          </div>
 
           <!-- Stats block -->
           <div class="rooms-stats-block">
+            <!-- Power with temp bonus (top line, only if tempBonus > 0) -->
+            <div v-if="tempBonus > 0" class="rooms-stats-box rooms-stats-temp">
+              <div class="rooms-stats-line">
+                <span class="rooms-stat-power">{{ formatPower(totalPowerWithTemp) }}</span>
+                <span class="rooms-stat-sep">|</span>
+                <span class="rooms-stat-bonus">{{ totalBonusWithTemp.toFixed(2) }}%</span>
+              </div>
+            </div>
             <!-- Power / Bonus centered -->
             <div class="rooms-stats-box">
               <div class="rooms-stats-line">
@@ -104,17 +145,14 @@
                 </span>
                 <span class="rooms-stat-sep">|</span>
                 <span :class="['rooms-stat-change', bonusChange > 0 ? 'positive' : bonusChange < 0 ? 'negative' : 'neutral']">
+                  <span v-if="bonusChange !== 0" v-html="bonusChange > 0 ? '&#9650;' : '&#9660;'"></span>
                   {{ Math.abs(bonusChange).toFixed(2) }}%
                 </span>
               </div>
             </div>
-            <!-- Raw miners power -->
+            <!-- Raw miners power + undo/redo -->
             <div class="rooms-raw-power-bar">
               <span class="rooms-raw-power-text">{{ t.rooms?.miners_power }}: {{ formatPower(rawPower) }}</span>
-            </div>
-            <!-- Miners count + undo/redo -->
-            <div class="rooms-miners-count-bar">
-              <span class="rooms-miners-count-text">{{ t.rooms?.total_miners_in_rooms }}: {{ totalMinersInRooms }}</span>
               <div class="rooms-undo-redo">
                 <button @click="undo" :disabled="historyIndex <= 0" :title="t.rooms?.undo">&#8630;</button>
                 <button @click="redo" :disabled="historyIndex >= history.length - 1" :title="t.rooms?.redo">&#8631;</button>
@@ -273,6 +311,14 @@
         </button>
       </div>
 
+      <!-- Simulation toggle button -->
+      <button
+        :class="['rooms-sim-btn', { active: simulationActive }]"
+        @click="toggleSimulation"
+      >
+        {{ simulationActive ? t.rooms?.simulation_on_label : t.rooms?.simulation_off_label }}
+      </button>
+
       <!-- Manual mode toggle -->
       <button
         :class="['rooms-manual-btn', { active: manualMode }]"
@@ -371,14 +417,15 @@
                   <div :class="['rooms-sort-option', { active: minerSortBy === 'bonus-asc' }]" @click="minerSortBy = 'bonus-asc'; showMinerSort = false">Bonus &#9650;</div>
                 </div>
               </div>
+              <button :class="['rooms-list-btn', { active: editMode }]" @click="editMode = !editMode">{{ t.rooms?.edit || 'Edit' }}</button>
             </div>
             <div v-if="filteredAvailableMiners.length > 0" class="rooms-list-grid">
               <div
                 v-for="miner in stackedAvailableMiners"
                 :key="miner.name + '|' + miner.power + '|' + miner.bonus"
                 :class="['rooms-list-card', { 'added-manually': miner.addedManually, 'manual-selected': !manualMode && miner._instances.some(inst => manualSelectedMiners[inst.uid]), 'removing': minerRemovalKey === (miner.name + '|' + miner.power + '|' + miner.bonus), 'adding': minerAddKey === (miner.name + '|' + miner.power + '|' + miner.bonus) }]"
-                @click="!manualMode && selectStackedMiner(miner)"
-                @mousedown="manualMode && onManualMouseDown('miner', miner._instances[0], $event)"
+                @click="editMode ? openEditMiner(miner) : (!manualMode && selectStackedMiner(miner))"
+                @mousedown="!editMode && manualMode && onManualMouseDown('miner', miner._instances[0], $event)"
               >
                 <div class="rooms-list-card-actions" @click.stop @mousedown.stop>
                   <button class="rooms-list-card-delete" @click="startMinerRemoval(miner)">&times;</button>
@@ -415,6 +462,9 @@
                         class="badge-icon"
                       />
                     </div>
+                  </div>
+                  <div v-if="editMode && findMiner(miner)" class="rooms-edit-pencil-overlay">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rooms-edit-pencil-svg"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
                   </div>
                 </div>
                 <div class="rooms-list-card-info">
@@ -945,6 +995,72 @@
         </template>
       </div>
     </div>
+    <!-- Edit Miner Modal -->
+    <div v-if="editMiner" class="rooms-modal-overlay" @click="editMiner = null">
+      <div class="rooms-edit-modal" @click.stop>
+        <button class="rooms-modal-close" @click="editMiner = null">&times;</button>
+        <div class="rooms-edit-modal-title">{{ t.rooms?.edit_miner || 'EDIT MINER' }}</div>
+        <div class="rooms-edit-modal-desc">{{ t.rooms?.edit_miner_desc || 'Edit miner data. Changes are saved locally and reported for review.' }}</div>
+        <div class="rooms-edit-modal-body">
+          <div class="rooms-edit-modal-img">
+            <img :src="getMinerImageUrl(editMiner)" :alt="editForm.name" />
+            <div class="rooms-edit-modal-badges">
+              <img
+                v-if="editMiner.isLegacy"
+                :src="getAssetUrl('others/legacy.png')"
+                alt="legacy"
+                class="badge-icon"
+              />
+              <img
+                v-else-if="getRarityLevel(editMiner.name)"
+                :src="getLevelIcon(editMiner.name)"
+                alt="level"
+                class="badge-icon"
+              />
+              <img
+                v-if="editMiner.isSet"
+                :src="getAssetUrl('others/set.png')"
+                alt="set"
+                class="badge-icon"
+              />
+            </div>
+          </div>
+          <div class="rooms-edit-modal-fields">
+            <div class="rooms-edit-field">
+              <input type="text" v-model="editForm.name" class="rooms-edit-input rooms-edit-name" readonly />
+            </div>
+            <div class="rooms-edit-field rooms-edit-field-row">
+              <label class="rooms-edit-label">POWER</label>
+              <input type="number" v-model.number="editForm.powerValue" class="rooms-edit-input" step="0.001" />
+              <select v-model="editForm.powerUnit" class="rooms-edit-select">
+                <option value="Gh/s">Gh/s</option>
+                <option value="Th/s">Th/s</option>
+                <option value="Ph/s">Ph/s</option>
+                <option value="Eh/s">Eh/s</option>
+                <option value="Zh/s">Zh/s</option>
+              </select>
+            </div>
+            <div class="rooms-edit-field rooms-edit-field-row">
+              <label class="rooms-edit-label">BONUS</label>
+              <div class="rooms-edit-input-group">
+                <input type="number" v-model.number="editForm.bonus" class="rooms-edit-input" step="0.01" />
+                <span class="rooms-edit-input-suffix">%</span>
+              </div>
+            </div>
+            <div class="rooms-edit-field">
+              <div class="rooms-edit-toggle-group">
+                <button :class="['rooms-edit-toggle', { active: editForm.cells === 1 }]" @click="editForm.cells = 1">1 CELL</button>
+                <button :class="['rooms-edit-toggle', { active: editForm.cells === 2 }]" @click="editForm.cells = 2">2 CELLS</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rooms-edit-modal-actions">
+          <button class="rooms-edit-cancel" @click="editMiner = null">{{ t.rooms?.cancel || 'Cancel' }}</button>
+          <button class="rooms-edit-save" @click="saveEditMiner">{{ t.rooms?.save || 'Save' }}</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -957,7 +1073,22 @@ import defaultMinerImg from '../assets/miners/default.svg'
 let networkExampleImg = null
 try { networkExampleImg = new URL('../assets/example_network_import.png', import.meta.url).href } catch (e) {}
 const autoImportHelpImages = import.meta.glob('../assets/rooms/autoimport/*.png', { eager: true })
+import { db } from '../firebase'
+import { ref as dbRef, push } from 'firebase/database'
 import minersData from '../assets/miners.json'
+
+// Apply saved miner edits from localStorage
+const savedEdits = JSON.parse(localStorage.getItem('minerEdits') || '{}')
+for (const key of Object.keys(savedEdits)) {
+  const edit = savedEdits[key]
+  const miner = minersData.find(m => m.id === edit.id)
+  if (miner) {
+    if (edit.power !== undefined) miner.power = edit.power
+    if (edit.bonus !== undefined) miner.bonus = edit.bonus
+    if (edit.cells !== undefined) miner.cells = edit.cells
+    if (edit.can_be_sold !== undefined) miner.can_be_sold = edit.can_be_sold
+  }
+}
 import racksData from '../assets/racks.json'
 import setsData from '../assets/sets.json'
 import roomSkinsData from '../assets/rooms.json'
@@ -1030,6 +1161,11 @@ export default {
       previousRoom: 1,
       slideDirection: 'room-slide-right',
       rooms: { 1: {}, 2: {}, 3: {}, 4: {} },
+      hiddenTips: JSON.parse(localStorage.getItem('roomsHiddenTips') || '{}'),
+      editMode: false,
+      editMiner: null,
+      editForm: { name: '', power: '', bonus: '', cells: 1, can_be_sold: false },
+      tempBonus: parseFloat(localStorage.getItem('roomsTempBonus')) || 0,
       simulationActive: false,
       showSaveModal: false,
       simulationBackup: null,
@@ -1103,6 +1239,9 @@ export default {
     }
   },
   watch: {
+    tempBonus(val) {
+      localStorage.setItem('roomsTempBonus', String(val))
+    },
     minerSearch(val) {
       clearTimeout(this.minerSearchTimer)
       this.minerSearchTimer = setTimeout(() => {
@@ -1344,6 +1483,16 @@ export default {
     // Effective power = rawPower * (1 + generalBonus/100) + rackBonusExtra + setPowerExtra
     totalPower() {
       return this.rawPower * (1 + this.totalBonus / 100) + this.rackBonusExtra + this.setPowerExtra
+    },
+    // Power with temp bonus applied on raw power
+    totalPowerWithTemp() {
+      if (this.tempBonus > 0) {
+        return this.rawPower * (1 + (this.totalBonus + this.tempBonus) / 100) + this.rackBonusExtra + this.setPowerExtra
+      }
+      return this.totalPower
+    },
+    totalBonusWithTemp() {
+      return this.totalBonus + this.tempBonus
     },
     // Active sets with their achieved bonuses
     activeSets() {
@@ -1865,13 +2014,28 @@ export default {
           const netName = (m.name || '').toLowerCase().trim()
           const netPowerGhs = m.power || 0
 
+          // Build expected name with rarity prefix for accurate matching
+          const levelMap = { 1: 'Uncommon', 2: 'Rare', 3: 'Epic', 4: 'Legendary', 5: 'Unreal' }
+          const prefix = m.type === 'merge' && m.level > 0 ? (levelMap[m.level] || '') : ''
+          const expectedName = prefix ? `${prefix} ${m.name}` : m.name
+
           // Check if we already have a matching miner (not yet claimed for this check)
           const existing = this.loadedMiners.find(lm => {
             if (claimedForCheck.has(lm.uid)) return false
-            const lmClean = this.getCleanName(lm.name).toLowerCase().trim()
-            if (lmClean !== netName) return false
-            const lmPower = this.parsePowerToGhs(lm.power)
-            return Math.abs(lmPower - netPowerGhs) < Math.max(netPowerGhs * 0.01, 1)
+            // Compare full names (including rarity prefix) for exact match
+            if (lm.name.toLowerCase().trim() === expectedName.toLowerCase().trim()) {
+              const lmPower = this.parsePowerToGhs(lm.power)
+              return Math.abs(lmPower - netPowerGhs) < Math.max(netPowerGhs * 0.01, 1)
+            }
+            // Fallback: match by clean name only if neither has a rarity prefix
+            const lmRarity = this.getRarityLevel(lm.name)
+            if (!lmRarity && !prefix) {
+              const lmClean = this.getCleanName(lm.name).toLowerCase().trim()
+              if (lmClean !== netName) return false
+              const lmPower = this.parsePowerToGhs(lm.power)
+              return Math.abs(lmPower - netPowerGhs) < Math.max(netPowerGhs * 0.01, 1)
+            }
+            return false
           })
 
           if (existing) {
@@ -1882,14 +2046,10 @@ export default {
             const cells = m.width || 2
             const minerId = m.miner_id || null
             const dbMiner = this.findMiner({ name: m.name, minerId })
-            // Build name with rarity prefix from merge level
-            const levelMap = { 1: 'Uncommon', 2: 'Rare', 3: 'Epic', 4: 'Legendary', 5: 'Unreal' }
-            const prefix = m.type === 'merge' && m.level > 0 ? (levelMap[m.level] || '') : ''
-            const minerName = prefix ? `${prefix} ${m.name}` : m.name
             const newUid = uidCounter++
             this.loadedMiners.push({
               uid: newUid,
-              name: minerName,
+              name: expectedName,
               power, bonus, cells,
               minerId: dbMiner ? dbMiner.id : minerId,
               isSet: m.is_in_set || false,
@@ -2027,6 +2187,7 @@ export default {
     },
 
     _formatPower(ghs) {
+      if (ghs >= 1e12) return `${(ghs / 1e12).toFixed(3)} Zh/s`
       if (ghs >= 1e9) return `${(ghs / 1e9).toFixed(3)} Eh/s`
       if (ghs >= 1e6) return `${(ghs / 1e6).toFixed(3)} Ph/s`
       if (ghs >= 1e3) return `${(ghs / 1e3).toFixed(3)} Th/s`
@@ -2113,6 +2274,18 @@ export default {
         if (m.name === name && m.power === power && m.bonus === bonus) {
           this.loadedMiners.splice(i, 1)
           remaining--
+        }
+      }
+      // If no instances of this miner remain, clear its edit from localStorage
+      const stillExists = this.loadedMiners.some(m => m.name === name)
+      if (!stillExists) {
+        const dbMiner = this.findMiner({ name: this.getCleanName(name) })
+        if (dbMiner) {
+          const edits = JSON.parse(localStorage.getItem('minerEdits') || '{}')
+          if (edits[dbMiner.id]) {
+            delete edits[dbMiner.id]
+            localStorage.setItem('minerEdits', JSON.stringify(edits))
+          }
         }
       }
       this.minerRemovalKey = null
@@ -2301,6 +2474,7 @@ export default {
       this.currentRoom = 1
       this.history = []
       this.historyIndex = -1
+      localStorage.removeItem('minerEdits')
       this.saveToStorage()
       this.saveSnapshot()
     },
@@ -2417,10 +2591,11 @@ export default {
     // ========== POWER CALCULATIONS ==========
     parsePowerToGhs(powerStr) {
       if (!powerStr) return 0
-      const match = powerStr.match(/([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)/i)
+      const match = powerStr.match(/([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s|Zh\/s)/i)
       if (!match) return 0
       const value = parseFloat(match[1].replace(',', '.'))
       const unit = match[2].toLowerCase()
+      if (unit.includes('zh')) return value * 1e12
       if (unit.includes('eh')) return value * 1e9
       if (unit.includes('ph')) return value * 1e6
       if (unit.includes('th')) return value * 1e3
@@ -2428,6 +2603,7 @@ export default {
     },
 
     formatPower(ghsValue) {
+      if (Math.abs(ghsValue) >= 1e12) return `${(ghsValue / 1e12).toFixed(3)} Zh/s`
       if (Math.abs(ghsValue) >= 1e9) return `${(ghsValue / 1e9).toFixed(3)} Eh/s`
       if (Math.abs(ghsValue) >= 1e6) return `${(ghsValue / 1e6).toFixed(3)} Ph/s`
       if (Math.abs(ghsValue) >= 1e3) return `${(ghsValue / 1e3).toFixed(3)} Th/s`
@@ -2658,6 +2834,114 @@ export default {
       }
 
       return { selected, ep: this._buildRackAssignment(rackConfigs, selected).ep }
+    },
+
+    // Maximize raw power within EP limit by exploiting duplicates
+    // Duplicates only count bonus once, so filling slots with copies = max raw power per EP
+    _greedyMaxRawPower(minerData, rackConfigs, maxPowerGhs) {
+      const maxCells = rackConfigs.reduce((s, r) => s + r.size, 0)
+      if (!maxPowerGhs) return this._greedySelectWithRacks(minerData, rackConfigs, null, (a, b) => b.power - a.power)
+
+      // Group miners by name
+      const groups = {}
+      for (const m of minerData) {
+        const key = m.miner.name
+        if (!groups[key]) groups[key] = { miners: [], power: m.power, bonus: m.bonus, cells: m.cells }
+        groups[key].miners.push(m)
+      }
+
+      let bestSelected = null, bestRaw = -1
+
+      // Strategy A: for each group with 2+ copies, try filling mostly with that group
+      for (const key of Object.keys(groups)) {
+        const g = groups[key]
+        if (g.miners.length < 2) continue
+
+        const selected = []
+        let totalCells = 0
+
+        // Fill with copies of this miner first
+        for (const m of g.miners) {
+          if (totalCells + m.cells > maxCells) continue
+          selected.push(m)
+          totalCells += m.cells
+        }
+
+        // Check if within EP limit, remove from end if over
+        while (selected.length > 0) {
+          const ep = this._buildRackAssignment(rackConfigs, selected).ep
+          if (ep <= maxPowerGhs) break
+          selected.pop()
+          totalCells -= g.cells
+        }
+
+        // Fill remaining cells with other miners — prioritize duplicates of names already selected
+        const usedUids = new Set(selected.map(m => m.miner.uid))
+        const selNames = new Set(selected.map(m => m.miner.name))
+        const rest = minerData.filter(m => !usedUids.has(m.miner.uid))
+        // Sort: dupes of selected names first (no bonus cost), then by power desc
+        rest.sort((a, b) => {
+          const aDupe = selNames.has(a.miner.name) ? 1 : 0
+          const bDupe = selNames.has(b.miner.name) ? 1 : 0
+          if (bDupe !== aDupe) return bDupe - aDupe
+          return b.power - a.power
+        })
+        for (const m of rest) {
+          if (totalCells + m.cells > maxCells) continue
+          selected.push(m)
+          totalCells += m.cells
+          selNames.add(m.miner.name)
+          if (this._buildRackAssignment(rackConfigs, selected).ep > maxPowerGhs) {
+            selected.pop()
+            totalCells -= m.cells
+          }
+        }
+
+        const stats = this._buildRackAssignment(rackConfigs, selected)
+        if (stats.rawPower > bestRaw) {
+          bestRaw = stats.rawPower
+          bestSelected = [...selected]
+        }
+      }
+
+      // Strategy B: mix approach — sort all miners by power/bonus ratio (high power, low bonus = good)
+      // Then greedy fill, but when a miner is rejected (EP too high), skip to next
+      {
+        // Sort by: duplicates first (0 marginal bonus), then by power desc
+        const nameCount = {}
+        for (const m of minerData) nameCount[m.miner.name] = (nameCount[m.miner.name] || 0) + 1
+        const sorted = [...minerData].sort((a, b) => {
+          // Miners with more copies = better (more dupes available)
+          const aMulti = nameCount[a.miner.name] > 1 ? 1 : 0
+          const bMulti = nameCount[b.miner.name] > 1 ? 1 : 0
+          if (bMulti !== aMulti) return bMulti - aMulti
+          // Among same category, higher power first
+          return b.power - a.power
+        })
+
+        const selected = []
+        let totalCells = 0
+        for (const m of sorted) {
+          if (totalCells + m.cells > maxCells) continue
+          selected.push(m)
+          totalCells += m.cells
+          if (this._buildRackAssignment(rackConfigs, selected).ep > maxPowerGhs) {
+            selected.pop()
+            totalCells -= m.cells
+          }
+        }
+        const stats = this._buildRackAssignment(rackConfigs, selected)
+        if (stats.rawPower > bestRaw) {
+          bestRaw = stats.rawPower
+          bestSelected = [...selected]
+        }
+      }
+
+      if (!bestSelected || bestSelected.length === 0) {
+        return this._greedySelectWithRacks(minerData, rackConfigs, maxPowerGhs, (a, b) => b.power - a.power)
+      }
+
+      return { selected: bestSelected, ep: this._buildRackAssignment(rackConfigs, bestSelected).ep }
     },
 
     // Marginal greedy (limited candidates per step for performance)
@@ -2961,7 +3245,19 @@ export default {
         configs.push(fillRemaining(config))
       }
 
-      // Config 5: only 8-cell racks
+      // Config 5: lowest bonus racks first (for raw power priority — minimizes EP from racks)
+      {
+        const config = []
+        const sortedAsc = [...available].sort((a, b) => (a.bonus || 0) - (b.bonus || 0))
+        for (const ar of sortedAsc) {
+          for (let i = 0; i < ar.qty && config.length < totalSlots; i++) {
+            config.push({ ...ar })
+          }
+        }
+        if (config.length > 0) configs.push(config)
+      }
+
+      // Config 6: only 8-cell racks
       const racks8 = available.filter(r => r.size === 8).sort((a, b) => (b.bonus || 0) - (a.bonus || 0))
       if (racks8.length > 0) {
         const config = []
@@ -3211,17 +3507,13 @@ export default {
       const _isBetter = (candidate, current, config) => {
         if (!current) return true
         if (priority === 'default') return candidate.ep > current.ep
-        // For power/bonus priority: first maximize EP (get closest to limit), then use priority as tiebreaker
-        const epDiff = candidate.ep - current.ep
-        // If candidate has significantly more EP (>0.1% of limit), prefer it regardless of priority
-        if (maxPowerGhs && Math.abs(epDiff) > maxPowerGhs * 0.001) return epDiff > 0
-        // Similar EP - use priority metric as tiebreaker
+        // For power/bonus priority: directly compare the priority metric
         const cStats = this._buildRackAssignment(config, candidate.selected)
         const bStats = current._stats || this._buildRackAssignment(bestConfig, current.selected)
         current._stats = bStats
         if (priority === 'power') return cStats.rawPower > bStats.rawPower
         if (priority === 'bonus') return cStats.bonusTotal > bStats.bonusTotal
-        return epDiff > 0
+        return candidate.ep > current.ep
       }
 
       for (const config of rackConfigs) {
@@ -3233,6 +3525,10 @@ export default {
           this._greedySelectWithRacks(minerData, config, maxPowerGhs, (a, b) => b.bonus - a.bonus),
           ...(hasSetRacks ? [this._greedyWithSetCommit(minerData, config, maxPowerGhs)] : [])
         ]
+        // Extra strategy for power priority: favor duplicates (high power, low effective bonus)
+        if (priority === 'power') {
+          strategies.push(this._greedyMaxRawPower(minerData, config, maxPowerGhs))
+        }
 
         for (const s of strategies) {
           if (_isBetter(s, bestResult, config)) {
@@ -4450,6 +4746,92 @@ export default {
         totalBonus,
         rawPower
       }
+    },
+
+    dismissTip(key) {
+      this.hiddenTips = { ...this.hiddenTips, [key]: true }
+      localStorage.setItem('roomsHiddenTips', JSON.stringify(this.hiddenTips))
+    },
+
+    openEditMiner(miner) {
+      // Don't allow editing placeholder miners (not in our database)
+      const dbMiner = this.findMiner(miner)
+      if (!dbMiner) return
+
+      // Use the loaded miner's power/bonus (may be a rarity variant), not the base miner
+      const powerStr = miner.power || dbMiner.power
+      const match = powerStr.match(/([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s|Zh\/s)/i)
+      this.editMiner = miner
+      this.editForm = {
+        name: miner.name,
+        powerValue: match ? parseFloat(match[1].replace(',', '.')) : 0,
+        powerUnit: match ? match[2] : 'Ph/s',
+        bonus: parseFloat(miner.bonus) || 0,
+        cells: miner.cells || dbMiner.cells || 2,
+        can_be_sold: dbMiner.can_be_sold || false
+      }
+    },
+
+    saveEditMiner() {
+      const miner = this.editMiner
+      if (!miner) return
+      const dbMiner = this.findMiner(miner)
+      if (!dbMiner) { this.editMiner = null; return }
+
+      const oldData = { power: dbMiner.power, bonus: dbMiner.bonus, cells: dbMiner.cells, can_be_sold: dbMiner.can_be_sold }
+      const newPower = `${this.editForm.powerValue.toFixed(3)} ${this.editForm.powerUnit}`
+
+      dbMiner.power = newPower
+      dbMiner.bonus = this.editForm.bonus
+      dbMiner.cells = this.editForm.cells
+      dbMiner.can_be_sold = this.editForm.can_be_sold
+
+      // Save to localStorage
+      const edits = JSON.parse(localStorage.getItem('minerEdits') || '{}')
+      edits[dbMiner.id] = { id: dbMiner.id, name: dbMiner.name, power: dbMiner.power, bonus: dbMiner.bonus, cells: dbMiner.cells, can_be_sold: dbMiner.can_be_sold }
+      localStorage.setItem('minerEdits', JSON.stringify(edits))
+
+      // Send to Firebase for review
+      try {
+        push(dbRef(db, 'miners-edits'), {
+          minerId: dbMiner.id,
+          name: dbMiner.name,
+          oldData,
+          newData: { power: dbMiner.power, bonus: dbMiner.bonus, cells: dbMiner.cells, can_be_sold: dbMiner.can_be_sold },
+          timestamp: Date.now()
+        })
+      } catch (e) { /* silent */ }
+
+      // Update all loaded miner instances that match this miner
+      const oldPower = miner.power
+      const oldBonus = String(miner.bonus)
+      const oldName = miner.name
+      this.loadedMiners.forEach(lm => {
+        if (lm.name === oldName && lm.power === oldPower && String(lm.bonus) === oldBonus) {
+          lm.power = newPower
+          lm.bonus = String(this.editForm.bonus)
+          lm.cells = this.editForm.cells
+        }
+      })
+      // Also update miners placed in rooms
+      for (let r = 1; r <= 4; r++) {
+        Object.values(this.rooms[r]).forEach(slot => {
+          if (slot.miners) {
+            slot.miners.forEach(m => {
+              if (m && m.name === oldName && m.power === oldPower && String(m.bonus) === oldBonus) {
+                m.power = newPower
+                m.bonus = String(this.editForm.bonus)
+                m.cells = this.editForm.cells
+              }
+            })
+          }
+        })
+      }
+
+      // Reset maps so computed properties recalculate
+      this.minerImageCache = {}
+      this.saveToStorage()
+      this.editMiner = null
     },
 
     // ========== SIMULATION ==========

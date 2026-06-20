@@ -1,5 +1,8 @@
 <template>
   <div class="profit-container">
+    <div v-if="!pricesLoaded" class="rooms-loading-overlay">
+      <img src="../assets/duck.gif" alt="Loading" class="loading-duck" />
+    </div>
     <div class="profit-input">
       <h1 class="event-title">{{ t.profitTitle || 'Profit' }}</h1>
       <div class="event-subtitle">{{ t.profitSubtitle || 'Mining Rewards Calculator' }}</div>
@@ -67,12 +70,7 @@
         </div>
       </div>
 
-      <div v-if="!pricesLoaded" class="profit-loading">
-        <div class="profit-spinner"></div>
-        <span>Loading prices...</span>
-      </div>
-
-      <div v-else class="table-wrapper">
+      <div class="table-wrapper">
         <table id="resultTable">
           <thead>
             <tr>
@@ -215,10 +213,10 @@ export default {
       return this.i18n.t
     },
     rows() {
-      if (!this.pricesLoaded) return []
+      const defaultCalc = { perBlock: 0, perDay: 0, perWeek: 0, perMonth: 0, suffix: '', withdrawMin: null, withdrawDays: null }
       return this.parsedLines.map(p => ({
         p,
-        calc: this.computeForLine(p)
+        calc: this.pricesLoaded ? this.computeForLine(p) : defaultCalc
       }))
     }
   },

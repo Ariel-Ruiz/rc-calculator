@@ -9,7 +9,7 @@
     "build": "vite build && node scripts/generate-seo-pages.js && copy dist\\index.html dist\\404.html",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -t -d dist"
   },
   "dependencies": {
     "vue": "^2.7.16",

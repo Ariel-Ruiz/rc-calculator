@@ -8,6 +8,13 @@
         <div class="">/10</div>
       </div>
       <div class="rentability-score-text">{{ t.pe?.rentability_punctuation }}</div>
+      <div class="rentability-ratio-wrapper">
+        <span class="rentability-ratio-badge">Ratio: {{ rentabilityRatio }}</span>
+        <div class="ratio-tooltip">
+          <span>{{ t.pe?.ratio_tooltip || 'Cost/Reward ratio — how much RLT you spend vs what you get back. Lower is better: below 0.3 is excellent, above 1.0 is not worth it.' }}</span>
+          <div class="ratio-tooltip-arrow"></div>
+        </div>
+      </div>
       <div v-if="isEventActive" class='deadline'>
         {{ t.pe?.ends_on }} {{ eventEndDate }} 15:00 UTC
       </div>
@@ -170,6 +177,7 @@ export default {
         boxes: 1.99
       },
       rentabilityScore: 0,
+      rentabilityRatio: 0,
       recomendedMultiplier: [],
       boxesPrices,
       discounts,
@@ -206,47 +214,33 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.8
-      let feeXBox = 0.15
+      let phXRLT = 0.13
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
         switch (reward.type) {
           case 'money':
             switch (reward.currency) {
               case 'RLT': rewardsXRLT += reward.amount / 1e6; break
-              case 'RST': rewardsXRLT += reward.amount / 1e8; break
+              case 'RST': rewardsXRLT += reward.amount / 4e8; break
             }
             continue
-          // case 'power': rewardsXRLT += (reward.amount / 1e6) * phXRLT; continue
-          case 'miner': rewardsXRLT += (reward.item.power / 1e6) * phXRLT; continue
+          case 'miner':
+            if (reward.item.power >= 1e6) rewardsXRLT += (reward.item.power / 1e6) * phXRLT
+            continue
         }
       }
 
-      let maxBoxesToOpen = Math.ceil(rewardsXRLT / feeXBox)
+      // For every 100 RLT of rewards, recommend buying 30 RLT
+      let rltToBuy = rewardsXRLT * 0.4
+      let rawMultiplier = (rltToBuy * PeData.multiplier) + 1
 
-      let closestAbove = { m: null, diff: Infinity }
-      let closestBelow = { m: null, diff: Infinity }
+      // Round to nearest available multiplier
+      let closest = this.multipliers.reduce((prev, curr) =>
+        Math.abs(curr - rawMultiplier) < Math.abs(prev - rawMultiplier) ? curr : prev
+      )
 
-      for (let m of this.multipliers) {
-        let boxesToOpen = Math.ceil(
-          PeData.event.event.max_xp / ((this.taskPoints.boxes * this.boxesPrices[0]) * m)
-        )
-        let diff = boxesToOpen - maxBoxesToOpen
-
-        if (diff >= 0 && diff < closestAbove.diff) {
-          closestAbove = { m, diff }
-        }
-
-        if (diff <= 0 && Math.abs(diff) < closestBelow.diff) {
-          closestBelow = { m, diff: Math.abs(diff) }
-        }
-      }
-
-      let recomended = []
-      if (closestAbove.m !== null && closestAbove.m !== closestBelow.m) recomended.push(closestAbove.m)
-      if (closestBelow.m !== null) recomended.push(closestBelow.m)
-
-      let multiplier = recomended[0] || 1
+      let recomended = [closest]
+      let multiplier = closest
       let buy = ((multiplier - 1) / PeData.multiplier) | 0
       let buyFinal = parseFloat((buy - (buy * (this.calcConfig.discount / 100))).toFixed(2)) | 0
 
@@ -259,17 +253,28 @@ export default {
 
       this.recomendedMultiplier = recomended
 
-      let usdXRLT = buyFinal / rewardsXRLT
-      if (usdXRLT < 0.25) this.rentabilityScore = 10
-      else if (usdXRLT >= 0.25 && usdXRLT < 0.3) this.rentabilityScore = 9
-      else if (usdXRLT >= 0.3 && usdXRLT < 0.4) this.rentabilityScore = 8
-      else if (usdXRLT >= 0.4 && usdXRLT < 0.5) this.rentabilityScore = 7
-      else if (usdXRLT >= 0.5 && usdXRLT < 0.6) this.rentabilityScore = 6
-      else if (usdXRLT >= 0.6 && usdXRLT < 0.7) this.rentabilityScore = 5
-      else if (usdXRLT >= 0.7 && usdXRLT < 0.8) this.rentabilityScore = 4
-      else if (usdXRLT >= 0.8 && usdXRLT < 0.9) this.rentabilityScore = 3
-      else if (usdXRLT >= 0.9 && usdXRLT < 1) this.rentabilityScore = 2
-      else if (usdXRLT >= 1 && usdXRLT < 1.1) this.rentabilityScore = 1
+      let ratio = buy / rewardsXRLT
+      this.rentabilityRatio = ratio.toFixed(2)
+
+      if (ratio <= 0.3) this.rentabilityScore = 10
+      else if (ratio <= 0.35) this.rentabilityScore = 9.5
+      else if (ratio <= 0.4) this.rentabilityScore = 9
+      else if (ratio <= 0.45) this.rentabilityScore = 8.5
+      else if (ratio <= 0.5) this.rentabilityScore = 8
+      else if (ratio <= 0.55) this.rentabilityScore = 7.5
+      else if (ratio <= 0.6) this.rentabilityScore = 7
+      else if (ratio <= 0.7) this.rentabilityScore = 6.5
+      else if (ratio <= 0.75) this.rentabilityScore = 6
+      else if (ratio <= 0.8) this.rentabilityScore = 5.5
+      else if (ratio <= 0.85) this.rentabilityScore = 5
+      else if (ratio <= 0.9) this.rentabilityScore = 4.5
+      else if (ratio <= 0.95) this.rentabilityScore = 4
+      else if (ratio <= 1.0) this.rentabilityScore = 3.5
+      else if (ratio <= 1.1) this.rentabilityScore = 3
+      else if (ratio <= 1.3) this.rentabilityScore = 2.5
+      else if (ratio <= 1.5) this.rentabilityScore = 2
+      else if (ratio <= 1.8) this.rentabilityScore = 1.5
+      else if (ratio <= 2.2) this.rentabilityScore = 1
       else this.rentabilityScore = 0
     },
     handleCalc(param, value) {
@@ -317,7 +322,7 @@ export default {
     getRewardImage(reward) {
       let filename = ''
       // console.log(reward)
-      if (reward?.type == 'utility_item' && (reward?.item?.name?.en == 'Ancient key' || reward?.item?.name?.en == 'Old key' || reward?.item?.name?.en == 'Basic key' || reward?.item?.name?.en == 'Forbidden key') ) {
+      if (reward?.type == 'utility_item' && (reward?.item?.name?.en == 'Ancient key' || reward?.item?.name?.en == 'Old key' || reward?.item?.name?.en == 'Basic key' || reward?.item?.name?.en == 'Forbidden key' || reward?.item?.name?.en == 'GemStone')) {
         filename = `others/${reward.item_id}.png`
         return this.stPath + filename
       }
