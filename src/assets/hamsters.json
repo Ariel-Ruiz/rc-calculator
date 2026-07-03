@@ -223,5 +223,17 @@
       { "type": "buyback_discount", "value": -50 }
     ],
     "ultimate": "Chests Multiplier x3/5/30: 24 Points"
+  },
+  {
+    "name": "Joga Bonito",
+    "img": "hamsters/joga-bonito.gif",
+    "baseStats": { "hp": 70, "str": 90, "luck": 50 },
+    "abilities": [
+      { "type": "speed_ups_chest", "value": 1 },
+      { "type": "extra_rewards", "value": 15 },
+      { "type": "survive", "value": 5 },
+      { "type": "rest", "value": -15 }
+    ],
+    "ultimate": "Speed Up Items: Up to 500 per Ultimate Expedition"
   }
 ]

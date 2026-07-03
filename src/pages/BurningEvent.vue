@@ -418,12 +418,12 @@ export default {
       } else if (poderEnPhs >= 1) {
         pointsXPh = 15000
         pointsXBonus = 62.5
-      } else if (poderEnPhs >= 0.5 && isSellable) {
-        pointsXPh = 27900
-        pointsXBonus = 116.25
-      } else if (isSellable) {
+      } else if (poderEnPhs > 0.75 && isSellable) {
         pointsXPh = 46500
         pointsXBonus = 193.75
+      } else if (isSellable) {
+        pointsXPh = 27900
+        pointsXBonus = 116.25
       } else {
         pointsXPh = 18600
         pointsXBonus = 77.5

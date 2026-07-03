@@ -231,7 +231,7 @@ export default {
       }
 
       // For every 100 RLT of rewards, recommend buying 30 RLT
-      let rltToBuy = rewardsXRLT * 0.4
+      let rltToBuy = rewardsXRLT * 0.12
       let rawMultiplier = (rltToBuy * PeData.multiplier) + 1
 
       // Round to nearest available multiplier

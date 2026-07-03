@@ -1,97 +1,53 @@
 [
   {
     "name": "Radio Set",
+    "miners": [
+      { "name": "Vote Fired", "rarity": "Epic" },
+      { "name": "Signar Search", "rarity": "Epic" },
+      { "name": "Friendship is Magic", "rarity": "Epic" },
+      { "name": "Roller Radio", "rarity": "Epic" }
+    ],
     "levels": [
-      {
-        "level": 1,
-        "required": 2,
-        "bonus_type": "bonus",
-        "bonus_value": 40
-      },
-      {
-        "level": 2,
-        "required": 3,
-        "bonus_type": "bonus",
-        "bonus_value": 60
-      },
-      {
-        "level": 3,
-        "required": 4,
-        "bonus_type": "bonus",
-        "bonus_value": 90
-      }
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 40 },
+      { "level": 2, "required": 3, "bonus_type": "bonus", "bonus_value": 60 },
+      { "level": 3, "required": 4, "bonus_type": "bonus", "bonus_value": 90 }
     ]
   },
   {
     "name": "Royal Set",
+    "miners": ["Diamond Note", "Club Note", "Heart Note", "Spade Note", "Royal Note"],
     "levels": [
-      {
-        "level": 1,
-        "required": 2,
-        "bonus_type": "bonus",
-        "bonus_value": 25
-      },
-      {
-        "level": 2,
-        "required": 4,
-        "bonus_type": "bonus",
-        "bonus_value": 45
-      }
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 25 },
+      { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 45 }
     ]
   },
   {
     "name": "Asgardian Set",
+    "miners": ["Aegis of Gold", "Celestial Eye", "Voidstone", "Divine Core", "Soul Devourer", "Elder Beast"],
     "levels": [
-      {
-        "level": 1,
-        "required": 2,
-        "bonus_type": "bonus",
-        "bonus_value": 8
-      },
-      {
-        "level": 2,
-        "required": 4,
-        "bonus_type": "bonus",
-        "bonus_value": 24
-      }
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 8 },
+      { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 24 }
     ]
   },
   {
     "name": "Runners Set",
+    "miners": ["Ignite Runner", "Acid Runner", "Scarlet Runner", "Eva Runner"],
     "levels": [
-      {
-        "level": 1,
-        "required": 2,
-        "bonus_type": "bonus",
-        "bonus_value": 10
-      },
-      {
-        "level": 2,
-        "required": 4,
-        "bonus_type": "bonus",
-        "bonus_value": 20
-      }
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 10 },
+      { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 20 }
     ]
   },
   {
     "name": "Globes Set",
+    "miners": ["BellGlobe", "BowGlobe", "ToyGlobe", "WishGlobe"],
     "levels": [
-      {
-        "level": 1,
-        "required": 2,
-        "bonus_type": "power",
-        "bonus_value": 10000000
-      },
-      {
-        "level": 2,
-        "required": 4,
-        "bonus_type": "power",
-        "bonus_value": 25000000
-      }
+      { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 10000000 },
+      { "level": 2, "required": 4, "bonus_type": "power", "bonus_value": 25000000 }
     ]
   },
   {
     "name": "Super Bros Set",
+    "miners": ["Miner Bros Classic", "Miner Bros Advanced", "Miner Bros Pro"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 7500000 },
       { "level": 2, "required": 3, "bonus_type": "power", "bonus_value": 15000000 }
@@ -99,6 +55,7 @@
   },
   {
     "name": "Alien Set",
+    "miners": ["Codename Blue", "Codename Red", "Codename Green", "Codename Gold"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 5 },
       { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 10 }
@@ -106,6 +63,7 @@
   },
   {
     "name": "Power-Up Set",
+    "miners": ["Quantum Conductor", "Energy Amplifier", "Nano-Node Extractor"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 5000000 },
       { "level": 2, "required": 3, "bonus_type": "power", "bonus_value": 10000000 }
@@ -113,6 +71,7 @@
   },
   {
     "name": "Golden Farm Set",
+    "miners": ["GoldenCarrot", "GoldenEchinopsis", "GoldenTomato", "GoldenMelon"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 2 },
       { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 7 }
@@ -120,6 +79,7 @@
   },
   {
     "name": "Silver Farm Set",
+    "miners": ["SilverBerries", "SilverMulberries", "SilverCabbage", "SilverWheat"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 2000000 },
       { "level": 2, "required": 4, "bonus_type": "power", "bonus_value": 3000000 }
@@ -127,6 +87,7 @@
   },
   {
     "name": "Bronze Farm Set",
+    "miners": ["BronzeCorn", "BronzeTomato", "BronzeBlueberries", "BronzePumpkin"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 1500000 },
       { "level": 2, "required": 4, "bonus_type": "power", "bonus_value": 2500000 }
@@ -134,6 +95,7 @@
   },
   {
     "name": "Designer Set",
+    "miners": ["Hames Hirkin", "Hamel Classic", "Hamior Lady", "Hames Hamelly", "Hamior Haddle", "Hamuis Hamton", "Hammuchi Hamhidia", "Hiu Hamder"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 15 },
       { "level": 2, "required": 4, "bonus_type": "bonus", "bonus_value": 40 },
@@ -143,6 +105,7 @@
   },
   {
     "name": "IMPERIAL Set",
+    "miners": ["Romulus IMPERIUM", "Conquest IMPERIUM", "PAX IMPERIUM"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 5 },
       { "level": 2, "required": 3, "bonus_type": "bonus", "bonus_value": 10 }
@@ -150,6 +113,7 @@
   },
   {
     "name": "Beer Pack Set",
+    "miners": ["Just One Beer", "Just Enough", "Das Ist Gut"],
     "levels": [
       { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 5000000 },
       { "level": 2, "required": 3, "bonus_type": "power", "bonus_value": 8000000 }

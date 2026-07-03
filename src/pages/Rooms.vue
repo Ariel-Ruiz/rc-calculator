@@ -255,7 +255,7 @@
                                       class="room-badge-icon"
                                     />
                                     <img
-                                      v-if="minerSlot.miner.isSet"
+                                      v-if="getMinerSetName(minerSlot.miner)"
                                       :src="getAssetUrl('others/set.png')"
                                       alt="set"
                                       class="room-badge-icon"
@@ -456,7 +456,7 @@
                         class="badge-icon"
                       />
                       <img
-                        v-if="miner.isSet"
+                        v-if="getMinerSetName(miner)"
                         :src="getAssetUrl('others/set.png')"
                         alt="set"
                         class="badge-icon"
@@ -1018,7 +1018,7 @@
                 class="badge-icon"
               />
               <img
-                v-if="editMiner.isSet"
+                v-if="getMinerSetName(editMiner)"
                 :src="getAssetUrl('others/set.png')"
                 alt="set"
                 class="badge-icon"
@@ -1666,7 +1666,7 @@ export default {
       const buildMinerEntry = (fields) => {
         const dbMiner = this.findMiner({ name: this.getCleanName(fields.name), minerId: fields.minerId || null })
         const cells = dbMiner ? dbMiner.cells : 2
-        const setName = (dbMiner && dbMiner.is_set && dbMiner.set) ? dbMiner.set : null
+        const setName = this.getMinerSetName({ name: fields.name })
         const resolvedMinerId = dbMiner ? dbMiner.id : (fields.minerId || null)
         return {
           uid: 0, name: fields.name, power: fields.power, bonus: fields.bonus,
@@ -2054,7 +2054,7 @@ export default {
               minerId: dbMiner ? dbMiner.id : minerId,
               isSet: m.is_in_set || false,
               isLegacy: false,
-              setName: (dbMiner && dbMiner.is_set && dbMiner.set) ? dbMiner.set : null,
+              setName: this.getMinerSetName({ name: expectedName, setName: (dbMiner && dbMiner.is_set && dbMiner.set) ? dbMiner.set : null }),
               source: 'NETWORK'
             })
             claimedForCheck.add(newUid)
@@ -2612,13 +2612,45 @@ export default {
 
     // ========== SET BONUS CALCULATION ==========
     // Get the set name for a loaded miner
+    // Checks clean name against sets.json miners lists, respecting rarity requirements
     getMinerSetName(miner) {
       if (!miner) return null
-      // Use stored setName first (fastest)
-      if (miner.setName) return miner.setName
-      // Fallback: lookup in database
+      const cleanName = this.getCleanName(miner.name)
+      const minerRarity = this.getRarityLevel(miner.name)
+      const rarityNames = { 2: 'Uncommon', 3: 'Rare', 4: 'Epic', 5: 'Legendary', 6: 'Unreal' }
+      const minerRarityName = rarityNames[minerRarity] || null
+
+      for (const setDef of this.setsDefinitions) {
+        if (!setDef.miners) continue
+        for (const entry of setDef.miners) {
+          if (typeof entry === 'string') {
+            // Any rarity accepted
+            if (entry === cleanName) return setDef.name
+          } else if (entry.name === cleanName) {
+            // Specific rarity required
+            if (!entry.rarity) return setDef.name
+            if (entry.rarity === minerRarityName) return setDef.name
+            // Base/common: rarity is null, entry.rarity would need to be null too
+            if (!entry.rarity && !minerRarityName) return setDef.name
+          }
+        }
+      }
+      // Fallback: stored setName — but only if it passes rarity check
+      if (miner.setName) {
+        const setDef = this.setsDefinitions.find(s => s.name === miner.setName)
+        if (setDef && setDef.miners) {
+          // Set has explicit miners list — must match (already checked above, didn't match)
+          return null
+        }
+        return miner.setName
+      }
+      // Fallback: database lookup — same rarity guard
       const dbMiner = this.findMiner(miner)
-      if (dbMiner && dbMiner.is_set && dbMiner.set) return dbMiner.set
+      if (dbMiner && dbMiner.is_set && dbMiner.set) {
+        const setDef = this.setsDefinitions.find(s => s.name === dbMiner.set)
+        if (setDef && setDef.miners) return null
+        return dbMiner.set
+      }
       return null
     },
 
@@ -2721,7 +2753,7 @@ export default {
           if (setDef) {
             let cnt = 0
             for (let j = 0; j < ra.miners.length; j++) {
-              if (ra.miners[j].setName === ra.setName) cnt++
+              if (ra.miners[j]._effectiveSet === ra.setName) cnt++
             }
             if (cnt > 0) {
               for (let k = 0; k < setDef.levels.length; k++) {
@@ -2756,10 +2788,11 @@ export default {
       const used = new Set()
       const setMap = this._getSetMap()
 
-      // Count set miners available per set
+      // Count set miners available per set (using precomputed _effectiveSet)
       const setMinerCounts = {}
       for (let j = 0; j < miners.length; j++) {
-        if (miners[j].setName) setMinerCounts[miners[j].setName] = (setMinerCounts[miners[j].setName] || 0) + 1
+        const es = miners[j]._effectiveSet
+        if (es) setMinerCounts[es] = (setMinerCounts[es] || 0) + 1
       }
 
       // Pass 1: set miners into matching set racks — only if enough to activate a level
@@ -2773,7 +2806,7 @@ export default {
 
         for (let j = 0; j < miners.length; j++) {
           const m = miners[j]
-          if (used.has(j) || m.setName !== ra.setName || ra.used + m.cells > ra.size) continue
+          if (used.has(j) || m._effectiveSet !== ra.setName || ra.used + m.cells > ra.size) continue
           ra.miners.push(m); used.add(j); ra.used += m.cells
         }
       }
@@ -3000,7 +3033,7 @@ export default {
       for (const sr of setRacks) {
         const setName = sr.set
         const candidates = minerData
-          .filter(m => m.setName === setName && !committedSet.has(m))
+          .filter(m => m._effectiveSet === setName && !committedSet.has(m))
           .sort((a, b) => (b.power + b.bonus) - (a.power + a.bonus))
 
         let rackCells = 0
@@ -3111,7 +3144,7 @@ export default {
           // Get excluded set miners for this set (not currently selected)
           const selectedSet = new Set(selected)
           const excludedSet = allMinerData
-            .filter(m => !selectedSet.has(m) && m.setName === setName)
+            .filter(m => !selectedSet.has(m) && m._effectiveSet === setName)
             .sort((a, b) => b.iep - a.iep)
           if (excludedSet.length === 0) continue
 
@@ -3139,7 +3172,7 @@ export default {
               const cellsNeeded = addCells - freeSpace
               const removable = selected
                 .map((m, idx) => ({ m, idx }))
-                .filter(({ m }) => !m.isForced && !(m.setName && configSetNames.has(m.setName)))
+                .filter(({ m }) => !m.isForced && !(m._effectiveSet && configSetNames.has(m._effectiveSet)))
                 .sort((a, b) => a.m.iep - b.m.iep)
 
               let freed = 0
@@ -3481,7 +3514,7 @@ export default {
 
       const maxPowerGhs = this.autoMaxPower ? this.autoMaxPower * 1e9 : null
 
-      // 3. Prepare miner data (setName already stored on each miner)
+      // 3. Prepare miner data (precompute effective set with rarity check)
       const minerData = this.loadedMiners.map(m => {
         const bonus = parseFloat(m.bonus) || 0
         const power = this.parsePowerToGhs(m.power)
@@ -3491,7 +3524,8 @@ export default {
           bonus,
           cells: m.cells || 1,
           iep: power * (1 + bonus / 100),
-          setName: m.setName || null
+          setName: m.setName || null,
+          _effectiveSet: this.getMinerSetName(m) || null
         }
       })
 
@@ -3809,7 +3843,7 @@ export default {
       const setMap = this._getSetMap()
       const setMinerCounts = {}
       for (const md of selectedData) {
-        if (md.setName) setMinerCounts[md.setName] = (setMinerCounts[md.setName] || 0) + 1
+        if (md._effectiveSet) setMinerCounts[md._effectiveSet] = (setMinerCounts[md._effectiveSet] || 0) + 1
       }
 
       for (const rs of rackSlots) {
@@ -3822,7 +3856,7 @@ export default {
         if ((setMinerCounts[rs.setName] || 0) < minRequired) continue
 
         const candidates = selectedData
-          .filter(md => md.setName === rs.setName && !usedUids.has(md.miner.uid))
+          .filter(md => md._effectiveSet === rs.setName && !usedUids.has(md.miner.uid))
           .sort((a, b) => (b.power + b.bonus) - (a.power + a.bonus))
 
         for (const md of candidates) {
@@ -4263,6 +4297,7 @@ export default {
           cells: m.cells || 1,
           iep: power * (1 + bonus / 100),
           setName: m.setName || null,
+          _effectiveSet: this.getMinerSetName(m) || null,
           isForced: selectedUids.has(m.uid)
         }
       })
@@ -4290,12 +4325,15 @@ export default {
         const placed = []
         const notPlaced = []
         const toPlace = [...miners].sort((a, b) => {
-          if (a.setName && !b.setName) return -1
-          if (!a.setName && b.setName) return 1
+          const aSet = this.getMinerSetName(a)
+          const bSet = this.getMinerSetName(b)
+          if (aSet && !bSet) return -1
+          if (!aSet && bSet) return 1
           return this.parsePowerToGhs(b.power) - this.parsePowerToGhs(a.power)
         })
         for (const miner of toPlace) {
           let bestRoom = null, bestKey = null, bestScore = -1
+          const minerSet = this.getMinerSetName(miner)
           for (let r = 1; r <= 4; r++) {
             if (!simActiveRooms[r - 1]) continue
             for (const [key, slot] of Object.entries(sRooms[r])) {
@@ -4303,7 +4341,7 @@ export default {
               const used = (slot.miners || []).reduce((s, m) => s + (m ? (m.cells || 1) : 0), 0)
               if (used + (miner.cells || 1) > slot.rack.size) continue
               let score = (slot.rack.bonus || 0) * 100
-              if (miner.setName && slot.rack.is_set && slot.rack.set === miner.setName) score += 10000
+              if (minerSet && slot.rack.is_set && slot.rack.set === minerSet) score += 10000
               if (score > bestScore) { bestScore = score; bestRoom = r; bestKey = key }
             }
           }
@@ -4428,7 +4466,7 @@ export default {
             for (const ri of rackInfos) {
               if (ri.freeCells < needed) continue
               let score = (ri.rack.bonus || 0) * 100
-              if (selMiner.setName && ri.rack.is_set && ri.rack.set === selMiner.setName) score += 10000
+              if (selMiner._effectiveSet && ri.rack.is_set && ri.rack.set === selMiner._effectiveSet) score += 10000
               if (score > bestScore) { bestScore = score; bestRi = ri }
             }
             if (bestRi) bestRi.freeCells -= needed
@@ -4610,7 +4648,7 @@ export default {
           let committedCells = forcedCells
           for (const sr of config.filter(r => r.is_set && r.set)) {
             const candidates = nonForced
-              .filter(m => m.setName === sr.set && !committedSet.has(m))
+              .filter(m => m._effectiveSet === sr.set && !committedSet.has(m))
               .sort((a, b) => (b.power + b.bonus) - (a.power + a.bonus))
             let rackCells = 0
             for (const c of candidates) {
