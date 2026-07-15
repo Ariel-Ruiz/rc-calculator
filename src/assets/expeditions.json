@@ -1,19 +1,19 @@
 [
   {
+    "name": "Beach Walk",
+    "img": "expeditions/beach-walk.png",
+    "duration": "24h",
+    "difficulty": 8,
+    "rewardsValue": 9,
+    "rewardsAmount": 6
+  },
+  {
     "name": "Lost Shrine",
     "img": "expeditions/lost-shrine.png",
     "duration": "30h",
     "difficulty": 10,
     "rewardsValue": 10,
     "rewardsAmount": 10
-  },
-  {
-    "name": "Tousland",
-    "img": "expeditions/tousland.png",
-    "duration": "12h",
-    "difficulty": 4,
-    "rewardsValue": 5,
-    "rewardsAmount": 5
   },
   {
     "name": "Valhalla Trail",
@@ -32,12 +32,12 @@
     "rewardsAmount": 9
   },
   {
-    "name": "Snowlit Avenue",
-    "img": "expeditions/snowlit-avenue.png",
-    "duration": "24h",
-    "difficulty": 6,
-    "rewardsValue": 9,
-    "rewardsAmount": 8
+    "name": "Tousland",
+    "img": "expeditions/tousland.png",
+    "duration": "12h",
+    "difficulty": 4,
+    "rewardsValue": 5,
+    "rewardsAmount": 5
   },
   {
     "name": "Deep Forest",
@@ -46,5 +46,14 @@
     "difficulty": 2,
     "rewardsValue": 2,
     "rewardsAmount": 4
+  },
+  {
+    "_disabled": true,
+    "name": "Snowlit Avenue",
+    "img": "expeditions/snowlit-avenue.png",
+    "duration": "24h",
+    "difficulty": 6,
+    "rewardsValue": 9,
+    "rewardsAmount": 8
   }
 ]

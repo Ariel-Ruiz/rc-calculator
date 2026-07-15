@@ -34,7 +34,8 @@
     "progression": "PROGRESSION",
     "burning": "BURNING",
     "hamsters": "HAMSTERS",
-    "marketplace": "MARKETPLACE"
+    "marketplace": "MARKETPLACE",
+    "games": "GAMES"
   },
   "rollertap": {
     "coinsPerHour": "Coins per hour",
@@ -100,7 +101,7 @@
   "rooms": {
     "title": "Rooms",
     "beta_notice": "<b>Beta Version</b> — This feature is under development. If you find any bugs or have suggestions, please let me know on <a class='source-link' target='_blank' href='https://t.me/Ar1el_23'>Telegram</a> or <b>Discord: ar1el_23</b>",
-    "description": "Optimize the distribution of your miners and racks to maximize your mining power. <br> <b>You can copy the data from:</b> <br> <div class='rooms-source-links'><a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a> <a class='source-link' href='https://rollercoin.com/storage/inventory' target='_blank'>● Inventory</a> <a class='source-link' href='https://rollercoin.com/marketplace/sell' target='_blank'>● Sell</a></div>",
+    "description": "Optimize the distribution of your miners and racks to maximize your mining power. <br> <b>You can copy the data from:</b> <br> <div class='rooms-source-links'><a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a> <a class='source-link' href='https://rollercoin.com/storage/inventory' target='_blank'>● Inventory</a> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Sell</a></div>",
     "warning_temp_power": "The calculated power does not include temporary power, freon, hamsters or other types of temporary bonuses.",
     "warning_room_delay": "Room power in the game may take a few minutes to update. To see it instantly, check <a class='source-link' href='https://rollercoin.com/profile/profile-stats' target='_blank'>Profile Stats</a>.",
     "examples": "Examples:",
@@ -230,8 +231,8 @@
   },
   "marketplace": {
     "title": "Marketplace",
-    "subtitle_sell": "Paste your miners from the <a class='source-link' href='https://rollercoin.com/marketplace/sell' target='_blank'>Sell</a> section in RollerCoin to see their details and quickly access the marketplace.",
-    "subtitle_buy": "Paste miners from the <a class='source-link' href='https://rollercoin.com/marketplace/buy/miner' target='_blank'>Marketplace</a> buy page to compare prices and ratios.",
+    "subtitle_sell": "Paste your miners from the <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>Sell</a> section in RollerCoin to see their details and quickly access the marketplace.",
+    "subtitle_buy": "Paste miners from the <a class='source-link' href='https://rollercoin.com/marketplace/buy' target='_blank'>Marketplace</a> buy page to compare prices and ratios.",
     "placeholder_sell": "Paste sell data here...",
     "placeholder_buy": "Paste marketplace data here...",
     "load": "LOAD",

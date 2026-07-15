@@ -41,8 +41,7 @@
       <div class="mp-top-bar">
         <div class="mp-tabs">
           <button :class="['mp-tab', { active: activeTab === 'sell' }]" @click="activeTab = 'sell'">SELL</button>
-          <!-- <button :class="['mp-tab', { active: activeTab === 'buy' }]" @click="activeTab = 'buy'">BUY</button> -->
-          <button :class="['mp-tab', 'mp-tab-disabled']" disabled title="Coming soon">BUY</button>
+          <button :class="['mp-tab', { active: activeTab === 'buy' }]" @click="activeTab = 'buy'">BUY</button>
         </div>
         <div class="mp-top-right">
           <button class="mp-filter-toggle" @click="filtersOpen = !filtersOpen">
@@ -207,6 +206,7 @@
 <script>
 import '../styles/marketplace.css'
 import minersData from '../assets/miners.json'
+import mergesData from '../assets/merges.json'
 import exampleSell from '../assets/example_burn_sell.png'
 import exampleMarketplace from '../assets/example_marketplace.png'
 
@@ -446,9 +446,9 @@ export default {
       }
       const minerData = this.findMiner(miner)
       const isSellable = minerData ? !!minerData.can_be_sold : false
-      const isMerged = this.getRarityLevel(miner.name) && this.getRarityLevel(miner.name) !== 'legacy'
-      const fallbackId = (!isMerged && minerData) ? minerData.id : null
-      list.push({ ...miner, uid: this.uidCounter++, isSellable, minerId: miner.minerId || fallbackId })
+      const mergeId = this.resolveMergeId(miner.name)
+      const fallbackId = minerData ? minerData.id : null
+      list.push({ ...miner, uid: this.uidCounter++, isSellable, minerId: miner.minerId || mergeId || fallbackId })
     },
 
     removeItem(item) {
@@ -542,6 +542,20 @@ export default {
       if (ln.startsWith('epic ')) return 4; if (ln.startsWith('rare ')) return 3
       if (ln.startsWith('uncommon ')) return 2; if (ln.startsWith('legacy ')) return 'legacy'
       return null
+    },
+    // Resolve miner ID for any rarity level using merges.json
+    // Rarity levels: 2=Uncommon, 3=Rare, 4=Epic, 5=Legendary, 6=Unreal (merge levels in data are 2-6)
+    resolveMergeId(name) {
+      const cleanName = this.getCleanName(name)
+      const rarityLevel = this.getRarityLevel(name)
+      // Base miner (no rarity prefix) — use miners.json ID
+      if (!rarityLevel || rarityLevel === 'legacy') return null
+      // Find in merges.json by clean name
+      const mergeEntry = mergesData.find(m => m.name === cleanName)
+      if (!mergeEntry || !mergeEntry.merges) return null
+      // Merge level in data = rarity level (2=Uncommon, 3=Rare, etc.)
+      const merge = mergeEntry.merges.find(mg => mg.level === rarityLevel)
+      return merge ? merge.merge_id : null
     },
     getLevelIcon(name) {
       const level = this.getRarityLevel(name)

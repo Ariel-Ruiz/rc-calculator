@@ -592,5 +592,32 @@
     "is_set": false,
     "set": null,
     "can_be_sold": true
+  },
+  {
+    "id": "6a3a88d9576051c2077089cf",
+    "name": "The Lost Treasure Rack 8",
+    "size": 8,
+    "bonus": 23,
+    "is_set": true,
+    "set": "The Lost Treasure Set",
+    "can_be_sold": true
+  },
+  {
+    "id": "6a3a7e4f576051c2077089bb",
+    "name": "Trophy Rack 6",
+    "size": 6,
+    "bonus": 39,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6a3a7e4f576051c2077089bc",
+    "name": "Trophy Rack 8",
+    "size": 8,
+    "bonus": 23,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
   }
 ]

@@ -122,7 +122,7 @@ export default {
   data() {
     return {
       hamsters: hamstersData,
-      expeditions: expeditionsData,
+      expeditions: expeditionsData.filter(e => !e._disabled),
       maxStatsHover: null,
       sortBy: null,
       dragging: false,

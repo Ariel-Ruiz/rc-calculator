@@ -57,14 +57,14 @@
         <router-link
           to="/marketplace"
           @click.native="toggleMenu"
-          :class="{ active: $route.name === 'Marketplace' }"
+          :class="['nav-glow', { active: $route.name === 'Marketplace' }]"
         >
           {{ t.nav && t.nav.marketplace }}
         </router-link>
-        <!-- <a href="#" class="comming-soon" tabindex="-1" aria-disabled="true">
-          {{ t.nav && t.nav.marketplace }}
+        <a href="#" class="comming-soon" tabindex="-1" aria-disabled="true" @click.prevent>
+          {{ t.nav && t.nav.games }}
           <div class="comming-soon-text">{{ t.nav && t.nav.comming_soon }}</div>
-        </a> -->
+        </a>
       </nav>
       <div class="navbar-lang-container">
         <button class="navbar-lang" id="toggleLang" @click="toggleLang">

@@ -235,5 +235,16 @@
       { "type": "rest", "value": -15 }
     ],
     "ultimate": "Speed Up Items: Up to 500 per Ultimate Expedition"
+  },
+  {
+    "name": "Eliza Bit",
+    "img": "hamsters/eliza-bit.gif",
+    "baseStats": { "hp": 80, "str": 20, "luck": 80 },
+    "abilities": [
+      { "type": "experience", "value": 50 },
+      { "type": "expedition_time", "value": -25 },
+      { "type": "influencer", "value": 150, "value2": 20 }
+    ],
+    "ultimate": "High Risk High Reward: 2x rewards, 1.5x duration, skip rest. 24 Points"
   }
 ]

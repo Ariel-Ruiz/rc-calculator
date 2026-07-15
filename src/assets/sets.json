@@ -118,5 +118,23 @@
       { "level": 1, "required": 2, "bonus_type": "power", "bonus_value": 5000000 },
       { "level": 2, "required": 3, "bonus_type": "power", "bonus_value": 8000000 }
     ]
+  },
+  {
+    "name": "The Lost Treasure Set",
+    "miners": [
+      { "name": "Manners & Mayhem", "rarity": "Epic" },
+      { "name": "Manners & Mayhem", "rarity": "Legendary" },
+      { "name": "Gilded Greed", "rarity": "Epic" },
+      { "name": "Gilded Greed", "rarity": "Legendary" },
+      { "name": "Wrongway Atlas", "rarity": "Epic" },
+      { "name": "Wrongway Atlas", "rarity": "Legendary" },
+      { "name": "Drama Chest", "rarity": "Epic" },
+      { "name": "Drama Chest", "rarity": "Legendary" }
+    ],
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 20 },
+      { "level": 2, "required": 3, "bonus_type": "bonus", "bonus_value": 50 },
+      { "level": 3, "required": 4, "bonus_type": "bonus", "bonus_value": 80 }
+    ]
   }
 ]

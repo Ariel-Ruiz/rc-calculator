@@ -214,7 +214,7 @@ export default {
       return 'text-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.13
+      let phXRLT = 0.04
       let rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
         switch (reward.type) {
@@ -231,7 +231,7 @@ export default {
       }
 
       // For every 100 RLT of rewards, recommend buying 30 RLT
-      let rltToBuy = rewardsXRLT * 0.12
+      let rltToBuy = rewardsXRLT * 0.44
       let rawMultiplier = (rltToBuy * PeData.multiplier) + 1
 
       // Round to nearest available multiplier
