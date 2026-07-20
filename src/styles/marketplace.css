@@ -11,6 +11,10 @@
   width: 76%;
 }
 
+.mp-container .event-title {
+  font-size: 2.3em;
+}
+
 .mp-textarea {
   width: 93%;
   min-height: 120px;
@@ -208,12 +212,12 @@
 }
 
 .mp-filter-reset {
-  padding: 0.2rem 0.6rem !important;
+  padding: 0.3rem 0.6rem !important;
   background: var(--accent) !important;
   color: var(--text-secondary) !important;
   border: none !important;
   border-radius: 4px;
-  font-size: 0.7em;
+  font-size: 0.55em;
   font-weight: 800;
   cursor: pointer;
   margin: 0 !important;

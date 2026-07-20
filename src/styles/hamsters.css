@@ -5,6 +5,7 @@
 
 .hamsters-container .event-title {
   margin-bottom: 1.2rem;
+  font-size: 2.3em;
 }
 
 .hamsters-scroll-wrapper {
@@ -186,6 +187,10 @@ tr:hover .hamster-img-cell,
 @media (max-width: 768px) {
   .hamsters-container {
     padding: 0.1rem;
+  }
+
+  .hamsters-container .event-title {
+    font-size: 1.8rem;
   }
 
   .hamsters-scroll-wrapper {

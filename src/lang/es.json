@@ -74,7 +74,11 @@
     "per": "Por",
     "ends_on": "Termina el",
     "the_event_ended": "El evento terminó",
-    "rentability_punctuation": "Puntuación de Rentabilidad"
+    "rentability_punctuation": "Puntuación de Rentabilidad",
+    "ratio_line1": "Ratio Costo / Recompensa.",
+    "ratio_line2": "Menor es mejor.",
+    "ratio_excellent": "Menor a 0.3: excelente",
+    "ratio_bad": "Mayor a 1.0: no vale la pena"
   },
   "burning": {
     "title": "Calculadora de Quema",
@@ -82,7 +86,7 @@
     "placeholder": "pega los datos aquí...",
     "calculate": "CALCULAR",
     "clear": "LIMPIAR",
-    "empty": "Pega los datos de los mineros del marketplace y haz clic en Calcular",
+    "empty": "Pega los datos de los mineros y haz clic en Calcular",
     "selectedPoints": "Puntos en mineros seleccionados:",
     "selectedMiners": "Mineros seleccionados:",
     "filters": "FILTROS",
@@ -100,7 +104,7 @@
   },
   "rooms": {
     "title": "Rooms",
-    "beta_notice": "<b>Versión Beta</b> — Esta función está en desarrollo. Si encuentras algún error o tienes sugerencias, avísame en <a class='source-link' target='_blank' href='https://t.me/Ar1el_23'>Telegram</a> o en <b>Discord: ar1el_23</b>",
+    "beta_notice": "<b>Versión Beta:</b> Esta función está en desarrollo. Si encuentras algún error o tienes sugerencias, avísame en <a class='source-link' target='_blank' href='https://t.me/Ar1el_23'>Telegram</a> o en <b>Discord: ar1el_23</b>",
     "description": "Optimiza la distribución de tus mineros y racks para maximizar tu poder de minería. <br> <b>Puedes copiar los datos desde:</b> <br> <div class='rooms-source-links'><a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a> <a class='source-link' href='https://rollercoin.com/storage/inventory' target='_blank'>● Inventory</a> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Sell</a></div>",
     "warning_temp_power": "El poder calculado no incluye poder temporal, freon, hamsters u otros tipos de bonificaciones temporales.",
     "warning_room_delay": "El poder resultante de las salas en el juego puede tardar algunos minutos en actualizarse. Para verlo de inmediato, revisa <a class='source-link' href='https://rollercoin.com/profile/profile-stats' target='_blank'>Profile Stats</a>.",

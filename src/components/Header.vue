@@ -1,101 +1,91 @@
 <template>
-  <header class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-tittle">
-        <button class="navbar-toggle" @click="toggleMenu" aria-label="Toggle navigation menu">
-          ☰
-        </button>
-        <h1 class="navbar-title">{{ t.page_title }}🦆</h1>
-        <button class="navbar-lang-movil" id="toggleLang" @click="toggleLang">
-          {{ lang }}
-        </button>
+  <div>
+  <!-- Mobile top bar -->
+  <div class="v2-mobile-header">
+    <img :src="headerBg" alt="" class="v2-mobile-header-bg" />
+    <div class="v2-mobile-header-content">
+      <div class="v2-mobile-header-logo">
+        <div class="v2-mobile-header-logo-wrap">
+          <img :src="rltIcon" alt="" class="v2-mobile-header-rlt" />
+          <img :src="duckLogo" alt="RC Calculator" class="v2-mobile-header-duck" />
+        </div>
+        <span class="v2-mobile-header-title">RC Calculator</span>
       </div>
-
-      <nav :class="['navbar-links', { open: isMenuOpen }]">
-        <router-link
-          to="/"
-          @click.native="toggleMenu"
-          :class="{ active: $route.name === 'Home' }"
-        >
-          {{ t.nav && t.nav.profit }}
-        </router-link>
-        <router-link
-          to="/rollertap"
-          @click.native="toggleMenu"
-          :class="{ active: $route.name === 'Rollertap' }"
-        >
-          {{ t.nav && t.nav.rollertap }}
-        </router-link>
-        <router-link
-          to="/current-progression"
-          @click.native="toggleMenu"
-          :class="{ active: $route.name === 'PE' }"
-        >
-          {{ t.nav && t.nav.progression }}
-        </router-link>
-        <router-link
-          to="/burning-event"
-          @click.native="toggleMenu"
-          :class="{ active: $route.name === 'BurningEvent' }"
-        >
-          {{ t.nav && t.nav.burning }}
-        </router-link>
-        <router-link
-          to="/rooms"
-          @click.native="toggleMenu"
-          :class="{ active: $route.name === 'Rooms' }"
-        >
-          {{ t.nav && t.nav.rooms }}
-        </router-link>
-        <router-link
-          to="/hamsters"
-          @click.native="toggleMenu"
-          :class="{ active: $route.name === 'Hamsters' }"
-        >
-          {{ t.nav && t.nav.hamsters }}
-        </router-link>
-        <router-link
-          to="/marketplace"
-          @click.native="toggleMenu"
-          :class="['nav-glow', { active: $route.name === 'Marketplace' }]"
-        >
-          {{ t.nav && t.nav.marketplace }}
-        </router-link>
-        <a href="#" class="comming-soon" tabindex="-1" aria-disabled="true" @click.prevent>
-          {{ t.nav && t.nav.games }}
-          <div class="comming-soon-text">{{ t.nav && t.nav.comming_soon }}</div>
-        </a>
-      </nav>
-      <div class="navbar-lang-container">
-        <button class="navbar-lang" id="toggleLang" @click="toggleLang">
-          {{ lang }}
-        </button>
-      </div>
+      <button class="v2-lang-btn" @click="toggleLang">{{ lang }}</button>
     </div>
-  </header>
+  </div>
+
+  <aside class="v2-sidebar">
+    <div class="v2-sidebar-logo-wrap">
+      <img :src="rltIcon" alt="" class="v2-sidebar-logo-bg" />
+      <img :src="duckLogo" alt="RC Calculator" class="v2-sidebar-logo" />
+    </div>
+    <div class="v2-sidebar-divider"></div>
+
+    <nav class="v2-sidebar-nav">
+      <router-link
+        v-for="item in navItems"
+        :key="item.to"
+        :to="item.to"
+        :class="['v2-sidebar-item', {
+          active: item.routeName === $route.name,
+          featured: item.featured,
+          disabled: item.disabled
+        }]"
+        :event="item.disabled ? '' : 'click'"
+      >
+        <div v-if="item.grid" class="v2-sidebar-grid">
+          <img :src="item.icon" /><img :src="item.icon" />
+          <img :src="item.icon" /><img :src="item.icon" />
+        </div>
+        <img v-else :src="item.icon" :alt="item.label" />
+        <span class="v2-sidebar-tooltip">{{ item.label }}</span>
+      </router-link>
+    </nav>
+
+    <div class="v2-sidebar-bottom">
+      <button class="v2-lang-btn" @click="toggleLang">{{ lang }}</button>
+    </div>
+  </aside>
+  </div>
 </template>
 
 <script>
+import duckLogo from '../assets/duck.gif'
+import rltIcon from '../assets/symbols/rlt.svg'
+import headerBg from '../assets/icons/header.png'
+import earningIcon from '../assets/icons/earning.svg'
+import statsUpIcon from '../assets/icons/stats-up.svg'
+import energyIcon from '../assets/icons/energy.svg'
+import pcIcon from '../assets/icons/pc.svg'
+import hamsterIcon from '../assets/icons/hamsters.svg'
+import marketplaceIcon from '../assets/icons/marketplace.svg'
+import gameIcon from '../assets/icons/game.svg'
+
 export default {
   name: 'Header',
   inject: ['i18n'],
   data() {
-    return {
-      isMenuOpen: false
-    }
+    return { duckLogo, rltIcon, headerBg }
   },
   computed: {
-    t() {
-      return this.i18n.t
-    },
-    lang() {
-      return this.i18n.lang
+    t() { return this.i18n.t },
+    lang() { return this.i18n.lang },
+    navItems() {
+      const nav = this.t.nav || {}
+      return [
+        { to: '/', routeName: 'Home', icon: earningIcon, label: nav.profit || 'Profit' },
+        { to: '/rollertap', routeName: 'Rollertap', icon: hamsterIcon, grid: true, label: nav.rollertap || 'RollerTap' },
+        { to: '/current-progression', routeName: 'PE', icon: statsUpIcon, label: nav.progression || 'Progression' },
+        { to: '/burning-event', routeName: 'BurningEvent', icon: energyIcon, label: nav.burning || 'Burning' },
+        { to: '/rooms', routeName: 'Rooms', icon: pcIcon, label: nav.rooms || 'Rooms' },
+        { to: '/hamsters', routeName: 'Hamsters', icon: hamsterIcon, label: nav.hamsters || 'Hamsters' },
+        { to: '/marketplace', routeName: 'Marketplace', icon: marketplaceIcon, label: nav.marketplace || 'Marketplace', featured: true },
+        { to: '#', routeName: null, icon: gameIcon, label: nav.games || 'Games', disabled: true }
+      ]
     }
   },
   methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen
-    },
     toggleLang() {
       this.i18n.toggleLang()
     }

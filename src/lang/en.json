@@ -74,7 +74,11 @@
     "per": "Per",
     "ends_on": "Ends on",
     "the_event_ended": "The event ended",
-    "rentability_punctuation": "Profitability Score"
+    "rentability_punctuation": "Profitability Score",
+    "ratio_line1": "Cost / Reward ratio.",
+    "ratio_line2": "Lower is better.",
+    "ratio_excellent": "Below 0.3: excellent",
+    "ratio_bad": "Above 1.0: not worth it"
   },
   "burning": {
     "title": "Burn Calculator",
@@ -82,7 +86,7 @@
     "placeholder": "paste data here...",
     "calculate": "CALCULATE",
     "clear": "CLEAR",
-    "empty": "Paste miners data from marketplace and click Calculate",
+    "empty": "Paste miners data and click Calculate",
     "selectedPoints": "Points in selected miners:",
     "selectedMiners": "Selected miners:",
     "filters": "FILTERS",
@@ -100,7 +104,7 @@
   },
   "rooms": {
     "title": "Rooms",
-    "beta_notice": "<b>Beta Version</b> — This feature is under development. If you find any bugs or have suggestions, please let me know on <a class='source-link' target='_blank' href='https://t.me/Ar1el_23'>Telegram</a> or <b>Discord: ar1el_23</b>",
+    "beta_notice": "<b>Beta Version:</b> This feature is under development. If you find any bugs or have suggestions, please let me know on <a class='source-link' target='_blank' href='https://t.me/Ar1el_23'>Telegram</a> or <b>Discord: ar1el_23</b>",
     "description": "Optimize the distribution of your miners and racks to maximize your mining power. <br> <b>You can copy the data from:</b> <br> <div class='rooms-source-links'><a class='source-link' href='https://rollercoin.com/storage/collection' target='_blank'>● Collection</a> <a class='source-link' href='https://rollercoin.com/storage/inventory' target='_blank'>● Inventory</a> <a class='source-link' href='https://rollercoin.com/marketplace/sell/miner' target='_blank'>● Sell</a></div>",
     "warning_temp_power": "The calculated power does not include temporary power, freon, hamsters or other types of temporary bonuses.",
     "warning_room_delay": "Room power in the game may take a few minutes to update. To see it instantly, check <a class='source-link' href='https://rollercoin.com/profile/profile-stats' target='_blank'>Profile Stats</a>.",

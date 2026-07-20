@@ -314,28 +314,23 @@
 }
 
 .rooms-ai-help-btn {
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   background: transparent;
-  color: var(--accent);
-  font-size: 0.65rem;
-  font-weight: 800;
+  border: none;
   cursor: pointer;
   padding: 0;
   margin-left: 3px;
-  transition: background 0.15s, color 0.15s;
-  margin-top: 4px;
-}
-
-.rooms-ai-help-btn:hover,
-.rooms-ai-help-btn.active {
-  background: var(--accent);
-  color: var(--text-secondary);
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
 }
 
 .rooms-ai-help-detail {
   background: var(--primary);
-  border: 1px solid var(--accent);
+  border: 1px solid var(--tertiary);
   border-radius: 6px;
   padding: 0.6rem;
   margin: 0.3rem 0 0.5rem;
@@ -482,21 +477,69 @@
   letter-spacing: 0.5px;
 }
 
+.rooms-info-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.rooms-close-icon {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0) invert(0.9);
+}
+
+.rooms-how-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+/* Arrow icons in hiw modal */
+.hiw-arrow-icon {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0) invert(0.7);
+}
+
+.hiw-arrow-icon-left {
+  transform: rotate(180deg);
+}
+
+.hiw-arrow:hover .hiw-arrow-icon {
+  filter: brightness(0) invert(1);
+}
+
+.hiw-arrow:disabled .hiw-arrow-icon {
+  opacity: 0.3;
+}
+
+/* Help button in auto import - info icon */
+.rooms-ai-help-btn .rooms-info-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.rooms-ai-help-btn:hover .rooms-info-icon,
+.rooms-ai-help-btn.active .rooms-info-icon {
+  filter: invert(0.8) sepia(1) hue-rotate(140deg) saturate(5);
+}
+
+.rooms-ai-help-hint-icon {
+  display: none;
+}
+
 .rooms-racks-power-help {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 13px;
-  height: 13px;
-  font-size: 0.9em;
-  font-weight: 800;
-  color: var(--secondary);
-  background: var(--text-primary);
-  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
   cursor: default;
   margin-right: 3px;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .rooms-racks-power-tooltip {
@@ -782,16 +825,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 13px;
-  height: 13px;
-  font-size: 0.9em;
-  font-weight: 800;
-  color: var(--secondary);
-  background: var(--text-primary);
-  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
   cursor: default;
   margin-right: 3px;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .rooms-temp-bonus-tooltip {

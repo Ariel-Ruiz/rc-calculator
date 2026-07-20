@@ -1,125 +1,129 @@
 <template>
-  <div class="profit-container">
-    <div v-if="!pricesLoaded" class="rooms-loading-overlay">
-      <img src="../assets/duck.gif" alt="Loading" class="loading-duck" />
+  <div>
+    <div v-if="!pricesLoaded" class="v2-loading">
+      <img src="../assets/duck.gif" alt="Loading" />
     </div>
-    <div class="profit-input">
-      <h1 class="event-title">{{ t.profitTitle || 'Profit' }}</h1>
-      <div class="event-subtitle">{{ t.profitSubtitle || 'Mining Rewards Calculator' }}</div>
-      <p class="help" v-html="t.warning || ''"></p>
+    <div class="v2-profit">
+      <!-- Input panel -->
+      <div class="v2-profit-panel">
+        <h1 class="v2-profit-title">Profit</h1>
+        <div class="v2-profit-subtitle">{{ t.profitSubtitle || 'Mining Rewards Calculator' }}</div>
+        <p class="v2-profit-help" v-html="t.warning || ''"></p>
 
-      <div class="profit-example">
         <img
           :src="exampleImg"
           alt="example"
-          class="profit-example-thumb"
+          class="v2-example-thumb"
           @click="previewImage = exampleImg"
         />
-      </div>
 
-      <div v-if="previewImage" class="image-preview-overlay" @click="previewImage = null">
-        <div class="image-preview-container" @click.stop>
-          <img :src="previewImage" alt="Preview" class="image-preview" />
-          <button class="preview-close" @click="previewImage = null">&times;</button>
+        <div v-if="previewImage" class="v2-preview-overlay" @click="previewImage = null">
+          <div class="v2-preview-container" @click.stop>
+            <img :src="previewImage" alt="Preview" />
+            <button class="v2-preview-close v2-close-btn" @click="previewImage = null">
+              <img :src="timesIcon" alt="Close" />
+            </button>
+          </div>
         </div>
-      </div>
 
-      <label class="profit-label">{{ t.networkLabel || 'Your league network' }}</label>
-      <textarea
-        id="networkInput"
-        v-model="networkInput"
-        class="profit-textarea"
-        :placeholder="t.networkPlaceholder || 'Pega aquí los datos de la red...'"
-        @blur="saveNetwork"
-      />
-      <label class="profit-label">{{ t.powerInLabel || 'Power in' }}</label>
-      <div class="toogle-currency-tab profit-unit-tab">
-        <div
-          :class="['toogle-currency', { 'active': powerUnit === 'EH' }]"
-          @click="powerUnit = 'EH'"
-        >EH/s</div>
-        <div
-          :class="['toogle-currency', { 'active': powerUnit === 'PH' }]"
-          @click="powerUnit = 'PH'"
-        >PH/s</div>
-      </div>
-      <input
-        type="number"
-        id="myPower"
-        class="profit-power-input"
-        v-model.number="myPower"
-        :placeholder="powerUnit === 'EH' ? (t.powerPlaceholderEh || 'Your power (EH/s)') : (t.powerPlaceholderPh || 'Your power (PH/s)')"
-        @blur="updateNetworkPower"
-      />
-      <button class="btn-calculate" @click="procesarRed">{{ t.processBtn || 'Procesar' }}</button>
-    </div>
+        <label class="v2-label">{{ t.networkLabel || 'Your league network' }}</label>
+        <textarea
+          v-model="networkInput"
+          class="v2-textarea"
+          :placeholder="t.networkPlaceholder || 'Paste your network data here...'"
+          @blur="saveNetwork"
+        />
 
-    <div class="profit-results">
-      <div class="result-buttons">
-        <div class="toogle-currency-tab">
+        <label class="v2-label">{{ t.powerInLabel || 'Power in' }}</label>
+        <div class="v2-toggle-group">
           <div
-            id='toogle-crypto'
-            :class="['toogle-currency', { 'active': !useUSD }]"
-            @click="useUSD = false"
-          >CRYPTO</div>
+            :class="['v2-toggle-opt', { active: powerUnit === 'EH' }]"
+            @click="powerUnit = 'EH'"
+          >EH/s</div>
           <div
-            id='toogle-usd'
-            :class="['toogle-currency', { 'active': useUSD }]"
-            @click="useUSD = true"
-          >USD</div>
+            :class="['v2-toggle-opt', { active: powerUnit === 'PH' }]"
+            @click="powerUnit = 'PH'"
+          >PH/s</div>
         </div>
+
+        <input
+          type="number"
+          class="v2-input"
+          v-model.number="myPower"
+          :placeholder="powerUnit === 'EH' ? (t.powerPlaceholderEh || 'Your power (EH/s)') : (t.powerPlaceholderPh || 'Your power (PH/s)')"
+          @blur="updateNetworkPower"
+          style="margin-top: 0.4rem"
+        />
+        <button class="v2-btn-primary" @click="procesarRed">{{ t.processBtn || 'PROCESS' }}</button>
       </div>
 
-      <div class="table-wrapper">
-        <table id="resultTable">
-          <thead>
-            <tr>
-              <th class="sticky" id="thCoin">{{ t.thCoin || '' }}</th>
-              <th id="thNetPower">{{ t.thNetPower || '' }}</th>
-              <th id="thReward">{{ t.thReward || '' }}</th>
-              <th id="thBlockTime">{{ t.thBlockTime || '' }}</th>
-              <th id="thPerBlock">{{ t.thPerBlock || '' }}</th>
-              <th id="thPerDay">{{ t.thPerDay || '' }}</th>
-              <th id="thPerWeek">{{ t.thPerWeek || '' }}</th>
-              <th id="thPerMonth">{{ t.thPerMonth || '' }}</th>
-              <th id="thWithdrawIn">{{ t.thWithdrawIn || '' }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(r, idx) in rows" :key="idx" :data-idx="idx">
-              <td class="sticky">
-                <img :src="symbolIcons[r.p.symbol] || '/symbols/default.svg'" class="symbol-icon" :alt="r.p.symbol" />
-              </td>
-              <td>{{ r.p.power }}</td>
-              <td>{{ r.p.reward }}</td>
-              <td>
-                <input
-                  class="editable"
-                  type="text"
-                  :value="r.p.blockTime"
-                  @input="updateBlockTime(idx, $event.target.value)"
-                />
-              </td>
-              <td class="block">{{ r.calc.perBlock.toFixed(useUSD ? 2 : 6) }} {{ r.calc.suffix }}</td>
-              <td class="day">{{ r.calc.perDay.toFixed(useUSD ? 2 : 4) }} {{ r.calc.suffix }}</td>
-              <td class="week">{{ r.calc.perWeek.toFixed(useUSD ? 2 : 4) }} {{ r.calc.suffix }}</td>
-              <td class="month">{{ r.calc.perMonth.toFixed(useUSD ? 2 : 3) }} {{ r.calc.suffix }}</td>
-              <td class="withdraw" v-if="r.calc.withdrawMin !== null">
-                <span class="withdraw-min">{{ r.calc.withdrawMin }} {{ r.p.symbol }}</span>
-                <br/>
-                <span class="withdraw-days">{{ r.calc.withdrawDays !== null ? r.calc.withdrawDays + 'd' : '-' }}</span>
-              </td>
-              <td v-else></td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- Results -->
+      <div class="v2-profit-results">
+        <div class="v2-results-toolbar">
+          <div class="v2-toggle-group v2-toggle-sm">
+            <div
+              :class="['v2-toggle-opt', { active: !useUSD }]"
+              @click="useUSD = false"
+            >CRYPTO</div>
+            <div
+              :class="['v2-toggle-opt', { active: useUSD }]"
+              @click="useUSD = true"
+            >USD</div>
+          </div>
+        </div>
+
+        <div class="v2-table-wrap">
+          <table class="v2-table">
+            <thead>
+              <tr>
+                <th>{{ t.thCoin || 'Coin' }}</th>
+                <th>{{ t.thNetPower || 'Net Power' }}</th>
+                <th>{{ t.thReward || 'Reward' }}</th>
+                <th>{{ t.thBlockTime || 'Block' }}</th>
+                <th>{{ t.thPerBlock || '/Block' }}</th>
+                <th>{{ t.thPerDay || '/Day' }}</th>
+                <th>{{ t.thPerWeek || '/Week' }}</th>
+                <th>{{ t.thPerMonth || '/Month' }}</th>
+                <th>{{ t.thWithdrawIn || 'Withdraw' }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(r, idx) in rows" :key="idx">
+                <td>
+                  <div class="v2-coin-cell">
+                    <img :src="symbolIcons[r.p.symbol]" class="symbol-icon" :alt="r.p.symbol" />
+                  </div>
+                </td>
+                <td>{{ r.p.power }}</td>
+                <td>{{ r.p.reward }}</td>
+                <td>
+                  <input
+                    class="v2-editable"
+                    type="text"
+                    :value="r.p.blockTime"
+                    @input="updateBlockTime(idx, $event.target.value)"
+                  />
+                </td>
+                <td>{{ r.calc.perBlock.toFixed(useUSD ? 2 : 6) }} {{ r.calc.suffix }}</td>
+                <td>{{ r.calc.perDay.toFixed(useUSD ? 2 : 4) }} {{ r.calc.suffix }}</td>
+                <td>{{ r.calc.perWeek.toFixed(useUSD ? 2 : 4) }} {{ r.calc.suffix }}</td>
+                <td>{{ r.calc.perMonth.toFixed(useUSD ? 2 : 3) }} {{ r.calc.suffix }}</td>
+                <td v-if="r.calc.withdrawMin !== null">
+                  <span class="v2-withdraw-min">{{ r.calc.withdrawMin }} {{ r.p.symbol }}</span>
+                  <br/>
+                  <span class="v2-withdraw-days">{{ r.calc.withdrawDays !== null ? r.calc.withdrawDays + 'd' : '-' }}</span>
+                </td>
+                <td v-else></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import '../styles/profit.css'
 import moment from 'moment'
 import { fetchAllPrices, fetchPrice, loadPricesFromStorage } from '../lib/prices'
 import { convertirAHs, tiempoASegundos } from '../lib/calculations'
@@ -139,10 +143,10 @@ import polIcon from '../assets/symbols/matic.svg'
 import algoIcon from '../assets/symbols/algo.svg'
 import usdtIcon from '../assets/symbols/usdt.svg'
 import exampleImg from '../assets/example.png'
+import timesIcon from '../assets/icons/times.svg'
 import { db } from '../firebase'
 import { ref as dbRef, set } from 'firebase/database'
 
-// ---- Minimum withdraw amounts per coin ----
 const withdrawMinimums = {
   BTC: 0.00085,
   ETH: 0.014,
@@ -156,20 +160,11 @@ const withdrawMinimums = {
 }
 
 const symbolIcons = {
-  RLT: rltIcon,
-  RST: rstIcon,
-  HMT: hmtIcon,
-  BTC: btcIcon,
-  ETH: ethIcon,
-  LTC: ltcIcon,
-  BNB: bnbIcon,
-  DOGE: dogeIcon,
-  XRP: xrpIcon,
-  TRX: trxIcon,
-  SOL: solIcon,
-  POL: polIcon,
-  ALGO: algoIcon,
-  USDT: usdtIcon
+  RLT: rltIcon, RST: rstIcon, HMT: hmtIcon,
+  BTC: btcIcon, ETH: ethIcon, LTC: ltcIcon,
+  BNB: bnbIcon, DOGE: dogeIcon, XRP: xrpIcon,
+  TRX: trxIcon, SOL: solIcon, POL: polIcon,
+  ALGO: algoIcon, USDT: usdtIcon
 }
 
 export default {
@@ -205,13 +200,12 @@ export default {
       pricesLoaded: false,
       symbolIcons,
       exampleImg,
+      timesIcon,
       previewImage: null
     }
   },
   computed: {
-    t() {
-      return this.i18n.t
-    },
+    t() { return this.i18n.t },
     rows() {
       const defaultCalc = { perBlock: 0, perDay: 0, perWeek: 0, perMonth: 0, suffix: '', withdrawMin: null, withdrawDays: null }
       return this.parsedLines.map(p => ({
@@ -222,24 +216,14 @@ export default {
   },
   watch: {
     parsedLines: {
-      handler(newVal) {
-        localStorage.setItem('networkLines', JSON.stringify(newVal))
-      },
+      handler(v) { localStorage.setItem('networkLines', JSON.stringify(v)) },
       deep: true
     },
-    myPower(newVal) {
-      localStorage.setItem('power', String(newVal))
-    },
-    useUSD(newVal) {
-      localStorage.setItem('useUSD', newVal ? '1' : '')
-    },
-    powerUnit(newVal) {
-      localStorage.setItem('powerUnit', newVal)
-    }
+    myPower(v) { localStorage.setItem('power', String(v)) },
+    useUSD(v) { localStorage.setItem('useUSD', v ? '1' : '') },
+    powerUnit(v) { localStorage.setItem('powerUnit', v) }
   },
-  mounted() {
-    this.loadPrices()
-  },
+  mounted() { this.loadPrices() },
   methods: {
     async loadPrices() {
       if (!this.lastPricesLoaded || moment(this.lastPricesLoaded).isBefore(moment().subtract(1, 'hours'))) {
@@ -335,15 +319,7 @@ export default {
         withdrawDays = rawPerDay > 0 ? Math.ceil(withdrawMin / rawPerDay) : null
       }
 
-      return {
-        perBlock: myRewardBlock,
-        perDay: myRewardDay,
-        perWeek: myRewardWeek,
-        perMonth: myRewardMonth,
-        withdrawMin,
-        withdrawDays,
-        suffix
-      }
+      return { perBlock: myRewardBlock, perDay: myRewardDay, perWeek: myRewardWeek, perMonth: myRewardMonth, withdrawMin, withdrawDays, suffix }
     }
   }
 }

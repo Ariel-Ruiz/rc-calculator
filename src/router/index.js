@@ -17,7 +17,7 @@ const routes = [
     component: Home,
     meta: {
       title: 'Profit Calculator | RC Calculator',
-      description: 'Calculate your RollerCoin mining profits per block, day, week and month. Real-time crypto prices for BTC, ETH, DOGE, RLT and more.',
+      description: 'Calculate your RollerCoin mining profits per block, day, week and month.',
     }
   },
   {
@@ -35,7 +35,7 @@ const routes = [
     component: PE,
     meta: {
       title: 'Progression Event | RC Calculator',
-      description: 'Calculate the best multiplier and cost for RollerCoin progression events. See reward tables and profitability scores.',
+      description: 'Calculate the best multiplier and cost for RollerCoin progression events.',
     }
   },
   {
@@ -44,7 +44,7 @@ const routes = [
     component: BurningEvent,
     meta: {
       title: 'Burning Event | RC Calculator',
-      description: 'Tools and calculations for RollerCoin burning events. Optimize your strategy.',
+      description: 'Tools and calculations for RollerCoin burning events.',
     }
   },
   {
@@ -53,7 +53,7 @@ const routes = [
     component: Rooms,
     meta: {
       title: 'Room Simulator | RC Calculator',
-      description: 'Simulate and optimize your RollerCoin room layout. Import your configuration and find the best miner placement for maximum power and bonus.',
+      description: 'Simulate and optimize your RollerCoin room layout.',
     }
   },
   {
@@ -62,7 +62,7 @@ const routes = [
     component: Hamsters,
     meta: {
       title: 'Hamsters | RC Calculator',
-      description: 'Manage your RollerCoin hamsters for expeditions. Track levels, stats and optimize your team.',
+      description: 'Manage your RollerCoin hamsters for expeditions.',
     }
   },
   {
@@ -71,7 +71,7 @@ const routes = [
     component: Marketplace,
     meta: {
       title: 'Marketplace | RC Calculator',
-      description: 'Analyze and compare RollerCoin marketplace miners. Find the best deals based on power, bonus and price.',
+      description: 'Analyze and compare RollerCoin marketplace miners.',
     }
   }
 ]

@@ -16,7 +16,9 @@
       <div v-if="previewImage" class="image-preview-overlay" @click="previewImage = null">
         <div class="image-preview-container" @click.stop>
           <img :src="previewImage" alt="Preview" class="image-preview" />
-          <button class="preview-close" @click="previewImage = null">&times;</button>
+          <button class="preview-close" @click="previewImage = null">
+            <img src="../assets/icons/times.svg" alt="Close" class="rooms-close-icon" />
+          </button>
         </div>
       </div>
 
@@ -118,7 +120,9 @@
           :key="item.uid"
           class="mp-card"
         >
-          <button class="mp-card-delete" @click="removeItem(item)">&times;</button>
+          <button class="mp-card-delete" @click="removeItem(item)">
+            <img src="../assets/icons/times.svg" alt="x" class="rooms-close-icon" />
+          </button>
 
           <div class="mp-miner-row">
             <img

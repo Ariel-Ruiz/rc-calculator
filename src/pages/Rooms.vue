@@ -43,7 +43,8 @@
       <!-- Racks Power -->
       <div v-if="rackBonusExtra > 0" class="rooms-racks-power">
         <div class="rooms-racks-power-title">
-          <span class="rooms-racks-power-help">?
+          <span class="rooms-racks-power-help">
+            <img src="../assets/icons/info.svg" alt="info" class="rooms-info-icon" />
             <span class="rooms-racks-power-tooltip">{{ t.rooms?.racks_power_tooltip || 'Total extra power contributed by racks with bonus applied to the miners inside them.' }}</span>
           </span>
           {{ t.rooms?.racks_power || 'Racks Power' }}
@@ -66,7 +67,7 @@
               class="rooms-set-power-info"
               @mouseenter="showSetTooltip($event)"
               @mouseleave="hideSetTooltip"
-            >&#9432;</span></span>
+            ><img src="../assets/icons/info.svg" alt="info" class="rooms-info-icon" /></span></span>
             <div class="rooms-set-bonuses">
               <span
                 v-for="(bonus, idx) in set.bonuses"
@@ -102,7 +103,8 @@
           <!-- Temporary bonus input -->
           <div class="rooms-temp-bonus-bar">
             <label class="rooms-temp-bonus-label">
-              <span class="rooms-temp-bonus-help">?
+              <span class="rooms-temp-bonus-help">
+                <img src="../assets/icons/info.svg" alt="info" class="rooms-info-icon" />
                 <span class="rooms-temp-bonus-tooltip">{{ t.rooms?.temp_bonus_tooltip || 'Temporary bonus not counted for league promotion (freon, hamsters, etc.)' }}</span>
               </span>
               {{ t.rooms?.temp_bonus || 'Temp Bonus' }}
@@ -288,7 +290,7 @@
     <div class="rooms-right" ref="rightPanel" :style="rightPanelStyle">
       <!-- How it works -->
       <button class="rooms-how-btn" @click="showHowItWorks = true">
-        <span class="rooms-how-icon">&#128161;</span>
+        <img src="../assets/icons/info2.svg" alt="" class="rooms-how-icon" />
         <span>{{ t.rooms?.how_it_works }}</span>
       </button>
 
@@ -698,7 +700,9 @@
     <!-- How it works modal -->
     <div v-if="showHowItWorks" class="rooms-modal-overlay" @click="!hiwFirstTime && (showHowItWorks = false)">
       <div class="hiw-modal" @click.stop>
-        <button v-if="!hiwFirstTime" class="rooms-modal-close" @click="showHowItWorks = false">&times;</button>
+        <button v-if="!hiwFirstTime" class="rooms-modal-close" @click="showHowItWorks = false">
+          <img src="../assets/icons/times.svg" alt="Close" class="rooms-close-icon" />
+        </button>
         <div class="hiw-title">{{ t.rooms?.how_it_works }}</div>
 
         <!-- Section tabs -->
@@ -720,7 +724,7 @@
               class="hiw-arrow hiw-arrow-left"
               :disabled="hiwSection === 0 && hiwDetail === 0"
               @click="hiwPrev"
-            >&#9664;</button>
+            ><img :src="arrowIconUrl" alt="prev" class="hiw-arrow-icon hiw-arrow-icon-left" /></button>
             <div class="hiw-img-container">
               <img
                 v-if="howItWorksData[hiwSection].details[hiwDetail]?.img"
@@ -734,7 +738,7 @@
               class="hiw-arrow hiw-arrow-right"
               :disabled="hiwIsLastPage"
               @click="hiwNext"
-            >&#9654;</button>
+            ><img :src="arrowIconUrl" alt="next" class="hiw-arrow-icon" /></button>
           </div>
 
           <div class="hiw-dots">
@@ -947,7 +951,7 @@
           <h2 class="rooms-ai-title">Network</h2>
           <div class="rooms-ai-instructions">
             <b>{{ t.rooms?.ai_how_to || 'How to get the data:' }}</b>
-            <div class="rooms-ai-help-hint" v-html="(t.rooms?.ai_help_hint || 'Click {?} for help').replace('{?}', '<span class=\'rooms-ai-help-hint-icon\'>?</span>')"></div>
+            <div class="rooms-ai-help-hint" v-html="(t.rooms?.ai_help_hint || 'Click {?} for help').replace('{?}', '<img src=\'' + infoIconUrl + '\' class=\'rooms-info-icon\' />')"></div>
             <ol class="rooms-ai-steps">
               <li v-for="step in 7" :key="step" class="rooms-ai-step">
                 <div class="rooms-ai-step-header">
@@ -956,7 +960,7 @@
                     class="rooms-ai-help-btn"
                     :class="{ active: autoImportHelpOpen === step }"
                     @click="autoImportHelpOpen = autoImportHelpOpen === step ? null : step"
-                  >?</button>
+                  ><img src="../assets/icons/info.svg" alt="?" class="rooms-info-icon" /></button>
                 </div>
                 <div v-if="autoImportHelpOpen === step" class="rooms-ai-help-detail">
                   <div class="rooms-ai-help-text">{{ t.rooms?.['ai_help' + step] }}</div>
@@ -1070,6 +1074,8 @@ import exampleCollection from '../assets/example_collection.png'
 import exampleInventory from '../assets/example_inventory.png'
 import exampleSell from '../assets/example_sell.png'
 import defaultMinerImg from '../assets/miners/default.svg'
+import infoIconUrl from '../assets/icons/info.svg'
+import arrowIconUrl from '../assets/icons/arrow.svg'
 let networkExampleImg = null
 try { networkExampleImg = new URL('../assets/example_network_import.png', import.meta.url).href } catch (e) {}
 const autoImportHelpImages = import.meta.glob('../assets/rooms/autoimport/*.png', { eager: true })
@@ -1148,6 +1154,8 @@ export default {
   data() {
     return {
       storagePath: 'https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/',
+      infoIconUrl,
+      arrowIconUrl,
       exampleImages: { collection: exampleCollection, inventory: exampleInventory, sell: exampleSell },
       roomSkins: roomSkinsData,
       selectedSkin: roomSkinsData[0]?.id || 'room_background',

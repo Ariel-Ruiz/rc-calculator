@@ -19250,5 +19250,77 @@
     "can_be_merged": true,
     "cells": 2,
     "filename": "hydra.gif"
+  },
+  {
+    "id": "6a5a1f5354399a9665534610",
+    "name": "Piece of Map",
+    "bonus": 1,
+    "power": "20.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": false,
+    "cells": 1,
+    "filename": "piece_of_map.gif"
+  },
+  {
+    "id": "6a562ed5740408504ddff7ca",
+    "name": "Clockwork",
+    "bonus": 4,
+    "power": "200.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "clockwork.gif"
+  },
+  {
+    "id": "6a58a207740408504de2cd3b",
+    "name": "Diamondfall",
+    "bonus": 3,
+    "power": "50.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 1,
+    "filename": "diamondfall.gif"
+  },
+  {
+    "id": "6a5a1e1454399a966553401c",
+    "name": "Midnight Pearl",
+    "bonus": 5,
+    "power": "70.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "midnight_pearl.gif"
+  },
+  {
+    "id": "6a5a22fb54399a96655354b0",
+    "name": "Ghost Coin",
+    "bonus": 1,
+    "power": "50.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "ghost_coin.gif"
+  },
+  {
+    "id": "6a5a56a854399a9665540473",
+    "name": "Captain's Fortune",
+    "bonus": 0.5,
+    "power": "2.500 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "captains_fortune.gif"
   }
 ]

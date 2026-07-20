@@ -1,237 +1,165 @@
 <template>
-  <div class="burning-container">
-    <!-- Maintenance Overlay -->
-    <div v-if="maintenance" class="maintenance-overlay">
-      <div class="maintenance-content">
-        <div class="maintenance-icon">&#9888;</div>
-        <h1 class="maintenance-title">{{ t.burning?.maintenanceTitle }}</h1>
-        <p class="maintenance-subtitle">{{ t.burning?.maintenanceSubtitle }}</p>
+  <div class="v2-burn">
+    <!-- Maintenance -->
+    <div v-if="maintenance" class="v2-loading">
+      <div style="text-align:center">
+        <h1 class="v2-burn-title">{{ t.burning?.maintenanceTitle }}</h1>
+        <p style="color:var(--v2-text-muted);font-size:1.1rem">{{ t.burning?.maintenanceSubtitle }}</p>
       </div>
     </div>
 
-    <!-- Input Section -->
-    <div class="burning-input">
-      <h1 class="event-title">{{ t.burning?.title }}</h1>
-      <p class="help" v-html="t.burning?.subtitle"></p>
+    <!-- LEFT: Input -->
+    <div class="v2-burn-input">
+      <h1 class="v2-burn-title">{{ t.burning?.title }}</h1>
+      <p class="v2-burn-help" v-html="cleanSubtitle"></p>
 
-      <div class="example-grid">
-        <img
-          :src="exampleImages.marketplace"
-          alt="Marketplace example"
-          class="example-thumb"
-          @click="openPreview(exampleImages.marketplace)"
-        />
-        <img
-          :src="exampleImages.sell"
-          alt="Sell example"
-          class="example-thumb"
-          @click="openPreview(exampleImages.sell)"
-        />
-        <img
-          :src="exampleImages.inventory"
-          alt="Inventory example"
-          class="example-thumb"
-          @click="openPreview(exampleImages.inventory)"
-        />
-        <img
-          :src="exampleImages.collection"
-          alt="Collection example"
-          class="example-thumb"
-          @click="openPreview(exampleImages.collection)"
-        />
-      </div>
-
-      <!-- Image Preview Modal -->
-      <div v-if="previewImage" class="image-preview-overlay" @click="closePreview">
-        <div class="image-preview-container" @click.stop>
-          <img :src="previewImage" alt="Preview" class="image-preview" />
-          <button class="preview-close" @click="closePreview">&times;</button>
+      <div class="v2-burn-examples">
+        <div v-for="(img, key) in exampleImages" :key="key" class="v2-burn-example" @click="openPreview(img)">
+          <img :src="img" :alt="key" class="v2-burn-thumb" />
+          <span class="v2-burn-thumb-label">{{ key }}</span>
         </div>
       </div>
 
-      <textarea
-        v-model="inputText"
-        class="burning-textarea"
-        :placeholder="t.burning?.placeholder || 'paste data here...'"
-      ></textarea>
+      <!-- Preview -->
+      <div v-if="previewImage" class="v2-preview-overlay" @click="closePreview">
+        <div class="v2-preview-container" @click.stop>
+          <img :src="previewImage" alt="Preview" />
+          <button class="v2-preview-close v2-close-btn" @click="closePreview">
+            <img :src="timesIcon" alt="Close" />
+          </button>
+        </div>
+      </div>
 
-      <div class="burning-buttons">
-        <button class="btn-calculate" @click="calculate">
-          {{ t.burning?.calculate || 'CALCULATE' }}
-        </button>
-        <button class="btn-clear" @click="clearAll">
-          {{ t.burning?.clear || 'CLEAR' }}
-        </button>
+      <textarea v-model="inputText" class="v2-textarea" :placeholder="t.burning?.placeholder || 'paste data here...'" />
+
+      <div class="v2-burn-btns">
+        <button class="v2-burn-btn-calc" @click="calculate">{{ t.burning?.calculate || 'CALCULATE' }}</button>
+        <button class="v2-burn-btn-clear" @click="clearAll">{{ t.burning?.clear || 'CLEAR' }}</button>
       </div>
     </div>
 
-    <!-- Results Section -->
-    <div class="burning-results">
-      <!-- Selected Points Counter -->
-      <div v-if="results.length > 0" class="selected-points-bar">
-        <div class="selected-points-left">
-          <span class="selected-label">{{ t.burning?.selectedPoints }}</span>
-          <img src="../assets/symbols/ecoin.svg" alt="ecoin" class="ecoin-icon" />
-          <span class="selected-value">{{ formatNumber(selectedPoints) }}</span>
+    <!-- RIGHT: Results -->
+    <div class="v2-burn-results">
+      <!-- Points bar -->
+      <div v-if="results.length > 0" class="v2-burn-points-bar">
+        <div class="v2-burn-points-left">
+          <span class="v2-burn-points-label">{{ t.burning?.selectedPoints }}</span>
+          <img src="../assets/symbols/ecoin.svg" alt="ecoin" class="v2-burn-ecoin-lg" />
+          <span class="v2-burn-points-value">{{ formatNumber(selectedPoints) }}</span>
         </div>
-        <div class="selected-miners-right">
-          <span class="selected-label">{{ t.burning?.selectedMiners }}</span>
-          <span class="selected-count">{{ selectedMinersCount }}</span>
+        <div class="v2-burn-points-right">
+          <span class="v2-burn-points-label">{{ t.burning?.selectedMiners }}</span>
+          <span class="v2-burn-points-value">{{ selectedMinersCount }}</span>
         </div>
       </div>
 
-      <div v-if="results.length > 0" class="results-controls">
-        <!-- Source Filters -->
-        <div class="source-filters">
+      <!-- Controls -->
+      <div v-if="results.length > 0" class="v2-burn-controls">
+        <div class="v2-burn-sources">
           <button
-            v-for="source in availableSources"
-            :key="source"
-            :class="['filter-btn', 'filter-' + source.toLowerCase(), { hidden: hiddenSources.includes(source) }]"
+            v-for="source in availableSources" :key="source"
+            :class="['v2-burn-source-btn', 'v2-burn-src-' + source.toLowerCase(), { hidden: hiddenSources.includes(source) }]"
             @click="toggleSource(source)"
-          >
-            {{ source }}
-          </button>
+          >{{ source }}</button>
         </div>
-        <div class="controls-right">
-          <!-- Filters Button -->
-          <button class="filter-toggle-btn" @click="filtersOpen = !filtersOpen">
+        <div class="v2-burn-controls-right">
+          <button class="v2-burn-filter-btn" @click="filtersOpen = !filtersOpen">
             {{ t.burning?.filters || 'FILTERS' }}
-            <span :class="['sort-arrow', { open: filtersOpen }]">&#9660;</span>
+            <span :class="['v2-burn-arrow', { open: filtersOpen }]">&#9660;</span>
           </button>
-          <!-- Sort Dropdown -->
-          <div class="sort-dropdown">
-            <button class="sort-button" @click="sortMenuOpen = !sortMenuOpen">
+          <div class="v2-burn-sort-wrap">
+            <button class="v2-burn-sort-btn" @click="sortMenuOpen = !sortMenuOpen">
               {{ currentSortLabel }}
-              <span :class="['sort-arrow', { open: sortMenuOpen }]">&#9660;</span>
+              <span :class="['v2-burn-arrow', { open: sortMenuOpen }]">&#9660;</span>
             </button>
-            <div v-if="sortMenuOpen" class="sort-menu">
-              <div
-                v-for="option in sortOptions"
-                :key="option.value"
-                :class="['sort-option', { active: sortBy === option.value }]"
-                @click="selectSort(option.value)"
-              >
-                {{ option.label }}
-              </div>
+            <div v-if="sortMenuOpen" class="v2-burn-sort-menu">
+              <div v-for="opt in sortOptions" :key="opt.value"
+                :class="['v2-burn-sort-opt', { active: sortBy === opt.value }]"
+                @click="selectSort(opt.value)"
+              >{{ opt.label }}</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Filters Collapse -->
-      <div v-if="results.length > 0 && filtersOpen" class="filters-collapse">
-        <div class="filter-input-group">
-          <label>{{ t.burning?.minPoints }}</label>
-          <input type="number" v-model.number="filterMinPoints" min="0" />
+      <!-- Filters -->
+      <div v-if="results.length > 0 && filtersOpen" class="v2-burn-filters">
+        <div class="v2-burn-filter-group">
+          <label class="v2-label">{{ t.burning?.minPoints }}</label>
+          <input class="v2-input" type="number" :value="filterMinPoints" @input="debouncedFilter('filterMinPoints', $event)" min="0" />
         </div>
-        <div class="filter-input-group">
-          <label>{{ t.burning?.minPtsRlt }}</label>
-          <input type="number" v-model.number="filterMinPtsRlt" min="0" />
+        <div class="v2-burn-filter-group">
+          <label class="v2-label">{{ t.burning?.minPtsRlt }}</label>
+          <input class="v2-input" type="number" :value="filterMinPtsRlt" @input="debouncedFilter('filterMinPtsRlt', $event)" min="0" />
         </div>
-        <div class="filter-input-group">
-          <label>{{ t.burning?.maxPrice }}</label>
-          <input type="number" v-model.number="filterMaxPrice" min="0" step="0.01" />
+        <div class="v2-burn-filter-group">
+          <label class="v2-label">{{ t.burning?.maxPrice }}</label>
+          <input class="v2-input" type="number" :value="filterMaxPrice" @input="debouncedFilter('filterMaxPrice', $event)" min="0" step="0.01" />
         </div>
-        <div class="filter-input-group">
-          <label>{{ t.burning?.filterSellable }}</label>
-          <select v-model="filterSellable">
+        <div class="v2-burn-filter-group">
+          <label class="v2-label">{{ t.burning?.filterSellable }}</label>
+          <select class="v2-input" v-model="filterSellable">
             <option value="all">{{ t.burning?.filterAll }}</option>
             <option value="sellable">{{ t.burning?.sellable }}</option>
             <option value="not-sellable">{{ t.burning?.notSellable }}</option>
           </select>
         </div>
-        <button class="btn-reset-filters" @click="resetFilters">
-          {{ t.burning?.reset || 'RESET' }}
-        </button>
+        <button class="v2-burn-btn-calc v2-burn-reset-btn" @click="resetFilters">{{ t.burning?.reset || 'RESET' }}</button>
       </div>
-      <div v-if="filteredResults.length > 0" class="results-grid">
+
+      <!-- Cards grid -->
+      <div v-if="filteredResults.length > 0" class="v2-burn-grid">
         <div
-          v-for="item in filteredResults"
-          :key="item.uid"
-          :class="['result-card', { selected: isSelected(item) }]"
+          v-for="item in filteredResults" :key="item.uid"
+          :class="['v2-burn-card', { selected: isSelected(item) }]"
           @click="toggleSelect(item)"
         >
-          <button class="card-delete" @click.stop="removeItem(item)">&times;</button>
-          <div :class="['card-source', 'source-' + (item.source || 'marketplace').toLowerCase()]">{{ item.source || 'MARKETPLACE' }}</div>
-          <div class="card-header">
-            <img src="../assets/symbols/ecoin.svg" alt="ecoin" class="ecoin-icon" />
-            <span class="card-points">{{ formatNumber(item.points) }}</span>
+          <button class="v2-burn-card-del v2-close-btn" @click.stop="removeItem(item)">
+            <img :src="timesIcon" alt="x" />
+          </button>
+          <div :class="['v2-burn-card-src', 'v2-burn-src-' + (item.source || 'marketplace').toLowerCase()]">{{ item.source || 'MARKETPLACE' }}</div>
+          <div class="v2-burn-card-pts">
+            <img src="../assets/symbols/ecoin.svg" alt="ecoin" class="v2-burn-ecoin" />
+            <span>{{ formatNumber(item.points) }}</span>
           </div>
-          <div class="card-body">
-            <div class="miner-row">
-              <img
-                v-if="getMinerImageUrl(item)"
-                :src="getMinerImageUrl(item)"
-                alt="miner"
-                class="miner-img"
-              />
-              <div class="miner-badges">
-                <img
-                  v-if="item.isLegacy || getRarityLevel(item.name) === 'legacy'"
-                  :src="getAssetUrl('others/legacy.png')"
-                  alt="legacy"
-                  class="badge-icon"
-                />
-                <img
-                  v-else-if="getRarityLevel(item.name)"
-                  :src="getLevelIcon(item.name)"
-                  alt="level"
-                  class="badge-icon"
-                />
-                <img
-                  v-if="item.isSet"
-                  :src="getAssetUrl('others/set.png')"
-                  alt="set"
-                  class="badge-icon"
-                />
+          <div class="v2-burn-card-body">
+            <div class="v2-burn-miner-row">
+              <img v-if="getMinerImageUrl(item)" :src="getMinerImageUrl(item)" alt="miner" class="v2-burn-miner-img" />
+              <div class="v2-burn-badges">
+                <img v-if="item.isLegacy || getRarityLevel(item.name) === 'legacy'" :src="getAssetUrl('others/legacy.png')" alt="legacy" class="v2-burn-badge" />
+                <img v-else-if="getRarityLevel(item.name)" :src="getLevelIcon(item.name)" alt="level" class="v2-burn-badge" />
+                <img v-if="item.isSet" :src="getAssetUrl('others/set.png')" alt="set" class="v2-burn-badge" />
               </div>
             </div>
-            <span class="card-name">{{ getCleanName(item.name) }}</span>
-            <div class="card-stats">
-              <span class="card-power">{{ item.power }}</span>
-              <span class="card-separator">|</span>
-              <span class="card-bonus">{{ item.bonus }}%</span>
+            <span class="v2-burn-card-name">{{ getCleanName(item.name) }}</span>
+            <div class="v2-burn-card-stats">
+              <span>{{ item.power }}</span>
+              <span class="v2-burn-sep">|</span>
+              <span class="v2-burn-bonus">{{ item.bonus }}%</span>
             </div>
-            <a
-              v-if="item.isSellable && item.minerId"
-              :href="'https://rollercoin.com/marketplace/buy/miner/' + item.minerId"
-              target="_blank"
-              class="card-sellable sellable sellable-link"
-              @click.stop
-            >
-              {{ t.burning?.sellable }}
-            </a>
-            <div v-else :class="['card-sellable', item.isSellable ? 'sellable' : 'not-sellable']">
+            <a v-if="item.isSellable && getMinerLink(item)"
+              :href="getMinerLink(item)"
+              target="_blank" class="v2-burn-sellable-link" @click.stop
+            >{{ t.burning?.sellable }}</a>
+            <div v-else :class="['v2-burn-sellable', item.isSellable ? 'yes' : 'no']">
               {{ item.isSellable ? t.burning?.sellable : t.burning?.notSellable }}
             </div>
           </div>
-          <div v-if="item.price !== null" class="card-footer">
-            <div class="card-price-row">
-              <span class="price">{{ formatPrice(item.price) }} RLT</span>
-              <span class="separator">|</span>
-              <span class="ppr">{{ formatNumber(item.pointsPerRlt) }} PtsxRLT</span>
-            </div>
+          <div v-if="item.price !== null" class="v2-burn-card-footer">
+            <div class="v2-burn-price">{{ formatPrice(item.price) }} RLT</div>
+            <div class="v2-burn-ppr">{{ formatNumber(item.pointsPerRlt) }} PtsxRLT</div>
           </div>
-          <!-- Quantity indicator for INVENTORY/SELL/MARKETPLACE -->
-          <div v-if="item.quantity > 1 && (item.source === 'SELL' || item.source === 'INVENTORY' || item.source === 'MARKETPLACE')" class="card-quantity">
-            x{{ item.quantity }}
-          </div>
-          <!-- Selection quantity control (for SELL/INVENTORY/MARKETPLACE) -->
-          <div v-if="isSelected(item) && (item.source === 'SELL' || item.source === 'INVENTORY' || item.source === 'MARKETPLACE')" class="quantity-control" @click.stop>
-            <button class="qty-btn qty-minus" @click="decrementQty(item)">−</button>
-            <span class="qty-value">{{ selectedUids[item.uid] }}</span>
-            <button class="qty-btn qty-plus" @click="incrementQty(item)" :disabled="selectedUids[item.uid] >= item.quantity">+</button>
+          <div v-if="item.quantity > 1 && (item.source === 'SELL' || item.source === 'INVENTORY' || item.source === 'MARKETPLACE')" class="v2-burn-qty-badge">x{{ item.quantity }}</div>
+          <div v-if="isSelected(item) && (item.source === 'SELL' || item.source === 'INVENTORY' || item.source === 'MARKETPLACE')" class="v2-burn-qty-ctrl" @click.stop>
+            <button class="v2-burn-qty-btn minus" @click="decrementQty(item)">-</button>
+            <span class="v2-burn-qty-val">{{ selectedUids[item.uid] }}</span>
+            <button class="v2-burn-qty-btn plus" @click="incrementQty(item)" :disabled="selectedUids[item.uid] >= item.quantity">+</button>
           </div>
         </div>
       </div>
 
-      <div v-else class="empty-state">
-        <!-- <div class="empty-state-icon">📋</div> -->
-        <div class="empty-state-text">
-          {{ 
-            t.burning?.empty
-          }}
-        </div>
+      <div v-else class="v2-burn-empty">
+        <div>{{ t.burning?.empty }}</div>
       </div>
     </div>
   </div>
@@ -244,6 +172,9 @@ import exampleSell from '../assets/example_burn_sell.png'
 import exampleInventory from '../assets/example_burn_inventory.png'
 import exampleCollection from '../assets/example_burn_collection.png'
 import minersData from '../assets/miners.json'
+import mergesData from '../assets/merges.json'
+import timesIcon from '../assets/icons/times.svg'
+import infoIcon from '../assets/icons/info.svg'
 
 export default {
   name: 'BurningEvent',
@@ -255,7 +186,7 @@ export default {
       inputText: '',
       results: [],
       selectedUids: {},
-      sortBy: 'points-desc', //'ppr-desc',
+      sortBy: 'points-desc',
       sortMenuOpen: false,
       filtersOpen: false,
       filterMinPoints: null,
@@ -276,7 +207,10 @@ export default {
         { value: 'points-desc', label: 'Points: High - Low' },
         { value: 'ppr-asc', label: 'PtsxRLT: Low - High' },
         { value: 'ppr-desc', label: 'PtsxRLT: High - Low' }
-      ]
+      ],
+      timesIcon,
+      infoIcon,
+      merges: mergesData
     }
   },
   computed: {
@@ -305,7 +239,6 @@ export default {
     },
     sortedResults() {
       const sorted = [...this.computedResults]
-      // return sorted.sort((a, b) => b.points - a.points)
       switch (this.sortBy) {
         case 'points-asc':
           return sorted.sort((a, b) => a.points - b.points)
@@ -329,7 +262,6 @@ export default {
         const source = item.source || 'MARKETPLACE'
         if (this.hiddenSources.includes(source)) return false
 
-        // Apply numeric filters
         if (this.filterMinPoints && item.points < this.filterMinPoints) return false
         if (this.filterMinPtsRlt && (item.pointsPerRlt === null || item.pointsPerRlt < this.filterMinPtsRlt)) return false
         if (this.filterMaxPrice && (item.price === null || item.price > this.filterMaxPrice)) return false
@@ -369,6 +301,10 @@ export default {
         }
       }
       return count
+    },
+    cleanSubtitle() {
+      const raw = this.i18n.t?.burning?.subtitle || ''
+      return raw.replace(/💡/g, `<img src="${this.infoIcon}" class="v2-burn-info-icon" alt="" />`)
     }
   },
   mounted() {
@@ -438,7 +374,6 @@ export default {
       const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0)
       let uidCounter = Date.now()
 
-      // Helper to find existing miner with same stats and source
       const findExisting = (miner) => {
         return miners.find(m =>
           m.name === miner.name &&
@@ -448,22 +383,17 @@ export default {
         )
       }
 
-      // Helper to add miner if not duplicate, or update if needed
       const addMiner = (miner) => {
-        // Assign unique ID to each miner
         miner.uid = uidCounter++
 
         const existing = findExisting(miner)
         if (existing) {
-          // If new miner has isSet=true and existing doesn't, update it
           if (miner.isSet && !existing.isSet) {
             existing.isSet = true
           }
-          // If new miner has minerId and existing doesn't, update it
           if (miner.minerId && !existing.minerId) {
             existing.minerId = miner.minerId
           }
-          // Sum quantities for INVENTORY and SELL
           if ((miner.source === 'INVENTORY' || miner.source === 'SELL') && miner.quantity) {
             existing.quantity = (existing.quantity || 1) + miner.quantity
           }
@@ -474,7 +404,6 @@ export default {
 
       let i = 0
       while (i < lines.length) {
-        // Skip lines that are just category labels (but not productset badge - we handle that specially)
         if ((lines[i].match(/^product\d*$/i) && !lines[i].includes('set badge')) ||
             lines[i] === 'In collection' ||
             lines[i].match(/^productRating star$/i)) {
@@ -483,7 +412,6 @@ export default {
         }
 
         // ========== COLLECTION FORMAT ==========
-        // Detect by "Bonus power +X%" pattern
         const collectionBonusMatch = lines[i].match(/^Bonus power \+([\d.,]+)%$/i)
         if (collectionBonusMatch) {
           let bonus = collectionBonusMatch[1]
@@ -494,15 +422,12 @@ export default {
           let isSet = false
           let isLegacy = false
 
-          // Next line should be hex ID (possibly with "set badge", "Rating star" or rarity number)
           if (i + 1 < lines.length) {
             const idLine = lines[i + 1]
 
-            // Check for set badge or Rating star
             const isSetBadge = idLine.includes('set badge')
             isLegacy = idLine.includes('Rating star')
 
-            // Check if it's a valid ID line (hex chars at start)
             const cleanId = idLine.replace('set badge', '').replace('Rating star', '').trim()
             const idMatch = cleanId.match(/^([a-f0-9]{24})([1-5])?$/i)
 
@@ -514,10 +439,8 @@ export default {
                 rarity = rarityMap[idMatch[2]] || ''
               }
 
-              // Get name
               let nameIndex = i + 2
 
-              // If it's a set, the first name line is the set name (ends with " Set") - skip to miner name
               if (isSet && nameIndex < lines.length) {
                 const potentialSetName = lines[nameIndex]
                 if (potentialSetName.toLowerCase().endsWith(' set')) {
@@ -534,7 +457,6 @@ export default {
                 }
               }
 
-              // Look for Power in following lines
               let endIdx = nameIndex + 1
               for (let j = nameIndex + 1; j < Math.min(i + 12, lines.length); j++) {
                 const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
@@ -574,7 +496,6 @@ export default {
         }
 
         // ========== INVENTORY FORMAT ==========
-        // Detect by "Set" on next line after name OR "Rating star"/"set badge" before name
         const isInventoryLegacy = lines[i] === 'Rating star' && i + 2 < lines.length && lines[i + 2] === 'Set'
         const isInventorySetBadge = lines[i] === 'set badge' && i + 2 < lines.length && lines[i + 2] === 'Set'
         const isInventoryNormal = i + 1 < lines.length && lines[i + 1] === 'Set' && lines[i] !== 'Rating star' && lines[i] !== 'set badge'
@@ -594,21 +515,15 @@ export default {
           } else if (isInventorySetBadge) {
             let candidateName = lines[i + 1]
             startIndex = i + 1
-            // If the name ends with " Set", it's the set name - look for the miner name after "Set" line
             if (candidateName.toLowerCase().endsWith(' set') && i + 3 < lines.length) {
-              // Structure: set badge -> SetName -> "Set" -> MinerName
               candidateName = lines[i + 3]
               startIndex = i + 3
             }
             name = candidateName
           } else {
             name = lines[i]
-            // Check if previous line is a rarity number
-            // Only apply if the line before it (i-2) is not a property label that would indicate
-            // the number is a value rather than a rarity indicator
             if (i > 0 && lines[i - 1].match(/^[1-5]$/)) {
               const prevPrevLine = i > 1 ? lines[i - 2].toLowerCase() : ''
-              // Skip if the number looks like a value from another property
               const isPropertyValue = prevPrevLine.match(/^(power|bonus|quantity|from|price|size|miner details|ph\/s|th\/s|eh\/s|gh\/s|%)[:.]?$/i) ||
                                        prevPrevLine.match(/\d+\s*(ph\/s|th\/s|eh\/s|gh\/s|%)/i)
 
@@ -620,7 +535,6 @@ export default {
             }
           }
 
-          // Look for Power, Bonus, Quantity
           let foundQuantityLabel = false
           for (let j = startIndex + 2; j < Math.min(startIndex + 15, lines.length); j++) {
             const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
@@ -629,11 +543,9 @@ export default {
             const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
             if (bonusMatch) bonus = bonusMatch[1]
 
-            // Detect "Quantity:" label (case insensitive, with or without colon)
             if (lines[j].match(/^Quantity:?$/i)) {
               foundQuantityLabel = true
             }
-            // If we found the label, next number is the quantity
             if (foundQuantityLabel && lines[j].match(/^\d+$/)) {
               quantity = parseInt(lines[j])
               foundQuantityLabel = false
@@ -661,14 +573,11 @@ export default {
             })
           }
 
-          // Skip extra line if legacy or set badge to avoid duplicate detection
           i += (isInventoryLegacy || isInventorySetBadge) ? 2 : 1
           continue
         }
 
         // ========== SELL FORMAT (MOBILE) ==========
-        // Mobile format: Name first, then Size, then hex ID at the end
-        // Skip if previous line is "Set" (this is a set name, not a miner name)
         const isMobileSell = i + 1 < lines.length &&
           lines[i + 1] === 'Size' &&
           !lines[i].match(/^[a-f0-9]{24}/i) &&
@@ -683,7 +592,6 @@ export default {
           let isLegacy = false
           let isSet = false
 
-          // Check if previous line indicates rarity or special type
           if (i > 0) {
             if (lines[i - 1] === 'Rating star') {
               isLegacy = true
@@ -695,7 +603,6 @@ export default {
             }
           }
 
-          // Parse power, bonus, quantity from following lines
           let foundQuantityLabelMobile = false
           for (let j = i + 2; j < Math.min(i + 15, lines.length); j++) {
             const powerMatch = lines[j].match(/^([\d.,]+)\s*(Gh\/s|Th\/s|Ph\/s|Eh\/s)$/i)
@@ -704,11 +611,9 @@ export default {
             const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
             if (bonusMatch) bonus = bonusMatch[1]
 
-            // Detect "Quantity" label (case insensitive, with or without colon)
             if (lines[j].match(/^Quantity:?$/i)) {
               foundQuantityLabelMobile = true
             }
-            // If we found the label, next number is the quantity
             if (foundQuantityLabelMobile && lines[j].match(/^\d+$/)) {
               quantity = parseInt(lines[j])
               foundQuantityLabelMobile = false
@@ -741,7 +646,6 @@ export default {
         }
 
         // ========== SELL FORMAT (DESKTOP) ==========
-        // Desktop format: Hex ID first (24 chars), optionally followed by rarity digit (1-5)
         const sellIdMatch = lines[i].match(/^([a-f0-9]{24})([1-5])?(Rating star|set badge)?$/i)
         if (sellIdMatch) {
           const minerId = sellIdMatch[1]
@@ -759,7 +663,6 @@ export default {
           }
 
           let nameIndex = i + 1
-          // Skip rarity text line if present (may duplicate ID suffix rarity)
           if (nameIndex < lines.length && lines[nameIndex].match(/^(Uncommon|Rare|Epic|Legendary|Unreal)$/i)) {
             if (!rarity) rarity = lines[nameIndex]
             nameIndex++
@@ -768,7 +671,6 @@ export default {
           if (nameIndex < lines.length) {
             name = lines[nameIndex]
 
-            // For sets, the first name is the set name (ends with " Set"), skip to miner name
             if (isSet && name.toLowerCase().endsWith(' set')) {
               nameIndex++
               if (nameIndex < lines.length) {
@@ -792,11 +694,9 @@ export default {
             const bonusMatch = lines[j].match(/^([\d.,]+)\s*%$/)
             if (bonusMatch) bonus = bonusMatch[1]
 
-            // Detect "Quantity" label (case insensitive, with or without colon)
             if (lines[j].match(/^Quantity:?$/i)) {
               foundQuantityLabelDesktop = true
             }
-            // If we found the label, next number is the quantity
             if (foundQuantityLabelDesktop && lines[j].match(/^\d+$/)) {
               quantity = parseInt(lines[j])
               foundQuantityLabelDesktop = false
@@ -830,7 +730,6 @@ export default {
         }
 
         // ========== MARKETPLACE FORMAT ==========
-        // Check if this is a set badge indicator line
         if (lines[i] === 'productset badge') {
           i++
           continue
@@ -852,9 +751,7 @@ export default {
             const power = `${statsMatch[1]} ${statsMatch[2]}`
             const bonus = statsMatch[3]
 
-            // Check if name starts with Legacy
             const isLegacy = name.toLowerCase().startsWith('legacy ')
-            // Check if previous line was productset badge
             const isSet = i > 0 && lines[i - 1] === 'productset badge'
 
             let price = 0
@@ -912,11 +809,9 @@ export default {
             r.source === newMiner.source
           )
           if (existing) {
-            // Sum quantities for INVENTORY, SELL and MARKETPLACE
             if (newMiner.source === 'INVENTORY' || newMiner.source === 'SELL' || newMiner.source === 'MARKETPLACE') {
               existing.quantity = (existing.quantity || 1) + (newMiner.quantity || 1)
             }
-            // For COLLECTION, quantity stays at 1 (no duplicates summed)
           } else {
             this.results.push(newMiner)
           }
@@ -937,7 +832,6 @@ export default {
       const index = this.results.findIndex(r => r.uid === item.uid)
       if (index !== -1) {
         this.results.splice(index, 1)
-        // Also remove from selected if it was selected
         if (this.selectedUids[item.uid]) {
           this.$delete(this.selectedUids, item.uid)
         }
@@ -973,7 +867,6 @@ export default {
       }
     },
 
-
     toggleSource(source) {
       const index = this.hiddenSources.indexOf(source)
       if (index === -1) {
@@ -981,17 +874,6 @@ export default {
       } else {
         this.hiddenSources.splice(index, 1)
       }
-    },
-
-    openPreview(imageSrc) {
-      // console.log(this.results)
-      this.previewImage = imageSrc
-      document.body.style.overflow = 'hidden'
-    },
-
-    closePreview() {
-      this.previewImage = null
-      document.body.style.overflow = ''
     },
 
     saveToStorage() {
@@ -1003,7 +885,6 @@ export default {
       if (saved) {
         try {
           const parsed = JSON.parse(saved)
-          // Ensure all miners have a uid
           let uidCounter = Date.now()
           this.results = parsed.map(miner => {
             if (!miner.uid) {
@@ -1028,12 +909,6 @@ export default {
     selectSort(value) {
       this.sortBy = value
       this.sortMenuOpen = false
-    },
-
-    handleClickOutside(event) {
-      if (this.sortMenuOpen && !event.target.closest('.sort-dropdown')) {
-        this.sortMenuOpen = false
-      }
     },
 
     resetFilters() {
@@ -1072,29 +947,22 @@ export default {
     normalizeName(str) {
       return str
         .toLowerCase()
-        // Normalize all apostrophe/quote variants and punctuation to underscore
-        // Apostrophes: U+0027 ' U+2019 ' U+2018 ' U+0060 ` U+00B4 ´ U+2032 ′
         .replace(/[\u0027\u2019\u2018\u0060\u00B4\u2032""\-–—\.]/g, '_')
         .replace(/[^a-z0-9_]/g, '')
         .replace(/_+/g, '_')
         .replace(/^_|_$/g, '')
     },
 
-    // Extract name from parentheses if present, e.g. "青火龙 (Azure Dragon)" -> "Azure Dragon"
     extractParenthesesName(str) {
       const match = str.match(/\(([^)]+)\)/)
       return match ? match[1].trim() : null
     },
 
-    // Normalize unicode characters for comparison
     normalizeUnicode(str) {
       return str.normalize('NFC').replace(/\s+/g, ' ').trim()
     },
 
-    // Normalize apostrophes and quotes to standard form for comparison
     normalizeApostrophes(str) {
-      // U+0027 ' apostrophe, U+2019 ' right single quote, U+2018 ' left single quote
-      // U+0060 ` grave, U+00B4 ´ acute, U+2032 ′ prime
       return str.replace(/[\u0027\u2019\u2018\u0060\u00B4\u2032]/g, "'")
     },
 
@@ -1109,34 +977,22 @@ export default {
     },
 
     findMiner(item) {
-      // Try by ID first
       if (item.minerId) {
         const byId = this.miners.find(m => m.id === item.minerId)
         if (byId) return byId
       }
 
-      // Try by name (clean name without rarity prefix)
       const cleanName = this.normalizeUnicode(this.getCleanName(item.name))
-
-      // Debug log for troubleshooting
-      // console.log('findMiner:', {
-      //   original: item.name,
-      //   clean: cleanName,
-      //   normalized: this.normalizeName(cleanName),
-      //   normalizedApostrophe: this.normalizeApostrophes(cleanName)
-      // })
       const normalizedClean = this.normalizeName(cleanName)
       const parenthesesName = this.extractParenthesesName(cleanName)
       const normalizedParentheses = parenthesesName ? this.normalizeName(parenthesesName) : null
 
-      // Exact match on full name (with unicode and apostrophe normalization)
       let found = this.miners.find(m =>
         this.normalizeApostrophes(this.normalizeUnicode(m.name)).toLowerCase() ===
         this.normalizeApostrophes(cleanName).toLowerCase()
       )
       if (found) return found
 
-      // Exact match on name inside parentheses (both directions)
       if (parenthesesName) {
         found = this.miners.find(m => {
           const mParentheses = this.extractParenthesesName(this.normalizeUnicode(m.name))
@@ -1147,11 +1003,9 @@ export default {
         if (found) return found
       }
 
-      // Normalized match
       found = this.miners.find(m => this.normalizeName(m.name) === normalizedClean)
       if (found) return found
 
-      // Normalized match on parentheses content
       if (normalizedParentheses) {
         found = this.miners.find(m => {
           const mParentheses = this.extractParenthesesName(m.name)
@@ -1160,14 +1014,12 @@ export default {
         if (found) return found
       }
 
-      // Partial match (contains)
       found = this.miners.find(m => {
         const mNorm = this.normalizeName(m.name)
         return mNorm.includes(normalizedClean) || normalizedClean.includes(mNorm)
       })
       if (found) return found
 
-      // Partial match on parentheses content
       if (normalizedParentheses) {
         found = this.miners.find(m => {
           const mNorm = this.normalizeName(m.name)
@@ -1188,6 +1040,46 @@ export default {
 
     getAssetUrl(path) {
       return `${this.storagePath}${path}`
+    },
+
+    openPreview(imageSrc) {
+      this.previewImage = imageSrc
+    },
+
+    closePreview() {
+      this.previewImage = null
+    },
+
+    debouncedFilter(field, event) {
+      const val = event.target.value === '' ? null : Number(event.target.value)
+      clearTimeout(this._filterTimer)
+      this._filterTimer = setTimeout(() => { this[field] = val }, 150)
+    },
+
+    getMinerLink(item) {
+      const miner = this.findMinerCached(item)
+      if (!miner) return null
+      const baseId = item.minerId || miner.id
+      const rarityLevel = this.getRarityLevel(item.name)
+      let linkId = baseId
+
+      if (typeof rarityLevel === 'number' && rarityLevel >= 2) {
+        const mergeEntry = this.merges.find(m => m.miner_id === miner.id)
+        if (mergeEntry && mergeEntry.merges) {
+          const merge = mergeEntry.merges.find(mg => mg.level === rarityLevel)
+          if (merge) linkId = merge.merge_id
+        }
+      }
+
+      if (!linkId) return null
+      if (item.source === 'MARKETPLACE') return 'https://rollercoin.com/marketplace/buy/miner/' + linkId
+      return 'https://rollercoin.com/marketplace/sell/miner/' + linkId
+    },
+
+    handleClickOutside(event) {
+      if (this.sortMenuOpen && !event.target.closest('.v2-burn-sort-wrap')) {
+        this.sortMenuOpen = false
+      }
     }
   }
 }

@@ -1,375 +1,361 @@
-.progression-container {
+/* ============================================
+   PROGRESSION EVENT
+   ============================================ */
+
+.v2-pe {
   display: flex;
+  gap: 2rem;
 }
 
-.progression-info {
-  width: 30%;
+/* LEFT - info panel */
+.v2-pe-info {
+  width: 25%;
+  min-width: 220px;
 }
 
-.progression-details {
-  width: 70%;
-  padding-left: 2em;
+/* RIGHT - calc + rewards */
+.v2-pe-details {
+  width: 75%;
+}
+
+/* ---- Banner ---- */
+.v2-pe-banner {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  border-radius: var(--v2-radius);
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+
+.v2-pe-banner-placeholder {
+  height: 140px;
   display: flex;
   flex-direction: column;
-  gap: 0.8em;
-  max-height: calc(100vh - 100px);
+  justify-content: center;
+  padding-left: 1rem;
+  margin-bottom: 0.6rem;
 }
 
-.event-title {
-  font-size: 2.8em;
-  font-weight: 800;
-  color: var(--accent);
-}
-
-.event-subtitle {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: var(--coin);
-}
-
-.tasks {
-  margin-top: .5em;
-}
-
-/* .task-info {
-  width: 150%;
-} */
-
-.task-name,
-.task-description {
-  background: var(--secondary);
-  border: 6px solid var(--primary);
-  font-weight: 700;
-  padding: .7em;
-  font-size: 1.1em;
-}
-
-.task-name {
-  color: var(--text-primary-active);
-  width: 60%;
-}
-
-.task-description {
-  color: var(--coin);
-  width: 40%;
-}
-
-.progression-details>.calculator,
-.progression-details>.rewards {
-  background: var(--secondary);
-  border-radius: .3em;
-}
-
-.calc-input-area {
-  padding: .5em;
-}
-
-.calc-input-area td,
-.calc-input-area th {
-  border-radius: .3em;
-  border: 4px solid var(--secondary);
-  font-size: .9em;
-}
-
-.calc-input-area th {
-  color: var(--text-primary);
-  background: var(--primary);
-  font-weight: 800;
-}
-
-.calc-input,
-.calc-input * {
-  border: none;
-  border-radius: 0;
-  background: var(--primary);
-  /* width: 100%; */
-  outline: none;
-  color: var(--accent);
-  font-size: 1em;
-  padding: .4em;
-  font-weight: 800;
-}
-
-.calc-input {
-  margin: 0;
-}
-
-#multiplier {
-  width: 65px;
-}
-#discount {
-  width: 80px;
-}
-
-#buy {
-  color: var(--coin);
-}
-
-#buyFinal {
-  color: var(--text-primary);
-}
-
-.rewards {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  overflow-x: auto;
-  border: 5px solid var(--secondary);
-  border-right-width: 0;
-  border-radius: .3em;
-  scrollbar-width: thin;
-  scrollbar-color: var(--tertiary) var(--secondary);
-}
-
-.rewards::-webkit-scrollbar {
-  width: 3px;
-  background: var(--secondary);
-}
-
-.rewards::-webkit-scrollbar-thumb {
-  background: var(--tertiary);
-  border-radius: 3px;
-}
-
-.rewards-table {
+.v2-pe-banner-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  border-collapse: collapse;
-  overflow: auto;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
 }
 
-/* .rewards-table th,
-.rewards-table td {
-  padding: 8px 12px;
-} */
-
-/* aquí está la clave */
-.rewards-table thead th {
-  position: sticky !important;
-  top: 0;
-  z-index: 5;
-}
-
-.reward-name {
-  font-weight: 600;
-}
-
-.reward-subname {
-  color: var(--coin);
-  font-size: .8em;
-}
-
-.reward-image {
-  height: 30px;
-}
-
-.reward-image-cell {
-  width: 45px;
-  height: 30px;
-  background-position: center center, center center;
-  background-size: contain;
-  background-repeat: no-repeat, no-repeat;
-  align-content: start;
-  text-align: start;
-}
-
-.level-image {
-  width: 10px;
-}
-
-.reward-multiplier {
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.reward-boxes, .reward-marketplace {
-  font-weight: 600;
-}
-
-.recomended {
-  color: var(--success)
-}
-
-.calc-info {
+.v2-pe-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(8,9,16,0.55) 30%, rgba(8,9,16,0.1) 100%);
   display: flex;
-  justify-content: space-around;
-}
-.calc-info > label{
-  width: 48%;
-  font-size: .8em;
-  padding: 4px;
-  font-weight: 700;
-  text-align: center;
-  border-radius: .3em;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
 }
 
-.multiplier-info {
-  color: var(--success);
-  background: #0a5812;
+.v2-pe-title {
+  font-size: 2rem;
+  color: var(--v2-accent);
+  margin: 0;
+  line-height: 1.2;
 }
 
-.edit-info {
-  color: var(--coin);
-  background: #626311;
+.v2-pe-subtitle {
+  font-family: 'Arcana', cursive;
+  font-size: 0.85rem;
+  color: var(--v2-coin);
+  margin-top: 0.3rem;
+  text-transform: uppercase;
 }
 
-.deadline {
-  padding: .2em;
-  margin-top: 1.5em;
-  border-radius: .2em;
-  font-weight: 600;
-  width: 95%;
-  justify-self: center;
-  text-align: center;
-  color: var(--text-primary-active);
-  background: var(--success);
-}
-
-.ended {
-  background: rgb(185, 42, 42);
-}
-
-.rentability-score {
+/* ---- Score ---- */
+.v2-pe-score {
   display: flex;
   justify-content: center;
   align-items: baseline;
   font-weight: 700;
-  font-size: 2em;
-  color: var(--text-primary);
+  font-size: 1.8rem;
+  color: var(--v2-text-muted);
+  margin-top: 1em;
 }
 
-.score {
-  font-size: 4em;
-  color: var(--success);
-  margin-right: .1em;
+.v2-pe-score-num {
+  font-family: 'Arcana', cursive;
+  font-size: 6rem;
+  line-height: 1;
+  margin-right: 0.1em;
 }
 
-.rentability-score-text {
-  font-size: 1.1em;
-  color: var(--text-primary-active);
-  margin-left: .2em;
+.v2-pe-score-max {
+  font-family: 'Arcana', cursive;
+  font-size: 2rem;
+}
+
+.v2-pe-score-label {
+  text-align: center;
+  font-size: 0.8rem;
   font-weight: 600;
-  text-align: center;
+  color: var(--v2-text-bright);
+  margin-bottom: 0.6rem;
 }
 
-.rentability-ratio-wrapper {
+.v2-c-accent { color: var(--v2-accent); }
+.v2-c-success { color: var(--v2-success); }
+.v2-c-warning { color: var(--v2-coin); }
+.v2-c-danger { color: #c54a4a; }
+
+/* ---- Ratio badge ---- */
+.v2-pe-ratio-wrap {
   position: relative;
-  display: inline-block;
-  margin-top: .5em;
-  width: 100%;
   text-align: center;
+  margin-bottom: 0.8rem;
 }
 
-.rentability-ratio-badge {
+.v2-pe-ratio-badge {
   display: inline-block;
-  background: var(--secondary);
-  color: var(--coin);
-  font-size: 0.85em;
+  background: var(--v2-secondary);
+  color: var(--v2-coin);
+  font-size: 0.8rem;
   font-weight: 700;
-  padding: .3em .8em;
+  padding: 0.3rem 0.8rem;
   border-radius: 20px;
   cursor: default;
 }
 
-.ratio-tooltip {
+.v2-pe-ratio-tooltip {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  background: var(--primary);
-  border: 1px solid #444;
-  border-radius: 6px;
-  padding: 8px 12px;
-  width: 220px;
-  font-size: 0.75em;
-  color: var(--text-primary);
-  line-height: 1.4;
-  text-align: center;
-  z-index: 100;
   transition: opacity 0.2s, visibility 0.2s;
-  pointer-events: none;
 }
 
-.ratio-tooltip-arrow {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: var(--primary);
-}
-
-.rentability-ratio-wrapper:hover .ratio-tooltip {
+.v2-pe-ratio-wrap:hover .v2-pe-ratio-tooltip {
   visibility: visible;
   opacity: 1;
 }
 
-.text-accent {
-  color: var(--accent);
+/* ---- Deadline ---- */
+.v2-pe-deadline {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.3rem;
+  border-radius: var(--v2-radius-sm);
+  margin-bottom: 1rem;
+  color: var(--v2-text-bright);
 }
-.text-success {
-  color: var(--success);
+.v2-pe-deadline.active { background: var(--v2-success); }
+.v2-pe-deadline.ended { background: #b92a2a; }
+
+/* ---- Tasks table ---- */
+.v2-pe-tasks {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  background: transparent;
 }
-.text-warning {
-  color: var(--coin);
+
+.v2-pe-task-name,
+.v2-pe-task-val {
+  background: var(--v2-secondary);
+  font-weight: 700;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.8rem;
 }
-.text-danger {
-  color: #c54a4a;
+
+.v2-pe-task-name {
+  color: var(--v2-text-bright);
+  border-radius: var(--v2-radius-sm) 0 0 var(--v2-radius-sm);
+  width: 60%;
 }
 
-@media (max-width: 768px) {
-  .progression-container {
-    display: inline-block;
-  }
+.v2-pe-task-val {
+  color: var(--v2-coin);
+  border-radius: 0 var(--v2-radius-sm) var(--v2-radius-sm) 0;
+  text-align: right;
+}
 
-  .progression-info {
-    width: 100%;
-  }
+/* ---- Calculator ---- */
+.v2-pe-calc {
+  background: none;
+  border: 1px solid var(--v2-tertiary);
+  border-radius: var(--v2-radius);
+  padding: 0.5rem;
+}
 
-  .progression-details {
-    width: 100%;
-    padding-left: 0;
-    padding-top: 1.5em;
-    max-height: none;
-    display: block;
-  }
+.v2-pe-calc-hints {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
 
-  .event-title, .event-subtitle {
-    text-align: center;
-  }
+.v2-pe-hint-green,
+.v2-pe-hint-gold {
+  flex: 1;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--v2-radius-sm);
+  text-align: center;
+}
 
-  .calc-info > label {
-    align-content: center;
-    width: 46%;
-  }
+.v2-pe-hint-green { background: #0a5812; color: var(--v2-success); }
+.v2-pe-hint-gold { background: #626311; color: var(--v2-coin); }
 
-  .calc-input-area > table {
-    width: 500px;
-    overflow: auto;
-  }
+/* Calc scroll + grid */
+.v2-pe-calc-scroll {
+  overflow-x: auto;
+}
 
-  .calc-table {
-    width: 88vw;
-    overflow-x: scroll;
-  }
+.v2-pe-calc-grid {
+  display: flex;
+  gap: 0.5rem;
+  min-width: 480px;
+}
 
-  .calc-table > table {
-    width: 500px;
-  }
+.v2-pe-calc-col {
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-  .calc-table > table th {
-    font-size: .9em;
-  }
+.v2-pe-col-sm { flex: 0.6; min-width: 65px; }
 
-  .rewards {
-    width: 88vw;
-    max-height: 75vh;
-    margin-top: 0.8em;
-    padding-bottom: 0px;
-  }
+.v2-pe-calc-col .v2-label {
+  margin-top: 0;
+}
 
-  .rewards-table {
-    width: 600px;
-  }
+.v2-pe-calc-col .v2-input {
+  width: 100%;
+  font-weight: 700;
+  color: var(--v2-accent);
+  -moz-appearance: textfield;
+}
+
+.v2-pe-calc-col select.v2-input {
+  padding-right: 1.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%237a7490' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 8px;
+}
+
+.v2-pe-calc-col .v2-input::-webkit-inner-spin-button,
+.v2-pe-calc-col .v2-input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+.v2-pe-green { color: var(--v2-success) !important; }
+
+.v2-pe-calc-col .v2-input option {
+  background: rgba(24, 25, 40, 0.85);
+  color: var(--v2-text);
+}
+
+/* ---- Rewards ---- */
+.v2-pe-rewards-wrap {
+  position: relative;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 3px solid var(--v2-secondary);
+  border-radius: var(--v2-radius);
+  background-color: var(--v2-secondary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--v2-tertiary) var(--v2-secondary);
+  margin-top: 0.6rem;
+}
+
+.v2-pe-rewards-wrap::-webkit-scrollbar { width: 3px; background: var(--v2-secondary); }
+.v2-pe-rewards-wrap::-webkit-scrollbar-thumb { background: var(--v2-tertiary); border-radius: 3px; }
+
+.v2-pe-rewards {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.v2-pe-rewards thead th {
+  position: sticky !important;
+  top: 0;
+  z-index: 5;
+  background: var(--v2-secondary);
+  color: var(--v2-text-bright);
+  font-family: 'Arcana', cursive;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.4rem 0.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 1px 0 0 var(--v2-secondary), 0 -1px 0 0 var(--v2-secondary);
+}
+
+.v2-pe-rewards td {
+  padding: 0.2rem 0.25rem;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(81, 78, 114, 0.15);
+
+  font-size: 0.72rem;
+  color: var(--v2-text);
+}
+
+.v2-pe-rewards tbody tr:hover {
+  background: rgba(47, 48, 69, 0.3);
+}
+
+.v2-pe-r-lvl { font-weight: 700; color: var(--v2-accent); }
+
+.v2-pe-r-name {
+  text-align: left;
+  font-weight: 600;
+
+}
+
+.v2-pe-r-sub {
+  font-size: 0.65rem;
+  color: var(--v2-coin);
+}
+
+.v2-pe-r-img {
+  position: relative;
+  width: 45px;
+  height: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.v2-pe-r-lvl-badge {
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  width: 10px;
+}
+
+.v2-pe-r-boxes, .v2-pe-r-market {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .v2-pe { flex-direction: column; }
+  .v2-pe-info { width: 100%; }
+  .v2-pe-details { width: 100%; }
+  .v2-pe-rewards-wrap { max-height: calc(100vh - 250px); }
+  .v2-pe-banner { height: 120px; }
+  .v2-pe-title { font-size: 1.8rem; text-align: center; }
+  .v2-pe-subtitle { text-align: center; }
+  .v2-pe-calc-grid { min-width: 450px; }
+  .v2-pe-rewards { min-width: 550px; }
+  .v2-pe-rewards-wrap { max-height: 70vh; }
+  .v2-pe-score-num { font-size: 5.5rem; }
 }

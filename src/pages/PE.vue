@@ -1,138 +1,127 @@
 <template>
-  <div class='progression-container'>
-    <div class='progression-info'>
-      <div class='event-title'>{{ PeData.event.event.title.en }}</div>
-      <div class='event-subtitle'>{{ t.pe?.progression_event }}</div>
-      <div class="rentability-score">
-        <div :class="['score', getScoreColorClass()]">{{ rentabilityScore }}</div>
-        <div class="">/10</div>
-      </div>
-      <div class="rentability-score-text">{{ t.pe?.rentability_punctuation }}</div>
-      <div class="rentability-ratio-wrapper">
-        <span class="rentability-ratio-badge">Ratio: {{ rentabilityRatio }}</span>
-        <div class="ratio-tooltip">
-          <span>{{ t.pe?.ratio_tooltip || 'Cost/Reward ratio — how much RLT you spend vs what you get back. Lower is better: below 0.3 is excellent, above 1.0 is not worth it.' }}</span>
-          <div class="ratio-tooltip-arrow"></div>
+  <div class="v2-pe">
+    <!-- LEFT PANEL -->
+    <div class="v2-pe-info">
+      <div v-if="bannerImg" class="v2-pe-banner">
+        <img :src="bannerImg" alt="" class="v2-pe-banner-img" />
+        <div class="v2-pe-banner-overlay">
+          <h1 class="v2-pe-title">{{ PeData.event.event.title.en }}</h1>
+          <div class="v2-pe-subtitle">{{ t.pe?.progression_event }}</div>
         </div>
       </div>
-      <div v-if="isEventActive" class='deadline'>
+      <div v-else class="v2-pe-banner-placeholder">
+        <h1 class="v2-pe-title">{{ PeData.event.event.title.en }}</h1>
+        <div class="v2-pe-subtitle">{{ t.pe?.progression_event }}</div>
+      </div>
+
+      <div class="v2-pe-score">
+        <div :class="['v2-pe-score-num', getScoreColorClass()]">{{ rentabilityScore }}</div>
+        <div class="v2-pe-score-max">/10</div>
+      </div>
+      <div class="v2-pe-score-label">{{ t.pe?.rentability_punctuation }}</div>
+
+      <div class="v2-pe-ratio-wrap">
+        <div class="v2-pe-ratio-badge">Ratio: {{ rentabilityRatio }}</div>
+        <div class="v2-tooltip v2-pe-ratio-tooltip">
+          {{ t.pe?.ratio_line1 || 'Cost / Reward ratio.' }}<br/>
+          {{ t.pe?.ratio_line2 || 'Lower is better.' }}<br/><br/>
+          {{ t.pe?.ratio_excellent || 'Below 0.3: excellent' }}<br/>
+          {{ t.pe?.ratio_bad || 'Above 1.0: not worth it' }}
+          <div class="v2-tooltip-arrow-down"></div>
+        </div>
+      </div>
+
+      <div v-if="isEventActive" class="v2-pe-deadline active">
         {{ t.pe?.ends_on }} {{ eventEndDate }} 15:00 UTC
       </div>
-      <div v-else class='deadline ended'>
+      <div v-else class="v2-pe-deadline ended">
         {{ t.pe?.the_event_ended }}
       </div>
-      <table class="tasks">
+
+      <table class="v2-pe-tasks">
         <tbody>
-          <tr class='task-info'>
-            <td class="task-name">{{ t.pe?.multiplier }}</td>
-            <td class="task-description">x{{ PeData.multiplier }} {{ t.pe?.per }} 1 RLT</td>
+          <tr>
+            <td class="v2-pe-task-name">{{ t.pe?.multiplier }}</td>
+            <td class="v2-pe-task-val">x{{ PeData.multiplier }} {{ t.pe?.per }} 1 RLT</td>
           </tr>
-          <tr v-for="task in PeData.tasks" :key="task.type" class='task-info'>
-            <td class="task-name">{{ t.pe?.[task.type] }}</td>
-            <td class="task-description">{{ task.xp_reward }}</td>
+          <tr v-for="task in PeData.tasks" :key="task.type">
+            <td class="v2-pe-task-name">{{ t.pe?.[task.type] }}</td>
+            <td class="v2-pe-task-val">{{ task.xp_reward }}</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class='progression-details'>
-      <div class="calculator">
-        <div class='calc-input-area'>
-          <div class="calc-info">
-            <label class='multiplier-info'>{{ t.pe?.recomended_multiplier }}</label>
-            <label class='edit-info' for='buy'>{{ t.pe?.editable_field }}</label>
-          </div>
-          <div class="calc-table">
-            <table>
-              <thead>
-                <th>MULT</th>
-                <th>{{ t.pe?.discount }}</th>
-                <th>{{ t.pe?.rlt_to_buy }}</th>
-                <th>{{ t.pe?.rlt_with_discount }}</th>
-                <th>{{ t.pe?.boxes }}</th>
-              </thead>
-              <tbody>
-                <td>
-                  <select
-                    :class="['calc-input', { 'recomended': isRecomended(calcConfig.multiplier) }]"
-                    id='multiplier'
-                    :value="calcConfig.multiplier"
-                    @change="handleCalc('multiplier', Number($event.target.value))"
-                  >
-                    <option
-                      v-for="m in multipliers"
-                      :key="m"
-                      :class="{ 'recomended': isRecomended(m) }"
-                      :value="m"
-                    >x{{ m }}</option>
-                  </select>
-                </td>
-                <td>
-                  <select
-                    class='calc-input'
-                    id='discount'
-                    :value="calcConfig.discount"
-                    @change="handleCalc('discount', Number($event.target.value))"
-                  >
-                    <option v-for="d in discounts" :key="d" :value="d">{{ d }}%</option>
-                  </select>
-                </td>
-                <td>
-                  <input
-                    class='calc-input'
-                    type="number"
-                    id='buy'
-                    name='buy'
-                    :value="calcConfig.buy"
-                    @input="handleCalc('buy', Number($event.target.value))"
-                  />
-                </td>
-                <td><input class='calc-input' type="number" :value="calcConfig.buyFinal" id='buyFinal' disabled/></td>
-                <td>
-                  <select
-                    class='calc-input'
-                    id='boxes'
-                    :value="calcConfig.boxes"
-                    @change="handleCalc('boxes', Number($event.target.value))"
-                  >
-                    <option v-for="b in boxesPrices" :key="b" :value="b">{{ b }} RLT</option>
-                  </select>
-                </td>
-              </tbody>
-            </table>
-          </div>
-        </div>
 
+    <!-- RIGHT PANEL -->
+    <div class="v2-pe-details">
+      <!-- Calculator -->
+      <div class="v2-pe-calc">
+        <div class="v2-pe-calc-hints">
+          <label class="v2-pe-hint-green">{{ t.pe?.recomended_multiplier }}</label>
+          <label class="v2-pe-hint-gold">{{ t.pe?.editable_field }}</label>
+        </div>
+        <div class="v2-pe-calc-scroll"><div class="v2-pe-calc-grid">
+          <div class="v2-pe-calc-col v2-pe-col-sm">
+            <label class="v2-label">MULT</label>
+            <select
+              :class="['v2-input', { 'v2-pe-green': isRecomended(calcConfig.multiplier) }]"
+              :value="calcConfig.multiplier"
+              @change="handleCalc('multiplier', Number($event.target.value))"
+            >
+              <option v-for="m in multipliers" :key="m" :class="{ 'v2-pe-green': isRecomended(m) }" :value="m">x{{ m }}</option>
+            </select>
+          </div>
+          <div class="v2-pe-calc-col v2-pe-col-sm">
+            <label class="v2-label">{{ t.pe?.discount }}</label>
+            <select class="v2-input" :value="calcConfig.discount" @change="handleCalc('discount', Number($event.target.value))">
+              <option v-for="d in discounts" :key="d" :value="d">{{ d }}%</option>
+            </select>
+          </div>
+          <div class="v2-pe-calc-col">
+            <label class="v2-label" style="color: var(--v2-coin)">{{ t.pe?.rlt_to_buy }}</label>
+            <input class="v2-input" style="color: var(--v2-coin)" type="number" :value="calcConfig.buy" @input="handleCalc('buy', Number($event.target.value))" />
+          </div>
+          <div class="v2-pe-calc-col">
+            <label class="v2-label">{{ t.pe?.rlt_with_discount }}</label>
+            <input class="v2-input" style="color: var(--v2-text-muted)" type="number" :value="calcConfig.buyFinal" disabled />
+          </div>
+          <div class="v2-pe-calc-col v2-pe-col-sm">
+            <label class="v2-label">{{ t.pe?.boxes }}</label>
+            <select class="v2-input" :value="calcConfig.boxes" @change="handleCalc('boxes', Number($event.target.value))">
+              <option v-for="b in boxesPrices" :key="b" :value="b">{{ b }} RLT</option>
+            </select>
+          </div>
+        </div></div>
       </div>
-      <div class="rewards">
-        <table class='rewards-table'>
+
+      <!-- Rewards -->
+      <div class="v2-pe-rewards-wrap">
+        <table class="v2-pe-rewards">
           <thead>
-            <th>LVL</th>
-            <th>TOTAL</th>
-            <th>{{ t.pe?.points }}</th>
-            <th>{{ t.pe?.reward }}</th>
-            <th></th>
-            <th>{{ t.pe?.boxes }}</th>
-            <th>MARKET</th>
+            <tr>
+              <th>LVL</th>
+              <th>TOTAL</th>
+              <th>{{ t.pe?.points }}</th>
+              <th>{{ t.pe?.reward }}</th>
+              <th></th>
+              <th>{{ t.pe?.boxes }}</th>
+              <th>MARKET</th>
+            </tr>
           </thead>
           <tbody>
             <tr v-for="(reward, idx) in PeData.event.rewards" :key="idx">
-              <td>{{ reward.required_level }}</td>
+              <td class="v2-pe-r-lvl">{{ reward.required_level }}</td>
               <td>{{ PeData.event.levels_config[reward.required_level - 1]?.required_xp }}</td>
               <td>{{ PeData.event.levels_config[reward.required_level - 1]?.level_xp }}</td>
-              <td class='reward-name'>
+              <td class="v2-pe-r-name">
                 {{ getRewardName(reward) }}
-                <br/>
-                <span class='reward-subname'>{{ getRewardSubname(reward) }}</span>
+                <br/><span class="v2-pe-r-sub">{{ getRewardSubname(reward) }}</span>
               </td>
-              <td class='reward-image-cell' :style="{ backgroundImage: `url(${getRewardImage(reward)})` }">
-                <img
-                  v-if="reward.item?.level > 0 && reward.type == 'miner'"
-                  :src="stPath + `others/level_${reward.item.level + 1}.png`"
-                  class='level-image'
-                />
+              <td class="v2-pe-r-img" :style="{ backgroundImage: `url(${getRewardImage(reward)})` }">
+                <img v-if="reward.item?.level > 0 && reward.type == 'miner'" :src="stPath + `others/level_${reward.item.level + 1}.png`" class="v2-pe-r-lvl-badge" />
               </td>
-              <td class='reward-boxes'>{{ getRewardBoxes(PeData.event.levels_config[reward.required_level - 1]?.required_xp) }} {{ t.pe?.boxes }}</td>
-              <td class='reward-marketplace'>{{ getRewardMarket(PeData.event.levels_config[reward.required_level - 1]?.required_xp) }} RLT</td>
+              <td class="v2-pe-r-boxes">{{ getRewardBoxes(PeData.event.levels_config[reward.required_level - 1]?.required_xp) }} {{ t.pe?.boxes }}</td>
+              <td class="v2-pe-r-market">{{ getRewardMarket(PeData.event.levels_config[reward.required_level - 1]?.required_xp) }} RLT</td>
             </tr>
           </tbody>
         </table>
@@ -145,6 +134,8 @@
 import '../styles/pe.css'
 import moment from 'moment-timezone'
 import PeData from '../assets/progression.json'
+// Banner mode: 'banner' | 'bg' | '' (none)
+const BANNER_MODE = 'banner'
 
 export default {
   name: 'PE',
@@ -154,28 +145,14 @@ export default {
     const discounts = [0, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
     const maxMultiplier = PeData.event.event.max_multiplier / 100
     const mult = []
-    for (let i = 1; i <= maxMultiplier; i++) {
-      mult.push(i)
-    }
-
-    // const filteredRewards = PeData.event.rewards.reduce((acc, reward) => {
-    //   if (!acc.find(r => r.required_level === reward.required_level)) {
-    //     acc.push(reward)
-    //   }
-    //   return acc
-    // }, [])
-    // PeData.event.rewards = filteredRewards
+    for (let i = 1; i <= maxMultiplier; i++) mult.push(i)
 
     return {
       stPath: 'https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/',
       PeData,
-      calcConfig: {
-        multiplier: 1,
-        discount: 0,
-        buy: 0,
-        buyFinal: 0,
-        boxes: 1.99
-      },
+      bannerMode: BANNER_MODE,
+      bannerImg: null,
+      calcConfig: { multiplier: 1, discount: 0, buy: 0, buyFinal: 0, boxes: 1.99 },
       rentabilityScore: 0,
       rentabilityRatio: 0,
       recomendedMultiplier: [],
@@ -189,73 +166,53 @@ export default {
     }
   },
   computed: {
-    t() {
-      return this.i18n.t
-    },
-    isEventActive() {
-      return moment().isBefore(moment(PeData.event.event.end_date).set({ hour: 15, minute: 0, second: 0 }))
-    },
-    eventEndDate() {
-      return moment(PeData.event.event.end_date).format('DD/MM/YYYY')
-    }
+    t() { return this.i18n.t },
+    isEventActive() { return moment().isBefore(moment(PeData.event.event.end_date).set({ hour: 15, minute: 0, second: 0 })) },
+    eventEndDate() { return moment(PeData.event.event.end_date).format('DD/MM/YYYY') }
   },
   mounted() {
     moment.tz.setDefault("UTC")
     this.calcRecomend()
+    this.loadBanner()
   },
   methods: {
-    isRecomended(multiplier) {
-      return this.recomendedMultiplier.includes(multiplier)
+    async loadBanner() {
+      const files = {
+        banner: () => import('../assets/icons/current-progression-banner.gif'),
+        bg: () => import('../assets/icons/current-progression-bg.png')
+      }
+      if (!this.bannerMode || !files[this.bannerMode]) return
+      try {
+        const mod = await files[this.bannerMode]()
+        this.bannerImg = mod.default
+      } catch { /* file doesn't exist, no banner */ }
     },
+    isRecomended(multiplier) { return this.recomendedMultiplier.includes(multiplier) },
     getScoreColorClass() {
-      if (this.rentabilityScore == 10) return 'text-accent'
-      if (this.rentabilityScore >= 7) return 'text-success'
-      if (this.rentabilityScore >= 4) return 'text-warning'
-      return 'text-danger'
+      if (this.rentabilityScore == 10) return 'v2-c-accent'
+      if (this.rentabilityScore >= 7) return 'v2-c-success'
+      if (this.rentabilityScore >= 4) return 'v2-c-warning'
+      return 'v2-c-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.04
-      let rewardsXRLT = 0
+      let phXRLT = 0.04, rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
         switch (reward.type) {
           case 'money':
-            switch (reward.currency) {
-              case 'RLT': rewardsXRLT += reward.amount / 1e6; break
-              case 'RST': rewardsXRLT += reward.amount / 4e8; break
-            }
+            switch (reward.currency) { case 'RLT': rewardsXRLT += reward.amount / 1e6; break; case 'RST': rewardsXRLT += reward.amount / 4e8; break }
             continue
-          case 'miner':
-            if (reward.item.power >= 1e6) rewardsXRLT += (reward.item.power / 1e6) * phXRLT
-            continue
+          case 'miner': if (reward.item.power >= 1e6) rewardsXRLT += (reward.item.power / 1e6) * phXRLT; continue
         }
       }
-
-      // For every 100 RLT of rewards, recommend buying 30 RLT
       let rltToBuy = rewardsXRLT * 0.44
       let rawMultiplier = (rltToBuy * PeData.multiplier) + 1
-
-      // Round to nearest available multiplier
-      let closest = this.multipliers.reduce((prev, curr) =>
-        Math.abs(curr - rawMultiplier) < Math.abs(prev - rawMultiplier) ? curr : prev
-      )
-
-      let recomended = [closest]
-      let multiplier = closest
-      let buy = ((multiplier - 1) / PeData.multiplier) | 0
-      let buyFinal = parseFloat((buy - (buy * (this.calcConfig.discount / 100))).toFixed(2)) | 0
-
-      this.calcConfig = {
-        ...this.calcConfig,
-        buy,
-        buyFinal,
-        multiplier
-      }
-
-      this.recomendedMultiplier = recomended
-
+      let closest = this.multipliers.reduce((p, c) => Math.abs(c - rawMultiplier) < Math.abs(p - rawMultiplier) ? c : p)
+      this.recomendedMultiplier = [closest]
+      let buy = ((closest - 1) / PeData.multiplier) | 0
+      let buyFinal = Math.round((buy - (buy * (this.calcConfig.discount / 100))) * 100) / 100
+      this.calcConfig = { ...this.calcConfig, buy, buyFinal, multiplier: closest }
       let ratio = buy / rewardsXRLT
       this.rentabilityRatio = ratio.toFixed(2)
-
       if (ratio <= 0.3) this.rentabilityScore = 10
       else if (ratio <= 0.35) this.rentabilityScore = 9.5
       else if (ratio <= 0.4) this.rentabilityScore = 9
@@ -278,99 +235,53 @@ export default {
       else this.rentabilityScore = 0
     },
     handleCalc(param, value) {
-      let buy = this.calcConfig.buy
-      let buyFinal = this.calcConfig.buyFinal
-      let multiplier = this.calcConfig.multiplier
-
-      if (param == 'discount') {
-        buyFinal = parseFloat((buy - (buy * (value / 100))).toFixed(2))
-      }
-
-      if (param == 'buy') {
-        buyFinal = value - (value * (this.calcConfig.discount / 100))
-        multiplier = parseFloat(((value * PeData.multiplier) + 1).toFixed(1))
-      }
-
+      let { buy, buyFinal, multiplier } = this.calcConfig
+      if (param == 'discount') buyFinal = Math.round((buy - (buy * (value / 100))) * 100) / 100
+      if (param == 'buy') { buyFinal = Math.round((value - (value * (this.calcConfig.discount / 100))) * 100) / 100; multiplier = parseFloat(((value * PeData.multiplier) + 1).toFixed(1)) }
       if (param == 'multiplier' || multiplier != this.calcConfig.multiplier) {
         if (multiplier > 100) multiplier = 100
         let newMult = this.multipliers.filter(m => Number.isInteger(m))
-        if (!this.multipliers.some(m => m == multiplier)) {
-          newMult.unshift(multiplier)
-        }
+        if (!this.multipliers.some(m => m == multiplier)) newMult.unshift(multiplier)
         this.multipliers = newMult
-
-        if (param == 'multiplier') {
-          buy = (value - 1) / PeData.multiplier
-          buyFinal = parseFloat((buy - (buy * (this.calcConfig.discount / 100))).toFixed(2))
-        }
+        if (param == 'multiplier') { buy = (value - 1) / PeData.multiplier; buyFinal = Math.round((buy - (buy * (this.calcConfig.discount / 100))) * 100) / 100 }
       }
-
-      this.calcConfig = {
-        ...this.calcConfig,
-        buy,
-        buyFinal,
-        multiplier,
-        [param]: value
+      this.calcConfig = { ...this.calcConfig, buy, buyFinal, multiplier, [param]: value }
+    },
+    getRewardBoxes(xp) { return Math.ceil(xp / ((this.taskPoints.boxes * this.calcConfig.boxes) * this.calcConfig.multiplier)) },
+    getRewardMarket(xp) { return Math.ceil(xp / (this.taskPoints.marketplace * this.calcConfig.multiplier)) },
+    getRewardImage(r) {
+      let f = ''
+      if (r?.type == 'utility_item' && ['Ancient key','Old key','Basic key','Forbidden key','GemStone'].includes(r?.item?.name?.en)) return this.stPath + `others/${r.item_id}.png`
+      switch (r.type) {
+        case 'money': f = `others/reward_${r.currency.toLowerCase()}.png`; break
+        case 'season_pass_xp': f = 'others/season_pass_xp.png'; break
+        case 'power': f = 'others/reward_power.png'; break
+        case 'utility_item': f = `others/${r.item_id}.gif`; break
+        case 'loot_box': case 'mystery_box': f = `box/${r.item_id}.png`; break
+        case 'battery': case 'trophy': case 'hat': f = `others/${r.item_id}.png`; break
+        case 'mutation_component': f = `mutation_component/${r.item_id}.png`; break
+        case 'rack': f = `rack/${r.item_id}.png`; break
+        case 'miner': f = `miner/${r.item.filename}.gif`; break
       }
+      return this.stPath + f
     },
-    getRewardBoxes(required_xp) {
-      return Math.ceil(required_xp / ((this.taskPoints.boxes * this.calcConfig.boxes) * this.calcConfig.multiplier))
+    getRewardValue(r) {
+      let f = new Intl.NumberFormat('De')
+      switch (r.type) { case 'money': return `${r.amount / 1e6} ${r.currency}`; case 'power': return `${f.format(r.amount)} Gh/s`; case 'miner': return `${f.format(r.item.power)} Gh/s` }
+      return r.amount
     },
-    getRewardMarket(required_xp) {
-      return Math.ceil(required_xp / (this.taskPoints.marketplace * this.calcConfig.multiplier))
-    },
-    getRewardImage(reward) {
-      let filename = ''
-      // console.log(reward)
-      if (reward?.type == 'utility_item' && (reward?.item?.name?.en == 'Ancient key' || reward?.item?.name?.en == 'Old key' || reward?.item?.name?.en == 'Basic key' || reward?.item?.name?.en == 'Forbidden key' || reward?.item?.name?.en == 'GemStone')) {
-        filename = `others/${reward.item_id}.png`
-        return this.stPath + filename
-      }
-      switch (reward.type) {
-        case 'money': filename = `others/reward_${reward.currency.toLowerCase()}.png`; break
-        case 'season_pass_xp': filename = 'others/season_pass_xp.png'; break
-        case 'power': filename = 'others/reward_power.png'; break
-        case 'utility_item': filename = `others/${reward.item_id}.gif`; break
-        case 'loot_box': filename = `box/${reward.item_id}.png`; break
-        case 'mystery_box': filename = `box/${reward.item_id}.png`; break
-        case 'battery': filename = `others/${reward.item_id}.png`; break
-        case 'trophy': filename = `others/${reward.item_id}.png`; break
-        case 'hat': filename = `others/${reward.item_id}.png`; break
-        case 'mutation_component': filename = `mutation_component/${reward.item_id}.png`; break
-        case 'rack': filename = `rack/${reward.item_id}.png`; break
-        case 'miner': filename = `miner/${reward.item.filename}.gif`; break
-      }
-      return this.stPath + filename
-    },
-    getRewardValue(reward) {
-      let coinFormatter = new Intl.NumberFormat('De')
-      switch (reward.type) {
-        case 'money': return `${reward.amount / 1e6} ${reward.currency}`
-        case 'power': return `${coinFormatter.format(reward.amount)} Gh/s`
-        case 'miner': return `${coinFormatter.format(reward.item.power)} Gh/s`
-      }
-      return reward.amount
-    },
-    getRewardName(reward) {
-      switch (reward.type) {
-        case 'money': return this.getRewardValue(reward)
-        case 'season_pass_xp': return this.getRewardValue(reward) + ' XP'
-        case 'power': return this.getRewardValue(reward)
-        case 'utility_item': return (reward.amount > 1 ? reward.amount : '') + ' ' + reward.item.name.en
-        case 'mutation_component': return (reward.amount > 1 ? reward.amount : '') + ' ' + reward.item.name.en
-        case 'loot_box': return reward.item.title.en
-        case 'mystery_box': return reward.item.title.en
-        case 'battery': return reward.title.en
-        case 'trophy': return reward.item.name.en
-        case 'hat': return reward.item.title.en
-        case 'rack':
-        case 'miner': return reward.item.name.en
+    getRewardName(r) {
+      switch (r.type) {
+        case 'money': return this.getRewardValue(r); case 'season_pass_xp': return this.getRewardValue(r) + ' XP'; case 'power': return this.getRewardValue(r)
+        case 'utility_item': case 'mutation_component': return (r.amount > 1 ? r.amount : '') + ' ' + r.item.name.en
+        case 'loot_box': case 'mystery_box': return r.item.title.en; case 'battery': return r.title.en
+        case 'trophy': case 'hat': return r.item?.title?.en || r.item?.name?.en; case 'rack': case 'miner': return r.item.name.en
       }
     },
-    getRewardSubname(reward) {
-      switch (reward.type) {
-        case 'rack': return reward.item.bonus ? (reward.item.bonus / 100) + '%' : ''
-        case 'miner': return `${this.getRewardValue(reward)} ${reward.item.bonus ? '| ' + (reward.item.bonus / 100) + '%' : ''}`
+    getRewardSubname(r) {
+      switch (r.type) {
+        case 'rack': return r.item.bonus ? (r.item.bonus / 100) + '%' : ''
+        case 'miner': return `${this.getRewardValue(r)} ${r.item.bonus ? '| ' + (r.item.bonus / 100) + '%' : ''}`
       }
       return ''
     }
