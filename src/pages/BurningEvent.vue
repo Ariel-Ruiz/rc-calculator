@@ -333,39 +333,45 @@ export default {
         poderEnPhs = valorPoder / 1000
       }
 
+      // Updated event scoring: points now depend ONLY on power. Each pointsXPh is the previous
+      // multiplier scaled by 5/24 (same power/sellable tiers). pointsXBonus is kept at its
+      // original values but ignored in the calc — if a future event counts bonus again with the
+      // same values, just re-enable the bonus term below.
       let pointsXPh = 1
       let pointsXBonus = 1
 
       if (poderEnPhs >= 10 && isSellable) {
-        pointsXPh = 14400
+        pointsXPh = 3000
         pointsXBonus = 60
       } else if (poderEnPhs >= 10) {
-        pointsXPh = 9600
+        pointsXPh = 2000
         pointsXBonus = 40
       } else if (poderEnPhs >= 5 && isSellable) {
-        pointsXPh = 18000
+        pointsXPh = 3750
         pointsXBonus = 75
       } else if (poderEnPhs >= 5) {
-        pointsXPh = 12000
+        pointsXPh = 2500
         pointsXBonus = 50
       } else if (poderEnPhs >= 1 && isSellable) {
-        pointsXPh = 22500
+        pointsXPh = 4687.5
         pointsXBonus = 93.75
       } else if (poderEnPhs >= 1) {
-        pointsXPh = 15000
+        pointsXPh = 3125
         pointsXBonus = 62.5
       } else if (poderEnPhs > 0.75 && isSellable) {
-        pointsXPh = 46500
+        pointsXPh = 9687.5
         pointsXBonus = 193.75
       } else if (isSellable) {
-        pointsXPh = 27900
+        pointsXPh = 5812.5
         pointsXBonus = 116.25
       } else {
-        pointsXPh = 18600
+        pointsXPh = 3875
         pointsXBonus = 77.5
       }
 
-      let puntos = poderEnPhs * pointsXPh + (pointsXBonus * valorBonus)
+      // Bonus term ignored this event; re-add `+ (pointsXBonus * valorBonus)` if it counts again.
+      void pointsXBonus; void valorBonus
+      let puntos = poderEnPhs * pointsXPh
       return Math.ceil(puntos)
     },
 

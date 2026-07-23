@@ -7,6 +7,9 @@ import BurningEvent from '../pages/BurningEvent.vue'
 import Rooms from '../pages/Rooms.vue'
 import Hamsters from '../pages/Hamsters.vue'
 import Marketplace from '../pages/Marketplace.vue'
+// --- Hidden route (comment/uncomment to toggle) ---
+import MergeRatios from '../pages/MergeRatios.vue'
+// --- End hidden route ---
 
 Vue.use(VueRouter)
 
@@ -73,7 +76,18 @@ const routes = [
       title: 'Marketplace | RC Calculator',
       description: 'Analyze and compare RollerCoin marketplace miners.',
     }
+  },
+  // --- Hidden route (comment/uncomment to toggle) ---
+  {
+    path: '/merge-ratios',
+    name: 'MergeRatios',
+    component: MergeRatios,
+    meta: {
+      title: 'Merge Ratios | RC Calculator',
+      description: 'Find the cheapest merge ratios for RollerCoin miners.',
+    }
   }
+  // --- End hidden route ---
 ]
 
 const router = new VueRouter({

@@ -329,6 +329,15 @@
         {{ manualMode ? t.rooms?.manual_on_label : t.rooms?.manual_off_label }}
       </button>
 
+      <!-- Burning mode toggle (hidden for now) -->
+      <button
+        v-if="false"
+        :class="['rooms-burning-btn', { active: burningMode }]"
+        @click="burningMode = !burningMode"
+      >
+        {{ burningMode ? (t.rooms?.burning_on_label || 'BURNING MODE ON') : (t.rooms?.burning_off_label || 'ACTIVATE BURNING MODE') }}
+      </button>
+
       <!-- Tab buttons -->
       <div class="rooms-right-buttons">
         <button
@@ -383,6 +392,24 @@
               </div>
             </div>
 
+            <div class="rooms-auto-row">
+              <span class="rooms-auto-label">{{ t.rooms?.auto_include || 'Include' }}</span>
+              <div class="rooms-auto-order">
+                <button
+                  :class="['rooms-auto-order-btn', { active: autoSellable === 'both' }]"
+                  @click="autoSellable = 'both'"
+                >{{ t.rooms?.filter_all || 'All' }}</button>
+                <button
+                  :class="['rooms-auto-order-btn', 'rooms-auto-seg-btn', { active: autoSellable === 'sellable' }]"
+                  @click="autoSellable = 'sellable'"
+                ><img :src="sellableIconUrl" alt="" class="rooms-auto-seg-icon" />{{ t.rooms?.filter_sellable || 'Sellable' }}</button>
+                <button
+                  :class="['rooms-auto-order-btn', 'rooms-auto-seg-btn', { active: autoSellable === 'no-sellable' }]"
+                  @click="autoSellable = 'no-sellable'"
+                ><img :src="noSellableIconUrl" alt="" class="rooms-auto-seg-icon" />{{ t.rooms?.filter_not_sellable || 'Not sellable' }}</button>
+              </div>
+            </div>
+
             <!-- <div class="rooms-auto-checkbox">
               <input type="checkbox" id="autoEmptyRooms" v-model="autoEmptyRooms" />
               <label for="autoEmptyRooms">{{ t.rooms?.empty_rooms_before || 'Empty rooms before' }}</label>
@@ -417,6 +444,58 @@
                   <div :class="['rooms-sort-option', { active: minerSortBy === 'power-asc' }]" @click="minerSortBy = 'power-asc'; showMinerSort = false">Power &#9650;</div>
                   <div :class="['rooms-sort-option', { active: minerSortBy === 'bonus-desc' }]" @click="minerSortBy = 'bonus-desc'; showMinerSort = false">Bonus &#9660;</div>
                   <div :class="['rooms-sort-option', { active: minerSortBy === 'bonus-asc' }]" @click="minerSortBy = 'bonus-asc'; showMinerSort = false">Bonus &#9650;</div>
+                  <div :class="['rooms-sort-option', { active: minerSortBy === 'ratio-asc' }]" @click="minerSortBy = 'ratio-asc'; showMinerSort = false">Ratio &#9650;</div>
+                  <div :class="['rooms-sort-option', { active: minerSortBy === 'ratio-desc' }]" @click="minerSortBy = 'ratio-desc'; showMinerSort = false">Ratio &#9660;</div>
+                </div>
+              </div>
+              <div class="rooms-filter-wrapper">
+                <button :class="['rooms-list-btn', { active: hasActiveMinerFilter }]" @click="toggleMinerFilter">{{ t.rooms?.filter || 'FILTER' }}</button>
+                <div v-if="showMinerFilter" class="rooms-filter-backdrop" @click="showMinerFilter = false"></div>
+                <div v-if="showMinerFilter" class="rooms-filter-menu" @click.stop @mousedown.stop>
+                  <!-- Sellable -->
+                  <div class="rooms-filter-seg">
+                    <button :class="['rooms-filter-seg-btn', { active: minerFilterSellable === 'all' }]" @click="minerFilterSellable = 'all'">{{ t.rooms?.filter_all || 'All' }}</button>
+                    <button :class="['rooms-filter-seg-btn', { active: minerFilterSellable === 'sellable' }]" @click="minerFilterSellable = 'sellable'">
+                      <img :src="sellableIconUrl" alt="" class="rooms-filter-seg-icon" />{{ t.rooms?.filter_sellable || 'Sellable' }}
+                    </button>
+                    <button :class="['rooms-filter-seg-btn', { active: minerFilterSellable === 'no-sellable' }]" @click="minerFilterSellable = 'no-sellable'">
+                      <img :src="noSellableIconUrl" alt="" class="rooms-filter-seg-icon" />{{ t.rooms?.filter_not_sellable || 'Not sellable' }}
+                    </button>
+                  </div>
+
+                  <!-- Power range -->
+                  <div class="rooms-filter-block">
+                    <div class="rooms-filter-label">{{ t.rooms?.filter_power_range || 'Power range (Gh/s)' }}</div>
+                    <div class="rooms-range-slider">
+                      <div class="rooms-range-track"></div>
+                      <div class="rooms-range-fill" :style="powerFillStyle"></div>
+                      <input type="range" class="rooms-range-input" :min="minerPowerBounds.min" :max="minerPowerBounds.max" :step="powerStep" :value="powerMinVal" @input="onPowerMinInput" />
+                      <input type="range" class="rooms-range-input" :min="minerPowerBounds.min" :max="minerPowerBounds.max" :step="powerStep" :value="powerMaxVal" @input="onPowerMaxInput" />
+                    </div>
+                    <div class="rooms-range-inputs">
+                      <input type="number" class="rooms-range-num" :value="powerMinVal" @input="onPowerMinInput" />
+                      <span class="rooms-range-dash">-</span>
+                      <input type="number" class="rooms-range-num" :value="powerMaxVal" @input="onPowerMaxInput" />
+                    </div>
+                  </div>
+
+                  <!-- Bonus range -->
+                  <div class="rooms-filter-block">
+                    <div class="rooms-filter-label">{{ t.rooms?.filter_bonus_range || 'Bonus range (%)' }}</div>
+                    <div class="rooms-range-slider">
+                      <div class="rooms-range-track"></div>
+                      <div class="rooms-range-fill" :style="bonusFillStyle"></div>
+                      <input type="range" class="rooms-range-input" :min="minerBonusBounds.min" :max="minerBonusBounds.max" step="1" :value="bonusMinVal" @input="onBonusMinInput" />
+                      <input type="range" class="rooms-range-input" :min="minerBonusBounds.min" :max="minerBonusBounds.max" step="1" :value="bonusMaxVal" @input="onBonusMaxInput" />
+                    </div>
+                    <div class="rooms-range-inputs">
+                      <input type="number" class="rooms-range-num" :value="bonusMinVal" @input="onBonusMinInput" />
+                      <span class="rooms-range-dash">-</span>
+                      <input type="number" class="rooms-range-num" :value="bonusMaxVal" @input="onBonusMaxInput" />
+                    </div>
+                  </div>
+
+                  <button class="rooms-filter-reset" @click="resetMinerFilter">{{ t.rooms?.filter_reset || 'RESET' }}</button>
                 </div>
               </div>
               <button :class="['rooms-list-btn', { active: editMode }]" @click="editMode = !editMode">{{ t.rooms?.edit || 'Edit' }}</button>
@@ -435,6 +514,25 @@
                 </div>
                 <span class="rooms-list-card-qty-row">
                   <span v-if="miner._stackQty > 1" class="rooms-list-card-stack-qty">{{ miner._stackQty }}</span>
+                  <a
+                    v-if="isMinerSellable(miner)"
+                    :href="getMinerSellLink(miner)"
+                    target="_blank"
+                    rel="noopener"
+                    class="rooms-list-card-sellable-link"
+                    :title="t.rooms?.sell_on_rollercoin || 'Sell on RollerCoin'"
+                    @click.stop
+                    @mousedown.stop
+                  >
+                    <img :src="sellableIconUrl" alt="sellable" class="rooms-list-card-sellable" />
+                  </a>
+                  <img
+                    v-else
+                    :src="noSellableIconUrl"
+                    alt="not sellable"
+                    :title="t.rooms?.filter_not_sellable || 'Not sellable'"
+                    class="rooms-list-card-sellable"
+                  />
                   <span class="rooms-list-card-quantity">{{ (miner.cells || 1) === 1 ? '1 cell' : '2 cells' }}</span>
                 </span>
                 <div class="rooms-list-card-img-area">
@@ -484,6 +582,7 @@
                       <span class="rooms-list-card-sep">|</span>
                       <span class="rooms-list-card-bonus">{{ miner.bonus }}%</span>
                     </div>
+                    <div class="rooms-list-card-ratio">ratio {{ minerRatioLabel(miner) }}</div>
                   </template>
                 </div>
                 <div v-if="minerRemovalKey === (miner.name + '|' + miner.power + '|' + miner.bonus)" class="rooms-rack-remove-overlay" @click.stop @mousedown.stop>
@@ -1076,12 +1175,15 @@ import exampleSell from '../assets/example_sell.png'
 import defaultMinerImg from '../assets/miners/default.svg'
 import infoIconUrl from '../assets/icons/info.svg'
 import arrowIconUrl from '../assets/icons/arrow.svg'
+import sellableIconUrl from '../assets/icons/sellable.svg'
+import noSellableIconUrl from '../assets/icons/no-sellable.svg'
 let networkExampleImg = null
 try { networkExampleImg = new URL('../assets/example_network_import.png', import.meta.url).href } catch (e) {}
 const autoImportHelpImages = import.meta.glob('../assets/rooms/autoimport/*.png', { eager: true })
 import { db } from '../firebase'
 import { ref as dbRef, push } from 'firebase/database'
 import minersData from '../assets/miners.json'
+import mergesData from '../assets/merges.json'
 
 // Apply saved miner edits from localStorage
 const savedEdits = JSON.parse(localStorage.getItem('minerEdits') || '{}')
@@ -1156,6 +1258,8 @@ export default {
       storagePath: 'https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/',
       infoIconUrl,
       arrowIconUrl,
+      sellableIconUrl,
+      noSellableIconUrl,
       exampleImages: { collection: exampleCollection, inventory: exampleInventory, sell: exampleSell },
       roomSkins: roomSkinsData,
       selectedSkin: roomSkinsData[0]?.id || 'room_background',
@@ -1191,6 +1295,7 @@ export default {
       autoOrderBy: 'power',
       autoMaxPower: null,
       autoPriority: 'default',
+      autoSellable: 'both',
       autoEmptyRooms: true,
       autoAddedUids: new Set(),
       loading: false,
@@ -1203,6 +1308,13 @@ export default {
       rackSortBy: 'bonus-desc',
       showMinerSort: false,
       showRackSort: false,
+      burningMode: false,
+      showMinerFilter: false,
+      minerFilterSellable: 'all',
+      minerFilterPowerMin: null,
+      minerFilterPowerMax: null,
+      minerFilterBonusMin: null,
+      minerFilterBonusMax: null,
       showAddModal: null,
       addModalSearch: '',
       addModalSelected: {},
@@ -1285,6 +1397,16 @@ export default {
       this.miners.forEach(m => { map[this.normalizeName(m.name)] = m })
       return map
     },
+    mergesByBaseId() {
+      const map = {}
+      mergesData.forEach(m => { map[m.miner_id] = m })
+      return map
+    },
+    mergesNameMap() {
+      const map = {}
+      mergesData.forEach(m => { map[this.normalizeName(m.name)] = m })
+      return map
+    },
     rightPanelStyle() {
       if (this.centerHeight > 0) {
         return { height: this.centerHeight + 'px' }
@@ -1307,11 +1429,86 @@ export default {
       return this.loadedMiners.filter(m => !placedUids.has(m.uid))
     },
     filteredAvailableMiners() {
-      if (!this.minerSearchDebounced.trim()) return this.availableMiners
-      const search = this.minerSearchDebounced.toLowerCase()
-      return this.availableMiners.filter(m =>
-        this.getCleanName(m.name).toLowerCase().includes(search)
-      )
+      let list = this.availableMiners
+
+      // Sellable / not sellable
+      if (this.minerFilterSellable !== 'all') {
+        const wantSellable = this.minerFilterSellable === 'sellable'
+        list = list.filter(m => this.isMinerSellable(m) === wantSellable)
+      }
+
+      // Power range (in Gh/s)
+      if (this.minerFilterPowerMin != null || this.minerFilterPowerMax != null) {
+        const lo = this.minerFilterPowerMin != null ? this.minerFilterPowerMin : -Infinity
+        const hi = this.minerFilterPowerMax != null ? this.minerFilterPowerMax : Infinity
+        list = list.filter(m => {
+          const p = this.parsePowerToGhs(m.power)
+          return p >= lo && p <= hi
+        })
+      }
+
+      // Bonus range (%)
+      if (this.minerFilterBonusMin != null || this.minerFilterBonusMax != null) {
+        const lo = this.minerFilterBonusMin != null ? this.minerFilterBonusMin : -Infinity
+        const hi = this.minerFilterBonusMax != null ? this.minerFilterBonusMax : Infinity
+        list = list.filter(m => {
+          const b = parseFloat(m.bonus) || 0
+          return b >= lo && b <= hi
+        })
+      }
+
+      // Search
+      const search = this.minerSearchDebounced.trim().toLowerCase()
+      if (search) {
+        list = list.filter(m => this.getCleanName(m.name).toLowerCase().includes(search))
+      }
+
+      return list
+    },
+    hasActiveMinerFilter() {
+      return this.minerFilterSellable !== 'all' ||
+        this.minerFilterPowerMin != null || this.minerFilterPowerMax != null ||
+        this.minerFilterBonusMin != null || this.minerFilterBonusMax != null
+    },
+    minerPowerBounds() {
+      const powers = this.loadedMiners.map(m => this.parsePowerToGhs(m.power))
+      const max = powers.length ? Math.ceil(Math.max(...powers)) : 0
+      return { min: 0, max }
+    },
+    minerBonusBounds() {
+      const bonuses = this.loadedMiners.map(m => parseFloat(m.bonus) || 0)
+      const max = bonuses.length ? Math.ceil(Math.max(...bonuses)) : 0
+      return { min: 0, max }
+    },
+    powerStep() {
+      const span = this.minerPowerBounds.max - this.minerPowerBounds.min
+      return span > 0 ? Math.max(1, Math.round(span / 200)) : 1
+    },
+    powerMinVal() {
+      return this.minerFilterPowerMin != null ? this.minerFilterPowerMin : this.minerPowerBounds.min
+    },
+    powerMaxVal() {
+      return this.minerFilterPowerMax != null ? this.minerFilterPowerMax : this.minerPowerBounds.max
+    },
+    bonusMinVal() {
+      return this.minerFilterBonusMin != null ? this.minerFilterBonusMin : this.minerBonusBounds.min
+    },
+    bonusMaxVal() {
+      return this.minerFilterBonusMax != null ? this.minerFilterBonusMax : this.minerBonusBounds.max
+    },
+    powerFillStyle() {
+      const { min, max } = this.minerPowerBounds
+      const span = max - min || 1
+      const lo = Math.max(0, Math.min(100, ((this.powerMinVal - min) / span) * 100))
+      const hi = Math.max(0, Math.min(100, ((this.powerMaxVal - min) / span) * 100))
+      return { left: lo + '%', width: Math.max(0, hi - lo) + '%' }
+    },
+    bonusFillStyle() {
+      const { min, max } = this.minerBonusBounds
+      const span = max - min || 1
+      const lo = Math.max(0, Math.min(100, ((this.bonusMinVal - min) / span) * 100))
+      const hi = Math.max(0, Math.min(100, ((this.bonusMaxVal - min) / span) * 100))
+      return { left: lo + '%', width: Math.max(0, hi - lo) + '%' }
     },
     sortedAvailableMiners() {
       const list = [...this.filteredAvailableMiners]
@@ -1320,6 +1517,8 @@ export default {
         case 'power-asc': return list.sort((a, b) => this.parsePowerToGhs(a.power) - this.parsePowerToGhs(b.power))
         case 'bonus-desc': return list.sort((a, b) => (parseFloat(b.bonus) || 0) - (parseFloat(a.bonus) || 0))
         case 'bonus-asc': return list.sort((a, b) => (parseFloat(a.bonus) || 0) - (parseFloat(b.bonus) || 0))
+        case 'ratio-asc': return list.sort((a, b) => this.minerRatioValue(a) - this.minerRatioValue(b))
+        case 'ratio-desc': return list.sort((a, b) => this.minerRatioValue(b) - this.minerRatioValue(a))
         default: return list
       }
     },
@@ -2618,6 +2817,86 @@ export default {
       return `${ghsValue.toFixed(3)} Gh/s`
     },
 
+    // Ratio per cell = (power in Ph/s / bonus) / cells. Lower = more bonus per power per cell.
+    minerRatioValue(miner) {
+      const bonus = parseFloat(miner.bonus) || 0
+      if (bonus <= 0) return Infinity
+      const powerPh = this.parsePowerToGhs(miner.power) / 1e6
+      return powerPh / bonus / (miner.cells || 1)
+    },
+    minerRatioLabel(miner) {
+      const r = this.minerRatioValue(miner)
+      if (!isFinite(r)) return '—'
+      return r < 10 ? r.toFixed(3) : r.toFixed(1)
+    },
+
+    // ========== SELLABLE / FILTER ==========
+    isMinerSellable(miner) {
+      const dbMiner = this.findMiner(miner)
+      return !!(dbMiner && dbMiner.can_be_sold)
+    },
+    // Resolve the marketplace sell ID for the miner's actual rarity/merge level.
+    // Base miners (no rarity prefix) use the base miner id; merged miners use the
+    // merge_id of their level from merges.json (level 2=Uncommon ... 6=Unreal).
+    // The merges entry is resolved by BASE id (via findMiner) so name mismatches
+    // (apostrophes, parentheses, unicode) don't fall back to the base id wrongly.
+    resolveMergeId(miner) {
+      const rarityLevel = this.getRarityLevel(miner.name)
+      if (!rarityLevel || rarityLevel === 'legacy') return null
+      const dbMiner = this.findMiner(miner)
+      let entry = dbMiner && dbMiner.id ? this.mergesByBaseId[dbMiner.id] : null
+      if (!entry) entry = this.mergesNameMap[this.normalizeName(this.getCleanName(miner.name))]
+      if (!entry && dbMiner) entry = this.mergesNameMap[this.normalizeName(dbMiner.name)]
+      if (!entry || !entry.merges) return null
+      const merge = entry.merges.find(mg => mg.level === rarityLevel)
+      return merge ? merge.merge_id : null
+    },
+    getMinerSellLink(miner) {
+      const mergeId = this.resolveMergeId(miner)
+      const dbMiner = this.findMiner(miner)
+      const id = mergeId || (dbMiner && dbMiner.id) || miner.minerId
+      return id ? `https://rollercoin.com/marketplace/sell/miner/${id}` : 'https://rollercoin.com/marketplace'
+    },
+    toggleMinerFilter() {
+      this.showMinerFilter = !this.showMinerFilter
+      if (this.showMinerFilter) this.showMinerSort = false
+    },
+    resetMinerFilter() {
+      this.minerFilterSellable = 'all'
+      this.minerFilterPowerMin = null
+      this.minerFilterPowerMax = null
+      this.minerFilterBonusMin = null
+      this.minerFilterBonusMax = null
+    },
+    onPowerMinInput(e) {
+      const { min } = this.minerPowerBounds
+      let v = parseFloat(e.target.value)
+      if (isNaN(v)) return
+      v = Math.max(min, Math.min(v, this.powerMaxVal))
+      this.minerFilterPowerMin = v
+    },
+    onPowerMaxInput(e) {
+      const { max } = this.minerPowerBounds
+      let v = parseFloat(e.target.value)
+      if (isNaN(v)) return
+      v = Math.min(max, Math.max(v, this.powerMinVal))
+      this.minerFilterPowerMax = v
+    },
+    onBonusMinInput(e) {
+      const { min } = this.minerBonusBounds
+      let v = parseFloat(e.target.value)
+      if (isNaN(v)) return
+      v = Math.max(min, Math.min(v, this.bonusMaxVal))
+      this.minerFilterBonusMin = v
+    },
+    onBonusMaxInput(e) {
+      const { max } = this.minerBonusBounds
+      let v = parseFloat(e.target.value)
+      if (isNaN(v)) return
+      v = Math.min(max, Math.max(v, this.bonusMinVal))
+      this.minerFilterBonusMax = v
+    },
+
     // ========== SET BONUS CALCULATION ==========
     // Get the set name for a loaded miner
     // Checks clean name against sets.json miners lists, respecting rarity requirements
@@ -2893,10 +3172,15 @@ export default {
 
       let bestSelected = null, bestRaw = -1
 
-      // Strategy A: for each group with 2+ copies, try filling mostly with that group
-      for (const key of Object.keys(groups)) {
+      // Strategy A: for each group with 2+ copies, try filling mostly with that group.
+      // Only try the top-N highest-power duplicate groups: those maximize raw power,
+      // and trying every duplicate group is O(#groups x M) which blows up with many miners.
+      const dupeKeys = Object.keys(groups)
+        .filter(k => groups[k].miners.length >= 2)
+        .sort((a, b) => groups[b].power - groups[a].power)
+        .slice(0, 12)
+      for (const key of dupeKeys) {
         const g = groups[key]
-        if (g.miners.length < 2) continue
 
         const selected = []
         let totalCells = 0
@@ -2983,6 +3267,269 @@ export default {
       }
 
       return { selected: bestSelected, ep: this._buildRackAssignment(rackConfigs, bestSelected).ep }
+    },
+
+    // Exact max raw power via knapsack DP over cells (miner weights are 1 or 2).
+    // Raw power ignores bonus, so maximizing it is a pure knapsack: maximize sum(power)
+    // subject to sum(cells) <= maxCells. Greedy strategies leave cells poorly packed;
+    // this finds the true optimum for the (common) non-binding EP-cap case.
+    _knapsackMaxRawPower(minerData, rackConfigs, maxPowerGhs) {
+      const maxCells = rackConfigs.reduce((s, r) => s + r.size, 0)
+      if (maxCells <= 0) return { selected: [], ep: 0 }
+
+      // Candidates: an optimal fill uses only the highest-power miners. Keep enough of
+      // each cell-class (incl. 1-cell miners to pack odd leftover cells).
+      const ones = minerData.filter(m => (m.cells || 1) === 1).sort((a, b) => b.power - a.power).slice(0, maxCells)
+      const multi = minerData.filter(m => (m.cells || 1) >= 2).sort((a, b) => b.power - a.power).slice(0, maxCells)
+      const items = ones.concat(multi)
+
+      // 0/1 knapsack: dp[c] = max total power using <= c cells
+      const dpPower = new Array(maxCells + 1).fill(0)
+      const dpItems = new Array(maxCells + 1).fill(null).map(() => [])
+      for (const it of items) {
+        const w = it.cells || 1
+        for (let c = maxCells; c >= w; c--) {
+          const cand = dpPower[c - w] + it.power
+          if (cand > dpPower[c]) {
+            dpPower[c] = cand
+            dpItems[c] = dpItems[c - w].concat(it)
+          }
+        }
+      }
+      let bestC = 0
+      for (let c = 1; c <= maxCells; c++) if (dpPower[c] > dpPower[bestC]) bestC = c
+      let selected = dpItems[bestC].slice()
+
+      // Enforce EP cap if it actually binds (strip lowest-power miners)
+      if (maxPowerGhs !== null) {
+        while (selected.length > 0 && this._buildRackAssignment(rackConfigs, selected).ep > maxPowerGhs) {
+          let wi = 0
+          for (let i = 1; i < selected.length; i++) if (selected[i].power < selected[wi].power) wi = i
+          selected.splice(wi, 1)
+        }
+      }
+      return { selected, ep: this._buildRackAssignment(rackConfigs, selected).ep }
+    },
+
+    // Marginal-ratio greedy: at each step pick the miner with the best gain-per-EP-cost.
+    // EP = rawPower x (1 + sum(distinct bonus)/100), so bonus counts ONCE per name and
+    // duplicates are almost free. This dynamically favors high-power/low-bonus miners (and
+    // their duplicates) for power priority, and high-bonus/low-power for bonus priority,
+    // which is exactly how to pack the most raw (or bonus) under the EP cap.
+    // Uses a fast incremental EP estimate (ignores rack/set bonus) for candidate scoring;
+    // the real EP is validated afterwards by the caller (step 5b) and _isBetter.
+    _greedyMarginalRatio(minerData, rackConfigs, maxPowerGhs, priority) {
+      const maxCells = rackConfigs.reduce((s, r) => s + r.size, 0)
+      const remaining = [...minerData]
+      const selected = []
+      let totalCells = 0
+      let curRaw = 0, curBonus = 0
+      const nameCounts = {}
+
+      while (totalCells < maxCells && remaining.length > 0) {
+        const curEP = curRaw * (1 + curBonus / 100)
+        let bestI = -1, bestScore = -Infinity
+        const nameSeen = new Set()
+        for (let i = 0; i < remaining.length; i++) {
+          const m = remaining[i]
+          const name = m.miner.name
+          if (nameSeen.has(name)) continue
+          nameSeen.add(name)
+          if (totalCells + m.cells > maxCells) continue
+          const isDup = nameCounts[name] > 0
+          const newRaw = curRaw + m.power
+          const newBonus = curBonus + (isDup ? 0 : m.bonus)
+          const newEP = newRaw * (1 + newBonus / 100)
+          if (maxPowerGhs !== null && newEP > maxPowerGhs) continue
+          const marginalEP = Math.max(newEP - curEP, 1e-6)
+          const gain = priority === 'bonus' ? (isDup ? 0 : m.bonus) : m.power
+          const score = gain / marginalEP / m.cells
+          if (score > bestScore) { bestScore = score; bestI = i }
+        }
+        if (bestI === -1) break
+        const m = remaining.splice(bestI, 1)[0]
+        selected.push(m)
+        totalCells += m.cells
+        if (!(nameCounts[m.miner.name] > 0)) curBonus += m.bonus
+        curRaw += m.power
+        nameCounts[m.miner.name] = (nameCounts[m.miner.name] || 0) + 1
+      }
+      return { selected, ep: this._buildRackAssignment(rackConfigs, selected).ep }
+    },
+
+    // Max raw power under the EP cap, modeling the real structure:
+    // EP = rawPower x (1 + sum(distinct bonus)/100). Duplicates add raw with ZERO extra
+    // bonus, so the optimum activates a set of distinct miners (paying their bonus once)
+    // then fills every cell with the highest-power copies that keep raw <= cap/(1+B/100).
+    // We grow the distinct set under several orderings (incl. bonus-ascending) and keep the
+    // best fill found. Rack/set bonus is ignored here (validated later by _buildRackAssignment).
+    _maxRawUnderEP(minerData, rackConfigs, maxPowerGhs) {
+      const maxCells = rackConfigs.reduce((s, r) => s + r.size, 0)
+      if (!maxPowerGhs || maxCells <= 0) {
+        return this._greedySelectWithRacks(minerData, rackConfigs, maxPowerGhs, (a, b) => b.power - a.power)
+      }
+      const groups = {}
+      for (const m of minerData) {
+        const k = m.miner.name
+        if (!groups[k]) groups[k] = { power: m.power, bonus: m.bonus, cells: m.cells, items: [] }
+        groups[k].items.push(m)
+      }
+      const distinct = Object.values(groups)
+      const orderings = [
+        (a, b) => (b.power / b.cells) - (a.power / a.cells),
+        (a, b) => b.power - a.power,
+        (a, b) => (a.bonus - b.bonus) || (b.power - a.power),
+        (a, b) => (b.power / (b.bonus + 1)) - (a.power / (a.bonus + 1))
+      ]
+      let bestRaw = -1, bestSel = []
+      for (const ord of orderings) {
+        const sorted = [...distinct].sort(ord)
+        const D = []
+        let B = 0
+        for (const g of sorted) {
+          D.push(g)
+          B += g.bonus
+          const budget = maxPowerGhs / (1 + B / 100)
+          const fillGroups = D.slice().sort((a, b) => b.power - a.power)
+          let raw = 0, cells = 0
+          const sel = []
+          for (const x of fillGroups) {
+            if (cells >= maxCells) break
+            for (let i = 0; i < x.items.length; i++) {
+              if (cells + x.cells > maxCells) break
+              if (raw + x.power > budget + 1e-6) break
+              sel.push(x.items[i]); raw += x.power; cells += x.cells
+            }
+          }
+          if (raw > bestRaw) { bestRaw = raw; bestSel = sel }
+        }
+      }
+      return { selected: bestSel, ep: this._buildRackAssignment(rackConfigs, bestSel).ep }
+    },
+
+    // Max total BONUS under the EP cap. The binding constraint here is EP (raw x (1 + B/100)),
+    // NOT cells, so to maximize the bonus SUM we spend the EP budget on the HIGHEST-bonus distinct
+    // miners (a "power/bonus" ratio instead fills every cell with tiny low-bonus miners and wastes
+    // the EP budget). Sets are committed first (their level bonus is free), then distinct miners
+    // are added highest-bonus-first until the EP cap; a few orderings are tried and the best kept.
+    _maxBonusUnderEP(minerData, rackConfigs, maxPowerGhs) {
+      const maxCells = rackConfigs.reduce((s, r) => s + r.size, 0)
+      if (maxCells <= 0) return { selected: [], ep: 0 }
+      const setMap = this._getSetMap()
+
+      // --- Commit each completable, bonus-giving set (complete-or-skip, never half a set) ---
+      const setRacksByName = {}
+      for (const r of rackConfigs) {
+        if (r.is_set && r.set) (setRacksByName[r.set] = setRacksByName[r.set] || []).push(r)
+      }
+      const committed = []
+      const committedUids = new Set()
+      const committedNames = new Set()
+      for (const setName of Object.keys(setRacksByName)) {
+        const setDef = setMap[setName]
+        if (!setDef || !setDef.levels || setDef.levels.length === 0) continue
+        const rackCells = setRacksByName[setName].reduce((s, r) => s + r.size, 0)
+        const minReq = Math.min(...setDef.levels.map(l => l.required))
+        const cand = minerData.filter(m => m._effectiveSet === setName).sort((a, b) => (b.bonus - a.bonus) || (a.power - b.power))
+        const fit = []
+        let fc = 0
+        for (const m of cand) { if (fc + m.cells > rackCells) continue; fit.push(m); fc += m.cells }
+        if (fit.length < minReq) continue
+        let lvlBonus = 0
+        for (const lvl of setDef.levels) {
+          if (fit.length >= lvl.required && lvl.bonus_type === 'bonus') lvlBonus += lvl.bonus_value
+        }
+        if (lvlBonus <= 0) continue // only sets that actually give bonus
+        for (const m of fit) { committed.push(m); committedUids.add(m.miner.uid); committedNames.add(m.miner.name) }
+      }
+
+      const base = this._buildRackAssignment(rackConfigs, committed)
+      const baseExtra = base.ep - base.rawPower * (1 + base.bonusTotal / 100)
+      const committedCells = committed.reduce((s, m) => s + m.cells, 0)
+
+      // --- Distinct remaining miners (one representative per name, lowest power = cheapest EP) ---
+      const byName = {}
+      for (const m of minerData) {
+        if (committedNames.has(m.miner.name) || !(m.bonus > 0)) continue
+        const k = m.miner.name
+        if (!byName[k] || m.power < byName[k].power) byName[k] = m
+      }
+      const distinct = Object.values(byName)
+
+      // This is a 2-constraint knapsack (cells AND multiplicative EP). Max bonus needs BOTH used:
+      // a pure bonus-desc sort burns the EP budget on a few huge-power miners; a pure EP-efficiency
+      // (bonus/marginalEP) sort fills every cell with tiny miners and wastes the EP budget. From the
+      // Lagrangian of raw*(1+B/100) <= cap, the OPTIMAL ordering is bonus/power ratio descending
+      // (include miners whose bonus/power beats a threshold) - that minimizes raw for a given bonus.
+      // We try that plus a lambda sweep and bonus/cells / bonus-desc, filling each under cells + EP,
+      // and keep the highest total bonus. A final local improvement pass swaps in any unselected
+      // miner that raises the bonus while still fitting, to use up leftover EP/cells.
+      let bestBonus = base.bonusTotal, bestSel = committed.slice()
+      const fillBy = (cmp) => {
+        const sorted = [...distinct].sort(cmp)
+        let raw = base.rawPower, B = base.bonusTotal, cells = committedCells
+        const sel = committed.slice()
+        for (const m of sorted) {
+          if (cells + m.cells > maxCells) continue
+          const newEP = (raw + m.power) * (1 + (B + m.bonus) / 100) + baseExtra
+          if (maxPowerGhs !== null && newEP > maxPowerGhs + 1e-6) continue
+          sel.push(m); raw += m.power; B += m.bonus; cells += m.cells
+        }
+        if (B > bestBonus) { bestBonus = B; bestSel = sel.slice() }
+      }
+      // Optimal-ordering candidate: bonus/power ratio descending.
+      fillBy((a, b) => (b.bonus / b.power) - (a.bonus / a.power))
+      // Cell-efficiency and raw bonus orderings (win when cells, not EP, bind).
+      fillBy((a, b) => (b.bonus / b.cells) - (a.bonus / a.cells))
+      fillBy((a, b) => b.bonus - a.bonus)
+      // Lagrangian sweep: score = bonus - lambda * power(Ph), spanning keep-huge .. drop-huge.
+      const lambdas = [0, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.35, 0.5, 0.75, 1, 1.5, 2, 3, 5, 8, 12, 20, 35, 60, 100]
+      for (const lam of lambdas) {
+        fillBy((a, b) => (b.bonus - lam * b.power / 1e6) - (a.bonus - lam * a.power / 1e6))
+      }
+      // Minimum-bonus-threshold sweep (efficient-first, i.e. ratio = power/bonus/cell ascending).
+      // Filling by pure efficiency wastes the limited cells on tiny low-bonus miners and leaves the
+      // EP budget unused; requiring bonus >= T forces bigger-bonus miners into the cells so the EP
+      // cap is actually reached. Two phases per T: first the filtered (bonus >= T) miners by
+      // efficiency, then relax the filter to fill any leftover cells with what is left.
+      const byRatio = [...distinct].sort((a, b) => (a.power / a.bonus / a.cells) - (b.power / b.bonus / b.cells))
+      const thresholds = [0, 0.5, 1, 2, 3, 5, 8, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100]
+      for (const T of thresholds) {
+        let raw = base.rawPower, B = base.bonusTotal, cells = committedCells
+        const sel = committed.slice()
+        const tryAdd = (m) => {
+          if (cells + m.cells > maxCells) return
+          const newEP = (raw + m.power) * (1 + (B + m.bonus) / 100) + baseExtra
+          if (maxPowerGhs !== null && newEP > maxPowerGhs + 1e-6) return
+          sel.push(m); raw += m.power; B += m.bonus; cells += m.cells
+        }
+        for (const m of byRatio) if (m.bonus >= T) tryAdd(m) // phase 1: filtered, efficient-first
+        for (const m of byRatio) if (m.bonus < T) tryAdd(m)  // phase 2: relax to fill leftover cells
+        if (B > bestBonus) { bestBonus = B; bestSel = sel.slice() }
+      }
+      // Local improvement: greedily add any still-unselected distinct miner that fits under both
+      // constraints (a fixed sort can skip a small high-bonus miner after a big one filled the EP).
+      {
+        const inSel = new Set(bestSel.map(m => m.miner.uid))
+        let raw = base.rawPower, B = base.bonusTotal, cells = bestSel.reduce((s, m) => s + m.cells, 0)
+        // recompute raw/B from bestSel so the pass is exact
+        raw = base.rawPower + bestSel.filter(m => !committedUids.has(m.miner.uid)).reduce((s, m) => s + m.power, 0)
+        B = base.bonusTotal + bestSel.filter(m => !committedUids.has(m.miner.uid)).reduce((s, m) => s + m.bonus, 0)
+        const rest = distinct.filter(m => !inSel.has(m.miner.uid)).sort((a, b) => (b.bonus / b.power) - (a.bonus / a.power))
+        let improved = true
+        while (improved) {
+          improved = false
+          for (const m of rest) {
+            if (inSel.has(m.miner.uid)) continue
+            if (cells + m.cells > maxCells) continue
+            const newEP = (raw + m.power) * (1 + (B + m.bonus) / 100) + baseExtra
+            if (maxPowerGhs !== null && newEP > maxPowerGhs + 1e-6) continue
+            bestSel.push(m); inSel.add(m.miner.uid); raw += m.power; B += m.bonus; cells += m.cells
+            improved = true
+          }
+        }
+      }
+      return { selected: bestSel, ep: this._buildRackAssignment(rackConfigs, bestSel).ep }
     },
 
     // Marginal greedy (limited candidates per step for performance)
@@ -3308,9 +3855,40 @@ export default {
         if (config.length > 0) configs.push(config)
       }
 
+      // Zero-bonus (non-set) racks: rack bonus only adds EP cost, never to the bonus sum, and
+      // eats into the raw budget for raw priority. These configs avoid that.
+      const zeroRacks = available.filter(r => (r.bonus || 0) === 0 && !r.is_set).sort((a, b) => b.size - a.size)
+
+      // Config 7: set racks (for their set bonus) + zero-bonus racks only (no other bonus racks)
+      if (setRacks.length > 0 && zeroRacks.length > 0) {
+        const config = []
+        for (const sr of setRacks) {
+          for (let i = 0; i < sr.qty && config.length < totalSlots; i++) config.push({ ...sr })
+        }
+        for (const zr of zeroRacks) {
+          for (let i = 0; i < zr.qty && config.length < totalSlots; i++) config.push({ ...zr })
+        }
+        if (config.length > 0) configs.push(config)
+      }
+
+      // Config 8: only zero-bonus racks (no sets, no bonus racks)
+      if (zeroRacks.length > 0) {
+        const config = []
+        for (const zr of zeroRacks) {
+          for (let i = 0; i < zr.qty && config.length < totalSlots; i++) config.push({ ...zr })
+        }
+        if (config.length > 0) configs.push(config)
+      }
+
       return configs
     },
 
+    // Whether a miner passes the auto-fill sellable filter (both / sellable / no-sellable)
+    matchesAutoSellable(miner) {
+      if (this.autoSellable === 'both') return true
+      const sellable = this.isMinerSellable(miner)
+      return this.autoSellable === 'sellable' ? sellable : !sellable
+    },
     runAutoFill() {
       this.loading = true
       this.recordCurrentState()
@@ -3363,7 +3941,7 @@ export default {
         })
       }
 
-      const availableMiners = this.loadedMiners.filter(m => !placedUids.has(m.uid))
+      const availableMiners = this.loadedMiners.filter(m => !placedUids.has(m.uid) && this.matchesAutoSellable(m))
       const sortFn = priority === 'bonus'
         ? (a, b) => (parseFloat(b.bonus) || 0) - (parseFloat(a.bonus) || 0)
         : priority === 'power'
@@ -3523,7 +4101,7 @@ export default {
       const maxPowerGhs = this.autoMaxPower ? this.autoMaxPower * 1e9 : null
 
       // 3. Prepare miner data (precompute effective set with rarity check)
-      const minerData = this.loadedMiners.map(m => {
+      const minerData = this.loadedMiners.filter(m => this.matchesAutoSellable(m)).map(m => {
         const bonus = parseFloat(m.bonus) || 0
         const power = this.parsePowerToGhs(m.power)
         return {
@@ -3553,8 +4131,16 @@ export default {
         const cStats = this._buildRackAssignment(config, candidate.selected)
         const bStats = current._stats || this._buildRackAssignment(bestConfig, current.selected)
         current._stats = bStats
-        if (priority === 'power') return cStats.rawPower > bStats.rawPower
-        if (priority === 'bonus') return cStats.bonusTotal > bStats.bonusTotal
+        // Tie-break on lower EP: rack bonus adds EP without adding to raw/bonus, so on an equal
+        // metric the config with less rack bonus (lower EP) is preferred -> avoids bonus racks.
+        if (priority === 'power') {
+          if (Math.abs(cStats.rawPower - bStats.rawPower) > 1e-6) return cStats.rawPower > bStats.rawPower
+          return cStats.ep < bStats.ep
+        }
+        if (priority === 'bonus') {
+          if (Math.abs(cStats.bonusTotal - bStats.bonusTotal) > 1e-6) return cStats.bonusTotal > bStats.bonusTotal
+          return cStats.ep < bStats.ep
+        }
         return candidate.ep > current.ep
       }
 
@@ -3567,9 +4153,20 @@ export default {
           this._greedySelectWithRacks(minerData, config, maxPowerGhs, (a, b) => b.bonus - a.bonus),
           ...(hasSetRacks ? [this._greedyWithSetCommit(minerData, config, maxPowerGhs)] : [])
         ]
-        // Extra strategy for power priority: favor duplicates (high power, low effective bonus)
+        // Power priority: cheap heuristics only. Both use an incremental EP model (a single
+        // _buildRackAssignment at the end), unlike _greedyMaxRawPower which rebuilt the rack
+        // assignment ~maxCells times per group and dominated the runtime.
         if (priority === 'power') {
-          strategies.push(this._greedyMaxRawPower(minerData, config, maxPowerGhs))
+          // Dynamic marginal-ratio fill (cheap: incremental EP, no per-candidate rack build)
+          strategies.push(this._greedyMarginalRatio(minerData, config, maxPowerGhs, 'power'))
+          // Structural max-raw-under-EP-cap solver (activate distinct set + fill with copies)
+          strategies.push(this._maxRawUnderEP(minerData, config, maxPowerGhs))
+        }
+        // Bonus priority: cheap marginal-ratio fill + structural max-bonus-under-EP solver
+        // (distinct miners only; duplicates add no bonus).
+        if (priority === 'bonus') {
+          strategies.push(this._greedyMarginalRatio(minerData, config, maxPowerGhs, 'bonus'))
+          strategies.push(this._maxBonusUnderEP(minerData, config, maxPowerGhs))
         }
 
         for (const s of strategies) {
@@ -3595,14 +4192,19 @@ export default {
         }
       }
 
-
       // 5c. Gap-fill: fill remaining rack cells with unselected miners sorted by power
       if (bestResult && bestConfig) {
         const maxCells = bestConfig.reduce((s, r) => s + r.size, 0)
         let usedCells = bestResult.selected.reduce((s, x) => s + x.cells, 0)
         const selUids = new Set(bestResult.selected.map(m => m.miner.uid))
         const gapSort = priority === 'bonus' ? ((a, b) => b.bonus - a.bonus) : ((a, b) => b.power - a.power)
-        const unselected = minerData.filter(m => !selUids.has(m.miner.uid)).sort(gapSort)
+        let unselected = minerData.filter(m => !selUids.has(m.miner.uid))
+        if (priority === 'bonus') {
+          // Duplicates add no bonus and only consume cells + EP budget — fill with NEW names only.
+          const selNames = new Set(bestResult.selected.map(m => m.miner.name))
+          unselected = unselected.filter(m => !selNames.has(m.miner.name))
+        }
+        unselected = unselected.sort(gapSort)
         for (const m of unselected) {
           if (usedCells + m.cells > maxCells) continue
           bestResult.selected.push(m)
@@ -3615,17 +4217,14 @@ export default {
         bestResult.ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
       }
 
-
       // 5d. Swap optimization: O(1) estimate with rack bonus + confirm top N
       if (bestResult && bestConfig) {
         let improved = true
-        let swapIter = 0
         while (improved) {
           improved = false
-          swapIter++
           const selUids = new Set(bestResult.selected.map(m => m.miner.uid))
           const allUnsel = minerData.filter(m => !selUids.has(m.miner.uid))
-          if (allUnsel.length === 0) { console.timeEnd('5d-iter-' + swapIter); break }
+          if (allUnsel.length === 0) break
           const unselDedup = this._dedupByName(allUnsel)
 
           // Get current assignment to know rack bonus per miner
@@ -3816,6 +4415,32 @@ export default {
         this.saveToStorage()
         this.loading = false
         return
+      }
+
+      // 5e. Rack cleanup (raw/bonus priority): rack bonus adds EP cost but never to the raw or
+      // bonus totals, so replace any bonus rack that isn't "earning" it — non-set bonus racks,
+      // and set racks whose set isn't activated — with a 0-bonus rack of the same size.
+      if (priority !== 'default') {
+        const setMap = this._getSetMap()
+        const zeroBySize = {}
+        for (const ur of this.allUserRacks) {
+          if ((ur.bonus || 0) === 0 && !ur.is_set && (ur.quantity || 0) > 0) {
+            if (!zeroBySize[ur.size]) zeroBySize[ur.size] = ur
+          }
+        }
+        for (let i = 0; i < bestConfig.length; i++) {
+          const rk = bestConfig[i]
+          if (!(rk.bonus > 0)) continue
+          let earning = false
+          if (rk.is_set && rk.set) {
+            const setDef = setMap[rk.set]
+            const minReq = setDef && setDef.levels.length ? Math.min(...setDef.levels.map(l => l.required)) : Infinity
+            const cnt = bestResult.selected.filter(m => m._effectiveSet === rk.set).length
+            earning = cnt >= minReq
+          }
+          if (!earning && zeroBySize[rk.size]) bestConfig[i] = { ...zeroBySize[rk.size] }
+        }
+        bestResult.ep = this._buildRackAssignment(bestConfig, bestResult.selected).ep
       }
 
       // 6. Assign racks to room slots

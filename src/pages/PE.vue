@@ -204,7 +204,7 @@ export default {
           case 'miner': if (reward.item.power >= 1e6) rewardsXRLT += (reward.item.power / 1e6) * phXRLT; continue
         }
       }
-      let rltToBuy = rewardsXRLT * 0.44
+      let rltToBuy = rewardsXRLT * 0.37
       let rawMultiplier = (rltToBuy * PeData.multiplier) + 1
       let closest = this.multipliers.reduce((p, c) => Math.abs(c - rawMultiplier) < Math.abs(p - rawMultiplier) ? c : p)
       this.recomendedMultiplier = [closest]

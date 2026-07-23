@@ -116,7 +116,7 @@
     "set": null,
     "can_be_sold": false,
     "can_be_merged": true,
-    "cells": 2,
+    "cells": 1,
     "filename": "the_glimpse.gif"
   },
   {
@@ -942,7 +942,7 @@
     "power": "950.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "venividivici.gif"
@@ -1578,7 +1578,7 @@
     "power": "13.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "pumpkins_revenge.gif"
@@ -4974,7 +4974,7 @@
     "power": "8.400 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "the_primordial.gif"
@@ -5334,7 +5334,7 @@
     "power": "612.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "power_patriot.gif"
@@ -6702,7 +6702,7 @@
     "power": "310.500 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "electricvibe.gif"
@@ -7590,7 +7590,7 @@
     "power": "450.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "golden_vain.gif"
@@ -7758,7 +7758,7 @@
     "power": "1.915 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "pumpkin_king.gif"
@@ -7794,7 +7794,7 @@
     "power": "7.900 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "skullminer.gif"
@@ -7806,7 +7806,7 @@
     "power": "1.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "batty.gif"
@@ -7818,7 +7818,7 @@
     "power": "666.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "witching_hour.gif"
@@ -7830,7 +7830,7 @@
     "power": "3.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "muerte_miner.gif"
@@ -7842,7 +7842,7 @@
     "power": "1.250 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "skeleton_dance.gif"
@@ -7854,7 +7854,7 @@
     "power": "813.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "handy.gif"
@@ -8130,7 +8130,7 @@
     "power": "2.920 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "holoia_companion.gif"
@@ -8478,7 +8478,7 @@
     "power": "2.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "the_amethyst.gif"
@@ -8802,7 +8802,7 @@
     "power": "588.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "galea_bc.gif"
@@ -8814,7 +8814,7 @@
     "power": "742.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "philosophers.gif"
@@ -8886,7 +8886,7 @@
     "power": "233.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "viking_arminer.gif"
@@ -8898,7 +8898,7 @@
     "power": "248.000 Th/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "the_ascended.gif"
@@ -10350,7 +10350,7 @@
     "power": "1.300 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "bitly_juice.gif"
@@ -10374,7 +10374,7 @@
     "power": "5.700 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "voidsaw.gif"
@@ -10914,7 +10914,7 @@
     "power": "2.220 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "pennywises_haunt.gif"
@@ -11034,7 +11034,7 @@
     "power": "2.100 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "collector.gif"
@@ -12558,7 +12558,7 @@
     "power": "3.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "flower_power_invasion.gif"
@@ -13350,7 +13350,7 @@
     "power": "1.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": true,
+    "can_be_sold": false,
     "can_be_merged": true,
     "cells": 2,
     "filename": "retired_sheriff.gif"
@@ -15558,7 +15558,7 @@
     "power": "1.450 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 1,
     "filename": "lodge_gingerbrew.gif"
@@ -15582,7 +15582,7 @@
     "power": "27.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 1,
     "filename": "first_spark.gif"
@@ -15714,7 +15714,7 @@
     "power": "2.500 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "ask_a_ban.gif"
@@ -15726,7 +15726,7 @@
     "power": "12.500 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "uncles_gift.gif"
@@ -15738,7 +15738,7 @@
     "power": "17.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "sliminer.gif"
@@ -15750,7 +15750,7 @@
     "power": "14.500 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "cryptopiercer.gif"
@@ -15762,7 +15762,7 @@
     "power": "2.203 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 1,
     "filename": "jingle_ham.gif"
@@ -15774,7 +15774,7 @@
     "power": "10.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "welcome_aboard.gif"
@@ -15882,7 +15882,7 @@
     "power": "18.500 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "lynchian_brew.gif"
@@ -15894,7 +15894,7 @@
     "power": "1.350 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "slyhamrins_gaze.gif"
@@ -15930,7 +15930,7 @@
     "power": "22.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "the_one_core.gif"
@@ -15942,7 +15942,7 @@
     "power": "4.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "hoarders_wealth.gif"
@@ -15954,7 +15954,7 @@
     "power": "25.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "pip_33.gif"
@@ -16038,7 +16038,7 @@
     "power": "1.650 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "frost_popper.gif"
@@ -16506,7 +16506,7 @@
     "power": "4.750 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "minerville.gif"
@@ -16542,7 +16542,7 @@
     "power": "4.125 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "final_drive.gif"
@@ -16662,7 +16662,7 @@
     "power": "14.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "ray_of_love.gif"
@@ -16710,7 +16710,7 @@
     "power": "7.350 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "cupids_cut.gif"
@@ -16782,7 +16782,7 @@
     "power": "6.500 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "red_trail_stallion.gif"
@@ -16818,7 +16818,7 @@
     "power": "1.500 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "firestar.gif"
@@ -16866,7 +16866,7 @@
     "power": "18.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "colorfull.gif"
@@ -16926,7 +16926,7 @@
     "power": "80.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "blockbreaker_rosie.gif"
@@ -16938,7 +16938,7 @@
     "power": "10.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "resident_ham.gif"
@@ -16986,7 +16986,7 @@
     "power": "12.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "jump&run.gif"
@@ -17022,7 +17022,7 @@
     "power": "38.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "clover_lager.gif"
@@ -17046,7 +17046,7 @@
     "power": "135.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 1,
     "filename": "emerald_hoarder.gif"
@@ -17118,7 +17118,7 @@
     "power": "20.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 1,
     "filename": "walk_alone.gif"
@@ -17130,7 +17130,7 @@
     "power": "3.750 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "clauxter_mecha.gif"
@@ -17154,7 +17154,7 @@
     "power": "15.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "edge_case.gif"
@@ -17214,7 +17214,7 @@
     "power": "10.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "arigato.gif"
@@ -17238,7 +17238,7 @@
     "power": "140.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "bento_rig.gif"
@@ -17250,7 +17250,7 @@
     "power": "18.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "kumiki_node.gif"
@@ -17262,7 +17262,7 @@
     "power": "25.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "pagliacci.gif"
@@ -17370,7 +17370,7 @@
     "power": "120.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "golden_egg_keeper.gif"
@@ -17430,7 +17430,7 @@
     "power": "8.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "uberchain.gif"
@@ -17658,7 +17658,7 @@
     "power": "160.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "network_pulse.gif"
@@ -17718,7 +17718,7 @@
     "power": "3.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "sweetspot.gif"
@@ -17790,7 +17790,7 @@
     "power": "180.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "silent_spiral.gif"
@@ -17802,7 +17802,7 @@
     "power": "28.000 Ph/s",
     "is_set": false,
     "set": null,
-    "can_be_sold": false,
+    "can_be_sold": true,
     "can_be_merged": true,
     "cells": 2,
     "filename": "catfish.gif"
@@ -18379,7 +18379,7 @@
     "is_set": false,
     "set": null,
     "can_be_sold": false,
-    "can_be_merged": true,
+    "can_be_merged": false,
     "cells": 2,
     "filename": "abyss_hunter.gif"
   },
@@ -18535,7 +18535,7 @@
     "is_set": false,
     "set": null,
     "can_be_sold": false,
-    "can_be_merged": true,
+    "can_be_merged": false,
     "cells": 2,
     "filename": "crab_trap.gif"
   },
@@ -18643,7 +18643,7 @@
     "is_set": false,
     "set": null,
     "can_be_sold": false,
-    "can_be_merged": true,
+    "can_be_merged": false,
     "cells": 2,
     "filename": "foot_booster.gif"
   },
@@ -18679,7 +18679,7 @@
     "is_set": false,
     "set": null,
     "can_be_sold": false,
-    "can_be_merged": true,
+    "can_be_merged": false,
     "cells": 2,
     "filename": "home_vote.gif"
   },
@@ -18691,7 +18691,7 @@
     "is_set": false,
     "set": null,
     "can_be_sold": false,
-    "can_be_merged": true,
+    "can_be_merged": false,
     "cells": 2,
     "filename": "away_vote.gif"
   },
@@ -19175,7 +19175,7 @@
     "is_set": false,
     "set": null,
     "can_be_sold": false,
-    "can_be_merged": true,
+    "can_be_merged": false,
     "cells": 2,
     "filename": "royal_relic.gif"
   },
@@ -19322,5 +19322,65 @@
     "can_be_merged": true,
     "cells": 2,
     "filename": "captains_fortune.gif"
+  },
+  {
+    "id": "6a5f5f8a23ebe90d6edae48c",
+    "name": "Torchtrail",
+    "bonus": 4,
+    "power": "40.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 1,
+    "filename": "torchtrail.gif"
+  },
+  {
+    "id": "6a60a46523ebe90d6edcd17b",
+    "name": "Sirenas",
+    "bonus": 1,
+    "power": "10.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "sirenas.gif"
+  },
+  {
+    "id": "6a60a59c23ebe90d6edcd2f2",
+    "name": "Borrowed Gold",
+    "bonus": 2,
+    "power": "24.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "borrowed_gold.gif"
+  },
+  {
+    "id": "6a613e5e23ebe90d6eddcb04",
+    "name": "Burning Barrel",
+    "bonus": 10,
+    "power": "125.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "burning_barrel.gif"
+  },
+  {
+    "id": "6a61e3fc23ebe90d6ede9517",
+    "name": "Lost Treasure",
+    "bonus": 5,
+    "power": "100.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 1,
+    "filename": "lost_treasure.gif"
   }
 ]

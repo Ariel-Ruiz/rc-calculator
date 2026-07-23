@@ -1,0 +1,251 @@
+.merge-ratios-container {
+  padding: 0;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.merge-ratios-container .event-title {
+  margin-bottom: 1.2rem;
+  font-size: 2.3em;
+}
+
+/* Filters */
+.mr-filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+  padding: 0.8rem 1rem;
+  background: var(--v2-secondary);
+  border-radius: var(--v2-radius-lg);
+}
+
+.mr-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mr-filter-label {
+  font-size: 0.82rem;
+  color: var(--v2-text-muted);
+  text-transform: uppercase;
+  font-family: 'Arcana', cursive;
+  letter-spacing: 0.5px;
+}
+
+.mr-filter-select,
+.mr-filter-input {
+  background: var(--v2-primary);
+  border: 1px solid var(--v2-tertiary);
+  color: var(--v2-text);
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--v2-radius);
+  font-size: 0.85rem;
+  font-family: 'Manrope', system-ui, sans-serif;
+  outline: none;
+  transition: border-color var(--v2-speed);
+}
+
+.mr-filter-select:focus,
+.mr-filter-input:focus {
+  border-color: var(--v2-accent);
+}
+
+.mr-filter-input {
+  width: 100px;
+}
+
+/* Table wrapper */
+.mr-table-wrapper {
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: var(--v2-radius-lg);
+  background: var(--v2-secondary);
+  padding: 0;
+}
+
+.mr-table {
+  width: 100%;
+  font-size: 0.88rem;
+  border-collapse: collapse;
+}
+
+.mr-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--v2-secondary);
+  padding: 0.6rem 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: 'Arcana', cursive;
+  color: var(--v2-text-muted);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid var(--v2-tertiary);
+}
+
+.mr-table thead th:hover {
+  color: var(--v2-accent);
+}
+
+.mr-table thead th.sorted {
+  color: var(--v2-accent);
+  text-shadow: 0 0 4px var(--v2-accent-glow);
+}
+
+.mr-table tbody tr {
+  transition: background var(--v2-speed);
+  border-bottom: 1px solid rgba(81, 78, 114, 0.25);
+}
+
+.mr-table tbody tr:hover {
+  background: rgba(3, 225, 228, 0.04);
+}
+
+.mr-table td {
+  padding: 0.45rem 0.5rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Miner image cell */
+.mr-miner-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Name cell */
+.mr-name-cell {
+  text-align: left;
+  font-weight: 600;
+  color: var(--v2-text-bright);
+}
+
+/* Base price input */
+.mr-baseprice-cell {
+  text-align: center;
+}
+
+.mr-baseprice-input {
+  background: var(--v2-primary);
+  border: 1px solid var(--v2-tertiary);
+  color: var(--v2-text);
+  padding: 0.25rem 0.4rem;
+  border-radius: var(--v2-radius);
+  font-size: 0.82rem;
+  font-family: 'Manrope', system-ui, sans-serif;
+  outline: none;
+  width: 80px;
+  text-align: right;
+  transition: border-color var(--v2-speed);
+  -moz-appearance: textfield;
+}
+
+.mr-baseprice-input::-webkit-inner-spin-button,
+.mr-baseprice-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mr-baseprice-input:focus {
+  border-color: var(--v2-accent);
+}
+
+/* Rarity badges */
+.mr-rarity-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mr-rarity-common { background: #6b6b6b; color: #fff; }
+.mr-rarity-uncommon { background: #2e7d32; color: #fff; }
+.mr-rarity-rare { background: #1565c0; color: #fff; }
+.mr-rarity-epic { background: #6a1b9a; color: #fff; }
+.mr-rarity-legendary { background: #e65100; color: #fff; }
+
+/* Sellable indicator */
+.mr-sell-yes {
+  color: var(--v2-success);
+  font-weight: 600;
+}
+
+.mr-sell-no {
+  color: var(--v2-text-muted);
+}
+
+/* Number cells */
+.mr-power-cell,
+.mr-bonus-cell,
+.mr-cost-cell,
+.mr-ratio-cell {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.mr-ratio-cell {
+  color: var(--v2-accent);
+  font-weight: 700;
+}
+
+/* Rank column */
+.mr-rank-cell {
+  color: var(--v2-text-muted);
+  font-size: 0.8rem;
+  text-align: center;
+  width: 30px;
+}
+
+/* Loading */
+.mr-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+}
+
+.mr-loading img {
+  width: 64px;
+  height: 64px;
+}
+
+.mr-loading span {
+  color: var(--v2-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mr-filters {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .mr-table-wrapper {
+    max-height: calc(100vh - 300px);
+  }
+
+  .mr-miner-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mr-table {
+    font-size: 0.8rem;
+  }
+}
