@@ -2974,6 +2974,125 @@
   letter-spacing: 0.3px;
 }
 
+/* ===== Burning mode ===== */
+/* Room for the in-flow points line (the +/- stepper floats, so it adds no extra height). */
+.rooms-list-grid.burning .rooms-list-card {
+  min-height: 112px;
+}
+
+/* Total points counter under the burning button */
+.rooms-burn-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin: 0 0 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 66, 66, 0.1);
+  border: 1px solid rgba(255, 66, 66, 0.35);
+  border-radius: 6px;
+}
+.rooms-burn-total-points {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.1em;
+  font-weight: 800;
+  color: var(--v2-accent);
+}
+.rooms-burn-total-icon {
+  width: 18px;
+  height: 18px;
+}
+.rooms-burn-total-count {
+  font-size: 0.6em;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Per-miner points line in the list card (normal flow, below power|bonus / ratio). */
+.rooms-list-card-points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.65em;
+  font-weight: 800;
+  color: var(--v2-accent);
+  margin-top: 2px;
+}
+.rooms-list-card-points-icon {
+  width: 13px;
+  height: 13px;
+}
+
+/* +/- unit stepper: replaces the power|bonus + ratio block in the same slot, matching its height
+   so the card layout stays put. */
+.rooms-burn-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 22px;
+}
+.rooms-burn-step-btn {
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+  padding: 0;
+  font-size: 0.85em;
+  font-weight: 800;
+  color: #fff;
+  background: #ff4242;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.rooms-burn-step-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.rooms-burn-step-qty {
+  min-width: 14px;
+  text-align: center;
+  font-size: 0.62em;
+  font-weight: 800;
+  color: var(--text-primary-active);
+}
+
+/* Marked miner tint: light red fill only, no border. */
+.rooms-list-card.burn-marked {
+  background: rgba(255, 66, 66, 0.16);
+}
+.room-miner-cell.burn-active {
+  cursor: pointer;
+}
+.room-miner-cell.burn-marked::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 66, 66, 0.28);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Points line inside the in-room tooltip */
+.room-miner-tooltip-fixed .tooltip-points {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.62em;
+  font-weight: 800;
+  color: var(--v2-accent);
+  margin-top: 1px;
+}
+.room-miner-tooltip-fixed .tooltip-points img {
+  width: 13px;
+  height: 13px;
+}
+
 /* Empty state */
 .rooms-list-empty {
   display: flex;
@@ -3581,7 +3700,9 @@
   z-index: 3;
 }
 
-.rooms-list-card.manual-selected .rooms-list-card-quantity {
+/* When selected, the check badge takes the top-right corner, so hide the whole badge row
+   (stack qty + sellable + cells) to avoid them piling up under the check. */
+.rooms-list-card.manual-selected .rooms-list-card-qty-row {
   display: none;
 }
 

@@ -175,6 +175,7 @@ import minersData from '../assets/miners.json'
 import mergesData from '../assets/merges.json'
 import timesIcon from '../assets/icons/times.svg'
 import infoIcon from '../assets/icons/info.svg'
+import { parseNumericValue as calcParseNumeric, calcularPuntos as calcBurnPoints } from '../utils/burning'
 
 export default {
   name: 'BurningEvent',
@@ -316,63 +317,11 @@ export default {
   },
   methods: {
     parseNumericValue(str) {
-      const cleanedStr = str.replace(/[^\d.,]/g, '')
-      return parseFloat(cleanedStr.replace(',', '.'))
+      return calcParseNumeric(str)
     },
 
     calcularPuntos(poder, bonus, isSellable = false) {
-      let valorPoder = this.parseNumericValue(poder)
-      let valorBonus = this.parseNumericValue(bonus)
-      let poderEnPhs = 0
-
-      if (poder.includes('Eh/s')) {
-        poderEnPhs = valorPoder * 1000
-      } else if (poder.includes('Ph/s')) {
-        poderEnPhs = valorPoder
-      } else if (poder.includes('Th/s')) {
-        poderEnPhs = valorPoder / 1000
-      }
-
-      // Updated event scoring: points now depend ONLY on power. Each pointsXPh is the previous
-      // multiplier scaled by 5/24 (same power/sellable tiers). pointsXBonus is kept at its
-      // original values but ignored in the calc — if a future event counts bonus again with the
-      // same values, just re-enable the bonus term below.
-      let pointsXPh = 1
-      let pointsXBonus = 1
-
-      if (poderEnPhs >= 10 && isSellable) {
-        pointsXPh = 3000
-        pointsXBonus = 60
-      } else if (poderEnPhs >= 10) {
-        pointsXPh = 2000
-        pointsXBonus = 40
-      } else if (poderEnPhs >= 5 && isSellable) {
-        pointsXPh = 3750
-        pointsXBonus = 75
-      } else if (poderEnPhs >= 5) {
-        pointsXPh = 2500
-        pointsXBonus = 50
-      } else if (poderEnPhs >= 1 && isSellable) {
-        pointsXPh = 4687.5
-        pointsXBonus = 93.75
-      } else if (poderEnPhs >= 1) {
-        pointsXPh = 3125
-        pointsXBonus = 62.5
-      } else if (poderEnPhs > 0.75 && isSellable) {
-        pointsXPh = 9687.5
-        pointsXBonus = 193.75
-      } else if (isSellable) {
-        pointsXPh = 5812.5
-        pointsXBonus = 116.25
-      } else {
-        pointsXPh = 3875
-        pointsXBonus = 77.5
-      }
-
-      // Bonus term ignored this event; re-add `+ (pointsXBonus * valorBonus)` if it counts again.
-      void pointsXBonus; void valorBonus
-      let puntos = poderEnPhs * pointsXPh
-      return Math.ceil(puntos)
+      return calcBurnPoints(poder, bonus, isSellable)
     },
 
     parseInput(text) {

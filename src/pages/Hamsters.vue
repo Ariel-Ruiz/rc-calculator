@@ -113,7 +113,7 @@ import '../styles/hamsters.css'
 import hamstersData from '../assets/hamsters.json'
 import expeditionsData from '../assets/expeditions.json'
 
-const hamsterImages = import.meta.glob('../assets/hamsters/*.gif', { eager: true })
+const hamsterImages = import.meta.glob('../assets/hamsters/*.{gif,png}', { eager: true })
 const expImages = import.meta.glob('../assets/expeditions/*.png', { eager: true })
 
 export default {
@@ -151,7 +151,7 @@ export default {
       return expImages[key]?.default || ''
     },
     hasMaxStats(h) {
-      return h.name === 'Kitsumi' || h.name === 'Anomaly' || h.name === 'Hammy Hooks'
+      return h.name === 'Kitsumi' || h.name === 'Anomaly' || h.name === 'Hammy Hooks' || h.name === 'Captain Jack Pot'
     },
     getBaseStatsSum(h) {
       return h.baseStats.hp + h.baseStats.str + h.baseStats.luck

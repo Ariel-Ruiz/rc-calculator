@@ -180,6 +180,8 @@
     "manual_on_label": "MODO MANUAL ACTIVADO",
     "burning_off_label": "ACTIVAR MODO QUEMA",
     "burning_on_label": "MODO QUEMA ACTIVADO",
+    "burning_miners": "mineros",
+    "burning_hint": "CLICA MINEROS EN LA LISTA O EN LAS SALAS PARA SELECCIONARLOS Y VER SUS PUNTOS DE QUEMA",
     "miners": "MINEROS",
     "racks": "RACKS",
     "order_by": "ORDENAR POR",

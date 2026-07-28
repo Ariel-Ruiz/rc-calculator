@@ -120,6 +120,15 @@
     ]
   },
   {
+    "name": "Beach Set",
+    "miners": ["Mine-a Colada", "Tai One On", "Bartender", "Salt & Vault"],
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 50 },
+      { "level": 2, "required": 3, "bonus_type": "bonus", "bonus_value": 100 },
+      { "level": 3, "required": 4, "bonus_type": "bonus", "bonus_value": 250 }
+    ]
+  },
+  {
     "name": "The Lost Treasure Set",
     "miners": [
       { "name": "Manners & Mayhem", "rarity": "Epic" },

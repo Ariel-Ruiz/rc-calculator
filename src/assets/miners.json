@@ -19382,5 +19382,113 @@
     "can_be_merged": true,
     "cells": 1,
     "filename": "lost_treasure.gif"
+  },
+  {
+    "id": "6a632d38e95dfedc67ca4f69",
+    "name": "Void Tentacles",
+    "bonus": 3,
+    "power": "40.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "void_tentacles.gif"
+  },
+  {
+    "id": "6a6332cae95dfedc67ca7e60",
+    "name": "Pirate Secrets",
+    "bonus": 7,
+    "power": "25.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "pirate_secrets.gif"
+  },
+  {
+    "id": "6a633ef8e95dfedc67ca95b8",
+    "name": "False Horizon",
+    "bonus": 8,
+    "power": "450.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 1,
+    "filename": "false_horizon.gif"
+  },
+  {
+    "id": "6a633f97e95dfedc67ca97ad",
+    "name": "Dead Reckoning",
+    "bonus": 10,
+    "power": "550.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 1,
+    "filename": "dead_reckoning.gif"
+  },
+  {
+    "id": "6a635767e95dfedc67cabd1d",
+    "name": "Loot Navigator",
+    "bonus": 1.5,
+    "power": "75.000 Ph/s",
+    "is_set": false,
+    "set": null,
+    "can_be_sold": false,
+    "can_be_merged": true,
+    "cells": 2,
+    "filename": "loot_navigator.gif"
+  },
+  {
+    "id": "6a67228ae95dfedc67ce47e4",
+    "name": "Mine-a Colada",
+    "bonus": 70,
+    "power": "4.000 Eh/s",
+    "is_set": true,
+    "set": "Beach Set",
+    "can_be_sold": true,
+    "can_be_merged": false,
+    "cells": 2,
+    "filename": "mine-a_colada.gif"
+  },
+  {
+    "id": "6a6722abe95dfedc67ce4882",
+    "name": "Tai One On",
+    "bonus": 60,
+    "power": "3.500 Eh/s",
+    "is_set": true,
+    "set": "Beach Set",
+    "can_be_sold": false,
+    "can_be_merged": false,
+    "cells": 2,
+    "filename": "tai_one_on.gif"
+  },
+  {
+    "id": "6a6722e0e95dfedc67ce4965",
+    "name": "Bartender",
+    "bonus": 40,
+    "power": "1.500 Eh/s",
+    "is_set": true,
+    "set": "Beach Set",
+    "can_be_sold": false,
+    "can_be_merged": false,
+    "cells": 2,
+    "filename": "bartender.gif"
+  },
+  {
+    "id": "6a67233ee95dfedc67ce4d20",
+    "name": "Salt & Vault",
+    "bonus": 30,
+    "power": "1.000 Eh/s",
+    "is_set": true,
+    "set": "Beach Set",
+    "can_be_sold": false,
+    "can_be_merged": false,
+    "cells": 2,
+    "filename": "salt_vault.gif"
   }
 ]

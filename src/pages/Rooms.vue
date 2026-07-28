@@ -232,10 +232,10 @@
                             <template v-for="(minerSlot, mIdx) in getRackMiners(currentRoom, rowIdx, cell.colIdx)">
                               <div
                                 :key="mIdx"
-                                :class="['room-miner-cell', { 'span-2': minerSlot.span === 2, 'has-miner': !!minerSlot.miner, 'manual-miner': manualMode && minerSlot.miner, 'auto-added': minerSlot.miner && autoAddedUids.has(minerSlot.miner.uid) }]"
+                                :class="['room-miner-cell', { 'span-2': minerSlot.span === 2, 'has-miner': !!minerSlot.miner, 'manual-miner': manualMode && minerSlot.miner, 'auto-added': minerSlot.miner && autoAddedUids.has(minerSlot.miner.uid), 'burn-active': burningMode && !!minerSlot.miner, 'burn-marked': burningMode && minerSlot.miner && isBurnMarked(minerSlot.miner, 'R') }]"
                                 @mouseenter="minerSlot.miner && showMinerTooltip(minerSlot.miner, $event)"
                                 @mouseleave="hideMinerTooltip"
-                                @click.stop="manualMode && minerSlot.miner && removeMinerFromRoom(currentRoom, rowIdx, cell.colIdx, minerSlot.miner)"
+                                @click.stop="burningMode ? (minerSlot.miner && toggleBurnMark(minerSlot.miner, 'R')) : (manualMode && minerSlot.miner && removeMinerFromRoom(currentRoom, rowIdx, cell.colIdx, minerSlot.miner))"
                               >
                                 <template v-if="minerSlot.miner">
                                   <img
@@ -329,14 +329,22 @@
         {{ manualMode ? t.rooms?.manual_on_label : t.rooms?.manual_off_label }}
       </button>
 
-      <!-- Burning mode toggle (hidden for now) -->
+      <!-- Burning mode toggle -->
       <button
-        v-if="false"
         :class="['rooms-burning-btn', { active: burningMode }]"
-        @click="burningMode = !burningMode"
+        @click="toggleBurningMode"
       >
         {{ burningMode ? (t.rooms?.burning_on_label || 'BURNING MODE ON') : (t.rooms?.burning_off_label || 'ACTIVATE BURNING MODE') }}
       </button>
+
+      <!-- Burning total points counter (only in burning mode) -->
+      <div v-if="burningMode" class="rooms-burn-total">
+        <div class="rooms-burn-total-points">
+          <img :src="ecoinIconUrl" alt="pts" class="rooms-burn-total-icon" />
+          <span>{{ formatNumber(burningTotalPoints) }}</span>
+        </div>
+        <div class="rooms-burn-total-count">{{ burningMarkedCount }} {{ t.rooms?.burning_miners || 'miners' }}</div>
+      </div>
 
       <!-- Tab buttons -->
       <div class="rooms-right-buttons">
@@ -422,9 +430,10 @@
         <!-- ===== MINERS ===== -->
         <template v-else-if="mode === 'miners'">
           <!-- SELECT step -->
-          <div v-if="manualAddStep === 'select' || manualMode" class="rooms-list-panel">
+          <div v-if="manualAddStep === 'select' || manualMode || burningMode" class="rooms-list-panel">
             <div class="rooms-list-header">
-              <template v-if="manualMode">{{ t.rooms?.click_or_drag_miners || 'CLICK OR DRAG MINERS TO ADD TO THE ROOM' }}</template>
+              <template v-if="burningMode">{{ t.rooms?.burning_hint || 'CLICK MINERS IN THE LIST OR ROOMS TO SEE THEIR BURN POINTS' }}</template>
+              <template v-else-if="manualMode">{{ t.rooms?.click_or_drag_miners || 'CLICK OR DRAG MINERS TO ADD TO THE ROOM' }}</template>
               <template v-else>
                 {{ t.rooms?.select_miners }}
                 <div class="rooms-list-header-note">{{ t.rooms?.select_miners_note }}</div>
@@ -446,6 +455,8 @@
                   <div :class="['rooms-sort-option', { active: minerSortBy === 'bonus-asc' }]" @click="minerSortBy = 'bonus-asc'; showMinerSort = false">Bonus &#9650;</div>
                   <div :class="['rooms-sort-option', { active: minerSortBy === 'ratio-asc' }]" @click="minerSortBy = 'ratio-asc'; showMinerSort = false">Ratio &#9650;</div>
                   <div :class="['rooms-sort-option', { active: minerSortBy === 'ratio-desc' }]" @click="minerSortBy = 'ratio-desc'; showMinerSort = false">Ratio &#9660;</div>
+                  <div v-if="burningMode" :class="['rooms-sort-option', { active: minerSortBy === 'points-asc' }]" @click="minerSortBy = 'points-asc'; showMinerSort = false">Points &#9650;</div>
+                  <div v-if="burningMode" :class="['rooms-sort-option', { active: minerSortBy === 'points-desc' }]" @click="minerSortBy = 'points-desc'; showMinerSort = false">Points &#9660;</div>
                 </div>
               </div>
               <div class="rooms-filter-wrapper">
@@ -500,15 +511,15 @@
               </div>
               <button :class="['rooms-list-btn', { active: editMode }]" @click="editMode = !editMode">{{ t.rooms?.edit || 'Edit' }}</button>
             </div>
-            <div v-if="filteredAvailableMiners.length > 0" class="rooms-list-grid">
+            <div v-if="filteredAvailableMiners.length > 0" :class="['rooms-list-grid', { burning: burningMode }]">
               <div
                 v-for="miner in stackedAvailableMiners"
                 :key="miner.name + '|' + miner.power + '|' + miner.bonus"
-                :class="['rooms-list-card', { 'added-manually': miner.addedManually, 'manual-selected': !manualMode && miner._instances.some(inst => manualSelectedMiners[inst.uid]), 'removing': minerRemovalKey === (miner.name + '|' + miner.power + '|' + miner.bonus), 'adding': minerAddKey === (miner.name + '|' + miner.power + '|' + miner.bonus) }]"
-                @click="editMode ? openEditMiner(miner) : (!manualMode && selectStackedMiner(miner))"
-                @mousedown="!editMode && manualMode && onManualMouseDown('miner', miner._instances[0], $event)"
+                :class="['rooms-list-card', { 'added-manually': miner.addedManually, 'manual-selected': !manualMode && miner._instances.some(inst => manualSelectedMiners[inst.uid]), 'removing': minerRemovalKey === (miner.name + '|' + miner.power + '|' + miner.bonus), 'adding': minerAddKey === (miner.name + '|' + miner.power + '|' + miner.bonus), 'burn-marked': burningMode && isBurnMarked(miner, 'L') }]"
+                @click="burningMode ? toggleBurnMark(miner, 'L') : (editMode ? openEditMiner(miner) : (!manualMode && selectStackedMiner(miner)))"
+                @mousedown="!editMode && !burningMode && manualMode && onManualMouseDown('miner', miner._instances[0], $event)"
               >
-                <div class="rooms-list-card-actions" @click.stop @mousedown.stop>
+                <div v-if="!burningMode" class="rooms-list-card-actions" @click.stop @mousedown.stop>
                   <button class="rooms-list-card-delete" @click="startMinerRemoval(miner)">&times;</button>
                   <button class="rooms-list-card-add-btn" @click="startMinerAddDuplicate(miner)">+</button>
                 </div>
@@ -577,12 +588,23 @@
                   </template>
                   <template v-else>
                     <div class="rooms-list-card-name" :title="getCleanName(miner.name)">{{ getCleanName(miner.name) }}</div>
-                    <div class="rooms-list-card-stats">
-                      <span class="rooms-list-card-power">{{ miner.power }}</span>
-                      <span class="rooms-list-card-sep">|</span>
-                      <span class="rooms-list-card-bonus">{{ miner.bonus }}%</span>
+                    <!-- Marked in burn mode: the +/- stepper takes the power|bonus + ratio slot -->
+                    <div v-if="burningMode && isBurnMarked(miner, 'L')" class="rooms-burn-stepper" @click.stop @mousedown.stop>
+                      <button class="rooms-burn-step-btn" @click="changeBurnQty(miner, 'L', -1, $event)">-</button>
+                      <span class="rooms-burn-step-qty">{{ burnMarkQty(miner, 'L') }}</span>
+                      <button class="rooms-burn-step-btn" :disabled="burnMarkQty(miner, 'L') >= (miner._stackQty || 1)" @click="changeBurnQty(miner, 'L', 1, $event)">+</button>
                     </div>
-                    <div class="rooms-list-card-ratio">ratio {{ minerRatioLabel(miner) }}</div>
+                    <template v-else>
+                      <div class="rooms-list-card-stats">
+                        <span class="rooms-list-card-power">{{ miner.power }}</span>
+                        <span class="rooms-list-card-sep">|</span>
+                        <span class="rooms-list-card-bonus">{{ miner.bonus }}%</span>
+                      </div>
+                      <div class="rooms-list-card-ratio">ratio {{ minerRatioLabel(miner) }}</div>
+                    </template>
+                    <div v-if="burningMode" class="rooms-list-card-points">
+                      <img :src="ecoinIconUrl" alt="pts" class="rooms-list-card-points-icon" />{{ formatNumber(minerBurnPoints(miner)) }}
+                    </div>
                   </template>
                 </div>
                 <div v-if="minerRemovalKey === (miner.name + '|' + miner.power + '|' + miner.bonus)" class="rooms-rack-remove-overlay" @click.stop @mousedown.stop>
@@ -1177,6 +1199,8 @@ import infoIconUrl from '../assets/icons/info.svg'
 import arrowIconUrl from '../assets/icons/arrow.svg'
 import sellableIconUrl from '../assets/icons/sellable.svg'
 import noSellableIconUrl from '../assets/icons/no-sellable.svg'
+import ecoinIconUrl from '../assets/symbols/ecoin.svg'
+import { calcularPuntos as calcBurnPoints } from '../utils/burning'
 let networkExampleImg = null
 try { networkExampleImg = new URL('../assets/example_network_import.png', import.meta.url).href } catch (e) {}
 const autoImportHelpImages = import.meta.glob('../assets/rooms/autoimport/*.png', { eager: true })
@@ -1260,6 +1284,7 @@ export default {
       arrowIconUrl,
       sellableIconUrl,
       noSellableIconUrl,
+      ecoinIconUrl,
       exampleImages: { collection: exampleCollection, inventory: exampleInventory, sell: exampleSell },
       roomSkins: roomSkinsData,
       selectedSkin: roomSkinsData[0]?.id || 'room_background',
@@ -1309,6 +1334,7 @@ export default {
       showMinerSort: false,
       showRackSort: false,
       burningMode: false,
+      burningMarked: {}, // burn-mode selection: key -> { qty, unitPoints, max }
       showMinerFilter: false,
       minerFilterSellable: 'all',
       minerFilterPowerMin: null,
@@ -1519,8 +1545,16 @@ export default {
         case 'bonus-asc': return list.sort((a, b) => (parseFloat(a.bonus) || 0) - (parseFloat(b.bonus) || 0))
         case 'ratio-asc': return list.sort((a, b) => this.minerRatioValue(a) - this.minerRatioValue(b))
         case 'ratio-desc': return list.sort((a, b) => this.minerRatioValue(b) - this.minerRatioValue(a))
+        case 'points-asc': return list.sort((a, b) => this.minerBurnPoints(a) - this.minerBurnPoints(b))
+        case 'points-desc': return list.sort((a, b) => this.minerBurnPoints(b) - this.minerBurnPoints(a))
         default: return list
       }
+    },
+    burningTotalPoints() {
+      return Object.values(this.burningMarked).reduce((s, m) => s + (m.unitPoints * m.qty), 0)
+    },
+    burningMarkedCount() {
+      return Object.values(this.burningMarked).reduce((s, m) => s + m.qty, 0)
     },
     stackedAvailableMiners() {
       const groups = {}
@@ -2828,6 +2862,63 @@ export default {
       const r = this.minerRatioValue(miner)
       if (!isFinite(r)) return '—'
       return r < 10 ? r.toFixed(3) : r.toFixed(1)
+    },
+
+    // ========== BURNING MODE ==========
+    formatNumber(num) {
+      return (num || 0).toLocaleString()
+    },
+    // Burning-event points for one unit of this miner (shared formula with the Burning page).
+    // Cached by name|power|bonus|minerId so sorting/rendering doesn't re-run findMiner per call.
+    minerBurnPoints(miner) {
+      const key = miner.name + '|' + miner.power + '|' + miner.bonus + '|' + (miner.minerId || '')
+      if (!this._burnPtsCache) this._burnPtsCache = {}
+      if (this._burnPtsCache[key] !== undefined) return this._burnPtsCache[key]
+      const pts = calcBurnPoints(miner.power, miner.bonus, this.isMinerSellable(miner))
+      this._burnPtsCache[key] = pts
+      return pts
+    },
+    // Unique mark key: list cards mark the whole stack (name|power|bonus), in-room miners mark
+    // the single placed instance (uid).
+    _burnKey(miner, source) {
+      return source === 'L'
+        ? 'L|' + miner.name + '|' + miner.power + '|' + miner.bonus
+        : 'R|' + miner.uid
+    },
+    isBurnMarked(miner, source) {
+      return !!this.burningMarked[this._burnKey(miner, source)]
+    },
+    burnMarkQty(miner, source) {
+      const e = this.burningMarked[this._burnKey(miner, source)]
+      return e ? e.qty : 0
+    },
+    toggleBurningMode() {
+      this.burningMode = !this.burningMode
+      if (!this.burningMode) {
+        this.burningMarked = {}
+        if (this.minerSortBy === 'points-asc' || this.minerSortBy === 'points-desc') this.minerSortBy = 'power-desc'
+      }
+    },
+    // Click a miner in burn mode: mark it (qty 1) or unmark it. No add/remove happens.
+    toggleBurnMark(miner, source) {
+      const key = this._burnKey(miner, source)
+      if (this.burningMarked[key]) {
+        this.$delete(this.burningMarked, key)
+      } else {
+        const max = source === 'L' ? (miner._stackQty || 1) : 1
+        this.$set(this.burningMarked, key, { qty: 1, unitPoints: this.minerBurnPoints(miner), max })
+      }
+    },
+    // +/- stepper on a marked stack; dropping below 1 unmarks it.
+    changeBurnQty(miner, source, delta, ev) {
+      if (ev) ev.stopPropagation()
+      const key = this._burnKey(miner, source)
+      const e = this.burningMarked[key]
+      if (!e) return
+      const next = e.qty + delta
+      if (next < 1) { this.$delete(this.burningMarked, key); return }
+      if (next > e.max) return
+      this.$set(this.burningMarked, key, { ...e, qty: next })
     },
 
     // ========== SELLABLE / FILTER ==========
@@ -4609,7 +4700,10 @@ export default {
       const rect = el.getBoundingClientRect()
       const tip = document.createElement('div')
       tip.className = 'room-miner-tooltip-fixed'
-      tip.innerHTML = `<span class="tooltip-name">${this.getCleanName(miner.name)}</span><span class="tooltip-stats">${miner.power} | ${miner.bonus}%</span>`
+      const burnLine = this.burningMode
+        ? `<span class="tooltip-points"><img src="${this.ecoinIconUrl}" alt="pts" />${this.formatNumber(this.minerBurnPoints(miner))}</span>`
+        : ''
+      tip.innerHTML = `<span class="tooltip-name">${this.getCleanName(miner.name)}</span><span class="tooltip-stats">${miner.power} | ${miner.bonus}%</span>${burnLine}`
       tip.style.left = (rect.left + rect.width / 2) + 'px'
       tip.style.top = '-9999px'
       document.body.appendChild(tip)

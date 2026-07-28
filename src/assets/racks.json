@@ -619,5 +619,14 @@
     "is_set": false,
     "set": null,
     "can_be_sold": true
+  },
+  {
+    "id": "6a675eaa00b27e15643511be",
+    "name": "Beach Rack 8",
+    "size": 8,
+    "bonus": 20,
+    "is_set": true,
+    "set": "Beach Set",
+    "can_be_sold": false
   }
 ]

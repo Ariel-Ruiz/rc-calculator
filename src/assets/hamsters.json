@@ -246,5 +246,14 @@
       { "type": "influencer", "value": 150, "value2": 20 }
     ],
     "ultimate": "High Risk High Reward: 2x rewards, 1.5x duration, skip rest. 24 Points"
+  },
+  {
+    "name": "Captain Jack Pot",
+    "img": "hamsters/captain-jack-pot.png",
+    "baseStats": { "hp": 65, "str": 60, "luck": 95 },
+    "abilities": [
+      { "type": "survive", "value": 10 }
+    ],
+    "ultimate": "Smart Study: no cooldown, +1 skill point on success. Abilities Builder: choose 3 passive abilities. 24 Points"
   }
 ]

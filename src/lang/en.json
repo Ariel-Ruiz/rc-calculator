@@ -180,6 +180,8 @@
     "manual_on_label": "MANUAL MODE ACTIVE",
     "burning_off_label": "ACTIVATE BURNING MODE",
     "burning_on_label": "BURNING MODE ACTIVE",
+    "burning_miners": "miners",
+    "burning_hint": "CLICK MINERS IN THE LIST OR ROOMS TO SELECT THEM AND SEE THEIR BURN POINTS",
     "miners": "MINERS",
     "racks": "RACKS",
     "order_by": "ORDER BY",

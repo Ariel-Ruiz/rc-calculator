@@ -135,7 +135,7 @@ import '../styles/pe.css'
 import moment from 'moment-timezone'
 import PeData from '../assets/progression.json'
 // Banner mode: 'banner' | 'bg' | '' (none)
-const BANNER_MODE = 'banner'
+const BANNER_MODE = 'bg'
 
 export default {
   name: 'PE',
@@ -195,7 +195,7 @@ export default {
       return 'v2-c-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.04, rewardsXRLT = 0
+      let phXRLT = 0.12, rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
         switch (reward.type) {
           case 'money':
@@ -204,7 +204,7 @@ export default {
           case 'miner': if (reward.item.power >= 1e6) rewardsXRLT += (reward.item.power / 1e6) * phXRLT; continue
         }
       }
-      let rltToBuy = rewardsXRLT * 0.37
+      let rltToBuy = rewardsXRLT * 0.3
       let rawMultiplier = (rltToBuy * PeData.multiplier) + 1
       let closest = this.multipliers.reduce((p, c) => Math.abs(c - rawMultiplier) < Math.abs(p - rawMultiplier) ? c : p)
       this.recomendedMultiplier = [closest]
