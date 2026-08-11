@@ -1,10 +1,10 @@
 {
-  "multiplier": 1,
+  "multiplier": 2,
   "tasks": [
     {
-      "id": "6a68af94b94e4ce33de86c61",
+      "id": "6a7b1515b94e4ce33de86ef9",
       "xp_type": "number",
-      "xp_reward": 300,
+      "xp_reward": 500,
       "amount": 0,
       "tag": {
         "color": "",
@@ -23,7 +23,7 @@
       "sort": 0
     },
     {
-      "id": "6a68af94b94e4ce33de86c62",
+      "id": "6a7b1515b94e4ce33de86efa",
       "xp_type": "number",
       "xp_reward": 1000,
       "amount": 1000,
@@ -44,7 +44,7 @@
       "sort": 2
     },
     {
-      "id": "6a68af94b94e4ce33de86c63",
+      "id": "6a7b1515b94e4ce33de86efb",
       "xp_type": "number",
       "xp_reward": 100,
       "amount": 10000,
@@ -67,52 +67,82 @@
   ],
   "event": {
     "event": {
-      "_id": "6a68af93e95dfedc67d8bffd",
-      "max_xp": 179867500,
+      "_id": "6a7b1514487b96b2ef8a39fd",
+      "max_xp": 411996500,
       "max_multiplier": 100000,
-      "max_level": 35,
+      "max_level": 50,
       "tag": {
-        "text": "",
-        "color": "",
-        "text_color": ""
+        "text": "50"
       },
       "progression_event_type": "default",
-      "end_date": "2026-07-31T15:00:00.000Z",
-      "last_updated": 1785245588052,
+      "end_date": "2026-08-14T15:00:00.000Z",
+      "last_updated": 1786451221699,
       "description": {
-        "en": "[28–31] Sand Job",
-        "cn": "[28–31] Sand Job"
+        "en": "Team Of Fortune",
+        "cn": "Team Of Fortune"
       },
       "title": {
-        "en": "Sand Job",
-        "cn": "Sand Job"
+        "en": "Team Of Fortune",
+        "cn": "Team Of Fortune"
       }
     },
     "rewards": [
       {
-        "id": "6a68af94b94e4ce33de86c65",
-        "item_id": null,
-        "amount": 10000000,
+        "id": "6a7b1515b94e4ce33de86efd",
+        "item_id": "68b6daa0f58321ae064c1bae",
+        "amount": 1,
         "currency": "",
-        "ttl_time": 1209600000,
+        "ttl_time": 0,
         "required_level": 1,
-        "type": "power",
+        "type": "miner",
         "title": {
-          "en": "Power",
-          "cn": "Power"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Power Reward Description",
-          "cn": "Power Reward Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
+        },
+        "item": {
+          "_id": "68b6daa0f58321ae064c1bae",
+          "power": 120000,
+          "width": 2,
+          "name": {
+            "en": "ClayRig",
+            "cn": "ClayRig",
+            "es": "ClayRig",
+            "pt": "ClayRig"
+          },
+          "description": {
+            "en": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "cn": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "es": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run.",
+            "pt": "A basic mining rig that adds steady hash power to your farm. Plug it in and let it run."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "clayrig",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 50,
+          "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c67",
-        "item_id": "63e140e4547cfab9a21d7d2b",
+        "id": "6a7b1515b94e4ce33de86eff",
+        "item_id": "645a47a0eccd3c43207474cd",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -132,70 +162,42 @@
         },
         "item": {
           "name": {
-            "en": "Jet-Black Rack 6",
-            "cn": "Jet-Black Rack 6"
+            "en": "Fury Rack 6",
+            "cn": "Fury Rack 6"
           },
           "description": {
-            "en": "Jet-Black Rack is created for true connoisseurs of stylish furniture. Place your miners here and enjoy the result!",
-            "cn": "Jet-Black Rack is created for true connoisseurs of stylish furniture. Place your miners here and enjoy the result!"
+            "en": "The Fury Rack 6 is a sleek and stylish addition to any mining setup, with its six glowing slots and fiery finish. With a bonus power of 4%, this rack provides a boost to your miners' productivity, and its impressive appearance is sure to turn heads!",
+            "cn": "The Fury Rack 6 is a sleek and stylish addition to any mining setup, with its six glowing slots and fiery finish. With a bonus power of 4%, this rack provides a boost to your miners' productivity, and its impressive appearance is sure to turn heads!"
           },
-          "_id": "63e140e4547cfab9a21d7d2b",
+          "_id": "645a47a0eccd3c43207474cd",
           "capacity": 6,
           "is_can_be_sold_on_mp": true,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c69",
-        "item_id": "631f7a698238ed283a23468b",
-        "amount": 1,
+        "id": "6a7b1515b94e4ce33de86f01",
+        "item_id": null,
+        "amount": 25000000,
         "currency": "",
-        "ttl_time": 0,
+        "ttl_time": 604800000,
         "required_level": 3,
-        "type": "miner",
+        "type": "power",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Power",
+          "cn": "Power"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Power Reward Description",
+          "cn": "Power Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
-        },
-        "item": {
-          "_id": "631f7a698238ed283a23468b",
-          "power": 1175895,
-          "width": 2,
-          "name": {
-            "en": "Sandy's Castle",
-            "cn": "Sandy's Castle"
-          },
-          "description": {
-            "en": "No sea wave can destroy this castle! Place it in your mining room and feel the true summer vibes all year long! Beach Party Series Miner.",
-            "cn": "No sea wave can destroy this castle! Place it in your mining room and feel the true summer vibes all year long! Beach Party Series Miner."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "sandys_castle",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 58,
-          "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c6b",
+        "id": "6a7b1515b94e4ce33de86f03",
         "item_id": null,
         "amount": 80000000,
         "currency": "RST",
@@ -216,8 +218,8 @@
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c6d",
-        "item_id": "631f7a698238ed283a23468b",
+        "id": "6a7b1516b94e4ce33de86f05",
+        "item_id": "66f1bf52e0dd3530daa2e483",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -236,37 +238,41 @@
           "max": 0
         },
         "item": {
-          "_id": "631f7a698238ed283a23468b",
-          "power": 1175895,
+          "_id": "66f1bf52e0dd3530daa2e483",
+          "power": 600000,
           "width": 2,
           "name": {
-            "en": "Sandy's Castle",
-            "cn": "Sandy's Castle"
+            "en": "Retro Raygun",
+            "cn": "Retro Raygun",
+            "es": "Retro Raygun",
+            "pt": "Retro Raygun"
           },
           "description": {
-            "en": "No sea wave can destroy this castle! Place it in your mining room and feel the true summer vibes all year long! Beach Party Series Miner.",
-            "cn": "No sea wave can destroy this castle! Place it in your mining room and feel the true summer vibes all year long! Beach Party Series Miner."
+            "en": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "cn": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "es": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "pt": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 3,
-          "type": "merge",
-          "filename": "sandys_castle",
+          "level": 0,
+          "type": "basic",
+          "filename": "retro_raygun",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 58,
+          "bonus": 50,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c6f",
-        "item_id": "6661dceadddadd0605eedd34",
+        "id": "6a7b1516b94e4ce33de86f07",
+        "item_id": "69d918d4135acbe76ae10e85",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -285,20 +291,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd34",
-          "power": 1200000,
+          "_id": "69d918d4135acbe76ae10e85",
+          "power": 1500000,
           "width": 2,
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "Hamsters Team",
+            "cn": "Hamsters Team",
+            "es": "Hamsters Team",
+            "pt": "Hamsters Team"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
+            "en": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "cn": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "es": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "pt": "A friendly crew working side by side, reminding you that every bit of progress is a team effort."
           },
           "created_by_title": {
             "link": "",
@@ -306,20 +312,20 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "beachside_billionaire",
+          "filename": "hamsters_team",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 350,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 150,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c71",
-        "item_id": "6661dceadddadd0605eedd34",
+        "id": "6a7b1516b94e4ce33de86f09",
+        "item_id": "69d918d4135acbe76ae10e85",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -338,20 +344,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd34",
-          "power": 1200000,
+          "_id": "69d918d4135acbe76ae10e85",
+          "power": 1500000,
           "width": 2,
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "Hamsters Team",
+            "cn": "Hamsters Team",
+            "es": "Hamsters Team",
+            "pt": "Hamsters Team"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
+            "en": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "cn": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "es": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "pt": "A friendly crew working side by side, reminding you that every bit of progress is a team effort."
           },
           "created_by_title": {
             "link": "",
@@ -359,20 +365,20 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "beachside_billionaire",
+          "filename": "hamsters_team",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 350,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 150,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c73",
-        "item_id": "631f7a6a8238ed283a234698",
+        "id": "6a7b1516b94e4ce33de86f0b",
+        "item_id": "69d918d4135acbe76ae10e89",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -391,49 +397,52 @@
           "max": 0
         },
         "item": {
-          "_id": "631f7a6a8238ed283a234698",
-          "power": 3086790,
+          "_id": "69d918d4135acbe76ae10e89",
+          "power": 4000000,
           "width": 2,
           "name": {
-            "en": "Sandy's Castle",
-            "cn": "Sandy's Castle"
+            "en": "Hamsters Team",
+            "cn": "Hamsters Team",
+            "es": "Hamsters Team",
+            "pt": "Hamsters Team"
           },
           "description": {
-            "en": "No sea wave can destroy this castle! Place it in your mining room and feel the true summer vibes all year long! Beach Party Series Miner.",
-            "cn": "No sea wave can destroy this castle! Place it in your mining room and feel the true summer vibes all year long! Beach Party Series Miner."
+            "en": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "cn": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "es": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "pt": "A friendly crew working side by side, reminding you that every bit of progress is a team effort."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 4,
+          "level": 1,
           "type": "merge",
-          "filename": "sandys_castle",
+          "filename": "hamsters_team",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 61,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 300,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c75",
+        "id": "6a7b1516b94e4ce33de86f0d",
         "item_id": null,
-        "amount": 400000,
-        "currency": "RLT",
+        "amount": 25,
+        "currency": "",
         "ttl_time": 0,
         "required_level": 9,
-        "type": "money",
+        "type": "season_pass_xp",
         "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
         },
         "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
         },
         "range_count": {
           "min": 1,
@@ -441,8 +450,8 @@
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c77",
-        "item_id": "6661dceadddadd0605eedd37",
+        "id": "6a7b1516b94e4ce33de86f0f",
+        "item_id": "66f1bf52e0dd3530daa2e486",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -461,20 +470,20 @@
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd37",
-          "power": 3150000,
+          "_id": "66f1bf52e0dd3530daa2e486",
+          "power": 1580000,
           "width": 2,
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "Retro Raygun",
+            "cn": "Retro Raygun",
+            "es": "Retro Raygun",
+            "pt": "Retro Raygun"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
+            "en": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "cn": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "es": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "pt": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past."
           },
           "created_by_title": {
             "link": "",
@@ -482,20 +491,20 @@
           },
           "level": 1,
           "type": "merge",
-          "filename": "beachside_billionaire",
+          "filename": "retro_raygun",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 450,
+          "bonus": 120,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c79",
-        "item_id": "662a2ed024d9775f45fd6e9e",
+        "id": "6a7b1516b94e4ce33de86f11",
+        "item_id": "65bba192a19c394aa309623d",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -515,75 +524,62 @@
         },
         "item": {
           "name": {
-            "en": "Rail Rack 8",
-            "cn": "Rail Rack 8"
+            "en": "Red Silk 6",
+            "cn": "Red Silk 6"
           },
           "description": {
-            "en": "The Rail Rack 8 is a robust and scalable mining rack designed to accommodate up to 8 high-performance mining units. This rack is engineered for stability and optimal airflow, ensuring that even under heavy load, the units maintain their cool. Its sleek, rail-inspired design allows for easy access and simple scalability, making it a favorite among those looking to expand their mining operations efficiently.",
-            "cn": "The Rail Rack 8 is a robust and scalable mining rack designed to accommodate up to 8 high-performance mining units. This rack is engineered for stability and optimal airflow, ensuring that even under heavy load, the units maintain their cool. Its sleek, rail-inspired design allows for easy access and simple scalability, making it a favorite among those looking to expand their mining operations efficiently."
+            "en": "Looks smaller, but how about the bonus %? Use it wisely, and your wallet will grow bigger!",
+            "cn": "Looks smaller, but how about the bonus %? Use it wisely, and your wallet will grow bigger!"
           },
-          "_id": "662a2ed024d9775f45fd6e9e",
-          "capacity": 8,
+          "_id": "65bba192a19c394aa309623d",
+          "capacity": 6,
           "is_can_be_sold_on_mp": true,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c7b",
-        "item_id": "6661dceadddadd0605eedd3d",
+        "id": "6a7b1516b94e4ce33de86f13",
+        "item_id": "683427626b8c472444c3725b",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 12,
-        "type": "miner",
+        "type": "utility_item",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Utility Item",
+          "cn": "Utility Item"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd3d",
-          "power": 8268750,
-          "width": 2,
+          "media": {
+            "preview_url": "static/img/market/utility_items/683427626b8c472444c3725b.gif?v=1748874570577"
+          },
+          "_id": "683427626b8c472444c3725b",
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "24h Booster",
+            "cn": "24h Booster",
+            "es": "24h Booster",
+            "pt": "24h Booster"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
+            "en": "Booster will increase your basic power from minigames for 24 hours.",
+            "cn": "Booster will increase your basic power from minigames for 24 hours.",
+            "es": "Booster will increase your basic power from minigames for 24 hours.",
+            "pt": "Booster will increase your basic power from minigames for 24 hours."
           },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 2,
-          "type": "merge",
-          "filename": "beachside_billionaire",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 744,
-          "is_in_set": false
+          "type": "game_booster"
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c7d",
-        "item_id": "68b03b11327772e3719680ac",
+        "id": "6a7b1516b94e4ce33de86f15",
+        "item_id": "66f1bf52e0dd3530daa2e48c",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -602,20 +598,253 @@
           "max": 0
         },
         "item": {
-          "_id": "68b03b11327772e3719680ac",
-          "power": 11000000,
+          "_id": "66f1bf52e0dd3530daa2e48c",
+          "power": 4150000,
           "width": 2,
           "name": {
-            "en": "SunChill Console",
-            "cn": "SunChill Console",
-            "es": "SunChill Console",
-            "pt": "SunChill Console"
+            "en": "Retro Raygun",
+            "cn": "Retro Raygun",
+            "es": "Retro Raygun",
+            "pt": "Retro Raygun"
           },
           "description": {
-            "en": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "cn": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "es": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "pt": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in."
+            "en": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "cn": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "es": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "pt": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "retro_raygun",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 220,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f17",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 5,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 14,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "media": {
+            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
+          },
+          "_id": "67d1c54536daea2ef871b292",
+          "name": {
+            "en": "Speed Up Item",
+            "cn": "Speed Up Item",
+            "es": "Speed Up Item",
+            "pt": "Speed Up Item"
+          },
+          "description": {
+            "en": "Ticket for speed up expedition",
+            "cn": "Ticket for speed up expedition",
+            "es": "Ticket for speed up expedition",
+            "pt": "Ticket for speed up expedition"
+          },
+          "type": "expedition_speed_up"
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f19",
+        "item_id": "69d918d4135acbe76ae10e90",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 15,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69d918d4135acbe76ae10e90",
+          "power": 10500000,
+          "width": 2,
+          "name": {
+            "en": "Hamsters Team",
+            "cn": "Hamsters Team",
+            "es": "Hamsters Team",
+            "pt": "Hamsters Team"
+          },
+          "description": {
+            "en": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "cn": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "es": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "pt": "A friendly crew working side by side, reminding you that every bit of progress is a team effort."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "hamsters_team",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 700,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f1b",
+        "item_id": "645a47a0eccd3c43207474ca",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 16,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Golden Rack 6",
+            "cn": "Golden Rack 6"
+          },
+          "description": {
+            "en": "This shining rack boasts six slots for your miners, and its golden finish gives your mining operation an air of prestige. With an impressive 8% Bonus Power, your miners will work harder and earn more cryptocurrency than ever before!",
+            "cn": "This shining rack boasts six slots for your miners, and its golden finish gives your mining operation an air of prestige. With an impressive 8% Bonus Power, your miners will work harder and earn more cryptocurrency than ever before!"
+          },
+          "_id": "645a47a0eccd3c43207474ca",
+          "capacity": 6,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f1d",
+        "item_id": "66f1bf52e0dd3530daa2e492",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 17,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "66f1bf52e0dd3530daa2e492",
+          "power": 10900000,
+          "width": 2,
+          "name": {
+            "en": "Retro Raygun",
+            "cn": "Retro Raygun",
+            "es": "Retro Raygun",
+            "pt": "Retro Raygun"
+          },
+          "description": {
+            "en": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "cn": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "es": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past.",
+            "pt": "A nostalgic beauty from a future that never was, firing sleek curves and neon bursts, like something pulled from the dreams of a distant past."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "retro_raygun",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 360,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f1f",
+        "item_id": "6a7b13b7487b96b2ef8a24f9",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 18,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a7b13b7487b96b2ef8a24f9",
+          "power": 45000000,
+          "width": 2,
+          "name": {
+            "en": "Born to Mine",
+            "cn": "Born to Mine",
+            "es": "Born to Mine",
+            "pt": "Born to Mine"
+          },
+          "description": {
+            "en": "Send your commandos on legendary missions!",
+            "cn": "Send your commandos on legendary missions!",
+            "es": "Send your commandos on legendary missions!",
+            "pt": "Send your commandos on legendary missions!"
           },
           "created_by_title": {
             "link": "",
@@ -623,24 +852,212 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "sunchill_console",
+          "filename": "born_to_mine",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": false,
-          "bonus": 300,
+          "bonus": 1000,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c7f",
+        "id": "6a7b1516b94e4ce33de86f21",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 10,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 19,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "media": {
+            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
+          },
+          "_id": "67d1c54536daea2ef871b292",
+          "name": {
+            "en": "Speed Up Item",
+            "cn": "Speed Up Item",
+            "es": "Speed Up Item",
+            "pt": "Speed Up Item"
+          },
+          "description": {
+            "en": "Ticket for speed up expedition",
+            "cn": "Ticket for speed up expedition",
+            "es": "Ticket for speed up expedition",
+            "pt": "Ticket for speed up expedition"
+          },
+          "type": "expedition_speed_up"
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f23",
+        "item_id": null,
+        "amount": 50,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 20,
+        "type": "season_pass_xp",
+        "title": {
+          "en": "Season Pass XP",
+          "cn": "Season Pass XP"
+        },
+        "description": {
+          "en": "Season Pass XP Description",
+          "cn": "Season Pass XP Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f25",
+        "item_id": "6a7b13b7487b96b2ef8a24f9",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 21,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a7b13b7487b96b2ef8a24f9",
+          "power": 45000000,
+          "width": 2,
+          "name": {
+            "en": "Born to Mine",
+            "cn": "Born to Mine",
+            "es": "Born to Mine",
+            "pt": "Born to Mine"
+          },
+          "description": {
+            "en": "Send your commandos on legendary missions!",
+            "cn": "Send your commandos on legendary missions!",
+            "es": "Send your commandos on legendary missions!",
+            "pt": "Send your commandos on legendary missions!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "born_to_mine",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f27",
+        "item_id": "66e19565e0dd3530da86fe5f",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 22,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "66e19565e0dd3530da86fe5f",
+          "power": 8650000,
+          "width": 2,
+          "name": {
+            "en": "JustChill",
+            "cn": "JustChill",
+            "es": "JustChill",
+            "pt": "JustChill"
+          },
+          "description": {
+            "en": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "cn": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "es": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "pt": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "justchill",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 950,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f29",
+        "item_id": null,
+        "amount": 250000000,
+        "currency": "RST",
+        "ttl_time": 0,
+        "required_level": 23,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f2b",
         "item_id": "6a2836de728342e342ea51cf",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 14,
+        "required_level": 24,
         "type": "mystery_box",
         "title": {
           "en": "Loot Box",
@@ -909,846 +1326,8 @@
         }
       },
       {
-        "id": "6a68af94b94e4ce33de86c81",
-        "item_id": "64a80c3a3fd5253fb80fa028",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 15,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "64a80c3a3fd5253fb80fa028",
-          "power": 14922705,
-          "width": 2,
-          "name": {
-            "en": "Sun-kissed Shores",
-            "cn": "Sun-kissed Shores"
-          },
-          "description": {
-            "en": "Immerse yourself in the warm glow of the sun-kissed sands and discover hidden crypto treasures. ByAsepSyf",
-            "cn": "Immerse yourself in the warm glow of the sun-kissed sands and discover hidden crypto treasures. ByAsepSyf"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": "AsepSyf"
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "sun_kissed_shores",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 613,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a68af94b94e4ce33de86c83",
-        "item_id": "64a80c3a3fd5253fb80fa028",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 16,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "64a80c3a3fd5253fb80fa028",
-          "power": 14922705,
-          "width": 2,
-          "name": {
-            "en": "Sun-kissed Shores",
-            "cn": "Sun-kissed Shores"
-          },
-          "description": {
-            "en": "Immerse yourself in the warm glow of the sun-kissed sands and discover hidden crypto treasures. ByAsepSyf",
-            "cn": "Immerse yourself in the warm glow of the sun-kissed sands and discover hidden crypto treasures. ByAsepSyf"
-          },
-          "created_by_title": {
-            "link": "",
-            "text": "AsepSyf"
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "sun_kissed_shores",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 613,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a68af94b94e4ce33de86c85",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 15,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 17,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "media": {
-            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
-          },
-          "_id": "67d1c54536daea2ef871b292",
-          "name": {
-            "en": "Speed Up Item",
-            "cn": "Speed Up Item",
-            "es": "Speed Up Item",
-            "pt": "Speed Up Item"
-          },
-          "description": {
-            "en": "Ticket for speed up expedition",
-            "cn": "Ticket for speed up expedition",
-            "es": "Ticket for speed up expedition",
-            "pt": "Ticket for speed up expedition"
-          },
-          "type": "expedition_speed_up"
-        }
-      },
-      {
-        "id": "6a68af94b94e4ce33de86c87",
-        "item_id": "68b03b11327772e3719680ac",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 18,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68b03b11327772e3719680ac",
-          "power": 11000000,
-          "width": 2,
-          "name": {
-            "en": "SunChill Console",
-            "cn": "SunChill Console",
-            "es": "SunChill Console",
-            "pt": "SunChill Console"
-          },
-          "description": {
-            "en": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "cn": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "es": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "pt": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 0,
-          "type": "basic",
-          "filename": "sunchill_console",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 300,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a68af94b94e4ce33de86c89",
-        "item_id": "6a4bb142740408504dc98656",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 19,
-        "type": "mystery_box",
-        "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
-        },
-        "description": {
-          "en": "Mystery Box Reward Description",
-          "cn": "Mystery Box Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6a4bb142740408504dc98656",
-          "title": {
-            "en": "Bad Luck Chest",
-            "cn": "",
-            "es": "",
-            "pt": ""
-          },
-          "items": [
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "SuperStorm",
-                  "cn": "SuperStorm",
-                  "es": "SuperStorm",
-                  "pt": "SuperStorm"
-                },
-                "power": 8000000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 1,
-              "item_info": {
-                "name": {
-                  "en": "Captain Flint",
-                  "cn": "Captain Flint",
-                  "es": "Captain Flint",
-                  "pt": "Captain Flint"
-                },
-                "power": 2000000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 2,
-              "item_info": {
-                "name": {
-                  "en": "SuperStorm",
-                  "cn": "SuperStorm",
-                  "es": "SuperStorm",
-                  "pt": "SuperStorm"
-                },
-                "power": 250000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 3,
-              "item_info": {
-                "name": {
-                  "en": "Captain Flint",
-                  "cn": "Captain Flint",
-                  "es": "Captain Flint",
-                  "pt": "Captain Flint"
-                },
-                "power": 100000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "RST",
-              "amount": 3000000000,
-              "sort": 4,
-              "item_info": null,
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 5,
-              "item_info": {
-                "name": {
-                  "en": "Dark Abyss",
-                  "cn": "Dark Abyss",
-                  "es": "Dark Abyss",
-                  "pt": "Dark Abyss"
-                },
-                "power": 35000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 6,
-              "item_info": {
-                "name": {
-                  "en": "Hamquistadors",
-                  "cn": "Hamquistadors",
-                  "es": "Hamquistadors",
-                  "pt": "Hamquistadors"
-                },
-                "power": 37000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 7,
-              "item_info": {
-                "name": {
-                  "en": "Bad Luck",
-                  "cn": "Bad Luck",
-                  "es": "Bad Luck",
-                  "pt": "Bad Luck"
-                },
-                "power": 5000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 8,
-              "item_info": {
-                "name": {
-                  "en": "Deja Vu",
-                  "cn": "Deja Vu",
-                  "es": "Deja Vu",
-                  "pt": "Deja Vu"
-                },
-                "power": 15000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 9,
-              "item_info": {
-                "name": {
-                  "es": "",
-                  "pt": "",
-                  "en": "The Meme King",
-                  "cn": "The Meme King"
-                },
-                "power": 5891550
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 10,
-              "item_info": {
-                "name": {
-                  "en": "Treasure Hunter",
-                  "cn": "Treasure Hunter",
-                  "es": "Treasure Hunter",
-                  "pt": "Treasure Hunter"
-                },
-                "power": 4488015
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 11,
-              "item_info": {
-                "name": {
-                  "en": "Web4Map",
-                  "cn": "Web4Map",
-                  "es": "Web4Map",
-                  "pt": "Web4Map"
-                },
-                "power": 2999999
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 12,
-              "item_info": {
-                "name": {
-                  "es": "",
-                  "pt": "",
-                  "en": "Boneyard",
-                  "cn": "Boneyard"
-                },
-                "power": 700000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 13,
-              "item_info": {
-                "name": {
-                  "es": "",
-                  "pt": "",
-                  "en": "Lifebuoy",
-                  "cn": "Lifebuoy"
-                },
-                "power": 2713305
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 14,
-              "item_info": {
-                "name": {
-                  "en": "Bad Luck",
-                  "cn": "Bad Luck",
-                  "es": "Bad Luck",
-                  "pt": "Bad Luck"
-                },
-                "power": 1000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 15,
-              "item_info": {
-                "name": {
-                  "en": "Polar Lumina",
-                  "cn": "Polar Lumina",
-                  "es": "Polar Lumina",
-                  "pt": "Polar Lumina"
-                },
-                "power": 2500000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 16,
-              "item_info": {
-                "name": {
-                  "en": "Skullspur",
-                  "cn": "Skullspur",
-                  "es": "Skullspur",
-                  "pt": "Skullspur"
-                },
-                "power": 800000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 17,
-              "item_info": {
-                "name": {
-                  "en": "Skull Rancher",
-                  "cn": "Skull Rancher",
-                  "es": "Skull Rancher",
-                  "pt": "Skull Rancher"
-                },
-                "power": 750000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 2,
-              "sort": 18,
-              "item_info": {
-                "name": {
-                  "en": "Uncommon Hashboard",
-                  "cn": "Uncommon Hashboard"
-                }
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 2,
-              "sort": 19,
-              "item_info": {
-                "name": {
-                  "en": "Uncommon Fan",
-                  "cn": "Uncommon Fan"
-                }
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 2,
-              "sort": 20,
-              "item_info": {
-                "name": {
-                  "en": "Uncommon Wire",
-                  "cn": "Uncommon Wire"
-                }
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 21,
-              "item_info": {
-                "name": {
-                  "en": "DjBone",
-                  "cn": "DjBone",
-                  "es": "DjBone",
-                  "pt": "DjBone"
-                },
-                "power": 255000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 1,
-              "sort": 22,
-              "item_info": {
-                "name": {
-                  "en": "Uncommon Hashboard",
-                  "cn": "Uncommon Hashboard"
-                }
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 1,
-              "sort": 23,
-              "item_info": {
-                "name": {
-                  "en": "Uncommon Fan",
-                  "cn": "Uncommon Fan"
-                }
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "mutation_component",
-              "amount": 1,
-              "sort": 24,
-              "item_info": {
-                "name": {
-                  "en": "Uncommon Wire",
-                  "cn": "Uncommon Wire"
-                }
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "battery",
-              "amount": 1,
-              "sort": 25,
-              "item_info": {
-                "name": {
-                  "en": "Battery",
-                  "cn": "Battery"
-                },
-                "level": 1
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 26,
-              "item_info": {
-                "name": {
-                  "en": "RollerArc S1",
-                  "cn": "RollerArc S1",
-                  "es": "RollerArc S1",
-                  "pt": "RollerArc S1"
-                },
-                "power": 150
-              },
-              "base_color_hex": "dddddd"
-            }
-          ],
-          "media": {
-            "box_url": "static/img/mystery_boxes/6a4bb142740408504dc98656/box_img_2eaa64dc-5092-4309-b775-09bdb46e426a.png",
-            "cover_url": "static/img/mystery_boxes/6a4bb142740408504dc98656/cover_img_71ade478-ac9e-4524-aadd-5f75676d811f.png",
-            "box_image_url": "static/img/mystery_boxes/6a4bb142740408504dc98656/box_img_url_d97820ac-6ce7-4686-ba7d-57533262cdd9.png"
-          }
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86c8b",
-        "item_id": "6661dceadddadd0605eedd43",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 20,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "6661dceadddadd0605eedd43",
-          "power": 21705495,
-          "width": 2,
-          "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
-          },
-          "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "beachside_billionaire",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1156,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86c8d",
-        "item_id": "6a675eaa00b27e15643511be",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 21,
-        "type": "rack",
-        "title": {
-          "en": "Rack Title",
-          "cn": "Rack Title"
-        },
-        "description": {
-          "en": "Rack Reward Description",
-          "cn": "Rack Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "name": {
-            "en": "Beach Rack 8",
-            "cn": "Beach Rack 8"
-          },
-          "description": {
-            "en": "Chill drinks, warm sand, and enough room for every beachside favorite.",
-            "cn": "Chill drinks, warm sand, and enough room for every beachside favorite."
-          },
-          "_id": "6a675eaa00b27e15643511be",
-          "capacity": 8,
-          "is_can_be_sold_on_mp": true,
-          "is_in_set": true
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86c8f",
-        "item_id": "67d1c54536daea2ef871b292",
-        "amount": 25,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 22,
-        "type": "utility_item",
-        "title": {
-          "en": "Utility Item",
-          "cn": "Utility Item"
-        },
-        "description": {
-          "en": "Utility Reward Description",
-          "cn": "Utility Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "media": {
-            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
-          },
-          "_id": "67d1c54536daea2ef871b292",
-          "name": {
-            "en": "Speed Up Item",
-            "cn": "Speed Up Item",
-            "es": "Speed Up Item",
-            "pt": "Speed Up Item"
-          },
-          "description": {
-            "en": "Ticket for speed up expedition",
-            "cn": "Ticket for speed up expedition",
-            "es": "Ticket for speed up expedition",
-            "pt": "Ticket for speed up expedition"
-          },
-          "type": "expedition_speed_up"
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86c91",
-        "item_id": "68b03b11327772e3719680af",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 23,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68b03b11327772e3719680af",
-          "power": 30000000,
-          "width": 2,
-          "name": {
-            "en": "SunChill Console",
-            "cn": "SunChill Console",
-            "es": "SunChill Console",
-            "pt": "SunChill Console"
-          },
-          "description": {
-            "en": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "cn": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "es": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "pt": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 1,
-          "type": "merge",
-          "filename": "sunchill_console",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 700,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86c93",
-        "item_id": "66e04279e0dd3530da847c2d",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 24,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "66e04279e0dd3530da847c2d",
-          "power": 105900000,
-          "width": 2,
-          "name": {
-            "en": "SunsetForge",
-            "cn": "SunsetForge",
-            "es": "SunsetForge",
-            "pt": "SunsetForge"
-          },
-          "description": {
-            "en": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "cn": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "es": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "pt": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "sunsetforge",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1950,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86c95",
-        "item_id": "66e04279e0dd3530da847c2d",
+        "id": "6a7b1516b94e4ce33de86f2d",
+        "item_id": "66e19565e0dd3530da86fe5f",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -1767,45 +1346,80 @@
           "max": 0
         },
         "item": {
-          "_id": "66e04279e0dd3530da847c2d",
-          "power": 105900000,
+          "_id": "66e19565e0dd3530da86fe5f",
+          "power": 8650000,
           "width": 2,
           "name": {
-            "en": "SunsetForge",
-            "cn": "SunsetForge",
-            "es": "SunsetForge",
-            "pt": "SunsetForge"
+            "en": "JustChill",
+            "cn": "JustChill",
+            "es": "JustChill",
+            "pt": "JustChill"
           },
           "description": {
-            "en": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "cn": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "es": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "pt": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune."
+            "en": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "cn": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "es": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "pt": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 3,
-          "type": "merge",
-          "filename": "sunsetforge",
+          "level": 0,
+          "type": "basic",
+          "filename": "justchill",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1950,
+          "is_can_be_sold_on_mp": true,
+          "bonus": 950,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af95b94e4ce33de86c97",
-        "item_id": "64a80c383fd5253fb80fa00c",
+        "id": "6a7b1516b94e4ce33de86f2f",
+        "item_id": "687953d5850c0148212ddf81",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 26,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Saloon Rack 6",
+            "cn": "Saloon Rack 6"
+          },
+          "description": {
+            "en": "Wooden display worthy of any frontier saloon.",
+            "cn": "Wooden display worthy of any frontier saloon."
+          },
+          "_id": "687953d5850c0148212ddf81",
+          "capacity": 6,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f31",
+        "item_id": "69d918d4135acbe76ae10e97",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 27,
         "type": "miner",
         "title": {
           "en": "Miner Reward",
@@ -1820,635 +1434,93 @@
           "max": 0
         },
         "item": {
-          "_id": "64a80c383fd5253fb80fa00c",
-          "power": 2165625,
+          "_id": "69d918d4135acbe76ae10e97",
+          "power": 27500000,
           "width": 2,
           "name": {
-            "en": "Sun-kissed Shores",
-            "cn": "Sun-kissed Shores"
+            "en": "Hamsters Team",
+            "cn": "Hamsters Team",
+            "es": "Hamsters Team",
+            "pt": "Hamsters Team"
           },
           "description": {
-            "en": "Immerse yourself in the warm glow of the sun-kissed sands and discover hidden crypto treasures. ByAsepSyf",
-            "cn": "Immerse yourself in the warm glow of the sun-kissed sands and discover hidden crypto treasures. ByAsepSyf"
+            "en": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "cn": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "es": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "pt": "A friendly crew working side by side, reminding you that every bit of progress is a team effort."
           },
           "created_by_title": {
             "link": "",
-            "text": "AsepSyf"
+            "text": ""
           },
-          "level": 1,
+          "level": 3,
           "type": "merge",
-          "filename": "sun_kissed_shores",
+          "filename": "hamsters_team",
           "frames_data": {
             "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
+            "frame_height": 50
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 164,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1400,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af95b94e4ce33de86c99",
-        "item_id": "69d80b8b135acbe76adec90a",
+        "id": "6a7b1516b94e4ce33de86f33",
+        "item_id": "691f5f7eb7f047a6984d0ea5",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
-        "required_level": 27,
-        "type": "mystery_box",
+        "required_level": 28,
+        "type": "miner",
         "title": {
-          "en": "Loot Box",
-          "cn": "Loot Box"
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
         },
         "description": {
-          "en": "Mystery Box Reward Description",
-          "cn": "Mystery Box Reward Description"
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "69d80b8b135acbe76adec90a",
-          "title": {
-            "en": "Forbidden rarity case",
-            "cn": "",
-            "es": "",
-            "pt": ""
+          "_id": "691f5f7eb7f047a6984d0ea5",
+          "power": 16350000,
+          "width": 2,
+          "name": {
+            "en": "Team Green",
+            "cn": "Team Green",
+            "es": "Team Green",
+            "pt": "Team Green2"
           },
-          "items": [
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 0,
-              "item_info": {
-                "name": {
-                  "en": "Furnacer",
-                  "cn": "Furnacer",
-                  "es": "Furnacer",
-                  "pt": "Furnacer"
-                },
-                "power": 2000000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 1,
-              "item_info": {
-                "name": {
-                  "en": "Mask On",
-                  "cn": "Mask On",
-                  "es": "Mask On",
-                  "pt": "Mask On"
-                },
-                "power": 4500000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 2,
-              "item_info": {
-                "name": {
-                  "en": "Plague Doctor",
-                  "cn": "Plague Doctor",
-                  "es": "Plague Doctor",
-                  "pt": "Plague Doctor"
-                },
-                "power": 3500000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 3,
-              "item_info": {
-                "name": {
-                  "en": "Satoshi Oni",
-                  "cn": "Satoshi Oni",
-                  "es": "Satoshi Oni",
-                  "pt": "Satoshi Oni"
-                },
-                "power": 6500000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 4,
-              "item_info": {
-                "name": {
-                  "en": "Abstract Coil",
-                  "cn": "Abstract Coil",
-                  "es": "Abstract Coil",
-                  "pt": "Abstract Coil"
-                },
-                "power": 8000000
-              },
-              "base_color_hex": "dddddd"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 5,
-              "item_info": {
-                "name": {
-                  "en": "Final Drive",
-                  "cn": "Final Drive",
-                  "es": "Final Drive",
-                  "pt": "Final Drive"
-                },
-                "power": 10750000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 6,
-              "item_info": {
-                "name": {
-                  "en": "Mergedge X",
-                  "cn": "Mergedge X",
-                  "es": "Mergedge X",
-                  "pt": "Mergedge X"
-                },
-                "power": 10000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 7,
-              "item_info": {
-                "name": {
-                  "en": "Shinogi",
-                  "cn": "Shinogi",
-                  "es": "Shinogi",
-                  "pt": "Shinogi"
-                },
-                "power": 10000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 8,
-              "item_info": {
-                "name": {
-                  "en": "Arigato",
-                  "cn": "Arigato",
-                  "es": "Arigato",
-                  "pt": "Arigato"
-                },
-                "power": 10000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 9,
-              "item_info": {
-                "name": {
-                  "en": "Resident Ham",
-                  "cn": "Resident Ham",
-                  "es": "Resident Ham",
-                  "pt": "Resident Ham"
-                },
-                "power": 10000000
-              },
-              "base_color_hex": "2bd600"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 10,
-              "item_info": {
-                "name": {
-                  "en": "Hoarder's Wealth",
-                  "cn": "Hoarder's Wealth",
-                  "es": "Hoarder's Wealth",
-                  "pt": "Hoarder's Wealth"
-                },
-                "power": 12000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 11,
-              "item_info": {
-                "name": {
-                  "en": "Jump&Run",
-                  "cn": "Jump&Run",
-                  "es": "Jump&Run",
-                  "pt": "Jump&Run"
-                },
-                "power": 12000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 12,
-              "item_info": {
-                "name": {
-                  "en": "Mask On",
-                  "cn": "Mask On",
-                  "es": "Mask On",
-                  "pt": "Mask On"
-                },
-                "power": 12000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 13,
-              "item_info": {
-                "name": {
-                  "en": "Ray of love",
-                  "cn": "Ray of love",
-                  "es": "Ray of love",
-                  "pt": "Ray of love"
-                },
-                "power": 14000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 14,
-              "item_info": {
-                "name": {
-                  "en": "Colorfull",
-                  "cn": "Colorfull",
-                  "es": "Colorfull",
-                  "pt": "Colorfull"
-                },
-                "power": 18000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 15,
-              "item_info": {
-                "name": {
-                  "en": "X-Craft",
-                  "cn": "X-Craft",
-                  "es": "X-Craft",
-                  "pt": "X-Craft"
-                },
-                "power": 18000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 16,
-              "item_info": {
-                "name": {
-                  "en": "Walk Alone",
-                  "cn": "Walk Alone",
-                  "es": "Walk Alone",
-                  "pt": "Walk Alone"
-                },
-                "power": 20000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 17,
-              "item_info": {
-                "name": {
-                  "en": "Zeus",
-                  "cn": "Zeus",
-                  "es": "Zeus",
-                  "pt": "Zeus"
-                },
-                "power": 23000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 18,
-              "item_info": {
-                "name": {
-                  "en": "Pagliacci",
-                  "cn": "Pagliacci",
-                  "es": "Pagliacci",
-                  "pt": "Pagliacci"
-                },
-                "power": 25000000
-              },
-              "base_color_hex": "03e1e4"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 19,
-              "item_info": {
-                "name": {
-                  "en": "Abstract Coil",
-                  "cn": "Abstract Coil",
-                  "es": "Abstract Coil",
-                  "pt": "Abstract Coil"
-                },
-                "power": 25000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 20,
-              "item_info": {
-                "name": {
-                  "en": "Mergedge X",
-                  "cn": "Mergedge X",
-                  "es": "Mergedge X",
-                  "pt": "Mergedge X"
-                },
-                "power": 36000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 21,
-              "item_info": {
-                "name": {
-                  "en": "Magnum Opus",
-                  "cn": "Magnum Opus",
-                  "es": "Magnum Opus",
-                  "pt": "Magnum Opus"
-                },
-                "power": 40000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 22,
-              "item_info": {
-                "name": {
-                  "en": "Plasma Ray",
-                  "cn": "Plasma Ray",
-                  "es": "Plasma Ray",
-                  "pt": "Plasma Ray"
-                },
-                "power": 50000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 23,
-              "item_info": {
-                "name": {
-                  "en": "Edge Case",
-                  "cn": "Edge Case",
-                  "es": "Edge Case",
-                  "pt": "Edge Case"
-                },
-                "power": 65000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 24,
-              "item_info": {
-                "name": {
-                  "en": "Mask On",
-                  "cn": "Mask On",
-                  "es": "Mask On",
-                  "pt": "Mask On"
-                },
-                "power": 82000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 25,
-              "item_info": {
-                "name": {
-                  "en": "Shinogi",
-                  "cn": "Shinogi",
-                  "es": "Shinogi",
-                  "pt": "Shinogi"
-                },
-                "power": 116000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 26,
-              "item_info": {
-                "name": {
-                  "en": "Cupid's Cut",
-                  "cn": "Cupid's Cut",
-                  "es": "Cupid's Cut",
-                  "pt": "Cupid's Cut"
-                },
-                "power": 140000000
-              },
-              "base_color_hex": "ff2fd1"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 27,
-              "item_info": {
-                "name": {
-                  "en": "Edge Case",
-                  "cn": "Edge Case",
-                  "es": "Edge Case",
-                  "pt": "Edge Case"
-                },
-                "power": 195000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 28,
-              "item_info": {
-                "name": {
-                  "en": "Vintage",
-                  "cn": "Vintage",
-                  "es": "Vintage",
-                  "pt": "Vintage"
-                },
-                "power": 250000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 29,
-              "item_info": {
-                "name": {
-                  "en": "Cupid's Cut",
-                  "cn": "Cupid's Cut",
-                  "es": "Cupid's Cut",
-                  "pt": "Cupid's Cut"
-                },
-                "power": 375000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 30,
-              "item_info": {
-                "name": {
-                  "en": "Ray of love",
-                  "cn": "Ray of love",
-                  "es": "Ray of love",
-                  "pt": "Ray of love"
-                },
-                "power": 578000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 31,
-              "item_info": {
-                "name": {
-                  "en": "Kumiki Node",
-                  "cn": "Kumiki node",
-                  "es": "Kumiki node",
-                  "pt": "Kumiki node"
-                },
-                "power": 856100000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 32,
-              "item_info": {
-                "name": {
-                  "en": "Jump&Run",
-                  "cn": "Jump&Run",
-                  "es": "Jump&Run",
-                  "pt": "Jump&Run"
-                },
-                "power": 1228000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 33,
-              "item_info": {
-                "name": {
-                  "en": "Hephaestus Hall",
-                  "cn": "Hephaestus Hall",
-                  "es": "Hephaestus Hall",
-                  "pt": "Hephaestus Hall"
-                },
-                "power": 1500000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 34,
-              "item_info": {
-                "name": {
-                  "en": "Magnum Opus",
-                  "cn": "Magnum Opus",
-                  "es": "Magnum Opus",
-                  "pt": "Magnum Opus"
-                },
-                "power": 3900000000
-              },
-              "base_color_hex": "ffdc00"
-            },
-            {
-              "type": "miner",
-              "amount": 1,
-              "sort": 35,
-              "item_info": {
-                "name": {
-                  "en": "Plasma Ray",
-                  "cn": "Plasma Ray",
-                  "es": "Plasma Ray",
-                  "pt": "Plasma Ray"
-                },
-                "power": 5000000000
-              },
-              "base_color_hex": "ffdc00"
-            }
-          ],
-          "media": {
-            "box_url": "static/img/mystery_boxes/69d80b8b135acbe76adec90a/box_img_ad0b1997-0ae0-43a0-b341-94c8d01f6108.png",
-            "cover_url": "static/img/mystery_boxes/69d80b8b135acbe76adec90a/cover_img_bd35891a-c5f8-48d4-b58e-144679505ffc.png",
-            "box_image_url": "static/img/mystery_boxes/69d80b8b135acbe76adec90a/box_img_url_b79bb455-d525-4464-8fde-b32c534ee928.png"
-          }
+          "description": {
+            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 0,
+          "type": "basic",
+          "filename": "team_green",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
+          "is_in_set": false
         }
       },
       {
-        "id": "6a68af95b94e4ce33de86c9b",
-        "item_id": null,
-        "amount": 1500000000,
-        "currency": "RST",
-        "ttl_time": 0,
-        "required_level": 28,
-        "type": "money",
-        "title": {
-          "en": "Money Title",
-          "cn": "Money Title"
-        },
-        "description": {
-          "en": "Money Reward Description",
-          "cn": "Money Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86c9d",
-        "item_id": "6661dceadddadd0605eedd49",
+        "id": "6a7b1516b94e4ce33de86f35",
+        "item_id": "691f5f7eb7f047a6984d0ea5",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -2467,45 +1539,362 @@
           "max": 0
         },
         "item": {
-          "_id": "6661dceadddadd0605eedd49",
-          "power": 56976990,
+          "_id": "691f5f7eb7f047a6984d0ea5",
+          "power": 16350000,
           "width": 2,
           "name": {
-            "en": "Beachside Billionaire",
-            "cn": "Beachside Billionaire",
-            "es": "Beachside Billionaire",
-            "pt": "Beachside Billionaire"
+            "en": "Team Green",
+            "cn": "Team Green",
+            "es": "Team Green",
+            "pt": "Team Green2"
           },
           "description": {
-            "en": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "cn": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "es": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time.",
-            "pt": "Introducing the \"Beachside Billionaire\" miner: this sun-soaked, yacht-fueled mining machine turns every grain of sand into digital gold, powering through blockchain while you power tan! It's your ticket to crypto riches, one beach day at a time."
+            "en": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "cn": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "es": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it.",
+            "pt": "Jacked into the chain and dressed in code, this crew moves like data — silent, sharp, unstoppable. In the Matrix of crypto, Team Green doesn’t just play the game — they rewrite it."
           },
           "created_by_title": {
             "link": "",
             "text": ""
           },
-          "level": 4,
-          "type": "merge",
-          "filename": "beachside_billionaire",
+          "level": 0,
+          "type": "basic",
+          "filename": "team_green",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 1732,
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1000,
           "is_in_set": false
         }
       },
       {
-        "id": "6a68af95b94e4ce33de86c9f",
-        "item_id": "69d8021a135acbe76adea346",
+        "id": "6a7b1516b94e4ce33de86f37",
+        "item_id": "6a7b13b7487b96b2ef8a24fd",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 30,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a7b13b7487b96b2ef8a24fd",
+          "power": 100000000,
+          "width": 2,
+          "name": {
+            "en": "Born to Mine",
+            "cn": "Born to Mine",
+            "es": "Born to Mine",
+            "pt": "Born to Mine"
+          },
+          "description": {
+            "en": "Send your commandos on legendary missions!",
+            "cn": "Send your commandos on legendary missions!",
+            "es": "Send your commandos on legendary missions!",
+            "pt": "Send your commandos on legendary missions!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "born_to_mine",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 1400,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f39",
+        "item_id": "69d81993135acbe76adee44a",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 31,
+        "type": "mystery_box",
+        "title": {
+          "en": "Loot Box",
+          "cn": "Loot Box"
+        },
+        "description": {
+          "en": "Mystery Box Reward Description",
+          "cn": "Mystery Box Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69d81993135acbe76adee44a",
+          "title": {
+            "en": "Basic Engineer box",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "items": [
+            {
+              "type": "utility_item",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Old key",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/old_key.png"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "battery",
+              "amount": 20,
+              "sort": 1,
+              "item_info": {
+                "name": {
+                  "en": "Battery",
+                  "cn": "Battery"
+                },
+                "level": 1
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "HMT",
+              "amount": 100000000,
+              "sort": 2,
+              "item_info": null,
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "utility_item",
+              "amount": 5,
+              "sort": 3,
+              "item_info": {
+                "name": {
+                  "en": "Old key",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/old_key.png"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "utility_item",
+              "amount": 1,
+              "sort": 4,
+              "item_info": {
+                "name": {
+                  "en": "Recharger",
+                  "cn": "Recharger",
+                  "es": "Recharger",
+                  "pt": "Recharger"
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/recharger.gif"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "utility_item",
+              "amount": 1,
+              "sort": 5,
+              "item_info": {
+                "name": {
+                  "en": "24h Booster",
+                  "cn": "24h Booster",
+                  "es": "24h Booster",
+                  "pt": "24h Booster"
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/683427626b8c472444c3725b.gif?v=1748874570577"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "utility_item",
+              "amount": 3,
+              "sort": 6,
+              "item_info": {
+                "name": {
+                  "en": "Speed Up Item",
+                  "cn": "Speed Up Item",
+                  "es": "Speed Up Item",
+                  "pt": "Speed Up Item"
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 7,
+              "item_info": {
+                "name": {
+                  "en": "Blueprint",
+                  "cn": "Blueprint",
+                  "es": "Blueprint",
+                  "pt": "Blueprint"
+                },
+                "power": 1000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "utility_item",
+              "amount": 3,
+              "sort": 8,
+              "item_info": {
+                "name": {
+                  "en": "Basic key",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/basic_key.png"
+                }
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 1,
+              "sort": 9,
+              "item_info": {
+                "name": {
+                  "en": "Epic Fan",
+                  "cn": "Epic Fan"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 10,
+              "item_info": {
+                "name": {
+                  "en": "Crafting Gem",
+                  "cn": "Crafting Gem",
+                  "es": "Crafting Gem",
+                  "pt": "Crafting Gem"
+                },
+                "power": 100000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "utility_item",
+              "amount": 1,
+              "sort": 11,
+              "item_info": {
+                "name": {
+                  "en": "Ancient key",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/ancient_key.png"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "mutation_component",
+              "amount": 1,
+              "sort": 12,
+              "item_info": {
+                "name": {
+                  "en": "Legendary Fan",
+                  "cn": "Legendary Fan"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "utility_item",
+              "amount": 2,
+              "sort": 13,
+              "item_info": {
+                "name": {
+                  "en": "Ancient key",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/ancient_key.png"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "utility_item",
+              "amount": 1,
+              "sort": 14,
+              "item_info": {
+                "name": {
+                  "en": "Forbidden key",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/forbidden_key.png"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            }
+          ],
+          "media": {
+            "box_url": "static/img/mystery_boxes/69d81993135acbe76adee44a/box_img_751ee386-bb88-40b1-8e7f-88c750c11864.png",
+            "cover_url": "static/img/mystery_boxes/69d81993135acbe76adee44a/cover_img_344e59ab-feaa-46b2-a3e1-b97bcb356b52.png",
+            "box_image_url": "static/img/mystery_boxes/69d81993135acbe76adee44a/box_img_url_2b6b80ab-97b5-4e86-b081-185d223aa21c.png"
+          }
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f3b",
+        "item_id": "6a28209f728342e342e9aff2",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 32,
         "type": "utility_item",
         "title": {
           "en": "Utility Item",
@@ -2521,17 +1910,17 @@
         },
         "item": {
           "media": {
-            "preview_url": "static/img/market/utility_items/forbidden_key.png"
+            "preview_url": "static/img/market/utility_items/gem_ore.png"
           },
-          "_id": "69d8021a135acbe76adea346",
+          "_id": "6a28209f728342e342e9aff2",
           "description": {
-            "en": "With this key you can open all locked *Old*, *Basic*, *Ancient* and *Forbidden* lootboxes",
+            "en": "GemStone",
             "cn": "",
             "es": "",
             "pt": ""
           },
           "name": {
-            "en": "Forbidden key",
+            "en": "GemStone",
             "cn": "",
             "es": "",
             "pt": ""
@@ -2540,217 +1929,318 @@
         }
       },
       {
-        "id": "6a68af95b94e4ce33de86ca1",
-        "item_id": "68b03b11327772e3719680b7",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 31,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68b03b11327772e3719680b7",
-          "power": 75000000,
-          "width": 2,
-          "name": {
-            "en": "SunChill Console",
-            "cn": "SunChill Console",
-            "es": "SunChill Console",
-            "pt": "SunChill Console"
-          },
-          "description": {
-            "en": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "cn": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "es": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "pt": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 2,
-          "type": "merge",
-          "filename": "sunchill_console",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 1500,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86ca3",
-        "item_id": "68b03b11327772e3719680bf",
-        "amount": 1,
-        "currency": "",
-        "ttl_time": 0,
-        "required_level": 32,
-        "type": "miner",
-        "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
-        },
-        "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
-        },
-        "range_count": {
-          "min": 1,
-          "max": 0
-        },
-        "item": {
-          "_id": "68b03b11327772e3719680bf",
-          "power": 200000000,
-          "width": 2,
-          "name": {
-            "en": "SunChill Console",
-            "cn": "SunChill Console",
-            "es": "SunChill Console",
-            "pt": "SunChill Console"
-          },
-          "description": {
-            "en": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "cn": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "es": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in.",
-            "pt": "A pocket-size summer escape: palm leaves, blue sky, and breezy hash waves. Hit play, kick back, and watch the coins roll in."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 3,
-          "type": "merge",
-          "filename": "sunchill_console",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 2500,
-          "is_in_set": false
-        }
-      },
-      {
-        "id": "6a68af95b94e4ce33de86ca5",
-        "item_id": "66e04279e0dd3530da847c33",
+        "id": "6a7b1516b94e4ce33de86f3d",
+        "item_id": "6a283901728342e342ea7597",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
         "required_level": 33,
-        "type": "miner",
+        "type": "mystery_box",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Loot Box",
+          "cn": "Loot Box"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Mystery Box Reward Description",
+          "cn": "Mystery Box Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "66e04279e0dd3530da847c33",
-          "power": 278000000,
-          "width": 2,
-          "name": {
-            "en": "SunsetForge",
-            "cn": "SunsetForge",
-            "es": "SunsetForge",
-            "pt": "SunsetForge"
+          "_id": "6a283901728342e342ea7597",
+          "title": {
+            "en": "Dig in Deep!",
+            "cn": "",
+            "es": "",
+            "pt": ""
           },
-          "description": {
-            "en": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "cn": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "es": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune.",
-            "pt": "When the sky blazes with the colors of dusk, SunsetForge ignites, slicing through algorithms as effortlessly as the sun dips below the horizon. Bathed in the glow of a golden sunset, it forges blocks of pure digital wealth, turning the calm of evening into unstoppable streams of crypto fortune."
-          },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 4,
-          "type": "merge",
-          "filename": "sunsetforge",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50,
-            "frames_count": 4
-          },
-          "is_can_be_sold_on_mp": false,
-          "bonus": 2600,
-          "is_in_set": false
+          "items": [
+            {
+              "type": "utility_item",
+              "amount": 1,
+              "sort": 1,
+              "item_info": {
+                "name": {
+                  "en": "Basic key",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/basic_key.png"
+                }
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 1,
+              "item_info": {
+                "name": {
+                  "en": "Furnacer Queen",
+                  "cn": "Furnacer Queen",
+                  "es": "Furnacer Queen",
+                  "pt": "Furnacer Queen"
+                },
+                "power": 77000000
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 2,
+              "item_info": {
+                "name": {
+                  "en": "God of Gems",
+                  "cn": "God of Gems",
+                  "es": "God of Gems",
+                  "pt": "God of Gems"
+                },
+                "power": 150000000
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "utility_item",
+              "amount": 1,
+              "sort": 3,
+              "item_info": {
+                "name": {
+                  "en": "Old key",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/old_key.png"
+                }
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 4,
+              "item_info": {
+                "name": {
+                  "en": "X-Craft",
+                  "cn": "X-Craft",
+                  "es": "X-Craft",
+                  "pt": "X-Craft"
+                },
+                "power": 18000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 5,
+              "item_info": {
+                "name": {
+                  "en": "Eclipse Energion",
+                  "cn": "Eclipse Energion",
+                  "es": "Eclipse Energion",
+                  "pt": "Eclipse Energion"
+                },
+                "power": 11800000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 6,
+              "item_info": {
+                "name": {
+                  "en": "Furnacer",
+                  "cn": "Furnacer",
+                  "es": "Furnacer",
+                  "pt": "Furnacer"
+                },
+                "power": 5000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 7,
+              "item_info": {
+                "name": {
+                  "en": "The Amethyst",
+                  "cn": "The Amethyst",
+                  "es": "The Amethyst",
+                  "pt": "The Amethyst"
+                },
+                "power": 5250000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 8,
+              "item_info": {
+                "name": {
+                  "en": "Crafting Gem",
+                  "cn": "Crafting Gem",
+                  "es": "Crafting Gem",
+                  "pt": "Crafting Gem"
+                },
+                "power": 100000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 9,
+              "item_info": {
+                "name": {
+                  "en": "Underdark Delver",
+                  "cn": "Underdark Delver",
+                  "es": "Underdark Delver",
+                  "pt": "Underdark Delver"
+                },
+                "power": 4461870
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "utility_item",
+              "amount": 4,
+              "sort": 10,
+              "item_info": {
+                "name": {
+                  "en": "GemStone",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/gem_ore.png"
+                }
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 11,
+              "item_info": {
+                "name": {
+                  "en": "The Tomb Raider",
+                  "cn": "The Tomb Raider",
+                  "es": "The Tomb Raider",
+                  "pt": "The Tomb Raider"
+                },
+                "power": 5880000
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "utility_item",
+              "amount": 2,
+              "sort": 12,
+              "item_info": {
+                "name": {
+                  "en": "GemStone",
+                  "cn": "",
+                  "es": "",
+                  "pt": ""
+                },
+                "media": {
+                  "preview_url": "static/img/market/utility_items/gem_ore.png"
+                }
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 13,
+              "item_info": {
+                "name": {
+                  "en": "Blueprint",
+                  "cn": "Blueprint",
+                  "es": "Blueprint",
+                  "pt": "Blueprint"
+                },
+                "power": 1000
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 14,
+              "item_info": {
+                "name": {
+                  "en": "Centinela",
+                  "cn": "Centinela",
+                  "es": "Centinela",
+                  "pt": "Centinela"
+                },
+                "power": 2100000
+              },
+              "base_color_hex": "dddddd"
+            }
+          ],
+          "media": {
+            "box_url": "static/img/mystery_boxes/6a283901728342e342ea7597/box_img_9e86e204-8cf1-4097-b671-26fa2ec8b316.png",
+            "cover_url": "static/img/mystery_boxes/6a283901728342e342ea7597/cover_img_22dde8a3-77c2-4b48-a3d0-c8c58c04985a.png",
+            "box_image_url": "static/img/mystery_boxes/6a283901728342e342ea7597/box_img_url_da2eb9a6-6205-4e2d-846e-27b1b5b33c36.png"
+          }
         }
       },
       {
-        "id": "6a68af95b94e4ce33de86ca7",
-        "item_id": "69e73695f0b0b66e98807074",
-        "amount": 1,
+        "id": "6a7b1516b94e4ce33de86f3f",
+        "item_id": "67d1c54536daea2ef871b292",
+        "amount": 15,
         "currency": "",
         "ttl_time": 0,
         "required_level": 34,
-        "type": "miner",
+        "type": "utility_item",
         "title": {
-          "en": "Miner Reward",
-          "cn": "Miner Reward"
+          "en": "Utility Item",
+          "cn": "Utility Item"
         },
         "description": {
-          "en": "Miner Reward Description",
-          "cn": "Miner Reward Description"
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
         },
         "range_count": {
           "min": 1,
           "max": 0
         },
         "item": {
-          "_id": "69e73695f0b0b66e98807074",
-          "power": 2030000000,
-          "width": 2,
+          "media": {
+            "preview_url": "static/img/market/utility_items/67d1c54536daea2ef871b292.gif"
+          },
+          "_id": "67d1c54536daea2ef871b292",
           "name": {
-            "en": "CatFish",
-            "cn": "CatFish",
-            "es": "CatFish",
-            "pt": "CatFish"
+            "en": "Speed Up Item",
+            "cn": "Speed Up Item",
+            "es": "Speed Up Item",
+            "pt": "Speed Up Item"
           },
           "description": {
-            "en": "Who is behind Satoshi's true power?",
-            "cn": "Who is behind Satoshi's true power?",
-            "es": "Who is behind Satoshi's true power?",
-            "pt": "Who is behind Satoshi's true power?"
+            "en": "Ticket for speed up expedition",
+            "cn": "Ticket for speed up expedition",
+            "es": "Ticket for speed up expedition",
+            "pt": "Ticket for speed up expedition"
           },
-          "created_by_title": {
-            "link": "",
-            "text": ""
-          },
-          "level": 4,
-          "type": "merge",
-          "filename": "catfish",
-          "frames_data": {
-            "frame_width": 116,
-            "frame_height": 50
-          },
-          "is_can_be_sold_on_mp": true,
-          "bonus": 7500,
-          "is_in_set": false
+          "type": "expedition_speed_up"
         }
       },
       {
-        "id": "6a68af95b94e4ce33de86ca9",
-        "item_id": "6a67228ae95dfedc67ce47e4",
+        "id": "6a7b1516b94e4ce33de86f41",
+        "item_id": "66e19565e0dd3530da86fe62",
         "amount": 1,
         "currency": "",
         "ttl_time": 0,
@@ -2769,20 +2259,73 @@
           "max": 0
         },
         "item": {
-          "_id": "6a67228ae95dfedc67ce47e4",
-          "power": 4000000000,
+          "_id": "66e19565e0dd3530da86fe62",
+          "power": 22710000,
           "width": 2,
           "name": {
-            "en": "Mine-a Colada",
-            "cn": "Mine-a Colada",
-            "es": "Mine-a Colada",
-            "pt": "Mine-a Colada"
+            "en": "JustChill",
+            "cn": "JustChill",
+            "es": "JustChill",
+            "pt": "JustChill"
           },
           "description": {
-            "en": "Creamy, tropical, and packed with enough power to shake the whole beach.",
-            "cn": "Creamy, tropical, and packed with enough power to shake the whole beach.",
-            "es": "Creamy, tropical, and packed with enough power to shake the whole beach.",
-            "pt": "Creamy, tropical, and packed with enough power to shake the whole beach."
+            "en": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "cn": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "es": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "pt": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 1,
+          "type": "merge",
+          "filename": "justchill",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 1230,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f43",
+        "item_id": "6a78ac23487b96b2ef8118b2",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 36,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a78ac23487b96b2ef8118b2",
+          "power": 25000000,
+          "width": 1,
+          "name": {
+            "en": "Crewmark",
+            "cn": "Crewmark",
+            "es": "Crewmark",
+            "pt": "Crewmark"
+          },
+          "description": {
+            "en": "Collect Crewmark Miners for Davy Coins Hamster discount.",
+            "cn": "Collect Crewmark Miners for Davy Coins Hamster discount.",
+            "es": "Collect Crewmark Miners for Davy Coins Hamster discount.",
+            "pt": "Collect Crewmark Miners for Davy Coins Hamster discount."
           },
           "created_by_title": {
             "link": "",
@@ -2790,15 +2333,1182 @@
           },
           "level": 0,
           "type": "basic",
-          "filename": "mine_a_colada",
+          "filename": "crewmark",
+          "frames_data": {
+            "frame_width": 58,
+            "frame_height": 40,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 250,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f45",
+        "item_id": "69777907ce7eeebdbd02fedf",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 37,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Arch Rack 6",
+            "cn": "Arch Rack 6"
+          },
+          "description": {
+            "en": "Six places to rest your miners and contemplate the beauty of things that simply work. Scratches add character. Empty slots add meaning.",
+            "cn": "Six places to rest your miners and contemplate the beauty of things that simply work. Scratches add character. Empty slots add meaning."
+          },
+          "_id": "69777907ce7eeebdbd02fedf",
+          "capacity": 6,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f47",
+        "item_id": "66e19565e0dd3530da86fe68",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 38,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "66e19565e0dd3530da86fe68",
+          "power": 59620000,
+          "width": 2,
+          "name": {
+            "en": "JustChill",
+            "cn": "JustChill",
+            "es": "JustChill",
+            "pt": "JustChill"
+          },
+          "description": {
+            "en": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "cn": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "es": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "pt": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "justchill",
           "frames_data": {
             "frame_width": 116,
             "frame_height": 50,
             "frames_count": 4
           },
           "is_can_be_sold_on_mp": true,
-          "bonus": 7000,
-          "is_in_set": true
+          "bonus": 1610,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f49",
+        "item_id": null,
+        "amount": 1000000000,
+        "currency": "RST",
+        "ttl_time": 0,
+        "required_level": 39,
+        "type": "money",
+        "title": {
+          "en": "Money Title",
+          "cn": "Money Title"
+        },
+        "description": {
+          "en": "Money Reward Description",
+          "cn": "Money Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f4b",
+        "item_id": "69d801f5135acbe76adea2eb",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 40,
+        "type": "utility_item",
+        "title": {
+          "en": "Utility Item",
+          "cn": "Utility Item"
+        },
+        "description": {
+          "en": "Utility Reward Description",
+          "cn": "Utility Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "media": {
+            "preview_url": "static/img/market/utility_items/ancient_key.png"
+          },
+          "_id": "69d801f5135acbe76adea2eb",
+          "description": {
+            "en": "With this key you can open all locked *Old*, *Basic* and *Ancient lootboxes",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "name": {
+            "en": "Ancient key",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "type": "mystery_boxes_keys"
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f4d",
+        "item_id": "69d80624135acbe76adebaa9",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 41,
+        "type": "mystery_box",
+        "title": {
+          "en": "Loot Box",
+          "cn": "Loot Box"
+        },
+        "description": {
+          "en": "Mystery Box Reward Description",
+          "cn": "Mystery Box Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69d80624135acbe76adebaa9",
+          "title": {
+            "en": "Ancient Miners Case",
+            "cn": "",
+            "es": "",
+            "pt": ""
+          },
+          "items": [
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 0,
+              "item_info": {
+                "name": {
+                  "en": "Plague Doctor",
+                  "cn": "Plague Doctor",
+                  "es": "Plague Doctor",
+                  "pt": "Plague Doctor"
+                },
+                "power": 500000
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 1,
+              "item_info": {
+                "name": {
+                  "en": "FireStar",
+                  "cn": "FireStar",
+                  "es": "FireStar",
+                  "pt": "FireStar"
+                },
+                "power": 1500000
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 2,
+              "item_info": {
+                "name": {
+                  "en": "Mergedge X",
+                  "cn": "Mergedge X",
+                  "es": "Mergedge X",
+                  "pt": "Mergedge X"
+                },
+                "power": 1500000
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 3,
+              "item_info": {
+                "name": {
+                  "en": "Furnacer",
+                  "cn": "Furnacer",
+                  "es": "Furnacer",
+                  "pt": "Furnacer"
+                },
+                "power": 2000000
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 4,
+              "item_info": {
+                "name": {
+                  "en": "Plague Doctor",
+                  "cn": "Plague Doctor",
+                  "es": "Plague Doctor",
+                  "pt": "Plague Doctor"
+                },
+                "power": 3500000
+              },
+              "base_color_hex": "dddddd"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 5,
+              "item_info": {
+                "name": {
+                  "en": "Hephaestus Hall",
+                  "cn": "Hephaestus Hall",
+                  "es": "Hephaestus Hall",
+                  "pt": "Hephaestus Hall"
+                },
+                "power": 5000000
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 6,
+              "item_info": {
+                "name": {
+                  "en": "FireStar",
+                  "cn": "FireStar",
+                  "es": "FireStar",
+                  "pt": "FireStar"
+                },
+                "power": 5000000
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 7,
+              "item_info": {
+                "name": {
+                  "en": "RollerPrisoner",
+                  "cn": "RollerPrisoner",
+                  "es": "RollerPrisoner",
+                  "pt": "RollerPrisoner"
+                },
+                "power": 6000000
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 8,
+              "item_info": {
+                "name": {
+                  "en": "Vintage",
+                  "cn": "Vintage",
+                  "es": "Vintage",
+                  "pt": "Vintage"
+                },
+                "power": 6000000
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 9,
+              "item_info": {
+                "name": {
+                  "en": "Satoshi Oni",
+                  "cn": "Satoshi Oni",
+                  "es": "Satoshi Oni",
+                  "pt": "Satoshi Oni"
+                },
+                "power": 6500000
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 10,
+              "item_info": {
+                "name": {
+                  "en": "Abstract Coil",
+                  "cn": "Abstract Coil",
+                  "es": "Abstract Coil",
+                  "pt": "Abstract Coil"
+                },
+                "power": 8000000
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 11,
+              "item_info": {
+                "name": {
+                  "en": "Final Drive",
+                  "cn": "Final Drive",
+                  "es": "Final Drive",
+                  "pt": "Final Drive"
+                },
+                "power": 10750000
+              },
+              "base_color_hex": "2bd600"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 12,
+              "item_info": {
+                "name": {
+                  "en": "Mergedge X",
+                  "cn": "Mergedge X",
+                  "es": "Mergedge X",
+                  "pt": "Mergedge X"
+                },
+                "power": 10000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 13,
+              "item_info": {
+                "name": {
+                  "en": "Shinogi",
+                  "cn": "Shinogi",
+                  "es": "Shinogi",
+                  "pt": "Shinogi"
+                },
+                "power": 10000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 14,
+              "item_info": {
+                "name": {
+                  "en": "Arigato",
+                  "cn": "Arigato",
+                  "es": "Arigato",
+                  "pt": "Arigato"
+                },
+                "power": 10000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 15,
+              "item_info": {
+                "name": {
+                  "en": "Resident Ham",
+                  "cn": "Resident Ham",
+                  "es": "Resident Ham",
+                  "pt": "Resident Ham"
+                },
+                "power": 10000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 16,
+              "item_info": {
+                "name": {
+                  "en": "Hoarder's Wealth",
+                  "cn": "Hoarder's Wealth",
+                  "es": "Hoarder's Wealth",
+                  "pt": "Hoarder's Wealth"
+                },
+                "power": 12000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 17,
+              "item_info": {
+                "name": {
+                  "en": "Jump&Run",
+                  "cn": "Jump&Run",
+                  "es": "Jump&Run",
+                  "pt": "Jump&Run"
+                },
+                "power": 12000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 18,
+              "item_info": {
+                "name": {
+                  "en": "Ray of love",
+                  "cn": "Ray of love",
+                  "es": "Ray of love",
+                  "pt": "Ray of love"
+                },
+                "power": 14000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 19,
+              "item_info": {
+                "name": {
+                  "en": "FireStar",
+                  "cn": "FireStar",
+                  "es": "FireStar",
+                  "pt": "FireStar"
+                },
+                "power": 15000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 20,
+              "item_info": {
+                "name": {
+                  "en": "Colorfull",
+                  "cn": "Colorfull",
+                  "es": "Colorfull",
+                  "pt": "Colorfull"
+                },
+                "power": 18000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 21,
+              "item_info": {
+                "name": {
+                  "en": "X-Craft",
+                  "cn": "X-Craft",
+                  "es": "X-Craft",
+                  "pt": "X-Craft"
+                },
+                "power": 18000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 22,
+              "item_info": {
+                "name": {
+                  "en": "Walk Alone",
+                  "cn": "Walk Alone",
+                  "es": "Walk Alone",
+                  "pt": "Walk Alone"
+                },
+                "power": 20000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 23,
+              "item_info": {
+                "name": {
+                  "en": "Zeus",
+                  "cn": "Zeus",
+                  "es": "Zeus",
+                  "pt": "Zeus"
+                },
+                "power": 23000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 24,
+              "item_info": {
+                "name": {
+                  "en": "Pagliacci",
+                  "cn": "Pagliacci",
+                  "es": "Pagliacci",
+                  "pt": "Pagliacci"
+                },
+                "power": 25000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 25,
+              "item_info": {
+                "name": {
+                  "en": "Abstract Coil",
+                  "cn": "Abstract Coil",
+                  "es": "Abstract Coil",
+                  "pt": "Abstract Coil"
+                },
+                "power": 25000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 26,
+              "item_info": {
+                "name": {
+                  "en": "Mergedge X",
+                  "cn": "Mergedge X",
+                  "es": "Mergedge X",
+                  "pt": "Mergedge X"
+                },
+                "power": 36000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 27,
+              "item_info": {
+                "name": {
+                  "en": "Magnum Opus",
+                  "cn": "Magnum Opus",
+                  "es": "Magnum Opus",
+                  "pt": "Magnum Opus"
+                },
+                "power": 40000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 28,
+              "item_info": {
+                "name": {
+                  "en": "Plasma Ray",
+                  "cn": "Plasma Ray",
+                  "es": "Plasma Ray",
+                  "pt": "Plasma Ray"
+                },
+                "power": 50000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 29,
+              "item_info": {
+                "name": {
+                  "en": "Edge Case",
+                  "cn": "Edge Case",
+                  "es": "Edge Case",
+                  "pt": "Edge Case"
+                },
+                "power": 65000000
+              },
+              "base_color_hex": "ff2fd1"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 30,
+              "item_info": {
+                "name": {
+                  "en": "Resident Ham",
+                  "cn": "Resident Ham",
+                  "es": "Resident Ham",
+                  "pt": "Resident Ham"
+                },
+                "power": 94000000
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 31,
+              "item_info": {
+                "name": {
+                  "en": "Satoshi Oni",
+                  "cn": "Satoshi Oni",
+                  "es": "Satoshi Oni",
+                  "pt": "Satoshi Oni"
+                },
+                "power": 100000000
+              },
+              "base_color_hex": "03e1e4"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 32,
+              "item_info": {
+                "name": {
+                  "en": "Walk Alone",
+                  "cn": "Walk Alone",
+                  "es": "Walk Alone",
+                  "pt": "Walk Alone"
+                },
+                "power": 185000000
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 33,
+              "item_info": {
+                "name": {
+                  "en": "Zeus",
+                  "cn": "Zeus",
+                  "es": "Zeus",
+                  "pt": "Zeus"
+                },
+                "power": 270000000
+              },
+              "base_color_hex": "ffdc00"
+            },
+            {
+              "type": "miner",
+              "amount": 1,
+              "sort": 34,
+              "item_info": {
+                "name": {
+                  "en": "Plasma Ray",
+                  "cn": "Plasma Ray",
+                  "es": "Plasma Ray",
+                  "pt": "Plasma Ray"
+                },
+                "power": 500000000
+              },
+              "base_color_hex": "ffdc00"
+            }
+          ],
+          "media": {
+            "box_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/box_img_f200167b-002d-4dda-b705-e26feff87fcb.png",
+            "cover_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/cover_img_b9b43381-1871-431a-930a-245e12acb682.png",
+            "box_image_url": "static/img/mystery_boxes/69d80624135acbe76adebaa9/box_img_url_ac427a35-564a-4cfb-9df6-bc76d670902c.png"
+          }
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f4f",
+        "item_id": "6a7b13b7487b96b2ef8a2504",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 42,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a7b13b7487b96b2ef8a2504",
+          "power": 350000000,
+          "width": 2,
+          "name": {
+            "en": "Born to Mine",
+            "cn": "Born to Mine",
+            "es": "Born to Mine",
+            "pt": "Born to Mine"
+          },
+          "description": {
+            "en": "Send your commandos on legendary missions!",
+            "cn": "Send your commandos on legendary missions!",
+            "es": "Send your commandos on legendary missions!",
+            "pt": "Send your commandos on legendary missions!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 2,
+          "type": "merge",
+          "filename": "born_to_mine",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2800,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f51",
+        "item_id": "66e19566e0dd3530da86fe6e",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 43,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "66e19566e0dd3530da86fe6e",
+          "power": 156600000,
+          "width": 2,
+          "name": {
+            "en": "JustChill",
+            "cn": "JustChill",
+            "es": "JustChill",
+            "pt": "JustChill"
+          },
+          "description": {
+            "en": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "cn": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "es": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings.",
+            "pt": "As the tropical sun dips into the horizon, JustChill cruises through crypto mining with the same ease as a breeze over palm trees. Relax and let it work its magic, turning the laid-back island vibes into a steady flow of crypto earnings."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "justchill",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 2150,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f53",
+        "item_id": "69d918d4135acbe76ae10e9e",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 44,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "69d918d4135acbe76ae10e9e",
+          "power": 75000000,
+          "width": 2,
+          "name": {
+            "en": "Hamsters Team",
+            "cn": "Hamsters Team",
+            "es": "Hamsters Team",
+            "pt": "Hamsters Team"
+          },
+          "description": {
+            "en": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "cn": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "es": "A friendly crew working side by side, reminding you that every bit of progress is a team effort.",
+            "pt": "A friendly crew working side by side, reminding you that every bit of progress is a team effort."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "hamsters_team",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 2500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f55",
+        "item_id": "6925904957ee1678e5544288",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 45,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6925904957ee1678e5544288",
+          "power": 150000000,
+          "width": 2,
+          "name": {
+            "en": "BlackWall AI",
+            "cn": "BlackWall AI",
+            "es": "BlackWall AI",
+            "pt": "BlackWall AI"
+          },
+          "description": {
+            "en": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
+            "cn": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
+            "es": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent.",
+            "pt": "Beyond the code, beyond control. It watches, it learns, and when it speaks entire networks fall silent."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "blackwall_ai",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 4500,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f57",
+        "item_id": "65fd6e518b90e4538ff4bf6e",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 46,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "65fd6e518b90e4538ff4bf6e",
+          "power": 152888400,
+          "width": 2,
+          "name": {
+            "en": "Cosmic Eggminer",
+            "cn": "Cosmic Eggminer",
+            "es": "Cosmic Eggminer",
+            "pt": "Cosmic Eggminer"
+          },
+          "description": {
+            "en": "Three celestial orbs pulsating with cosmic energy as they rhythmically leap through the void of space. Their sleek design and space-induced power make them an incredible addition to any mining ship, harnessing the power of the cosmos to unearth digital riches",
+            "cn": "Three celestial orbs pulsating with cosmic energy as they rhythmically leap through the void of space. Their sleek design and space-induced power make them an incredible addition to any mining ship, harnessing the power of the cosmos to unearth digital riches",
+            "es": "Three celestial orbs pulsating with cosmic energy as they rhythmically leap through the void of space. Their sleek design and space-induced power make them an incredible addition to any mining ship, harnessing the power of the cosmos to unearth digital riches",
+            "pt": "Three celestial orbs pulsating with cosmic energy as they rhythmically leap through the void of space. Their sleek design and space-induced power make them an incredible addition to any mining ship, harnessing the power of the cosmos to unearth digital riches"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "cosmic_eggminer",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50
+          },
+          "is_can_be_sold_on_mp": true,
+          "bonus": 1095,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f59",
+        "item_id": "69e243291b59349974d8f5a4",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 47,
+        "type": "rack",
+        "title": {
+          "en": "Rack Title",
+          "cn": "Rack Title"
+        },
+        "description": {
+          "en": "Rack Reward Description",
+          "cn": "Rack Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "name": {
+            "en": "Aquarium Rack 6",
+            "cn": "Aquarium Rack 6"
+          },
+          "description": {
+            "en": "A calm, glass-lined rack where your miners hum beneath the surface. Quiet, steady, and always working.",
+            "cn": "A calm, glass-lined rack where your miners hum beneath the surface. Quiet, steady, and always working."
+          },
+          "_id": "69e243291b59349974d8f5a4",
+          "capacity": 6,
+          "is_can_be_sold_on_mp": true,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f5b",
+        "item_id": "6a7b13b7487b96b2ef8a250b",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 48,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a7b13b7487b96b2ef8a250b",
+          "power": 1000000000,
+          "width": 2,
+          "name": {
+            "en": "Born to Mine",
+            "cn": "Born to Mine",
+            "es": "Born to Mine",
+            "pt": "Born to Mine"
+          },
+          "description": {
+            "en": "Send your commandos on legendary missions!",
+            "cn": "Send your commandos on legendary missions!",
+            "es": "Send your commandos on legendary missions!",
+            "pt": "Send your commandos on legendary missions!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 3,
+          "type": "merge",
+          "filename": "born_to_mine",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 5000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f5d",
+        "item_id": "6a27d830728342e342e8f5a3",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 49,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a27d830728342e342e8f5a3",
+          "power": 1000000000,
+          "width": 1,
+          "name": {
+            "en": "Steel Charm",
+            "cn": "Steel Charm",
+            "es": "Steel Charm",
+            "pt": "Steel Charm"
+          },
+          "description": {
+            "en": "It hums softly beside the Cooling Station, helping Freon flow smoothly when the heat starts to rise.",
+            "cn": "It hums softly beside the Cooling Station, helping Freon flow smoothly when the heat starts to rise.",
+            "es": "It hums softly beside the Cooling Station, helping Freon flow smoothly when the heat starts to rise.",
+            "pt": "It hums softly beside the Cooling Station, helping Freon flow smoothly when the heat starts to rise."
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "steel_charm",
+          "frames_data": {
+            "frame_width": 58,
+            "frame_height": 40,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 6000,
+          "is_in_set": false
+        }
+      },
+      {
+        "id": "6a7b1516b94e4ce33de86f5f",
+        "item_id": "6a7b13b7487b96b2ef8a2512",
+        "amount": 1,
+        "currency": "",
+        "ttl_time": 0,
+        "required_level": 50,
+        "type": "miner",
+        "title": {
+          "en": "Miner Reward",
+          "cn": "Miner Reward"
+        },
+        "description": {
+          "en": "Miner Reward Description",
+          "cn": "Miner Reward Description"
+        },
+        "range_count": {
+          "min": 1,
+          "max": 0
+        },
+        "item": {
+          "_id": "6a7b13b7487b96b2ef8a2512",
+          "power": 5000000000,
+          "width": 2,
+          "name": {
+            "en": "Born to Mine",
+            "cn": "Born to Mine",
+            "es": "Born to Mine",
+            "pt": "Born to Mine"
+          },
+          "description": {
+            "en": "Send your commandos on legendary missions!",
+            "cn": "Send your commandos on legendary missions!",
+            "es": "Send your commandos on legendary missions!",
+            "pt": "Send your commandos on legendary missions!"
+          },
+          "created_by_title": {
+            "link": "",
+            "text": ""
+          },
+          "level": 4,
+          "type": "merge",
+          "filename": "born_to_mine",
+          "frames_data": {
+            "frame_width": 116,
+            "frame_height": 50,
+            "frames_count": 4
+          },
+          "is_can_be_sold_on_mp": false,
+          "bonus": 7500,
+          "is_in_set": false
         }
       }
     ],
@@ -2815,168 +3525,243 @@
       },
       {
         "level": 3,
-        "level_xp": 1500,
-        "required_xp": 2500
+        "level_xp": 3000,
+        "required_xp": 4000
       },
       {
         "level": 4,
         "level_xp": 1500,
-        "required_xp": 4000
+        "required_xp": 5500
       },
       {
         "level": 5,
-        "level_xp": 2000,
-        "required_xp": 6000
+        "level_xp": 5000,
+        "required_xp": 10500
       },
       {
         "level": 6,
-        "level_xp": 3000,
-        "required_xp": 9000
+        "level_xp": 10000,
+        "required_xp": 20500
       },
       {
         "level": 7,
-        "level_xp": 4000,
-        "required_xp": 13000
+        "level_xp": 8000,
+        "required_xp": 28500
       },
       {
         "level": 8,
-        "level_xp": 5000,
-        "required_xp": 18000
+        "level_xp": 20000,
+        "required_xp": 48500
       },
       {
         "level": 9,
-        "level_xp": 7000,
-        "required_xp": 25000
+        "level_xp": 8000,
+        "required_xp": 56500
       },
       {
         "level": 10,
-        "level_xp": 10000,
-        "required_xp": 35000
+        "level_xp": 45000,
+        "required_xp": 101500
       },
       {
         "level": 11,
-        "level_xp": 15000,
-        "required_xp": 50000
+        "level_xp": 30000,
+        "required_xp": 131500
       },
       {
         "level": 12,
-        "level_xp": 20000,
-        "required_xp": 70000
+        "level_xp": 45000,
+        "required_xp": 176500
       },
       {
         "level": 13,
-        "level_xp": 25000,
-        "required_xp": 95000
+        "level_xp": 240000,
+        "required_xp": 416500
       },
       {
         "level": 14,
-        "level_xp": 35000,
-        "required_xp": 130000
+        "level_xp": 120000,
+        "required_xp": 536500
       },
       {
         "level": 15,
-        "level_xp": 125000,
-        "required_xp": 255000
+        "level_xp": 600000,
+        "required_xp": 1136500
       },
       {
         "level": 16,
-        "level_xp": 175000,
-        "required_xp": 430000
+        "level_xp": 160000,
+        "required_xp": 1296500
       },
       {
         "level": 17,
-        "level_xp": 250000,
-        "required_xp": 680000
+        "level_xp": 400000,
+        "required_xp": 1696500
       },
       {
         "level": 18,
-        "level_xp": 62500,
-        "required_xp": 742500
+        "level_xp": 1000000,
+        "required_xp": 2696500
       },
       {
         "level": 19,
-        "level_xp": 625000,
-        "required_xp": 1367500
+        "level_xp": 200000,
+        "required_xp": 2896500
       },
       {
         "level": 20,
-        "level_xp": 3500000,
-        "required_xp": 4867500
+        "level_xp": 300000,
+        "required_xp": 3196500
       },
       {
         "level": 21,
-        "level_xp": 2500000,
-        "required_xp": 7367500
+        "level_xp": 1000000,
+        "required_xp": 4196500
       },
       {
         "level": 22,
-        "level_xp": 2500000,
-        "required_xp": 9867500
+        "level_xp": 500000,
+        "required_xp": 4696500
       },
       {
         "level": 23,
-        "level_xp": 3000000,
-        "required_xp": 12867500
+        "level_xp": 500000,
+        "required_xp": 5196500
       },
       {
         "level": 24,
-        "level_xp": 4500000,
-        "required_xp": 17367500
+        "level_xp": 600000,
+        "required_xp": 5796500
       },
       {
         "level": 25,
-        "level_xp": 10000000,
-        "required_xp": 27367500
+        "level_xp": 750000,
+        "required_xp": 6546500
       },
       {
         "level": 26,
-        "level_xp": 6000000,
-        "required_xp": 33367500
+        "level_xp": 500000,
+        "required_xp": 7046500
       },
       {
         "level": 27,
-        "level_xp": 6000000,
-        "required_xp": 39367500
+        "level_xp": 1900000,
+        "required_xp": 8946500
       },
       {
         "level": 28,
-        "level_xp": 7000000,
-        "required_xp": 46367500
+        "level_xp": 1250000,
+        "required_xp": 10196500
       },
       {
         "level": 29,
-        "level_xp": 8000000,
-        "required_xp": 54367500
+        "level_xp": 1250000,
+        "required_xp": 11446500
       },
       {
         "level": 30,
-        "level_xp": 9000000,
-        "required_xp": 63367500
+        "level_xp": 3750000,
+        "required_xp": 15196500
       },
       {
         "level": 31,
-        "level_xp": 7500000,
-        "required_xp": 70867500
+        "level_xp": 3800000,
+        "required_xp": 18996500
       },
       {
         "level": 32,
-        "level_xp": 9000000,
-        "required_xp": 79867500
+        "level_xp": 4000000,
+        "required_xp": 22996500
       },
       {
         "level": 33,
-        "level_xp": 10000000,
-        "required_xp": 89867500
+        "level_xp": 7000000,
+        "required_xp": 29996500
       },
       {
         "level": 34,
-        "level_xp": 30000000,
-        "required_xp": 119867500
+        "level_xp": 4400000,
+        "required_xp": 34396500
       },
       {
         "level": 35,
-        "level_xp": 60000000,
-        "required_xp": 179867500
+        "level_xp": 7000000,
+        "required_xp": 41396500
+      },
+      {
+        "level": 36,
+        "level_xp": 4700000,
+        "required_xp": 46096500
+      },
+      {
+        "level": 37,
+        "level_xp": 12000000,
+        "required_xp": 58096500
+      },
+      {
+        "level": 38,
+        "level_xp": 16200000,
+        "required_xp": 74296500
+      },
+      {
+        "level": 39,
+        "level_xp": 3600000,
+        "required_xp": 77896500
+      },
+      {
+        "level": 40,
+        "level_xp": 3800000,
+        "required_xp": 81696500
+      },
+      {
+        "level": 41,
+        "level_xp": 4000000,
+        "required_xp": 85696500
+      },
+      {
+        "level": 42,
+        "level_xp": 30800000,
+        "required_xp": 116496500
+      },
+      {
+        "level": 43,
+        "level_xp": 24000000,
+        "required_xp": 140496500
+      },
+      {
+        "level": 44,
+        "level_xp": 20000000,
+        "required_xp": 160496500
+      },
+      {
+        "level": 45,
+        "level_xp": 25000000,
+        "required_xp": 185496500
+      },
+      {
+        "level": 46,
+        "level_xp": 25500000,
+        "required_xp": 210996500
+      },
+      {
+        "level": 47,
+        "level_xp": 20000000,
+        "required_xp": 230996500
+      },
+      {
+        "level": 48,
+        "level_xp": 35000000,
+        "required_xp": 265996500
+      },
+      {
+        "level": 49,
+        "level_xp": 39000000,
+        "required_xp": 304996500
+      },
+      {
+        "level": 50,
+        "level_xp": 107000000,
+        "required_xp": 411996500
       }
     ]
   }

@@ -195,7 +195,7 @@ export default {
       return 'v2-c-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.12, rewardsXRLT = 0
+      let phXRLT = 0.037, rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
         switch (reward.type) {
           case 'money':
