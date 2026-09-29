@@ -16,16 +16,16 @@ export function calcularPuntos(poder, bonus, isSellable = false) {
   else if (poder.includes('Ph/s')) poderEnPhs = valorPoder
   else if (poder.includes('Th/s')) poderEnPhs = valorPoder / 1000
 
-  let pointsXPh = 1
-  if (poderEnPhs >= 10 && isSellable) pointsXPh = 3000        // pointsXBonus 60
-  else if (poderEnPhs >= 10) pointsXPh = 2000                 // 40
-  else if (poderEnPhs >= 5 && isSellable) pointsXPh = 3750    // 75
-  else if (poderEnPhs >= 5) pointsXPh = 2500                  // 50
-  else if (poderEnPhs >= 1 && isSellable) pointsXPh = 4687.5  // 93.75
-  else if (poderEnPhs >= 1) pointsXPh = 3125                  // 62.5
-  else if (poderEnPhs > 0.75 && isSellable) pointsXPh = 9687.5 // 193.75
-  else if (isSellable) pointsXPh = 5812.5                     // 116.25
-  else pointsXPh = 3875                                       // 77.5
+  let pointsXPh = 1000
+  // if (poderEnPhs >= 10 && isSellable) pointsXPh = 3000        // pointsXBonus 60
+  // else if (poderEnPhs >= 10) pointsXPh = 2000                 // 40
+  // else if (poderEnPhs >= 5 && isSellable) pointsXPh = 3750    // 75
+  // else if (poderEnPhs >= 5) pointsXPh = 2500                  // 50
+  // else if (poderEnPhs >= 1 && isSellable) pointsXPh = 4687.5  // 93.75
+  // else if (poderEnPhs >= 1) pointsXPh = 3125                  // 62.5
+  // else if (poderEnPhs > 0.75 && isSellable) pointsXPh = 9687.5 // 193.75
+  // else if (isSellable) pointsXPh = 5812.5                     // 116.25
+  // else pointsXPh = 3875                                       // 77.5
 
   return Math.ceil(poderEnPhs * pointsXPh)
 }

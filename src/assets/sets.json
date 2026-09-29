@@ -145,5 +145,23 @@
       { "level": 2, "required": 3, "bonus_type": "bonus", "bonus_value": 50 },
       { "level": 3, "required": 4, "bonus_type": "bonus", "bonus_value": 80 }
     ]
+  },
+  {
+    "name": "Roadside Stars Set",
+    "miners": [
+      { "name": "Taco Turn", "rarity": "Epic" },
+      { "name": "Taco Turn", "rarity": "Legendary" },
+      { "name": "Burger Boulevard", "rarity": "Epic" },
+      { "name": "Burger Boulevard", "rarity": "Legendary" },
+      { "name": "Hot Dog Highway", "rarity": "Epic" },
+      { "name": "Hot Dog Highway", "rarity": "Legendary" },
+      { "name": "Sushi Stop", "rarity": "Epic" },
+      { "name": "Sushi Stop", "rarity": "Legendary" }
+    ],
+    "levels": [
+      { "level": 1, "required": 2, "bonus_type": "bonus", "bonus_value": 20 },
+      { "level": 2, "required": 3, "bonus_type": "bonus", "bonus_value": 50 },
+      { "level": 3, "required": 4, "bonus_type": "bonus", "bonus_value": 80 }
+    ]
   }
 ]

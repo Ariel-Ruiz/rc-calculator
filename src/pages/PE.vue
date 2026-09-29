@@ -119,6 +119,13 @@
               </td>
               <td class="v2-pe-r-img" :style="{ backgroundImage: `url(${getRewardImage(reward)})` }">
                 <img v-if="reward.item?.level > 0 && reward.type == 'miner'" :src="stPath + `others/level_${reward.item.level + 1}.png`" class="v2-pe-r-lvl-badge" />
+                <img
+                  v-if="reward.type == 'miner' || reward.type == 'rack'"
+                  :src="reward.item?.is_can_be_sold_on_mp ? sellableIconUrl : noSellableIconUrl"
+                  :alt="reward.item?.is_can_be_sold_on_mp ? 'sellable' : 'not sellable'"
+                  :title="reward.item?.is_can_be_sold_on_mp ? (t.rooms?.sell_on_rollercoin || 'Sellable') : (t.rooms?.filter_not_sellable || 'Not sellable')"
+                  class="v2-pe-r-sellable"
+                />
               </td>
               <td class="v2-pe-r-boxes">{{ getRewardBoxes(PeData.event.levels_config[reward.required_level - 1]?.required_xp) }} {{ t.pe?.boxes }}</td>
               <td class="v2-pe-r-market">{{ getRewardMarket(PeData.event.levels_config[reward.required_level - 1]?.required_xp) }} RLT</td>
@@ -134,6 +141,8 @@
 import '../styles/pe.css'
 import moment from 'moment-timezone'
 import PeData from '../assets/progression.json'
+import sellableIconUrl from '../assets/icons/sellable.svg'
+import noSellableIconUrl from '../assets/icons/no-sellable.svg'
 // Banner mode: 'banner' | 'bg' | '' (none)
 const BANNER_MODE = 'bg'
 
@@ -149,6 +158,8 @@ export default {
 
     return {
       stPath: 'https://storage.googleapis.com/rc-calculator-d20ac.firebasestorage.app/',
+      sellableIconUrl,
+      noSellableIconUrl,
       PeData,
       bannerMode: BANNER_MODE,
       bannerImg: null,
@@ -195,7 +206,7 @@ export default {
       return 'v2-c-danger'
     },
     calcRecomend() {
-      let phXRLT = 0.037, rewardsXRLT = 0
+      let phXRLT = 0.0384, rewardsXRLT = 0
       for (let reward of PeData.event.rewards) {
         switch (reward.type) {
           case 'money':
@@ -204,7 +215,7 @@ export default {
           case 'miner': if (reward.item.power >= 1e6) rewardsXRLT += (reward.item.power / 1e6) * phXRLT; continue
         }
       }
-      let rltToBuy = rewardsXRLT * 0.3
+      let rltToBuy = rewardsXRLT * 0.188
       let rawMultiplier = (rltToBuy * PeData.multiplier) + 1
       let closest = this.multipliers.reduce((p, c) => Math.abs(c - rawMultiplier) < Math.abs(p - rawMultiplier) ? c : p)
       this.recomendedMultiplier = [closest]
@@ -252,6 +263,7 @@ export default {
     getRewardImage(r) {
       let f = ''
       if (r?.type == 'utility_item' && ['Ancient key','Old key','Basic key','Forbidden key','GemStone'].includes(r?.item?.name?.en)) return this.stPath + `others/${r.item_id}.png`
+      if (r?.type == 'utility_item' && ['Lunch Box'].includes(r?.item?.name?.en)) return this.stPath + `others/${r.item_id}.png`
       switch (r.type) {
         case 'money': f = `others/reward_${r.currency.toLowerCase()}.png`; break
         case 'season_pass_xp': f = 'others/season_pass_xp.png'; break

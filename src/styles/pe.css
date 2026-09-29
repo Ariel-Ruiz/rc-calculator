@@ -340,6 +340,15 @@
   width: 10px;
 }
 
+.v2-pe-r-sellable {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
 .v2-pe-r-boxes, .v2-pe-r-market {
   font-weight: 600;
   white-space: nowrap;

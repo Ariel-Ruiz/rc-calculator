@@ -152,6 +152,11 @@ tr:hover .hamster-img-cell,
   color: var(--success);
 }
 
+.extra-survive-tag.extra-survive-neg {
+  background: rgba(244, 67, 54, 0.18);
+  color: var(--danger);
+}
+
 .survival-cell {
   text-align: center;
   font-weight: 700;

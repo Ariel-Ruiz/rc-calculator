@@ -2,258 +2,612 @@
   {
     "name": "Cowham",
     "img": "hamsters/cowham.gif",
-    "baseStats": { "hp": 40, "str": 30, "luck": 40 },
+    "baseStats": {
+      "hp": 40,
+      "str": 30,
+      "luck": 40
+    },
     "abilities": [
-      { "type": "experience", "value": 10 }
+      {
+        "type": "experience",
+        "value": 10
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Guile",
     "img": "hamsters/guile.gif",
-    "baseStats": { "hp": 50, "str": 30, "luck": 20 },
+    "baseStats": {
+      "hp": 50,
+      "str": 30,
+      "luck": 20
+    },
     "abilities": [
-      { "type": "survive", "value": 5 }
+      {
+        "type": "survive",
+        "value": 5
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Big Daddy",
     "img": "hamsters/big-daddy.gif",
-    "baseStats": { "hp": 50, "str": 90, "luck": 50 },
+    "baseStats": {
+      "hp": 50,
+      "str": 90,
+      "luck": 50
+    },
     "abilities": [
-      { "type": "rest", "value": -50 }
+      {
+        "type": "rest",
+        "value": -50
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "The Dracula",
     "img": "hamsters/the-dracula.gif",
-    "baseStats": { "hp": 10, "str": 50, "luck": 90 },
+    "baseStats": {
+      "hp": 10,
+      "str": 50,
+      "luck": 90
+    },
     "abilities": [
-      { "type": "experience", "value": 30 }
+      {
+        "type": "experience",
+        "value": 30
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "The Hamster",
     "img": "hamsters/the-hamster.gif",
-    "baseStats": { "hp": 20, "str": 10, "luck": 20 },
+    "baseStats": {
+      "hp": 20,
+      "str": 10,
+      "luck": 20
+    },
     "abilities": [],
     "ultimate": ""
   },
   {
     "name": "Naughty Claus",
     "img": "hamsters/naughty-claus.gif",
-    "baseStats": { "hp": 85, "str": 45, "luck": 55 },
+    "baseStats": {
+      "hp": 85,
+      "str": 45,
+      "luck": 55
+    },
     "abilities": [
-      { "type": "survive", "value": 10 }
+      {
+        "type": "survive",
+        "value": 10
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Uncle",
     "img": "hamsters/uncle.gif",
-    "baseStats": { "hp": 85, "str": 85, "luck": 30 },
+    "baseStats": {
+      "hp": 85,
+      "str": 85,
+      "luck": 30
+    },
     "abilities": [
-      { "type": "extra_rewards", "value": 50 }
+      {
+        "type": "extra_rewards",
+        "value": 50
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Birthday Bob",
     "img": "hamsters/birthday-bob.gif",
-    "baseStats": { "hp": 30, "str": 30, "luck": 10 },
+    "baseStats": {
+      "hp": 30,
+      "str": 30,
+      "luck": 10
+    },
     "abilities": [
-      { "type": "rest", "value": -4 }
+      {
+        "type": "rest",
+        "value": -4
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Valkirita",
     "img": "hamsters/valkirita.gif",
-    "baseStats": { "hp": 90, "str": 90, "luck": 25 },
+    "baseStats": {
+      "hp": 90,
+      "str": 90,
+      "luck": 25
+    },
     "abilities": [
-      { "type": "expedition_time", "value": -50 }
+      {
+        "type": "expedition_time",
+        "value": -50
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Banjo Walker",
     "img": "hamsters/banjo-walker.gif",
-    "baseStats": { "hp": 65, "str": 30, "luck": 80 },
+    "baseStats": {
+      "hp": 65,
+      "str": 30,
+      "luck": 80
+    },
     "abilities": [
-      { "type": "experience", "value": 30 }
+      {
+        "type": "experience",
+        "value": 30
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Dusty McUncle",
     "img": "hamsters/dusty-mcuncle.gif",
-    "baseStats": { "hp": 80, "str": 80, "luck": 40 },
+    "baseStats": {
+      "hp": 80,
+      "str": 80,
+      "luck": 40
+    },
     "abilities": [
-      { "type": "extra_rewards", "value": 40 },
-      { "type": "back_to_work", "value": 25 }
+      {
+        "type": "extra_rewards",
+        "value": 40
+      },
+      {
+        "type": "back_to_work",
+        "value": 25
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Mamita",
     "img": "hamsters/mamita.gif",
-    "baseStats": { "hp": 85, "str": 30, "luck": 85 },
+    "baseStats": {
+      "hp": 85,
+      "str": 30,
+      "luck": 85
+    },
     "abilities": [
-      { "type": "rest", "value": -25 },
-      { "type": "experience", "value": 50 },
-      { "type": "influencer", "value": 150, "value2": 20 }
+      {
+        "type": "rest",
+        "value": -25
+      },
+      {
+        "type": "experience",
+        "value": 50
+      },
+      {
+        "type": "influencer",
+        "value": 150,
+        "value2": 20
+      }
     ],
     "ultimate": ""
   },
   {
     "name": "Plague Dancer",
     "img": "hamsters/plague-dancer.gif",
-    "baseStats": { "hp": 25, "str": 90, "luck": 80 },
+    "baseStats": {
+      "hp": 25,
+      "str": 90,
+      "luck": 80
+    },
     "abilities": [
-      { "type": "survive", "value": 15 },
-      { "type": "rest", "value": -40 }
+      {
+        "type": "survive",
+        "value": 15
+      },
+      {
+        "type": "rest",
+        "value": -40
+      }
     ],
     "ultimate": "x3-5 chests if survives"
   },
   {
     "name": "Anomaly",
     "img": "hamsters/anomaly.gif",
-    "baseStats": { "hp": 60, "str": 60, "luck": 40 },
+    "baseStats": {
+      "hp": 60,
+      "str": 60,
+      "luck": 40
+    },
     "abilities": [
-      { "type": "extra_rewards", "value": 20 },
-      { "type": "expedition_time", "value": -20 }
+      {
+        "type": "extra_rewards",
+        "value": 20
+      },
+      {
+        "type": "expedition_time",
+        "value": -20
+      }
     ],
     "ultimate": "All stats to 100"
   },
   {
     "name": "Lord Hexron",
     "img": "hamsters/lord-hexron.gif",
-    "baseStats": { "hp": 85, "str": 85, "luck": 35 },
+    "baseStats": {
+      "hp": 85,
+      "str": 85,
+      "luck": 35
+    },
     "abilities": [
-      { "type": "expedition_time", "value": -50 },
-      { "type": "rest", "value": -50 }
+      {
+        "type": "expedition_time",
+        "value": -50
+      },
+      {
+        "type": "rest",
+        "value": -50
+      }
     ],
     "ultimate": "Crypto reward if survives"
   },
   {
     "name": "Sir Catch-a-Lot",
     "img": "hamsters/sir-catch-a-lot.gif",
-    "baseStats": { "hp": 45, "str": 75, "luck": 95 },
+    "baseStats": {
+      "hp": 45,
+      "str": 75,
+      "luck": 95
+    },
     "abilities": [
-      { "type": "back_to_work", "value": 25 },
-      { "type": "experience", "value": 30 }
+      {
+        "type": "back_to_work",
+        "value": 25
+      },
+      {
+        "type": "experience",
+        "value": 30
+      }
     ],
     "ultimate": "x3-5 chests if survives"
   },
   {
     "name": "Lucky Red",
     "img": "hamsters/lucky-red.gif",
-    "baseStats": { "hp": 70, "str": 80, "luck": 50 },
+    "baseStats": {
+      "hp": 70,
+      "str": 80,
+      "luck": 50
+    },
     "abilities": [
-      { "type": "extra_rewards", "value": 25 },
-      { "type": "influencer", "value": 150, "value2": 5 }
+      {
+        "type": "extra_rewards",
+        "value": 25
+      },
+      {
+        "type": "influencer",
+        "value": 150,
+        "value2": 5
+      }
     ],
     "ultimate": "Guaranteed survival"
   },
   {
     "name": "Partello",
     "img": "hamsters/partello.gif",
-    "baseStats": { "hp": 20, "str": 35, "luck": 35 },
+    "baseStats": {
+      "hp": 20,
+      "str": 35,
+      "luck": 35
+    },
     "abilities": [
-      { "type": "experience", "value": 30 }
+      {
+        "type": "experience",
+        "value": 30
+      }
     ],
     "ultimate": "Extra common parts if survives"
   },
   {
     "name": "Kitsumi",
     "img": "hamsters/kitsumi.gif",
-    "baseStats": { "hp": 90, "str": 40, "luck": 90 },
+    "baseStats": {
+      "hp": 90,
+      "str": 40,
+      "luck": 90
+    },
     "abilities": [
-      { "type": "buyback_discount", "value": -50 },
-      { "type": "remote_bonus", "value": 2, "formula": "(str+hp+luck)*2%" }
+      {
+        "type": "buyback_discount",
+        "value": -50
+      },
+      {
+        "type": "remote_bonus",
+        "value": 2,
+        "formula": "(str+hp+luck)*2%"
+      }
     ],
     "ultimate": "Smart Study: no cooldown, +1 skill point on success"
   },
   {
     "name": "Hammy Hooks",
     "img": "hamsters/hammy-hooks.gif",
-    "baseStats": { "hp": 80, "str": 80, "luck": 45 },
+    "baseStats": {
+      "hp": 80,
+      "str": 80,
+      "luck": 45
+    },
     "abilities": [
-      { "type": "survive", "value": 10 },
-      { "type": "rest", "value": -50 },
-      { "type": "remote_bonus", "value": 2, "formula": "(str+hp+luck)*2%" }
+      {
+        "type": "survive",
+        "value": 10
+      },
+      {
+        "type": "rest",
+        "value": -50
+      },
+      {
+        "type": "remote_bonus",
+        "value": 2,
+        "formula": "(str+hp+luck)*2%"
+      }
     ],
     "ultimate": "Boost mode: all stats to 100"
   },
   {
     "name": "Mr. Jack",
     "img": "hamsters/mr-jack.gif",
-    "baseStats": { "hp": 25, "str": 25, "luck": 15 },
+    "baseStats": {
+      "hp": 25,
+      "str": 25,
+      "luck": 15
+    },
     "abilities": [],
     "ultimate": ""
   },
   {
     "name": "Uncle'Azoth",
     "img": "hamsters/uncle-azoth.gif",
-    "baseStats": { "hp": 85, "str": 85, "luck": 60 },
+    "baseStats": {
+      "hp": 85,
+      "str": 85,
+      "luck": 60
+    },
     "abilities": [
-      { "type": "x3_passive", "value": 3 }
+      {
+        "type": "x3_passive",
+        "value": 3
+      }
     ],
     "ultimate": "Loot Conversion: 24 Points"
   },
   {
     "name": "Goodncle",
     "img": "hamsters/goodncle.gif",
-    "baseStats": { "hp": 60, "str": 40, "luck": 80 },
+    "baseStats": {
+      "hp": 60,
+      "str": 40,
+      "luck": 80
+    },
     "abilities": [
-      { "type": "extra_rewards", "value": 50 },
-      { "type": "buyback_discount", "value": -50 }
+      {
+        "type": "extra_rewards",
+        "value": 50
+      },
+      {
+        "type": "buyback_discount",
+        "value": -50
+      }
     ],
     "ultimate": "Chests Multiplier x3/5/30: 24 Points"
   },
   {
     "name": "Badncle",
     "img": "hamsters/badncle.gif",
-    "baseStats": { "hp": 60, "str": 80, "luck": 40 },
+    "baseStats": {
+      "hp": 60,
+      "str": 80,
+      "luck": 40
+    },
     "abilities": [
-      { "type": "extra_rewards", "value": 50 },
-      { "type": "buyback_discount", "value": -50 }
+      {
+        "type": "extra_rewards",
+        "value": 50
+      },
+      {
+        "type": "buyback_discount",
+        "value": -50
+      }
     ],
     "ultimate": "Chests Multiplier x3/5/30: 24 Points"
   },
   {
     "name": "Joga Bonito",
     "img": "hamsters/joga-bonito.gif",
-    "baseStats": { "hp": 70, "str": 90, "luck": 50 },
+    "baseStats": {
+      "hp": 70,
+      "str": 90,
+      "luck": 50
+    },
     "abilities": [
-      { "type": "speed_ups_chest", "value": 1 },
-      { "type": "extra_rewards", "value": 15 },
-      { "type": "survive", "value": 5 },
-      { "type": "rest", "value": -15 }
+      {
+        "type": "speed_ups_chest",
+        "value": 1
+      },
+      {
+        "type": "extra_rewards",
+        "value": 15
+      },
+      {
+        "type": "survive",
+        "value": 5
+      },
+      {
+        "type": "rest",
+        "value": -15
+      }
     ],
     "ultimate": "Speed Up Items: Up to 500 per Ultimate Expedition"
   },
   {
     "name": "Eliza Bit",
     "img": "hamsters/eliza-bit.gif",
-    "baseStats": { "hp": 80, "str": 20, "luck": 80 },
+    "baseStats": {
+      "hp": 80,
+      "str": 20,
+      "luck": 80
+    },
     "abilities": [
-      { "type": "experience", "value": 50 },
-      { "type": "expedition_time", "value": -25 },
-      { "type": "influencer", "value": 150, "value2": 20 }
+      {
+        "type": "experience",
+        "value": 50
+      },
+      {
+        "type": "expedition_time",
+        "value": -25
+      },
+      {
+        "type": "influencer",
+        "value": 150,
+        "value2": 20
+      }
     ],
     "ultimate": "High Risk High Reward: 2x rewards, 1.5x duration, skip rest. 24 Points"
   },
   {
     "name": "Captain Jack Pot",
     "img": "hamsters/captain-jack-pot.png",
-    "baseStats": { "hp": 65, "str": 60, "luck": 95 },
+    "baseStats": {
+      "hp": 65,
+      "str": 60,
+      "luck": 95
+    },
     "abilities": [
-      { "type": "survive", "value": 10 }
+      {
+        "type": "survive",
+        "value": 10
+      }
     ],
     "ultimate": "Smart Study: no cooldown, +1 skill point on success. Abilities Builder: choose 3 passive abilities. 24 Points"
+  },
+  {
+    "name": "Davy Coins",
+    "img": "hamsters/davy-coins.gif",
+    "baseStats": {
+      "hp": 80,
+      "str": 90,
+      "luck": 30
+    },
+    "abilities": [
+      {
+        "type": "survive",
+        "value": 5
+      },
+      {
+        "type": "buyback_discount",
+        "value": -50
+      },
+      {
+        "type": "rlt_chest",
+        "value": 1
+      }
+    ],
+    "ultimate": "Pirate Luck x3: triple expedition rewards"
+  },
+  {
+    "name": "Gordon Hamzy",
+    "img": "hamsters/gordon-hamzy.gif",
+    "baseStats": {
+      "hp": 70,
+      "str": 85,
+      "luck": 55
+    },
+    "abilities": [
+      {
+        "type": "hamsters_chest",
+        "value": 1
+      },
+      {
+        "type": "expedition_time",
+        "value": -15
+      },
+      {
+        "type": "survive",
+        "value": 10
+      },
+      {
+        "type": "overtime_duty",
+        "value": 15
+      }
+    ],
+    "ultimate": "Hamsters Chest: your personal Hamster printer"
+  },
+  {
+    "name": "GFeast",
+    "img": "hamsters/gfeast.gif",
+    "maxed": true,
+    "baseStats": {
+      "hp": 70,
+      "str": 95,
+      "luck": 95
+    },
+    "abilities": [],
+    "ultimate": "Remote Power: adds temporary room power (Miner Power x5, not multiplied by room bonus) while on Expedition. 24 Points. 3rd Gen Ability Builder: 3 slots of buff/debuff trade-offs (Loot/Relax, Expedition Time/Survive, Games Boost/Buyback)"
+  },
+  {
+    "name": "SOLaire",
+    "img": "hamsters/solaire.gif",
+    "baseStats": {
+      "hp": 35,
+      "str": 70,
+      "luck": 70
+    },
+    "abilities": [
+      {
+        "type": "season_xp_chest",
+        "value": 1
+      },
+      {
+        "type": "rest",
+        "value": -25
+      },
+      {
+        "type": "survive",
+        "value": 5
+      }
+    ],
+    "ultimate": "Chests Multiplier (Overcharged, 3 Tiers): triple expedition rewards. Tier I 3 rewards x3 (18 pts), Tier II 5 rewards x3 (24 pts), Tier III 8 rewards x3 (30 pts). First time starts fully charged at Tier III. Part of The Night Shift Set."
+  },
+  {
+    "name": "Lady Minerra",
+    "img": "hamsters/lady-minerra.gif",
+    "baseStats": {
+      "hp": 80,
+      "str": 70,
+      "luck": 55
+    },
+    "abilities": [
+      {
+        "type": "keep_it_going",
+        "value": 1
+      },
+      {
+        "type": "survive",
+        "value": -5
+      },
+      {
+        "type": "buyback_discount",
+        "value": -50
+      }
+    ],
+    "ultimate": "Loot Conversion (Overcharged, 3 Tiers): convert expedition rewards into RLT. Tier I 2 rewards (24 pts), Tier II 3 rewards (30 pts), Tier III 5 rewards (36 pts). First time starts fully charged at Tier III. Keep It Going removes rest after a successful Expedition (triple rest on failure). Part of The Night Shift Set."
   }
 ]

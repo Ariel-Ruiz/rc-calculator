@@ -628,5 +628,50 @@
     "is_set": true,
     "set": "Beach Set",
     "can_be_sold": false
+  },
+  {
+    "id": "6a7b40a8f188bab31b1c2194",
+    "name": "Service Rack 6",
+    "size": 6,
+    "bonus": 42,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6a7b40a8f188bab31b1c2195",
+    "name": "Service Rack 8",
+    "size": 8,
+    "bonus": 28,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6a7b40a8f188bab31b1c2196",
+    "name": "Roadside Rack 8",
+    "size": 8,
+    "bonus": 10,
+    "is_set": true,
+    "set": "Roadside Stars Set",
+    "can_be_sold": false
+  },
+  {
+    "id": "6a9eafa4d8c4c4f046bb4944",
+    "name": "Night Shelf 6",
+    "size": 6,
+    "bonus": 45,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
+  },
+  {
+    "id": "6a9eafdad8c4c4f046bb49a3",
+    "name": "Night Shelf 8",
+    "size": 8,
+    "bonus": 30,
+    "is_set": false,
+    "set": null,
+    "can_be_sold": true
   }
 ]

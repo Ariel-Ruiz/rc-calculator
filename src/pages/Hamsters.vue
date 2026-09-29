@@ -60,8 +60,12 @@
               </td>
               <td class="total-stats-cell">{{ getMaxStatsSum(h) }}</td>
               <td class="extra-survival-cell">
-                <span v-if="getSurviveAbility(h) > 0" class="extra-survive-tag">
-                  +{{ getSurviveAbility(h) }}%
+                <span
+                  v-if="getSurviveAbility(h) !== 0"
+                  class="extra-survive-tag"
+                  :class="{ 'extra-survive-neg': getSurviveAbility(h) < 0 }"
+                >
+                  {{ getSurviveAbility(h) > 0 ? '+' : '' }}{{ getSurviveAbility(h) }}%
                 </span>
               </td>
               <td class="survival-cell base-surv">
@@ -85,8 +89,12 @@
             >
               <td class="total-stats-cell">300</td>
               <td class="extra-survival-cell">
-                <span v-if="getSurviveAbility(h) > 0" class="extra-survive-tag">
-                  +{{ getSurviveAbility(h) }}%
+                <span
+                  v-if="getSurviveAbility(h) !== 0"
+                  class="extra-survive-tag"
+                  :class="{ 'extra-survive-neg': getSurviveAbility(h) < 0 }"
+                >
+                  {{ getSurviveAbility(h) > 0 ? '+' : '' }}{{ getSurviveAbility(h) }}%
                 </span>
               </td>
               <td class="survival-cell base-surv">
@@ -157,6 +165,7 @@ export default {
       return h.baseStats.hp + h.baseStats.str + h.baseStats.luck
     },
     getMaxStatsSum(h) {
+      if (h.maxed) return this.getBaseStatsSum(h)
       return this.getBaseStatsSum(h) + 49
     },
     getSurviveAbility(h) {
